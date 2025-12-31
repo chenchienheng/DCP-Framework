@@ -190,3 +190,20 @@ Closing Note
 
 DCP is not a claim about truth.
 It is a method for making 
+
+## Citation
+
+If you wish to cite this work, please use the following reference:
+
+Chen, Chien-Heng. *DCP Framework: A Constraint-Based Model for Structured Judgment and Layered Interpretation*. Zenodo, 2026.  
+DOI: https://doi.org/10.5281/zenodo.18111818
+
+This repository contains conceptual and methodological materials related to the DCP (Decision / Constraint / Condition-based Process) framework.
+## 引用方式 / Citation
+
+若需引用本研究，請使用以下格式：
+
+Chen, Chien-Heng.《DCP Framework：一種結構化判定與分層詮釋的約束模型》. Zenodo, 2026.  
+DOI: https://doi.org/10.5281/zenodo.18111818
+
+本專案收錄 DCP（判定約束流程）之理論結構、分層模型與應用示例。
