@@ -271,3 +271,24 @@ It offers a way to describe how judgments become possible under constraints.
 
 Its value lies not in answers, but in how conditions are made visible.
 
+⸻
+
+Language & Interpretation Notice
+
+EN
+
+The primary materials in this repository are written in Chinese.
+Readers are welcome to interpret, translate, or re-express the ideas into other languages or forms, provided that proper attribution to the original work is preserved.
+
+This repository presents a conceptual and methodological framework rather than an executable system or software implementation.
+Reuse does not imply endorsement, completeness, or applicability to any specific domain.
+
+⸻
+
+ZH
+
+本專案之主要內容以中文撰寫。
+歡迎讀者在保留原作者署名與來源的前提下，進行理解、轉譯或再詮釋。
+
+本倉庫所呈現者為概念性與方法論層級之框架，而非可直接執行之系統或產品。
+任何使用不代表作者對其正確性、完整性或特定應用情境之適用性作出保證。
