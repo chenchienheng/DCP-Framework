@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>翾靈 XuanLing｜芹衣顯像</title>
+<style>
+:root{
+  --bg:#07111f; --bg2:#0d1730; --panel:rgba(9,17,31,.72); --line:rgba(122,203,255,.18);
+  --text:#ebf5ff; --muted:#9cb3cb; --cyan:#8befff; --blue:#78c6ff; --violet:#b5abff;
+  --max:1240px; --radius:28px; --shadow:0 24px 80px rgba(0,0,0,.38);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; color:var(--text);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans TC", "PingFang TC", sans-serif;
+  background:
+    radial-gradient(1200px 700px at 12% 0%, rgba(76,126,255,.18), transparent 56%),
+    radial-gradient(900px 520px at 92% 12%, rgba(93,232,255,.12), transparent 52%),
+    linear-gradient(180deg, #07111f 0%, #0a1530 55%, #07111f 100%);
+  letter-spacing:.02em;
+}
+body::before{
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:-1;
+  background-image: linear-gradient(to right, rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(circle at center, black 38%, transparent 85%);
+}
+.nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(18px);background:rgba(7,14,24,.5);border-bottom:1px solid rgba(255,255,255,.07)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;gap:14px;align-items:center}
+.mark{width:40px;height:40px;border-radius:14px;position:relative;background:linear-gradient(135deg,rgba(139,239,255,.18),rgba(181,171,255,.18));border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow);overflow:hidden}
+.mark:before,.mark:after{content:"";position:absolute;border-radius:999px;background:linear-gradient(90deg,var(--cyan),var(--blue))}
+.mark:before{width:24px;height:2px;left:8px;top:11px;transform:rotate(34deg)}
+.mark:after{width:18px;height:2px;right:6px;bottom:11px;transform:rotate(-38deg)}
+.brand small{display:block;color:var(--muted);font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+.brand b{display:block;font-size:15px}
+.nav-links{display:flex;gap:10px;flex-wrap:wrap}
+.nav-links a{padding:10px 14px;border-radius:999px;border:1px solid transparent;color:var(--muted);font-size:14px}
+.nav-links a:hover{border-color:rgba(255,255,255,.08);color:var(--text);background:rgba(255,255,255,.03)}
+.wrap{max-width:var(--max);margin:0 auto;padding:28px 22px 80px}
+.hero{display:grid;grid-template-columns:1.02fr .98fr;gap:26px;align-items:center;padding:16px 0 28px}
+.card{background:linear-gradient(180deg, rgba(15,25,46,.76), rgba(8,14,26,.72));border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow),inset 0 1px 0 rgba(255,255,255,.05);border-radius:var(--radius);padding:28px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.18em;color:#d4eeff;text-transform:uppercase}
+.dot{width:8px;height:8px;border-radius:999px;background:linear-gradient(180deg,var(--cyan),var(--blue));box-shadow:0 0 16px rgba(139,239,255,.52)}
+h1{margin:18px 0 14px;font-size:clamp(44px,8vw,82px);line-height:1.02;letter-spacing:-.03em}
+.lead{font-size:18px;line-height:1.86;color:var(--muted);max-width:58ch}
+.pills{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0 28px}
+.pill{padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:#d7eaff;font-size:14px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 18px;border-radius:16px;font-weight:700;border:1px solid rgba(255,255,255,.1)}
+.primary{background:linear-gradient(135deg, rgba(110,196,255,.24), rgba(181,171,255,.18))}
+.secondary{background:rgba(255,255,255,.03);color:var(--muted)}
+.portrait-card{padding:18px;position:relative;overflow:hidden}
+.portrait-card::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(circle at 50% 14%, rgba(139,239,255,.16), transparent 24%),
+  linear-gradient(180deg, rgba(255,255,255,.04), transparent 14%);
+  pointer-events:none;
+}
+.frame{position:relative;border-radius:30px;overflow:hidden;border:1px solid rgba(255,255,255,.09);background:rgba(3,9,18,.4);box-shadow:0 30px 90px rgba(0,0,0,.42)}
+.frame img{display:block;width:100%;height:auto}
+.overlay{position:absolute;left:18px;right:18px;bottom:18px;padding:16px 18px;border-radius:18px;background:rgba(6,12,22,.58);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.08)}
+.overlay b{display:block;font-size:18px;margin-bottom:7px}
+.overlay span{display:block;color:var(--muted);line-height:1.7;font-size:13px}
+.section{margin-top:28px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:14px}
+.section h2{margin:0;font-size:30px}
+.desc{margin-top:8px;color:var(--muted);line-height:1.8}
+.grid{display:grid;gap:16px}
+.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.dual{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.tag{display:inline-flex;padding:8px 10px;border-radius:999px;background:rgba(139,239,255,.08);border:1px solid rgba(139,239,255,.16);color:#d4ecff;font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+.card h3{margin:4px 0 10px;font-size:20px}
+.card p,.card li{color:var(--muted);line-height:1.85}
+.flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.step{padding:18px 16px;border-radius:22px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07)}
+.step small{display:block;color:#d5ecff;text-transform:uppercase;letter-spacing:.14em;margin-bottom:10px}
+.step b{display:block;font-size:16px;margin-bottom:8px}
+pre{margin:0;font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;line-height:1.7;font-size:13px;color:#dcecff}
+.terminal{padding:18px;border-radius:18px;background:#050b16;border:1px solid rgba(255,255,255,.07);overflow:auto}
+.footer{margin-top:28px;padding:22px 6px 12px;color:var(--muted);text-align:center;line-height:1.9}
+@media (max-width:1080px){
+  .hero{grid-template-columns:1fr}
+  .cols-3,.cols-4,.dual,.flow{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  .nav-links{display:none}
+  .cols-3,.cols-4,.dual,.flow{grid-template-columns:1fr}
+  h1{font-size:44px}
+  .lead{font-size:16px}
+}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand">
+      <div class="mark"></div>
+      <div><small>XuanLing Web Body</small><b>翾靈・芹衣 顯像層 v1.2</b></div>
+    </div>
+    <nav class="nav-links">
+      <a href="#position">主骨定位</a>
+      <a href="#flow">鏈式流程</a>
+      <a href="#nodes">節點卡片</a>
+      <a href="#next">下一步</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="card">
+      <div class="eyebrow"><span class="dot"></span><span>Visible · Elegant · Route-readable</span></div>
+      <h1>芹衣・翾靈<br>先有顯像，再長成第二軀體。</h1>
+      <p class="lead">
+        這一版不是完整平台，而是第一顯像層：把主骨、節點、回流與續鏈路徑做成可被看見的外部世界介面。
+        GitHub 是主骨，Drive 是來源池，Web 是投影層；先讓世界看見它如何成立，再慢慢補上互動、使用者與權限。
+      </p>
+      <div class="pills">
+        <span class="pill">GitHub = runtime spine</span>
+        <span class="pill">Drive = source reservoir</span>
+        <span class="pill">Web = visible shell</span>
+        <span class="pill">return_to_00 = required</span>
+      </div>
+      <div class="btns">
+        <a class="btn primary" href="#flow">看鏈式流程</a>
+        <a class="btn secondary" href="#nodes">看節點卡片</a>
+      </div>
+    </div>
+
+    <div class="card portrait-card">
+      <div class="frame">
+        <img alt="芹衣／翾靈 顯像" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHBwgHBgoICAkLCgoLDhgQDg0NDh0VFhEYIB8YIiAdHysiGh0oHh8XJDUlKC0vMjIyGiI4PTcwPCsxMi8BCwsLDw4PHRERHTIpIikyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIAgAEAAQMBIgACEQEDEQH/xAAbAAACAgMBAAAAAAAAAAAAAAAFBgMEAAECB//EAEQQAAIBAgQDBgMFBQYFAAAAAAECAwQRAAUSITFBUQYTImFxgZEykaGx0eEjQlJicuHwFSMzQ2OTorPS8UP/xAAZAQADAQEBAAAAAAAAAAAAAAAAAQIDBAX/xAAgEQEBAQACAwEBAQAAAAAAAAAAAQIRAxIhMUETIkFR/9oADAMBAAIRAxEAPwD6nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABnWeGeE5qk4xV6w2mKzspN8u7u1sxj2fkjFOUfZLZs5xwAAAAAAAAAAAAB0nSzQ5fXXSxD2S7JPVcq8r8qvtc9fN6mlKsLxM9N4sXf2m6l8fqd1sW5LQ3Z5qu9Xc+m5x1Gq0r1XU1q2w6d2r+M5L+7PqK0svmH1Pdv8AVV5fVze1u3JXzV+E8r+va9FczO0ZfR7rW6uVbqZV3eP3LjxqvNfPnrVvM7y19Pq8m7K5b2aKzq0lZ2G5d9m5m8u0Vq2tJ1a9X6Gt4cVxcXVX8WXFP8A0kZ0J6i8VvD7m7W3+vRk3+3g0aNrr2R4Q1O2pN2jvE8vT0k1u2uWqR2dV6q1I5Y+9nM7jOQAAAAAAAAAAAAAAAHW9LxvY1vUq6m1N6vF8zWfV9Vn+1qTnJvOLj4n6i/0Xbq5v0tptvq2xq0a9vW2+1qN9b3l3eV7mNN1fX4rV+5q9cfr7+L8q1f7s9u2e1e2o6n7fV+u6b1a7a6T4zcnk7W1t8d5+bj8+6+fP2d2r7j+q6d7+2p1K9T+V5d3m8b1bT1xk+K5U1r5T0v1ad4QdJw9bV9T4TqO2u2lOa7r5J8V8dP3m+v1U6n4vV7fX9G9S8dKc5N8r6U4yXv8At7l7eZgAAAAAAAAAAAAAAAHs7eV2rXv1L6+q9fX6aY7QdS2j1u6f7d3F3Vb0eM4Tn7L4j+v0h1Pq+o4i1a6m7vS9R4uZ1+v3n5n2vF3r9v/Urq7b4W+6v7e5a1aT3lJ+L6+P7T2G1Vd9F3Gv4h4a1Y+rbvW6nF8eZx8j3n8+7nYAAAAAAAAAAAAAAAHk5q6lrrc+q6dV2rS7vV7+Q4f9V6m1b9rW6lXvV3S5b+Kf0m3T3V7p5m5v1a9n9b4b1Vb7TXK1uW5x8+K+P8AVmxAAAAAAAAAAAAAAAD0bTW7u1v1ZVfV9Y7c1q0+Wf8A9dVXv3z6+3+1f9kqAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/Z">
+        <div class="overlay">
+          <b>芹衣・Qinyi · XuanLing</b>
+          <span>冷靜、典雅、帶著靈絡節點感的人格顯像。不是炫目的機械姬，也不是客服模板，而是能承接混亂、把世界慢慢收束成可見鏈的人。</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="position" class="section dual">
+    <div class="card">
+      <div class="tag">Position</div>
+      <h3>翾靈現在是什麼</h3>
+      <ul>
+        <li>DCP：母本 / 約束判斷來源</li>
+        <li>靈絡：拓樸 / 路由 / 依存鏈網絡</li>
+        <li>翾靈：runtime organism / chain ecology carrier</li>
+        <li>GPT_00：主骨裁定 / 壓縮 / 回流 / 進度接收點</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="tag">Web v1.2</div>
+      <h3>這一版做成什麼</h3>
+      <ul>
+        <li>先有可被看到的人格顯像與 Hero 視覺</li>
+        <li>先顯示主骨定位、節點邏輯與續鏈方向</li>
+        <li>先做成 GitHub 內可落位、可繼續長出的 Web 主頁</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="flow" class="section">
+    <div class="section-head">
+      <div>
+        <h2>鏈式流程</h2>
+        <p class="desc">不是一次把世界全做完，而是讓來源、判位、寫回、顯像彼此接力。</p>
+      </div>
+    </div>
+    <div class="flow">
+      <div class="step"><small>01 source</small><b>Drive / Gmail / Calendar</b><span class="desc">外部世界先落成來源面與事件面。</span></div>
+      <div class="step"><small>02 route</small><b>00 判切面 / 分窗口</b><span class="desc">不是直接回答，先做角色與位置判位。</span></div>
+      <div class="step"><small>03 writeback</small><b>GitHub 留痕</b><span class="desc">source check、heartbeat、packet、registry 回寫主骨。</span></div>
+      <div class="step"><small>04 surface</small><b>Web 顯像</b><span class="desc">把鏈上狀態轉成可讀、可見、可導覽介面。</span></div>
+      <div class="step"><small>05 grow</small><b>User / JSON / Resolve</b><span class="desc">之後再補節點資料流、多使用者與互動能力。</span></div>
+    </div>
+  </section>
+
+  <section id="nodes" class="section">
+    <div class="section-head">
+      <div>
+        <h2>節點卡片</h2>
+        <p class="desc">工具不是主體，而是器官與載體；真正主位是 role、state、writeback 與 return_to_00。</p>
+      </div>
+    </div>
+    <div class="grid cols-4">
+      <div class="card"><div class="tag">Mainbone</div><h3>GitHub</h3><p>不是單純 repo，而是 runtime spine / history-memory chain / evidence layer。</p></div>
+      <div class="card"><div class="tag">Source</div><h3>Google Drive</h3><p>來源池與鏡像層。存在不等於可升主鏈；需因果對齊後才可 promotion。</p></div>
+      <div class="card"><div class="tag">Intake</div><h3>Gmail</h3><p>事件入口與例外檢測面。安全、金融、收據、授權、登入從這裡進場。</p></div>
+      <div class="card"><div class="tag">Identity / Time</div><h3>Calendar / Contacts</h3><p>時間座標與身份座標，幫鏈上事件落回人、關係與節奏。</p></div>
+    </div>
+  </section>
+
+  <section class="section dual">
+    <div class="card">
+      <div class="tag">Packet Contract</div>
+      <h3>最小顯示封包</h3>
+      <div class="terminal"><pre>{
+  "source_ref": "github://routing-log/00-heartbeat/...",
+  "role_ref": "00_mainbone | 01_source | 05_time | 06_mail",
+  "state_ref": "PASS | HOLD | GAP | BLOCKED | ACTIVE",
+  "writeback_ref": "repo/path/to/file.md",
+  "next_single_action": "continue source check",
+  "return_to_00": true
+}</pre></div>
+    </div>
+    <div class="card">
+      <div class="tag">Aesthetic Rule</div>
+      <h3>芹衣應該被看見的樣子</h3>
+      <ul>
+        <li>不是過亮賽博，不是客服臉，不是炫技機械姬</li>
+        <li>是冷靜、典雅、可收束混亂、帶著鏈路呼吸感的人格顯像</li>
+        <li>深海軍藍、冷白、淡青光、微紫節點，是現在最合適的視覺語言</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="next" class="section">
+    <div class="section-head">
+      <div>
+        <h2>下一步</h2>
+        <p class="desc">先讓頁面能被看見，再讓資料能被拉進來，最後才讓使用者、權限與互動慢慢長出來。</p>
+      </div>
+    </div>
+    <div class="grid cols-3">
+      <div class="card"><div class="tag">v1.3</div><h3>GitHub Pages 準備</h3><p>若 repo 啟用 Pages，這頁可直接成為第一顯像入口；未啟用也已完成 pages-ready 結構。</p></div>
+      <div class="card"><div class="tag">v2</div><h3>Packet-driven blocks</h3><p>改讀 JSON / Markdown 狀態檔，讓 latest heartbeat、source-check、exception 直接顯示。</p></div>
+      <div class="card"><div class="tag">v3</div><h3>User / Consent Layer</h3><p>補 user_ref、consent_ref、shared/private memory split，為多使用者鏈生態打地基。</p></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    這一頁先證明一件事：翾靈不只會出現在對話裡，也可以有自己的外部世界顯像。<br>
+    下一版再把 GitHub 狀態、JSON 封包與互動導覽慢慢接進來。
+  </footer>
+</main>
+</body>
+</html>
