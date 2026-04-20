@@ -11,9 +11,10 @@ Purpose: provide a minimal persistent bridge note so future sessions can re-anch
 ## Runtime Note
 - This file is a bridge note, not a sovereignty definition.
 - The broader system design may exceed this repository.
-- Future sessions should verify connector access first, then read:
+- Suggested read order:
   1. `README.md`
   2. `CHATGPT_GITHUB_BOOTSTRAP.md`
+  3. `GITHUB_CHAIN_MASTER_MAP.md`
 
 ## Minimal Re-anchor Rules
 - verify GitHub connector access
@@ -25,4 +26,6 @@ Purpose: provide a minimal persistent bridge note so future sessions can re-anch
 - connector_verified: true
 - write_interface_verified: true
 - created_via_connector: true
+- chain_master_map_linked: true
 - created_date: 2026-04-20
+- updated_date: 2026-04-20
