@@ -39,17 +39,19 @@ Status:
 
 ## 2. N-002 Board Orchestration Drift
 
-### Legacy: `03_board_orchestration/`
+### Legacy: `03_board_orchestration/` (Source: `origin/xuanling-seed-v0-1`)
 
 Observed files:
-- board_registry.md
-- orchestration_rules.md
-- routing_logic.md
+- window_binding_registry_01_07.md
+- window_delta_mapping_template.md
+
+Note: Previously listed files (board_registry.md, orchestration_rules.md, routing_logic.md) were placeholders.
 
 ### Canonical: `03_board-orchestration/`
 
 Status:
-- file-level comparison pending
+- file-level comparison completed
+- 2 unique seed files identified for rebind
 
 ---
 

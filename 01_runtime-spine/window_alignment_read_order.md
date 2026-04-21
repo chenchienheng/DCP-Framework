@@ -15,8 +15,8 @@ Before interpreting new GitHub deltas, windows 01-07 should first read the stabl
 1. 00_meta/user_identity_anchor.md
 2. 01_runtime-spine/github_delta_driven_pulse_rule.md
 3. 01_runtime-spine/window_linking_logic_01_07.md
-4. 03_board_orchestration/window_binding_registry_01_07.md
-5. 03_board_orchestration/window_delta_mapping_template.md
+4. 03_board-orchestration/window_binding_registry_01_07.md
+5. 03_board-orchestration/window_delta_mapping_template.md
 6. 01_native_board/pulse_rollup.md
 7. current GitHub delta items
 
