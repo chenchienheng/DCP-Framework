@@ -19,17 +19,21 @@ It prepares the next execution step: classification and rebind.
 
 ## 1. N-001 Runtime Spine Drift
 
-### Legacy: `01_runtime_spine/`
+### Legacy: `01_runtime_spine/` (Source: `origin/xuanling-seed-v0-1`)
 
 Observed files:
-- runtime_spine.md
-- chain_flow_map.md
-- writeback_protocol.md
+- github_delta_driven_pulse_rule.md
+- legacy_writeback_block_rule.md
+- window_alignment_read_order.md
+- window_linking_logic_01_07.md
+
+Note: Previously listed files (runtime_spine.md, chain_flow_map.md, writeback_protocol.md) were not found and appear to have been placeholders.
 
 ### Canonical: `01_runtime-spine/`
 
 Status:
-- file-level comparison pending
+- file-level comparison completed
+- 4 unique seed files identified for rebind
 
 ---
 

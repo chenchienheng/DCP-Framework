@@ -39,7 +39,7 @@ Each drift pair should be tracked with:
 
 | ID | Legacy Family | Canonical Family | Status | Priority | Execution Mode | Required Actions |
 |---|---|---|---|---|---|---|
-| N-001 | `01_runtime_spine/` | `01_runtime-spine/` | queued | P1 | isolate + compare + rebind | compare files, preserve unique runtime seed, retire duplicate residue |
+| N-001 | `01_runtime_spine/` | `01_runtime-spine/` | resolved | P1 | isolate + compare + rebind | compare files, preserve unique runtime seed, retire duplicate residue |
 | N-002 | `03_board_orchestration/` | `03_board-orchestration/` | queued | P1 | isolate + compare + rebind | compare routing/registry artifacts, preserve unique orchestration seed, retire duplicate residue |
 | N-003 | `04_adapter_layer/` | `04_adapter-layer/` | queued | P1 | isolate + compare + rebind | compare source map/spec/writeback files, preserve unique adapter seed, retire duplicate residue |
 

@@ -46,7 +46,7 @@ Each cleanup item should eventually include:
 
 | ID | Scope | Source | Contamination Status | Priority | Handling Mode | Target State | Reason | Status |
 |---|---|---|---|---|---|---|---|---|
-| C-001 | family naming drift | `01_runtime_spine/` | contaminated | P1 | isolate + normalize | rebind into `01_runtime-spine/` or retire residue | underscore family conflicts with canonical runtime spine family | queued |
+| C-001 | family naming drift | `01_runtime_spine/` | contaminated | P1 | isolate + normalize | rebind into `01_runtime-spine/` or retire residue | underscore family conflicts with canonical runtime spine family | resolved |
 | C-002 | family naming drift | `03_board_orchestration/` | contaminated | P1 | isolate + normalize | rebind into `03_board-orchestration/` or retire residue | duplicate-family naming drift in orchestration layer | queued |
 | C-003 | family naming drift | `04_adapter_layer/` | contaminated | P1 | isolate + normalize | rebind into `04_adapter-layer/` or retire residue | duplicate-family naming drift in adapter layer | queued |
 | C-004 | branch residue | `xuanling-write-test-20260405-d` | contaminated_candidate | P1 | isolate + retire_when_safe | remove branch residue after confirming no audit value remains | test-only branch adds clutter and ambiguity | queued |
