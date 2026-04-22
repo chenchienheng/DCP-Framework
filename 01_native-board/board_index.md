@@ -19,7 +19,7 @@ This is the primary entry board for runtime routing, blockers, follow-up, and lo
 5. adapter_status
 
 ## Routing
-- blockers -> 01_native_board/blockers.md
+- blockers -> 01_native-board/blockers.md
 - task_follow_up -> 02_runtime-ops/task_follow_up.md
 - logs -> 00_meta/logs/
 - adapter_layer -> 04_adapter-layer/
