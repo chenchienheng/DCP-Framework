@@ -6,6 +6,7 @@ Node ID: ADP-004
 Window: W0
 Platform Writer: ChatGPT
 Version: v0.1
+Coupling Face: Writeback
 
 ## Core
 All external writes must pass a gate before returning to GitHub.

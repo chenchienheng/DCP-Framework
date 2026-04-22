@@ -7,6 +7,7 @@ Window: W0
 Platform Writer: ChatGPT
 Version: v0.1
 Status: active
+Coupling Face: Event
 
 ## Core
 Each GitHub delta must be compressed into tri-key and then mapped to one or more windows.

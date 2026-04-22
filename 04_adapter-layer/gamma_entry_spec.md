@@ -6,6 +6,7 @@ Node ID: ADP-002
 Window: W0
 Platform Writer: ChatGPT
 Version: v0.1
+Coupling Face: Writeback
 
 ## Core
 Gamma is the visual entry layer for the native board.

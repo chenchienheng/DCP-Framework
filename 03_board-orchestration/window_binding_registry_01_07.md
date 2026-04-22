@@ -7,6 +7,7 @@ Window: 00
 Platform Writer: ChatGPT
 Version: v0.1
 Status: active
+Coupling Face: Event
 
 ## Core
 This registry declares how windows 01-07 bind to GitHub-driven deltas, which target paths they may write to, and which states they may enter.

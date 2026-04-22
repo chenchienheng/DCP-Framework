@@ -7,6 +7,7 @@ Window: W0
 Platform Writer: ChatGPT
 Version: v0.1
 Status: active
+Coupling Face: Bone
 
 ## Core
 New runtime outputs must not be written into legacy v3 folders. Legacy folders are read-source or relay-source only unless relay mode is explicitly declared.

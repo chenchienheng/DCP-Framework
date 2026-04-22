@@ -6,6 +6,7 @@ Node ID: ADP-003
 Window: W0
 Platform Writer: ChatGPT
 Version: v0.1
+Coupling Face: Writeback
 
 ## Core
 Replit is the interaction relay layer for board, task, and log flow.

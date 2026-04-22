@@ -7,6 +7,7 @@ Window: W0
 Platform Writer: ChatGPT
 Version: v0.1
 Status: active
+Coupling Face: Bone
 
 ## Core
 GitHub is the primary live update backbone. Windows 00-07 do not wait for self-generated states; they react only to GitHub deltas that have been extracted into routing keys.

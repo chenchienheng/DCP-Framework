@@ -7,6 +7,7 @@ Window: W0
 Platform Writer: ChatGPT
 Version: v0.1
 Status: active
+Coupling Face: Bone
 
 ## Core
 Windows 01-07 do not self-evolve in isolation. They may enter advanced states only by linking to GitHub-backed deltas, mapped nodes, and allowed writeback targets.

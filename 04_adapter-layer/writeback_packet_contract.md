@@ -7,6 +7,7 @@ Window: W0
 Platform Writer: ChatGPT
 Version: v0.1
 Status: active
+Coupling Face: Writeback
 
 ## Core
 Every external writeback must use one packet shape.
