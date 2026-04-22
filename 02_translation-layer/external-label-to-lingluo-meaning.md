@@ -1,4 +1,5 @@
 # External Label to LingLuo Meaning
+Coupling Face: Event
 
 一句核心：
 分類只是辨識；轉譯才是治理。
@@ -20,4 +21,3 @@
 
 ## 狀態
 Seed v0.1
-Coupling Face: Event

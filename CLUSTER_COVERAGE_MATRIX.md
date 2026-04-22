@@ -60,9 +60,9 @@ Can operation continue after interruption, branch drift, or session reset?
 
 | Cluster / Family | Reachability | Bindability | Role Readability | Writeback Capacity | Resumability | Current Reading |
 |---|---|---|---|---|---|---|
-| 00_mother-law family | L5 | L5 | L5 | L5 | L5 | primary architectural core, integrated into registry |
+| 00_mother-law core | L5 | L5 | L5 | L5 | L5 | primary architectural core, consistent tri-coupling |
 | 01-04 operational layers | L5 | L5 | L5 | L5 | L5 | rebound, normalized, and coupling-face annotated |
-| 05_topology family | L5 | L5 | L5 | L5 | L5 | rebound to structural core with bone coupling face |
+| 05_topology structural bone | L5 | L5 | L5 | L5 | L5 | rebound to structural core with bone coupling face |
 | GitHub writeback family | L5 | L4 | L4 | L5 | L4 | strongest durable bone/writeback cluster currently visible |
 | main artifact corpus in `main` | L4 | L4 | L4 | L4 | L4 | integrated enough to support unified register and runtime maps |
 | legacy seed branch reservoir | L3 | L2 | L3 | L2 | L3 | visible and mineable, but not yet fully rebound |
