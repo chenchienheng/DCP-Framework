@@ -5,7 +5,7 @@ main 保持穩定參照；若需接入 seed 中已成形、但尚未併幹的主
 
 ## Read Path
 - Branch: `xuanling-seed-v0-1`
-- Suggested entry: `01_native-board/main-shadow-sync-board-v0-1.md`
+- Suggested entry: `01_native_board/main-shadow-sync-board-v0-1.md`
 
 ## Why
 - main 承接穩定可讀骨
