@@ -7,7 +7,6 @@ Window: 00->01-07
 Platform Writer: ChatGPT
 Version: v0.1
 Status: active
-Coupling Face: Bone
 
 ## Core
 Before interpreting new GitHub deltas, windows 01-07 should first read the stable user alignment anchors, then runtime routing rules, then current delta mappings.

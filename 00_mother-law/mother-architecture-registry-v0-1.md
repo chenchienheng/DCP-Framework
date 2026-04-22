@@ -62,42 +62,56 @@ DCP:
   current_layer: M2 Runtime Spine
   source_ref:
     - 01_runtime-spine/
-  action: hyphenated rebind completed
+  action: rebind from origin/xuanling-seed-v0-1 completed
 
 01_native_board_normalized:
   status: resolved
   current_layer: M2 Runtime Spine
   source_ref:
     - 01_native-board/
-  action: hyphenated rebind completed
+  action: rebind from origin/xuanling-seed-v0-1 completed
 
 02_translation_layer_normalized:
   status: resolved
   current_layer: M2 Runtime Spine
   source_ref:
     - 02_translation-layer/
-  action: hyphenated rebind completed
+  action: rebind from origin/xuanling-seed-v0-1 completed
 
 03_board_orchestration_normalized:
   status: resolved
   current_layer: M2 Runtime Spine
   source_ref:
     - 03_board-orchestration/
-  action: hyphenated rebind completed
+  action: rebind from origin/xuanling-seed-v0-1 completed
 
 04_adapter_layer_normalized:
   status: resolved
   current_layer: M2 Runtime Spine
   source_ref:
     - 04_adapter-layer/
-  action: hyphenated rebind completed
+  action: rebind from origin/xuanling-seed-v0-1 completed
 
 05_topology_rebound:
   status: active
   current_layer: M1 Structural Core
   source_ref:
     - 05_topology/
-  action: rebind to structural core completed
+  action: rebind from origin/xuanling-seed-v0-1 completed
+
+00_meta_rebound:
+  status: active
+  current_layer: M1 Structural Core
+  source_ref:
+    - 00_meta/
+  action: rebind from origin/xuanling-seed-v0-1 completed
+
+02_runtime_ops_normalized:
+  status: resolved
+  current_layer: M2 Runtime Spine
+  source_ref:
+    - 02_runtime-ops/
+  action: rebind from origin/xuanling-seed-v0-1 completed
 
 Freeze:
   status: confirmed_in_repo

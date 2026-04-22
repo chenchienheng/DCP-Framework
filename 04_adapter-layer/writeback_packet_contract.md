@@ -7,7 +7,6 @@ Window: W0
 Platform Writer: ChatGPT
 Version: v0.1
 Status: active
-Coupling Face: Writeback
 
 ## Core
 Every external writeback must use one packet shape.
@@ -41,8 +40,8 @@ node_id: ADP-006
 window: W0
 platform_writer: ChatGPT
 source_object: task_follow_up
-source_path: 02_runtime_ops/task_follow_up.md
-target_path: 02_runtime_ops/task_follow_up.md
+source_path: 02_runtime-ops/task_follow_up.md
+target_path: 02_runtime-ops/task_follow_up.md
 version: v0.1
 log_ref: LOG-0001
 timestamp: 2026-04-09T00:00:00+08:00

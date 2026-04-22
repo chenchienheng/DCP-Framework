@@ -1,5 +1,4 @@
 # Time Sovereignty
-Coupling Face: Bone
 
 一句核心：
 時間不是背景條件，而是靈絡中的主權條件；沒有時間主權，責代、版本、回寫都無法成立為同一條鏈。

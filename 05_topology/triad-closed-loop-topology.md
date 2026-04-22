@@ -1,5 +1,4 @@
 # Triad Closed Loop Topology
-Coupling Face: Bone
 
 一句核心：
 三耦不是三分法，而是由節點、曲面、回勾所形成的閉環拓撲條件。

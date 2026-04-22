@@ -7,7 +7,6 @@ Window: 00
 Platform Writer: ChatGPT
 Version: v0.1
 Status: active
-Coupling Face: Event
 
 ## Core
 Window 00 is the rollup point for GitHub-driven pulse inspection.

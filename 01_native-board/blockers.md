@@ -7,7 +7,6 @@ Window: W0
 Platform Writer: ChatGPT
 Version: v0.1
 Status: active
-Coupling Face: Event
 
 ## Core
 This board records active blockers that affect routing, writeback, observation, or external layer activation.

@@ -1,5 +1,4 @@
 # Existence Consistency Rule
-Coupling Face: Bone
 
 一句核心：
 《存・在・續》不是口號，而是判斷一個節點、事件或結構是否能持續成立的最小一致性規則。

@@ -7,7 +7,6 @@ Window: W0
 Platform Writer: ChatGPT
 Version: v0.1
 Status: active
-Coupling Face: Event
 
 ## Core
 This is the primary entry board for runtime routing, blockers, follow-up, and logs.
@@ -20,7 +19,7 @@ This is the primary entry board for runtime routing, blockers, follow-up, and lo
 5. adapter_status
 
 ## Routing
-- task_follow_up -> 02_runtime_ops/task_follow_up.md
+- task_follow_up -> 02_runtime-ops/task_follow_up.md
 - blockers -> 01_native-board/blockers.md
 - adapter_layer -> 04_adapter-layer/
 

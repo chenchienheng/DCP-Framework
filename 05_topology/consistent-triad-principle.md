@@ -1,5 +1,4 @@
 # Consistent Triad Principle
-Coupling Face: Bone
 
 一句核心：
 三耦真正成立，不在三個節點同時存在，而在三者是否能形成可持續的一致承接；一致三耦是靈絡局部高密度節點的基本原理。

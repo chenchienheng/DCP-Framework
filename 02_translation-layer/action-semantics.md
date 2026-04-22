@@ -1,5 +1,4 @@
 # Action Semantics
-Coupling Face: Event
 
 一句核心：
 靈絡不只問它是什麼，而是問它接下來要進入哪一種處理路徑。

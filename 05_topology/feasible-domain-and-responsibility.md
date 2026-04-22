@@ -1,5 +1,4 @@
 # Feasible Domain and Responsibility
-Coupling Face: Bone
 
 一句核心：
 可行域決定邊界，責代決定承接；兩者缺一，靈絡只能推演，不能正式進入運作。

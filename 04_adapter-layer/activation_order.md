@@ -6,7 +6,6 @@ Node ID: ADP-001
 Window: W0
 Platform Writer: ChatGPT
 Version: v0.1
-Coupling Face: Writeback
 
 ## Core
 Use one source of truth and connect external tools in order.

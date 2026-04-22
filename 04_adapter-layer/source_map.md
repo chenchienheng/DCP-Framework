@@ -7,7 +7,6 @@ Window: W0
 Platform Writer: ChatGPT
 Version: v0.1
 Status: active
-Coupling Face: Writeback
 
 ## Core
 Source map defines the fixed read path for the native board and all adapter layers.
@@ -30,7 +29,7 @@ Source map defines the fixed read path for the native board and all adapter laye
 | board_index | 01_native-board/board_index.md | Gamma | Replit | yes |
 | blockers | 01_native-board/blockers.md | Gamma | Replit | yes |
 | logs | 00_meta/logs/ | Gamma summary only | Replit form | yes |
-| task_follow_up | 02_runtime_ops/task_follow_up.md | Gamma optional | Replit | yes |
+| task_follow_up | 02_runtime-ops/task_follow_up.md | Gamma optional | Replit | yes |
 
 ## Read Priority
 1. primary path in GitHub

@@ -1,5 +1,4 @@
 # Smelting Layer Rule
-Coupling Face: Event
 
 一句核心：
 高密度輸入不得直接全鏈展開；必須先經熔煉層去蕪存菁，壓成單切面可運行核心，再決定是否續鏈。
