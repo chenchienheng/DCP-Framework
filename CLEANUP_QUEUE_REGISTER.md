@@ -46,9 +46,9 @@ Each cleanup item should eventually include:
 
 | ID | Scope | Source | Contamination Status | Priority | Handling Mode | Target State | Reason | Status |
 |---|---|---|---|---|---|---|---|---|
-| C-001 | family naming drift | `01_runtime_spine/` | contaminated | P1 | isolate + normalize | rebind into `01_runtime-spine/` or retire residue | underscore family conflicts with canonical runtime spine family | queued |
-| C-002 | family naming drift | `03_board_orchestration/` | contaminated | P1 | isolate + normalize | rebind into `03_board-orchestration/` or retire residue | duplicate-family naming drift in orchestration layer | queued |
-| C-003 | family naming drift | `04_adapter_layer/` | contaminated | P1 | isolate + normalize | rebind into `04_adapter-layer/` or retire residue | duplicate-family naming drift in adapter layer | queued |
+| C-001 | family naming drift | `01_runtime_spine/` | contaminated | P1 | isolate + normalize | rebind into `01_runtime-spine/` or retire residue | underscore family conflicts with canonical runtime spine family | resolved |
+| C-002 | family naming drift | `03_board_orchestration/` | contaminated | P1 | isolate + normalize | rebind into `03_board-orchestration/` or retire residue | duplicate-family naming drift in orchestration layer | resolved |
+| C-003 | family naming drift | `04_adapter_layer/` | contaminated | P1 | isolate + normalize | rebind into `04_adapter-layer/` or retire residue | duplicate-family naming drift in adapter layer | resolved |
 | C-004 | branch residue | `xuanling-write-test-20260405-d` | contaminated_candidate | P1 | isolate + retire_when_safe | remove branch residue after confirming no audit value remains | test-only branch adds clutter and ambiguity | queued |
 | C-005 | file residue | `00_mother-law/WRITE_TEST.md` | construction_residue | P2 | isolate + retire_when_safe | archive or remove after branch decision | visible write-test artifact with low structural value | queued |
 | C-006 | mixed family concentration | `00_mother-law/` | mixed_unverified | P1 | triage + selective rebind | split clean seed / residue / contamination | very high value family but likely mixed layers | queued |
