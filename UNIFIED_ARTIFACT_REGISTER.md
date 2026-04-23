@@ -15,6 +15,7 @@
 - JULES_TASKBOARD.md
 - SEMANTIC_COMPRESSION_REPORT.md
 - REPLAY_READINESS_REPORT.md
+- TIME_CHAIN_MASTER_LAYER.md
 
 ### Group B — Runtime Structure & Topology
 
