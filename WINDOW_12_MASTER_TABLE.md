@@ -96,7 +96,7 @@ Therefore:
 - readability is improving faster than live execution discipline
 - some windows are defined conceptually, but not yet activated through durable operational schedules
 
-This is a normal construction-stage asymmetry, but it must be corrected.
+This asymmetry is actively being reduced by full corpus role mapping.
 
 ---
 
@@ -129,5 +129,5 @@ Read together with:
 - window_12_master_table_created: true
 - central_00_core_bound: true
 - scheduling_binding_pending: true
-- full_window_activation_pending: true
+- full_window_activation_pending: partially_addressed
 - return_to_00: true
