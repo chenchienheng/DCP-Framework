@@ -56,6 +56,7 @@ Each cleanup item should eventually include:
 | C-008 | mixed family concentration | `01_native_board/` | mixed_unverified | P2 | isolate + classify | preserve stable board logic, isolate temporal residue | diagnostics, heartbeat, and board logic are mixed | queued |
 | C-009 | schedule design drift | scheduling artifacts without effect proof | construction_residue + runtime_risk | P1 | bind to effect register | every schedule linked to owner/output/proof | named schedule without runtime effect risks static pollution | queued |
 | C-010 | static corpus accumulation | large text corpus without unified dynamic registry | contamination_risk | P0-P1 | rebind into dynamic register | turn static corpus into dynamic artifact database | static pile risks becoming residue mass | active |
+| C-011 | placeholder population | `JULES_TASKBOARD.md`, `BRANCH_REFINEMENT_SCOPE.md` | construction_residue | P1 | flesh out | populate placeholders with intended operational logic | empty files act as weak structural bone until populated | queued |
 
 ---
 

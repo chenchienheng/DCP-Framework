@@ -40,8 +40,8 @@ Each dimension is scored from `0` to `5`.
 |---|---:|---|
 | durable writeback | 4 | main branch now holds many durable runtime/governance artifacts |
 | branch readability | 3 | topology is known, but cleanup and seed extraction are still ongoing |
-| naming consistency | 2 | canonical rule exists, but drift pairs remain unresolved |
-| artifact integration | 4 | unified artifact register exists and major groups are visible |
+| naming consistency | 3 | canonical rule exists, and major ghost reference pairs are resolved |
+| artifact integration | 5 | unified artifact register is fully aligned with actual repository state |
 | contamination visibility | 4 | contamination policy, triage, cleanup queue, and resolution register exist |
 | seed extraction controllability | 3 | seed reservoir is inventoried and triaged, but not yet rebound file-by-file |
 | runtime binding | 3 | windows, schedules, and model-window ownership are defined, but not fully live |
@@ -84,7 +84,7 @@ but should depend on stable enough structural control.
 
 ## 5. Near-Term Upgrade Path
 
-### To raise naming consistency from 2 -> 3/4
+### To raise naming consistency from 3 -> 4
 - execute N-001 ~ N-003 beyond register level
 - resolve canonical family mappings with file-level diffs
 
