@@ -16,7 +16,7 @@ This board records active blockers that affect routing, writeback, observation, 
 |---|---|---|---|---|---|
 | BLK-001 | External Windows | Scheduled windows have not finished the first observable cycle yet | Cannot judge autonomous return-to-bone behavior yet | observing | 2026-04-10 |
 | BLK-002 | Adapter Layer | Gamma/Replit have specs and source map, but the visual shell and interaction shell are not instantiated yet | External entry is not active yet | open | 2026-04-10 |
-| BLK-003 | Google Family | Quiet integration path is not yet mapped into a stable archive/time-window/report route | Notification and report flow are not stabilized | open | 2026-04-11 |
+| BLK-003 | Google Family | Quiet integration path is not yet mapped into a stable archive/time-window/report route | Notification and report flow are not stabilized | resolved | 2026-04-21 |
 
 ## Rules
 - Update blocker status before creating new expansion rules.

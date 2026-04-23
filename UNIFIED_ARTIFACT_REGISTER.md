@@ -23,10 +23,10 @@
 - 05_topology/ (Triad & Consistency Rules)
 
 ### Group C — Operational Boards & Layers
-- 01_native-board/ (Indices & Blockers)
+- 01_native-board/ (Indices, Blockers, & Permissions)
 - 02_runtime-ops/ (Follow-up Tasks)
-- 03_board-orchestration/ (Binding Registries)
-- 04_adapter-layer/ (External Node Specs)
+- 03_board-orchestration/ (Binding & Intake Contracts)
+- 04_adapter-layer/ (External Node Specs & Adapters)
 
 ### Group D — Governance & Cleanup
 - CLEANUP_QUEUE_REGISTER.md
