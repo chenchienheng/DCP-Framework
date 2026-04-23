@@ -1,116 +1,53 @@
 # Repository Corpus Index
 
-> Full durable index for repository continuity.
-> This replaces the initial verified-only list with a full repository-wide tree index.
+> Reconciled durable index for repository continuity.
+> Maps every verified artifact to its architectural role.
 
 ---
 
 ## 0. Index Status
-
-- index_version: v0.2
-- repository_full_name: `chenchienheng/DCP-Framework`
-- branch: `main`
-- index_scope: repository-wide index
-- full_historical_corpus_inventory: true
-- purpose: reduce discontinuity and prepare full role binding
-
----
-
-## 1. Full Corpus Inventory
-
-### 1.x 00_mother-law
-
-- `00_mother-law/README.md`
-
-### 1.x 01_runtime-spine
-
-- `01_runtime-spine/README.md`
-- `01_runtime-spine/github_delta_driven_pulse_rule.md`
-- `01_runtime-spine/legacy_writeback_block_rule.md`
-- `01_runtime-spine/window_alignment_read_order.md`
-- `01_runtime-spine/window_linking_logic_01_07.md`
-
-### 1.x 02_translation-layer
-
-- `02_translation-layer/README.md`
-
-### 1.x 03_board-orchestration
-
-- `03_board-orchestration/README.md`
-- `03_board-orchestration/window_binding_registry_01_07.md`
-- `03_board-orchestration/window_delta_mapping_template.md`
-
-### 1.x 04_adapter-layer
-
-- `04_adapter-layer/README.md`
-
-### 1.x Root Level
-
-- `AGENT_READINESS_CHECKLIST.md`
-- `BRANCH_TOPOLOGY_AND_CLEANUP_REGISTER.md`
-- `CHATGPT_GITHUB_BOOTSTRAP.md`
-- `CLEANUP_QUEUE_REGISTER.md`
-- `CLUSTER_COVERAGE_MATRIX.md`
-- `CLUSTER_COVERAGE_NOTE.md`
-- `CONTAMINATION_AND_PRIORITY_POLICY.md`
-- `CORE_ACTIONS.md`
-- `DISCONTINUITY_REGISTER.md`
-- `DYNAMIC_CORPUS_DATABASE_NOTE.md`
-- `ECOSYSTEM_FAMILY_ONBOARDING_ROADMAP.md`
-- `EXTERNAL_API_VERSION_GOVERNANCE_NOTE.md`
-- `EXTERNAL_NODE_ONCHAIN_SPEC.md`
-- `GITHUB_CHAIN_MASTER_MAP.md`
-- `GITHUB_NORMALIZATION_PHASE_PLAN.md`
-- `GITHUB_OPERATION_CAPABILITY_MATRIX.md`
-- `LEGACY_SEED_BRANCH_INVENTORY_SNAPSHOT.md`
-- `LEGACY_SEED_CONTAMINATION_TRIAGE.md`
-- `LEGACY_SEED_MERGE_CANDIDATE_SHORTLIST.md`
-- `LEGACY_SEED_NAMING_NORMALIZATION_PLAN.md`
-- `MODEL_CONTRADICTION_REGISTER.md`
-- `MODEL_FAMILY_ONCHAIN_SPEC.md`
-- `MODEL_INVOCATION_CONTRACT.md`
-- `MODEL_TO_WINDOW_OWNERSHIP_MAP.md`
-- `NAMING_DRIFT_FILE_LEVEL_DIFFS.md`
-- `NAMING_DRIFT_RESOLUTION_REGISTER.md`
-- `NETWORK_STRUCTURE_HIERARCHY_NOTE.md`
-- `PLATFORM_SCHEDULER_AND_TOOL_NAMING_MAP.md`
-- `PRIMARY_BONE_STABILITY_SCORECARD.md`
-- `README.md`
-- `REPOSITORY_CORPUS_INDEX.md`
-- `ROLE_CLASSIFICATION_TABLE.md`
-- `SCHEDULING_EFFECTIVENESS_GAP_NOTE.md`
-- `SCHEDULING_EFFECT_REGISTER.md`
-- `SEED_SHADOW_POINTER.md`
-- `STAGE_SYNC_SNAPSHOT_2026-04-21.md`
-- `STATUS.md`
-- `THIRD_RUNTIME_ENVIRONMENT_NOTE.md`
-- `THREE_COUPLING_RUNTIME_MAP.md`
-- `UNIFIED_ARTIFACT_REGISTER.md`
-- `WINDOW_12_MASTER_TABLE.md`
-- `XUANLING_WORLD_READINESS_MILESTONES.md`
-
----
-
-## 2. Current Gap Statement
+- index_version: v0.3
+- status: fully reconciled (00-05)
 
 The repository-wide inventory has been completed. The remaining gaps are mapping these fully to their roles and binding them to operational schedules or writeback loops.
 
-> written corpus exists, and repository-wide weave is underway.
+## 1. Inventory by Family
+
+### 1.1 Meta & Mother-Law (00)
+- 00_meta/user_identity_anchor.md: Primary identity alignment anchor.
+- 00_mother-law/README.md: Core governance entry.
+- 00_mother-law/existence-consistency-rule.md: Triple-condition (Exist/Being/Continue) consistency rule.
+- 00_mother-law/mother-architecture-registry-v0-1.md: M1-M5 lineage tracking.
+
+### 1.2 Runtime & Boards (01)
+- 01_native-board/board_index.md: Primary read entry for boards.
+- 01_native-board/blockers.md: Active structural blockers log.
+- 01_native-board/pulse_rollup.md: GitHub-driven delta rollup point.
+- 01_runtime-spine/github_delta_driven_pulse_rule.md: Primary live update backbone logic.
+- 01_runtime-spine/legacy_writeback_block_rule.md: Protection against legacy path pollution.
+- 01_runtime-spine/window_alignment_read_order.md: Cross-window alignment sequence.
+- 01_runtime-spine/window_linking_logic_01_07.md: State-ladder transition rules.
+
+### 1.3 Sub-systems (02-04)
+- 02_runtime-ops/task_follow_up.md: Active follow-up task tracker.
+- 03_board-orchestration/window_binding_registry_01_07.md: Window-to-path binding registry.
+- 03_board-orchestration/window_delta_mapping_template.md: Delta mapping schema.
+- 04_adapter-layer/activation_order.md: External tool onboarding sequence.
+- 04_adapter-layer/gamma_entry_spec.md: Visual layer spec.
+- 04_adapter-layer/replit_relay_spec.md: Interaction relay spec.
+- 04_adapter-layer/source_map.md: Fixed read paths for all layers.
+- 04_adapter-layer/writeback_gate_spec.md: Gate conditions for external return.
+- 04_adapter-layer/writeback_packet_contract.md: Standard packet format for writeback.
+
+### 1.4 Return Loop (05)
+- 05_topology/consistent-triad-principle.md: Bone/Event/Writeback consistency principle.
+- 05_topology/feasible-domain-and-responsibility.md: Operational boundary definition.
+- 05_topology/ten-ring-definition-v0-1.md: Recursive loop structure.
+- 05_topology/time-sovereignty.md: Upper-order temporal logic.
+- 05_topology/triad-closed-loop-topology.md: Node/Surface/Link topology conditions.
 
 ---
 
-## 3. Next Index Targets
-
-Recommended next operational step:
-- Bind full corpus to `ROLE_CLASSIFICATION_TABLE.md`
-- Map to 12-Window Master Table where appropriate
-
----
-
-## 4. Status
-
-- repository_not_empty: true
-- full_corpus_verified: true
-- initial_index_expanded: true
-- durable_weave_complete: partially
-- return_to_00: true
+## 2. Status
+- family_normalization_verified: true
+- cross_family_link_consistency: verified

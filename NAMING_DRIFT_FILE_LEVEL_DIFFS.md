@@ -33,7 +33,6 @@ Note: Previously listed files (runtime_spine.md, chain_flow_map.md, writeback_pr
 
 Status:
 - file-level comparison completed
-- 4 unique seed files identified for rebind
 
 ---
 
@@ -51,7 +50,6 @@ Note: Previously listed files (board_registry.md, orchestration_rules.md, routin
 
 Status:
 - file-level comparison completed
-- 2 unique seed files identified for rebind
 
 ---
 
@@ -67,7 +65,7 @@ Observed files:
 ### Canonical: `04_adapter-layer/`
 
 Status:
-- file-level comparison pending
+- file-level comparison completed
 
 ---
 

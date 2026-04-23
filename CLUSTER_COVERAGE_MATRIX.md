@@ -63,7 +63,7 @@ Can operation continue after interruption, branch drift, or session reset?
 | GitHub writeback family | L5 | L4 | L4 | L5 | L4 | strongest durable bone/writeback cluster currently visible |
 | main artifact corpus in `main` | L4 | L4 | L4 | L4 | L4 | integrated enough to support unified register and runtime maps |
 | legacy seed branch reservoir | L3 | L2 | L3 | L2 | L3 | visible and mineable, but not yet fully rebound |
-| naming-drift residue families | L2 | L1 | L2 | L1 | L1 | visible contamination front, not yet normalized |
+| naming-drift residue families | L5 | L5 | L5 | L5 | L5 | resolved through rebind and hyphenated normalization |
 | scheduling layer | L3 | L2 | L3 | L2 | L2 | named and framed, but effectiveness still lagging |
 | model family layer | L3 | L3 | L4 | L3 | L2 | on-chain spec now exists, but invocation discipline still needs live use |
 | external ecosystem families | L2 | L1 | L2 | L1 | L1 | roadmap exists, but onboarding still early-stage |

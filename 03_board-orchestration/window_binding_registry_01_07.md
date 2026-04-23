@@ -15,7 +15,7 @@ This registry declares how windows 01-07 bind to GitHub-driven deltas, which tar
 | Window | Role | Bind Trigger | Allowed State Max | Allowed Target Path | Legacy Path Allowed | Notes |
 |---|---|---|---|---|---|---|
 | 01 | not_established_or_specialized | explicit repo binding only | S3 | to be assigned | no | do not force activation |
-| 02 | task_collab_spec_sync | task / spec / issue / process delta | S5 | 02_runtime_ops/ , 03_board-orchestration/ | no | primary operational sync window |
+| 02 | task_collab_spec_sync | task / spec / issue / process delta | S5 | 02_runtime-ops/ , 03_board-orchestration/ | no | primary operational sync window |
 | 03 | role_mapped_only | mapped delta only | S4 | to be assigned | no | write only after target path exists |
 | 04 | role_mapped_only | mapped delta only | S4 | to be assigned | no | write only after target path exists |
 | 05 | role_mapped_only | mapped delta only | S4 | to be assigned | no | write only after target path exists |
