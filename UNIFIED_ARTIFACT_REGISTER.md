@@ -12,20 +12,31 @@
 - GITHUB_CHAIN_MASTER_MAP.md
 - REPOSITORY_CORPUS_INDEX.md
 - JULES_TASKBOARD.md
+- SEMANTIC_COMPRESSION_REPORT.md
+- REPLAY_READINESS_REPORT.md
 
-### Group B — Runtime Structure
+### Group B — Runtime Structure & Topology
 - THREE_COUPLING_RUNTIME_MAP.md
 - WINDOW_12_MASTER_TABLE.md
-- 01_runtime-spine/
-- 03_board-orchestration/
+- 00_meta/user_identity_anchor.md
+- 01_runtime-spine/ (Pulse & Linking Rules)
+- 05_topology/ (Triad & Consistency Rules)
 
-### Group C — Governance & Cleanup
+### Group C — Operational Boards & Layers
+- 01_native-board/ (Indices & Blockers)
+- 02_runtime-ops/ (Follow-up Tasks)
+- 03_board-orchestration/ (Binding Registries)
+- 04_adapter-layer/ (External Node Specs)
+
+### Group D — Governance & Cleanup
 - CLEANUP_QUEUE_REGISTER.md
 - NAMING_DRIFT_RESOLUTION_REGISTER.md
 - CLUSTER_COVERAGE_MATRIX.md
-- SEMANTIC_COMPRESSION_REPORT.md
+- MERGE_LAW_PROPOSAL.md
+- SNAPSHOT_MECHANISM_PROPOSAL.md
 
 ---
 
 ## 2. Status
 - register_synchronized: true
+- family_range: 00-05
