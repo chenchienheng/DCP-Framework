@@ -117,7 +117,6 @@ Recommended next artifacts:
 1. `ROLE_CLASSIFICATION_TABLE.md`
 2. `DISCONTINUITY_REGISTER.md`
 3. `WINDOW_12_MASTER_TABLE.md`
-4. `GATE_64_BINDING_NOTE.md`
 
 Recommended next operational step:
 

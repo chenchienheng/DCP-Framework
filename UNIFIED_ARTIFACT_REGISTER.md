@@ -77,7 +77,6 @@ Therefore this unified register exists to turn current architecture content from
 | Artifact | Role | Current Function |
 |---|---|---|
 | `LEGACY_SEED_BRANCH_INVENTORY_SNAPSHOT.md` | seed snapshot | first inventory pass for `xuanling-seed-v0-1` |
-| `LEGACY_SEED_FAMILY_ROLE_TABLE.md` | family role map | classifies seed branch families by structural role |
 | `LEGACY_SEED_CONTAMINATION_TRIAGE.md` | contamination triage | separates clean seed, residue, contamination, mixed families |
 | `LEGACY_SEED_MERGE_CANDIDATE_SHORTLIST.md` | selective merge shortlist | rejects flat merge and ranks high-value extraction families |
 | `LEGACY_SEED_NAMING_NORMALIZATION_PLAN.md` | naming cleanup plan | chooses canonical family naming and normalization order |
@@ -121,8 +120,7 @@ The following remain structurally important and not yet fully completed:
 
 1. `SCHEDULING_EFFECT_REGISTER.md`
 2. `CLUSTER_COVERAGE_MATRIX.md`
-3. `STRUCTURAL_FAMILY_ROLE_TABLE.md`
-4. `EXTERNAL_NODE_ONCHAIN_SPEC.md`
+3. `EXTERNAL_NODE_ONCHAIN_SPEC.md`
 5. file-level legacy seed extraction registers
 6. machine-readable artifact registry layer
 
