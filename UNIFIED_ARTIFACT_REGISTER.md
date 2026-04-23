@@ -19,6 +19,7 @@
 
 ### Group B — Runtime Structure & Topology
 
+- SPACE_CHAIN_MASTER_LAYER.md
 - THREE_COUPLING_RUNTIME_MAP.md
 - WINDOW_12_MASTER_TABLE.md
 - WORLD_CHAIN_MASTER_AXIS.md
