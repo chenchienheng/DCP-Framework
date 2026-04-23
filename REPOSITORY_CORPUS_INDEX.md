@@ -9,7 +9,7 @@
 - index_version: v0.3
 - status: fully reconciled (00-05)
 
----
+The repository-wide inventory has been completed. The remaining gaps are mapping these fully to their roles and binding them to operational schedules or writeback loops.
 
 ## 1. Inventory by Family
 

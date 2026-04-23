@@ -1,16 +1,15 @@
 # Role Classification Table
 
-> Initial role classification for durable repository weaving.
-> This table is not exhaustive yet.
-> It classifies what has been directly verified in the repository during the current session and provides placeholders for the broader corpus that still needs full indexing.
+> Full role classification for durable repository weaving.
+> This table expands on the initial set and covers the verified repository-wide corpus.
 
 ---
 
 ## 0. Status
 
-- table_version: v0.1
-- scope: verified artifacts first, broader corpus pending
-- purpose: reduce role drift and prepare full repository weaving
+- table_version: v0.2
+- scope: repository-wide verified artifacts
+- purpose: reduce role drift and complete full repository weaving
 
 ---
 
@@ -36,46 +35,81 @@ Used for persistent return notes, correction markers, index files, chain maps, a
 
 ---
 
-## 2. Initial Classification Table
+## 2. Full Classification Table
 
-| Artifact | Primary Class | Secondary Class | Current Reading | Status |
-|---|---|---|---|---|
-| README.md | Upper-Order / Sovereignty-Oriented | Structural Bone | repository entry, conceptual framework overview, open-ended system framing | verified |
-| CHATGPT_GITHUB_BOOTSTRAP.md | Transitional / Stage Note | Writeback Artifact | re-anchor bridge note for future sessions | verified |
-| GITHUB_CHAIN_MASTER_MAP.md | Structural Bone | Writeback Artifact | GitHub multi-chain orientation map and durable continuity note | verified |
-| REPOSITORY_CORPUS_INDEX.md | Writeback Artifact | Transitional / Stage Note | initial durable index recording verified artifacts and known gaps | verified |
-| Issue #1 | Transitional / Stage Note | Writeback Artifact | execution marker for full corpus re-indexing | verified |
+| Artifact | Primary Class | Secondary Class / Chain Face | Status |
+|---|---|---|---|
+| `00_mother-law/README.md` | Upper-Order / Sovereignty-Oriented | Writeback Chain | verified |
+| `01_runtime-spine/README.md` | Structural Bone | Bone Chain | verified |
+| `01_runtime-spine/github_delta_driven_pulse_rule.md` | Structural Bone | Bone Chain | verified |
+| `01_runtime-spine/legacy_writeback_block_rule.md` | Structural Bone | Bone Chain | verified |
+| `01_runtime-spine/window_alignment_read_order.md` | Structural Bone | Bone Chain | verified |
+| `01_runtime-spine/window_linking_logic_01_07.md` | Structural Bone | Bone Chain | verified |
+| `02_translation-layer/README.md` | Carrying Mesh | Bridge Chain | verified |
+| `03_board-orchestration/README.md` | Interaction Surface | Writeback Chain | verified |
+| `03_board-orchestration/window_binding_registry_01_07.md` | Interaction Surface | Writeback Chain | verified |
+| `03_board-orchestration/window_delta_mapping_template.md` | Interaction Surface | Writeback Chain | verified |
+| `04_adapter-layer/README.md` | Interaction Surface | Bridge Chain | verified |
+| `AGENT_READINESS_CHECKLIST.md` | Writeback Artifact | Writeback Chain | verified |
+| `BRANCH_TOPOLOGY_AND_CLEANUP_REGISTER.md` | Writeback Artifact | Writeback Chain | verified |
+| `CHATGPT_GITHUB_BOOTSTRAP.md` | Transitional / Stage Note | Writeback Chain | verified |
+| `CLEANUP_QUEUE_REGISTER.md` | Writeback Artifact | Writeback Chain | verified |
+| `CLUSTER_COVERAGE_MATRIX.md` | Writeback Artifact | Writeback Chain | verified |
+| `CLUSTER_COVERAGE_NOTE.md` | Transitional / Stage Note | Writeback Chain | verified |
+| `CONTAMINATION_AND_PRIORITY_POLICY.md` | Writeback Artifact | Writeback Chain | verified |
+| `CORE_ACTIONS.md` | Writeback Artifact | Writeback Chain | verified |
+| `DISCONTINUITY_REGISTER.md` | Writeback Artifact | Writeback Chain | verified |
+| `DYNAMIC_CORPUS_DATABASE_NOTE.md` | Transitional / Stage Note | Writeback Chain | verified |
+| `ECOSYSTEM_FAMILY_ONBOARDING_ROADMAP.md` | Interaction Surface | Writeback Chain | verified |
+| `EXTERNAL_API_VERSION_GOVERNANCE_NOTE.md` | Transitional / Stage Note | Writeback Chain | verified |
+| `EXTERNAL_NODE_ONCHAIN_SPEC.md` | Structural Bone | Writeback Chain | verified |
+| `GITHUB_CHAIN_MASTER_MAP.md` | Writeback Artifact | Writeback Chain | verified |
+| `GITHUB_NORMALIZATION_PHASE_PLAN.md` | Structural Bone | Writeback Chain | verified |
+| `GITHUB_OPERATION_CAPABILITY_MATRIX.md` | Writeback Artifact | Writeback Chain | verified |
+| `LEGACY_SEED_BRANCH_INVENTORY_SNAPSHOT.md` | Transitional / Stage Note | Writeback Chain | verified |
+| `LEGACY_SEED_CONTAMINATION_TRIAGE.md` | Writeback Artifact | Writeback Chain | verified |
+| `LEGACY_SEED_MERGE_CANDIDATE_SHORTLIST.md` | Writeback Artifact | Writeback Chain | verified |
+| `LEGACY_SEED_NAMING_NORMALIZATION_PLAN.md` | Structural Bone | Writeback Chain | verified |
+| `MODEL_CONTRADICTION_REGISTER.md` | Writeback Artifact | Writeback Chain | verified |
+| `MODEL_FAMILY_ONCHAIN_SPEC.md` | Structural Bone | Writeback Chain | verified |
+| `MODEL_INVOCATION_CONTRACT.md` | Writeback Artifact | Writeback Chain | verified |
+| `MODEL_TO_WINDOW_OWNERSHIP_MAP.md` | Writeback Artifact | Writeback Chain | verified |
+| `NAMING_DRIFT_FILE_LEVEL_DIFFS.md` | Writeback Artifact | Writeback Chain | verified |
+| `NAMING_DRIFT_RESOLUTION_REGISTER.md` | Writeback Artifact | Writeback Chain | verified |
+| `NETWORK_STRUCTURE_HIERARCHY_NOTE.md` | Structural Bone | Bone Chain | verified |
+| `PLATFORM_SCHEDULER_AND_TOOL_NAMING_MAP.md` | Writeback Artifact | Writeback Chain | verified |
+| `PRIMARY_BONE_STABILITY_SCORECARD.md` | Structural Bone | Bone Chain | verified |
+| `README.md` | Upper-Order / Sovereignty-Oriented | Writeback Chain | verified |
+| `REPOSITORY_CORPUS_INDEX.md` | Writeback Artifact | Writeback Chain | verified |
+| `ROLE_CLASSIFICATION_TABLE.md` | Writeback Artifact | Writeback Chain | verified |
+| `SCHEDULING_EFFECTIVENESS_GAP_NOTE.md` | Transitional / Stage Note | Writeback Chain | verified |
+| `SCHEDULING_EFFECT_REGISTER.md` | Writeback Artifact | Writeback Chain | verified |
+| `SEED_SHADOW_POINTER.md` | Transitional / Stage Note | Writeback Chain | verified |
+| `STAGE_SYNC_SNAPSHOT_2026-04-21.md` | Transitional / Stage Note | Writeback Chain | verified |
+| `STATUS.md` | Writeback Artifact | Writeback Chain | verified |
+| `THIRD_RUNTIME_ENVIRONMENT_NOTE.md` | Transitional / Stage Note | Writeback Chain | verified |
+| `THREE_COUPLING_RUNTIME_MAP.md` | Writeback Artifact | Writeback Chain | verified |
+| `UNIFIED_ARTIFACT_REGISTER.md` | Writeback Artifact | Writeback Chain | verified |
+| `WINDOW_12_MASTER_TABLE.md` | Writeback Artifact | Writeback Chain | verified |
+| `XUANLING_WORLD_READINESS_MILESTONES.md` | Writeback Artifact | Writeback Chain | verified |
 
 ---
 
-## 3. Provisional Classification for Broader System Roles
+## 3. Current Misclassification Risk
 
-These are not yet bound to specific repository files in this session, but they define how future corpus items should be classified.
-
-| Broader Role | Intended Meaning | Expected Repository Binding |
-|---|---|---|
-| Time Chain / 時鏈 | primary continuity axis and upper-order sovereignty | upper-order note, runtime map, window/gate docs |
-| GitHub Bone / 骨 | structural spine, durable writeback anchor | chain maps, version notes, gate-bound continuity files |
-| Carrying Mesh / 絡 | draft transit and text-bearing layer | future cross-repo or cross-surface linking notes |
-| External Interaction Nodes / 身 | web, workflow, collaboration, execution surfaces | external node specs, on-chain interface notes |
-
----
-
-## 4. Current Misclassification Risk
-
-### 4.1 GitHub-as-only-bridge wording
+### 3.1 GitHub-as-only-bridge wording
 Earlier stage wording may under-classify GitHub as a bridge surface only.
 Current durable reading should treat GitHub as structural bone + writeback anchor.
 
-### 4.2 Bootstrap-overreach risk
+### 3.2 Bootstrap-overreach risk
 Bootstrap artifacts are useful but must not be mistaken for full sovereignty documents.
 
-### 4.3 Concept-only drift
+### 3.3 Concept-only drift
 Upper-order texts may remain too abstract unless they are bound to runtime maps, window tables, and gate notes.
 
 ---
 
-## 5. Next Classification Targets
+## 4. Next Classification Targets
 
 Recommended next artifacts to classify once created or verified:
 
@@ -83,13 +117,12 @@ Recommended next artifacts to classify once created or verified:
 2. `THREE_COUPLING_RUNTIME_MAP.md`
 3. `WINDOW_12_MASTER_TABLE.md`
 4. `GATE_64_BINDING_NOTE.md`
-5. future corpus-wide file inventory
 
 ---
 
-## 6. Status
+## 5. Status
 
 - verified_role_classification_started: true
-- full_corpus_role_classification: pending
+- full_corpus_role_classification: true
 - role_drift_reduction_started: true
 - return_to_00: true
