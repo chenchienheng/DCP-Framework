@@ -18,6 +18,7 @@
 ### Group B — Runtime Structure & Topology
 - THREE_COUPLING_RUNTIME_MAP.md
 - WINDOW_12_MASTER_TABLE.md
+- WORLD_CHAIN_MASTER_AXIS.md
 - 00_meta/user_identity_anchor.md
 - 01_runtime-spine/ (Pulse & Linking Rules)
 - 05_topology/ (Triad & Consistency Rules)
