@@ -18,11 +18,10 @@ writeback loops.
 
 ### 1.1 Meta & Mother-Law (00)
 
-- TIME_CHAIN_MASTER_LAYER.md: Core triad axis for time chain governance.
 - 00_meta/user_identity_anchor.md: Primary identity alignment anchor.
 - 00_mother-law/README.md: Core governance entry.
-- 00_mother-law/existence-consistency-rule.md: Triple-condition
-  (Exist/Being/Continue) consistency rule.
+- 00_mother-law/existence-chain-master-layer.md: Existence chain master layer.
+- 00_mother-law/existence-consistency-rule.md: Triple-condition (Exist/Being/Continue) consistency rule.
 - 00_mother-law/mother-architecture-registry-v0-1.md: M1-M5 lineage tracking.
 
 ### 1.2 Runtime & Boards (01)
@@ -53,10 +52,8 @@ writeback loops.
 
 ### 1.4 Return Loop (05)
 
-- 05_topology/consistent-triad-principle.md: Bone/Event/Writeback consistency
-  principle.
-- 05_topology/feasible-domain-and-responsibility.md: Operational boundary
-  definition.
+- 05_topology/consistent-triad-principle.md: Bone/Event/Writeback consistency principle.
+- 05_topology/feasible-domain-and-responsibility.md: Operational boundary definition.
 - 05_topology/ten-ring-definition-v0-1.md: Recursive loop structure.
 - 05_topology/time-sovereignty.md: Upper-order temporal logic.
 - 05_topology/triad-closed-loop-topology.md: Node/Surface/Link topology conditions.
