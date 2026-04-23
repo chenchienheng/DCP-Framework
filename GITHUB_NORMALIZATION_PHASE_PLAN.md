@@ -45,7 +45,7 @@ But that only remains true if:
 
 ## 2. Phase Order
 
-### Phase 1 — Repository Bone Stabilization
+### Phase 1 — Repository Bone Stabilization (Completed)
 
 Focus:
 - unify current artifact register
@@ -53,18 +53,18 @@ Focus:
 - stabilize branch topology reading
 - keep main branch clean
 
-Primary artifacts already present:
+Primary artifacts:
 - `UNIFIED_ARTIFACT_REGISTER.md`
 - `BRANCH_TOPOLOGY_AND_CLEANUP_REGISTER.md`
 - `NAMING_DRIFT_RESOLUTION_REGISTER.md`
 - `CLEANUP_QUEUE_REGISTER.md`
 
-Exit condition:
-- canonical family naming rule is active
-- main branch remains clean and role-readable
-- cleanup fronts are executable rather than diffuse
+Status:
+- Canonical hyphenated rule active.
+- Families 01-04 normalized.
+- 01_native-board established.
 
-### Phase 2 — Legacy Seed Extraction and Rebind
+### Phase 2 — Legacy Seed Extraction and Rebind (Active)
 
 Focus:
 - mine `xuanling-seed-v0-1`

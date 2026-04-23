@@ -70,6 +70,7 @@ Goal: prepare a concise repository handoff pack.
 ## Execution Rules
 - one lane per task
 - one PR per task
+- **Lane 3 Atomicity**: Every \`structural_cleanup\` PR must include the corresponding \`state_register_update\`.
 - all PRs must include standard deliverables.
 - no architecture overreach.
 - no merge.
