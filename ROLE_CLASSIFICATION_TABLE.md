@@ -16,21 +16,27 @@
 ## 1. Role Classes
 
 ### 1.1 Upper-Order / Sovereignty-Oriented
+
 Used for artifacts that define upper-order framing, continuity assumptions, or conceptual orientation.
 
 ### 1.2 Structural Bone
+
 Used for artifacts that stabilize long-term structure, versionable continuity, durable reference paths, or reconstructable anchoring.
 
 ### 1.3 Carrying Mesh
+
 Used for artifacts or layers that carry drafts, transit states, working text, or medium-layer correspondence.
 
 ### 1.4 Interaction Surface
+
 Used for interface-layer nodes, external collaboration surfaces, or replaceable execution/display bodies.
 
 ### 1.5 Transitional / Stage Note
+
 Used for stage-limited alignment notes, bootstrap notes, temporary orientation aids, or memo-style correction layers.
 
 ### 1.6 Writeback Artifact
+
 Used for persistent return notes, correction markers, index files, chain maps, and durable continuity artifacts.
 
 ---
@@ -40,6 +46,7 @@ Used for persistent return notes, correction markers, index files, chain maps, a
 | Artifact | Primary Class | Secondary Class / Chain Face | Status |
 |---|---|---|---|
 | `00_mother-law/README.md` | Upper-Order / Sovereignty-Oriented | Writeback Chain | verified |
+| `00_mother-law/existence-chain-master-layer.md` | Upper-Order / Sovereignty-Oriented | Bone Chain | verified |
 | `01_runtime-spine/README.md` | Structural Bone | Bone Chain | verified |
 | `01_runtime-spine/github_delta_driven_pulse_rule.md` | Structural Bone | Bone Chain | verified |
 | `01_runtime-spine/legacy_writeback_block_rule.md` | Structural Bone | Bone Chain | verified |
@@ -98,13 +105,16 @@ Used for persistent return notes, correction markers, index files, chain maps, a
 ## 3. Current Misclassification Risk
 
 ### 3.1 GitHub-as-only-bridge wording
+
 Earlier stage wording may under-classify GitHub as a bridge surface only.
 Current durable reading should treat GitHub as structural bone + writeback anchor.
 
 ### 3.2 Bootstrap-overreach risk
+
 Bootstrap artifacts are useful but must not be mistaken for full sovereignty documents.
 
 ### 3.3 Concept-only drift
+
 Upper-order texts may remain too abstract unless they are bound to runtime maps, window tables, and gate notes.
 
 ---
