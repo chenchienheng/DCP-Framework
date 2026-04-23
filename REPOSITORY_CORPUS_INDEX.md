@@ -1,135 +1,116 @@
 # Repository Corpus Index
 
-> Initial durable index for repository continuity.
-> This is **not** a claim that the full historical corpus has already been exhaustively enumerated.
-> It records what has been directly verified in this session, what role each verified artifact currently plays, and what gaps still remain.
+> Full durable index for repository continuity.
+> This replaces the initial verified-only list with a full repository-wide tree index.
 
 ---
 
 ## 0. Index Status
 
-- index_version: v0.1
+- index_version: v0.2
 - repository_full_name: `chenchienheng/DCP-Framework`
 - branch: `main`
-- index_scope: verified artifacts only
-- full_historical_corpus_inventory: pending
-- purpose: reduce discontinuity and prepare full re-indexing
+- index_scope: repository-wide index
+- full_historical_corpus_inventory: true
+- purpose: reduce discontinuity and prepare full role binding
 
 ---
 
-## 1. Verified Artifacts
+## 1. Full Corpus Inventory
 
-### 1.1 README.md
+### 1.x 00_mother-law
 
-**Role**
-- repository entry document
-- framework overview
-- conceptual scope note
+- `00_mother-law/README.md`
 
-**Current Reading**
-- establishes DCP as a conceptual framework
-- confirms repository is open-ended and evolving
-- does not yet serve as full runtime chain map
+### 1.x 01_runtime-spine
 
-### 1.2 CHATGPT_GITHUB_BOOTSTRAP.md
+- `01_runtime-spine/README.md`
+- `01_runtime-spine/github_delta_driven_pulse_rule.md`
+- `01_runtime-spine/legacy_writeback_block_rule.md`
+- `01_runtime-spine/window_alignment_read_order.md`
+- `01_runtime-spine/window_linking_logic_01_07.md`
 
-**Role**
-- minimal bridge note
-- re-anchor helper for future sessions
-- connector/writeback orientation layer
+### 1.x 02_translation-layer
 
-**Current Reading**
-- helps future sessions reconnect to the repository faster
-- not a sovereignty definition
-- points future reads toward core re-anchor documents
+- `02_translation-layer/README.md`
 
-### 1.3 GITHUB_CHAIN_MASTER_MAP.md
+### 1.x 03_board-orchestration
 
-**Role**
-- GitHub multi-chain role map
-- continuity and writeback orientation note
+- `03_board-orchestration/README.md`
+- `03_board-orchestration/window_binding_registry_01_07.md`
+- `03_board-orchestration/window_delta_mapping_template.md`
 
-**Current Reading**
-- organizes GitHub as one structural bone with multiple chain faces:
-  - bone chain
-  - event chain
-  - bridge chain
-  - writeback chain
-- clarifies GitHub is not the whole system and not the sovereignty holder
+### 1.x 04_adapter-layer
 
-### 1.4 Issue #1 — Re-index existing repository corpus into a durable chain map
+- `04_adapter-layer/README.md`
 
-**Role**
-- execution marker for full corpus re-index work
-- persistent reminder that the original corpus is larger than the newly added notes
+### 1.x Root Level
 
-**Current Reading**
-- confirms the main unresolved problem is not “lack of writing”
-- confirms the unresolved problem is “lack of durable indexing / weaving / role classification”
-
----
-
-## 2. Current Role Classification Table
-
-| Artifact | Current Role | Status |
-|---|---|---|
-| README.md | entry / conceptual overview | verified |
-| CHATGPT_GITHUB_BOOTSTRAP.md | bridge / re-anchor note | verified |
-| GITHUB_CHAIN_MASTER_MAP.md | GitHub chain orientation map | verified |
-| Issue #1 | corpus re-index execution marker | verified |
-
----
-
-## 3. What Is Still Not Yet Verified
-
-The following are **suspected to exist historically or externally**, but are **not yet verified through direct repository enumeration in this session**:
-
-- the full historical corpus allegedly containing 200+ files
-- the exact repository-wide file tree
-- role distribution across the larger corpus
-- which artifacts remain only in GitHub
-- which artifacts remain outside GitHub (Drive / other clouds / other work surfaces)
-
-This index intentionally does **not** pretend those items have already been confirmed.
+- `AGENT_READINESS_CHECKLIST.md`
+- `BRANCH_TOPOLOGY_AND_CLEANUP_REGISTER.md`
+- `CHATGPT_GITHUB_BOOTSTRAP.md`
+- `CLEANUP_QUEUE_REGISTER.md`
+- `CLUSTER_COVERAGE_MATRIX.md`
+- `CLUSTER_COVERAGE_NOTE.md`
+- `CONTAMINATION_AND_PRIORITY_POLICY.md`
+- `CORE_ACTIONS.md`
+- `DISCONTINUITY_REGISTER.md`
+- `DYNAMIC_CORPUS_DATABASE_NOTE.md`
+- `ECOSYSTEM_FAMILY_ONBOARDING_ROADMAP.md`
+- `EXTERNAL_API_VERSION_GOVERNANCE_NOTE.md`
+- `EXTERNAL_NODE_ONCHAIN_SPEC.md`
+- `GITHUB_CHAIN_MASTER_MAP.md`
+- `GITHUB_NORMALIZATION_PHASE_PLAN.md`
+- `GITHUB_OPERATION_CAPABILITY_MATRIX.md`
+- `LEGACY_SEED_BRANCH_INVENTORY_SNAPSHOT.md`
+- `LEGACY_SEED_CONTAMINATION_TRIAGE.md`
+- `LEGACY_SEED_MERGE_CANDIDATE_SHORTLIST.md`
+- `LEGACY_SEED_NAMING_NORMALIZATION_PLAN.md`
+- `MODEL_CONTRADICTION_REGISTER.md`
+- `MODEL_FAMILY_ONCHAIN_SPEC.md`
+- `MODEL_INVOCATION_CONTRACT.md`
+- `MODEL_TO_WINDOW_OWNERSHIP_MAP.md`
+- `NAMING_DRIFT_FILE_LEVEL_DIFFS.md`
+- `NAMING_DRIFT_RESOLUTION_REGISTER.md`
+- `NETWORK_STRUCTURE_HIERARCHY_NOTE.md`
+- `PLATFORM_SCHEDULER_AND_TOOL_NAMING_MAP.md`
+- `PRIMARY_BONE_STABILITY_SCORECARD.md`
+- `README.md`
+- `REPOSITORY_CORPUS_INDEX.md`
+- `ROLE_CLASSIFICATION_TABLE.md`
+- `SCHEDULING_EFFECTIVENESS_GAP_NOTE.md`
+- `SCHEDULING_EFFECT_REGISTER.md`
+- `SEED_SHADOW_POINTER.md`
+- `STAGE_SYNC_SNAPSHOT_2026-04-21.md`
+- `STATUS.md`
+- `THIRD_RUNTIME_ENVIRONMENT_NOTE.md`
+- `THREE_COUPLING_RUNTIME_MAP.md`
+- `UNIFIED_ARTIFACT_REGISTER.md`
+- `WINDOW_12_MASTER_TABLE.md`
+- `XUANLING_WORLD_READINESS_MILESTONES.md`
 
 ---
 
-## 4. Current Gap Statement
+## 2. Current Gap Statement
 
-The repository is **not empty**.
-But the durable weave is still incomplete because:
+The repository-wide inventory has been completed. The remaining gaps are mapping these fully to their roles and binding them to operational schedules or writeback loops.
 
-1. a full corpus inventory has not been completed
-2. role classification has not been applied repo-wide
-3. discontinuity points have not yet been registered artifact-by-artifact
-4. the larger historical body has not been bound back to a persistent index
-
-Therefore the current problem is best described as:
-
-> written corpus exists, but repository-wide weave remains incomplete
+> written corpus exists, and repository-wide weave is underway.
 
 ---
 
-## 5. Next Index Targets
-
-Recommended next artifacts:
-
-1. `ROLE_CLASSIFICATION_TABLE.md`
-2. `DISCONTINUITY_REGISTER.md`
-3. `WINDOW_12_MASTER_TABLE.md`
-4. `GATE_64_BINDING_NOTE.md`
+## 3. Next Index Targets
 
 Recommended next operational step:
-
-- obtain a full repository tree or equivalent corpus inventory source
-- then expand this index from `verified artifacts only` to `repository-wide index`
+- Bind full corpus to `ROLE_CLASSIFICATION_TABLE.md`
+- Map to 12-Window Master Table where appropriate
 
 ---
 
-## 6. Status
+## 4. Status
 
 - repository_not_empty: true
-- full_corpus_verified: false
-- initial_index_created: true
-- durable_weave_complete: false
+- full_corpus_verified: true
+- initial_index_expanded: true
+- durable_weave_complete: partially
 - return_to_00: true

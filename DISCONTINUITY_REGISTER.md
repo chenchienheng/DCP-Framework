@@ -42,12 +42,15 @@ These should be marked honestly, not guessed.
 | D-002 | No single GitHub chain master map existed before this session | Harmful Discontinuity | GitHub role could collapse into flat repo view or vague concept view | remediated by `GITHUB_CHAIN_MASTER_MAP.md` | addressed |
 | D-003 | No initial corpus index existed before this session | Harmful Discontinuity | verified artifacts and gaps were not durably separated | remediated by `REPOSITORY_CORPUS_INDEX.md` | addressed |
 | D-004 | No role classification table existed before this session | Harmful Discontinuity | role drift risk across documents and sessions | remediated by `ROLE_CLASSIFICATION_TABLE.md` | addressed |
-| D-005 | Full historical corpus inventory not yet verified repo-wide | Ambiguous / Unverified Gap | cannot yet claim repository-wide weave completeness | requires full file tree or equivalent inventory source | pending |
-| D-006 | 200+ historical documents not yet durably woven into one repository-wide index | Normal Construction Gap + Harmful Discontinuity | large body may exist, but cross-session continuity remains weak | continue with staged indexing and mapping | pending |
+| D-005 | Full historical corpus inventory not yet verified repo-wide | Ambiguous / Unverified Gap | cannot yet claim repository-wide weave completeness | requires full file tree or equivalent inventory source | addressed |
+| D-006 | 200+ historical documents not yet durably woven into one repository-wide index | Normal Construction Gap + Harmful Discontinuity | large body may exist, but cross-session continuity remains weak | continue with staged indexing and mapping | partially_addressed |
 | D-007 | 12-window matrix not yet bound to durable repository artifact | Normal Construction Gap | higher-order runtime design not yet repo-bound | create `WINDOW_12_MASTER_TABLE.md` | pending |
-| D-008 | 64-gate binding note not yet persisted | Normal Construction Gap | transition/gating logic remains concept-heavy | create `GATE_64_BINDING_NOTE.md` | pending |
+| D-008 | 64-gate binding note not yet persisted | Normal Construction Gap | transition/gating logic remains concept-heavy | create `GATE_64_BINDING_NOTE.md` | addressed |
 | D-009 | three-coupling runtime map not yet persisted | Normal Construction Gap | link between bone/event/writeback remains incomplete at runtime-document level | create `THREE_COUPLING_RUNTIME_MAP.md` | pending |
 | D-010 | broader external-node binding (web / workflow / collaboration surfaces) not yet normalized | Normal Construction Gap | external ecology remains partially connected and role-sensitive | create `EXTERNAL_NODE_ONCHAIN_SPEC.md` | pending |
+
+| D-011 | Duplicate roles found in default writeback assignments across newly indexed files | Harmful Discontinuity | automated tagging caused minor overlap in classification | normalize default mapping in future script | pending |
+| D-012 | Wording drift in chain classification | Ambiguous / Unverified Gap | some files default to Writeback Chain rather than clear event/bridge mapping | refine chain mapping heuristics | pending |
 
 ---
 
