@@ -40,9 +40,9 @@ Each scheduling item should eventually include:
 | Schedule Name | Owner Window | Cadence | Trigger Type | Expected Output | Writeback Surface | Drift Flag | Status |
 |---|---|---|---|---|---|---|---|
 | central_reanchor_review | `00` | per major change / per contradiction escalation | event-driven | adjudication decision or return direction | durable note / issue / register update | visible if missing during major state shift | planned |
-| timeline_schedule_review | `06` | daily or per scheduling change | time-based | updated timeline/schedule state | scheduling note / timeline artifact | visible if cadence named but no update proof | planned |
-| board_orchestration_review | `03` | recurring review + event-driven | hybrid | routing refresh / queue movement / next actions | board note / issue / register | visible if tasks accumulate without routing update | planned |
-| log_writeback_append | `08` | on event + periodic archive cadence | hybrid | log entry or audit append | log board / writeback artifact | visible if actions happen without durable trace | planned |
+| timeline_schedule_review | `06` | daily or per scheduling change | time-based | updated timeline/schedule state | scheduling note / timeline artifact | visible if cadence named but no update proof | suspended (no daily reporting) |
+| board_orchestration_review | `03` | recurring review + event-driven | hybrid | routing refresh / queue movement / next actions | board note / issue / register | visible if tasks accumulate without routing update | active via 02_CVG_3D |
+| log_writeback_append | `08` | on event + periodic archive cadence | hybrid | log entry or audit append | log board / writeback artifact | visible if actions happen without durable trace | active via 02_CVG_3D |
 | toolchain_status_refresh | `10` | per tool change + maintenance cadence | hybrid | toolchain state update / routing check | tool/orchestration note | visible if tool conditions change without reflected state | planned |
 | public_surface_refresh | `07` | periodic | time-based | refreshed readable external view | public-facing note / mirror artifact | visible if public layer drifts behind runtime | planned |
 | synthesis_batch | `11` | batch cadence | time-based | synthesis note / folded runtime view | synthesis artifact | visible if source growth outpaces synthesis | planned |
@@ -99,10 +99,25 @@ Read together with:
 
 ---
 
-## 7. Status
+## 7. Proposed Topology Mapping (Pending Approval)
+
+> Following the introduction of `PLATFORM_SCHEDULER_AND_TOOL_NAMING_MAP.md`, the below mapping is proposed to reconcile the legacy 12-window schedules into the new 4-child topology.
+
+| Proposed Target Window | Absorbed Legacy Schedules | Proposed Cadence | Notes |
+|---|---|---|---|
+| `00_ScheduleHub` | central_reanchor_review | event-driven | Retains master adjudication role. |
+| `01_RT_Critical` | (none currently mapped) | event-driven | Reserved for structural shifts/PRs. |
+| `02_CVG_3D` | timeline_schedule_review, log_writeback_append, board_orchestration_review (partial) | 3-day convergence | Absorbs daily and hybrid reviews into a stable 3-day rhythm. |
+| `03_STAGE_W1` | synthesis_batch, public_surface_refresh, board_orchestration_review (partial) | weekly | Absorbs heavy batch processing and weekly stage routing. |
+| `04_MANUAL_Doctrine` | toolchain_status_refresh, world_field_alignment | manual / periodic | Absorbs strategic alignment and toolchain governance. |
+
+---
+
+## 8. Status
 
 - scheduling_effect_register_created: true
 - owner_window_binding_started: true
 - drift_visibility_started: true
 - automation_binding_pending: true
+- scheduler_topology_proposal_added: true
 - return_to_00: true
