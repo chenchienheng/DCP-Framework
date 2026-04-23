@@ -46,14 +46,14 @@ Each cleanup item should eventually include:
 
 | ID | Scope | Source | Contamination Status | Priority | Handling Mode | Target State | Reason | Status |
 |---|---|---|---|---|---|---|---|---|
-| C-001 | family naming drift | `01_runtime_spine/` | contaminated | P1 | isolate + normalize | rebind into `01_runtime-spine/` or retire residue | underscore family conflicts with canonical runtime spine family | queued |
-| C-002 | family naming drift | `03_board_orchestration/` | contaminated | P1 | isolate + normalize | rebind into `03_board-orchestration/` or retire residue | duplicate-family naming drift in orchestration layer | queued |
-| C-003 | family naming drift | `04_adapter_layer/` | contaminated | P1 | isolate + normalize | rebind into `04_adapter-layer/` or retire residue | duplicate-family naming drift in adapter layer | queued |
+| C-001 | family naming drift | `01_runtime_spine/` | contaminated | P1 | isolate + normalize | rebind into `01_runtime-spine/` or retire residue | underscore family conflicts with canonical runtime spine family | resolved |
+| C-002 | family naming drift | `03_board_orchestration/` | contaminated | P1 | isolate + normalize | rebind into `03_board-orchestration/` or retire residue | duplicate-family naming drift in orchestration layer | resolved |
+| C-003 | family naming drift | `04_adapter_layer/` | contaminated | P1 | isolate + normalize | rebind into `04_adapter-layer/` or retire residue | duplicate-family naming drift in adapter layer | resolved |
 | C-004 | branch residue | `xuanling-write-test-20260405-d` | contaminated_candidate | P1 | isolate + retire_when_safe | remove branch residue after confirming no audit value remains | test-only branch adds clutter and ambiguity | queued |
 | C-005 | file residue | `00_mother-law/WRITE_TEST.md` | construction_residue | P2 | isolate + retire_when_safe | archive or remove after branch decision | visible write-test artifact with low structural value | queued |
 | C-006 | mixed family concentration | `00_mother-law/` | mixed_unverified | P1 | triage + selective rebind | split clean seed / residue / contamination | very high value family but likely mixed layers | queued |
 | C-007 | mixed family concentration | `03_board-orchestration/` | mixed_unverified | P1 | triage + selective rebind | stable orchestration core separated from stage residue | dense operational family with likely mixed material | queued |
-| C-008 | mixed family concentration | `01_native_board/` | mixed_unverified | P2 | isolate + classify | preserve stable board logic, isolate temporal residue | diagnostics, heartbeat, and board logic are mixed | queued |
+| C-008 | mixed family concentration | `01_native_board/` | mixed_unverified | P2 | isolate + classify | preserve stable board logic, isolate temporal residue | diagnostics, heartbeat, and board logic are mixed | resolved |
 | C-009 | schedule design drift | scheduling artifacts without effect proof | construction_residue + runtime_risk | P1 | bind to effect register | every schedule linked to owner/output/proof | named schedule without runtime effect risks static pollution | queued |
 | C-010 | static corpus accumulation | large text corpus without unified dynamic registry | contamination_risk | P0-P1 | rebind into dynamic register | turn static corpus into dynamic artifact database | static pile risks becoming residue mass | active |
 

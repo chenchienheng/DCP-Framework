@@ -29,7 +29,7 @@ Observed files:
 ### Canonical: `01_runtime-spine/`
 
 Status:
-- file-level comparison pending
+- file-level comparison completed
 
 ---
 
@@ -45,7 +45,7 @@ Observed files:
 ### Canonical: `03_board-orchestration/`
 
 Status:
-- file-level comparison pending
+- file-level comparison completed
 
 ---
 
@@ -61,7 +61,7 @@ Observed files:
 ### Canonical: `04_adapter-layer/`
 
 Status:
-- file-level comparison pending
+- file-level comparison completed
 
 ---
 

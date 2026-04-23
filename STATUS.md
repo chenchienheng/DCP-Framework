@@ -8,12 +8,12 @@ The materials collected here are intended to describe *structural principles, re
 
 ## Current Status
 
-**Status:** Conceptually stable / exploratory  
-**Development phase:** Structural definition & semantic stabilization  
-**Implementation status:** Not implemented
+**Status:** Conceptually stable / exploratory / logic-active
+**Development phase:** Controlled structural convergence & rule rebinding
+**Implementation status:** M2 Runtime Spine partially implemented and synchronized
 
-The current content represents a *theoretical and structural formulation* of a decision–constraint framework.  
-It is not an executable system, software product, service, or operational engine.
+The current content represents a *theoretical and structural formulation* of a decision–constraint framework.
+While not a consumer software product, the repository now carries active structural rules (M2 layer) governing its own internal continuity and state transition.
 
 ---
 
