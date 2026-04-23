@@ -99,10 +99,25 @@ Read together with:
 
 ---
 
-## 7. Status
+## 7. Proposed Topology Mapping (Pending Approval)
+
+> Following the introduction of `PLATFORM_SCHEDULER_AND_TOOL_NAMING_MAP.md`, the below mapping is proposed to reconcile the legacy 12-window schedules into the new 4-child topology.
+
+| Proposed Target Window | Absorbed Legacy Schedules | Proposed Cadence | Notes |
+|---|---|---|---|
+| `00_ScheduleHub` | central_reanchor_review | event-driven | Retains master adjudication role. |
+| `01_RT_Critical` | (none currently mapped) | event-driven | Reserved for structural shifts/PRs. |
+| `02_CVG_3D` | timeline_schedule_review, log_writeback_append, board_orchestration_review (partial) | 3-day convergence | Absorbs daily and hybrid reviews into a stable 3-day rhythm. |
+| `03_STAGE_W1` | synthesis_batch, public_surface_refresh, board_orchestration_review (partial) | weekly | Absorbs heavy batch processing and weekly stage routing. |
+| `04_MANUAL_Doctrine` | toolchain_status_refresh, world_field_alignment | manual / periodic | Absorbs strategic alignment and toolchain governance. |
+
+---
+
+## 8. Status
 
 - scheduling_effect_register_created: true
 - owner_window_binding_started: true
 - drift_visibility_started: true
 - automation_binding_pending: true
+- scheduler_topology_proposal_added: true
 - return_to_00: true
