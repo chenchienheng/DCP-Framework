@@ -3,72 +3,71 @@
 ## Purpose
 
 Re-align internal taskboard and execution context with the current `main`
-branch state, specifically mapping execution issues to CoreTri Master Axes.
+branch state, shifting from a flat task list to an axis-execution absorption
+model.
 
 ## Scope
 
 - scan current `main`
-- detect merged, reverted, superseded, and still-active work
-- reconcile internal task list against actual repository state
 - map legacy execution tasks under Master Axis envelopes
-- maintain state layering (do not auto-close issues)
+- maintain state layering (ACTIVE, STRUCTURE_ESTABLISHED, SUPERSEDED)
+- establish the five master axes as the active master-chain view
+- do not automatically close issues
 
-## 1. Valid Master Axis Layers on Main
+## 1. Active Master-Chain View
 
-Based on structural scanning of the `main` branch, the following Master Layers
-are currently valid and actively present:
+The 5 Master Axes form the active structural view of the repository. They are
+the stable structural envelopes governing all execution trace logic below them:
 
-- `00_mother-law/existence-chain-master-layer.md` (AXIS-02)
-- `GITHUB_CHAIN_MASTER_MAP.md`
-- `REVIEW_CHAIN_MASTER_LAYER.md` (AXIS-05)
-- `SPACE_CHAIN_MASTER_LAYER.md` (AXIS-04)
-- `TIME_CHAIN_MASTER_LAYER.md` (AXIS-03)
-- `WINDOW_12_MASTER_TABLE.md`
+- **AXIS-01 (World Chain)**: Issue **#16**
+- **AXIS-02 (Existence Chain)**: Issue **#17**
+- **AXIS-03 (Time Chain)**: Issue **#18**
+- **AXIS-04 (Space Chain)**: Issue **#19**
+- **AXIS-05 (Review Chain)**: Issue **#20**
 
-*(Note: `WORLD_CHAIN_MASTER_AXIS.md` (AXIS-01) was reverted in PR #27 and is not present
-on `main`)*
+## 2. Absorbed Execution Traces
 
-## 2. Axis-Execution Absorption Mapping
+The following execution issues are no longer independent tasks; they are
+absorbed by their corresponding CoreTri Master Axis definitions as execution
+traces.
 
-The following execution issues are absorbed by their corresponding CoreTri
-Master Axis definitions. To preserve state layering, execution trace, and
-replay continuity, these issues are classified as STRUCTURE_ESTABLISHED and
-must **remain open**.
-
-| Master Axis Issue | Absorbed Execution Issues | Absorption Logic |
+| Execution Issue | Absorbed By | Trace Context |
 | :--- | :--- | :--- |
-| **#16** (World Chain, AXIS-01) | **#2**, **#15** | Ecosystem expansion (#15) and external environment bounds (#2) map to World Layer constraints. |
-| **#17** (Existence Chain, AXIS-02) | **#1** | Identity, boundary definition, and corpus existence mapping (#1) root here. |
-| **#18** (Time Chain, AXIS-03) | **#6** | Scheduling topology and runtime logic (#6) bind strictly to the Time Chain. |
-| **#19** (Space Chain, AXIS-04) | **#9** | Structural placement, cross-linking, and positional verification (#9) map to Space Axis. |
-| **#20** (Review Chain, AXIS-05) | *(No current open execution maps solely to Review)* | Review Chain governs state transitions and PR enforcement bounds. |
+| **#1** | **#17** (AXIS-02) | Identity, boundary definition, corpus existence mapping. |
+| **#2** | **#16** (AXIS-01) | External environment bounds. |
+| **#6** | **#18** (AXIS-03) | Scheduling topology and runtime logic. |
+| **#9** | **#19** (AXIS-04) | Structural placement and cross-linking verification. |
+| **#15** | **#16** (AXIS-01) | Ecosystem expansion and snapshot readiness. |
 
-## 3. Active Execution Issues
+## 3. State Layering Framework
 
-Currently, there are **0** un-addressed open execution issues that have not
-already been absorbed, resolved, or superseded by recent `main` merges. All
-historical tasks (#1, #2, #6, #9, #15) are now logically bound to their axes.
+To preserve execution trace and replay continuity, do not blindly close issues.
+Issues must be mapped strictly according to this state layering:
 
-## 4. Single Control Surface Strategy
+- **ACTIVE**: In-flight execution tasks not yet merged to `main`.
+- **STRUCTURE_ESTABLISHED**: Absorbed traces (#1, #2, #6, #9, #15) and
+  active Master Axes (#16, #17, #18, #19, #20). These **must remain open**.
+- **SUPERSEDED**: Work completely replaced with no remaining dependency trace.
 
-This file (`MAIN_BRANCH_TASKBOARD_RECONCILIATION.md`) is now the **single
-control surface** for taskboard reality. The GitHub UI should not be trusted
-for structural progress without verifying this reconciliation layer.
+## 4. Single Control Surface Rule
 
-**Rule:** Do not close the mapped issues (#1, #2, #6, #9, #15, #16, #17, #18,
-#19, #20) automatically.
+This file (`MAIN_BRANCH_TASKBOARD_RECONCILIATION.md`) is the **single
+control surface** for taskboard reality.
+
+**Rule:** Do not close any of the tracked issues automatically. No execution
+chains or runtime expansions are to be initiated without explicit prior mapping
+to the 5 Master Axes.
 
 ## 5. Mismatch or Gap
 
-- **Gap**: The GitHub Issue state is heavily desynced from the actual `main`
-  branch commit history if viewed plainly.
-- **Mismatch**: Jules internal memory might be mapping to these open issues as
-  "active tasks," leading to circular loops. They must be treated as `absorbed`
-  by the axes rather than `active`.
+- **Gap**: Relying solely on the default GitHub UI state obscures the
+  structural relationship between the Master Axes and their absorbed execution
+  traces.
+- **Mismatch**: Viewing #1, #2, #6, #9, and #15 as "stale tasks to be closed"
+  violates the trace continuity requirement. They are established structural
+  components.
 
 ## 6. Next Recommended Action
 
-- Consider appending this absorption map to `CLEANUP_QUEUE_REGISTER.md` for
-  deferred manual closure only if trace continuity is ever explicitly abandoned.
-- Ensure any future execution issues spawned are strictly mapped to an open
-  Axis (AXIS-01 to AXIS-05) before work begins.
+- Maintain the current issue state and structure. No automated closure actions
+  are required or permitted.
