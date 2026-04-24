@@ -38,6 +38,7 @@
 - 04_adapter-layer/activation_order.md: External tool onboarding sequence.
 - 04_adapter-layer/calendar-adapter.md: Calendar intake/sync logic.
 - 04_adapter-layer/drive-adapter.md: Storage/snapshot/mirror logic.
+- 04_adapter-layer/google_ecosystem_absorption_schema.md: Canonical mapping and absorption rules for the Google ecosystem.
 - 04_adapter-layer/gamma_entry_spec.md: Visual layer spec.
 - 04_adapter-layer/replit_relay_spec.md: Interaction relay spec.
 - 04_adapter-layer/source_map.md: Fixed read paths for all layers.
