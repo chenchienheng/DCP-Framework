@@ -44,6 +44,7 @@
 - 04_adapter-layer/writeback_gate_spec.md: Gate conditions for external return.
 - 04_adapter-layer/writeback_packet_contract.md: Standard packet format for writeback.
 - CHATGPT_IMAGE_2_NODE_VALIDATION.md: Validation report for ChatGPT_Image_2 external node.
+- VISUAL_IDENTITY_ANCHOR_SPEC.md: Identity consistency anchor for visual generation.
 
 ### 1.4 Return Loop (05)
 - 05_topology/consistent-triad-principle.md: Bone/Event/Writeback consistency principle.

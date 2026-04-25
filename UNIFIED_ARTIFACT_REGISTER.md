@@ -28,6 +28,7 @@
 - 03_board-orchestration/ (Binding & Intake Contracts)
 - 04_adapter-layer/ (External Node Specs & Adapters)
 - CHATGPT_IMAGE_2_NODE_VALIDATION.md
+- VISUAL_IDENTITY_ANCHOR_SPEC.md
 
 ### Group D — Governance & Cleanup
 - CLEANUP_QUEUE_REGISTER.md
