@@ -37,6 +37,7 @@
 - 03_board-orchestration/runtime-spine/xuanling-calendar-time-window-adapter-contract-2026-04-19-v0-1.md: Time-window adapter contract.
 - 04_adapter-layer/activation_order.md: External tool onboarding sequence.
 - 04_adapter-layer/calendar-adapter.md: Calendar intake/sync logic.
+- 04_adapter-layer/line_entry_chain_spec.md: LINE entry node specification.
 - 04_adapter-layer/drive-adapter.md: Storage/snapshot/mirror logic.
 - 04_adapter-layer/gamma_entry_spec.md: Visual layer spec.
 - 04_adapter-layer/replit_relay_spec.md: Interaction relay spec.
