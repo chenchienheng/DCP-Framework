@@ -1,0 +1,84 @@
+# Axis Reconciliation to External Absorption Handoff
+
+> Bridge Document
+> Connects the completed #35 axis-execution reconciliation to #37 external
+> ecosystem absorption.
+
+---
+
+## 1. Current 5 Master Axes Summary
+
+The master-chain view is established through the following 5 Master Axes:
+
+1. **AXIS-01 World Chain (`WORLD_CHAIN_MASTER_AXIS.md`)**: The primary Coretri axis layer governing the external environment, ecosystem families, platform conditions, public surfaces, replacement logic, and anti-capture continuity. All future ecosystem and tool expansions map here before execution.
+2. **AXIS-02 Existence Chain (`00_mother-law/existence-chain-master-layer.md`)**: Enforces the fundamental architectural rule that no execution task can proceed without clear existence anchoring (identity, ownership, and authority boundaries).
+3. **AXIS-03 Time Chain (`TIME_CHAIN_MASTER_LAYER.md`)**: Governs scheduling topology, the 02_CVG_3D pulse, snapshot mechanism, and replay readiness. All runtime activation must bind to the time chain.
+4. **AXIS-04 Space Chain (`SPACE_CHAIN_MASTER_LAYER.md`)**: The spatial positioning layer. Enforces the rule that all artifacts must have a spatial position within the topology.
+5. **AXIS-05 Review Chain (`REVIEW_CHAIN_MASTER_LAYER.md`)**: Enforces that all important states must pass review before proceeding, ensuring structural stability and verifiable transitions.
+
+---
+
+## 2. Absorption of Execution Issues
+
+Execution issues have been mapped under the Master Axes as 'absorbed execution
+traces' to preserve trace and replay continuity. They are managed through state
+layering rather than being closed:
+
+- **#1**: Absorbed as a `STRUCTURE_ESTABLISHED` anchor. Defines canonical naming
+  normalization and structural cleanup boundaries.
+- **#2**: Absorbed as a `STRUCTURE_ESTABLISHED` anchor. Establishes the
+  cross-link verification and registry reconciliation rules.
+- **#6**: Absorbed execution trace mapped to the appropriate Master Axis for
+  seed extraction and isolation tasks.
+- **#9**: Absorbed execution trace for registry consistency checks, resulting
+  in the `REGISTRY_CONSISTENCY_REPORT.md` against core tracking registers.
+- **#15**: Absorbed execution trace mapped to the appropriate Master Axis for
+  snapshot preparation and handoff packaging.
+
+---
+
+## 3. Bridge Rule: External Ecosystem Absorption
+
+External ecosystem absorption **must** enter through the
+**AXIS-01 World Chain**.
+
+Every external node being absorbed into the ecosystem must declare the following
+on-chain conditions:
+- **Primary Axis**: Which Master Axis it primarily binds to (must map to World
+  Chain first).
+- **Secondary Axis**: Any secondary Master Axis involved (if applicable).
+- **Input**: The bounded input it accepts.
+- **Output**: The bounded output it produces.
+- **Review Path**: The path for verification and review.
+- **Return Path**: The writeback surface proving its effect.
+- **Return_Failed Route**: The fallback route directing failures to
+  **AXIS-05 Review Chain**.
+
+---
+
+## 4. Handoff Instruction for Issue #37
+
+**Issue #37 MUST use this handoff document as the prerequisite foundation.**
+Issue #37 may build the external ecosystem absorption framework **only after**
+reading this bridge document.
+The absorption framework created in #37 must adhere strictly to the Bridge
+Rule defined in Section 3 and align with the existing 5 Master Axes.
+
+---
+
+## 5. End Sections
+
+### mismatch_or_gap
+- The `WORLD_CHAIN_MASTER_AXIS.md` (AXIS-01) is noted as reverted in memory but
+  is the required entry point for external absorption. This structural mismatch
+  needs attention during actual absorption execution.
+
+### unresolved_risks
+- External nodes failing to properly route errors to the
+  `return_failed route to AXIS-05` may bypass the required Review Chain, leading
+  to unverified states.
+
+### next_single_recommended_action
+- Issue #37 should proceed with defining the external ecosystem absorption
+  framework, explicitly referencing this handoff document and complying with
+  the defined Bridge Rule.
