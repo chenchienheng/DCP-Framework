@@ -24,16 +24,16 @@ Execution issues have been mapped under the Master Axes as 'absorbed execution
 traces' to preserve trace and replay continuity. They are managed through state
 layering rather than being closed:
 
-- **#1**: Absorbed as a `STRUCTURE_ESTABLISHED` anchor. Defines canonical naming
-  normalization and structural cleanup boundaries.
-- **#2**: Absorbed as a `STRUCTURE_ESTABLISHED` anchor. Establishes the
-  cross-link verification and registry reconciliation rules.
+- **#1**: Absorbed execution trace for re-indexing the existing repository
+  corpus into a durable chain map (superseded/resolved).
+- **#2**: Absorbed execution trace for extracting legacy seed
+  (`xuanling-seed-v0-1`) into a controlled corpus map (superseded/resolved).
 - **#6**: Absorbed execution trace mapped to the appropriate Master Axis for
-  seed extraction and isolation tasks.
-- **#9**: Absorbed execution trace for registry consistency checks, resulting
-  in the `REGISTRY_CONSISTENCY_REPORT.md` against core tracking registers.
+  scheduler topology reconciliation to platform map.
+- **#9**: Absorbed execution trace for the first standardized task packet run
+  (registry + snapshot readiness).
 - **#15**: Absorbed execution trace mapped to the appropriate Master Axis for
-  snapshot preparation and handoff packaging.
+  governance proposal consolidation (snapshot + merge law + replay readiness).
 
 ---
 
@@ -69,9 +69,10 @@ Rule defined in Section 3 and align with the existing 5 Master Axes.
 ## 5. End Sections
 
 ### mismatch_or_gap
-- The `WORLD_CHAIN_MASTER_AXIS.md` (AXIS-01) is noted as reverted in memory but
-  is the required entry point for external absorption. This structural mismatch
-  needs attention during actual absorption execution.
+- `WORLD_CHAIN_MASTER_AXIS.md` (AXIS-01) was previously reverted (PR #27) and
+  is not currently present on `main`. However, it remains the required entry
+  point for external ecosystem absorption. This structural mismatch must be
+  addressed during #37 execution.
 
 ### unresolved_risks
 - External nodes failing to properly route errors to the
