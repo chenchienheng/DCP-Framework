@@ -85,6 +85,18 @@
 - **fallback:** If output contradicts GitHub bone state, GH state prevails.
   Log contradiction to AXIS-05.
 
+### 1.8 ChatGPT_Image_2 (Image Generation Node)
+- **primary_axis:** AXIS-01 (World Chain)
+- **secondary_axis:** AXIS-05 (Review Chain)
+- **input:** Prompt (text description), style constraint (style language).
+- **output:** Image (image result), variation (different versions).
+- **execution_boundary:** Generates images only. Not responsible for brand
+  consistency decisions.
+- **review_path:** Checks style compliance (color / light / composition).
+  Checks for character deviation (Qin-Yi).
+- **return_path:** Returns to main chain (as an asset node).
+- **fallback:** AXIS-05 (Review / Regeneration).
+
 ---
 
 ## 2. Structural Analysis
