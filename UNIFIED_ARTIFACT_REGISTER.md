@@ -19,6 +19,7 @@
 - THREE_COUPLING_RUNTIME_MAP.md
 - WINDOW_12_MASTER_TABLE.md
 - 00_meta/user_identity_anchor.md
+- WORLD_CHAIN_MASTER_AXIS.md
 - 01_runtime-spine/ (Pulse & Linking Rules)
 - 05_topology/ (Triad & Consistency Rules)
 

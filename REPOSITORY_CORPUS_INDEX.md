@@ -15,6 +15,7 @@
 
 ### 1.1 Meta & Mother-Law (00)
 - 00_meta/user_identity_anchor.md: Primary identity alignment anchor.
+- WORLD_CHAIN_MASTER_AXIS.md: Primary Coretri axis layer for World Chain governance.
 - 00_mother-law/README.md: Core governance entry.
 - 00_mother-law/existence-consistency-rule.md: Triple-condition (Exist/Being/Continue) consistency rule.
 - 00_mother-law/mother-architecture-registry-v0-1.md: M1-M5 lineage tracking.
