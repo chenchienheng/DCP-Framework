@@ -71,8 +71,9 @@ Rule defined in Section 3 and align with the existing 5 Master Axes.
 ### mismatch_or_gap
 - `WORLD_CHAIN_MASTER_AXIS.md` (AXIS-01) was previously reverted (PR #27) and
   is not currently present on `main`. However, it remains the required entry
-  point for external ecosystem absorption. This structural mismatch must be
-  addressed during #37 execution.
+  point for external ecosystem absorption. This structural mismatch is being
+  addressed by restoring a minimal version of AXIS-01 in the current task
+  packet.
 
 ### unresolved_risks
 - External nodes failing to properly route errors to the
