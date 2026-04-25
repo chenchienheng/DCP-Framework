@@ -97,11 +97,71 @@
 - **return_path:** Returns to main chain (as an asset node).
 - **fallback:** AXIS-05 (Review / Regeneration).
 
+### 1.9 Claude_Code (Code Orchestration Node)
+- **primary_axis:** AXIS-01 (World Chain)
+- **secondary_axis:** AXIS-02 (Existence Chain)
+- **input:** Issue packets, codebase context, architecture documentation.
+- **output:** Pull requests, architectural drafts, structural updates.
+- **execution_boundary:** Operates on code and architecture definition. Must
+  not unilaterally redefine doctrine or bypass review chains.
+- **review_path:** Output passes through PR review by Human/Jules.
+- **return_path:** Commits to GitHub branch, updates to registers.
+- **fallback:** AXIS-05 (Review Chain).
+
+### 1.10 GPT-5.5 (Advanced Reasoning Node)
+- **primary_axis:** AXIS-01 (World Chain)
+- **secondary_axis:** AXIS-05 (Review Chain)
+- **input:** Complex ambiguity blocks, high-level structural proposals.
+- **output:** Synthesis reports, resolution schemas, contradiction mappings.
+- **execution_boundary:** Used for high-level reasoning and synthesis, not for
+  unsupervised execution or state mutation.
+- **review_path:** Requires human oversight or cross-model audit.
+- **return_path:** Markdown reports or PR comments.
+- **fallback:** AXIS-05 (Review Chain).
+
+### 1.11 OPF (Privacy Filter)
+- **primary_axis:** AXIS-01 (World Chain)
+- **secondary_axis:** AXIS-05 (Review Chain)
+- **input:** Outbound data streams, prompts, structural payloads.
+- **output:** Sanitized payloads, redacted prompts.
+- **execution_boundary:** Must intercept before external network calls.
+  Cannot generate content, only filter.
+- **review_path:** Filter rules audited through rule-definition PRs.
+- **return_path:** Forwards sanitized payload to target node.
+- **fallback:** Block transmission and log to AXIS-05 (Review Chain).
+
+### 1.12 Whisper (Audio Intake Node)
+- **primary_axis:** AXIS-01 (World Chain)
+- **secondary_axis:** none
+- **input:** Voice recordings, synchronous audio streams.
+- **output:** Raw text transcripts.
+- **execution_boundary:** Transcription only. Does not interpret or synthesize
+  meaning from text.
+- **review_path:** Transcripts passed to reasoning node (e.g., Gemini) for
+  structuring.
+- **return_path:** Text appended to intermediate storage or PRs.
+- **fallback:** AXIS-05 (Review Chain).
+
+### 1.13 Image_2 (Supplemental Vision Node)
+- **primary_axis:** AXIS-01 (World Chain)
+- **secondary_axis:** AXIS-05 (Review Chain)
+- **input:** Visual assets, diagrams, structural screenshots.
+- **output:** OCR text, structural analysis, bounding boxes.
+- **execution_boundary:** Reads images for state extraction. Does not mutate
+  state independently.
+- **review_path:** Output verified against known text registers.
+- **return_path:** Extracted state written back to MD logs.
+- **fallback:** AXIS-05 (Review Chain).
+
 ---
 
 ## 2. Structural Analysis
 
 ### 2.1 mismatch_or_gap
+- The OPF (Privacy Filter) node requires a formal rule engine and dictionary
+  definition that currently does not exist.
+- Advanced reasoning models (GPT-5.5, Claude_Code) require specific API
+  invocation contracts to prevent autonomous capability drift.
 - The physical `AXIS_TO_EXTERNAL_ABSORPTION_HANDOFF.md` document is not present
   in the repository.
 - There is currently no active automated pipeline enforcing these boundaries,
@@ -110,6 +170,11 @@
   Calendar.
 
 ### 2.2 unresolved_risks
+- **Data Leakage Risk:** If OPF logic fails or is bypassed, sensitive structural
+  data might leak to external model APIs.
+- **Autonomous Drift Risk:** Extremely capable nodes like GPT-5.5 and
+  Claude_Code might attempt to rewrite fundamental doctrine if their boundaries
+  aren't strictly verified.
 - **Capture Risk:** Without rigid enforcement, Google Drive or Docs might still
   be treated as the definitive source of truth by users bypassing the bone.
 - **API Failure:** Dependency on manual logging (e.g., if `$GITHUB_TOKEN` fails)
