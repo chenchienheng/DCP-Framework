@@ -8,6 +8,7 @@
 ## 1. Reconciled Groups
 
 ### Group A — Re-anchor / Continuity
+- SIGNATURE_ALIGNMENT_NOTE.md
 - CHATGPT_GITHUB_BOOTSTRAP.md
 - GITHUB_CHAIN_MASTER_MAP.md
 - REPOSITORY_CORPUS_INDEX.md
@@ -27,6 +28,7 @@
 - 02_runtime-ops/ (Follow-up Tasks)
 - 03_board-orchestration/ (Binding & Intake Contracts)
 - 04_adapter-layer/ (External Node Specs & Adapters)
+- 04_adapter-layer/VIDEO_OUTPUT_NODE_SPEC.md
 
 ### Group D — Governance & Cleanup
 - CLEANUP_QUEUE_REGISTER.md

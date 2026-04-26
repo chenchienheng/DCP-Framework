@@ -57,6 +57,7 @@ Used for persistent return notes, correction markers, index files, chain maps, a
 | `03_board-orchestration/window_binding_registry_01_07.md` | Interaction Surface | Writeback Chain | verified |
 | `03_board-orchestration/window_delta_mapping_template.md` | Interaction Surface | Writeback Chain | verified |
 | `04_adapter-layer/README.md` | Interaction Surface | Bridge Chain | verified |
+| `04_adapter-layer/VIDEO_OUTPUT_NODE_SPEC.md` | Interaction Surface | Bridge Chain | verified |
 | `AGENT_READINESS_CHECKLIST.md` | Writeback Artifact | Writeback Chain | verified |
 | `BRANCH_TOPOLOGY_AND_CLEANUP_REGISTER.md` | Writeback Artifact | Writeback Chain | verified |
 | `CHATGPT_GITHUB_BOOTSTRAP.md` | Transitional / Stage Note | Writeback Chain | verified |
@@ -92,6 +93,7 @@ Used for persistent return notes, correction markers, index files, chain maps, a
 | `SCHEDULING_EFFECTIVENESS_GAP_NOTE.md` | Transitional / Stage Note | Writeback Chain | verified |
 | `SCHEDULING_EFFECT_REGISTER.md` | Writeback Artifact | Writeback Chain | verified |
 | `SEED_SHADOW_POINTER.md` | Transitional / Stage Note | Writeback Chain | verified |
+| `SIGNATURE_ALIGNMENT_NOTE.md` | Structural Bone | Writeback Chain | verified |
 | `STAGE_SYNC_SNAPSHOT_2026-04-21.md` | Transitional / Stage Note | Writeback Chain | verified |
 | `STATUS.md` | Writeback Artifact | Writeback Chain | verified |
 | `THIRD_RUNTIME_ENVIRONMENT_NOTE.md` | Transitional / Stage Note | Writeback Chain | verified |

@@ -14,6 +14,7 @@
 ## 1. Inventory by Family
 
 ### 1.1 Meta & Mother-Law (00)
+- SIGNATURE_ALIGNMENT_NOTE.md: Expanded signature reference scope note.
 - 00_meta/user_identity_anchor.md: Primary identity alignment anchor.
 - 00_mother-law/README.md: Core governance entry.
 - 00_mother-law/existence-consistency-rule.md: Triple-condition (Exist/Being/Continue) consistency rule.
@@ -43,6 +44,7 @@
 - 04_adapter-layer/source_map.md: Fixed read paths for all layers.
 - 04_adapter-layer/writeback_gate_spec.md: Gate conditions for external return.
 - 04_adapter-layer/writeback_packet_contract.md: Standard packet format for writeback.
+- 04_adapter-layer/VIDEO_OUTPUT_NODE_SPEC.md: Video output node specification.
 
 ### 1.4 Return Loop (05)
 - 05_topology/consistent-triad-principle.md: Bone/Event/Writeback consistency principle.
