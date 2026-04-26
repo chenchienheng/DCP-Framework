@@ -14,6 +14,7 @@
 ## 1. Inventory by Family
 
 ### 1.1 Meta & Mother-Law (00)
+- WORLD_CHAIN_MASTER_AXIS.md: AXIS-01 World Chain definition.
 - 00_meta/user_identity_anchor.md: Primary identity alignment anchor.
 - WORLD_CHAIN_MASTER_AXIS.md: Primary Coretri axis layer for World Chain governance.
 - 00_mother-law/README.md: Core governance entry.
@@ -31,6 +32,7 @@
 - 01_runtime-spine/window_linking_logic_01_07.md: State-ladder transition rules.
 
 ### 1.3 Sub-systems (02-04)
+- AXIS_TO_EXTERNAL_ABSORPTION_HANDOFF.md: Bridge document for external ecosystem absorption handoff.
 - 02_runtime-ops/task_follow_up.md: Active follow-up task tracker.
 - 03_board-orchestration/window_binding_registry_01_07.md: Window-to-path binding registry.
 - 03_board-orchestration/window_delta_mapping_template.md: Delta mapping schema.

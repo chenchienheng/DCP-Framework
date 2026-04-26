@@ -16,6 +16,7 @@
 - REPLAY_READINESS_REPORT.md
 
 ### Group B — Runtime Structure & Topology
+- WORLD_CHAIN_MASTER_AXIS.md
 - THREE_COUPLING_RUNTIME_MAP.md
 - WINDOW_12_MASTER_TABLE.md
 - 00_meta/user_identity_anchor.md
@@ -24,6 +25,7 @@
 - 05_topology/ (Triad & Consistency Rules)
 
 ### Group C — Operational Boards & Layers
+- AXIS_TO_EXTERNAL_ABSORPTION_HANDOFF.md
 - 01_native-board/ (Indices, Blockers, & Permissions)
 - 02_runtime-ops/ (Follow-up Tasks)
 - 03_board-orchestration/ (Binding & Intake Contracts)
