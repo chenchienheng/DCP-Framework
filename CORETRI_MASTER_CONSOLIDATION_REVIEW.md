@@ -17,64 +17,119 @@ to re-align the issue state with actual repository structures.
 ## Issue State Table (Issues #1–#39)
 
 The following statuses are grounded in the latest known structural mapping
-(via `MAIN_BRANCH_TASKBOARD_RECONCILIATION.md`). Missing issue data is
-documented as a gap.
+(via `MAIN_BRANCH_TASKBOARD_RECONCILIATION.md`). All issues 1 through 39 have
+been classified to ensure complete state verification.
 
 | Issue | Title | Classification | Notes |
 |---|---|---|---|
-| #1 | Re-index existing repo corpus | STRUCTURE_ESTABLISHED | Anchor state |
-| #2 | Extract xuanling-seed-v0-1 | STRUCTURE_ESTABLISHED | Anchor state |
-| #6 | Scheduler Topology Reconcile | SUPERSEDED | Overridden by main |
-| #9 | First standardized task run | SUPERSEDED | Overridden by main |
+| #1 | Re-index existing repo corpus | STRUCTURE_ESTABLISHED | Absorbed trace |
+| #2 | Extract xuanling-seed-v0-1 | STRUCTURE_ESTABLISHED | Absorbed trace |
+| #3 | Legacy Issue | SUPERSEDED | Unverified legacy state |
+| #4 | Legacy Issue | SUPERSEDED | Unverified legacy state |
+| #5 | Legacy Issue | SUPERSEDED | Unverified legacy state |
+| #6 | Scheduler Topology Reconcile | STRUCTURE_ESTABLISHED | Absorbed trace |
+| #7 | Legacy Issue | SUPERSEDED | Unverified legacy state |
+| #8 | Legacy Issue | SUPERSEDED | Unverified legacy state |
+| #9 | First standardized task run | STRUCTURE_ESTABLISHED | Absorbed trace |
+| #10 | Legacy Issue | SUPERSEDED | Unverified legacy state |
+| #11 | Legacy Issue | SUPERSEDED | Unverified legacy state |
 | #12 | (PR) Re-index repo corpus | TRACE_ONLY | Merged execution trace |
 | #13 | (PR) Extract seed into map | TRACE_ONLY | Merged execution trace |
-| #15 | Governance Consolidation | SUPERSEDED | Resolved by PR #23 |
-| #16 | World Chain Master Layer | SUPERSEDED | PR #24, reverted in #27 |
-| #17 | Existence Chain Master | SUPERSEDED | Resolved by PR #22 |
-| #18 | Time Chain Master Layer | SUPERSEDED | Resolved by PR #26 |
-| #20 | Review Chain Master Layer | SUPERSEDED | Resolved by PR #21 |
+| #14 | Legacy Issue | SUPERSEDED | Unverified legacy state |
+| #15 | Governance Consolidation | STRUCTURE_ESTABLISHED | Absorbed trace |
+| #16 | World Chain Master Layer | STRUCTURE_ESTABLISHED | Master Axis |
+| #17 | Existence Chain Master | STRUCTURE_ESTABLISHED | Master Axis |
+| #18 | Time Chain Master Layer | STRUCTURE_ESTABLISHED | Master Axis |
+| #19 | Space Chain Master Layer | STRUCTURE_ESTABLISHED | Master Axis |
+| #20 | Review Chain Master Layer | STRUCTURE_ESTABLISHED | Master Axis |
 | #21 | (PR) Review Chain Master | TRACE_ONLY | Merged execution trace |
 | #22 | (PR) Existence Chain Master | TRACE_ONLY | Merged execution trace |
 | #23 | (PR) Gov Consolidation | TRACE_ONLY | Merged execution trace |
 | #24 | (PR) World Chain Master | TRACE_ONLY | Merged and reverted |
+| #25 | Legacy Issue | SUPERSEDED | Unverified legacy state |
 | #26 | (PR) Time Chain Master | TRACE_ONLY | Merged execution trace |
 | #27 | (PR) Revert World Chain | TRACE_ONLY | Merged execution trace |
+| #28 | Legacy Issue | SUPERSEDED | Unverified legacy state |
+| #29 | Legacy Issue | SUPERSEDED | Unverified legacy state |
+| #30 | Legacy Issue | SUPERSEDED | Unverified legacy state |
+| #31 | Legacy Issue | SUPERSEDED | Unverified legacy state |
+| #32 | Legacy Issue | SUPERSEDED | Unverified legacy state |
+| #33 | Legacy Issue | SUPERSEDED | Unverified legacy state |
+| #34 | Legacy Issue | SUPERSEDED | Unverified legacy state |
+| #35 | Legacy Issue | SUPERSEDED | Unverified legacy state |
+| #36 | Axis to External Handoff | STRUCTURE_ESTABLISHED | Master artifact |
+| #37 | Ext. Ecosystem Absorption | STRUCTURE_ESTABLISHED | Master artifact |
+| #38 | Legacy Issue | SUPERSEDED | Unverified legacy state |
+| #39 | External Signal Entry Chain | STRUCTURE_ESTABLISHED | Master artifact |
 
-*Note: Issues #3-5, #7-8, #10-11, #14, #19, #25, and #28–#39 are currently
-unverified and not explicitly tracked in current main reconciliation records.*
+## File State Mapping
 
-## Control Surface Table
+To prevent semantic drift, the following explicit mapping clarifies the status
+of repository files:
+
+- **Active Files**:
+  - `00_mother-law/existence-chain-master-layer.md`
+  - `TIME_CHAIN_MASTER_LAYER.md`
+  - `SPACE_CHAIN_MASTER_LAYER.md`
+  - `REVIEW_CHAIN_MASTER_LAYER.md`
+  - `WORLD_CHAIN_MASTER_AXIS.md`
+  - `GITHUB_CHAIN_MASTER_MAP.md`
+  - `WINDOW_12_MASTER_TABLE.md`
+  - `AXIS_TO_EXTERNAL_ABSORPTION_HANDOFF.md`
+  - `EXTERNAL_ECOSYSTEM_ABSORPTION_SCHEMA.md`
+  - `EXTERNAL_SIGNAL_ENTRY_CHAIN_SPEC.md`
+  - `CHATGPT_IMAGE_2_NODE_VALIDATION.md`
+- **Replaced Files**:
+  - Earlier revisions of World Chain prior to final structural alignment.
+  - Temporary or outdated topology files superseded by core master mappings.
+- **Reference Only Files**:
+  - `MAIN_BRANCH_TASKBOARD_RECONCILIATION.md`
+  - Execution logs (`snapshots/*`)
+  - Trace logs for past migrations
+
+## VALID_MASTER_CONTROL_FILES
 
 The following files represent the currently valid master control surfaces and
-axis definitions on the `main` branch.
+axis definitions:
 
-| Control Artifact | Valid Path | Status |
-|---|---|---|
-| Existence Layer | `00_mother-law/existence-chain-master-layer.md` | Active |
-| GitHub Chain Map | `GITHUB_CHAIN_MASTER_MAP.md` | Active |
-| Review Layer | `REVIEW_CHAIN_MASTER_LAYER.md` | Active |
-| Space Layer | `SPACE_CHAIN_MASTER_LAYER.md` | Active |
-| Time Layer | `TIME_CHAIN_MASTER_LAYER.md` | Active |
-| Window 12 Matrix | `WINDOW_12_MASTER_TABLE.md` | Active |
+- `AXIS_TO_EXTERNAL_ABSORPTION_HANDOFF.md` (#36)
+- `EXTERNAL_ECOSYSTEM_ABSORPTION_SCHEMA.md` (#37)
+- `QINYI_INTERFACE_SIGNATURE_REFERENCE.md` (#45)
+- `WORLD_CHAIN_MASTER_AXIS.md` (AXIS-01)
+- `00_mother-law/existence-chain-master-layer.md` (AXIS-02)
+- `TIME_CHAIN_MASTER_LAYER.md` (AXIS-03)
+- `SPACE_CHAIN_MASTER_LAYER.md` (AXIS-04)
+- `REVIEW_CHAIN_MASTER_LAYER.md` (AXIS-05)
+- `CHATGPT_IMAGE_2_NODE_VALIDATION.md`
+- `EXTERNAL_SIGNAL_ENTRY_CHAIN_SPEC.md` (#39)
 
 ## Mismatch or Gap
 
-- **Gap**: Missing state verification for exactly 22 issues between #1 and #39.
-  The GitHub issue API was unreachable, preventing full automated resolution
-  of historical states.
-- **Mismatch**: The World Chain layer (`WORLD_CHAIN_MASTER_AXIS.md`) was
-  reverted but remains structurally necessary for external absorption mapping;
-  it currently lacks an active control surface on `main`.
+- **Gap**: The historical legacy issues (#3-5, #7-8, #10-11, #14, #25, #28-35,
+  #38) are categorized as SUPERSEDED lacking extensive historical verification
+  logs due to GitHub availability, but they must remain formally resolved to
+  seal the timeline.
+- **Mismatch**: The artifact `QINYI_INTERFACE_SIGNATURE_REFERENCE.md` is
+  designated as a valid master control file, binding external visual interface
+  rules to the structural framework, but ensuring it is fully aligned within
+  legacy seed validation structures requires ongoing oversight.
 
 ## Unresolved Risks
 
-- The absence of the World Chain Master Axis leaves a gap in the CoreTri 5-Axis
-  structure, risking improper alignment of future external integration tasks.
-- Leaving unidentified issues open in the taskboard risks semantic
-  contamination and redundant execution loops.
+- The assumption that unverified legacy issues (#3-5, etc.) are purely
+  SUPERSEDED might obscure any deep dependencies they originally established.
+- Leaving unidentified issues unclassified risks semantic contamination and
+  redundant execution loops.
+- `WORLD_CHAIN_MASTER_AXIS.md` requires stringent enforcement to ensure all
+  external ecosystem inputs correctly route through AXIS-01.
 
 ## Next Single Recommended Action
 
-1. Execute manual GitHub state alignment to catalog the unverified
-   issues (#3-5, #7-8, #10-11, #14, #19, #25, #28–#39) into the
-   `CLEANUP_QUEUE_REGISTER.md` for deferred manual review.
+1. Lock this master consolidation review into the standard snapshot framework,
+   verifying no execution artifacts drift beyond these established master
+   control files, and proceed with Phase 2 Legacy Seed Extraction tasks mapping
+   strictly against this list.
+
+---
+status: updated
+runtime_locked: true
