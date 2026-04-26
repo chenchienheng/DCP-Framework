@@ -14,7 +14,7 @@
 ## 1. Inventory by Family
 
 ### 1.1 Meta & Mother-Law (00)
-- WORLD_CHAIN_MASTER_AXIS.md: AXIS-01 World Chain definition.
+- EXTERNAL_SIGNAL_ENTRY_CHAIN_SPEC.md: Tool-agnostic entry chain specification.
 - 00_meta/user_identity_anchor.md: Primary identity alignment anchor.
 - WORLD_CHAIN_MASTER_AXIS.md: Primary Coretri axis layer for World Chain governance.
 - 00_mother-law/README.md: Core governance entry.
@@ -40,6 +40,7 @@
 - 03_board-orchestration/runtime-spine/xuanling-calendar-time-window-adapter-contract-2026-04-19-v0-1.md: Time-window adapter contract.
 - 04_adapter-layer/activation_order.md: External tool onboarding sequence.
 - 04_adapter-layer/calendar-adapter.md: Calendar intake/sync logic.
+- 04_adapter-layer/line_entry_chain_spec.md: LINE entry node specification.
 - 04_adapter-layer/drive-adapter.md: Storage/snapshot/mirror logic.
 - 04_adapter-layer/google_ecosystem_absorption_schema.md: Canonical mapping and absorption rules for the Google ecosystem.
 - 04_adapter-layer/gamma_entry_spec.md: Visual layer spec.

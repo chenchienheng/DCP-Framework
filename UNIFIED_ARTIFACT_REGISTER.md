@@ -25,7 +25,7 @@
 - 05_topology/ (Triad & Consistency Rules)
 
 ### Group C — Operational Boards & Layers
-- AXIS_TO_EXTERNAL_ABSORPTION_HANDOFF.md
+- EXTERNAL_SIGNAL_ENTRY_CHAIN_SPEC.md
 - 01_native-board/ (Indices, Blockers, & Permissions)
 - 02_runtime-ops/ (Follow-up Tasks)
 - 03_board-orchestration/ (Binding & Intake Contracts)
