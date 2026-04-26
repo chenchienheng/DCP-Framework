@@ -14,7 +14,8 @@
 ## 1. Inventory by Family
 
 ### 1.1 Meta & Mother-Law (00)
-- EXTERNAL_SIGNAL_ENTRY_CHAIN_SPEC.md: Tool-agnostic entry chain specification.
+- QINYI_INTERFACE_SIGNATURE_REFERENCE.md: Stable identity anchor for the Qinyi signature.
+- SIGNATURE_ALIGNMENT_NOTE.md: Expanded signature reference scope note.
 - 00_meta/user_identity_anchor.md: Primary identity alignment anchor.
 - WORLD_CHAIN_MASTER_AXIS.md: Primary Coretri axis layer for World Chain governance.
 - 00_mother-law/README.md: Core governance entry.
@@ -48,8 +49,7 @@
 - 04_adapter-layer/source_map.md: Fixed read paths for all layers.
 - 04_adapter-layer/writeback_gate_spec.md: Gate conditions for external return.
 - 04_adapter-layer/writeback_packet_contract.md: Standard packet format for writeback.
-- CHATGPT_IMAGE_2_NODE_VALIDATION.md: Validation report for ChatGPT_Image_2 external node.
-- VISUAL_IDENTITY_ANCHOR_SPEC.md: Identity consistency anchor for visual generation.
+- 04_adapter-layer/VIDEO_OUTPUT_NODE_SPEC.md: Video output node specification.
 
 ### 1.4 Return Loop (05)
 - 05_topology/consistent-triad-principle.md: Bone/Event/Writeback consistency principle.
