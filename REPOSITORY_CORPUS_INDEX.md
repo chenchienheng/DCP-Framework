@@ -17,6 +17,7 @@
 - QINYI_INTERFACE_SIGNATURE_REFERENCE.md: Stable identity anchor for the Qinyi signature.
 - SIGNATURE_ALIGNMENT_NOTE.md: Expanded signature reference scope note.
 - 00_meta/user_identity_anchor.md: Primary identity alignment anchor.
+- WORLD_CHAIN_MASTER_AXIS.md: Primary Coretri axis layer for World Chain governance.
 - 00_mother-law/README.md: Core governance entry.
 - 00_mother-law/existence-consistency-rule.md: Triple-condition (Exist/Being/Continue) consistency rule.
 - 00_mother-law/mother-architecture-registry-v0-1.md: M1-M5 lineage tracking.
@@ -32,6 +33,7 @@
 - 01_runtime-spine/window_linking_logic_01_07.md: State-ladder transition rules.
 
 ### 1.3 Sub-systems (02-04)
+- AXIS_TO_EXTERNAL_ABSORPTION_HANDOFF.md: Bridge document for external ecosystem absorption handoff.
 - 02_runtime-ops/task_follow_up.md: Active follow-up task tracker.
 - 03_board-orchestration/window_binding_registry_01_07.md: Window-to-path binding registry.
 - 03_board-orchestration/window_delta_mapping_template.md: Delta mapping schema.
@@ -39,7 +41,9 @@
 - 03_board-orchestration/runtime-spine/xuanling-calendar-time-window-adapter-contract-2026-04-19-v0-1.md: Time-window adapter contract.
 - 04_adapter-layer/activation_order.md: External tool onboarding sequence.
 - 04_adapter-layer/calendar-adapter.md: Calendar intake/sync logic.
+- 04_adapter-layer/line_entry_chain_spec.md: LINE entry node specification.
 - 04_adapter-layer/drive-adapter.md: Storage/snapshot/mirror logic.
+- 04_adapter-layer/google_ecosystem_absorption_schema.md: Canonical mapping and absorption rules for the Google ecosystem.
 - 04_adapter-layer/gamma_entry_spec.md: Visual layer spec.
 - 04_adapter-layer/replit_relay_spec.md: Interaction relay spec.
 - 04_adapter-layer/source_map.md: Fixed read paths for all layers.
