@@ -1,43 +1,32 @@
-# AXIS-01: World Chain Master Axis
+# World Chain Master Layer
 
-> Master Layer
-> The primary Coretri axis layer governing the external environment, ecosystem
-> families, platform conditions, and public surfaces.
-
----
-
-## 1. Purpose
-
-The World Chain serves as the definitive structural entry point for any external
-node, tool, or ecosystem family being absorbed into the runtime. It ensures
-anti-capture continuity and governs externalization layers without executing
-isolated logic.
-
-## 2. Entry Rule
-
-**External nodes must enter through AXIS-01.**
-
-Any external node or ecosystem family being integrated into the repository must
-first map to the World Chain before any execution mapping or internal adaptation
-takes place.
-
-## 3. Required Declarations
-
-Every external node being absorbed must declare the following structural
-conditions before runtime activation:
-
-1. **`primary_axis`**: The primary Coretri axis it binds to (defaults to AXIS-01).
-2. **`secondary_axis`**: Any secondary Coretri axis involved (if applicable).
-3. **`input`**: The bounded input accepted by the external node.
-4. **`output`**: The bounded output produced by the external node.
-5. **`review_path`**: The verification path to ensure alignment.
-6. **`return_path`**: The durable writeback surface proving its effect.
-7. **`return_failed`**: The fallback route directing failures to
-   **AXIS-05 Review Chain**.
+> CoreTri Axis-01: The World Chain
+> This document defines the minimal operating rules for the external environment
+> and ecosystem absorption within the DCP Framework.
 
 ---
 
-## Status
+## 1. Definition
+
+The **World Chain** governs the outer boundaries of the system.
+It is the Master Axis responsible for absorbing external models, platforms, and
+tool chains.
+
+It enforces the rule that external entities are mapped as replaceable nodes
+rather than sovereign centers.
+
+## 2. Rules
+
+- **Absorption without Expansion:** Ecosystems must be structurally mapped
+  (e.g., via `04_adapter-layer` schemas) before any tool integration.
+- **Anti-Capture Continuity:** No single external tool or platform may hold
+  absolute state authority over the core repository bone.
+- **Public Surfaces Reflection:** The World Chain controls how the repository
+  state is reflected outward to external boards or readable layers.
+
+## 3. Status
 
 - master_axis_created: true
+- axis_number: 01
+- mapped_issues: #16
 - return_to_00: true

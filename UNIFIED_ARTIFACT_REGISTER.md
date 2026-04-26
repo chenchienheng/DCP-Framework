@@ -20,6 +20,7 @@
 - THREE_COUPLING_RUNTIME_MAP.md
 - WINDOW_12_MASTER_TABLE.md
 - 00_meta/user_identity_anchor.md
+- WORLD_CHAIN_MASTER_AXIS.md
 - 01_runtime-spine/ (Pulse & Linking Rules)
 - 05_topology/ (Triad & Consistency Rules)
 
@@ -29,8 +30,7 @@
 - 02_runtime-ops/ (Follow-up Tasks)
 - 03_board-orchestration/ (Binding & Intake Contracts)
 - 04_adapter-layer/ (External Node Specs & Adapters)
-- CHATGPT_IMAGE_2_NODE_VALIDATION.md
-- VISUAL_IDENTITY_ANCHOR_SPEC.md
+- 04_adapter-layer/google_ecosystem_absorption_schema.md
 
 ### Group D — Governance & Cleanup
 - CLEANUP_QUEUE_REGISTER.md
