@@ -16,6 +16,7 @@
 - REPLAY_READINESS_REPORT.md
 
 ### Group B — Runtime Structure & Topology
+- WORLD_CHAIN_MASTER_AXIS.md
 - THREE_COUPLING_RUNTIME_MAP.md
 - WINDOW_12_MASTER_TABLE.md
 - 00_meta/user_identity_anchor.md
@@ -28,6 +29,8 @@
 - 02_runtime-ops/ (Follow-up Tasks)
 - 03_board-orchestration/ (Binding & Intake Contracts)
 - 04_adapter-layer/ (External Node Specs & Adapters)
+- CHATGPT_IMAGE_2_NODE_VALIDATION.md
+- VISUAL_IDENTITY_ANCHOR_SPEC.md
 
 ### Group D — Governance & Cleanup
 - CLEANUP_QUEUE_REGISTER.md
