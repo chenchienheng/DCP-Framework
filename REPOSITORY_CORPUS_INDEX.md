@@ -14,6 +14,7 @@
 ## 1. Inventory by Family
 
 ### 1.1 Meta & Mother-Law (00)
+- QINYI_INTERFACE_SIGNATURE_REFERENCE.md: Stable identity anchor for the Qinyi signature.
 - SIGNATURE_ALIGNMENT_NOTE.md: Expanded signature reference scope note.
 - 00_meta/user_identity_anchor.md: Primary identity alignment anchor.
 - 00_mother-law/README.md: Core governance entry.

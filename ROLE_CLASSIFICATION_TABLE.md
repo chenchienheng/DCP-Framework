@@ -87,6 +87,7 @@ Used for persistent return notes, correction markers, index files, chain maps, a
 | `NETWORK_STRUCTURE_HIERARCHY_NOTE.md` | Structural Bone | Bone Chain | verified |
 | `PLATFORM_SCHEDULER_AND_TOOL_NAMING_MAP.md` | Writeback Artifact | Writeback Chain | verified |
 | `PRIMARY_BONE_STABILITY_SCORECARD.md` | Structural Bone | Bone Chain | verified |
+| `QINYI_INTERFACE_SIGNATURE_REFERENCE.md` | Structural Bone | Writeback Chain | verified |
 | `README.md` | Upper-Order / Sovereignty-Oriented | Writeback Chain | verified |
 | `REPOSITORY_CORPUS_INDEX.md` | Writeback Artifact | Writeback Chain | verified |
 | `ROLE_CLASSIFICATION_TABLE.md` | Writeback Artifact | Writeback Chain | verified |

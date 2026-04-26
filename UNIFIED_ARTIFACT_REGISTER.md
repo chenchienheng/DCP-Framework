@@ -8,6 +8,7 @@
 ## 1. Reconciled Groups
 
 ### Group A — Re-anchor / Continuity
+- QINYI_INTERFACE_SIGNATURE_REFERENCE.md
 - SIGNATURE_ALIGNMENT_NOTE.md
 - CHATGPT_GITHUB_BOOTSTRAP.md
 - GITHUB_CHAIN_MASTER_MAP.md
