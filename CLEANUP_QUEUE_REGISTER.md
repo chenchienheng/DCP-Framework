@@ -57,6 +57,7 @@ Each cleanup item should eventually include:
 | C-009 | schedule design drift | scheduling artifacts without effect proof | construction_residue + runtime_risk | P1 | bind to effect register | every schedule linked to owner/output/proof | named schedule without runtime effect risks static pollution | queued |
 | C-010 | static corpus accumulation | large text corpus without unified dynamic registry | contamination_risk | P0-P1 | rebind into dynamic register | turn static corpus into dynamic artifact database | static pile risks becoming residue mass | active |
 | C-011 | github issue state | `main` | state_desync | P1 | close stale issues | close #1, #2, #6, #9, #15, #16, #17, #18, #20 | superseded/merged tasks cluttering board | queued |
+| C-012 | github issue state | `Issue #38` | state_desync | P1 | close stale issue | close #38 | resolved via PR | queued |
 
 ---
 
