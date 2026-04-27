@@ -23,8 +23,8 @@ consolidation:
 - **#43 Master Consolidation Review**: DUPLICATE (See Section 2)
 - **#44 CoreTri Master Consolidation Review**: ACTIVE (Current consolidation
   surface)
-- **#49 Physical Signal Boundary Definition**: ACTIVE_PENDING_PR_50 (Because
-  PR #50 is still open and not yet merged)
+- **#49 Physical Signal Boundary Definition**: STRUCTURE_ESTABLISHED (Recent
+  execution, trace preserved)
 
 *(Note: Legacy issues #3-5, #7-8, #10-11, #14, #25, #28-35, #38 are classified
 as SUPERSEDED in the master review, and issues corresponding to merged PRs like
@@ -78,9 +78,7 @@ align the GitHub interface with the repository state:
    contents are confirmed merged into `main`.
 3. **Queue PR #50 for Merge**: Review and merge the Physical Signal Boundary
    Definition if it passes `AXIS-01` structural checks.
-4. **Queue the PR associated with Issue #44 /**
-   **CORETRI_MASTER_CONSOLIDATION_REVIEW.md for review.**: Finalize the
-   master consolidation map.
+4. **Queue PR #44 for Merge**: Finalize the master consolidation map.
 
 ## 6. mismatch_or_gap
 
