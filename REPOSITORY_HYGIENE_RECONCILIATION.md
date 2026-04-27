@@ -23,8 +23,9 @@ consolidation:
 - **#43 Master Consolidation Review**: DUPLICATE (See Section 2)
 - **#44 CoreTri Master Consolidation Review**: ACTIVE (Current consolidation
   surface)
-- **#49 Physical Signal Boundary Definition**: STRUCTURE_ESTABLISHED (Recent
-  execution, trace preserved)
+- **#49 Physical Signal Boundary Definition**: STRUCTURE_ESTABLISHED (PR #50
+  has now been merged, so the Physical Signal Boundary layer is structurally
+  established)
 
 *(Note: Legacy issues #3-5, #7-8, #10-11, #14, #25, #28-35, #38 are classified
 as SUPERSEDED in the master review, and issues corresponding to merged PRs like
