@@ -102,4 +102,4 @@ align the GitHub interface with the repository state:
 ## 8. next_single_recommended_action
 
 The human maintainer should manually close Issue #43 as DUPLICATE, then review
-empty or stale PRs/branches such as PR #56 and old Jules execution branches.
+empty or stale PRs/branches such as old Jules execution branches.
