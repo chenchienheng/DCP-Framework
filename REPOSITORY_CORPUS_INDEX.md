@@ -33,6 +33,7 @@
 - 01_runtime-spine/window_linking_logic_01_07.md: State-ladder transition rules.
 
 ### 1.3 Sub-systems (02-04)
+- INTERNAL_RELATIONAL_MESH_SPEC.md: Relational mesh strengthening internal carrying layer.
 - AXIS_TO_EXTERNAL_ABSORPTION_HANDOFF.md: Bridge document for external ecosystem absorption handoff.
 - 02_runtime-ops/task_follow_up.md: Active follow-up task tracker.
 - 03_board-orchestration/window_binding_registry_01_07.md: Window-to-path binding registry.
