@@ -23,8 +23,9 @@ consolidation:
 - **#43 Master Consolidation Review**: DUPLICATE (See Section 2)
 - **#44 CoreTri Master Consolidation Review**: ACTIVE (Current consolidation
   surface)
-- **#49 Physical Signal Boundary Definition**: ACTIVE_PENDING_PR_50 (Because
-  PR #50 is still open and not yet merged)
+- **#49 Physical Signal Boundary Definition**: STRUCTURE_ESTABLISHED (PR #50
+  has now been merged, so the Physical Signal Boundary layer is structurally
+  established)
 
 *(Note: Legacy issues #3-5, #7-8, #10-11, #14, #25, #28-35, #38 are classified
 as SUPERSEDED in the master review, and issues corresponding to merged PRs like
@@ -44,8 +45,8 @@ present on `main` branch. Issue #43 should be classified as DUPLICATE.
 Current active PRs must be resolved in the following structural dependency
 order to avoid merge conflicts and ensure atomicity:
 
-1. **PR #50 (Physical Signal Boundary Definition)**: Establishes the untrusted
-   inbound hardware trigger boundary mapped to AXIS-01. (Independent isolate).
+1. **PR #50 (Physical Signal Boundary Definition)**: PR #50 has already been
+   merged; no merge action remains for PR #50.
 2. **PR for Issue #44 (CoreTri Master Consolidation Review)**: Merges the
    global state reconciliation to baseline the taskboard.
 
@@ -76,8 +77,8 @@ align the GitHub interface with the repository state:
 2. **Review and Close Stale Branches**: Manually delete
    `reconcile-scheduler-topology-*` and `time-chain-master-layer-*` if their
    contents are confirmed merged into `main`.
-3. **Queue PR #50 for Merge**: Review and merge the Physical Signal Boundary
-   Definition if it passes `AXIS-01` structural checks.
+3. **Queue PR #50 for Merge**: PR #50 has already been merged; no merge
+   action remains for PR #50.
 4. **Queue the PR associated with Issue #44 /**
    **CORETRI_MASTER_CONSOLIDATION_REVIEW.md for review.**: Finalize the
    master consolidation map.
@@ -100,6 +101,5 @@ align the GitHub interface with the repository state:
 
 ## 8. next_single_recommended_action
 
-The human maintainer should manually close Issue #43 as a DUPLICATE, then
-review and merge PR #50 to establish the physical boundary layer before
-proceeding with the next taskboard item.
+The human maintainer should manually close Issue #43 as DUPLICATE, then review
+empty or stale PRs/branches such as PR #56 and old Jules execution branches.
