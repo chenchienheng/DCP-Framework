@@ -34,6 +34,7 @@
 - 03_board-orchestration/ (Binding & Intake Contracts)
 - 04_adapter-layer/ (External Node Specs & Adapters)
 - 04_adapter-layer/VIDEO_OUTPUT_NODE_SPEC.md
+- PHYSICAL_SIGNAL_BOUNDARY_SPEC.md
 
 ### Group D — Governance & Cleanup
 - CLEANUP_QUEUE_REGISTER.md
