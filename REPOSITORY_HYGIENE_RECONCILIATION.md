@@ -79,9 +79,7 @@ align the GitHub interface with the repository state:
    contents are confirmed merged into `main`.
 3. **Queue PR #50 for Merge**: Review and merge the Physical Signal Boundary
    Definition if it passes `AXIS-01` structural checks.
-4. **Queue the PR associated with Issue #44 /**
-   **CORETRI_MASTER_CONSOLIDATION_REVIEW.md for review.**: Finalize the
-   master consolidation map.
+4. **Queue PR #44 for Merge**: Finalize the master consolidation map.
 
 ## 6. mismatch_or_gap
 
