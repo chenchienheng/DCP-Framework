@@ -74,6 +74,7 @@ Used for persistent return notes, correction markers, index files, chain maps, a
 | `GITHUB_CHAIN_MASTER_MAP.md` | Writeback Artifact | Writeback Chain | verified |
 | `GITHUB_NORMALIZATION_PHASE_PLAN.md` | Structural Bone | Writeback Chain | verified |
 | `GITHUB_OPERATION_CAPABILITY_MATRIX.md` | Writeback Artifact | Writeback Chain | verified |
+| `INTERNAL_RELATIONAL_MESH_SPEC.md` | Structural Bone | Bone Chain | verified |
 | `LEGACY_SEED_BRANCH_INVENTORY_SNAPSHOT.md` | Transitional / Stage Note | Writeback Chain | verified |
 | `LEGACY_SEED_CONTAMINATION_TRIAGE.md` | Writeback Artifact | Writeback Chain | verified |
 | `LEGACY_SEED_MERGE_CANDIDATE_SHORTLIST.md` | Writeback Artifact | Writeback Chain | verified |
