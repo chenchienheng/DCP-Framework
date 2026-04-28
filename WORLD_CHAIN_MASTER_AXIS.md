@@ -24,7 +24,17 @@ rather than sovereign centers.
 - **Public Surfaces Reflection:** The World Chain controls how the repository
   state is reflected outward to external boards or readable layers.
 
-## 3. Status
+## 3. Dispatch Binding
+
+- entry condition: Bound to Primary Axis (AXIS-01).
+- dispatch priority: Core framework structural integrity supersedes external
+  exploratory branches.
+- review hook: Review Chain Master Layer (AXIS-05).
+- return path: Writeback packets or schema adapters.
+- failure route: return_failed -> AXIS-05
+- register surface: UNIFIED_ARTIFACT_REGISTER.md
+
+## 4. Status
 
 - master_axis_created: true
 - axis_number: 01
