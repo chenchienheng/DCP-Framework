@@ -40,3 +40,12 @@ rather than sovereign centers.
 - axis_number: 01
 - mapped_issues: #16
 - return_to_00: true
+
+## 4. Dispatch Binding
+
+- entry condition: Validated via structural maps before absorption.
+- dispatch priority: Subordinate to internal structure and human chains.
+- review hook: Required before structural integration.
+- return path: Must return via predefined schema adapters.
+- failure route: return_failed -> AXIS-05
+- register surface: UNIFIED_ARTIFACT_REGISTER.md
