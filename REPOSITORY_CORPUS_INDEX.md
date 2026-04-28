@@ -69,6 +69,8 @@
 - 04_adapter-layer/VIDEO_OUTPUT_NODE_SPEC.md: Video output node specification.
 - PHYSICAL_SIGNAL_BOUNDARY_SPEC.md: Physical signal entry boundary spec.
 
+- MULTI_CHAIN_DISPATCH_GOVERNANCE.md: Multi-chain dispatch governance specification.
+
 ### 1.4 Return Loop (05)
 - 05_topology/consistent-triad-principle.md: Bone/Event/Writeback consistency
   principle.
