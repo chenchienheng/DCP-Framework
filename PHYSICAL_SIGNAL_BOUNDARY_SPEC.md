@@ -48,7 +48,13 @@ The system mandates strict evidence binding for all inbound physical signals.
 - Actions taken based on signal metrics must directly link back to the
   originating evidence packet to ensure full traceability and accountability.
 
-## 5. AXIS-05 Failure Routing
+## 5. Successful Return Path
+Upon successful passage through the security review and boundary gating, the
+physical signal payload must be returned to the core tracking surface.
+- Signals must be structured into standard writeback packets.
+- The packets are routed through established Adapter Layer contracts.
+
+## 6. AXIS-05 Failure Routing
 Any error, disruption, schema violation, or unverified origin during the signal
 entry process triggers an immediate halt.
 - The failed signal packet and its metadata must be routed directly to the
