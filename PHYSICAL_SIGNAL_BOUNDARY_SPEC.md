@@ -56,3 +56,10 @@ entry process triggers an immediate halt.
 - No automated recovery attempts are permitted within the core runtime.
 - Manual intervention or human review is required to resolve failures parked
   in AXIS-05.
+
+## 6. Return Path
+Successfully validated physical signals that clear the security review and
+evidence requirements must follow a defined return path:
+- They are structured into standard writeback packets.
+- They are passed to Adapter Layer contracts for downstream routing or
+  processing, ensuring no raw signals bypass the framework interfaces.
