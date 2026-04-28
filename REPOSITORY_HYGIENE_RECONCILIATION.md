@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Review current open issues, open PRs, and branches after Issue #49 / PR #50 to
+Review current open issues, open PRs, and branches after recent GitHub merges to
 reconcile execution states against actual repository structures. This report
 aligns with Phase 2 (Legacy Seed Extraction and Rebind) without deleting
 branches, automatically closing issues, rewriting doctrine, or expanding
@@ -23,9 +23,9 @@ consolidation:
 - **#43 Master Consolidation Review**: DUPLICATE (See Section 2)
 - **#44 CoreTri Master Consolidation Review**: ACTIVE (Current consolidation
   surface)
-- **#49 Physical Signal Boundary Definition**: STRUCTURE_ESTABLISHED (PR #50
-  has now been merged, so the Physical Signal Boundary layer is structurally
-  established)
+- **#49 Physical Signal Boundary Definition**: STRUCTURE_ESTABLISHED (The
+  Physical Signal Boundary layer is structurally established following recent
+  merges)
 
 *(Note: Legacy issues #3-5, #7-8, #10-11, #14, #25, #28-35, #38 are classified
 as SUPERSEDED in the master review, and issues corresponding to merged PRs like
@@ -36,18 +36,17 @@ as SUPERSEDED in the master review, and issues corresponding to merged PRs like
 - **Issue #43 (Master Consolidation Review)**
 - **Issue #44 (CoreTri Master Consolidation Review)**
 
-**Decision**: Issue #44 is the canonical master consolidation issue. It reflects
+**Decision**: Issue #44 is recognized as the canonical master consolidation
+issue; Issue #43 is a duplicate and needs manual human closure. It reflects
 the actual artifact `CORETRI_MASTER_CONSOLIDATION_REVIEW.md` currently
-present on `main` branch. Issue #43 should be classified as DUPLICATE.
+present on `main` branch.
 
 ## 3. Open PR Review
 
 Current active PRs must be resolved in the following structural dependency
 order to avoid merge conflicts and ensure atomicity:
 
-1. **PR #50 (Physical Signal Boundary Definition)**: Establishes the untrusted
-   inbound hardware trigger boundary mapped to AXIS-01. (Independent isolate).
-2. **PR for Issue #44 (CoreTri Master Consolidation Review)**: Merges the
+1. **PR for Issue #44 (CoreTri Master Consolidation Review)**: Merges the
    global state reconciliation to baseline the taskboard.
 
 *(Note: Other PRs found via `git branch -r` mapping to specific feature branches
@@ -63,7 +62,6 @@ Branches currently present in the repository, classified structurally:
 - `origin/cleanup/refinement-v0-1`: UNKNOWN_REVIEW_REQUIRED
 - `origin/feat/issue-44-coretri-consolidation-*`: ACTIVE_BRANCH
 - `origin/issue-49-physical-signal-boundary-*`: MERGED_OR_STALE_BRANCH
-  (Assuming PR #50 is merged or ready to merge)
 - `origin/jules-*`: UNKNOWN_REVIEW_REQUIRED (Execution traces)
 - `origin/reconcile-scheduler-topology-*`: MERGED_OR_STALE_BRANCH
 - `origin/time-chain-master-layer-*`: MERGED_OR_STALE_BRANCH
@@ -77,9 +75,9 @@ align the GitHub interface with the repository state:
 2. **Review and Close Stale Branches**: Manually delete
    `reconcile-scheduler-topology-*` and `time-chain-master-layer-*` if their
    contents are confirmed merged into `main`.
-3. **Queue PR #50 for Merge**: Review and merge the Physical Signal Boundary
-   Definition if it passes `AXIS-01` structural checks.
-4. **Queue PR #44 for Merge**: Finalize the master consolidation map.
+3. **Reconcile PR Status Mismatch**: Reconcile the active taskboard / internal
+   context with recent GitHub merges (including PRs #50, #54, #55, and #56) to
+   resolve status mismatches.
 
 ## 6. mismatch_or_gap
 
@@ -99,6 +97,6 @@ align the GitHub interface with the repository state:
 
 ## 8. next_single_recommended_action
 
-The human maintainer should manually close Issue #43 as a DUPLICATE, then
-review and merge PR #50 to establish the physical boundary layer before
-proceeding with the next taskboard item.
+The human maintainer should manually close Issue #43 as a DUPLICATE, and
+manually reconcile the active taskboard / internal context with recent GitHub
+merges (including PRs #50, #54, #55, and #56) to resolve status mismatches.
