@@ -28,8 +28,6 @@
 - 00_mother-law/mother-architecture-registry-v0-1.md: M1-M5 lineage tracking.
 
 ### 1.2 Runtime & Boards (01)
-- XUANLING_LINGLUO_MASTER_MAP.md: High-level map showing relationship between
-  DCP, CoreTri, XuanLing, Qinyi, and LingLuo.
 - TRI_COUPLING_STATE_SPEC.md: Formalize tri-coupling as an emergent state
   produced by dual-layer multimodality.
 - 01_native-board/board_index.md: Primary read entry for boards.
@@ -46,6 +44,7 @@
 - 01_runtime-spine/window_linking_logic_01_07.md: State-ladder transition rules.
 
 ### 1.3 Sub-systems (02-04)
+- XUANLING_OPERATIONAL_MODEL_CORE.md: Formalize XuanLing operational model core.
 - WORK_OS_CHAIN_INTEGRATION_SPEC.md: Work OS chain integration specification.
 - TASK_ORCHESTRATION_BRIDGE_SPEC.md: Define task orchestration bridge spec.
 -- REDUNDANT_LOAD_REDUCTION_SPEC.md: Specification on reducing redundant load.
