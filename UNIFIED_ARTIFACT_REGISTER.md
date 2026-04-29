@@ -29,6 +29,7 @@
 - 05_topology/ (Triad & Consistency Rules)
 
 ### Group C — Operational Boards & Layers
+- WORK_OS_CHAIN_INTEGRATION_SPEC.md
 - TASK_ORCHESTRATION_BRIDGE_SPEC.md
 -- REDUNDANT_LOAD_REDUCTION_SPEC.md
 - EXTERNAL_SIGNAL_ENTRY_CHAIN_SPEC.md
