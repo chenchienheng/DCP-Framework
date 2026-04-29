@@ -28,6 +28,7 @@
 - 00_mother-law/mother-architecture-registry-v0-1.md: M1-M5 lineage tracking.
 
 ### 1.2 Runtime & Boards (01)
+- XUANLING_THREE_STATE_MODEL.md: XuanLing three-state model positioning spec.
 - TRI_COUPLING_STATE_SPEC.md: Formalize tri-coupling as an emergent state
   produced by dual-layer multimodality.
 - 01_native-board/board_index.md: Primary read entry for boards.
