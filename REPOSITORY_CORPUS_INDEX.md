@@ -44,6 +44,7 @@
 - 01_runtime-spine/window_linking_logic_01_07.md: State-ladder transition rules.
 
 ### 1.3 Sub-systems (02-04)
+- TASK_ORCHESTRATION_BRIDGE_SPEC.md: Define task orchestration bridge spec.
 - INTERNAL_RELATIONAL_MESH_SPEC.md: Relational mesh strengthening internal
   carrying layer.
 - AXIS_TO_EXTERNAL_ABSORPTION_HANDOFF.md: Bridge document for external
