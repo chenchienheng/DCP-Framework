@@ -30,6 +30,7 @@
 
 ### Group C — Operational Boards & Layers
 - TASK_ORCHESTRATION_BRIDGE_SPEC.md
+-- REDUNDANT_LOAD_REDUCTION_SPEC.md
 - EXTERNAL_SIGNAL_ENTRY_CHAIN_SPEC.md
 - 01_native-board/ (Indices, Blockers, & Permissions)
 - 02_runtime-ops/ (Follow-up Tasks)

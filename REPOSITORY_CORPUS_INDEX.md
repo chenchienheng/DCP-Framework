@@ -45,6 +45,7 @@
 
 ### 1.3 Sub-systems (02-04)
 - TASK_ORCHESTRATION_BRIDGE_SPEC.md: Define task orchestration bridge spec.
+-- REDUNDANT_LOAD_REDUCTION_SPEC.md: Specification on reducing redundant load.
 - INTERNAL_RELATIONAL_MESH_SPEC.md: Relational mesh strengthening internal
   carrying layer.
 - AXIS_TO_EXTERNAL_ABSORPTION_HANDOFF.md: Bridge document for external
