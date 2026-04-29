@@ -57,6 +57,8 @@ The Review Hook ensures that outputs from any chain conform to the 80-character
 limit, naming conventions, and continuity requirements. It routes through the
 Review Chain Master Layer.
 
+- tri_coupling_state_check: optional
+
 ---
 
 ## 6. Return Path
