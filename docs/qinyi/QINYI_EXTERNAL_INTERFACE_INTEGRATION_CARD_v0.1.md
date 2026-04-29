@@ -61,7 +61,7 @@ identity recognition, or invariant core.
 Do not expose:
 - private human sources
 - personal relationship narratives
-- Yiyi / Xuanyi / Cencen privacy
+- private personal identities or relationship references
 - full internal prompts
 - unreleased dependency-chain rules
 - unreviewed XuanLing core internals
