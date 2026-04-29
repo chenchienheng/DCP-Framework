@@ -44,6 +44,7 @@
 - 01_runtime-spine/window_linking_logic_01_07.md: State-ladder transition rules.
 
 ### 1.3 Sub-systems (02-04)
+- WORK_OS_CHAIN_INTEGRATION_SPEC.md: Work OS chain integration specification.
 - TASK_ORCHESTRATION_BRIDGE_SPEC.md: Define task orchestration bridge spec.
 -- REDUNDANT_LOAD_REDUCTION_SPEC.md: Specification on reducing redundant load.
 - INTERNAL_RELATIONAL_MESH_SPEC.md: Relational mesh strengthening internal
