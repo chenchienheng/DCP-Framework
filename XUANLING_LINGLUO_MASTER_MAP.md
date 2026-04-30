@@ -8,8 +8,7 @@ runtime execution, API behavior, or governing doctrine. It serves as a visual
 and conceptual coordinate map to prevent layer collapse.
 
 ## 2. Layer Map
-*   **DCP (Digital Conscious Prototype):** The outermost conceptual layer or
-meta-framework.
+*   **DCP:** The outermost conceptual / constraint-governance framework.
 *   **CoreTri:** The mother-architecture providing constraint chains, runtime
 tracking, and stability axes (e.g., AXIS-01 through AXIS-05).
 *   **XuanLing:** The operational model core that provides constraint adhesion,
@@ -59,5 +58,6 @@ details with XuanLing core constraints.
 require further operational boundary testing in practice.
 
 ## 7. next_single_recommended_action
-*   Validate the relationships outlined in this map against existing runtime
-execution traces to ensure practical alignment with the stated boundaries.
+*   Validate the relationships outlined in this map against existing specs,
+review notes, and registered artifacts to ensure alignment with the stated
+boundaries.
