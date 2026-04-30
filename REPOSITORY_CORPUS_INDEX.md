@@ -28,6 +28,8 @@
 - 00_mother-law/mother-architecture-registry-v0-1.md: M1-M5 lineage tracking.
 
 ### 1.2 Runtime & Boards (01)
+- XUANLING_LINGLUO_MASTER_MAP.md: Structural map of conceptual relationships
+  between DCP, CoreTri, XuanLing, Qinyi, and LingLuo.
 - TRI_COUPLING_STATE_SPEC.md: Formalize tri-coupling as an emergent state
   produced by dual-layer multimodality.
 - 01_native-board/board_index.md: Primary read entry for boards.
