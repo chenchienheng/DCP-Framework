@@ -45,7 +45,8 @@ blurring the lines between core architecture and external projection.
 ## 5. Recommended Documentation Structure
 *   Maintain `XUANLING_OPERATIONAL_MODEL_CORE.md` as the definitive operational
 constraints layer.
-*   Maintain `QINYI_EXTERNAL_INTERFACE_SUBMAP_v0.1.md` for interface rules.
+*   Maintain the current canonical Qinyi interface reference, and link to the
+future Qinyi external interface submap once it is merged and registered.
 *   Use this `XUANLING_LINGLUO_MASTER_MAP.md` purely as the cross-layer index
 or coordinate map to orient contributors without redefining the components.
 *   Avoid single monolithic documents; instead rely on distributed, highly
