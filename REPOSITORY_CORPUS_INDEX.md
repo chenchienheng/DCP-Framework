@@ -59,7 +59,6 @@
 - 03_board-orchestration/window_delta_mapping_template.md: Delta mapping schema.
 - 03_board-orchestration/runtime-spine/
   xuanling-gmail-bridge-intake-gate-contract-2026-04-19-v0-1.md:
-  Reusable intake gate contract.
 - 03_board-orchestration/runtime-spine/
   xuanling-calendar-time-window-adapter-contract-2026-04-19-v0-1.md:
   Time-window adapter contract.
