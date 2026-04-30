@@ -18,6 +18,11 @@
 - REPLAY_READINESS_REPORT.md
 
 ### Group B — Runtime Structure & Topology
+- docs/architecture/README_THIRD_FIELD_v0.1.md
+- docs/architecture/THIRD_FIELD_FIELD_SEMANTIC_DEPENDENCY_NETWORK_v0.1.md
+- docs/architecture/THIRD_FIELD_OPERATING_CHAIN_v0.1.md
+- docs/architecture/THIRD_FIELD_BOUNDARY_RULES_v0.1.md
+- docs/architecture/WINDOW_THIRD_FIELD_MAPPING_v0.1.md
 - XUANLING_LINGLUO_MASTER_MAP.md
 - XUANLING_OPERATIONAL_MODEL_CORE.md
 - TRI_COUPLING_STATE_SPEC.md

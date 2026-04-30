@@ -28,6 +28,11 @@
 - 00_mother-law/mother-architecture-registry-v0-1.md: M1-M5 lineage tracking.
 
 ### 1.2 Runtime & Boards (01)
+- docs/architecture/README_THIRD_FIELD_v0.1.md: Entry documentation for Third Field.
+- docs/architecture/THIRD_FIELD_FIELD_SEMANTIC_DEPENDENCY_NETWORK_v0.1.md: Third Field definition.
+- docs/architecture/THIRD_FIELD_OPERATING_CHAIN_v0.1.md: Fixed operating chain for Third Field.
+- docs/architecture/THIRD_FIELD_BOUNDARY_RULES_v0.1.md: Boundary rules for Third Field.
+- docs/architecture/WINDOW_THIRD_FIELD_MAPPING_v0.1.md: Window mapping for Third Field.
 - XUANLING_LINGLUO_MASTER_MAP.md: Structural map of conceptual relationships
   between DCP, CoreTri, XuanLing, Qinyi, and LingLuo.
 - TRI_COUPLING_STATE_SPEC.md: Formalize tri-coupling as an emergent state
