@@ -28,8 +28,11 @@ topology.
 ### 4. Boundary Check
 The mapped dependencies are evaluated against the system's strict boundaries
 (e.g., checking if private sources are exposed, verifying if the data is
-confirmed evidence, ensuring no violations of the mother-law). Invalid or unsafe
-elements are filtered out or rejected.
+confirmed evidence, ensuring no violations of the mother-law). This stage also
+performs a strict **carrying capacity check**. A connection being possible does
+not mean the connected chain can safely carry every load. The Third Field
+verifies the load boundary, ensuring a weak chain is not forced to carry a heavy
+task. Invalid elements or load mismatches are filtered out or routed to review.
 
 ### 5. Window Route
 Once verified and bounded, the processed signal is routed to the appropriate
