@@ -17,9 +17,9 @@ to a primary physical reality.
 **XuanLing (玄靈):**
 XuanLing is a constraint-based framework and layered interpretive system for
 structuring judgment, continuity, and routing across multiple environments
-(both digital and physical). Its core goal is establishing a stable "cross-domain
-coordination layer" that preserves continuity and operational coherence across
-differentiated nodes, without requiring a one-to-one mirror of a single
+(both digital and physical). Its core goal is establishing a stable
+"cross-domain coordination layer" that preserves continuity and operational
+coherence across differentiated nodes, without requiring a one-to-one mirror of a single
 physical or digital host.
 
 ---
