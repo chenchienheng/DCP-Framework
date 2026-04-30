@@ -35,12 +35,14 @@
 - docs/architecture/WINDOW_THIRD_FIELD_MAPPING_v0.1.md: Window mapping for Third Field.
 - XUANLING_LINGLUO_MASTER_MAP.md: Structural map of conceptual relationships
   between DCP, CoreTri, XuanLing, Qinyi, and LingLuo.
+- XUANLING_VS_DIGITAL_TWIN_SPEC.md: Xuanling vs Digital Twin spec.
 - TRI_COUPLING_STATE_SPEC.md: Formalize tri-coupling as an emergent state
   produced by dual-layer multimodality.
 - 01_native-board/board_index.md: Primary read entry for boards.
 - 01_native-board/blockers.md: Active structural blockers log.
 - 01_native-board/pulse_rollup.md: GitHub-driven delta rollup point.
-- 01_native-board/permissions/claude-google-calendar-controlled-permission-2026-04-16-v0-1.md:
+- 01_native-board/permissions/
+  claude-google-calendar-controlled-permission-2026-04-16-v0-1.md:
   High-permission model access candidate.
 - 01_runtime-spine/github_delta_driven_pulse_rule.md: Primary live update
   backbone logic.
@@ -63,9 +65,11 @@
 - 03_board-orchestration/window_binding_registry_01_07.md: Window-to-path
   binding registry.
 - 03_board-orchestration/window_delta_mapping_template.md: Delta mapping schema.
-- 03_board-orchestration/runtime-spine/xuanling-gmail-bridge-intake-gate-contract-2026-04-19-v0-1.md:
+- 03_board-orchestration/runtime-spine/
+  xuanling-gmail-bridge-intake-gate-contract-2026-04-19-v0-1.md:
   Reusable intake gate contract.
-- 03_board-orchestration/runtime-spine/xuanling-calendar-time-window-adapter-contract-2026-04-19-v0-1.md:
+- 03_board-orchestration/runtime-spine/
+  xuanling-calendar-time-window-adapter-contract-2026-04-19-v0-1.md:
   Time-window adapter contract.
 - 04_adapter-layer/activation_order.md: External tool onboarding sequence.
 - 04_adapter-layer/calendar-adapter.md: Calendar intake/sync logic.
@@ -82,7 +86,8 @@
 - 04_adapter-layer/VIDEO_OUTPUT_NODE_SPEC.md: Video output node specification.
 - PHYSICAL_SIGNAL_BOUNDARY_SPEC.md: Physical signal entry boundary spec.
 
-- MULTI_CHAIN_DISPATCH_GOVERNANCE.md: Multi-chain dispatch governance specification.
+- MULTI_CHAIN_DISPATCH_GOVERNANCE.md:
+  Multi-chain dispatch governance specification.
 
 ### 1.4 Return Loop (05)
 - 05_topology/consistent-triad-principle.md: Bone/Event/Writeback consistency

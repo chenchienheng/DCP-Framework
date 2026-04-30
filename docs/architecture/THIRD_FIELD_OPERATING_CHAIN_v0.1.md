@@ -38,11 +38,11 @@ Window).
 
 ### 6. Output Format
 The window processes the dependency-mapped input and formats the result into the
-required structure (e.g., a formal document, a standardized API response, a
-structured image prompt).
+required structure (e.g., a formal document, a standard calibration note, a
+visually anchored instruction).
 
 ### 7. Return Calibration
 The final and most critical step. The outcome of the operation is written back
 into the core system (e.g., updating a register, logging a task trace,
-calibrating a visual anchor). This ensures the architecture learns and remains
-aligned, closing the loop.
+calibrating a visual anchor). This ensures the architecture aligns its
+field-semantic map and remains calibrated, closing the loop.

@@ -49,8 +49,8 @@ nature.
 Every operation processed through the Third Field must complete a return loop.
 Outputs cannot merely dissipate into external tools; they must write back to the
 mother-architecture, an internal window, or a verifiable task chain. This
-ensures the system calibrates its field-semantic mapping after every
-interaction.
+ensures the system calibrates its field-semantic mapping through a formal
+review-note after every interaction.
 
 ## 8. Anti-Drift Rules
 
