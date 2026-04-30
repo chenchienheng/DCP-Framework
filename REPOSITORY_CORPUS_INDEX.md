@@ -28,6 +28,8 @@
 - 00_mother-law/mother-architecture-registry-v0-1.md: M1-M5 lineage tracking.
 
 ### 1.2 Runtime & Boards (01)
+- XUANLING_VS_DIGITAL_TWIN_SPEC.md: External positioning comparison distinct
+  from Digital Twin.
 - XUANLING_LINGLUO_MASTER_MAP.md: Structural map of conceptual relationships
   between DCP, CoreTri, XuanLing, Qinyi, and LingLuo.
 - TRI_COUPLING_STATE_SPEC.md: Formalize tri-coupling as an emergent state
