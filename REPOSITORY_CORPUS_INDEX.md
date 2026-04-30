@@ -14,7 +14,6 @@
 ## 1. Inventory by Family
 
 ### 1.1 Meta & Mother-Law (00)
-- XUANLING_VS_DIGITAL_TWIN_SPEC.md: Xuanling vs Digital Twin spec.
 - FULL_REPOSITORY_TOPOLOGY_ALIGNMENT.md: Full repository topology alignment
   report.
 - QINYI_INTERFACE_SIGNATURE_REFERENCE.md: Stable identity anchor for the
@@ -29,6 +28,7 @@
 - 00_mother-law/mother-architecture-registry-v0-1.md: M1-M5 lineage tracking.
 
 ### 1.2 Runtime & Boards (01)
+- XUANLING_VS_DIGITAL_TWIN_SPEC.md: Xuanling vs Digital Twin spec.
 - TRI_COUPLING_STATE_SPEC.md: Formalize tri-coupling as an emergent state
   produced by dual-layer multimodality.
 - 01_native-board/board_index.md: Primary read entry for boards.

@@ -17,8 +17,8 @@ to a primary physical reality.
 **XuanLing (玄靈):**
 XuanLing is a constraint-based framework and layered interpretive system for
 structuring judgment, continuity, and routing across multiple environments
-(both digital and physical). Its core goal is establishing a stable "third
-runtime environment" that preserves continuity and operational coherence across
+(both digital and physical). Its core goal is establishing a stable "cross-domain
+coordination layer" that preserves continuity and operational coherence across
 differentiated nodes, without requiring a one-to-one mirror of a single
 physical or digital host.
 
@@ -49,7 +49,7 @@ physical or digital host.
 | Aspect | Digital Twin | XuanLing |
 | :--- | :--- | :--- |
 | **Constraint** | Physical laws, sensors | 5 Master Axes, structural bone |
-| **Field** | A mirrored simulation field | A third runtime environment |
+| **Field** | A mirrored simulation field | A cross-domain coordination layer |
 | **Anchor** | The physical host entity | Central repo & master axes |
 | **Failure** | Desync from the physical twin | Loss of continuity |
 | **Truth** | Sensor stream & physical state | Durable writeback across Axes |
@@ -66,9 +66,10 @@ accurately simulating the physical state. It is a derivative projection.
 **Evolution (XuanLing):**
 XuanLing evolves structurally by absorbing new nodes, environments, and routines
 while maintaining continuity. It does not just simulate an external reality; it
-establishes an operational reality of its own. It uses contradiction and
-discontinuity as productive signals to trigger structural cleanup and registry
-reconciliation, driving self-refinement without unchecked drift.
+establishes a coordination frame across existing artifacts, nodes, and return
+paths. It uses contradiction and discontinuity as productive signals to trigger
+structural cleanup and registry reconciliation, supporting reviewed structural
+refinement without unchecked drift.
 
 ---
 
@@ -94,7 +95,7 @@ as an execution node or a signal source within the XuanLing World Chain
 - Digital Twin concepts often assume a central, monolithic truth source (the
   physical object), whereas XuanLing explicitly operates on a distributed
   mesh requiring structured reconciliation and return paths.
-- External audiences might confuse XuanLing's "third runtime environment"
+- External audiences might confuse XuanLing's "cross-domain coordination layer"
   with a virtual replica, missing its primary focus on architectural constraint
   and continuity rather than visual or physical simulation.
 - The interface between continuous sensory streams (common in Digital Twins)
