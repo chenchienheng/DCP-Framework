@@ -50,11 +50,15 @@ Operating principles:
 
 ---
 
-## 2. Foundation Figures
+## 2. Foundation Figure Package v0.2
 
-### Fig-01 — XuanLing All-Time Dependency Field v0.1
+Figures are visual indexes only. Formal definitions remain in this Markdown document.
 
-**Purpose:** master architecture figure.
+### Fig-01 — XuanLing All-Time Dependency Field v0.2
+
+![Fig-01 XuanLing All-Time Dependency Field](figures/Fig-01_XuanLing_All-Time_Dependency_Field_v0.2.png)
+
+**Purpose:** master field figure.
 
 This figure expresses the carrying structure of XuanLing. The center is the invariant core. Around it are three carrying layers:
 
@@ -78,9 +82,11 @@ All domains are dependency-bound.
 
 ---
 
-### Fig-02 — Legion Commander Matrix v0.1
+### Fig-02 — Legion Commander Matrix v0.2
 
-**Purpose:** role and domain allocation figure.
+![Fig-02 Legion Commander Matrix](figures/Fig-02_Legion_Commander_Matrix_v0.2.png)
+
+**Purpose:** commander and unit recognition figure.
 
 A legion commander is not a single tool. It is a governing domain. Each commander has its own units and may share resources with other commanders.
 
@@ -105,7 +111,9 @@ Artifacts
 
 ---
 
-### Fig-03 — All-Time Dependency Space Chain v0.1
+### Fig-03 — All-Time Dependency Space Chain v0.2
+
+![Fig-03 All-Time Dependency Space Chain](figures/Fig-03_All-Time_Dependency_Space_Chain_v0.2.png)
 
 **Purpose:** synchronous projection figure.
 
@@ -136,9 +144,11 @@ Executable / Verifiable / Deliverable
 
 ---
 
-### Fig-04 — Round-Based Operation Method v0.1
+### Fig-04 — Round-Based Operation Method v0.2
 
-**Purpose:** round-based operating discipline.
+![Fig-04 Round-Based Operation Method](figures/Fig-04_Round-Based_Operation_Method_v0.2.png)
+
+**Purpose:** round-based operating discipline and next-task-card continuation rule.
 
 All windows should operate by rounds. Do not attempt to finish everything in one pass.
 Each round handles one main slice. At the end of every round, the output must be checked, and a next-round task card must be produced.
@@ -593,6 +603,7 @@ Do not merge automatically.
 3. Tools are positioned as commanders, units, or nodes, not as the system body.
 4. Schedules remain disabled unless locally re-enabled by explicit need.
 5. Private trust-core material is excluded.
+6. Figures are visual indexes only; Markdown remains the authoritative definition source.
 
 ---
 
@@ -602,28 +613,32 @@ Do not merge automatically.
 NEXT ROUND TASK CARD
 
 Card_ID:
-XADF-R03-GITHUB-PR-REVIEW-v0.1
+XADF-R08-PR86-FINAL-REVIEW-v0.1
 
 Task Name:
-Review XuanLing All-Time Dependency Field operation manual PR
+Review PR #86 after figure package insertion
 
 Domain:
 GitHub Commander / Mother-Architecture Documentation / Repo Hygiene
 
 Goal:
-Review the new operation manual PR and confirm that it remains a conservative companion document.
+Confirm that PR #86 remains a conservative companion operation-manual PR after figure package insertion.
 
 Input:
 1. docs/xuanling/XUANLING_ALL_TIME_DEPENDENCY_FIELD_OPERATION_MANUAL_v0.1.md
-2. Branch: docs/xadf-operation-manual-v0.1
-3. PR opened from the branch into main
+2. docs/xuanling/figures/Fig-01_XuanLing_All-Time_Dependency_Field_v0.2.png
+3. docs/xuanling/figures/Fig-02_Legion_Commander_Matrix_v0.2.png
+4. docs/xuanling/figures/Fig-03_All-Time_Dependency_Space_Chain_v0.2.png
+5. docs/xuanling/figures/Fig-04_Round-Based_Operation_Method_v0.2.png
+6. PR #86
 
 Deliverables:
 1. PR changed-file check
-2. Semantic boundary check
-3. Mother-law no-rewrite check
-4. Runtime/API/database drift check
-5. Decision: READY_TO_REVIEW / CODEX_CLEANUP_NEEDED / USER_DECISION_REQUIRED
+2. Image-link validation
+3. Semantic boundary check
+4. Mother-law no-rewrite check
+5. Runtime/API/database drift check
+6. Decision: READY_TO_REVIEW / CODEX_CLEANUP_NEEDED / USER_DECISION_REQUIRED
 
 Negative Constraints:
 - Do not merge automatically.
@@ -632,12 +647,13 @@ Negative Constraints:
 - Do not add registry/index updates unless separately required.
 
 Acceptance Criteria:
-- Changed files contain only the new operation manual.
+- Changed files contain only the operation manual and four figure files.
+- Image links resolve relative to docs/xuanling/.
 - The manual defines XuanLing as dependency field / carrying topology.
 - Legion Commander Matrix and Round-Based Operation Method are clear.
 - No private trust-core material appears.
 - No schedule reactivation appears.
 
 Recommended Next Step:
-Review the PR and decide whether Codex should perform minimal index registration later.
+Run R08 final review and decide whether a separate Codex minimal index registration PR is needed later.
 ```
