@@ -8,6 +8,7 @@
 ## 1. Reconciled Groups
 
 ### Group A — Re-anchor / Continuity
+
 - QINYI_INTERFACE_SIGNATURE_REFERENCE.md
 - SIGNATURE_ALIGNMENT_NOTE.md
 - CHATGPT_GITHUB_BOOTSTRAP.md
@@ -18,6 +19,7 @@
 - REPLAY_READINESS_REPORT.md
 
 ### Group B — Runtime Structure & Topology
+
 - XUANLING_LINGLUO_MASTER_MAP.md
 - XUANLING_OPERATIONAL_MODEL_CORE.md
 - XUANLING_VS_DIGITAL_TWIN_SPEC.md
@@ -32,18 +34,21 @@
 - 05_topology/ (Triad & Consistency Rules)
 
 ### Group C — Operational Boards & Layers
+
 - WORK_OS_CHAIN_INTEGRATION_SPEC.md
 - TASK_ORCHESTRATION_BRIDGE_SPEC.md
 -- REDUNDANT_LOAD_REDUCTION_SPEC.md
 - EXTERNAL_SIGNAL_ENTRY_CHAIN_SPEC.md
 - 01_native-board/ (Indices, Blockers, & Permissions)
 - 02_runtime-ops/ (Follow-up Tasks)
+- 02_translation-layer/CLOUD_OVER_CLOUD_CONTROL_CENTER_SPEC.md
 - 03_board-orchestration/ (Binding & Intake Contracts)
 - 04_adapter-layer/ (External Node Specs & Adapters)
 - 04_adapter-layer/VIDEO_OUTPUT_NODE_SPEC.md
 - PHYSICAL_SIGNAL_BOUNDARY_SPEC.md
 
 ### Group D — Governance & Cleanup
+
 - MULTI_CHAIN_DISPATCH_GOVERNANCE.md
 - FULL_REPOSITORY_TOPOLOGY_ALIGNMENT.md
 - CLEANUP_QUEUE_REGISTER.md
@@ -55,5 +60,6 @@
 ---
 
 ## 2. Status
+
 - register_synchronized: true
 - family_range: 00-05

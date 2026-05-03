@@ -6,6 +6,7 @@
 ---
 
 ## 0. Index Status
+
 - index_version: v0.3
 - status: fully reconciled (00-05)
 
@@ -14,6 +15,7 @@
 ## 1. Inventory by Family
 
 ### 1.1 Meta & Mother-Law (00)
+
 - FULL_REPOSITORY_TOPOLOGY_ALIGNMENT.md: Full repository topology alignment
   report.
 - QINYI_INTERFACE_SIGNATURE_REFERENCE.md: Stable identity anchor for the
@@ -28,6 +30,7 @@
 - 00_mother-law/mother-architecture-registry-v0-1.md: M1-M5 lineage tracking.
 
 ### 1.2 Runtime & Boards (01)
+
 - XUANLING_VS_DIGITAL_TWIN_SPEC.md: External positioning comparison distinct
   from Digital Twin.
 - XUANLING_LINGLUO_MASTER_MAP.md: Structural map of conceptual relationships
@@ -48,6 +51,7 @@
 - 01_runtime-spine/window_linking_logic_01_07.md: State-ladder transition rules.
 
 ### 1.3 Sub-systems (02-04)
+
 - XUANLING_OPERATIONAL_MODEL_CORE.md: Formalize XuanLing operational model core.
 - WORK_OS_CHAIN_INTEGRATION_SPEC.md: Work OS chain integration specification.
 - TASK_ORCHESTRATION_BRIDGE_SPEC.md: Define task orchestration bridge spec.
@@ -57,6 +61,12 @@
 - AXIS_TO_EXTERNAL_ABSORPTION_HANDOFF.md: Bridge document for external
   ecosystem absorption handoff.
 - 02_runtime-ops/task_follow_up.md: Active follow-up task tracker.
+- 02_translation-layer/CLOUD_OVER_CLOUD_CONTROL_CENTER_SPEC.md: Cloud-over-Cloud
+  control center and translation bridge specification.
+- 02_translation-layer/BRIDGE_PACKET_EXAMPLES_V0_1.md: Mock packet examples for
+  the translation bridge.
+- 02_translation-layer/BRIDGE_DRILL_REPORT_01.md: Report-only bridge drill
+  record.
 - 03_board-orchestration/window_binding_registry_01_07.md: Window-to-path
   binding registry.
 - 03_board-orchestration/window_delta_mapping_template.md: Delta mapping schema.
@@ -79,9 +89,11 @@
 - 04_adapter-layer/VIDEO_OUTPUT_NODE_SPEC.md: Video output node specification.
 - PHYSICAL_SIGNAL_BOUNDARY_SPEC.md: Physical signal entry boundary spec.
 
-- MULTI_CHAIN_DISPATCH_GOVERNANCE.md: Multi-chain dispatch governance specification.
+- MULTI_CHAIN_DISPATCH_GOVERNANCE.md: Multi-chain dispatch governance
+  specification.
 
 ### 1.4 Return Loop (05)
+
 - 05_topology/consistent-triad-principle.md: Bone/Event/Writeback consistency
   principle.
 - 05_topology/feasible-domain-and-responsibility.md: Operational boundary
@@ -94,5 +106,6 @@
 ---
 
 ## 2. Status
+
 - family_normalization_verified: true
 - cross_family_link_consistency: verified
