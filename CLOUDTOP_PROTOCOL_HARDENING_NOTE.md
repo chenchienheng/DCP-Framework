@@ -91,3 +91,18 @@ Every output must include the following fields:
 - No mother-law rewrite.
 - No merge or closure without human review.
 - No sensitive data in the public repository.
+
+---
+
+## 7. MotherTree Merge Gate Update Discipline
+
+To preserve structural integrity and execution trace continuity after a
+baseline merge (e.g., MotherTree Clearance):
+
+- **Baseline Preservation:** Never overwrite already-merged artifacts on `main`.
+- **Clean Rebase:** Always update/rebase against the latest `main` before
+  final merge.
+- **Scope Locking:** Do not introduce out-of-scope files, runtime expansions,
+  or API activations during the hardening update.
+- **Conflict Resolution:** If a conflict occurs with a merged Clearance
+  Report, the `main` branch version takes precedence.
