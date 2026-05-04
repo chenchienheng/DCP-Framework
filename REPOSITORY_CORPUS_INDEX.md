@@ -50,7 +50,8 @@
 - 01_runtime-spine/window_linking_logic_01_07.md: State-ladder transition rules.
 
 ### 1.3 Sub-systems (02-04)
-- XUANLING_OPERATIONAL_MODEL_CORE.md: Formalize XuanLing operational model core.
+- docs/qinyi/QINYI_EXTERNAL_INTERFACE_INTEGRATION_CARD_v0.1.md: Integration card
+  for the Qinyi external interface route.
 - WORK_OS_CHAIN_INTEGRATION_SPEC.md: Work OS chain integration specification.
 - TASK_ORCHESTRATION_BRIDGE_SPEC.md: Define task orchestration bridge spec.
 - CLOUDTOP_RELAY_CHANNEL_SPEC.md: Define a governed relay channel for the

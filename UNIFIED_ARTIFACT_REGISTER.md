@@ -33,6 +33,7 @@
 - 05_topology/ (Triad & Consistency Rules)
 
 ### Group C — Operational Boards & Layers
+- docs/qinyi/ (Qinyi External Interface Subsystem)
 - WORK_OS_CHAIN_INTEGRATION_SPEC.md
 - TASK_ORCHESTRATION_BRIDGE_SPEC.md
 - CLOUDTOP_RELAY_CHANNEL_SPEC.md
