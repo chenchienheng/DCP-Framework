@@ -4,6 +4,12 @@
 > Center to allow model, tool, and window commanders to return work through
 > one auditable path.
 
+```text
+CloudTop / Cloud-over-Cloud Center
+= Field-Generation Center
+= 全時依存關係空間鏈的雲上雲中心
+```
+
 ---
 
 ## 1. Core Premise
@@ -25,13 +31,32 @@ existing structural spine:
 CloudTop is not a physical data center; it is a cloud-mapping, relay, and
 governance center.
 
-**CloudTop Control Center Flow:**
+---
+
+## 3. Field-Generation Center Positioning
+
+CloudTop is not only a relay channel or tool router. It generates and maintains
+the governed dependency field in which model outputs, tool actions, window
+states, task chains, evidence ledgers, closure gates, and return paths can
+cohere.
+
+**Chinese compression:**
+
+```text
+場域生成中心
+全時依存關係空間鏈
+叢集覆蓋矩陣網路化的雲上雲中心
+```
+
+---
+
+## 4. CloudTop Control Center Flow
 Receive -> Translate -> Dispatch -> Write/Report -> Review -> Return ->
 Redispatch
 
 ---
 
-## 3. Commander Surfaces
+## 5. Commander Surfaces
 
 Every commander must follow a strictly defined return path:
 
@@ -68,7 +93,7 @@ Every commander must follow a strictly defined return path:
 
 ---
 
-## 4. No Receive-And-Act Gate
+## 6. No Receive-And-Act Gate
 
 All commanders must follow the mandatory execution sequence:
 Input -> Registry / Baseline comparison -> Nine-Palace positioning ->
@@ -78,7 +103,7 @@ Return Packet -> Mother Tree Review -> closure / reopen / continuation
 
 ---
 
-## 5. Public / Private Boundary
+## 7. Public / Private Boundary
 
 - **Public Chain (Allowed)**: structure, rules, state machine, gate criteria,
   return path, failure modes, abstract governance principles.
@@ -88,7 +113,7 @@ Return Packet -> Mother Tree Review -> closure / reopen / continuation
 
 ---
 
-## 6. Relay Packet Template
+## 8. Relay Packet Template
 
 ```yaml
 Relay_ID:
@@ -109,7 +134,7 @@ Next_Gate:
 
 ---
 
-## 7. Status
+## 9. Status
 
 - **status**: active_control_node
 - **source_issue**: [CloudTop Control] Open relay channel
