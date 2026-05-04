@@ -43,6 +43,7 @@
 - 02_translation-layer/CLOUD_OVER_CLOUD_CONTROL_CENTER_SPEC.md
 - 03_board-orchestration/ (Binding & Intake Contracts)
 - 04_adapter-layer/ (External Node Specs & Adapters)
+- 04_adapter-layer/gemini_gas_sheet_bridge_spec.md
 - 04_adapter-layer/VIDEO_OUTPUT_NODE_SPEC.md
 - PHYSICAL_SIGNAL_BOUNDARY_SPEC.md
 
