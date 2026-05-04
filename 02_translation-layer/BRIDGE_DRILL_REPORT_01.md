@@ -4,6 +4,12 @@
 
 ---
 
+> **WARNING: This is a mock drill only. All policy references are illustrative
+> placeholders and must not be treated as verified facts, source-backed claims,
+> or formal evidence.**
+
+---
+
 ## 1. Scope
 
 Test the translation of a Gemini scouting output through the semantic and
@@ -11,7 +17,7 @@ repository bridge nodes to ensure governed asset creation.
 
 ## 2. Input
 
-**Mock Gemini Point-Cloud Batch:**
+**Mock Gemini Point-Cloud Batch (Illustrative Only):**
 
 - Topic: Solar Energy Storage Regulations (SEA Region)
 - Finding 1: Vietnam FiT 2 expiration.
@@ -25,7 +31,7 @@ repository bridge nodes to ensure governed asset creation.
   - Normalized claims: "Vietnam FiT 2 expiration" ->
     `REGULATORY_CHANGE_VN_FIT2`.
   - Filtered unsupported claims: Market growth speculations removed.
-  - Evidence Classification: `FACT` (Policy documents).
+  - Evidence Classification: `MOCK_ONLY / Pending Verification`.
   - Risk Check: No sensitive data detected.
 - **Output:** Jules Translation Packet (PKT-JLS-DRILL-01).
 
@@ -50,7 +56,9 @@ repository bridge nodes to ensure governed asset creation.
 
 ## 7. mismatch_or_gap
 
-None identified during this report-only drill.
+- Mock references require source verification.
+- Example claims must not enter Source Ledger or formal reports.
+- Report-only drill must not trigger actual writeback.
 
 ## 8. unresolved_risks
 
@@ -59,4 +67,5 @@ human trigger which is currently manual.
 
 ## 9. next_single_recommended_action
 
-Finalize the Thailand PDP targets and proceed to `READY_FOR_PR`.
+Convert this drill into a generic report-only bridge test template before any
+real source-backed batch is used.
