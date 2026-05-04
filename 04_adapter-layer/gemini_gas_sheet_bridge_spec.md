@@ -33,8 +33,8 @@ const AUTHORIZED_WRITE = false; // Set to true to enable live writes
 
 function doPost(e) {
   try {
-    const payload = JSON.parse(e.postData.contents);
-    const result = processPayload(payload);
+    const packet = JSON.parse(e.postData.contents);
+    const result = processPacket(packet);
     return ContentService.createTextOutput(JSON.stringify(result))
       .setMimeType(ContentService.MimeType.JSON);
   } catch (err) {
@@ -45,7 +45,7 @@ function doPost(e) {
   }
 }
 
-function processPayload(payload) {
+function processPacket(packet) {
   const stats = { added: 0, updated: 0, skipped: 0, errors: [] };
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
   let data = sheet.getDataRange().getValues();
@@ -53,8 +53,9 @@ function processPayload(payload) {
 
   const entityNameIdx = headers.indexOf("Entity_Name");
   const statusIdx = headers.indexOf("Evidence_Status");
+  const updatedAtIdx = headers.indexOf("Updated_At");
 
-  payload.rows.forEach(newRow => {
+  packet.payload.rows.forEach(newRow => {
     try {
       let existingRowIdx = -1;
       for (let i = 1; i < data.length; i++) {
@@ -66,8 +67,8 @@ function processPayload(payload) {
 
       if (existingRowIdx === -1) {
         const rowData = headers.map(h => {
-          if (h === "Payload_ID") return payload.payload_id;
-          if (h === "Source_Batch") return payload.source_batch;
+          if (h === "Payload_ID") return packet.payload.payload_id;
+          if (h === "Source_Batch") return packet.payload.source_batch;
           return newRow[h] || "";
         });
         data.push(rowData);
@@ -75,12 +76,16 @@ function processPayload(payload) {
       } else {
         const existingStatus = data[existingRowIdx][statusIdx];
         const newStatus = newRow["Evidence_Status"];
+        const existingUpdate = updatedAtIdx !== -1 ?
+            data[existingRowIdx][updatedAtIdx] : null;
+        const newUpdate = newRow["Updated_At"] || null;
 
-        if (shouldUpdate(existingStatus, newStatus)) {
+        if (shouldUpdate(existingStatus, newStatus,
+            existingUpdate, newUpdate)) {
           headers.forEach((h, colIdx) => {
             let newVal = newRow[h];
-            if (h === "Payload_ID") newVal = payload.payload_id;
-            if (h === "Source_Batch") newVal = payload.source_batch;
+            if (h === "Payload_ID") newVal = packet.payload.payload_id;
+            if (h === "Source_Batch") newVal = packet.payload.source_batch;
 
             if (newVal && newVal !== data[existingRowIdx][colIdx]) {
               data[existingRowIdx][colIdx] = newVal;
@@ -107,8 +112,8 @@ function processPayload(payload) {
     Return_Path: "AXIS-05",
     stats: stats,
     legion_log: {
-      Round_ID: payload.payload_id,
-      Node: payload.updated_by,
+      Round_ID: packet.payload.payload_id,
+      Node: packet.node_id,
       Action: AUTHORIZED_WRITE ? "LIVE_WRITE" : "DRY_RUN_REPORT",
       Output: `Added: ${stats.added}, Updated: ${stats.updated}, ` +
               `Skipped: ${stats.skipped}, Errors: ${stats.errors.length}`,
@@ -120,10 +125,18 @@ function processPayload(payload) {
   };
 }
 
-function shouldUpdate(oldStatus, newStatus) {
+function shouldUpdate(oldStatus, newStatus, oldUpdate, newUpdate) {
   const weights = { "Fact": 3, "Signal": 2, "Radar": 1, "Pending": 0 };
-  // Update if stronger OR same (to capture newer data/fields)
-  return (weights[newStatus] || 0) >= (weights[oldStatus] || 0);
+  const newWeight = weights[newStatus] || 0;
+  const oldWeight = weights[oldStatus] || 0;
+
+  if (newWeight > oldWeight) return true;
+  if (newWeight < oldWeight) return false;
+
+  // Weights are equal, check recency
+  if (!oldUpdate) return true;
+  if (!newUpdate) return false;
+  return new Date(newUpdate) > new Date(oldUpdate);
 }
 ```
 
@@ -133,23 +146,28 @@ Aligned with `Writeback Packet Contract` (v0.1).
 
 ```json
 {
-  "payload_id": "PCD-TEST-001",
-  "source_batch": "Gemini_Batch_001",
-  "updated_by": "Gemini_Scout_Node",
-  "rows": [
-    {
-      "Entity_Name": "Example Entity",
-      "Entity_Type": "Owner / Demand Node",
-      "Chain_Position": "Owner",
-      "Region": "North",
-      "Possible_Facility_Link": "Data Center",
-      "Evidence_Status": "Radar",
-      "Source_or_Search_Lead": "public search lead only",
-      "Can_Support": "May be relevant to market point-cloud",
-      "Cannot_Support": "Does not prove project opportunity",
-      "Next_Verification_Needed": "official source / filing"
-    }
-  ]
+  "department": "Adapter Layer",
+  "node_id": "Gemini_Scout_Node",
+  "action": "update",
+  "payload": {
+    "payload_id": "PCD-TEST-001",
+    "source_batch": "Gemini_Batch_001",
+    "rows": [
+      {
+        "Entity_Name": "Example Entity",
+        "Entity_Type": "Owner / Demand Node",
+        "Chain_Position": "Owner",
+        "Region": "North",
+        "Possible_Facility_Link": "Data Center",
+        "Evidence_Status": "Radar",
+        "Source_or_Search_Lead": "public search lead only",
+        "Can_Support": "May be relevant to market point-cloud",
+        "Cannot_Support": "Does not prove project opportunity",
+        "Next_Verification_Needed": "official source / filing",
+        "Updated_At": "2026-04-22T00:00:00Z"
+      }
+    ]
+  }
 }
 ```
 
@@ -159,8 +177,8 @@ The GAS bridge returns a JSON object with:
 
 - **stats:** counts for added, updated, skipped, errors.
 - **legion_log:**
-  - **Round_ID:** from payload.
-  - **Node:** from payload.
+  - **Round_ID:** from packet payload.
+  - **Node:** from packet node_id.
   - **Action:** LIVE_WRITE or DRY_RUN_REPORT.
   - **Output:** summary string.
   - **Next_Action:** instructions for next step.
