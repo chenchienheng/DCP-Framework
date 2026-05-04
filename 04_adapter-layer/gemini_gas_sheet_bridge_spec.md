@@ -202,3 +202,17 @@ A workflow to validate the bridge logic using a mock spreadsheet service.
 - gas_draft_included: true
 - report_only_enabled: true
 - registered_in_corpus: true
+
+---
+
+## 8. PR Refresh Result
+
+```yaml
+PR_127_Refresh_Result:
+  Base_Updated_Against_Main: Yes
+  Mergeable_After_Update: Yes
+  Writeback_Contract_Aligned: Yes
+  Stale_Overwrite_Prevented: Yes
+  Diff_Scope: Clean
+  Recommended_Action: Merge
+```
