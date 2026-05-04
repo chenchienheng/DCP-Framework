@@ -53,6 +53,8 @@
 - XUANLING_OPERATIONAL_MODEL_CORE.md: Formalize XuanLing operational model core.
 - WORK_OS_CHAIN_INTEGRATION_SPEC.md: Work OS chain integration specification.
 - TASK_ORCHESTRATION_BRIDGE_SPEC.md: Define task orchestration bridge spec.
+- CLOUDTOP_RELAY_CHANNEL_SPEC.md: Define a governed relay channel for the
+  CloudTop / Cloud-over-Cloud Control Center.
 -- REDUNDANT_LOAD_REDUCTION_SPEC.md: Specification on reducing redundant load.
 - INTERNAL_RELATIONAL_MESH_SPEC.md: Relational mesh strengthening internal
   carrying layer.
