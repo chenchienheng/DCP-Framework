@@ -2,16 +2,20 @@
 
 > Positioning spec defining XuanLing, World Field, and Digital Twin as an
 > external-positioning comparison.
+>
+> **Status Marks:**
+> - does_not_enter_core: true
+> - does_not_define_ontology: true
 
 ---
 
 ## 1. Core Definition
-The XuanLing Three-State Model provides an external-positioning comparison to
-clarify the structural distinction between physical fields, representational
-mirrors, and constraint-based adhesion. It clarifies that XuanLing is not a
-product or derivative of a Digital Twin, nor does it require a Digital Twin as
-its prerequisite substrate. Instead, XuanLing is a distinct constraint-based
-adhesion and return-calibration model.
+The XuanLing Three-State Model is strictly an external-positioning explanation.
+It clarifies the structural distinction between physical fields, mirrors, and
+constraint-based adhesion. It does not define the core ontology of CoreTri and
+must not overwrite existing master axis definitions. XuanLing is positioned
+here as a distinct constraint-based adhesion and return-calibration model, not
+a derivative of a Digital Twin.
 
 ---
 
@@ -74,15 +78,13 @@ shared truth without semantic drift.
 ---
 
 ## 7. mismatch_or_gap
-- There may be a lingering external perception that any system bridging physical
-  signals and digital states must be a form of "Digital Twin." This positioning
-  spec must be actively used to correct that assumption during ecosystem
-  onboarding.
+- There is a high risk of this external-positioning document being misread as
+  core ontology. It must remain explicitly marked as a comparison tool to
+  prevent overwriting CoreTri definitions.
 
 ---
 
 ## 8. next_single_recommended_action
-Ensure that external ecosystem absorption nodes explicitly reference this
-positioning spec to classify themselves properly (e.g., as State 2 execution
-nodes) and acknowledge XuanLing (State 3) as the coordinating constraint layer,
-without requiring any new runtime expansion or API integration.
+Hold this document as an external positioning reference only, ensuring that any
+future ecosystem absorption nodes reference it for context without attempting to
+merge it into the mother-law or core axes.
