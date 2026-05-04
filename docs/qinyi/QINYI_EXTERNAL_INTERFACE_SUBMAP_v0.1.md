@@ -75,6 +75,7 @@ The following elements must never be exposed through the Qinyi submap:
 ## 10. Next Integration Points
 
 The next steps for this submap involve binding the defined content routes to
-active publication channels, establishing automated identity verification hooks
-for the visual presentation layer, and integrating the management layer with
-future marketing pipelines.
+active publication channels, establishing future identity-consistency review
+hooks, subject to Mother Tree review and not implying current API/runtime
+automation, for the visual presentation layer, and integrating the management
+layer with future marketing pipelines.
