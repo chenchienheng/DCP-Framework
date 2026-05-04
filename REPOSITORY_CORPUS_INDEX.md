@@ -22,6 +22,8 @@
   Qinyi signature.
 - SIGNATURE_ALIGNMENT_NOTE.md: Expanded signature reference scope note.
 - 00_meta/user_identity_anchor.md: Primary identity alignment anchor.
+- 00_meta/FULL_LIFECYCLE_ASSET_MATRIX.md: Asset lifecycle and schema alignment
+  rules.
 - WORLD_CHAIN_MASTER_AXIS.md: Primary Coretri axis layer for World Chain
   governance.
 - 00_mother-law/README.md: Core governance entry.
@@ -55,6 +57,8 @@
 - XUANLING_OPERATIONAL_MODEL_CORE.md: Formalize XuanLing operational model core.
 - WORK_OS_CHAIN_INTEGRATION_SPEC.md: Work OS chain integration specification.
 - TASK_ORCHESTRATION_BRIDGE_SPEC.md: Define task orchestration bridge spec.
+- CLOUDTOP_RELAY_CHANNEL_SPEC.md: Define a governed relay channel for the
+  CloudTop / Cloud-over-Cloud Control Center.
 -- REDUNDANT_LOAD_REDUCTION_SPEC.md: Specification on reducing redundant load.
 - INTERNAL_RELATIONAL_MESH_SPEC.md: Relational mesh strengthening internal
   carrying layer.
@@ -81,6 +85,8 @@
 - 04_adapter-layer/google_ecosystem_absorption_schema.md: Canonical mapping
   and absorption rules for the Google ecosystem.
 - 04_adapter-layer/gamma_entry_spec.md: Visual layer spec.
+- 04_adapter-layer/gemini_gas_sheet_bridge_spec.md: Gemini to Google Sheet
+  bridge specification.
 - 04_adapter-layer/replit_relay_spec.md: Interaction relay spec.
 - 04_adapter-layer/source_map.md: Fixed read paths for all layers.
 - 04_adapter-layer/writeback_gate_spec.md: Gate conditions for external return.
