@@ -47,13 +47,26 @@ function doPost(e) {
 
 function processPacket(packet) {
   const stats = { added: 0, updated: 0, skipped: 0, errors: [] };
-  const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const sheet = packet.target_path ?
+      ss.getSheetByName(packet.target_path) : ss.getActiveSheet();
+
+  if (!sheet) {
+    throw new Error(`Target sheet not found: ${packet.target_path}`);
+  }
+
   let data = sheet.getDataRange().getValues();
+  const formulas = sheet.getDataRange().getFormulas();
   const headers = data[0];
 
   const entityNameIdx = headers.indexOf("Entity_Name");
   const statusIdx = headers.indexOf("Evidence_Status");
   const updatedAtIdx = headers.indexOf("Updated_At");
+
+  if (entityNameIdx === -1 || statusIdx === -1 || updatedAtIdx === -1) {
+    throw new Error(
+        "Required headers missing (Entity_Name, Evidence_Status, Updated_At)");
+  }
 
   packet.payload.rows.forEach(newRow => {
     try {
@@ -66,29 +79,37 @@ function processPacket(packet) {
       }
 
       if (existingRowIdx === -1) {
-        const rowData = headers.map(h => {
+        const rowData = headers.map((h, colIdx) => {
           if (h === "Payload_ID") return packet.payload.payload_id;
           if (h === "Source_Batch") return packet.payload.source_batch;
-          return newRow[h] || "";
+          return newRow[h] === undefined ? "" : newRow[h];
         });
         data.push(rowData);
         stats.added++;
       } else {
         const existingStatus = data[existingRowIdx][statusIdx];
         const newStatus = newRow["Evidence_Status"];
-        const existingUpdate = updatedAtIdx !== -1 ?
-            data[existingRowIdx][updatedAtIdx] : null;
+        const existingUpdate = data[existingRowIdx][updatedAtIdx];
         const newUpdate = newRow["Updated_At"] || null;
 
-        if (shouldUpdate(existingStatus, newStatus,
-            existingUpdate, newUpdate)) {
+        const mode = getUpdateMode(existingStatus, newStatus,
+            existingUpdate, newUpdate);
+
+        if (mode !== "SKIP") {
           headers.forEach((h, colIdx) => {
+            // Formulas are never overwritten by bridge
+            if (formulas[existingRowIdx] && formulas[existingRowIdx][colIdx]) {
+              return;
+            }
+
             let newVal = newRow[h];
             if (h === "Payload_ID") newVal = packet.payload.payload_id;
             if (h === "Source_Batch") newVal = packet.payload.source_batch;
 
-            if (newVal && newVal !== data[existingRowIdx][colIdx]) {
-              data[existingRowIdx][colIdx] = newVal;
+            if (newVal !== undefined && newVal !== "") {
+              if (mode === "OVERWRITE" || data[existingRowIdx][colIdx] === "") {
+                data[existingRowIdx][colIdx] = newVal;
+              }
             }
           });
           stats.updated++;
@@ -102,13 +123,21 @@ function processPacket(packet) {
   });
 
   if (AUTHORIZED_WRITE) {
+    // Restore formulas before setValues to avoid formula-to-value conversion
+    for (let r = 0; r < formulas.length; r++) {
+      for (let c = 0; c < formulas[r].length; c++) {
+        if (formulas[r][c] !== "") {
+          data[r][c] = formulas[r][c];
+        }
+      }
+    }
     sheet.getRange(1, 1, data.length, headers.length).setValues(data);
   }
 
   return {
     status: stats.errors.length > 0 ? "partial_success" : "success",
     Asset_ID: "TBD",
-    Location_Link: sheet.getParent() ? sheet.getParent().getUrl() : "Local",
+    Location_Link: ss.getUrl(),
     Return_Path: "AXIS-05",
     stats: stats,
     legion_log: {
@@ -125,18 +154,22 @@ function processPacket(packet) {
   };
 }
 
-function shouldUpdate(oldStatus, newStatus, oldUpdate, newUpdate) {
+function getUpdateMode(oldStatus, newStatus, oldUpdate, newUpdate) {
   const weights = { "Fact": 3, "Signal": 2, "Radar": 1, "Pending": 0 };
   const newWeight = weights[newStatus] || 0;
   const oldWeight = weights[oldStatus] || 0;
 
-  if (newWeight > oldWeight) return true;
-  if (newWeight < oldWeight) return false;
+  if (newWeight > oldWeight) return "OVERWRITE";
+  if (newWeight < oldWeight) return "SKIP";
 
   // Weights are equal, check recency
-  if (!oldUpdate) return true;
-  if (!newUpdate) return false;
-  return new Date(newUpdate) > new Date(oldUpdate);
+  if (!oldUpdate) return "OVERWRITE";
+  if (!newUpdate) return "SKIP";
+
+  if (new Date(newUpdate) > new Date(oldUpdate)) {
+    return "MERGE_EMPTY_ONLY"; // Equal strength, newer data: only fill gaps
+  }
+  return "SKIP";
 }
 ```
 
@@ -149,6 +182,7 @@ Aligned with `Writeback Packet Contract` (v0.1).
   "department": "Adapter Layer",
   "node_id": "Gemini_Scout_Node",
   "action": "update",
+  "target_path": "Point_Cloud_Log",
   "payload": {
     "payload_id": "PCD-TEST-001",
     "source_batch": "Gemini_Batch_001",
@@ -208,11 +242,12 @@ A workflow to validate the bridge logic using a mock spreadsheet service.
 ## 8. PR Refresh Result
 
 ```yaml
-PR_127_Refresh_Result:
+PR_127_Post_139_Result:
   Base_Updated_Against_Main: Yes
   Mergeable_After_Update: Yes
   Writeback_Contract_Aligned: Yes
   Stale_Overwrite_Prevented: Yes
+  Formula_Preservation: Yes
   Diff_Scope: Clean
   Recommended_Action: Merge
 ```
