@@ -32,30 +32,24 @@
 - THREE_COUPLING_RUNTIME_MAP.md
 - WINDOW_12_MASTER_TABLE.md
 - 00_meta/user_identity_anchor.md
-- 00_meta/FULL_LIFECYCLE_ASSET_MATRIX.md
 - WORLD_CHAIN_MASTER_AXIS.md
 - 01_runtime-spine/ (Pulse & Linking Rules)
 - 05_topology/ (Triad & Consistency Rules)
 
 ### Group C — Operational Boards & Layers
-- docs/qinyi/ (Qinyi External Interface Subsystem)
 - WORK_OS_CHAIN_INTEGRATION_SPEC.md
 - TASK_ORCHESTRATION_BRIDGE_SPEC.md
-- CLOUDTOP_RELAY_CHANNEL_SPEC.md
 -- REDUNDANT_LOAD_REDUCTION_SPEC.md
 - EXTERNAL_SIGNAL_ENTRY_CHAIN_SPEC.md
 - 01_native-board/ (Indices, Blockers, & Permissions)
 - 02_runtime-ops/ (Follow-up Tasks)
-- 02_translation-layer/CLOUD_OVER_CLOUD_CONTROL_CENTER_SPEC.md
 - 03_board-orchestration/ (Binding & Intake Contracts)
 - 04_adapter-layer/ (External Node Specs & Adapters)
-- 04_adapter-layer/gemini_gas_sheet_bridge_spec.md
 - 04_adapter-layer/VIDEO_OUTPUT_NODE_SPEC.md
 - PHYSICAL_SIGNAL_BOUNDARY_SPEC.md
 
 ### Group D — Governance & Cleanup
 - MULTI_CHAIN_DISPATCH_GOVERNANCE.md
-- CLOUDTOP_PROTOCOL_HARDENING_NOTE.md
 - FULL_REPOSITORY_TOPOLOGY_ALIGNMENT.md
 - CLEANUP_QUEUE_REGISTER.md
 - NAMING_DRIFT_RESOLUTION_REGISTER.md
