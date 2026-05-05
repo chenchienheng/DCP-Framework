@@ -87,6 +87,8 @@
   writeback.
 - 04_adapter-layer/VIDEO_OUTPUT_NODE_SPEC.md: Video output node specification.
 - PHYSICAL_SIGNAL_BOUNDARY_SPEC.md: Physical signal entry boundary spec.
+- 03_field-governance/QINYI_SELF_RETURN_STRUCTURAL_BOUNDARY_SPEC.md: Qinyi
+  self-return structural boundary specification.
 
 - MULTI_CHAIN_DISPATCH_GOVERNANCE.md: Multi-chain dispatch governance
   specification.

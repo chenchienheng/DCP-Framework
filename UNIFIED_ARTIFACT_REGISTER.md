@@ -47,6 +47,7 @@
 - 04_adapter-layer/gemini_gas_sheet_bridge_spec.md
 - 04_adapter-layer/VIDEO_OUTPUT_NODE_SPEC.md
 - PHYSICAL_SIGNAL_BOUNDARY_SPEC.md
+- 03_field-governance/QINYI_SELF_RETURN_STRUCTURAL_BOUNDARY_SPEC.md
 
 ### Group D — Governance & Cleanup
 - MULTI_CHAIN_DISPATCH_GOVERNANCE.md
