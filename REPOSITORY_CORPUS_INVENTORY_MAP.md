@@ -32,10 +32,12 @@
 | **03_board-orchestration/** | 03_board-orchestration | approved | human | keep | Low |
 | **03_field-governance/** | 03_field-governance | candidate | human | watch | Medium |
 | **04_adapter-layer/** | 04_adapter-layer | approved | human | keep | Low |
+| **04_interface-layer/** | 04_interface-layer | candidate | human | watch | Medium |
 | **05_topology/** | 05_topology | approved | human | keep | Low |
 | **root governance** | root-level governance | approved | human | keep | Low |
 | **root audits** | root-level audit | audit_artifact | human/Jules | watch | Low |
 | **PR/Issue/Tasks** | taskboard artifacts | audit_artifact | human/Jules | watch | Low |
+| **Docs/** | documentation | candidate | human | watch | Low |
 | **Legacy/Seed** | legacy docs | legacy | human | deprecate_candidate | Low |
 | **Unknown/Candidates** | unknown | candidate | Jules/Codex | watch | Medium |
 
@@ -51,12 +53,60 @@ Repository_Corpus_Inventory:
     source: human
     action: keep
     risk: Low
+  - path: THREE_COUPLING_RUNTIME_MAP.md
+    family: root-level governance docs
+    status: approved
+    source: human
+    action: keep
+    risk: Low
+  - path: WINDOW_12_MASTER_TABLE.md
+    family: root-level governance docs
+    status: approved
+    source: human
+    action: keep
+    risk: Low
+  - path: SPACE_CHAIN_MASTER_LAYER.md
+    family: root-level governance docs
+    status: approved
+    source: human
+    action: keep
+    risk: Low
+  - path: TIME_CHAIN_MASTER_LAYER.md
+    family: root-level governance docs
+    status: approved
+    source: human
+    action: keep
+    risk: Low
+  - path: REVIEW_CHAIN_MASTER_LAYER.md
+    family: root-level governance docs
+    status: approved
+    source: human
+    action: keep
+    risk: Low
     notes: Asset lifecycle and schema alignment rules.
   - path: 00_meta/user_identity_anchor.md
     family: 00_meta
     status: approved
     source: human
     action: keep
+    risk: Low
+  - path: *_REPORT.md (All root-level reports)
+    family: root-level audit
+    status: audit_artifact
+    source: human/Jules
+    action: watch
+    risk: Low
+  - path: *_BATCH_*.md / *_RUN_*.md
+    family: root-level audit
+    status: audit_artifact
+    source: human/Jules
+    action: watch
+    risk: Low
+  - path: *_MATRIX.md / *_SCORECARD.md
+    family: root-level audit
+    status: audit_artifact
+    source: human/Jules
+    action: watch
     risk: Low
     notes: Primary identity alignment anchor.
 
@@ -230,7 +280,17 @@ Repository_Corpus_Inventory:
     risk: Low
     notes: Canonical adapters and node specifications.
 
-### 2.10 Family: 05_topology
+### 2.10 Family: 04_interface-layer
+Repository_Corpus_Inventory:
+  - path: 04_interface-layer/QINYI_PUBLIC_CORE_VALUE_v0_1.md
+    family: 04_interface-layer
+    status: candidate
+    source: human
+    action: watch
+    risk: Medium
+    notes: Qinyi-specific interface values; pending trunk merge.
+
+### 2.11 Family: 05_topology
 Repository_Corpus_Inventory:
   - path: 05_topology/ (All files)
     family: 05_topology
@@ -240,7 +300,7 @@ Repository_Corpus_Inventory:
     risk: Low
     notes: Triad and consistency principles.
 
-### 2.11 Family: root-level governance docs
+### 2.12 Family: root-level governance docs
 Repository_Corpus_Inventory:
   - path: README.md
     family: root-level governance docs
@@ -344,8 +404,20 @@ Repository_Corpus_Inventory:
     source: human
     action: keep
     risk: Low
+  - path: CHATGPT_GITHUB_BOOTSTRAP.md
+    family: root-level governance docs
+    status: approved
+    source: human
+    action: keep
+    risk: Low
+  - path: GITHUB_CHAIN_MASTER_MAP.md
+    family: root-level governance docs
+    status: approved
+    source: human
+    action: keep
+    risk: Low
 
-### 2.12 Family: root-level audit / cleanup / legacy docs
+### 2.13 Family: root-level audit / cleanup / legacy docs
 Repository_Corpus_Inventory:
   - path: BRANCH_TOPOLOGY_AND_CLEANUP_REGISTER.md
     family: root-level audit
@@ -421,7 +493,22 @@ Repository_Corpus_Inventory:
     risk: Low
     notes: Candidates for isolation or archival.
 
-### 2.13 Family: PR / issue / taskboard artifacts
+### 2.14 Family: Docs / Documentation
+Repository_Corpus_Inventory:
+  - path: docs/qinyi/
+    family: documentation
+    status: approved
+    source: human
+    action: keep
+    risk: Low
+  - path: docs/xuanling/
+    family: documentation
+    status: candidate
+    source: human
+    action: watch
+    risk: Low
+
+### 2.15 Family: PR / issue / taskboard artifacts
 Repository_Corpus_Inventory:
   - path: .github/ (All templates)
     family: taskboard artifacts
@@ -459,8 +546,20 @@ Repository_Corpus_Inventory:
     source: human
     action: watch
     risk: Low
+  - path: REPLAY_READINESS_REPORT.md
+    family: taskboard artifacts
+    status: audit_artifact
+    source: human
+    action: watch
+    risk: Low
+  - path: SEMANTIC_COMPRESSION_REPORT.md
+    family: taskboard artifacts
+    status: audit_artifact
+    source: human
+    action: watch
+    risk: Low
 
-### 2.14 Family: unknown / needs MotherTree review
+### 2.16 Family: unknown / needs MotherTree review
 Repository_Corpus_Inventory:
   - path: MERGE_LAW_PROPOSAL.md
     family: unknown
@@ -480,13 +579,13 @@ Repository_Corpus_Inventory:
     source: human
     action: watch
     risk: Medium
-  - path: (Various *_REPORT.md, *_SPEC.md, *_NOTE.md not in indices)
+  - path: (Remaining root-level *.md files)
     family: unknown
     status: candidate
-    source: Jules/Codex
+    source: human/Jules
     action: watch
     risk: Medium
-    notes: Includes numerous drill artifacts and specialized specs requiring consolidation.
+    notes: Includes specialized specs (*_SPEC.md), notes (*_NOTE.md), and proposals.
 
 ---
 
