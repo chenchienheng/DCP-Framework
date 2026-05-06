@@ -61,7 +61,7 @@
 | cross-window-feedback | return-chain | Green | Cross-window return | Low | Keep | |
 | data-request | standard | Green | Information request | Low | Keep | |
 | docs | standard | Green | Documentation | Low | Keep | |
-| documentation | standard | Green | Documentation | Low | Merge | Merge with 'docs' |
+| documentation | standard | Green | Documentation | Low | Merge_Candidate | Merge with 'docs' |
 | duplicate | standard | Green | Issue hygiene | Low | Keep | |
 | engineering-bridge | tool-family | Yellow | Technical bridge | Medium | Keep | |
 | enhancement | standard | Green | Feature request | Low | Keep | |
@@ -101,12 +101,12 @@
 | numeric-terrain | MotherTree | Yellow | Quantitative field | Medium | Keep | |
 | output-chain | return-chain | Green | Result path | Low | Keep | |
 | point-cloud | tool-family | Green | Data representation | Low | Keep | |
-| pointcloud | tool-family | Green | Data representation | Low | Merge | Merge with 'point-cloud' |
+| pointcloud | tool-family | Green | Data representation | Low | Merge_Candidate | Merge with 'point-cloud' |
 | pr-clearance | closure | Yellow | PR review status | Medium | Keep | |
 | preflight-index | MotherTree | Green | Readiness check | Low | Keep | |
 | program-master | MotherTree | Red | Master program rules | High | Keep | |
 | protocol-hardening | MotherTree | Red | Protocol security | High | Keep | |
-| qinyi | Qinyi | Yellow | Qinyi core | Medium | Keep | |
+| qinyi | Qinyi | Yellow / Red | Interface / Core | Med/High | Keep | Yellow for interface; Red for core/KB/boundary |
 | question | standard | Green | Inquiry | Low | Keep | |
 | r1-capture | closure | Green | Initial capture | Low | Keep | |
 | radar | tool-family | Green | Signal detection | Low | Keep | |
@@ -126,7 +126,7 @@
 | rq-05 | unknown | Green | Requirement 05 | Low | Keep | |
 | rq-06 | unknown | Green | Requirement 06 | Low | Keep | |
 | rq-07 | unknown | Green | Requirement 07 | Low | Keep | |
-| rule-candidate | MotherTree | Green | Proposed rule | Low | Keep | |
+| rule-candidate | MotherTree | Yellow | Proposed rule | Medium | Keep | Yellow by default until approved |
 | runtime-structure | MotherTree | Yellow | Runtime governance | Medium | Keep | |
 | scout | tool-family | Green | Discovery node | Low | Keep | |
 | scout-dispatch | tool-family | Yellow | Discovery dispatch | Medium | Keep | |
@@ -135,7 +135,28 @@
 
 ---
 
-## 3. Status
+## 3. Do_Not
+
+- do not delete labels
+- do not rename labels
+- do not merge label families
+- do not create traffic-light labels yet
+- do not treat this file as approved doctrine
+
+---
+
+## 4. Mapping Boundary
+
+- proposal / audit artifact only
+- does not update the 13-gate structure
+- does not replace closure-gate labels
+- does not authorize label cleanup
+
+---
+
+## 5. Status
+
 - mapping_status: PROPOSAL
-- label_count: 100
-- date: 2026-04-21
+- observed_count: 100
+- complete_inventory: unknown
+- generated_at: 2026-05-06
