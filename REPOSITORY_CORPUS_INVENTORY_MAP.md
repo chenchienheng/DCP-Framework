@@ -39,7 +39,7 @@
 | **PR/Issue/Tasks** | taskboard artifacts | audit_artifact | human/Jules | watch | Low |
 | **Docs/** | documentation | candidate | human | watch | Low |
 | **Legacy/Seed** | legacy docs | legacy | human | deprecate_candidate | Low |
-| **Unknown/Candidates** | unknown | candidate | Jules/Codex | watch | Medium |
+| **Fallback/Unclassified** | unclassified | unknown | human/Jules/Codex | watch | Medium |
 
 ---
 
@@ -559,33 +559,61 @@ Repository_Corpus_Inventory:
     action: watch
     risk: Low
 
-### 2.16 Family: unknown / needs MotherTree review
+### 2.16 Family: Fallback / Unclassified Assets
 Repository_Corpus_Inventory:
   - path: MERGE_LAW_PROPOSAL.md
-    family: unknown
+    family: unknown_root_markdown
     status: candidate
     source: human
     action: watch
     risk: Medium
   - path: MODEL_INVOCATION_CONTRACT.md
-    family: unknown
+    family: unknown_root_markdown
     status: candidate
     source: human
     action: watch
     risk: Medium
   - path: SNAPSHOT_MECHANISM_PROPOSAL.md
-    family: unknown
+    family: unknown_root_markdown
     status: candidate
     source: human
     action: watch
     risk: Medium
   - path: (Remaining root-level *.md files)
-    family: unknown
+    family: unknown_root_markdown
     status: candidate
     source: human/Jules
     action: watch
     risk: Medium
     notes: Includes specialized specs (*_SPEC.md), notes (*_NOTE.md), and proposals.
+
+  - path: (Remaining tracked non-Markdown root assets, including *.pdf)
+    family: binary_or_pdf_assets
+    status: unknown
+    source: human/Jules/Codex
+    action: watch
+    risk: Medium
+
+  - path: (Remaining tracked non-root unclassified paths)
+    family: unknown_non_root_paths
+    status: unknown
+    source: human/Jules/Codex
+    action: watch
+    risk: Medium
+
+  - path: Freeze/readme
+    family: unknown_non_markdown_assets
+    status: unknown
+    source: human/Jules/Codex
+    action: watch
+    risk: Medium
+
+  - path: 05_XLEN_Reserve_Unenabled/...
+    family: reserve_or_unenabled_paths
+    status: unknown
+    source: human/Jules/Codex
+    action: watch
+    risk: Medium
 
 ---
 
