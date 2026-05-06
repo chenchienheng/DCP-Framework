@@ -106,7 +106,7 @@
 | preflight-index | MotherTree | Green | Readiness check | Low | Keep | |
 | program-master | MotherTree | Red | Master program rules | High | Keep | |
 | protocol-hardening | MotherTree | Red | Protocol security | High | Keep | |
-| qinyi | Qinyi | Yellow / Red | Interface / Core | Med/High | Keep | Yellow for interface; Red for core/KB/boundary |
+| qinyi | Qinyi | Red | Interface / Core | High | Keep | Red by default for deterministic filtering; interface-only content tasks may be downgraded to Yellow by MotherTree review. |
 | question | standard | Green | Inquiry | Low | Keep | |
 | r1-capture | closure | Green | Initial capture | Low | Keep | |
 | radar | tool-family | Green | Signal detection | Low | Keep | |
