@@ -92,6 +92,8 @@
   specification.
 - CLOUDTOP_PROTOCOL_HARDENING_NOTE.md: Protocol hardening rules for
   cross-window handoff.
+- 03_field-governance/ALL_CLOUD_BOUNDARY_REVIEW_v0_1.md: Expert review of the
+  all-cloud boundary and no-billing feasible domain.
 
 ### 1.4 Return Loop (05)
 - 05_topology/consistent-triad-principle.md: Bone/Event/Writeback consistency
