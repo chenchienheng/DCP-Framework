@@ -117,9 +117,8 @@
 
 ### 4.2 Duplicated Logic
 
-- **Registers:** `REPOSITORY_CORPUS_INDEX.md`, `UNIFIED_ARTIFACT_REGISTER.md`,
-  and `ROLE_CLASSIFICATION_TABLE.md` contain overlapping indexing logic
-  without clear boundary separation.
+- **Registers:** The overlapping indexing logic across `REPOSITORY_CORPUS_INDEX.md`, `UNIFIED_ARTIFACT_REGISTER.md`,
+  and `ROLE_CLASSIFICATION_TABLE.md` has been consolidated into `REPOSITORY_CORPUS_INDEX.md`.
 - **Scheduling/Topology:** Scheduling logic is split across
   `WINDOW_12_MASTER_TABLE.md`, `SCHEDULING_EFFECT_REGISTER.md`,
   and `PLATFORM_SCHEDULER_AND_TOOL_NAMING_MAP.md`.
