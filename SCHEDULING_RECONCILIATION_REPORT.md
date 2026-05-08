@@ -13,7 +13,7 @@ However, the current `SCHEDULING_EFFECT_REGISTER.md` relies on an older 12-windo
 ## 2. Mismatch or Gap Report
 
 ### Mismatched Schedules (Existing but mapped outside new topology):
-- `timeline_schedule_review`: Mapped to `06`. Uses "daily" cadence, which violates the rule "no daily generic reporting lane should remain active".
+- `timeline_schedule_review`: Mapped to `06`. The deprecated daily reporting lane has been removed; routine timeline convergence now belongs to `02_CVG_3D` and critical changes remain event-driven via `01_RT_Critical` or `00_ScheduleHub`.
 - `board_orchestration_review`: Mapped to `03`. The new `03_STAGE_W1` is strictly for weekly stage reporting, whereas this item uses a "recurring review + event-driven" hybrid cadence.
 - `log_writeback_append`: Mapped to `08`.
 - `toolchain_status_refresh`: Mapped to `10`.
@@ -27,7 +27,7 @@ However, the current `SCHEDULING_EFFECT_REGISTER.md` relies on an older 12-windo
 - `04_MANUAL_Doctrine`: No explicit schedules bound to manual architecture/governance work.
 
 ### Cadence Drifts:
-- The rule states "no daily generic reporting lane should remain active", but `timeline_schedule_review` enforces a daily cadence.
+- The obsolete daily cadence for `timeline_schedule_review` has been removed.
 - The 3-day and weekly cadences are named in the topology but are not actively producing outputs in the register.
 
 ## 3. Unresolved Risks
