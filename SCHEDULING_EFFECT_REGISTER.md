@@ -40,7 +40,7 @@ Each scheduling item should eventually include:
 | Schedule Name | Owner Window | Cadence | Trigger Type | Expected Output | Writeback Surface | Drift Flag | Status |
 |---|---|---|---|---|---|---|---|
 | central_reanchor_review | `00` | per major change / per contradiction escalation | event-driven | adjudication decision or return direction | durable note / issue / register update | visible if missing during major state shift | planned |
-| timeline_schedule_review | `06` | daily or per scheduling change | time-based | updated timeline/schedule state | scheduling note / timeline artifact | visible if cadence named but no update proof | planned |
+| timeline_schedule_review | `06` | 3-day convergence or per scheduling change | time-based | updated timeline/schedule state | scheduling note / timeline artifact | visible if cadence named but no update proof | planned |
 | board_orchestration_review | `03` | recurring review + event-driven | hybrid | routing refresh / queue movement / next actions | board note / issue / register | visible if tasks accumulate without routing update | planned |
 | log_writeback_append | `08` | on event + periodic archive cadence | hybrid | log entry or audit append | log board / writeback artifact | visible if actions happen without durable trace | planned |
 | toolchain_status_refresh | `10` | per tool change + maintenance cadence | hybrid | toolchain state update / routing check | tool/orchestration note | visible if tool conditions change without reflected state | planned |
