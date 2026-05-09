@@ -94,6 +94,8 @@
   cross-window handoff.
 - 03_field-governance/ALL_CLOUD_BOUNDARY_REVIEW_v0_1.md: Expert review of the
   all-cloud boundary and no-billing feasible domain.
+- 03_field-governance/BASE_FIELD_CORE_v0_1.md: Minimum base layer for source,
+  node, dependency, view, gate, and return governance.
 
 ### 1.4 Return Loop (05)
 - 05_topology/consistent-triad-principle.md: Bone/Event/Writeback consistency
