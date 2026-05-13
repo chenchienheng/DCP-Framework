@@ -53,6 +53,7 @@
 - 03_field-governance/IMPORT_STAGING_AND_STABLE_ID_RULE_v0_1.md
 - 03_field-governance/ANALYSIS_VIEW_MAP_v0_1.md
 - 03_field-governance/EXPORT_RETURN_PACKET_SCHEMA_v0_1.md
+- 03_field-governance/MINIMAL_ROUTER_LAUNCHER_QIN_VIEW_GATE_v0_1.md
 
 ### Group D — Governance & Cleanup
 - MULTI_CHAIN_DISPATCH_GOVERNANCE.md
