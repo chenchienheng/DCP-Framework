@@ -49,6 +49,7 @@
 - 03_field-governance/BASE_FIELD_CORE_v0_1.md: Minimum base layer for source, node, dependency, view, gate, return, and QIN/View surface governance.
 - 03_field-governance/SOURCE_VIEW_GATE_v0_1.md: Source/view separation gate for reports, dashboards, QIN/View surfaces, export packets, and source-preserving transformations.
 - 03_field-governance/IMPORT_STAGING_AND_STABLE_ID_RULE_v0_1.md: Import staging and stable ID rule for proposed/confirmed ID separation, review gates, and governed BASE promotion.
+- 03_field-governance/ANALYSIS_VIEW_MAP_v0_1.md: Analysis view map for governed views, fact tables, dashboards, trends, matrices, and evidence-preserving visualization boundaries.
 
 ### 1.4 Return Loop (05)
 - 05_topology/consistent-triad-principle.md: Bone/Event/Writeback consistency principle.
