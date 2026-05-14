@@ -52,6 +52,7 @@
 - 03_field-governance/ANALYSIS_VIEW_MAP_v0_1.md: Analysis view map for governed views, fact tables, dashboards, trends, matrices, and evidence-preserving visualization boundaries.
 - 03_field-governance/EXPORT_RETURN_PACKET_SCHEMA_v0_1.md: Export/return packet schema for evidence carry, boundary statements, non-approval disclaimers, packet state, and return paths.
 - 03_field-governance/MINIMAL_ROUTER_LAUNCHER_QIN_VIEW_GATE_v0_1.md: Minimal router launcher and QIN view read-write gate for BASE to governed View to QIN to Export/Return routing contracts.
+- 03_field-governance/OBJECT_CENTRIC_ALL_MODAL_BASE_PATTERN_v0_1.md: Open protocol candidate for object-centric all-modal BASE, language-driven source-to-decision routing, universal-domain data, permissioned views, and return-path governance.
 
 ### 1.4 Return Loop (05)
 - 05_topology/consistent-triad-principle.md: Bone/Event/Writeback consistency principle.
