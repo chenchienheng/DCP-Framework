@@ -75,7 +75,7 @@ External signals entering the chain must be strictly validated against a defined
 
 The expected control semantics for the schema validation are:
 - **Strict Typing and Structure:** All inbound payloads must match an explicit structure (e.g., required headers, body fields, and metadata). Unknown fields must be rejected or stripped.
-- **Boundary Rejection/Hold:** Payloads failing schema validation must be immediately rejected at the entry node or held in a dead-letter queue. They must not propagate to the primary AXIS-01 track.
+- **Boundary Rejection/Hold:** Payloads failing schema validation must be immediately rejected at the entry node or held in a quarantine / review state. They must not propagate to the primary AXIS-01 track. (Note: Implementation of any concrete queue, middleware, or database to handle this hold state remains Pending / Red Gate).
 - **Error Handling & Return Path:** A standardized error response must be returned to the origin when possible, and failure notifications routed to AXIS-05 for human review.
 - **Evidence Logging:** Every schema rejection must generate a sanitized log entry (without recording potentially malicious payload bodies) to detect format drift or targeted fuzzing.
 - **Schema Versioning:** The validation template must enforce versioning to allow controlled transitions when external APIs update their formats, mitigating unexpected breakage.
