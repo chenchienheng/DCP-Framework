@@ -70,6 +70,28 @@ The expected control semantics for the edge limiter are:
 - **Failure Mode:** If the rate limiter itself fails, it should default to a "fail-closed" or highly restricted state to prevent cascading failure of the primary chain.
 - **Return Path:** Blocked or flooded signals should return an explicit "rate-limited" status to the origin and route a failure notification to AXIS-05 for human review.
 
+### Schema Validation Requirement (Candidate)
+External signals entering the chain must be strictly validated against a defined schema template at the boundary before processing. **Note: Until implemented, this remains a candidate security requirement and not runtime protection.**
+
+The expected control semantics for the schema validation are:
+- **Strict Typing and Structure:** All inbound payloads must match an explicit structure (e.g., required headers, body fields, and metadata). Unknown fields must be rejected or stripped.
+- **Boundary Rejection/Hold:** Payloads failing schema validation must be immediately rejected at the entry node or held in a dead-letter queue. They must not propagate to the primary AXIS-01 track.
+- **Error Handling & Return Path:** A standardized error response must be returned to the origin when possible, and failure notifications routed to AXIS-05 for human review.
+- **Evidence Logging:** Every schema rejection must generate a sanitized log entry (without recording potentially malicious payload bodies) to detect format drift or targeted fuzzing.
+- **Schema Versioning:** The validation template must enforce versioning to allow controlled transitions when external APIs update their formats, mitigating unexpected breakage.
+
+**Minimal Example Validation Template:**
+```json
+{
+  "entry_node_id": "REQ-String",
+  "payload_version": "REQ-String(v1.0)",
+  "timestamp": "REQ-ISO8601",
+  "data": "REQ-Object(StrictSchema)",
+  "metadata": "OPT-Object"
+}
+```
+*Note: Any payload missing required fields or containing invalid types must be dropped and logged. This is an architectural spec; no CVE or dependency advisory applies here.*
+
 ### Next Single Recommended Action
 - Create a lightweight schema validation template for inbound payloads that
   can be applied universally to all entry nodes before they are allowed onto
