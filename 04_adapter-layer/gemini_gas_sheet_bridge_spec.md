@@ -90,6 +90,10 @@ function processPacket(packet) {
           return newRow[h] === undefined ? "" : newRow[h];
         });
         data.push(rowData);
+        // Track the newly added row so subsequent duplicates in the same payload update it instead of appending again
+        if (entityName !== undefined && entityName !== "") {
+          entityRowMap.set(entityName, data.length - 1);
+        }
         stats.added++;
       } else {
         const existingStatus = data[existingRowIdx][statusIdx];
