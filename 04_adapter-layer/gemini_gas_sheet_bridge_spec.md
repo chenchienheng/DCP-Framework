@@ -68,15 +68,20 @@ function processPacket(packet) {
         "Required headers missing (Entity_Name, Evidence_Status, Updated_At)");
   }
 
+  // Pre-compute row indices for existing Entity_Names to optimize lookups (O(N) vs O(N*M))
+  const entityRowMap = new Map();
+  for (let i = 1; i < data.length; i++) {
+    const name = data[i][entityNameIdx];
+    // In case of duplicates, we keep the first occurrence to match the old loop's "break" behavior
+    if (name !== undefined && name !== "" && !entityRowMap.has(name)) {
+      entityRowMap.set(name, i);
+    }
+  }
+
   packet.payload.rows.forEach(newRow => {
     try {
-      let existingRowIdx = -1;
-      for (let i = 1; i < data.length; i++) {
-        if (data[i][entityNameIdx] === newRow["Entity_Name"]) {
-          existingRowIdx = i;
-          break;
-        }
-      }
+      const entityName = newRow["Entity_Name"];
+      const existingRowIdx = entityRowMap.has(entityName) ? entityRowMap.get(entityName) : -1;
 
       if (existingRowIdx === -1) {
         const rowData = headers.map((h, colIdx) => {
