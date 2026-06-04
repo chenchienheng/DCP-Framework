@@ -13,7 +13,7 @@ However, the current `SCHEDULING_EFFECT_REGISTER.md` relies on an older 12-windo
 ## 2. Mismatch or Gap Report
 
 ### Mismatched Schedules (Existing but mapped outside new topology):
-- `timeline_schedule_review`: Mapped to `06`. The deprecated daily reporting lane has been removed; routine timeline convergence now belongs to `02_CVG_3D` and critical changes remain event-driven via `01_RT_Critical` or `00_ScheduleHub`.
+- `timeline_schedule_review`: No active `06` lane mapping was removed in this PR; however, `SCHEDULING_EFFECT_REGISTER.md` still contains legacy `timeline_schedule_review` owner-window `06` references that remain pending register cleanup.
 - `board_orchestration_review`: Mapped to `03`. The new `03_STAGE_W1` is strictly for weekly stage reporting, whereas this item uses a "recurring review + event-driven" hybrid cadence.
 - `log_writeback_append`: Mapped to `08`.
 - `toolchain_status_refresh`: Mapped to `10`.
