@@ -68,15 +68,18 @@ function processPacket(packet) {
         "Required headers missing (Entity_Name, Evidence_Status, Updated_At)");
   }
 
+  const entityIndexMap = new Map();
+  for (let i = 1; i < data.length; i++) {
+    const entityName = data[i][entityNameIdx];
+    if (!entityIndexMap.has(entityName)) {
+      entityIndexMap.set(entityName, i);
+    }
+  }
+
   packet.payload.rows.forEach(newRow => {
     try {
-      let existingRowIdx = -1;
-      for (let i = 1; i < data.length; i++) {
-        if (data[i][entityNameIdx] === newRow["Entity_Name"]) {
-          existingRowIdx = i;
-          break;
-        }
-      }
+      let existingRowIdx = entityIndexMap.has(newRow["Entity_Name"]) ?
+          entityIndexMap.get(newRow["Entity_Name"]) : -1;
 
       if (existingRowIdx === -1) {
         const rowData = headers.map((h, colIdx) => {
@@ -85,6 +88,9 @@ function processPacket(packet) {
           return newRow[h] === undefined ? "" : newRow[h];
         });
         data.push(rowData);
+        if (!entityIndexMap.has(rowData[entityNameIdx])) {
+          entityIndexMap.set(rowData[entityNameIdx], data.length - 1);
+        }
         stats.added++;
       } else {
         const existingStatus = data[existingRowIdx][statusIdx];
