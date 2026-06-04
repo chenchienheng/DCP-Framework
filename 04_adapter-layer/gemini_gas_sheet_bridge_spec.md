@@ -88,7 +88,9 @@ function processPacket(packet) {
           return newRow[h] === undefined ? "" : newRow[h];
         });
         data.push(rowData);
-        entityIndexMap.set(newRow["Entity_Name"], data.length - 1);
+        if (!entityIndexMap.has(rowData[entityNameIdx])) {
+          entityIndexMap.set(rowData[entityNameIdx], data.length - 1);
+        }
         stats.added++;
       } else {
         const existingStatus = data[existingRowIdx][statusIdx];
