@@ -40,6 +40,13 @@ considered compliant with the runtime:
 | IoT Sensor | Sensor Data | MQTT | Standardized numeric mapping |
 | Email Inbox | Comm. | MIME | IMAP protocol standardization |
 
+## Candidate Boundary Requirements (Docs-Only / Not Runtime Enforcement)
+
+*Disclaimer: The following requirements are proposed architectural candidates. They do not introduce runtime queues, middleware, API gateways, database dependencies, or deployment semantics.*
+
+- **Candidate Rate-Limiting Control:** A theoretical boundary control to mitigate signal flooding (e.g., bot floods, sensor malfunctions) by enforcing entry quotas before signals reach the internal routing queue.
+- **Candidate Schema-Validation Control:** A theoretical format guard to prevent structural drift. External payloads should be validated against a unified baseline schema before proceeding to AXIS-01, ensuring uniform entry logic regardless of the source.
+
 ## Analysis
 
 ### Mismatch or Gap
