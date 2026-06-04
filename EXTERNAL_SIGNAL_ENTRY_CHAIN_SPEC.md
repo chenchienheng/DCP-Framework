@@ -40,6 +40,13 @@ considered compliant with the runtime:
 | IoT Sensor | Sensor Data | MQTT | Standardized numeric mapping |
 | Email Inbox | Comm. | MIME | IMAP protocol standardization |
 
+## Candidate Boundary Requirements (Docs-Only / Not Runtime Enforcement)
+
+*Disclaimer: The following requirements are proposed architectural candidates. They do not introduce runtime queues, middleware, API gateways, database dependencies, or deployment semantics.*
+
+- **Candidate Rate-Limiting Control:** A theoretical boundary control to mitigate signal flooding (e.g., bot floods, sensor malfunctions) by enforcing entry quotas before signals reach the internal routing queue.
+- **Candidate Schema-Validation Control:** A theoretical format guard to prevent structural drift. External payloads should be validated against a unified baseline schema before proceeding to AXIS-01, ensuring uniform entry logic regardless of the source.
+
 ## Analysis
 
 ### Mismatch or Gap
@@ -57,44 +64,7 @@ considered compliant with the runtime:
   warning, breaking the entry chain if schema validation is not strictly
   enforced at the boundary.
 
-### Boundary Rate Limiting Requirement (Candidate)
-External signals entering the chain must pass through an edge limiter before being accepted into downstream routing. **Note: Until implemented, this remains a candidate security requirement and not runtime protection.**
-
-The expected control semantics for the edge limiter are:
-- **Per-source Rate Limit:** A strict cap on the number of signals per source (e.g., per IP, API key, or origin identifier) within a defined time window.
-- **Burst Threshold:** An allowable burst capacity that slightly exceeds the standard limit for brief intervals before triggering limits.
-- **Cooldown / Backoff:** An enforced waiting period or exponential backoff applied to sources exceeding their threshold.
-- **Queue or Drop Behavior:** A defined policy determining whether excess signals are placed in a holding queue (for asynchronous retry) or immediately dropped.
-- **Priority Override:** Trusted sources or manual operator interventions may bypass standard limits under controlled conditions.
-- **Logging / Audit Trail:** Every rate-limit trigger must generate an auditable log entry for monitoring bot floods or sensor malfunctions.
-- **Failure Mode:** If the rate limiter itself fails, it should default to a "fail-closed" or highly restricted state to prevent cascading failure of the primary chain.
-- **Return Path:** Blocked or flooded signals should return an explicit "rate-limited" status to the origin and route a failure notification to AXIS-05 for human review.
-
-### Schema Validation Requirement (Candidate)
-External signals entering the chain must be strictly validated against a defined schema template at the boundary before processing. **Note: Until implemented, this remains a candidate security requirement and not runtime protection.**
-
-The expected control semantics for the schema validation are:
-- **Strict Typing and Structure:** All inbound payloads must match an explicit structure (e.g., required headers, body fields, and metadata). Unknown fields must be rejected or stripped.
-- **Boundary Rejection/Hold:** Payloads failing schema validation must be immediately rejected at the entry node or held in a quarantine / review state. They must not propagate to the primary AXIS-01 track. (Note: Implementation of any concrete queue, middleware, or database to handle this hold state remains Pending / Red Gate).
-- **Error Handling & Return Path:** A standardized error response must be returned to the origin when possible, and failure notifications routed to AXIS-05 for human review.
-- **Evidence Logging:** Every schema rejection must generate a sanitized log entry (without recording potentially malicious payload bodies) to detect format drift or targeted fuzzing.
-- **Schema Versioning:** The validation template must enforce versioning to allow controlled transitions when external APIs update their formats, mitigating unexpected breakage.
-
-**Minimal Example Validation Template:**
-```json
-{
-  "entry_node_id": "REQ-String",
-  "payload_version": "REQ-String(v1.0)",
-  "timestamp": "REQ-ISO8601",
-  "data": "REQ-Object(StrictSchema)",
-  "metadata": "OPT-Object"
-}
-```
-*Note: Any payload missing required fields or containing invalid types must be dropped and logged. This is an architectural spec; no CVE or dependency advisory applies here.*
-
 ### Next Single Recommended Action
 - Create a lightweight schema validation template for inbound payloads that
   can be applied universally to all entry nodes before they are allowed onto
   the primary AXIS-01 track.
-- Define a standard rate-limiter and cost-bounding template at the edge of
-  the chain to mitigate signal flooding and cascading failures.
