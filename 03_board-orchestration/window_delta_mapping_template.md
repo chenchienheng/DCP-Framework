@@ -14,7 +14,9 @@ Each GitHub delta must be compressed into tri-key and then mapped to one or more
 ## Template
 | Delta ID | Source Type | Source Ref | Project Key | Node Key | Writeback Key | Target Window | Action Type | Writeback Target | Status |
 |---|---|---|---|---|---|---|---|---|---|
-| DEL-0001 | commit / issue / pr / spec | repo ref | PK-xxx | NK-xxx | WBK-xxx | 00-07 | update / relay / hold | path or window | open |
+| DEL-0001 | commit / issue / pr / spec | repo ref | `PK-<id>` | `NK-<id>` | `WBK-<id>` | 00-07 | update / relay / hold | path or window | open |
+
+*Note: `<id>` denotes a template placeholder meant to be replaced with the actual identifier.*
 
 ## Mapping Rules
 - 00: master map / project routing / rollup
