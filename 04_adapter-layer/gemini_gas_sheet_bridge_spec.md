@@ -130,10 +130,18 @@ function processPacket(packet) {
 
   if (AUTHORIZED_WRITE) {
     // Restore formulas before setValues to avoid formula-to-value conversion
-    for (let r = 0; r < formulas.length; r++) {
-      for (let c = 0; c < formulas[r].length; c++) {
-        if (formulas[r][c] !== "") {
-          data[r][c] = formulas[r][c];
+    const numRows = formulas.length;
+    for (let r = 0; r < numRows; r++) {
+      const formulaRow = formulas[r];
+      // Fast skip if the entire row has no formulas
+      if (!formulaRow.some(String)) continue;
+
+      const dataRow = data[r];
+      const numCols = formulaRow.length;
+      for (let c = 0; c < numCols; c++) {
+        const formula = formulaRow[c];
+        if (formula !== "") {
+          dataRow[c] = formula;
         }
       }
     }
