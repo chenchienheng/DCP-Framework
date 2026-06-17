@@ -24,6 +24,7 @@ Therefore the next-stage requirement is:
 ## 1. Why Static Placement Is Not Enough
 
 Static storage alone cannot guarantee:
+
 - role clarity
 - historical induction
 - live routing
@@ -39,6 +40,7 @@ but cannot by itself produce living operational value.
 ## 2. Dynamic Corpus Database Definition
 
 A dynamic corpus database means the corpus is treated as:
+
 - queryable
 - classifiable
 - updatable
@@ -53,13 +55,18 @@ It is not merely search.
 
 It is a runtime-capable historical field.
 
+Runtime-capable here means structurally usable for routing and continuity.
+It does not mean an external autonomous software runtime or deployed service.
+
 ---
 
 ## 3. Minimum Required Properties
 
 ### 3.1 Historical Induction
+
 The system must not only store history.
 It must derive:
+
 - role evolution
 - wording drift
 - branch lineage
@@ -67,17 +74,24 @@ It must derive:
 - recurring structural seeds
 
 ### 3.2 Dynamic Classification
+
 Each artifact should be dynamically classifiable by:
+
 - structural family
+- network role
 - chain face
+- window binding
 - contamination status
 - priority level
 - handling mode
-- window binding
 - branch origin
+- writeback state
+- return target
 
 ### 3.3 Query and Routing Usefulness
+
 The database should support questions such as:
+
 - what belongs to mother architecture?
 - what is clean seed vs residue?
 - which artifacts bind to window 06?
@@ -85,16 +99,22 @@ The database should support questions such as:
 - which notes are bridge-only vs sovereignty-bearing?
 
 ### 3.4 Writeback Awareness
+
 Every important update should be able to write back into the corpus state.
 The database must not become read-only memory.
 
 ### 3.5 Cluster Coverage Reading
+
 The corpus should be readable not by file count only,
 but by how much of the broader structural field is actually covered and made operable.
 
 ---
 
-## 4. Proposed Dynamic Record Schema
+## 4. Artifact Record Schema
+
+The canonical schema is now being introduced through:
+
+- `ARTIFACT_RECORD_SCHEMA.md`
 
 Each artifact record should eventually include fields such as:
 
@@ -105,13 +125,21 @@ Each artifact record should eventually include fields such as:
 - network_role
 - chain_face
 - window_binding
+- authority_level
+- source_role
+- carrier_role
+- claim_ceiling
 - contamination_status
 - priority_level
 - handling_mode
-- historical_lineage
+- related_artifacts
+- supersedes
+- superseded_by
 - writeback_state
-- cluster_coverage_tags
-- last_verified_time
+- last_verified_date
+- mismatch_or_gap
+- next_action
+- return_target
 
 ---
 
@@ -119,6 +147,7 @@ Each artifact record should eventually include fields such as:
 
 The database is not an optional convenience layer.
 It is the next necessary evolution because:
+
 - the corpus has crossed the threshold where manual memory alone is insufficient
 - branch divergence already exists
 - contamination triage already exists
@@ -134,7 +163,9 @@ Therefore a dynamic database is now a structural necessity.
 The build should proceed in layers:
 
 ### Layer A — Durable Registers
+
 Use current notes as seed registers:
+
 - corpus index
 - role classification
 - discontinuity register
@@ -145,10 +176,15 @@ Use current notes as seed registers:
 - scheduling gap note
 
 ### Layer B — Unified Artifact Register
-Create a single registry that can list artifact-level metadata.
+
+`UNIFIED_ARTIFACT_REGISTER.md` exists as a durable register.
+The next task is not to create it from nothing,
+but to reconcile it against `current_files.txt` and the canonical artifact record schema.
 
 ### Layer C — Dynamic Queries and Routing
+
 Make the registry usable for:
+
 - extraction
 - cleanup
 - merge candidate selection
@@ -156,13 +192,16 @@ Make the registry usable for:
 - external-node binding
 
 ### Layer D — Feedback and Auto-updating
+
 Allow writeback from new actions so the database evolves rather than freezes.
+This remains pending until tool execution and evidence logs are actually present.
 
 ---
 
 ## 7. Main Risk if Not Built
 
 If this step is skipped, the corpus may become:
+
 - impressive in volume
 - weak in live usefulness
 - hard to navigate
@@ -175,11 +214,11 @@ That would turn a high-value seed field into a static residue mass.
 
 ## 8. Suggested Next Artifacts
 
-1. `UNIFIED_ARTIFACT_REGISTER.md`
-2. `ARTIFACT_RECORD_SCHEMA.md`
-3. `CLUSTER_COVERAGE_MATRIX.md`
-4. `SCHEDULING_EFFECT_REGISTER.md`
-5. future machine-readable registry layer
+1. `ARTIFACT_RECORD_SCHEMA.md`
+2. `CANONICAL_STATUS_GLOSSARY.md`
+3. future machine-readable registry layer generated from `current_files.txt`
+
+Avoid adding further high-level concept notes until register reconciliation is complete.
 
 ---
 
@@ -187,6 +226,7 @@ That would turn a high-value seed field into a static residue mass.
 
 - dynamic_corpus_database_direction_persisted: true
 - static_storage_risk_named: true
-- unified_artifact_register_pending: true
+- unified_artifact_register_exists: true
+- artifact_record_schema_created: true
 - machine_readable_layer_pending: true
 - return_to_00: true
