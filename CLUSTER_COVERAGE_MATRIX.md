@@ -41,6 +41,9 @@ Can outputs from this cluster return into durable artifacts, logs, or registers?
 ### 1.5 Resumability
 Can operation continue after interruption, branch drift, or session reset?
 
+### 1.6 Depth Governance
+Can the cluster use high depth when needed without forcing unnecessary abstraction, overreach, or over-thinking into every task?
+
 ---
 
 ## 2. Coverage Levels
@@ -52,7 +55,7 @@ Can operation continue after interruption, branch drift, or session reset?
 | `L2` | classified but weakly operational |
 | `L3` | role-bound and partially writeback-capable |
 | `L4` | operationally connected with visible return path |
-| `L5` | stable, replaceable, auditable, and resumable |
+| `L5` | stable, replaceable, auditable, resumable, and depth-governed |
 
 ---
 
@@ -69,6 +72,7 @@ Can operation continue after interruption, branch drift, or session reset?
 | external ecosystem families | L2 | L1 | L2 | L1 | L1 | roadmap exists, but onboarding still early-stage |
 | public / external readable layer | L2 | L2 | L2 | L2 | L1 | readable shells exist but should not outrun runtime core |
 | dynamic corpus database direction | L2 | L2 | L3 | L2 | L2 | direction established, unified machine-readable layer not yet built |
+| Qinyi adaptive interface layer | L3 | L3 | L4 | L3 | L3 | depth-adjusted interface layer; useful because it can stay simple or go deep according to task anchor |
 
 ---
 
@@ -82,12 +86,19 @@ Can operation continue after interruption, branch drift, or session reset?
 
 ### Most urgent contamination-sensitive cluster
 - naming-drift residue families
+- status terminology drift
+- runtime wording ambiguity
 
 ### Most operationally lagging cluster
 - scheduling effectiveness layer
 
 ### Most important future expansion cluster
 - external ecosystem families
+
+### Newly clarified cluster
+- Qinyi adaptive interface layer
+
+This layer adds value by managing feasible domain, flexibility, depth, and stability together. It should not be scored by maximum depth alone.
 
 ---
 
@@ -99,6 +110,7 @@ To raise a cluster by one level, at least one of the following must improve:
 - writeback surface
 - replacement readiness
 - interruption recovery
+- depth governance
 
 This means improvement should be structural,
 not just additive.
@@ -111,20 +123,26 @@ A cluster should not be scored higher merely because:
 - more files were added
 - more tools were connected
 - more words were written
+- reasoning ceiling increased
 
 Coverage rises only when usable continuity rises.
+
+A higher reasoning ceiling without task anchoring is not maturity. A higher reasoning ceiling with downgrade, return, and simple-output control is maturity.
 
 ---
 
 ## 7. Priority Upgrade Path
 
 ### P0
-- scheduling effectiveness layer
-- naming-drift cleanup front
+- whole-corpus filtering
+- register reconciliation
+- status terminology normalization
+- runtime wording clarification
 
 ### P1
 - legacy seed branch rebind coverage
 - model invocation discipline layer
+- Qinyi adaptive interface binding
 
 ### P2
 - external ecosystem family onboarding
@@ -140,6 +158,10 @@ Read together with:
 - `DYNAMIC_CORPUS_DATABASE_NOTE.md`
 - `ECOSYSTEM_FAMILY_ONBOARDING_ROADMAP.md`
 - `SCHEDULING_EFFECT_REGISTER.md`
+- `ARTIFACT_RECORD_SCHEMA.md`
+- `CANONICAL_STATUS_GLOSSARY.md`
+- `docs/qinyi/QINYI_EXTERNAL_INTERFACE_SUBMAP_v0.1.md`
+- `05_topology/feasible-domain-and-responsibility.md`
 
 ---
 
@@ -147,5 +169,7 @@ Read together with:
 
 - cluster_coverage_matrix_created: true
 - current_cluster_levels_mapped: true
+- depth_governance_axis_added: true
+- qinyi_adaptive_interface_layer_added: true
 - future_upgrade_paths_visible: true
 - return_to_00: true
