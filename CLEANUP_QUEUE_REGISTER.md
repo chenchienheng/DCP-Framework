@@ -74,6 +74,7 @@ Each cleanup item should eventually include:
 | C-019 | namespace pollution extraction | `NAMESPACE_REGISTRY.md` + `NAMING_POLLUTION_RULES.md` | namespace_layer_collapse_risk | P0 | classify + boundary + public exposure control | every name receives layer, purpose, forbidden misuse, exposure boundary, and candidate status | prevents Qinyi/XuanLing/XLA/XLEN/XAFD/CoreTri/private names/cases/valences from contaminating one another | active |
 | C-020 | active restructuring task readability | `ACTIVE_RESTRUCTURING_TASK_MAP.md` | governance_code_opacity | P1 | restore human-readable task names | each cleanup front has both visible task name and internal code | prevents internal governance codes from hiding task purpose from the human reviewer | active |
 | C-021 | security threat model and adapter hardening | `SECURITY_THREAT_MODEL.md` + `SECURITY_FINDINGS_REGISTER.md` + `AGENT_INSTRUCTION_INTEGRITY_SPEC.md` + `ADAPTER_SECURITY_BASELINE.md` | governance_security_risk | P0 | build security layer baseline | protect instruction integrity, adapter red gates, evidence boundary, credentials, public/private boundary, and runtime activation | DCP/XuanLing security risk is governance text being wrongly promoted into instruction, permission, fact, runtime, or external writeback | active |
+| C-022 | temporal state sequence and state singularity | `TEMPORAL_STATE_SEQUENCE_SPEC.md` | false_sameness_risk | P0-P1 | bind logs/rules/settings/functions to time-bound state events | every operational object must carry time, record, impact, extension, feedback, and review path | prevents logs, rules, settings, functions, PRs, and agent actions from collapsing into false same-state records | active |
 
 ---
 
@@ -182,6 +183,18 @@ Reason:
 - DCP / XuanLing is not currently a conventional production web app; security risk concentrates in instruction integrity, adapter writeback, credentials, evidence integrity, public/private boundary, and runtime activation
 - markdown must not become authority, and future adapters must not become external writeback without red gates
 
+### Front J — Temporal State Sequence and State Singularity
+
+Items:
+
+- C-022
+
+Reason:
+
+- logs, rules, settings, functions, PRs, and agent actions are time-bound state events
+- no original event can occur twice at the same time, place, and state
+- time, record, impact, extension, and feedback must remain visible for auditability
+
 ---
 
 ## 4. Cleanup Rule
@@ -200,6 +213,7 @@ Default cleanup order:
 10. bind persistent agent habitat modules into runtime landing grammar
 11. extract namespace pollution into name registry and naming rules
 12. bind security threat model and adapter hardening into XLA / LOA
+13. bind temporal-state events into audit and return sequence
 
 ---
 
@@ -243,6 +257,7 @@ but by remaining:
 - runtime-ambitious without habitat, evidence, and review boundaries
 - namespace-ambiguous or public-unsafe
 - security-ambiguous where text, adapters, credentials, evidence, or intake can be promoted without review
+- temporal-ambiguous where records, copies, settings, or logs collapse into false same-state claims
 
 This cleanup queue exists to prevent that drift.
 
@@ -270,6 +285,7 @@ Read together with:
 - `SECURITY_FINDINGS_REGISTER.md`
 - `AGENT_INSTRUCTION_INTEGRITY_SPEC.md`
 - `ADAPTER_SECURITY_BASELINE.md`
+- `TEMPORAL_STATE_SEQUENCE_SPEC.md`
 
 ---
 
@@ -282,7 +298,8 @@ Read together with:
 5. connect Module 14 to `MODEL_INVOCATION_CONTRACT.md` and `JULES_TASKBOARD.md`
 6. link namespace registry to future public release / Zenodo packaging rules
 7. link Security Layer to future adapter / webhook / OAuth / evidence specs
-8. future machine-readable cleanup queue layer
+8. link Temporal State Sequence to artifact record schema and future machine-readable event log
+9. future machine-readable cleanup queue layer
 
 ---
 
@@ -295,6 +312,7 @@ Read together with:
 - persistent_agent_habitat_added: true
 - namespace_pollution_extraction_added: true
 - security_threat_model_added: true
+- temporal_state_sequence_added: true
 - highest_priority_fronts_defined: true
 - dynamic_registry_conversion_active: true
 - return_to_00: true
