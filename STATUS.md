@@ -10,10 +10,14 @@ The materials collected here are intended to describe *structural principles, re
 
 **Status:** Conceptually stable / exploratory / logic-active
 **Development phase:** Controlled structural convergence & rule rebinding
-**Implementation status:** M2 Runtime Spine partially implemented and synchronized
+**Implementation status:** M2 Runtime Spine partially implemented and synchronized as repository-internal continuity governance
 
 The current content represents a *theoretical and structural formulation* of a decision–constraint framework.
 While not a consumer software product, the repository now carries active structural rules (M2 layer) governing its own internal continuity and state transition.
+
+Runtime wording in this file means repository-internal continuity and semantic-runtime governance. It does not claim a deployed external executable runtime, autonomous agent, API service, OAuth integration, or production platform.
+
+Refer to `CANONICAL_STATUS_GLOSSARY.md` for canonical status terms and non-promotion rules.
 
 ---
 
@@ -103,7 +107,7 @@ Reuse, interpretation, or extension by others should acknowledge the original so
 
 Future development, if any, may include:
 - refinement of conceptual definitions,
-- additional illustrative domains,
+- artifact-level registry reconciliation,
 - clarification of terminology,
 - or experimental implementations by third parties.
 
