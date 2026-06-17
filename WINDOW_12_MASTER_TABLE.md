@@ -8,8 +8,8 @@
 
 ## 0. Table Status
 
-- table_version: v0.1
-- purpose: define the stable 12-window runtime frame
+- table_version: v0.2
+- purpose: define the stable 12-window runtime frame without reducing it to a linear ladder
 - scope: runtime orientation and scheduling basis
 - note: `00` remains the central adjudication core and is listed separately from the 12 operational windows
 - return_to_00: true
@@ -21,6 +21,9 @@
 | Window | Role | Runtime Reading |
 |---|---|---|
 | `00` | central adjudication core | return hub, final arbitration point, main re-anchor and convergence point |
+
+`00` is not window number zero in a ladder.
+It is the central return field around which the 12 windows are arranged.
 
 ---
 
@@ -47,20 +50,56 @@
 
 The windows should not be read as isolated folders only.
 They should be read as:
+
 - functional runtime slices
 - scheduling surfaces
 - routing anchors
 - writeback destinations
+- authority-ring positions around the 00 return center
 
 A window may have:
+
 - a file family
 - a scheduling role
 - a coupling bias
 - a public/private visibility mode
+- a return obligation to 00
 
 ---
 
-## 4. Window-to-Network Mapping
+## 4. Non-Linear Window Rule
+
+The 12 windows are not a step sequence.
+They do not mean:
+
+```text
+01 must finish before 02
+02 must finish before 03
+...
+12 is the final superior stage
+```
+
+They mean:
+
+```text
+00 center
+→ 12 operational slices
+→ each slice carries a local role
+→ each slice can bind to bone / event / writeback
+→ all outputs return through the shared continuity order
+```
+
+Therefore:
+
+- window number is an address, not rank
+- window order is routing support, not maturity ranking
+- a later-numbered window is not inherently more advanced
+- a lower-numbered window is not inherently more primitive
+- each window is valid only by role, authority, evidence, and return path
+
+---
+
+## 5. Window-to-Network Mapping
 
 | Window Group | Structural Family Reading |
 |---|---|
@@ -73,25 +112,28 @@ A window may have:
 
 ---
 
-## 5. Runtime Formula with Windows
+## 6. Runtime Formula with Windows
 
 The current runtime can now be read as:
 
 **00 central core + 12 operational windows × 3 coupling faces × recursive depth × gate-bound transitions**
 
 This means:
+
 - windows are not separate sovereignties
 - they are stable runtime slices on one main continuity order
 - scheduling and tooling should bind to windows instead of acting in a flat undifferentiated field
+- window movement is ring/topology movement, not simple staircase progression
 
 ---
 
-## 6. Current Problem Statement
+## 7. Current Problem Statement
 
 At the current stage, the 12-window frame is becoming readable,
 but the scheduling layer is not yet fully operational.
 
 Therefore:
+
 - structure is emerging faster than cadence automation
 - readability is improving faster than live execution discipline
 - some windows are defined conceptually, but not yet activated through durable operational schedules
@@ -100,9 +142,10 @@ This asymmetry is actively being reduced by full corpus role mapping.
 
 ---
 
-## 7. Immediate Scheduling Binding Targets
+## 8. Immediate Scheduling Binding Targets
 
 Priority scheduling-sensitive windows:
+
 1. `06` timeline / schedule field
 2. `03` board orchestration
 3. `08` log / audit writeback
@@ -113,21 +156,25 @@ These should be bound before lower-priority full-environment formalization.
 
 ---
 
-## 8. Related Artifacts
+## 9. Related Artifacts
 
 Read together with:
+
 - `THREE_COUPLING_RUNTIME_MAP.md`
 - `NETWORK_STRUCTURE_HIERARCHY_NOTE.md`
 - `CLUSTER_COVERAGE_NOTE.md`
 - `THIRD_RUNTIME_ENVIRONMENT_NOTE.md`
 - `DISCONTINUITY_REGISTER.md`
+- `GATE_64_BINDING_NOTE.md`
 
 ---
 
-## 9. Status
+## 10. Status
 
 - window_12_master_table_created: true
 - central_00_core_bound: true
+- non_linear_window_reading_persisted: true
+- authority_ring_window_reading_persisted: true
 - scheduling_binding_pending: true
 - full_window_activation_pending: partially_addressed
 - return_to_00: true
