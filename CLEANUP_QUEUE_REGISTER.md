@@ -70,6 +70,7 @@ Each cleanup item should eventually include:
 | C-015 | runtime wording ambiguity | runtime notes and status files | claim_inflation_risk | P0 | clarify + bind to glossary | semantic-runtime and executable-runtime remain distinct | runtime language can be mistaken for deployed platform capability | active |
 | C-016 | non-linear topology misread | 1 / 12 / 64 runtime maps | ladder_misread_risk | P1 | update adjacent topology notes | one-chain, windows, and gates read as authority-ring topology | avoids flattening權圈 into linear staircase | active |
 | C-017 | whole-ecosystem topology sphere alignment | `EXTERNAL_NODE_ONCHAIN_SPEC.md` + `ECOSYSTEM_TOPOLOGY_SPHERE_ALIGNMENT_ADDENDUM.md` | flat_tool_cluster_risk | P0-P1 | bind families to topology-sphere roles | external nodes classified by dependency, authority, coupling, return, replacement, and tri-coupled status | prevents GitHub-only reading and ordinary tool-cluster flattening | active |
+| C-018 | persistent agent habitat module | `MODULE_14_PERSISTENT_AGENT_HABITAT.md` | long_running_agent_runtime_gap | P0-P1 | bind to habitat valence + review return | define habitat, persistence, context continuity, and review return as XuanLing runtime landing grammar | OpenAI/Ona shows long-running agents need secure persistent work habitats, not only models | active |
 
 ---
 
@@ -145,6 +146,17 @@ Reason:
 - XuanLing must not collapse into GitHub-only reading or ordinary tool cluster grouping
 - ecosystem families must be read by dependency, authority, coupling face, carrier shell, return path, replacement safety, depth governance, and tri-coupled status
 
+### Front G — Persistent Agent Habitat
+
+Items:
+
+- C-018
+
+Reason:
+
+- long-running agents need controlled habitat, persistence, context continuity, and review return
+- XuanLing should absorb this as runtime landing grammar without prematurely claiming deployed runtime
+
 ---
 
 ## 4. Cleanup Rule
@@ -160,6 +172,7 @@ Default cleanup order:
 7. bind schedule to effect proof
 8. convert static text field into dynamic registry-backed corpus
 9. bind ecosystem families into topology-sphere roles
+10. bind persistent agent habitat modules into runtime landing grammar
 
 ---
 
@@ -200,6 +213,7 @@ but by remaining:
 - duplicated across active registers
 - status-ambiguous
 - tool-clustered without authority and return
+- runtime-ambitious without habitat, evidence, and review boundaries
 
 This cleanup queue exists to prevent that drift.
 
@@ -219,6 +233,7 @@ Read together with:
 - `CANONICAL_STATUS_GLOSSARY.md`
 - `EXTERNAL_NODE_ONCHAIN_SPEC.md`
 - `ECOSYSTEM_TOPOLOGY_SPHERE_ALIGNMENT_ADDENDUM.md`
+- `MODULE_14_PERSISTENT_AGENT_HABITAT.md`
 
 ---
 
@@ -228,7 +243,8 @@ Read together with:
 2. update `ROLE_CLASSIFICATION_TABLE.md` against the current file inventory
 3. compress overlapping cleanup language into this queue
 4. reflect ecosystem topology-sphere alignment in `ECOSYSTEM_FAMILY_ONBOARDING_ROADMAP.md`
-5. future machine-readable cleanup queue layer
+5. connect Module 14 to `MODEL_INVOCATION_CONTRACT.md` and `JULES_TASKBOARD.md`
+6. future machine-readable cleanup queue layer
 
 ---
 
@@ -238,6 +254,7 @@ Read together with:
 - known_contamination_items_named: true
 - whole_corpus_filtering_added: true
 - ecosystem_topology_sphere_alignment_added: true
+- persistent_agent_habitat_added: true
 - highest_priority_fronts_defined: true
 - dynamic_registry_conversion_active: true
 - return_to_00: true
