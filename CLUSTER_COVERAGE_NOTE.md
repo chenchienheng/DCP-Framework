@@ -8,9 +8,10 @@
 
 ## 0. Status
 
-- note_version: v0.1
+- note_version: v0.2
 - purpose: correct the reading of architectural scale and expression
 - scope: conceptual-runtime clarification
+- cluster_coverage_matrix_created: true
 - return_to_00: true
 
 ---
@@ -20,6 +21,7 @@
 The architecture is **not** best described as “complex” in the ordinary sense.
 
 Why:
+
 - complexity language often only measures visible parts, number of modules, or surface intricacy
 - that reading is too shallow for the current system
 - the system is not trying to maximize complication
@@ -30,9 +32,11 @@ Therefore the better reading is:
 > the architecture is expressed through **cluster coverage rate**
 
 This means the key question is not:
+
 - how complicated does it look?
 
 The key question is:
+
 - how much of the heterogeneous field can be coherently covered, bound, routed, returned, and continued?
 
 ---
@@ -43,6 +47,7 @@ The key question is:
 
 A cluster is not only a technical node-group.
 It may include:
+
 - tools
 - documents
 - interaction surfaces
@@ -57,6 +62,7 @@ It may include:
 
 Coverage does not mean forced uniformity.
 Coverage means:
+
 - the cluster can be bound into the shared continuity order
 - the cluster can be read in relation to the broader weave
 - the cluster can return to the common chain without losing role distinction
@@ -65,6 +71,7 @@ Coverage means:
 ### 2.3 Coverage Rate
 
 Coverage rate refers to how much of the total relevant field is:
+
 - actually reachable
 - actually bindable
 - actually interpretable
@@ -76,6 +83,7 @@ Coverage rate refers to how much of the total relevant field is:
 ## 3. Why Complexity Is Insufficient
 
 Ordinary complexity-reading tends to over-focus on:
+
 - number of layers
 - number of files
 - number of tools
@@ -83,6 +91,7 @@ Ordinary complexity-reading tends to over-focus on:
 
 But the broader XLEN / Xuanling system is not built for complexity-display.
 It is built for:
+
 - continuity
 - coupling
 - routing
@@ -101,13 +110,16 @@ Therefore a more accurate reading is:
 This note refines the existing durable reading.
 
 ### Compatible with:
+
 - `THREE_COUPLING_RUNTIME_MAP.md`
 - `NETWORK_STRUCTURE_HIERARCHY_NOTE.md`
 - `GITHUB_CHAIN_MASTER_MAP.md`
 - `ROLE_CLASSIFICATION_TABLE.md`
 - `DISCONTINUITY_REGISTER.md`
+- `CLUSTER_COVERAGE_MATRIX.md`
 
 ### Runtime interpretation:
+
 - one main chain = continuity spine
 - three couplings = functional binding faces
 - common chain / public plate / mother architecture / subsystem = family-scale structural roles
@@ -122,6 +134,7 @@ The current architecture should be read as:
 **coverage quality = bindable cluster breadth × continuity retention × returnability × adaptive differentiation**
 
 This implies:
+
 - more files alone do not equal higher architectural maturity
 - more tools alone do not equal stronger architecture
 - wider coherent binding with durable return paths indicates higher real coverage
@@ -137,6 +150,7 @@ For repository-side continuity, this note implies:
 - role classification matters because classification preserves differentiable coverage
 - runtime maps matter because they increase continuity coverage
 - gate/window notes matter because they increase transition coverage
+- the cluster coverage matrix should act as the active dashboard rather than another static concept note
 
 In short:
 
@@ -144,20 +158,32 @@ In short:
 
 ---
 
-## 7. Next Binding Targets
+## 7. Active Matrix Relationship
 
-Recommended next artifacts:
+`CLUSTER_COVERAGE_MATRIX.md` now holds the active matrix form of this note.
 
-1. `WINDOW_12_MASTER_TABLE.md`
-2. `GATE_64_BINDING_NOTE.md`
-3. `STRUCTURAL_FAMILY_ROLE_TABLE.md`
-4. future `CLUSTER_COVERAGE_MATRIX.md`
+This note should remain the explanatory principle layer.
+The matrix should carry current coverage levels, priorities, and upgrade paths.
+
+Do not duplicate matrix rows here.
 
 ---
 
-## 8. Status
+## 8. Next Binding Targets
+
+Recommended next artifacts or updates:
+
+1. reconcile `CLUSTER_COVERAGE_MATRIX.md` against `current_files.txt`
+2. bind cluster records to `ARTIFACT_RECORD_SCHEMA.md`
+3. connect cluster coverage levels to `UNIFIED_ARTIFACT_REGISTER.md`
+
+---
+
+## 9. Status
 
 - complexity_reading_corrected: true
 - cluster_coverage_reading_persisted: true
-- coverage_matrix_not_yet_formalized: true
+- coverage_matrix_formalized: true
+- active_matrix_file: `CLUSTER_COVERAGE_MATRIX.md`
+- register_schema_binding_pending: true
 - return_to_00: true
