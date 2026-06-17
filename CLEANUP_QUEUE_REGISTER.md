@@ -1,10 +1,10 @@
 # Cleanup Queue Register
 
-> Durable cleanup queue for current known contamination, residue, and normalization targets.
+> Durable cleanup queue for current known contamination, residue, normalization, and whole-corpus filtering targets.
 > Purpose: prevent pollution from remaining diffuse and unnamed.
 >
 > This queue does not assume every queued item should be deleted.
-> It records what must be cleaned, normalized, isolated, or rewritten.
+> It records what must be cleaned, normalized, isolated, merged, archived, or rewritten.
 
 ---
 
@@ -12,23 +12,29 @@
 
 Cleanup is not equal to destruction.
 Cleanup means:
+
 - remove ambiguity
 - reduce contamination
 - normalize naming
 - isolate residue
 - preserve seed value where possible
+- merge overlapping active records
+- retire inactive residue after trace is preserved
 
 Therefore each item in the queue should receive:
+
 - a contamination reading
 - a priority level
 - a handling mode
 - a target state
+- a return path
 
 ---
 
 ## 1. Queue Fields
 
 Each cleanup item should eventually include:
+
 - `cleanup_id`
 - `scope`
 - `source_branch_or_path`
@@ -39,6 +45,7 @@ Each cleanup item should eventually include:
 - `reason`
 - `dependency`
 - `status`
+- `return_target`
 
 ---
 
@@ -57,94 +64,162 @@ Each cleanup item should eventually include:
 | C-009 | schedule design drift | scheduling artifacts without effect proof | construction_residue + runtime_risk | P1 | bind to effect register | every schedule linked to owner/output/proof | named schedule without runtime effect risks static pollution | queued |
 | C-010 | static corpus accumulation | large text corpus without unified dynamic registry | contamination_risk | P0-P1 | rebind into dynamic register | turn static corpus into dynamic artifact database | static pile risks becoming residue mass | active |
 | C-011 | github issue state | `main` | state_desync | P1 | close stale issues | close #1, #2, #6, #9, #15, #16, #17, #18, #20, #37 | superseded/merged tasks cluttering board | queued |
+| C-012 | whole-corpus filtering | `current_files.txt` + root registers | state_desync + bloat_risk | P0 | classify + keep/update/merge/archive/retire | every current file assigned one handling decision | current work must shift from additive writing to whole-corpus filtering | active |
+| C-013 | register overlap | `REPOSITORY_CORPUS_INDEX.md` / `ROLE_CLASSIFICATION_TABLE.md` / `UNIFIED_ARTIFACT_REGISTER.md` | duplicate_active_registers | P0 | reconcile + merge roles | one source-of-truth register path with linked support registers | overlapping registers cause status and scope drift | active |
+| C-014 | status terminology drift | status fields across registers | maturity_inflation_risk | P0 | normalize via glossary | use `CANONICAL_STATUS_GLOSSARY.md` for status terms | pending/addressed/resolved/verified/completed are not used consistently | active |
+| C-015 | runtime wording ambiguity | runtime notes and status files | claim_inflation_risk | P0 | clarify + bind to glossary | semantic-runtime and executable-runtime remain distinct | runtime language can be mistaken for deployed platform capability | active |
+| C-016 | non-linear topology misread | 1 / 12 / 64 runtime maps | ladder_misread_risk | P1 | update adjacent topology notes | one-chain, windows, and gates read as authority-ring topology | avoids flattening權圈 into linear staircase | active |
 
 ---
 
 ## 3. Current Highest-Priority Cleanup Fronts
 
-### Front A — Naming Normalization
+### Front A — Whole-Corpus Filtering
+
 Items:
+
+- C-010
+- C-012
+- C-013
+- C-014
+- C-015
+
+Reason:
+
+- the repository is past the stage where adding more prose is the main value
+- the next value comes from classification, status discipline, and dynamic registry conversion
+
+### Front B — Naming Normalization
+
+Items:
+
 - C-001
 - C-002
 - C-003
 
 Reason:
+
 - duplicate-family naming drift directly damages indexing, classification, extraction, and future merge safety
 
-### Front B — Seed Family Triage
+### Front C — Seed Family Triage
+
 Items:
+
 - C-006
 - C-007
 - C-008
 
 Reason:
+
 - high-value families already identified, but still mixed with residue or contamination
 
-### Front C — Scheduling Effect Cleanup
+### Front D — Scheduling Effect Cleanup
+
 Items:
+
 - C-009
 
 Reason:
+
 - schedule drift creates structural-operational mismatch and silent runtime weakness
 
-### Front D — Dynamic Corpus Conversion
+### Front E — Topology Misread Cleanup
+
 Items:
-- C-010
+
+- C-016
 
 Reason:
-- this is the main anti-pollution move for the whole text field
+
+- 1 / 12 / 64 must be read as authority-ring topology rather than linear ladder
 
 ---
 
 ## 4. Cleanup Rule
 
 Default cleanup order:
-1. normalize naming drift
-2. triage mixed families
-3. isolate obvious residue
-4. bind schedule to effect proof
-5. convert static text field into dynamic registry-backed corpus
+
+1. filter the current corpus into keep / update / merge / archive / retire decisions
+2. reconcile active registers against `current_files.txt`
+3. normalize status terms through `CANONICAL_STATUS_GLOSSARY.md`
+4. normalize naming drift
+5. triage mixed families
+6. isolate obvious residue
+7. bind schedule to effect proof
+8. convert static text field into dynamic registry-backed corpus
 
 ---
 
-## 5. Anti-Pollution Rule
+## 5. Filtering Rule
+
+Every current file should receive one handling decision:
+
+```yaml
+Handling_Decision:
+  - keep
+  - update
+  - merge
+  - split
+  - rebind
+  - archive
+  - retire_when_safe
+  - hold_candidate
+```
+
+Default decision:
+
+```text
+update existing active register before creating a new concept document.
+```
+
+---
+
+## 6. Anti-Pollution Rule
 
 A text or branch becomes pollution not only by being wrong,
 but by remaining:
+
 - unnamed
 - unclassified
 - unowned
 - unreturned
 - unnormalized
+- duplicated across active registers
+- status-ambiguous
 
 This cleanup queue exists to prevent that drift.
 
 ---
 
-## 6. Related Artifacts
+## 7. Related Artifacts
 
 Read together with:
+
 - `CONTAMINATION_AND_PRIORITY_POLICY.md`
 - `LEGACY_SEED_CONTAMINATION_TRIAGE.md`
 - `LEGACY_SEED_NAMING_NORMALIZATION_PLAN.md`
 - `BRANCH_TOPOLOGY_AND_CLEANUP_REGISTER.md`
 - `DYNAMIC_CORPUS_DATABASE_NOTE.md`
 - `SCHEDULING_EFFECTIVENESS_GAP_NOTE.md`
+- `ARTIFACT_RECORD_SCHEMA.md`
+- `CANONICAL_STATUS_GLOSSARY.md`
 
 ---
 
-## 7. Suggested Next Artifacts
+## 8. Suggested Next Artifacts or Updates
 
-1. `SCHEDULING_EFFECT_REGISTER.md`
-2. `MODEL_TO_WINDOW_OWNERSHIP_MAP.md`
-3. `CLUSTER_COVERAGE_MATRIX.md`
+1. regenerate `UNIFIED_ARTIFACT_REGISTER.md` from `current_files.txt`
+2. update `ROLE_CLASSIFICATION_TABLE.md` against the current file inventory
+3. compress overlapping cleanup language into this queue
 4. future machine-readable cleanup queue layer
 
 ---
 
-## 8. Status
+## 9. Status
 
 - cleanup_queue_created: true
 - known_contamination_items_named: true
+- whole_corpus_filtering_added: true
 - highest_priority_fronts_defined: true
+- dynamic_registry_conversion_active: true
 - return_to_00: true
