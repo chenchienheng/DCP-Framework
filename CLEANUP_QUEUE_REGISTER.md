@@ -72,6 +72,8 @@ Each cleanup item should eventually include:
 | C-017 | whole-ecosystem topology sphere alignment | `EXTERNAL_NODE_ONCHAIN_SPEC.md` + `ECOSYSTEM_TOPOLOGY_SPHERE_ALIGNMENT_ADDENDUM.md` | flat_tool_cluster_risk | P0-P1 | bind families to topology-sphere roles | external nodes classified by dependency, authority, coupling, return, replacement, and tri-coupled status | prevents GitHub-only reading and ordinary tool-cluster flattening | active |
 | C-018 | persistent agent habitat module | `MODULE_14_PERSISTENT_AGENT_HABITAT.md` | long_running_agent_runtime_gap | P0-P1 | bind to habitat valence + review return | define habitat, persistence, context continuity, and review return as XuanLing runtime landing grammar | OpenAI/Ona shows long-running agents need secure persistent work habitats, not only models | active |
 | C-019 | namespace pollution extraction | `NAMESPACE_REGISTRY.md` + `NAMING_POLLUTION_RULES.md` | namespace_layer_collapse_risk | P0 | classify + boundary + public exposure control | every name receives layer, purpose, forbidden misuse, exposure boundary, and candidate status | prevents Qinyi/XuanLing/XLA/XLEN/XAFD/CoreTri/private names/cases/valences from contaminating one another | active |
+| C-020 | active restructuring task readability | `ACTIVE_RESTRUCTURING_TASK_MAP.md` | governance_code_opacity | P1 | restore human-readable task names | each cleanup front has both visible task name and internal code | prevents internal governance codes from hiding task purpose from the human reviewer | active |
+| C-021 | security threat model and adapter hardening | `SECURITY_THREAT_MODEL.md` + `SECURITY_FINDINGS_REGISTER.md` + `AGENT_INSTRUCTION_INTEGRITY_SPEC.md` + `ADAPTER_SECURITY_BASELINE.md` | governance_security_risk | P0 | build security layer baseline | protect instruction integrity, adapter red gates, evidence boundary, credentials, public/private boundary, and runtime activation | DCP/XuanLing security risk is governance text being wrongly promoted into instruction, permission, fact, runtime, or external writeback | active |
 
 ---
 
@@ -169,6 +171,17 @@ Reason:
 - names collapse when they lack layer, purpose, boundary, exposure status, and candidate state
 - Qinyi / XuanLing / XLA / XLEN / XAFD / CoreTri / private names / case modules / valences must remain distinct
 
+### Front I — Security Threat Model and Adapter Hardening
+
+Items:
+
+- C-021
+
+Reason:
+
+- DCP / XuanLing is not currently a conventional production web app; security risk concentrates in instruction integrity, adapter writeback, credentials, evidence integrity, public/private boundary, and runtime activation
+- markdown must not become authority, and future adapters must not become external writeback without red gates
+
 ---
 
 ## 4. Cleanup Rule
@@ -186,6 +199,7 @@ Default cleanup order:
 9. bind ecosystem families into topology-sphere roles
 10. bind persistent agent habitat modules into runtime landing grammar
 11. extract namespace pollution into name registry and naming rules
+12. bind security threat model and adapter hardening into XLA / LOA
 
 ---
 
@@ -228,6 +242,7 @@ but by remaining:
 - tool-clustered without authority and return
 - runtime-ambitious without habitat, evidence, and review boundaries
 - namespace-ambiguous or public-unsafe
+- security-ambiguous where text, adapters, credentials, evidence, or intake can be promoted without review
 
 This cleanup queue exists to prevent that drift.
 
@@ -250,6 +265,11 @@ Read together with:
 - `MODULE_14_PERSISTENT_AGENT_HABITAT.md`
 - `NAMESPACE_REGISTRY.md`
 - `NAMING_POLLUTION_RULES.md`
+- `ACTIVE_RESTRUCTURING_TASK_MAP.md`
+- `SECURITY_THREAT_MODEL.md`
+- `SECURITY_FINDINGS_REGISTER.md`
+- `AGENT_INSTRUCTION_INTEGRITY_SPEC.md`
+- `ADAPTER_SECURITY_BASELINE.md`
 
 ---
 
@@ -261,7 +281,8 @@ Read together with:
 4. reflect ecosystem topology-sphere alignment in `ECOSYSTEM_FAMILY_ONBOARDING_ROADMAP.md`
 5. connect Module 14 to `MODEL_INVOCATION_CONTRACT.md` and `JULES_TASKBOARD.md`
 6. link namespace registry to future public release / Zenodo packaging rules
-7. future machine-readable cleanup queue layer
+7. link Security Layer to future adapter / webhook / OAuth / evidence specs
+8. future machine-readable cleanup queue layer
 
 ---
 
@@ -273,6 +294,7 @@ Read together with:
 - ecosystem_topology_sphere_alignment_added: true
 - persistent_agent_habitat_added: true
 - namespace_pollution_extraction_added: true
+- security_threat_model_added: true
 - highest_priority_fronts_defined: true
 - dynamic_registry_conversion_active: true
 - return_to_00: true
