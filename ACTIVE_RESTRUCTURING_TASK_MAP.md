@@ -8,7 +8,7 @@
 
 ## 0. Status
 
-- map_version: v0.1
+- map_version: v0.2
 - status: Active task map / Not closeout
 - branch: `audit/lean-dynamic-sync-v0-1-clean`
 - related_pr: `#270`
@@ -18,7 +18,7 @@
 
 ## 1. One-Line Reading
 
-This branch is not just tidying documents. It is restructuring XuanLing's internal governance so names, states, tools, humans, cases, valences, runtime claims, and return paths stop contaminating each other.
+This branch is not just tidying documents. It is restructuring XuanLing's internal governance so names, states, tools, humans, cases, valences, runtime claims, security boundaries, and return paths stop contaminating each other.
 
 ---
 
@@ -36,6 +36,7 @@ This branch is not just tidying documents. It is restructuring XuanLing's intern
 | 命名污染抽離 | C-019 / `NAMESPACE_REGISTRY.md`, `NAMING_POLLUTION_RULES.md` | assign every name a layer, purpose, forbidden misuse, and status | Active |
 | Human Origin Layer / Source Anchor | C-019-P0 / `HUMAN_ORIGIN_LAYER.md` | keep User outside XLEN; User is Source Anchor, not node | Added / needs cross-linking |
 | Human Origin Naming Rule | C-019-P0 Addendum / `NAMING_POLLUTION_RULES_HUMAN_ORIGIN_ADDENDUM.md` | add hard rule: User ≠ Node | Added / needs parent-rule integration |
+| 治理安全與 agent 信任邊界掃描 | C-021 / `SECURITY_THREAT_MODEL.md`, `SECURITY_FINDINGS_REGISTER.md`, `AGENT_INSTRUCTION_INTEGRITY_SPEC.md`, `ADAPTER_SECURITY_BASELINE.md` | protect instruction integrity, adapter red gates, evidence boundaries, credentials, public/private boundary, and runtime activation | Active |
 
 ---
 
@@ -55,6 +56,7 @@ The current branch uses internal governance codes such as:
 - C-017
 - C-019
 - C-019-P0
+- C-021
 
 Those codes are useful for repo governance but poor for human readability.
 
@@ -71,6 +73,7 @@ Surface vocabulary cleanup
 → human origin boundary
 → ecosystem topology sphere
 → persistent agent habitat
+→ governance security spine
 → dynamic corpus filtering
 → register reconciliation
 ```
@@ -79,13 +82,14 @@ Surface vocabulary cleanup
 
 ## 5. Plain-Language Summary
 
-The branch is currently doing five practical things:
+The branch is currently doing six practical things:
 
 1. naming things correctly
 2. stopping names from stealing each other's roles
 3. separating user, Qinyi, XuanLing, tools, cases, and valences
 4. turning external ecosystem tools into governed nodes instead of a tool pile
-5. preparing the repo for whole-corpus filtering and machine-readable governance
+5. protecting instruction, evidence, adapter, credential, and runtime boundaries
+6. preparing the repo for whole-corpus filtering and machine-readable governance
 
 ---
 
@@ -99,6 +103,7 @@ This branch does not mean:
 - external tools are authorized
 - the user is an XLEN node
 - Qinyi is autonomous
+- adapter writeback is active
 - PR equals closeout
 
 ---
@@ -108,10 +113,11 @@ This branch does not mean:
 Recommended next visible work names:
 
 1. `C-019-P0 Cross-Linking` — connect Human Origin Layer back into namespace registry and pollution rules.
-2. `C-012 Whole-Corpus Filter Pass 1` — assign handling decisions to current files.
-3. `C-013 Register Reconciliation Pass 1` — align corpus index, role table, and artifact register.
-4. `C-017 Ecosystem Roadmap Patch` — safely patch ecosystem onboarding roadmap in small sections.
-5. `PR #270 Return Packet` — make the review container readable before merge consideration.
+2. `C-021 Security Cross-Linking` — connect Security Layer to active task map, adapter specs, and future runtime red gates.
+3. `C-012 Whole-Corpus Filter Pass 1` — assign handling decisions to current files.
+4. `C-013 Register Reconciliation Pass 1` — align corpus index, role table, and artifact register.
+5. `C-017 Ecosystem Roadmap Patch` — safely patch ecosystem onboarding roadmap in small sections.
+6. `PR #270 Return Packet` — make the review container readable before merge consideration.
 
 ---
 
