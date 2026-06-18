@@ -8,7 +8,7 @@
 
 ## 0. Status
 
-- map_version: v0.4
+- map_version: v0.5
 - status: Active task map / Not closeout
 - branch: `audit/lean-dynamic-sync-v0-1-clean`
 - related_pr: `#270`
@@ -18,7 +18,7 @@
 
 ## 1. One-Line Reading
 
-This branch is not just tidying documents. It is restructuring XuanLing's internal governance so names, states, tools, humans, cases, valences, runtime claims, security boundaries, temporal records, token use, and return paths stop contaminating each other.
+This branch is not just tidying documents. It is restructuring XuanLing's internal governance so names, states, tools, humans, cases, valences, runtime claims, security boundaries, temporal records, token use, local agent workflows, and return paths stop contaminating each other.
 
 ---
 
@@ -39,6 +39,7 @@ This branch is not just tidying documents. It is restructuring XuanLing's intern
 | 治理安全與 agent 信任邊界掃描 | C-021 / `SECURITY_THREAT_MODEL.md`, `SECURITY_FINDINGS_REGISTER.md`, `AGENT_INSTRUCTION_INTEGRITY_SPEC.md`, `ADAPTER_SECURITY_BASELINE.md` | protect instruction integrity, adapter red gates, evidence boundaries, credentials, public/private boundary, and runtime activation | Active |
 | 時態序列與狀態唯一性 | C-022 / `TEMPORAL_STATE_SEQUENCE_SPEC.md` | bind logs, rules, settings, functions, PRs, and agent actions to time, record, impact, extension, feedback, and review path | Active |
 | Token Capital 與私有學習迴圈 | C-023 / `MODULE_15_TOKEN_CAPITAL_PRIVATE_LEARNING_LOOP.md`, `C023_TOKEN_CAPITAL_STATUS.md` | convert AI usage into reusable memory, judgment, workflow, cases, rules, and next-round capability | Added as module + status addendum |
+| Codex Presentation Skill Loop | C-024 / `MODULE_16_CODEX_PRESENTATION_SKILL_LOOP.md`, `C024_CODEX_PRESENTATION_SKILL_LOOP_STATUS.md` | turn presentation creation into a bounded local habitat workflow with permission gate, outline-first production, route choice, and skill recycle | Added as module + status addendum |
 
 ---
 
@@ -61,6 +62,7 @@ The current branch uses internal governance codes such as:
 - C-021
 - C-022
 - C-023
+- C-024
 
 Those codes are useful for repo governance but poor for human readability.
 
@@ -80,6 +82,7 @@ Surface vocabulary cleanup
 → governance security spine
 → temporal state sequence
 → token capital learning loop
+→ Codex local skill loop
 → dynamic corpus filtering
 → register reconciliation
 ```
@@ -88,7 +91,7 @@ Surface vocabulary cleanup
 
 ## 5. Plain-Language Summary
 
-The branch is currently doing eight practical things:
+The branch is currently doing nine practical things:
 
 1. naming things correctly
 2. stopping names from stealing each other's roles
@@ -97,7 +100,8 @@ The branch is currently doing eight practical things:
 5. protecting instruction, evidence, adapter, credential, and runtime boundaries
 6. preventing logs, rules, settings, functions, PRs, and agent actions from collapsing into false same-state records
 7. converting AI usage into reusable memory, judgment, workflow, cases, rules, and next-round capability
-8. preparing the repo for whole-corpus filtering and machine-readable governance
+8. turning local Codex artifact production into a bounded, reviewable, recyclable skill loop
+9. preparing the repo for whole-corpus filtering and machine-readable governance
 
 ---
 
@@ -114,6 +118,8 @@ This branch does not mean:
 - adapter writeback is active
 - temporal sequence spec is a deployed event store
 - token usage automatically equals token capital
+- Codex has universal superiority over ChatGPT / Qinyi
+- a single successful workflow is an approved permanent skill
 - PR equals closeout
 
 ---
@@ -126,10 +132,11 @@ Recommended next visible work names:
 2. `C-021 Security Cross-Linking` — connect Security Layer to active task map, adapter specs, and future runtime red gates.
 3. `C-022 Temporal Cross-Linking` — connect temporal state sequence to artifact schema, logs, and return packets.
 4. `C-023 Token Capital Cross-Linking` — connect private learning loop to XLA, LOA, cost governance, and model routing notes.
-5. `C-012 Whole-Corpus Filter Pass 1` — assign handling decisions to current files.
-6. `C-013 Register Reconciliation Pass 1` — align corpus index, role table, and artifact register.
-7. `C-017 Ecosystem Roadmap Patch` — safely patch ecosystem onboarding roadmap in small sections.
-8. `PR #270 Return Packet` — make the review container readable before merge consideration.
+5. `C-024 Codex Skill Loop Cross-Linking` — connect local habitat workflow to LOA, Skill Recycle, and artifact-production safety rules.
+6. `C-012 Whole-Corpus Filter Pass 1` — assign handling decisions to current files.
+7. `C-013 Register Reconciliation Pass 1` — align corpus index, role table, and artifact register.
+8. `C-017 Ecosystem Roadmap Patch` — safely patch ecosystem onboarding roadmap in small sections.
+9. `PR #270 Return Packet` — make the review container readable before merge consideration.
 
 ---
 
