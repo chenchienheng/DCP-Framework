@@ -8,8 +8,8 @@
 
 ## 0. Status
 
-- register_version: v0.2
-- status: Active register / Needs reconciliation after Pass 1
+- register_version: v0.3
+- status: Active register / Needs further row-by-row reconciliation
 - source_inventory: `current_files.txt`
 - filter_source: `WHOLE_CORPUS_FILTER_PASS_1.md`
 - gate_source: `EIGHT_GATE_ROUTING_PASS_1.md`
@@ -81,7 +81,7 @@ They are review states for corpus governance.
 | `LEGACY_SEED_NAMING_NORMALIZATION_PLAN.md` | G3 | keep | useful naming normalization plan |
 | `NAMING_DRIFT_RESOLUTION_REGISTER.md` | G3 | keep | active naming resolution register |
 | `NAMING_DRIFT_FILE_LEVEL_DIFFS.md` | G3 | merge | support material for naming register |
-| `ROLE_CLASSIFICATION_TABLE.md` | G3 | update | update with eight-gate fields |
+| `ROLE_CLASSIFICATION_TABLE.md` | G3 | update | gate-aware role overlay added |
 
 ### Group C — Source / Temporal / Evidence / Replay
 
@@ -147,6 +147,8 @@ They are review states for corpus governance.
 |---|---|---|---|
 | `MODULE_15_TOKEN_CAPITAL_PRIVATE_LEARNING_LOOP.md` | G7 | keep | active token capital module |
 | `C023_TOKEN_CAPITAL_STATUS.md` | G7 | keep | C-023 status note |
+| `TOKEN_AGENT_EXPANSION_RISK_NOTE.md` | G7 | keep | active No-Go advisory for token / agent expansion; secondary G5/G4 |
+| `C027_TOKEN_AGENT_EXPANSION_RISK_STATUS.md` | G7 | keep | active C-027 risk-gate status; group expansion disabled |
 
 ### Group H — Atlas / Register / Architecture / Cleanup
 
@@ -161,8 +163,9 @@ They are review states for corpus governance.
 | `C025_ARCHITECTURE_WINDOW_V0_9_STATUS.md` | G8 | keep | C-025 status note |
 | `WHOLE_CORPUS_FILTER_PASS_1.md` | G8 | keep | active C-012 pass |
 | `C012_WHOLE_CORPUS_FILTER_PASS_1_STATUS.md` | G8 | keep | C-012 status note |
-| `REPOSITORY_CORPUS_INDEX.md` | G8 | update | reconcile after this register |
-| `UNIFIED_ARTIFACT_REGISTER.md` | G8 | update | current file; now v0.2 |
+| `C013_REGISTER_RECONCILIATION_PASS_1.md` | G8 | keep | active C-013 reconciliation pass |
+| `REPOSITORY_CORPUS_INDEX.md` | G8 | update | gate-aware v0.4 added |
+| `UNIFIED_ARTIFACT_REGISTER.md` | G8 | update | current file; now v0.3 |
 | `BRANCH_TOPOLOGY_AND_CLEANUP_REGISTER.md` | G8 | merge | absorb into cleanup queue / architecture map |
 | `CLUSTER_COVERAGE_MATRIX.md` | G8 | update | link coverage to eight gates |
 | `CLUSTER_COVERAGE_NOTE.md` | G8 | merge | absorb into matrix or register |
@@ -187,12 +190,12 @@ They are review states for corpus governance.
 
 ## 4. Register Gaps
 
-The following are known gaps after v0.2:
+The following are known gaps after v0.3:
 
-1. `current_files.txt` does not yet include PR #270 added files.
-2. `REPOSITORY_CORPUS_INDEX.md` and `ROLE_CLASSIFICATION_TABLE.md` still need reconciliation.
-3. Some historical files listed in v0.1 are not present in `current_files.txt`; they should be checked before removal from long-term references.
-4. Keep/update/merge/archive decisions are Pass 1 review states, not final actions.
+1. `REPOSITORY_CORPUS_INDEX.md` and `ROLE_CLASSIFICATION_TABLE.md` are gate-aware but still need future row-by-row QA.
+2. Some historical files listed in earlier registers are not present in `current_files.txt`; they should be checked before removal from long-term references.
+3. Keep/update/merge/archive decisions are Pass 1 review states, not final actions.
+4. C-027 introduces token/cost risk governance, but no external billing or runtime control exists.
 
 ---
 
@@ -200,14 +203,12 @@ The following are known gaps after v0.2:
 
 ```yaml
 Next_Actions:
-  C012_B:
-    action: refresh current_files inventory to include PR #270 artifacts
-  C013_A:
-    action: reconcile REPOSITORY_CORPUS_INDEX against this register
-  C013_B:
-    action: reconcile ROLE_CLASSIFICATION_TABLE against this register
   C014_A:
     action: propagate canonical status terms into updated artifacts
+  C027_A:
+    action: cross-link token expansion No-Go to Token Capital, Habitat, and Security modules
+  C019_P0:
+    action: cross-link Human Origin Layer back into namespace registry and pollution rules
 ```
 
 ---
@@ -225,6 +226,8 @@ Do not promote:
 | keep | permanent immunity |
 | update | defect |
 | hold_candidate | active runtime |
+| No-Go advisory | external runtime control |
+| token estimate | actual bill |
 
 ---
 
@@ -233,7 +236,6 @@ Do not promote:
 - register_synchronized: partial
 - pass_1_decisions_loaded: true
 - eight_gate_fields_added: true
-- needs_inventory_refresh: true
-- needs_repository_index_reconciliation: true
-- needs_role_table_reconciliation: true
+- c027_token_agent_risk_added: true
+- needs_row_by_row_qa: true
 - closeout: false
