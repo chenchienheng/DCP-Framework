@@ -8,8 +8,8 @@
 
 ## 0. Index Status
 
-- index_version: v0.4
-- status: Partially reconciled after C-012 Pass 1
+- index_version: v0.5
+- status: Partially reconciled after C-012 Pass 1 / C-027 added
 - source_inventory: `current_files.txt`
 - detailed_register: `UNIFIED_ARTIFACT_REGISTER.md`
 - reconciliation_pass: `C013_REGISTER_RECONCILIATION_PASS_1.md`
@@ -103,11 +103,12 @@ Core artifacts:
 - `MODEL_INVOCATION_CONTRACT.md`
 - `MODEL_TO_WINDOW_OWNERSHIP_MAP.md`
 - `05_topology/feasible-domain-and-responsibility.md`
+- `TOKEN_AGENT_EXPANSION_RISK_NOTE.md` secondary relation
 
 Purpose:
 
 ```text
-Keep routing, approval, model invocation, writeback, and security boundaries distinct.
+Keep routing, approval, model invocation, writeback, security boundaries, and escalation gates distinct.
 ```
 
 ### G5 — Habitat / Carrier / Ecosystem Nodes
@@ -123,11 +124,12 @@ Core artifacts:
 - `NETWORK_STRUCTURE_HIERARCHY_NOTE.md`
 - `GITHUB_OPERATION_CAPABILITY_MATRIX.md`
 - `AGENT_READINESS_CHECKLIST.md`
+- `TOKEN_AGENT_EXPANSION_RISK_NOTE.md` secondary relation
 
 Purpose:
 
 ```text
-Classify tools, adapters, models, repos, local folders, and agent surfaces as governed carriers, not sovereign centers.
+Classify tools, adapters, models, repos, local folders, group expansion, and agent surfaces as governed carriers, not sovereign centers.
 ```
 
 ### G6 — Production / Route / Skill Loop
@@ -151,11 +153,13 @@ Core artifacts:
 
 - `MODULE_15_TOKEN_CAPITAL_PRIVATE_LEARNING_LOOP.md`
 - `C023_TOKEN_CAPITAL_STATUS.md`
+- `TOKEN_AGENT_EXPANSION_RISK_NOTE.md`
+- `C027_TOKEN_AGENT_EXPANSION_RISK_STATUS.md`
 
 Purpose:
 
 ```text
-Convert useful AI usage into memory, judgment, workflow, case, rule, or next-round capability.
+Convert useful AI usage into memory, judgment, workflow, case, rule, or next-round capability while preventing uncontrolled token and agent expansion.
 ```
 
 ### G8 — Atlas / Register / Architecture / Cleanup
@@ -215,15 +219,17 @@ Why:
 1. PR #270 added governance artifacts beyond 00-05 family indexing.
 2. `current_files.txt` has been refreshed with PR #270 artifacts.
 3. `UNIFIED_ARTIFACT_REGISTER.md` now carries Pass 1 handling decisions.
-4. `ROLE_CLASSIFICATION_TABLE.md` still needs eight-gate overlay update.
+4. `ROLE_CLASSIFICATION_TABLE.md` now has eight-gate overlay.
+5. C-027 adds token / agent expansion risk governance and a No-Go gate for group expansion.
 
 ---
 
 ## 5. Status
 
 - family_normalization_verified: legacy_only
-- cross_family_link_consistency: needs_recheck_after_v0_4
+- cross_family_link_consistency: needs_recheck_after_v0_5
 - gate_aware_index_added: true
 - artifact_register_source_order_added: true
-- role_table_reconciliation_pending: true
+- role_table_gate_overlay_added: true
+- c027_token_agent_risk_added: true
 - closeout: false
