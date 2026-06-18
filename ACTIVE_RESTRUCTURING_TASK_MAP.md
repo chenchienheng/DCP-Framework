@@ -8,7 +8,7 @@
 
 ## 0. Status
 
-- map_version: v0.6
+- map_version: v0.7
 - status: Active task map / Not closeout
 - branch: `audit/lean-dynamic-sync-v0-1-clean`
 - related_pr: `#270`
@@ -18,7 +18,7 @@
 
 ## 1. One-Line Reading
 
-This branch is not just tidying documents. It is restructuring XuanLing's internal governance so names, states, tools, humans, cases, valences, runtime claims, security boundaries, temporal records, token use, local agent workflows, architecture-window synthesis, and return paths stop contaminating each other.
+This branch is not just tidying documents. It is restructuring XuanLing's internal governance so names, states, tools, humans, cases, valences, runtime claims, security boundaries, temporal records, token use, local agent workflows, architecture-window synthesis, eight-gate routing, and return paths stop contaminating each other.
 
 ---
 
@@ -41,6 +41,7 @@ This branch is not just tidying documents. It is restructuring XuanLing's intern
 | Token Capital 與私有學習迴圈 | C-023 / `MODULE_15_TOKEN_CAPITAL_PRIVATE_LEARNING_LOOP.md`, `C023_TOKEN_CAPITAL_STATUS.md` | convert AI usage into reusable memory, judgment, workflow, cases, rules, and next-round capability | Added as module + status addendum |
 | Codex Presentation Skill Loop | C-024 / `MODULE_16_CODEX_PRESENTATION_SKILL_LOOP.md`, `C024_CODEX_PRESENTATION_SKILL_LOOP_STATUS.md` | turn presentation creation into a bounded local habitat workflow with permission gate, outline-first production, route choice, and skill recycle | Added as module + status addendum |
 | 架構窗 v0.9 主線收束 | C-025 / `XUANLING_ARCHITECTURE_WINDOW_v0_9.md`, `C025_ARCHITECTURE_WINDOW_V0_9_STATUS.md` | consolidate C-017 through C-024 into one readable mainline: human direction, model absorption, tool carrying, task return, capability recycling | Added as architecture window + status addendum |
+| 八門八轉軸收斂 | C-026 / `EIGHT_GATE_ROTATION_AXIS_CONSOLIDATION.md`, `C026_EIGHT_GATE_ROTATION_AXIS_STATUS.md` | route scattered tasks through eight governable gates: source, intake, naming, authority, habitat, production, return, and atlas closeout | Added as P0 consolidation axis |
 
 ---
 
@@ -65,6 +66,7 @@ The current branch uses internal governance codes such as:
 - C-023
 - C-024
 - C-025
+- C-026
 
 Those codes are useful for repo governance but poor for human readability.
 
@@ -86,6 +88,7 @@ Surface vocabulary cleanup
 → token capital learning loop
 → Codex local skill loop
 → architecture window v0.9
+→ eight-gate rotation-axis consolidation
 → dynamic corpus filtering
 → register reconciliation
 ```
@@ -94,7 +97,7 @@ Surface vocabulary cleanup
 
 ## 5. Plain-Language Summary
 
-The branch is currently doing ten practical things:
+The branch is currently doing eleven practical things:
 
 1. naming things correctly
 2. stopping names from stealing each other's roles
@@ -105,7 +108,8 @@ The branch is currently doing ten practical things:
 7. converting AI usage into reusable memory, judgment, workflow, cases, rules, and next-round capability
 8. turning local Codex artifact production into a bounded, reviewable, recyclable skill loop
 9. consolidating scattered modules into one readable architecture window
-10. preparing the repo for whole-corpus filtering and machine-readable governance
+10. routing scattered tasks through eight governable gates
+11. preparing the repo for whole-corpus filtering and machine-readable governance
 
 ---
 
@@ -125,6 +129,7 @@ This branch does not mean:
 - Codex has universal superiority over ChatGPT / Qinyi
 - a single successful workflow is an approved permanent skill
 - architecture window v0.9 is approved doctrine
+- eight-gate routing is approval
 - PR equals closeout
 
 ---
@@ -133,16 +138,17 @@ This branch does not mean:
 
 Recommended next visible work names:
 
-1. `C-025 Mainline Cross-Linking` — connect architecture window v0.9 to active modules, return packet, and review map.
-2. `C-019-P0 Cross-Linking` — connect Human Origin Layer back into namespace registry and pollution rules.
-3. `C-021 Security Cross-Linking` — connect Security Layer to active task map, adapter specs, and future runtime red gates.
-4. `C-022 Temporal Cross-Linking` — connect temporal state sequence to artifact schema, logs, and return packets.
-5. `C-023 Token Capital Cross-Linking` — connect private learning loop to XLA, LOA, cost governance, and model routing notes.
-6. `C-024 Codex Skill Loop Cross-Linking` — connect local habitat workflow to LOA, Skill Recycle, and artifact-production safety rules.
-7. `C-012 Whole-Corpus Filter Pass 1` — assign handling decisions to current files.
-8. `C-013 Register Reconciliation Pass 1` — align corpus index, role table, and artifact register.
-9. `C-017 Ecosystem Roadmap Patch` — safely patch ecosystem onboarding roadmap in small sections.
-10. `PR #270 Return Packet` — make the review container readable before merge consideration.
+1. `C-026 Gate Routing Pass 1` — classify current C-012 through C-025 by primary gate and secondary gate.
+2. `C-025 Mainline Cross-Linking` — connect architecture window v0.9 to active modules, return packet, and review map.
+3. `C-019-P0 Cross-Linking` — connect Human Origin Layer back into namespace registry and pollution rules.
+4. `C-021 Security Cross-Linking` — connect Security Layer to active task map, adapter specs, and future runtime red gates.
+5. `C-022 Temporal Cross-Linking` — connect temporal state sequence to artifact schema, logs, and return packets.
+6. `C-023 Token Capital Cross-Linking` — connect private learning loop to XLA, LOA, cost governance, and model routing notes.
+7. `C-024 Codex Skill Loop Cross-Linking` — connect local habitat workflow to LOA, Skill Recycle, and artifact-production safety rules.
+8. `C-012 Whole-Corpus Filter Pass 1` — assign handling decisions to current files.
+9. `C-013 Register Reconciliation Pass 1` — align corpus index, role table, and artifact register.
+10. `C-017 Ecosystem Roadmap Patch` — safely patch ecosystem onboarding roadmap in small sections.
+11. `PR #270 Return Packet` — make the review container readable before merge consideration.
 
 ---
 
