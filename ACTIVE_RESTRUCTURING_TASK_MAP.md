@@ -8,7 +8,7 @@
 
 ## 0. Status
 
-- map_version: v0.9
+- map_version: v1.0
 - status: Active task map / Not closeout
 - branch: `audit/lean-dynamic-sync-v0-1-clean`
 - related_pr: `#270`
@@ -18,7 +18,7 @@
 
 ## 1. One-Line Reading
 
-This branch is not just tidying documents. It is restructuring XuanLing's internal governance so names, states, tools, humans, cases, valences, runtime claims, security boundaries, temporal records, token use, local agent workflows, architecture-window synthesis, eight-gate routing, whole-corpus filtering, register reconciliation, and return paths stop contaminating each other.
+This branch is not just tidying documents. It is restructuring XuanLing's internal governance so names, states, tools, humans, cases, valences, runtime claims, security boundaries, temporal records, token use, local agent workflows, architecture-window synthesis, eight-gate routing, whole-corpus filtering, register reconciliation, token/agent expansion risk, and return paths stop contaminating each other.
 
 ---
 
@@ -27,7 +27,7 @@ This branch is not just tidying documents. It is restructuring XuanLing's intern
 | Task Name | Internal ID / File | What It Means | Status |
 |---|---|---|---|
 | 全庫篩選重整 | C-012 / `WHOLE_CORPUS_FILTER_PASS_1.md`, `C012_WHOLE_CORPUS_FILTER_PASS_1_STATUS.md`, `current_files.txt` | classify current files and PR-added files into keep / update / merge / archive / hold_candidate decisions | Pass 1 added / inventory refreshed / register loaded |
-| Register 對齊 | C-013 / `C013_REGISTER_RECONCILIATION_PASS_1.md`, `REPOSITORY_CORPUS_INDEX.md`, `ROLE_CLASSIFICATION_TABLE.md`, `UNIFIED_ARTIFACT_REGISTER.md` | reconcile corpus index, role table, and artifact register under eight-gate structure | Pass 1 added / index v0.4 / role table v0.3 |
+| Register 對齊 | C-013 / `C013_REGISTER_RECONCILIATION_PASS_1.md`, `REPOSITORY_CORPUS_INDEX.md`, `ROLE_CLASSIFICATION_TABLE.md`, `UNIFIED_ARTIFACT_REGISTER.md` | reconcile corpus index, role table, and artifact register under eight-gate structure | Pass 1 added / index v0.5 / role table v0.4 |
 | 狀態語校正 | C-014 / `CANONICAL_STATUS_GLOSSARY.md` | prevent Candidate / Approved / Runtime / Closeout drift | Active / next propagation target |
 | Runtime 語義降階 | C-015 / `STATUS.md` and related files | keep semantic-runtime distinct from deployed executable runtime | Active |
 | 非線性權圈修正 | C-016 / `THREE_COUPLING_RUNTIME_MAP.md`, `WINDOW_12_MASTER_TABLE.md`, `GATE_64_BINDING_NOTE.md` | prevent 1 / 12 / 64 from being read as a linear ladder | Active |
@@ -42,6 +42,7 @@ This branch is not just tidying documents. It is restructuring XuanLing's intern
 | Codex Presentation Skill Loop | C-024 / `MODULE_16_CODEX_PRESENTATION_SKILL_LOOP.md`, `C024_CODEX_PRESENTATION_SKILL_LOOP_STATUS.md` | turn presentation creation into a bounded local habitat workflow with permission gate, outline-first production, route choice, and skill recycle | Added as module + status addendum |
 | 架構窗 v0.9 主線收束 | C-025 / `XUANLING_ARCHITECTURE_WINDOW_v0_9.md`, `C025_ARCHITECTURE_WINDOW_V0_9_STATUS.md` | consolidate C-017 through C-024 into one readable mainline: human direction, model absorption, tool carrying, task return, capability recycling | Added as architecture window + status addendum |
 | 八門八轉軸收斂 | C-026 / `EIGHT_GATE_ROTATION_AXIS_CONSOLIDATION.md`, `EIGHT_GATE_ROUTING_PASS_1.md`, `C026_EIGHT_GATE_ROTATION_AXIS_STATUS.md` | route scattered tasks through eight governable gates: source, intake, naming, authority, habitat, production, return, and atlas closeout | Pass 1 added / used by corpus filtering |
+| Token / Agent 擴張風險閘 | C-027 / `TOKEN_AGENT_EXPANSION_RISK_NOTE.md`, `C027_TOKEN_AGENT_EXPANSION_RISK_STATUS.md` | pause group expansion and multi-agent escalation until token budget, retry limit, tool allowlist, context recycle, human review gate, and cost audit exist | No-Go / active risk gate |
 
 ---
 
@@ -68,6 +69,7 @@ The current branch uses internal governance codes such as:
 - C-024
 - C-025
 - C-026
+- C-027
 
 Those codes are useful for repo governance but poor for human readability.
 
@@ -94,6 +96,7 @@ Surface vocabulary cleanup
 → inventory refresh
 → artifact register update
 → corpus index / role table reconciliation
+→ token / agent expansion No-Go gate
 → status propagation
 ```
 
@@ -101,7 +104,7 @@ Surface vocabulary cleanup
 
 ## 5. Plain-Language Summary
 
-The branch is currently doing thirteen practical things:
+The branch is currently doing fourteen practical things:
 
 1. naming things correctly
 2. stopping names from stealing each other's roles
@@ -116,6 +119,7 @@ The branch is currently doing thirteen practical things:
 11. classifying corpus files into keep / update / merge / archive / hold_candidate decisions
 12. refreshing inventory and loading artifact-register decisions
 13. reconciling corpus index and role classification to the eight-gate structure
+14. pausing token-heavy group expansion until token/cost/security gates exist
 
 ---
 
@@ -138,6 +142,8 @@ This branch does not mean:
 - eight-gate routing is approval
 - Pass 1 decision is final deletion or archive action
 - role classification is approval
+- token peak estimate is actual bill
+- C-027 No-Go note is external runtime or billing control
 - PR equals closeout
 
 ---
@@ -147,13 +153,14 @@ This branch does not mean:
 Recommended next visible work names:
 
 1. `C014-A Status Propagation Pass` — propagate canonical status terms into files marked update.
-2. `C019-P0 Cross-Linking` — connect Human Origin Layer back into namespace registry and pollution rules.
-3. `C021 Security Cross-Linking` — connect Security Layer to active task map, adapter specs, and future runtime red gates.
-4. `C022 Temporal Cross-Linking` — connect temporal state sequence to artifact schema, logs, and return packets.
-5. `C023 Token Capital Cross-Linking` — connect private learning loop to XLA, LOA, cost governance, and model routing notes.
-6. `C024 Codex Skill Loop Cross-Linking` — connect local habitat workflow to LOA, Skill Recycle, and artifact-production safety rules.
-7. `C025 Mainline Cross-Linking` — connect architecture window v0.9 to active modules, return packet, and review map.
-8. `PR #270 Return Packet` — make the review container readable before merge consideration.
+2. `C027-A Token Risk Cross-Linking` — link No-Go risk note to Token Capital, Habitat, Security, and future cost audit rules.
+3. `C019-P0 Cross-Linking` — connect Human Origin Layer back into namespace registry and pollution rules.
+4. `C021 Security Cross-Linking` — connect Security Layer to active task map, adapter specs, and future runtime red gates.
+5. `C022 Temporal Cross-Linking` — connect temporal state sequence to artifact schema, logs, and return packets.
+6. `C023 Token Capital Cross-Linking` — connect private learning loop to XLA, LOA, cost governance, and model routing notes.
+7. `C024 Codex Skill Loop Cross-Linking` — connect local habitat workflow to LOA, Skill Recycle, and artifact-production safety rules.
+8. `C025 Mainline Cross-Linking` — connect architecture window v0.9 to active modules, return packet, and review map.
+9. `PR #270 Return Packet` — make the review container readable before merge consideration.
 
 ---
 
