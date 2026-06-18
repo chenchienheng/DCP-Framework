@@ -8,12 +8,12 @@
 
 ## 0. Status
 
-- table_version: v0.3
+- table_version: v0.4
 - scope: current inventory + PR #270 active governance artifacts
 - inventory_source: `current_files.txt`
 - artifact_register: `UNIFIED_ARTIFACT_REGISTER.md`
 - reconciliation_pass: `C013_REGISTER_RECONCILIATION_PASS_1.md`
-- status: Gate-aware role overlay added / Not closeout
+- status: Gate-aware role overlay added / C-027 risk gate added / Not closeout
 - return_to_00: true
 
 ---
@@ -46,11 +46,11 @@ Used for persistent return notes, correction markers, index files, chain maps, r
 
 ### 1.7 Security / Authority Control
 
-Used for instruction integrity, dispatch boundary, red-gate, adapter hardening, evidence boundary, and permission-control artifacts.
+Used for instruction integrity, dispatch boundary, red-gate, adapter hardening, evidence boundary, permission-control, and escalation-control artifacts.
 
 ### 1.8 Return / Recycle Asset
 
-Used for token-capital, skill recycle, LOR, learning-loop, and capability-return artifacts.
+Used for token-capital, skill recycle, LOR, learning-loop, cost-risk, and capability-return artifacts.
 
 ---
 
@@ -64,7 +64,7 @@ Used for token-capital, skill recycle, LOR, learning-loop, and capability-return
 | G4 | Authority & Dispatch Gate | permission, XAFD, review, red gate |
 | G5 | Habitat & Carrier Gate | local/cloud/repo/tool/runtime carrier |
 | G6 | Production & Route Gate | artifact route, output path, use case |
-| G7 | Return & Recycle Gate | LOR, token capital, skill recycle |
+| G7 | Return & Recycle Gate | LOR, token capital, skill recycle, cost-risk control |
 | G8 | Atlas & Closeout Gate | XLA, register, archive, closeout boundary |
 
 ---
@@ -98,6 +98,8 @@ Used for token-capital, skill recycle, LOR, learning-loop, and capability-return
 | `JULES_TASKBOARD.md` | Interaction Surface | G6 | update |
 | `MODULE_15_TOKEN_CAPITAL_PRIVATE_LEARNING_LOOP.md` | Return / Recycle Asset | G7 | keep |
 | `C023_TOKEN_CAPITAL_STATUS.md` | Writeback / Register Artifact | G7 | keep |
+| `TOKEN_AGENT_EXPANSION_RISK_NOTE.md` | Security / Authority Control + Return / Recycle Asset | G7 | keep / No-Go advisory |
+| `C027_TOKEN_AGENT_EXPANSION_RISK_STATUS.md` | Writeback / Register Artifact | G7 | keep / No-Go status |
 | `XUANLING_ARCHITECTURE_WINDOW_v0_9.md` | Structural Bone | G8 | keep |
 | `C025_ARCHITECTURE_WINDOW_V0_9_STATUS.md` | Writeback / Register Artifact | G8 | keep |
 | `EIGHT_GATE_ROTATION_AXIS_CONSOLIDATION.md` | Structural Bone | G8 | keep |
@@ -154,6 +156,8 @@ Do not promote:
 | historical verified | current approved |
 | interaction surface | authority to act |
 | carrier role | active runtime |
+| No-Go advisory | external runtime control |
+| token peak estimate | actual bill |
 
 ---
 
@@ -162,5 +166,6 @@ Do not promote:
 - gate_overlay_added: true
 - old_verified_language_downgraded: true
 - active_table_rebased_on_unified_register: true
+- c027_token_agent_risk_added: true
 - full_row_by_row_reconciliation_pending: true
 - closeout: false
