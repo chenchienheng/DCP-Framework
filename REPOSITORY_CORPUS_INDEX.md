@@ -1,67 +1,229 @@
 # Repository Corpus Index
 
-> Reconciled durable index for repository continuity.
-> Maps every verified artifact to its architectural role.
+> Gate-aware index for repository continuity.
+>
+> Purpose: summarize the current corpus under the eight-gate structure and point detailed artifact decisions to `UNIFIED_ARTIFACT_REGISTER.md`.
 
 ---
 
 ## 0. Index Status
-- index_version: v0.3
-- status: fully reconciled (00-05)
+
+- index_version: v0.4
+- status: Partially reconciled after C-012 Pass 1
+- source_inventory: `current_files.txt`
+- detailed_register: `UNIFIED_ARTIFACT_REGISTER.md`
+- reconciliation_pass: `C013_REGISTER_RECONCILIATION_PASS_1.md`
+- related_pr: `#270`
+- closeout: false
 
 ---
 
-## 1. Inventory by Family
+## 1. Reading Rule
 
-### 1.1 Meta & Mother-Law (00)
-- FULL_REPOSITORY_TOPOLOGY_ALIGNMENT.md: Full repository topology alignment report.
-- QINYI_INTERFACE_SIGNATURE_REFERENCE.md: Stable identity anchor for the Qinyi signature.
-- SIGNATURE_ALIGNMENT_NOTE.md: Expanded signature reference scope note.
-- 00_meta/user_identity_anchor.md: Primary identity alignment anchor.
-- 00_meta/FULL_LIFECYCLE_ASSET_MATRIX.md: Asset lifecycle and schema alignment rules.
-- WORLD_CHAIN_MASTER_AXIS.md: Primary Coretri axis layer for World Chain governance.
-- 00_mother-law/README.md: Core governance entry.
-- 00_mother-law/existence-consistency-rule.md: Triple-condition consistency rule.
-- 00_mother-law/mother-architecture-registry-v0-1.md: M1-M5 lineage tracking.
+This index is no longer the only place where every artifact decision lives.
 
-### 1.2 Runtime & Boards (01)
-- XUANLING_VS_DIGITAL_TWIN_SPEC.md: External positioning comparison distinct from Digital Twin.
-- XUANLING_LINGLUO_MASTER_MAP.md: Structural map of conceptual relationships.
-- TRI_COUPLING_STATE_SPEC.md: Tri-coupling as emergent dual-layer multimodality state.
-- 01_native-board/: Board index, blockers, pulse rollup, and permissions.
-- 01_runtime-spine/: GitHub pulse, legacy writeback protection, window alignment and linking rules.
+Current source order:
 
-### 1.3 Sub-systems / Adapter / Field Governance (02-04)
-- docs/qinyi/QINYI_EXTERNAL_INTERFACE_INTEGRATION_CARD_v0.1.md: Qinyi external interface integration card.
-- WORK_OS_CHAIN_INTEGRATION_SPEC.md: Work OS chain integration specification.
-- TASK_ORCHESTRATION_BRIDGE_SPEC.md: Task orchestration bridge spec.
-- CLOUDTOP_RELAY_CHANNEL_SPEC.md: CloudTop relay channel spec.
-- REDUNDANT_LOAD_REDUCTION_SPEC.md: Redundant load reduction spec.
-- INTERNAL_RELATIONAL_MESH_SPEC.md: Internal relational mesh strengthening layer.
-- AXIS_TO_EXTERNAL_ABSORPTION_HANDOFF.md: External ecosystem absorption handoff.
-- 02_runtime-ops/: Active follow-up task tracker.
-- 02_translation-layer/CLOUD_OVER_CLOUD_CONTROL_CENTER_SPEC.md: Cloud-over-Cloud translation bridge coordination spec.
-- 03_board-orchestration/: Window binding, delta mapping, and runtime intake contracts.
-- 04_adapter-layer/: External node specs and adapters.
-- MULTI_CHAIN_DISPATCH_GOVERNANCE.md: Multi-chain dispatch governance specification.
-- CLOUDTOP_PROTOCOL_HARDENING_NOTE.md: Cross-window handoff hardening rules.
-- 03_field-governance/ALL_CLOUD_BOUNDARY_REVIEW_v0_1.md: All-cloud boundary and no-billing feasible domain review.
-- 03_field-governance/BASE_FIELD_CORE_v0_1.md: Minimum base layer for source, node, dependency, view, gate, return, and QIN/View surface governance.
-- 03_field-governance/SOURCE_VIEW_GATE_v0_1.md: Source/view separation gate for reports, dashboards, QIN/View surfaces, export packets, and source-preserving transformations.
-- 03_field-governance/IMPORT_STAGING_AND_STABLE_ID_RULE_v0_1.md: Import staging and stable ID rule for proposed/confirmed ID separation, review gates, and governed BASE promotion.
-- 03_field-governance/ANALYSIS_VIEW_MAP_v0_1.md: Analysis view map for governed views, fact tables, dashboards, trends, matrices, and evidence-preserving visualization boundaries.
-- 03_field-governance/EXPORT_RETURN_PACKET_SCHEMA_v0_1.md: Export/return packet schema for evidence carry, boundary statements, non-approval disclaimers, packet state, and return paths.
-- 03_field-governance/MINIMAL_ROUTER_LAUNCHER_QIN_VIEW_GATE_v0_1.md: Minimal router launcher and QIN view read-write gate for BASE to governed View to QIN to Export/Return routing contracts.
+```yaml
+Source_Order:
+  inventory: current_files.txt
+  artifact_decisions: UNIFIED_ARTIFACT_REGISTER.md
+  filter_pass: WHOLE_CORPUS_FILTER_PASS_1.md
+  gate_routing: EIGHT_GATE_ROUTING_PASS_1.md
+  readable_mainline: XUANLING_ARCHITECTURE_WINDOW_v0_9.md
+```
 
-### 1.4 Return Loop (05)
-- 05_topology/consistent-triad-principle.md: Bone/Event/Writeback consistency principle.
-- 05_topology/feasible-domain-and-responsibility.md: Operational boundary definition.
-- 05_topology/ten-ring-definition-v0-1.md: Recursive loop structure.
-- 05_topology/time-sovereignty.md: Upper-order temporal logic.
-- 05_topology/triad-closed-loop-topology.md: Node/Surface/Link topology conditions.
+This index summarizes corpus families and points to the active register.
+It does not approve, archive, merge, or delete artifacts by itself.
 
 ---
 
-## 2. Status
-- family_normalization_verified: true
-- cross_family_link_consistency: verified
+## 2. Eight-Gate Corpus Families
+
+### G1 — Source Anchor / Human Origin
+
+Core artifacts:
+
+- `00_meta/user_identity_anchor.md`
+- `HUMAN_ORIGIN_LAYER.md`
+- `NAMING_POLLUTION_RULES_HUMAN_ORIGIN_ADDENDUM.md`
+
+Purpose:
+
+```text
+Keep the user/source anchor outside XLEN and preserve direction, review, and authorization boundary.
+```
+
+### G2 — Intake / Source / Temporal / Evidence
+
+Core artifacts:
+
+- `TEMPORAL_STATE_SEQUENCE_SPEC.md`
+- `DISCONTINUITY_REGISTER.md`
+- `MODEL_CONTRADICTION_REGISTER.md`
+- `REPLAY_READINESS_REPORT.md`
+- `SCHEDULING_EFFECT_REGISTER.md`
+- `SCHEDULING_EFFECTIVENESS_GAP_NOTE.md`
+- `04_adapter-layer/source_map.md`
+
+Purpose:
+
+```text
+Separate source, view, evidence, status, replay, scheduling effect, and temporal-state sequence.
+```
+
+### G3 — Naming / Boundary / Status
+
+Core artifacts:
+
+- `NAMESPACE_REGISTRY.md`
+- `NAMING_POLLUTION_RULES.md`
+- `CANONICAL_STATUS_GLOSSARY.md`
+- `C019_NAMESPACE_POLLUTION_STATUS.md`
+- `CONTAMINATION_AND_PRIORITY_POLICY.md`
+- `NAMING_DRIFT_RESOLUTION_REGISTER.md`
+- `ROLE_CLASSIFICATION_TABLE.md`
+
+Purpose:
+
+```text
+Prevent names, status labels, people, tools, modules, cases, and valences from stealing one another's role.
+```
+
+### G4 — Authority / Dispatch / Security
+
+Core artifacts:
+
+- `SECURITY_THREAT_MODEL.md`
+- `SECURITY_FINDINGS_REGISTER.md`
+- `AGENT_INSTRUCTION_INTEGRITY_SPEC.md`
+- `01_runtime-spine/legacy_writeback_block_rule.md`
+- `04_adapter-layer/writeback_gate_spec.md`
+- `04_adapter-layer/writeback_packet_contract.md`
+- `MODEL_INVOCATION_CONTRACT.md`
+- `MODEL_TO_WINDOW_OWNERSHIP_MAP.md`
+- `05_topology/feasible-domain-and-responsibility.md`
+
+Purpose:
+
+```text
+Keep routing, approval, model invocation, writeback, and security boundaries distinct.
+```
+
+### G5 — Habitat / Carrier / Ecosystem Nodes
+
+Core artifacts:
+
+- `MODULE_14_PERSISTENT_AGENT_HABITAT.md`
+- `ADAPTER_SECURITY_BASELINE.md`
+- `EXTERNAL_NODE_ONCHAIN_SPEC.md`
+- `ECOSYSTEM_TOPOLOGY_SPHERE_ALIGNMENT_ADDENDUM.md`
+- `ECOSYSTEM_FAMILY_ONBOARDING_ROADMAP.md`
+- `MODEL_FAMILY_ONCHAIN_SPEC.md`
+- `NETWORK_STRUCTURE_HIERARCHY_NOTE.md`
+- `GITHUB_OPERATION_CAPABILITY_MATRIX.md`
+- `AGENT_READINESS_CHECKLIST.md`
+
+Purpose:
+
+```text
+Classify tools, adapters, models, repos, local folders, and agent surfaces as governed carriers, not sovereign centers.
+```
+
+### G6 — Production / Route / Skill Loop
+
+Core artifacts:
+
+- `MODULE_16_CODEX_PRESENTATION_SKILL_LOOP.md`
+- `C024_CODEX_PRESENTATION_SKILL_LOOP_STATUS.md`
+- `JULES_TASKBOARD.md`
+- `CHATGPT_GITHUB_BOOTSTRAP.md`
+
+Purpose:
+
+```text
+Keep output route, artifact production, review, and skill recycle under use-case boundary.
+```
+
+### G7 — Return / Recycle / Token Capital
+
+Core artifacts:
+
+- `MODULE_15_TOKEN_CAPITAL_PRIVATE_LEARNING_LOOP.md`
+- `C023_TOKEN_CAPITAL_STATUS.md`
+
+Purpose:
+
+```text
+Convert useful AI usage into memory, judgment, workflow, case, rule, or next-round capability.
+```
+
+### G8 — Atlas / Register / Architecture / Cleanup
+
+Core artifacts:
+
+- `XUANLING_ARCHITECTURE_WINDOW_v0_9.md`
+- `C025_ARCHITECTURE_WINDOW_V0_9_STATUS.md`
+- `EIGHT_GATE_ROTATION_AXIS_CONSOLIDATION.md`
+- `EIGHT_GATE_ROUTING_PASS_1.md`
+- `C026_EIGHT_GATE_ROTATION_AXIS_STATUS.md`
+- `WHOLE_CORPUS_FILTER_PASS_1.md`
+- `C012_WHOLE_CORPUS_FILTER_PASS_1_STATUS.md`
+- `UNIFIED_ARTIFACT_REGISTER.md`
+- `REPOSITORY_CORPUS_INDEX.md`
+- `C013_REGISTER_RECONCILIATION_PASS_1.md`
+- `CLEANUP_QUEUE_REGISTER.md`
+- `ACTIVE_RESTRUCTURING_TASK_MAP.md`
+- `DYNAMIC_CORPUS_DATABASE_NOTE.md`
+- `THREE_COUPLING_RUNTIME_MAP.md`
+- `WINDOW_12_MASTER_TABLE.md`
+
+Purpose:
+
+```text
+Make corpus state, architecture mainline, cleanup decisions, and closeout boundary visible without confusing return packets with final closure.
+```
+
+---
+
+## 3. Historical / Candidate / Merge-Aware References
+
+The following may remain useful, but are not treated as current approved doctrine without review:
+
+- `LEGACY_SEED_BRANCH_INVENTORY_SNAPSHOT.md`
+- `LEGACY_SEED_CONTAMINATION_TRIAGE.md`
+- `LEGACY_SEED_MERGE_CANDIDATE_SHORTLIST.md`
+- `LEGACY_SEED_NAMING_NORMALIZATION_PLAN.md`
+- `SEED_SHADOW_POINTER.md`
+- `SEMANTIC_COMPRESSION_REPORT.md`
+- `STAGE_SYNC_SNAPSHOT_2026-04-21.md`
+- `MERGE_LAW_PROPOSAL.md`
+- `SNAPSHOT_MECHANISM_PROPOSAL.md`
+- `THIRD_RUNTIME_ENVIRONMENT_NOTE.md`
+- `XUANLING_WORLD_READINESS_MILESTONES.md`
+
+Handling decisions for these references live in `UNIFIED_ARTIFACT_REGISTER.md`.
+
+---
+
+## 4. Desync Notes
+
+This index replaces the older `fully reconciled (00-05)` claim.
+
+Why:
+
+1. PR #270 added governance artifacts beyond 00-05 family indexing.
+2. `current_files.txt` has been refreshed with PR #270 artifacts.
+3. `UNIFIED_ARTIFACT_REGISTER.md` now carries Pass 1 handling decisions.
+4. `ROLE_CLASSIFICATION_TABLE.md` still needs eight-gate overlay update.
+
+---
+
+## 5. Status
+
+- family_normalization_verified: legacy_only
+- cross_family_link_consistency: needs_recheck_after_v0_4
+- gate_aware_index_added: true
+- artifact_register_source_order_added: true
+- role_table_reconciliation_pending: true
+- closeout: false
