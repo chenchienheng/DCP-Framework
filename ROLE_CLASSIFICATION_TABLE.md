@@ -1,15 +1,20 @@
 # Role Classification Table
 
-> Full role classification for durable repository weaving.
-> This table expands on the initial set and covers the verified repository-wide corpus.
+> Role classification for durable repository weaving.
+>
+> Purpose: classify artifacts by role class and eight-gate function without confusing classification with approval.
 
 ---
 
 ## 0. Status
 
-- table_version: v0.2
-- scope: repository-wide verified artifacts
-- purpose: reduce role drift and complete full repository weaving
+- table_version: v0.3
+- scope: current inventory + PR #270 active governance artifacts
+- inventory_source: `current_files.txt`
+- artifact_register: `UNIFIED_ARTIFACT_REGISTER.md`
+- reconciliation_pass: `C013_REGISTER_RECONCILIATION_PASS_1.md`
+- status: Gate-aware role overlay added / Not closeout
+- return_to_00: true
 
 ---
 
@@ -17,126 +22,145 @@
 
 ### 1.1 Upper-Order / Sovereignty-Oriented
 
-Used for artifacts that define upper-order framing, continuity assumptions, or conceptual orientation.
+Used for artifacts that define source, sovereignty, mother-law, human-origin, or upper-order architecture boundaries.
 
 ### 1.2 Structural Bone
 
-Used for artifacts that stabilize long-term structure, versionable continuity, durable reference paths, or reconstructable anchoring.
+Used for artifacts that stabilize durable topology, runtime grammar, atlas structure, or reconstructable architecture.
 
 ### 1.3 Carrying Mesh
 
-Used for artifacts or layers that carry drafts, transit states, working text, or medium-layer correspondence.
+Used for artifacts or layers that carry drafts, transit states, bridge logic, working text, or translation surfaces.
 
 ### 1.4 Interaction Surface
 
-Used for interface-layer nodes, external collaboration surfaces, or replaceable execution/display bodies.
+Used for interface-layer nodes, external collaboration surfaces, tools, adapters, platforms, or replaceable execution/display bodies.
 
 ### 1.5 Transitional / Stage Note
 
-Used for stage-limited alignment notes, bootstrap notes, temporary orientation aids, or memo-style correction layers.
+Used for stage-limited alignment notes, bootstrap notes, snapshots, historical records, or memo-style correction layers.
 
-### 1.6 Writeback Artifact
+### 1.6 Writeback / Register Artifact
 
-Used for persistent return notes, correction markers, index files, chain maps, and durable continuity artifacts.
+Used for persistent return notes, correction markers, index files, chain maps, registers, and continuity artifacts.
+
+### 1.7 Security / Authority Control
+
+Used for instruction integrity, dispatch boundary, red-gate, adapter hardening, evidence boundary, and permission-control artifacts.
+
+### 1.8 Return / Recycle Asset
+
+Used for token-capital, skill recycle, LOR, learning-loop, and capability-return artifacts.
 
 ---
 
-## 2. Full Classification Table
+## 2. Gate Overlay
 
-| Artifact | Primary Class | Secondary Class / Chain Face | Status |
+| Gate | Name | Role Meaning |
+|---|---|---|
+| G1 | Source Anchor Gate | human origin, direction, review |
+| G2 | Intake & Source Gate | source, evidence, temporal intake |
+| G3 | Naming & Boundary Gate | namespace, layer, exposure, status |
+| G4 | Authority & Dispatch Gate | permission, XAFD, review, red gate |
+| G5 | Habitat & Carrier Gate | local/cloud/repo/tool/runtime carrier |
+| G6 | Production & Route Gate | artifact route, output path, use case |
+| G7 | Return & Recycle Gate | LOR, token capital, skill recycle |
+| G8 | Atlas & Closeout Gate | XLA, register, archive, closeout boundary |
+
+---
+
+## 3. Active Classification Table
+
+| Artifact / Family | Primary Class | Primary Gate | Status |
 |---|---|---|---|
-| `00_mother-law/README.md` | Upper-Order / Sovereignty-Oriented | Writeback Chain | verified |
-| `00_mother-law/existence-chain-master-layer.md` | Upper-Order / Sovereignty-Oriented | Bone Chain | verified |
-| `01_runtime-spine/README.md` | Structural Bone | Bone Chain | verified |
-| `01_runtime-spine/github_delta_driven_pulse_rule.md` | Structural Bone | Bone Chain | verified |
-| `01_runtime-spine/legacy_writeback_block_rule.md` | Structural Bone | Bone Chain | verified |
-| `01_runtime-spine/window_alignment_read_order.md` | Structural Bone | Bone Chain | verified |
-| `01_runtime-spine/window_linking_logic_01_07.md` | Structural Bone | Bone Chain | verified |
-| `02_translation-layer/README.md` | Carrying Mesh | Bridge Chain | verified |
-| `03_board-orchestration/README.md` | Interaction Surface | Writeback Chain | verified |
-| `03_board-orchestration/window_binding_registry_01_07.md` | Interaction Surface | Writeback Chain | verified |
-| `03_board-orchestration/window_delta_mapping_template.md` | Interaction Surface | Writeback Chain | verified |
-| `04_adapter-layer/README.md` | Interaction Surface | Bridge Chain | verified |
-| `04_adapter-layer/VIDEO_OUTPUT_NODE_SPEC.md` | Interaction Surface | Bridge Chain | verified |
-| `AGENT_READINESS_CHECKLIST.md` | Writeback Artifact | Writeback Chain | verified |
-| `BRANCH_TOPOLOGY_AND_CLEANUP_REGISTER.md` | Writeback Artifact | Writeback Chain | verified |
-| `CHATGPT_GITHUB_BOOTSTRAP.md` | Transitional / Stage Note | Writeback Chain | verified |
-| `CLEANUP_QUEUE_REGISTER.md` | Writeback Artifact | Writeback Chain | verified |
-| `CLUSTER_COVERAGE_MATRIX.md` | Writeback Artifact | Writeback Chain | verified |
-| `CLUSTER_COVERAGE_NOTE.md` | Transitional / Stage Note | Writeback Chain | verified |
-| `CONTAMINATION_AND_PRIORITY_POLICY.md` | Writeback Artifact | Writeback Chain | verified |
-| `CORE_ACTIONS.md` | Writeback Artifact | Writeback Chain | verified |
-| `DISCONTINUITY_REGISTER.md` | Writeback Artifact | Writeback Chain | verified |
-| `DYNAMIC_CORPUS_DATABASE_NOTE.md` | Transitional / Stage Note | Writeback Chain | verified |
-| `ECOSYSTEM_FAMILY_ONBOARDING_ROADMAP.md` | Interaction Surface | Writeback Chain | verified |
-| `EXTERNAL_API_VERSION_GOVERNANCE_NOTE.md` | Transitional / Stage Note | Writeback Chain | verified |
-| `EXTERNAL_NODE_ONCHAIN_SPEC.md` | Structural Bone | Writeback Chain | verified |
-| `GITHUB_CHAIN_MASTER_MAP.md` | Writeback Artifact | Writeback Chain | verified |
-| `GITHUB_NORMALIZATION_PHASE_PLAN.md` | Structural Bone | Writeback Chain | verified |
-| `GITHUB_OPERATION_CAPABILITY_MATRIX.md` | Writeback Artifact | Writeback Chain | verified |
-| `INTERNAL_RELATIONAL_MESH_SPEC.md` | Structural Bone | Bone Chain | verified |
-| `LEGACY_SEED_BRANCH_INVENTORY_SNAPSHOT.md` | Transitional / Stage Note | Writeback Chain | verified |
-| `LEGACY_SEED_CONTAMINATION_TRIAGE.md` | Writeback Artifact | Writeback Chain | verified |
-| `LEGACY_SEED_MERGE_CANDIDATE_SHORTLIST.md` | Writeback Artifact | Writeback Chain | verified |
-| `LEGACY_SEED_NAMING_NORMALIZATION_PLAN.md` | Structural Bone | Writeback Chain | verified |
-| `MODEL_CONTRADICTION_REGISTER.md` | Writeback Artifact | Writeback Chain | verified |
-| `MODEL_FAMILY_ONCHAIN_SPEC.md` | Structural Bone | Writeback Chain | verified |
-| `MODEL_INVOCATION_CONTRACT.md` | Writeback Artifact | Writeback Chain | verified |
-| `MODEL_TO_WINDOW_OWNERSHIP_MAP.md` | Writeback Artifact | Writeback Chain | verified |
-| `NAMING_DRIFT_FILE_LEVEL_DIFFS.md` | Writeback Artifact | Writeback Chain | verified |
-| `NAMING_DRIFT_RESOLUTION_REGISTER.md` | Writeback Artifact | Writeback Chain | verified |
-| `NETWORK_STRUCTURE_HIERARCHY_NOTE.md` | Structural Bone | Bone Chain | verified |
-| `PLATFORM_SCHEDULER_AND_TOOL_NAMING_MAP.md` | Writeback Artifact | Writeback Chain | verified |
-| `PRIMARY_BONE_STABILITY_SCORECARD.md` | Structural Bone | Bone Chain | verified |
-| `QINYI_INTERFACE_SIGNATURE_REFERENCE.md` | Structural Bone | Writeback Chain | verified |
-| `README.md` | Upper-Order / Sovereignty-Oriented | Writeback Chain | verified |
-| `REPOSITORY_CORPUS_INDEX.md` | Writeback Artifact | Writeback Chain | verified |
-| `ROLE_CLASSIFICATION_TABLE.md` | Writeback Artifact | Writeback Chain | verified |
-| `SCHEDULING_EFFECTIVENESS_GAP_NOTE.md` | Transitional / Stage Note | Writeback Chain | verified |
-| `SCHEDULING_EFFECT_REGISTER.md` | Writeback Artifact | Writeback Chain | verified |
-| `SEED_SHADOW_POINTER.md` | Transitional / Stage Note | Writeback Chain | verified |
-| `SIGNATURE_ALIGNMENT_NOTE.md` | Structural Bone | Writeback Chain | verified |
-| `STAGE_SYNC_SNAPSHOT_2026-04-21.md` | Transitional / Stage Note | Writeback Chain | verified |
-| `STATUS.md` | Writeback Artifact | Writeback Chain | verified |
-| `THIRD_RUNTIME_ENVIRONMENT_NOTE.md` | Transitional / Stage Note | Writeback Chain | verified |
-| `THREE_COUPLING_RUNTIME_MAP.md` | Writeback Artifact | Writeback Chain | verified |
-| `UNIFIED_ARTIFACT_REGISTER.md` | Writeback Artifact | Writeback Chain | verified |
-| `WINDOW_12_MASTER_TABLE.md` | Writeback Artifact | Writeback Chain | verified |
-| `XUANLING_WORLD_READINESS_MILESTONES.md` | Writeback Artifact | Writeback Chain | verified |
+| `00_meta/user_identity_anchor.md` | Upper-Order / Sovereignty-Oriented | G1 | keep |
+| `HUMAN_ORIGIN_LAYER.md` | Upper-Order / Sovereignty-Oriented | G1 | keep |
+| `NAMING_POLLUTION_RULES_HUMAN_ORIGIN_ADDENDUM.md` | Security / Authority Control | G1 | keep |
+| `00_mother-law/` | Upper-Order / Sovereignty-Oriented | G8 | keep/update |
+| `CANONICAL_STATUS_GLOSSARY.md` | Writeback / Register Artifact | G3 | keep |
+| `NAMESPACE_REGISTRY.md` | Writeback / Register Artifact | G3 | keep |
+| `NAMING_POLLUTION_RULES.md` | Security / Authority Control | G3 | keep |
+| `CONTAMINATION_AND_PRIORITY_POLICY.md` | Security / Authority Control | G3 | keep |
+| `TEMPORAL_STATE_SEQUENCE_SPEC.md` | Structural Bone | G2 | keep |
+| `DISCONTINUITY_REGISTER.md` | Writeback / Register Artifact | G2 | update |
+| `MODEL_CONTRADICTION_REGISTER.md` | Writeback / Register Artifact | G2 | update |
+| `SCHEDULING_EFFECT_REGISTER.md` | Writeback / Register Artifact | G2 | keep |
+| `SECURITY_THREAT_MODEL.md` | Security / Authority Control | G4 | keep |
+| `SECURITY_FINDINGS_REGISTER.md` | Writeback / Register Artifact | G4 | keep |
+| `AGENT_INSTRUCTION_INTEGRITY_SPEC.md` | Security / Authority Control | G4 | keep |
+| `ADAPTER_SECURITY_BASELINE.md` | Security / Authority Control | G5 | keep |
+| `04_adapter-layer/` | Interaction Surface | G5 | update/hold_candidate |
+| `EXTERNAL_NODE_ONCHAIN_SPEC.md` | Structural Bone | G5 | keep |
+| `ECOSYSTEM_TOPOLOGY_SPHERE_ALIGNMENT_ADDENDUM.md` | Structural Bone | G5 | keep |
+| `MODULE_14_PERSISTENT_AGENT_HABITAT.md` | Structural Bone | G5 | keep |
+| `MODULE_16_CODEX_PRESENTATION_SKILL_LOOP.md` | Return / Recycle Asset | G6 | keep |
+| `C024_CODEX_PRESENTATION_SKILL_LOOP_STATUS.md` | Writeback / Register Artifact | G6 | keep |
+| `JULES_TASKBOARD.md` | Interaction Surface | G6 | update |
+| `MODULE_15_TOKEN_CAPITAL_PRIVATE_LEARNING_LOOP.md` | Return / Recycle Asset | G7 | keep |
+| `C023_TOKEN_CAPITAL_STATUS.md` | Writeback / Register Artifact | G7 | keep |
+| `XUANLING_ARCHITECTURE_WINDOW_v0_9.md` | Structural Bone | G8 | keep |
+| `C025_ARCHITECTURE_WINDOW_V0_9_STATUS.md` | Writeback / Register Artifact | G8 | keep |
+| `EIGHT_GATE_ROTATION_AXIS_CONSOLIDATION.md` | Structural Bone | G8 | keep |
+| `EIGHT_GATE_ROUTING_PASS_1.md` | Writeback / Register Artifact | G8 | keep |
+| `C026_EIGHT_GATE_ROTATION_AXIS_STATUS.md` | Writeback / Register Artifact | G8 | keep |
+| `WHOLE_CORPUS_FILTER_PASS_1.md` | Writeback / Register Artifact | G8 | keep |
+| `C012_WHOLE_CORPUS_FILTER_PASS_1_STATUS.md` | Writeback / Register Artifact | G8 | keep |
+| `REPOSITORY_CORPUS_INDEX.md` | Writeback / Register Artifact | G8 | update |
+| `UNIFIED_ARTIFACT_REGISTER.md` | Writeback / Register Artifact | G8 | update |
+| `C013_REGISTER_RECONCILIATION_PASS_1.md` | Writeback / Register Artifact | G8 | keep |
+| `CLEANUP_QUEUE_REGISTER.md` | Writeback / Register Artifact | G8 | keep |
+| `ACTIVE_RESTRUCTURING_TASK_MAP.md` | Writeback / Register Artifact | G8 | keep |
+| `THREE_COUPLING_RUNTIME_MAP.md` | Structural Bone | G8 | keep |
+| `WINDOW_12_MASTER_TABLE.md` | Structural Bone | G8 | keep |
+| `README.md` | Upper-Order / Sovereignty-Oriented | G8 | update |
 
 ---
 
-## 3. Current Misclassification Risk
+## 4. Legacy / Historical Classification Rule
 
-### 3.1 GitHub-as-only-bridge wording
+Older rows marked `verified` in v0.2 should be read as:
 
-Earlier stage wording may under-classify GitHub as a bridge surface only.
-Current durable reading should treat GitHub as structural bone + writeback anchor.
+```text
+verified_in_prior_role_table ≠ approved_doctrine ≠ current_gate_ready_status
+```
 
-### 3.2 Bootstrap-overreach risk
-
-Bootstrap artifacts are useful but must not be mistaken for full sovereignty documents.
-
-### 3.3 Concept-only drift
-
-Upper-order texts may remain too abstract unless they are bound to runtime maps, window tables, and gate notes.
+Historical or bootstrap artifacts may be preserved as evidence of development path, but should not be treated as active governance unless they appear in the current inventory and active artifact register.
 
 ---
 
-## 4. Next Classification Targets
+## 5. Known Review Targets
 
-Recommended next artifacts to classify once created or verified:
+These artifacts need later review before their role status can be promoted:
 
-1. `DISCONTINUITY_REGISTER.md`
-2. `THREE_COUPLING_RUNTIME_MAP.md`
-3. `WINDOW_12_MASTER_TABLE.md`
-4. `GATE_64_BINDING_NOTE.md`
+- `MERGE_LAW_PROPOSAL.md`
+- `SNAPSHOT_MECHANISM_PROPOSAL.md`
+- `THIRD_RUNTIME_ENVIRONMENT_NOTE.md`
+- `XUANLING_WORLD_READINESS_MILESTONES.md`
+- `04_adapter-layer/gamma_entry_spec.md`
+- `04_adapter-layer/replit_relay_spec.md`
 
 ---
 
-## 5. Status
+## 6. Non-Promotion Rules
 
-- verified_role_classification_started: true
-- full_corpus_role_classification: true
-- role_drift_reduction_started: true
-- return_to_00: true
+Do not promote:
+
+| From | To |
+|---|---|
+| role classification | approval |
+| gate overlay | ownership |
+| keep status | permanent immunity |
+| update status | broken file |
+| historical verified | current approved |
+| interaction surface | authority to act |
+| carrier role | active runtime |
+
+---
+
+## 7. Status
+
+- gate_overlay_added: true
+- old_verified_language_downgraded: true
+- active_table_rebased_on_unified_register: true
+- full_row_by_row_reconciliation_pending: true
+- closeout: false
