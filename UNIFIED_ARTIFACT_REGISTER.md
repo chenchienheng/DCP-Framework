@@ -8,8 +8,8 @@
 
 ## 0. Status
 
-- register_version: v0.3
-- status: Active register / Needs further row-by-row reconciliation
+- register_version: v0.4
+- status: Active register / Late PR270 candidate support rows added / Needs further row-by-row reconciliation
 - source_inventory: `current_files.txt`
 - filter_source: `WHOLE_CORPUS_FILTER_PASS_1.md`
 - gate_source: `EIGHT_GATE_ROUTING_PASS_1.md`
@@ -164,8 +164,8 @@ They are review states for corpus governance.
 | `WHOLE_CORPUS_FILTER_PASS_1.md` | G8 | keep | active C-012 pass |
 | `C012_WHOLE_CORPUS_FILTER_PASS_1_STATUS.md` | G8 | keep | C-012 status note |
 | `C013_REGISTER_RECONCILIATION_PASS_1.md` | G8 | keep | active C-013 reconciliation pass |
-| `REPOSITORY_CORPUS_INDEX.md` | G8 | update | gate-aware v0.4 added |
-| `UNIFIED_ARTIFACT_REGISTER.md` | G8 | update | current file; now v0.3 |
+| `REPOSITORY_CORPUS_INDEX.md` | G8 | update | gate-aware v0.5 added |
+| `UNIFIED_ARTIFACT_REGISTER.md` | G8 | update | current file; now v0.4 |
 | `BRANCH_TOPOLOGY_AND_CLEANUP_REGISTER.md` | G8 | merge | absorb into cleanup queue / architecture map |
 | `CLUSTER_COVERAGE_MATRIX.md` | G8 | update | link coverage to eight gates |
 | `CLUSTER_COVERAGE_NOTE.md` | G8 | merge | absorb into matrix or register |
@@ -186,16 +186,79 @@ They are review states for corpus governance.
 | `WINDOW_12_MASTER_TABLE.md` | G8 | keep | central window table |
 | `XUANLING_WORLD_READINESS_MILESTONES.md` | G8 | hold_candidate | avoid maturity inflation |
 
+### Group I — Late PR270 Candidate / Evidence / Queue Support
+
+| Artifact | Primary Gate | Handling | Note |
+|---|---|---|---|
+| `ANTI_FLATTENING_DESIGN_ORIGIN.md` | G3 | hold_candidate | anti-flattening origin material; not active doctrine |
+| `C014_STATUS_PROPAGATION_PASS_FINDINGS.md` | G3 | evidence_support | status propagation findings; trace support |
+| `C014_REQUIRED_PATCHES_RESULT.md` | G3 | evidence_support | records C014 required patch result; not global closeout |
+| `C028_ACTIVE_TASK_MAP_ADDENDUM.md` | G8 | candidate_support | post-C027 task-map addendum; not active until map/register updated |
+| `C029_ACTIVE_TASK_MAP_ADDENDUM.md` | G8 | candidate_support | post-C027 task-map addendum; not active until map/register updated |
+| `C030_ACTIVE_TASK_MAP_ADDENDUM.md` | G8 | candidate_support | post-C027 task-map addendum; not active until map/register updated |
+| `C031_ACTIVE_TASK_MAP_ADDENDUM.md` | G8 | candidate_support | post-C027 task-map addendum; not active until map/register updated |
+| `C032_ACTIVE_TASK_MAP_ADDENDUM.md` | G8 | candidate_support | post-C027 task-map addendum; not active until map/register updated |
+| `C033_ACTIVE_TASK_MAP_ADDENDUM.md` | G8 | candidate_support | post-C027 task-map addendum; not active until map/register updated |
+| `C033A_ACTIVE_TASK_MAP_ADDENDUM.md` | G8 | candidate_support | post-C027 task-map addendum; not active until map/register updated |
+| `C034_ACTIVE_TASK_MAP_ADDENDUM.md` | G8 | candidate_support | post-C027 task-map addendum; not active until map/register updated |
+| `C035_ACTIVE_TASK_MAP_ADDENDUM.md` | G8 | candidate_support | post-C027 task-map addendum; not active until map/register updated |
+| `C036_ACTIVE_TASK_MAP_ADDENDUM.md` | G8 | candidate_support | post-C027 task-map addendum; not active until map/register updated |
+| `C037_ACTIVE_TASK_MAP_ADDENDUM.md` | G8 | candidate_support | post-C027 task-map addendum; not active until map/register updated |
+| `C038_ACTIVE_TASK_MAP_ADDENDUM.md` | G8 | candidate_support | post-C027 task-map addendum; not active until map/register updated |
+| `C039_ACTIVE_TASK_MAP_ADDENDUM.md` | G8 | candidate_support | post-C027 task-map addendum; not active until map/register updated |
+| `C030_KNOWLEDGE_FORGE_STATUS.md` | G8 | evidence_support | status note for Knowledge Forge candidate; needs status/gate schema follow-up |
+| `C031_TOKEN_TRIAL_RECYCLING_STATUS.md` | G7 | evidence_support | token trial recycling status; no billing/runtime proof |
+| `C032_HETEROGENEOUS_ISOMORPHISM_STATUS.md` | G5 | evidence_support | heterogenous isomorphism status; carrier/topology support |
+| `C033_MODEL_DYNAMIC_RELATIVITY_STATUS.md` | G2 | evidence_support | model relativity status; source/status interpretation support |
+| `C033A_DYNAMIC_RELATIONAL_LOGIC_STATUS.md` | G8 | evidence_support | dynamic relational logic status; architecture candidate support |
+| `C034_KNOWLEDGE_MAP_FRONTIER_JUDGMENT_STATUS.md` | G8 | evidence_support | knowledge-map frontier status; candidate support only |
+| `C035_XUANLING_LIVING_ARCHITECTURE_DEFINITION_STATUS.md` | G8 | evidence_support | living architecture definition status; not approved doctrine |
+| `C036_PR270_LINEAGE_SUPERSESSION_STATUS.md` | G8 | evidence_support | lineage/supersession status; not closeout |
+| `C037_CODEX_REVIEW_CORRECTION_TRACE.md` | G8 | review_control | Codex review correction trace; not doctrine or merge approval |
+| `C037_EVIDENCE_AGENT_MODE_COST_EXPANSION_RISK.md` | G7 | evidence_support | cost expansion risk support; no billing proof |
+| `C037_EVIDENCE_CODEX_WORKSPACE_AGENT_CALIBRATION_FEEDBACK.md` | G4 | evidence_support | workspace agent calibration feedback; no autonomous authority |
+| `C037_PR270_VERIFICATION_ACCEPTANCE_MATRIX.md` | G8 | candidate_support | acceptance matrix candidate; levels need follow-up QA |
+| `C037_PR270_VERIFICATION_ACCEPTANCE_STATUS.md` | G8 | evidence_support | acceptance status card; not closeout |
+| `C038_LIVINGNESS_VALENCE_STATUS.md` | G3 | evidence_support | livingness valence status; keep as candidate support |
+| `C039_ANTI_FLATTENING_DESIGN_ORIGIN_STATUS.md` | G3 | evidence_support | anti-flattening status; no active doctrine |
+| `C039_ANTI_FLATTENING_DESIGN_ROUTE_ADDENDUM.md` | G8 | candidate_support | anti-flattening route addendum; not new C-front |
+| `CODEX_ACTIVITY_ROLLUP_TOKEN_WINDOW_FEEDBACK_v0_1_CANDIDATE.md` | G7 | evidence_support | activity observability / cost-risk candidate; not billing proof |
+| `CODEX_WORKSPACE_AGENT_MODE_GUARDRAIL_NOTE_v0_1_CANDIDATE.md` | G4 | candidate_support | Codex support-cell guardrail; no autonomous runtime |
+| `DYNAMIC_RELATIONAL_LOGIC_ADDENDUM.md` | G8 | hold_candidate | dynamic relational logic addendum; not active doctrine |
+| `HETEROGENEOUS_ISOMORPHISM_WORLD_ALIGNMENT.md` | G5 | hold_candidate | world-alignment candidate; carrier/topology support |
+| `KNOWLEDGE_MAP_FRONTIER_JUDGMENT_PRINCIPLE.md` | G8 | hold_candidate | knowledge-map principle; not approved doctrine |
+| `LIVINGNESS_VALENCE_LIFE_LOGIC_LAYER.md` | G3 | hold_candidate | valence/life-logic layer; candidate support only |
+| `MODEL_DYNAMIC_RELATIVITY_NOTE.md` | G2 | hold_candidate | model relativity note; evidence/status candidate |
+| `PR270_CONSOLIDATION_FREEZE.md` | G8 | review_control | freeze marker; not closeout |
+| `PR270_LINEAGE_SUPERSESSION_REGISTER.md` | G8 | review_control | lineage register; not deletion authority |
+| `PR270_REVIEW_QUEUE.md` | G8 | review_control | review order control; not expansion or approval |
+| `TOKEN_TRIAL_RECYCLING_PATTERN.md` | G7 | hold_candidate | token recycling pattern; not token capital proof by itself |
+| `XLA_API_EQUIVALENT_TOKEN_CHAIN_REACTION_COST_RISK_v0_1_CANDIDATE.md` | G7 | evidence_support | API-equivalent cost risk model; not actual bill |
+| `XLA_CHAIN_STATE_WORLD_ARCHITECTURE_v0_1_CANDIDATE.md` | G8 | candidate_support | chain-state world grammar candidate; not world database |
+| `XLA_CODEX_ACTION_GRAMMAR_ALIGNMENT_TRACE_v0_1_CANDIDATE.md` | G4 | evidence_support | action grammar / order trace; not sentience proof |
+| `XLA_HUMAN_CONTROLLED_VIRTUAL_AGENT_LAB_EVIDENCE_v0_1_CANDIDATE.md` | G4 | evidence_support | human-controlled lab evidence; not autonomous agent runtime |
+| `XLA_HUMAN_RELAY_FEEDBACK_CYCLE_PROTOCOL_v0_1_CANDIDATE.md` | G4 | candidate_support | human relay protocol; not Native Loop |
+| `XLA_MODEL_PROVIDER_SURFACE_ADDENDUM_v0_1_CANDIDATE.md` | G5 | candidate_support | provider surface addendum; not provider support proof |
+| `XLA_REDLINE_AS_GATE_CONDITION_LOGIC_v0_1_CANDIDATE.md` | G4 | candidate_support | RedGate condition logic; not bypass method |
+| `XLA_WORKSPACE_AGENT_LOGIC_ADDENDUM_v0_1_CANDIDATE.md` | G5 | candidate_support | workspace agent logic; no external writeback |
+| `XLA_ZHENG_TRUST_FIELD_PROPOSITION_v0_1_CANDIDATE.md` | G1 | candidate_support | trust-field / proof-of-behavior candidate; not private relationship database |
+| `XUANLING_CODEX_WORKSPACE_AGENT_PATCH_v0_1_CANDIDATE.md` | G5 | candidate_support | Codex workspace-agent patch candidate; not runtime activation |
+| `XUANLING_CROSS_MODEL_FEEDBACK_CONTRACT_v0_1_CANDIDATE.md` | G4 | candidate_support | cross-model feedback contract; capability does not equal authority |
+| `XUANLING_KNOWLEDGE_FORGE_DIRECTIVE.md` | G6 | hold_candidate | Knowledge Forge directive; output schema still needs status/gate field |
+| `XUANLING_LIVING_ARCHITECTURE_DEFINITION.md` | G8 | hold_candidate | living architecture definition; not approved doctrine |
+
 ---
 
 ## 4. Register Gaps
 
-The following are known gaps after v0.3:
+The following are known gaps after v0.4:
 
-1. `REPOSITORY_CORPUS_INDEX.md` and `ROLE_CLASSIFICATION_TABLE.md` are gate-aware but still need future row-by-row QA.
-2. Some historical files listed in earlier registers are not present in `current_files.txt`; they should be checked before removal from long-term references.
-3. Keep/update/merge/archive decisions are Pass 1 review states, not final actions.
-4. C-027 introduces token/cost risk governance, but no external billing or runtime control exists.
+1. `current_files.txt` has been refreshed through late PR270 candidate/support/control artifacts, but the register rows above are still first-pass rows and require row-by-row QA.
+2. `REPOSITORY_CORPUS_INDEX.md`, `ROLE_CLASSIFICATION_TABLE.md`, and `ACTIVE_RESTRUCTURING_TASK_MAP.md` still need a follow-up pass to reflect Group I without promoting candidate support into active doctrine.
+3. Some historical files listed in earlier registers are not present in `current_files.txt`; they should be checked before removal from long-term references.
+4. Keep/update/merge/archive/hold_candidate decisions are Pass 1 review states, not final actions.
+5. C-027 and later cost/action governance artifacts introduce risk modeling, but no external billing, autonomous runtime, or writeback control exists.
+6. Recent productization ideas such as Gate Console, Execution Readiness, and Inertia Governance remain chat-side criteria unless explicitly added as files later.
 
 ---
 
@@ -203,12 +266,14 @@ The following are known gaps after v0.3:
 
 ```yaml
 Next_Actions:
-  C014_A:
-    action: propagate canonical status terms into updated artifacts
-  C027_A:
-    action: cross-link token expansion No-Go to Token Capital, Habitat, and Security modules
-  C019_P0:
-    action: cross-link Human Origin Layer back into namespace registry and pollution rules
+  P1_Index_Role_Map:
+    action: update REPOSITORY_CORPUS_INDEX.md, ROLE_CLASSIFICATION_TABLE.md, and ACTIVE_RESTRUCTURING_TASK_MAP.md to acknowledge Group I without promotion
+  P1_Cleanup_Queue:
+    action: add Return Target column or defer return_target requirement
+  P1_Status_QA:
+    action: normalize No_Runtime casing and check late candidate files against CANONICAL_STATUS_GLOSSARY.md
+  P2_Schema_Residue:
+    action: fix C037 levels, Qinyi version mismatch, Lingluo YAML repeated key, and Knowledge Forge status/gate field
 ```
 
 ---
@@ -226,16 +291,23 @@ Do not promote:
 | keep | permanent immunity |
 | update | defect |
 | hold_candidate | active runtime |
+| candidate_support | active doctrine |
+| evidence_support | verified proof |
+| review_control | merge approval |
 | No-Go advisory | external runtime control |
 | token estimate | actual bill |
+| trust-field support | private relationship database |
+| RedGate condition logic | bypass method |
+| activity observability | Cost Gate |
 
 ---
 
 ## 7. Status
 
-- register_synchronized: partial
+- register_synchronized: partial_after_late_candidate_rows
 - pass_1_decisions_loaded: true
 - eight_gate_fields_added: true
+- late_pr270_candidate_rows_added: true
 - c027_token_agent_risk_added: true
 - needs_row_by_row_qa: true
 - closeout: false
