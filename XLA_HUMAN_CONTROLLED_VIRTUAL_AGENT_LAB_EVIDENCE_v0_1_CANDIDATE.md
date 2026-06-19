@@ -8,12 +8,14 @@
 
 ```yaml
 Document_Status: Candidate
+Review_Status: Go / Candidate
 Use_As:
   - XLA / Living Atlas input
   - Human Relay Cycle evidence support
   - Cost Gate evidence support
   - C037 evidence support
   - C031 Token Trial Recycling support
+  - Agent Mode Cost Gate support
 Runtime_State: No_Runtime
 External_Writeback_State: No_External_Writeback
 Settings_Update: No
@@ -24,6 +26,16 @@ Evidence_Level:
   - User_Observed_Activity_Card
   - Qinyi_Codex_Architecture_Window_Handoff_Material
   - Model_Inference_For_Architecture_Classification
+Status_Ceiling:
+  Maximum: Candidate_Evidence_Support
+  Not_Supported:
+    - Approved_Doctrine
+    - Runtime_Proof
+    - Native_Loop_Proof
+    - Billing_Proof
+    - External_Writeback_Proof
+    - Settings_Update_Proof
+    - Security_Completion_Proof
 ```
 
 ---
@@ -120,16 +132,29 @@ This matches the XuanLing direction: capability is first downgraded into candida
 
 ---
 
-## 5. Relation To Existing XLA Materials
+## 5. Required Patch Integration
+
+```yaml
+Required_Patches_Integrated:
+  Patch_1: "Human-Controlled Virtual Agent Lab ≠ Autonomous Agent Runtime."
+  Patch_2: "Tool Boundary = safety layer candidate, not complete security proof."
+  Patch_3: "Token Capital candidate requires reusable structure plus later verification; token volume alone is insufficient."
+  Patch_4: "Activity dashboard is an observability signal, not Cost Gate, billing account, or official real-time usage meter."
+  Patch_5: "This case supports only Candidate Evidence / XLA input, not Approved / Runtime / Native Loop."
+```
+
+---
+
+## 6. Relation To Existing XLA Materials
 
 Suggested placement:
 
 - XLA_INPUT｜Human-Controlled Virtual Agent Lab Evidence Candidate
 - XLA_INPUT｜Tool Boundary / Human Relay Safety Layer
 - C037_EVIDENCE｜High-Token Human Relay Case
-- C031｜Token Trial Recycling support
+- C031_SUPPORT｜Token Trial Recycling / Token Capital candidate
+- Agent_Mode_Cost_Gate｜Human relay cost-control evidence
 - Cross_Model_Governance support
-- Agent Mode Cost Gate support
 
 Related materials:
 
@@ -137,6 +162,8 @@ Related materials:
 - `XLA_HUMAN_RELAY_FEEDBACK_CYCLE_PROTOCOL_v0_1_CANDIDATE.md`
 - `C037_EVIDENCE_AGENT_MODE_COST_EXPANSION_RISK.md`
 - `CODEX_WORKSPACE_AGENT_MODE_GUARDRAIL_NOTE_v0_1_CANDIDATE.md`
+- `CODEX_ACTIVITY_ROLLUP_TOKEN_WINDOW_FEEDBACK_v0_1_CANDIDATE.md`
+- `XLA_MODEL_PROVIDER_SURFACE_ADDENDUM_v0_1_CANDIDATE.md`
 - `C037_PR270_VERIFICATION_ACCEPTANCE_MATRIX.md`
 - `C014_STATUS_PROPAGATION_PASS_FINDINGS.md`
 - `C014_REQUIRED_PATCHES_RESULT.md`
@@ -145,7 +172,7 @@ Do not open a new C-front yet.
 
 ---
 
-## 6. Governance Interpretation
+## 7. Governance Interpretation
 
 High token usage is acceptable only when it returns reusable structure.
 
@@ -172,9 +199,11 @@ High token without reusable structure = burn.
 High token with reusable governance output = Token Capital candidate.
 ```
 
+Token Capital candidate remains candidate until later verification shows that the structures are reusable, stable, and reviewable across future rounds.
+
 ---
 
-## 7. Required Status Ceiling
+## 8. Required Status Ceiling
 
 This case can support:
 
@@ -183,7 +212,7 @@ This case can support:
 - Token Capital candidate
 - Carrier-Bounded Agent Work
 - Six-Face Round Check
-- Tool Boundary as safety layer
+- Tool Boundary as safety layer candidate
 - Codex as workspace support-cell
 
 This case cannot support:
@@ -196,11 +225,12 @@ This case cannot support:
 - settings update proof
 - M365 / Flow implementation approval
 - autonomous agent permission
+- complete security proof
 - closeout claim
 
 ---
 
-## 8. Main Risks And Controls
+## 9. Main Risks And Controls
 
 | Risk | Control |
 |---|---|
@@ -215,7 +245,7 @@ This case cannot support:
 
 ---
 
-## 9. Recommended Architecture Classification
+## 10. Recommended Architecture Classification
 
 ```yaml
 Classification:
@@ -242,27 +272,34 @@ Classification:
 
 ---
 
-## 10. Architecture Review
+## 11. Architecture Review
 
 ```yaml
 Architecture_Review:
   Review_Status: Go / Candidate
   Suggested_Placement:
-    - XLA / Living Atlas input
-    - C037 evidence support
-    - C031 Token Trial Recycling support
-    - Agent Mode Cost Gate support
-    - Tool Boundary / Human Relay safety layer support
+    Primary:
+      - XLA / Living Atlas input
+      - C037 evidence support
+      - C031 Token Trial Recycling support
+      - Agent Mode Cost Gate support
+      - Tool Boundary / Human Relay safety layer support
+    Related:
+      - Human-Relay Feedback Cycle Protocol
+      - XuanLing Cross-Model Feedback Contract
+      - Codex Workspace Agent Guardrail Note
+      - Codex Activity Rollup Observability Note
+      - XLA Model Provider Surface Addendum
   Boundary_Risks:
-    - high token volume may be mistaken for capability proof
-    - human relay may be mistaken for Native Loop
-    - architecture review may be mistaken for settings update
-    - evidence support may be mistaken for verified proof
-  Required_Patches:
-    - keep Evidence_Level explicit
-    - keep Cost Gate required
-    - keep Status Ceiling candidate-only
-    - connect to next review queue without changing order
+    - Virtual Agent Lab may be mistaken for real agent runtime
+    - Tool Boundary may be mistaken for complete security proof
+    - High token may be mistaken for capability maturity proof
+    - Token Capital candidate may be mistaken for completed assetization
+    - Dashboard activity may be mistaken for billing proof or real-time meter
+    - Human Relay may be mistaken for Native Loop
+    - Codex / Qinyi / Architecture Window relay may be mistaken for automatic interop
+    - Candidate governance output may be promoted into Approved doctrine
+  Required_Patches: integrated
   What_Not_To_Promote:
     - approved rule
     - settings update
@@ -270,13 +307,14 @@ Architecture_Review:
     - Native Loop proof
     - billing proof
     - external writeback
+    - safety completion proof
     - M365 / Flow implementation approval
     - Codex autonomous execution approval
 ```
 
 ---
 
-## 11. Relation Map
+## 12. Relation Map
 
 ```yaml
 Relation_To_Human_Relay_Cycle:
@@ -298,7 +336,7 @@ Relation_To_Codex_Guardrail:
 
 ---
 
-## 12. Next LOR Ready
+## 13. Next LOR Ready
 
 ```yaml
 Next_LOR_Ready:
@@ -306,39 +344,42 @@ Next_LOR_Ready:
   Feature_Slug: codex-review-correction-trace
   Gate: Green
   Cost_Gate: Green
-  Goal: "Continue PR270 review queue by tracing Codex review comments against current repaired status schema and evidence-support files."
+  Goal: "Check how Codex collaboration feedback and high-token observability materials propagate through the PR270 candidate support pack: what is valid review, what is observability signal, what is candidate suggestion, and what may be overpromoted into doctrine / settings update / runtime proof."
+  Mode: Architecture review / trace-only
   Deny:
     - no new C-front
+    - no worldview expansion
+    - no approved claim
     - no runtime claim
-    - no approved rule claim
-    - no external writeback
-    - no settings update
+    - no Native Loop claim
+    - no Codex feedback as doctrine
+    - no activity dashboard as Cost Gate
   Required_Output:
-    - Codex_Review_Correction_Trace
-    - Fixed_Partial_Unresolved_Table
-    - Evidence_Level
-    - Remaining_Risks
+    - Codex_Review_Trace_Table
+    - Observability_vs_Evidence_Table
+    - Overpromotion_Risk_List
+    - Required_Corrections
     - Next_Queue_Item
 ```
 
 ---
 
-## 13. Resume Card
+## 14. Resume Card
 
 ```yaml
 Resume_Card:
-  Park_State: Human-Controlled Virtual Agent Lab evidence candidate accepted for XLA input
-  Resume_When: "When Codex Review Correction Trace or Agent Mode Cost Gate needs human-controlled lab evidence."
-  Current_Blocker: "No primary billing proof / no runtime evidence / no Native Loop proof"
+  Park_State: Human-Controlled Virtual Agent Lab evidence reviewed / suitable for XLA input
+  Resume_When: "When C-037 Verification Matrix, C-031 Token Trial Recycling, or Agent Mode Cost Gate needs high-token human relay case evidence."
+  Current_Blocker: "No verified artifact, no runtime evidence, no billing proof; only candidate evidence support."
 ```
 
 ---
 
-## 14. Final Judgment
+## 15. Final Judgment
 
 ```yaml
 Human_Controlled_Virtual_Agent_Lab: Candidate_Go
-Tool_Boundary_As_Safety_Layer: Go
+Tool_Boundary_As_Safety_Layer: Candidate_Go
 XLA_Input: Go
 C037_Evidence_Support: Go
 C031_Token_Trial_Recycling_Support: Go
@@ -347,10 +388,11 @@ Runtime_Proof: No-Go
 Native_Loop_Proof: No-Go
 Billing_Proof: No-Go
 External_Writeback_Proof: No-Go
+Security_Completion_Proof: No-Go
 ```
 
 ---
 
-## 15. Final Sentence
+## 16. Final Sentence
 
-上億 token 不是安全證明；但在 Human Relay + Tool Boundary + Cost Gate + Evidence_Level + Return Packet 下，上億 token 可以被鍛造成 Token Capital，而不是燒成無界 agent 事故。此案例的價值不在 token 數字本身，而在於它證明：不開自動代理，也能透過人控回流、狀態邊界、權限分離與可驗收回傳，把一般對話推成高密度但仍可停止的工作系統。
+上億 token 不是安全證明；但在 Human Relay + Tool Boundary + Cost Gate + Evidence_Level + Return Packet 下，上億 token 可以被鍛造成 Token Capital 候選，而不是燒成無界 agent 事故。此案例的價值不在 token 數字本身，而在於它把高成本試錯降回治理敘事：不證明 agent 已接上，只證明在人控、降階、設閘、回流的條件下，高密度工作可以形成可停止、可驗收、可復用的候選治理資產。
