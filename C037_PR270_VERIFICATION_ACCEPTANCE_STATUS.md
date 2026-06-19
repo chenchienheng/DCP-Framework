@@ -7,7 +7,10 @@
 ## 0. Status
 
 - cleanup_id: C-037
-- status: Go / Verification matrix candidate / Not closeout
+- Review_Status: Go
+- Document_Status: Candidate
+- Matrix_State: Verification matrix candidate
+- Closeout_State: Not_Closeout
 - paired_matrix: `C037_PR270_VERIFICATION_ACCEPTANCE_MATRIX.md`
 - paired_freeze: `PR270_CONSOLIDATION_FREEZE.md`
 - related_pr: `#270`
