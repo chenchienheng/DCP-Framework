@@ -1,6 +1,6 @@
-# Codex Activity Rollup / Token Window Feedback v0.1 Candidate
+# Codex Activity Rollup Observability Note v0.1 Candidate
 
-> Candidate observability feedback for the Qinyi-Codex Collaboration Window. This is not a Codex task request, not a settings update, not billing proof, not proof of a fixed official reset rule, and not Native Loop evidence.
+> Candidate observability feedback for the Qinyi-Codex Collaboration Window. This is not a Codex task request, not a settings update, not billing proof, not proof of a fixed official activity-card refresh rule, and not Native Loop evidence.
 
 ---
 
@@ -20,91 +20,74 @@ Native_Loop_Proof: No
 Closeout_State: Not_Closeout
 Evidence_Level:
   - User_Observed_Activity_Card
-  - Needs_Official_or_Runtime_Verification_Before_Reset_Timing_Claim
+  - Official_Docs_Boundary_Check
+  - Model_Inference_For_Rollup_Hypothesis
 ```
 
 ---
 
-## 1. One-Line Reading
+## 1. Core Sentence
 
-Codex activity stats appear to roll up in a windowed pattern that may correlate with short-cycle reset behavior while coexisting with longer reset limits. This suggests token observability may follow quota-window aggregation rather than simple daily real-time counting.
+Codex activity stats appear to roll up in visible jumps rather than smooth real-time increments. This may correlate with usage-window aggregation, but it is not official proof of a fixed activity-card refresh rule. Activity dashboard observability must not replace Cost Gate, Stop Condition, Retry Limit, Human Review, or Return Packet.
 
 ---
 
 ## 2. Observed Stats
 
-Latest observed activity card:
-
 ```yaml
-Latest_Observed:
-  Cumulative_Tokens: "約 1.7 億"
-  Peak_Day: "約 6991.6 萬"
-  Current_Streak: "3 days"
-  Longest_Streak: "14 days"
+Observed_Stats:
+  Evidence_Level: Direct_Material_from_user_screenshot_or_user_report
+  Latest:
+    Cumulative_Tokens: "約 1.7 億"
+    Peak_Day: "約 6991.6 萬"
+    Current_Streak: "3 days"
+    Longest_Streak: "14 days"
+  Previous:
+    Cumulative_Tokens: "約 1.2 億"
+    Peak_Day: "約 4249.3 萬"
+    Current_Streak: "3 days"
+    Longest_Streak: "14 days"
+  Delta:
+    Cumulative_Increase: "約 5000 萬 tokens"
+    Peak_Day_Increase: "約 2742.3 萬 tokens"
 ```
 
-Previous observed activity card:
+Interpretation: this looks like delayed rollup / window aggregation, not pure real-time display.
+
+---
+
+## 3. Official Boundary
 
 ```yaml
-Previous_Observed:
-  Cumulative_Tokens: "約 1.2 億"
-  Peak_Day: "約 4249.3 萬"
-  Current_Streak: "3 days"
-  Longest_Streak: "14 days"
-```
-
-Observed delta:
-
-```yaml
-Observed_Delta:
-  Cumulative_Increase: "約 5000 萬 tokens"
-  Peak_Day_Increase: "約 2742.3 萬 tokens"
-  Interpretation: "delayed rollup / window aggregation, not pure real-time display"
+Official_Boundary:
+  Evidence_Level: Official_Docs_Check_Plus_Model_Interpretation
+  Can_Say:
+    - "OpenAI Codex docs expose usage limits and usage surfaces."
+    - "OpenAI Codex changelog referenced a 5-hour usage limit in a model-switching suggestion context."
+    - "OpenAI Help says larger codebases, long-running tasks, or extended sessions that hold more context use significantly more per message."
+    - "OpenAI Help says usage limits vary by plan and users should check the Codex usage page or limit banner when nearing or reaching limits."
+  Cannot_Say:
+    - "Activity card officially refreshes every 5 hours."
+    - "Activity card is a real-time token meter."
+    - "Activity card is billing proof."
+    - "Weekly reset and token heatmap share the same exact backend counter."
+    - "Quota reset means task approval."
+  Not_Verified_This_Pass:
+    - "official recursive / fan-out wording for this exact dashboard behavior"
 ```
 
 ---
 
-## 3. Hypothesis
-
-Candidate interpretation:
+## 4. Candidate Hypothesis
 
 ```yaml
-Activity_Rollup_Hypothesis:
-  Possible_Drivers:
-    - short-cycle quota / reset window
-    - daily heatmap rollup
-    - weekly usage reset / quota state
-    - delayed dashboard refresh
-  Status: Plausible_Observation
-  Evidence_Level: User_Observed_Activity_Card
+Candidate_Hypothesis:
+  Evidence_Level: Model_Inference
+  Hypothesis: >
+    The visible activity card may be delayed or window-aggregated, causing large jumps after a rollup.
+    This could coexist with short usage windows and weekly / plan-level usage limits,
+    but the exact refresh logic is not confirmed.
 ```
-
-Boundary:
-
-- Do not claim Codex officially refreshes activity stats every fixed short cycle.
-- Do not treat the activity card as a real-time token meter.
-- Do not treat the activity card as billing proof.
-- Do not assume weekly reset and token heatmap use the same backend counter.
-
----
-
-## 4. Why This Matters For Codex Work
-
-If token stats follow reset-window aggregation, high-density work can appear to jump after a window closes.
-
-This means Codex collaboration should not rely on visible activity cards as immediate stop signals.
-
-Required controls must be internal to each work round:
-
-- Per-task Cost Gate
-- Retry limit
-- Stop condition
-- Human review before escalation
-- No unbounded background loop
-- No multi-branch expansion without LOR
-- Return Packet required
-
-Activity dashboard is useful as observability, but not sufficient as governance.
 
 ---
 
@@ -118,6 +101,8 @@ Visible Token Count ≠ Real-time Meter
 Reset Window ≠ Permission Window
 Weekly Reset ≠ Safe-to-Run Signal
 Quota Available ≠ Task Approved
+Token Jump ≠ Billing Proof
+High Activity ≠ Native Loop Proof
 ```
 
 Meaning:
@@ -126,20 +111,20 @@ Even if quota appears to reset, Codex still needs LOR / Gate / Cost Gate before 
 
 ---
 
-## 6. Token Risk Level
-
-Latest observed peak:
+## 6. Agent Mode Risk
 
 ```yaml
-Peak_Day: "約 6991.6 萬 tokens"
-```
-
-Agent-like multiplication estimate:
-
-```yaml
-If_2x: "約 1.4 億 tokens/day"
-If_3x: "約 2.1 億 tokens/day"
-If_10x: "約 7 億 tokens/day"
+Agent_Mode_Risk:
+  Evidence_Level: Direct_Material_Plus_Model_Inference
+  Peak_Day_Current: "約 6991.6 萬 tokens"
+  Multiplication_Risk:
+    2x: "約 1.4 億 tokens/day"
+    3x: "約 2.1 億 tokens/day"
+    10x: "約 7 億 tokens/day"
+  Judgment:
+    Human_Controlled_High_Density: "Virtual Lab / Watch"
+    Unbounded_Agent_Mode: "No-Go"
+    Agent_Mode_Watch: "Yellow"
 ```
 
 This supports the prior warning:
@@ -151,16 +136,19 @@ Unbounded agent mode = token chain reaction.
 
 ---
 
-## 7. Recommended Codex Window Handling
+## 7. Required Controls
 
-For future Codex rounds:
-
-- Do not wait for dashboard update to stop.
-- Set Cost Gate before task begins.
-- Set Retry Limit before task begins.
-- Set Stop Condition before task begins.
-- Require Return Packet after task ends.
-- If stats jump after rollup, record it as Observability Signal only.
+- Per-task Cost Gate before work begins
+- Retry Limit before work begins
+- Stop Condition before work begins
+- Tool Allowlist before work begins
+- No web by default
+- No writeback by default
+- No background long-run without human present
+- No multi-branch expansion without explicit LOR
+- Human Review before escalation
+- Return Packet after task ends
+- Resume Card if source / cost / carrier becomes unclear
 
 Minimum Cost Gate:
 
@@ -182,10 +170,10 @@ Cost_Gate:
 
 ```yaml
 Codex_Activity_Rollup_Observation: Candidate_Go
-Short_Reset_Correlation: Plausible_Observation_Not_Official_Proof
-Weekly_Reset_Coexistence: Plausible_Observation_Needs_Confirmation
+Five_Hour_Reset_Correlation: Plausible_Observation_Not_Official_Proof
 Billing_Proof: No-Go
 Real_Time_Token_Meter: No-Go
+Native_Loop_Proof: No-Go
 Cost_Gate_Required: Go
 Agent_Mode_Watch: Yellow
 Unbounded_Agent_Mode: No-Go
@@ -195,4 +183,4 @@ Unbounded_Agent_Mode: No-Go
 
 ## 9. Final Sentence
 
-Codex activity stats may be following a reset-window rollup pattern, which could explain why token totals jump in blocks rather than update smoothly. Quota reset is not governance: Codex still needs Cost Gate, Stop Condition, Retry Limit, Human Review, and Return Packet before high-density or agent-like work.
+The observed jump may mean the activity dashboard is rolling up prior high-density work in blocks. The governance point is not the exact refresh timing; it is that visible quota or reset behavior must never replace LOR, Cost Gate, Stop Condition, Human Review, and Return Packet.
