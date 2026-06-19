@@ -7,7 +7,8 @@
 ## 0. Status
 
 - glossary_version: v0.1
-- status: candidate_control_glossary
+- Document_Status: Candidate
+- Control_Type: status_glossary
 - purpose: prevent maturity inflation, runtime ambiguity, and register desynchronization
 - return_to_00: true
 
@@ -50,7 +51,20 @@ Do not promote a text state into an execution state.
 
 ---
 
-## 4. Non-Promotion Rules
+## 4. Non-Status Readiness / Support Terms
+
+The following terms may appear in review notes, artifact contracts, or handoff packets, but they are not canonical maturity statuses unless separately mapped to a canonical term.
+
+| Term | Use As | Must Not Mean |
+|---|---|---|
+| `Build-Ready` | artifact/readiness mode indicating a package may be discussed for build planning | implemented, deployed, approved, or runtime |
+| `Evidence Support` | support role for a claim or matrix row | verified proof, approved rule, or primary record |
+| `Review Pack` | artifact mode for overview/crosswalk/changelog | approval or per-source revision |
+| `Return Packet` | return container after a task or review step | closeout by itself |
+
+---
+
+## 5. Non-Promotion Rules
 
 ```yaml
 Non_Promotion:
@@ -62,11 +76,13 @@ Non_Promotion:
   PR: not Deployed
   Semantic_Runtime: not Executable_Runtime
   Repository_Whitepaper_Candidate: not Market_Validation
+  Build_Ready: not Implemented_Flow
+  Evidence_Support: not Verified_Proof
 ```
 
 ---
 
-## 5. Register Synchronization Rule
+## 6. Register Synchronization Rule
 
 When one register changes an item from pending to addressed, related registers should be checked for the same item.
 
@@ -81,6 +97,6 @@ Minimum related registers:
 
 ---
 
-## 6. Next Action
+## 7. Next Action
 
-Apply this glossary to `STATUS.md`, `DISCONTINUITY_REGISTER.md`, `DYNAMIC_CORPUS_DATABASE_NOTE.md`, and `CLUSTER_COVERAGE_NOTE.md`.
+Apply this glossary to `STATUS.md`, `DISCONTINUITY_REGISTER.md`, `DYNAMIC_CORPUS_DATABASE_NOTE.md`, `CLUSTER_COVERAGE_NOTE.md`, and `ARTIFACT_RECORD_SCHEMA.md`.
