@@ -7,7 +7,8 @@
 ## 0. Status
 
 - schema_version: v0.1
-- status: candidate_control_schema
+- Document_Status: Candidate
+- Control_Type: artifact_record_schema
 - purpose: support registry reconciliation, cleanup, routing, and return tracking
 - return_to_00: true
 
@@ -17,7 +18,7 @@
 
 The repository should not grow only by adding more documents. Each artifact should become classifiable, routable, and returnable.
 
-A document is architecture-ready only when its record can show source, role, boundary, state, and return path.
+A document is architecture-ready only when its record can show source, role, boundary, state, carrier, lineage, and return path.
 
 ---
 
@@ -29,6 +30,7 @@ Artifact_Record:
   path:
   title:
   current_status:
+  artifact_mode:
   structural_family:
   network_role:
   chain_face:
@@ -36,6 +38,7 @@ Artifact_Record:
   authority_level:
   source_role:
   carrier_role:
+  branch_origin:
   claim_ceiling:
   contamination_status:
   priority_level:
@@ -54,25 +57,54 @@ Artifact_Record:
 
 ## 3. Status Values
 
-Use the canonical glossary for status values. Do not invent new maturity terms when an existing value is sufficient.
+Use only canonical glossary terms for `current_status`. Do not invent new maturity terms when an existing value is sufficient.
 
-Recommended minimum set:
+Canonical set:
 
 ```yaml
 current_status:
   - active
   - candidate
+  - verified
+  - addressed
+  - resolved
+  - completed
+  - pending
   - trace
   - superseded
-  - deprecated
   - residue
-  - pending_review
   - archived
 ```
 
+Status mapping notes:
+
+- Use `pending`, not `pending_review`.
+- Use `superseded` or `archived`, not `deprecated`, unless a later glossary revision explicitly adds `deprecated`.
+- Use `artifact_mode` for readiness / package type terms such as `Review Pack`, `Per-Source Revised Pack`, or `Build-Ready Pack`.
+- Do not use `current_status` to claim approval, deployment, or executable runtime.
+
 ---
 
-## 4. Handling Modes
+## 4. Artifact Modes
+
+```yaml
+artifact_mode:
+  - review_pack
+  - per_source_revised_pack
+  - build_ready_pack
+  - editable_route
+  - visual_route
+  - qa_report
+  - artifact_manifest
+  - resume_card
+  - not_applicable
+```
+
+Artifact mode is not approval state. `build_ready_pack` means a package can support build planning discussion; it does not mean an implemented Flow, deployment, runtime, or owner approval exists.
+
+---
+
+## 5. Handling Modes
 
 ```yaml
 handling_mode:
@@ -88,7 +120,25 @@ handling_mode:
 
 ---
 
-## 5. Anti-Bloat Rule
+## 6. Branch Origin
+
+`branch_origin` records where the artifact entered the review surface.
+
+Examples:
+
+```yaml
+branch_origin:
+  pr: "#270"
+  branch: "audit/lean-dynamic-sync-v0-1-clean"
+  source_window:
+  source_round:
+```
+
+Branch origin is lineage metadata. It does not imply approval, runtime, deployment, or source ownership.
+
+---
+
+## 7. Anti-Bloat Rule
 
 A new document should not be added if the same function can be handled by updating an existing active register.
 
@@ -101,6 +151,6 @@ New documents are justified only when they:
 
 ---
 
-## 6. Next Action
+## 8. Next Action
 
-Use this schema to regenerate `UNIFIED_ARTIFACT_REGISTER.md` from `current_files.txt`.
+Use this schema to regenerate `UNIFIED_ARTIFACT_REGISTER.md` from `current_files.txt` after C014 status patches are complete.
