@@ -8,7 +8,7 @@
 
 - task_id: C-036
 - task_name: PR270 舊路承接與主線重鑄
-- status: Added as lineage supersession candidate / Not closeout
+- status: Added as lineage re-registration candidate / Not closeout
 - paired_register: `PR270_LINEAGE_SUPERSESSION_REGISTER.md`
 - paired_status: `C036_PR270_LINEAGE_SUPERSESSION_STATUS.md`
 - return_to_00: true
@@ -17,7 +17,7 @@
 
 ## 1. One-Line Reading
 
-#270 不是替 1–269 辦喪禮，而是替它們辦轉籍：舊身分降階，舊意義保留，新位置重定。
+PR #270 is not a closeout or erasure of items 1–269. It is a living architecture consolidation layer that downgrades prior exploration into lineage / seed / historical strata, preserves their meaning, removes their outdated authority weight, and rebinds usable material into the new XuanLing living architecture mainline.
 
 ---
 
@@ -25,7 +25,7 @@
 
 | Task Name | Internal ID / File | What It Means | Status |
 |---|---|---|---|
-| PR270 舊路承接與主線重鑄 | C-036 / `PR270_LINEAGE_SUPERSESSION_REGISTER.md`, `C036_PR270_LINEAGE_SUPERSESSION_STATUS.md` | define #270 as the consolidation layer that preserves prior lineage while lowering old authority | Added as lineage supersession candidate |
+| PR270 舊路承接與主線重鑄 | C-036 / `PR270_LINEAGE_SUPERSESSION_REGISTER.md`, `C036_PR270_LINEAGE_SUPERSESSION_STATUS.md` | define #270 as the consolidation layer that preserves prior lineage while lowering old authority | Added as lineage re-registration candidate |
 
 ---
 
