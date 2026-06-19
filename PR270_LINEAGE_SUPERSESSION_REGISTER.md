@@ -1,76 +1,133 @@
-# PR270 Lineage Supersession Register｜#270 舊路承接與主線重鑄登錄
+# PR270 Lineage Supersession Register｜#270 舊路承接與生命化架構總收斂
 
-> Purpose: define PR #270 as the current candidate consolidation layer for prior exploration and task history.
+> Purpose: define PR #270 as a lineage re-registration and living architecture consolidation layer. It preserves the meaning of prior work while removing outdated authority weight and rebinding usable material into the new XuanLing candidate mainline.
 
 ---
 
 ## 0. Status
 
-- register_version: v0.1
-- status: Candidate / Lineage Supersession Register / Not closeout
+- register_version: v0.2
+- status: Candidate / Lineage Re-Registration Register / Not closeout
 - related_pr: `#270`
 - prior_range: `1–269`
+- formal_name: PR270 Lineage Supersession Register
+- formal_function: Lineage Re-Registration / Living Architecture Consolidation
+- internal_metaphor: 轉籍；not formal positioning language
 - primary_gate: G8 Atlas & Closeout
 - secondary_gate: G3 Naming & Boundary
 - support_gates: G2 Intake & Source, G4 Authority & Dispatch, G7 Return & Recycle
-- current_role: re-register prior lineage into current candidate mainline
+- current_role: current candidate main index for reading, judging, downgrading, preserving, merging, or reopening prior materials
+- doctrine_status: candidate
+- runtime_status: no_runtime
+- closeout_status: false
 - return_to_00: true
 
 ---
 
 ## 1. One-Line Reading
 
-#270 不是替 1–269 辦喪禮，而是替它們辦轉籍：舊身分降階，舊意義保留，新位置重定。
-
----
-
-## 2. Formal Position
-
-PR #270 is not a closeout judgment over 1–269.
-
-It is a living architecture consolidation layer that rebinds prior exploration, failed paths, partial drafts, governance seeds, naming experiments, and historical task strata into a new candidate mainline.
+PR #270 is not a closeout or erasure of items 1–269. It is a living architecture consolidation layer that downgrades prior exploration into lineage / seed / historical strata, preserves their meaning, removes their outdated authority weight, and rebinds usable material into the new XuanLing living architecture mainline.
 
 Chinese:
 
 ```text
-#270 不是 1–269 的終止判決，而是舊路承接與生命化架構總收斂層。
-1–269 不被視為無效。
-它們被降階為 lineage、seed、historical strata、case material 或 archived task trace。
-其舊狀態不再自動主導現行主線，但其來源、試錯、價鍵與經驗被 #270 承接、重鑄並回流。
+#270 不是 1–269 的終止判決，也不是抹除。
+它是舊路承接與生命化架構總收斂層：將過去探索降階為 lineage、seed、historical strata，保留其意義，移除過期權重，並把可用材料重鑄進新的翾靈生命化架構主線。
 ```
 
 ---
 
-## 3. Layer Reading
+## 2. Positioning
+
+### 2.1 Items 1–269
+
+Prior items are treated as:
+
+- exploration phase
+- trial-and-error phase
+- support material
+- old routes
+- raw ore veins
+- historical strata
+
+Chinese summary:
 
 ```text
 1–269 = source ore layer / 源礦層
+```
+
+### 2.2 PR #270
+
+PR #270 is treated as:
+
+- consolidation phase
+- re-forging phase
+- total definition layer
+- governable candidate mainline
+
+Chinese summary:
+
+```text
 #270 = reforging layer / 重鑄層
 ```
 
-Meaning:
+---
 
-- 1–269 provide experience, drift, errors, partial insight, task traces, naming experiments, and governance seeds.
-- #270 re-registers them under current gates, status terms, namespace boundaries, and return rules.
-- the old path does not directly command the current mainline.
-- the old meaning is preserved through lineage.
+## 3. Decision
+
+```yaml
+C036_Decision:
+  PR270_As_Current_Main_Index: Go
+  Prior_Work_As_Source_Ore: Go
+  Prior_Status_As_Current_Status: No-Go
+  Prior_Meaning_Preservation: Go
+  Prior_Authority_Downgrade: Go
+  Approved_Doctrine_Claim: No-Go
+  Closeout_Claim: No-Go
+  Runtime_Claim: No-Go
+```
+
+Interpretation:
+
+- #270 should become the current main index for reading, judging, downgrading, preserving, merging, or reopening prior materials.
+- #270 is not the only truth.
+- #270 is not Approved doctrine.
+- #270 is not closeout.
+- #270 is not runtime.
+- #270 is a Candidate living architecture consolidation layer.
 
 ---
 
-## 4. Re-Registration Labels
+## 4. Rules
+
+- Do not delete old meaning.
+- Do not inherit old errors.
+- Do not allow old status to impersonate current status.
+- Do not allow old naming pollution to govern the new mainline.
+- Preserve source, case, failure, valence, and trial history.
+- Re-forge usable material into the new architecture.
+
+---
+
+## 5. Old-to-New Status Mapping
+
+Each item from 1–269 should be classified as one of:
 
 | Label | Meaning |
 |---|---|
-| Preserve | keep as source or lineage evidence |
-| Merge | absorb usable structure into #270 mainline |
-| Downgrade | lower to lineage / seed / historical shell |
-| Archive | keep as historical task trace, no active push |
-| Reopen | revisit only under #270 rules |
-| Reject | not adopted as active structure; preserve reason |
+| Preserve | keep as lineage source |
+| Merge | merge into #270 mainline |
+| Downgrade | reduce to seed / historical shell / reference layer |
+| Archive | keep record, no active push |
+| Reopen | reopen only under #270 rules |
+| Reject | not adopted, reason retained |
+
+This is not a single sweeping judgment.
+It is lineage re-registration.
 
 ---
 
-## 5. Hard Rules
+## 6. Hard Separations
 
 ```text
 Old status ≠ current status.
@@ -79,24 +136,25 @@ Old task ≠ active task.
 Old candidate ≠ approved rule.
 Old runtime language ≠ runtime proof.
 Old issue closure ≠ lineage erasure.
+Old artifact ≠ current authority.
 ```
 
 ---
 
-## 6. Register Binding
+## 7. Register Binding
 
 ```yaml
 Register_Binding:
   primary_gate: G8_Atlas_Closeout
   secondary_gate: G3_Naming_Boundary
   handling_decision: keep
-  current_status: lineage_supersession_candidate
-  next_action: build detailed lineage ledger only after status propagation
+  current_status: lineage_re_registration_candidate
+  next_action: build detailed lineage ledger only after C014 status propagation
 ```
 
 ---
 
-## 7. Relation To Current Work
+## 8. Relation To Current Work
 
 | Current Front | Role |
 |---|---|
@@ -112,7 +170,7 @@ Register_Binding:
 
 ---
 
-## 8. Non-Promotion Rules
+## 9. Non-Promotion Rules
 
 Do not promote:
 
@@ -125,9 +183,10 @@ Do not promote:
 | prior task trace | active task |
 | lineage preservation | final closeout |
 | #270 consolidation | finished system |
+| old artifact | current authority |
 
 ---
 
-## 9. Closing Sentence
+## 10. Final Sentence
 
-#270 is lineage supersession: prior identities are downgraded, prior meanings are preserved, and usable structures are re-forged into the living architecture mainline.
+#270 does not erase 1–269. It re-registers them: old authority is downgraded, old meaning is preserved, and usable material is re-forged into the new XuanLing living architecture backbone.
