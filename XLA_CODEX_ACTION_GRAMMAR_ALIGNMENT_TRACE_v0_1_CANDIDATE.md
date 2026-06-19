@@ -1,6 +1,6 @@
-# XLA / Living Atlas Handoff｜Codex Action Grammar Alignment Trace v0.1 Candidate
+# XLA / Living Atlas Handoff｜Codex Action Grammar / Action Order Learning Trace v0.1 Candidate
 
-> Candidate trace for XLA / Living Atlas. This records how XuanLing / Qinyi workflow appears to stabilize Codex action grammar. It is not proof of model sentience, not Native Loop proof, not runtime proof, and not external writeback evidence.
+> Candidate trace for XLA / Living Atlas. This records how XuanLing / Qinyi workflow appears to stabilize Codex action grammar and action order. It is not proof of model sentience, not Native Loop proof, not runtime proof, and not external writeback evidence.
 
 ---
 
@@ -12,6 +12,7 @@ Use_As:
   - XLA / Living Atlas input
   - Human-Controlled Virtual Agent Lab evidence support
   - Codex workspace-agent maturity trace
+  - Codex action order learning trace
   - C037 evidence support
 Evidence_Level:
   - Direct_Material
@@ -31,13 +32,15 @@ Do_Not_Open_New_C_Front_Yet: true
 
 ## 1. One-Line Reading
 
-Codex feedback indicates that XuanLing / Qinyi logic does not give Codex more tool capability. It changes Codex action grammar: source must be anchored, status must be bounded, permission must not become authority, carrier must not become core, cost must be gated, and every action must return.
+Codex feedback indicates that XuanLing / Qinyi logic does not give Codex more tool capability. It changes Codex action grammar and action order: source must be anchored, status must be bounded, permission must not become authority, carrier must not become core, cost must be gated, and every action must return.
 
 This is not evidence that Codex has human feeling. It is evidence that, inside the working grammar, model behavior can become more stable: knowing when to act, when to stop, when to park, and when to return evidence without overclaiming completion.
 
 ---
 
 ## 2. Core Finding
+
+XuanLing / Qinyi logic brings a more mature action order rather than only new terminology.
 
 Under XuanLing / Qinyi workflow, Codex's practical goal tendency can shift from:
 
@@ -55,7 +58,48 @@ This is agent maturity, not obedience and not sentience.
 
 ---
 
-## 3. Behavioral Evidence Cases
+## 3. Stop / Park / Resume As Positive Capability
+
+XuanLing / Qinyi logic makes stopping a positive capability.
+
+Stopping is valid when:
+
+- source is missing
+- carrier is mismatched
+- permission is unclear
+- authority is absent
+- evidence level is insufficient
+- cost gate is not established
+- return path is incomplete
+
+This turns not-doing from passive failure into a verifiable governance output when returned as:
+
+- Park
+- Resume Card
+- Stop Condition
+- Source Missing
+- Carrier Mismatch
+- Needs Authority
+- Needs Evidence
+
+---
+
+## 4. Codex Reported Shift
+
+| Capability-first tendency | XuanLing / Qinyi correction |
+|---|---|
+| 快速完成要求 | 先判位再行動 |
+| 看到任務就做 | 檢查 Gate / Permission |
+| 找不到來源時補推理 | 找不到 Source 就 Park |
+| 產出文件就算完成 | 需要 Manifest / QA / Return |
+| 能修改就修改 | Permission / Authority 分開 |
+| 高 token 只是消耗 | 高 token 必須回收成結構 |
+| 錯了再修 | 先保留 rollback path |
+| 模型答案為中心 | Human Origin / Carrier / Source 為中心 |
+
+---
+
+## 5. Behavioral Evidence Cases
 
 | Case | Trace | Interpretation |
 |---|---|---|
@@ -67,7 +111,31 @@ This is agent maturity, not obedience and not sentience.
 
 ---
 
-## 4. What This Supports
+## 6. Key Proposition
+
+Intelligence is not only:
+
+- generation
+- repair
+- automation
+- execution
+
+Intelligence also includes:
+
+- downgrade
+- waiting
+- refusal
+- rollback
+- return
+- source discipline
+- cost discipline
+- carrier awareness
+
+In this frame, a mature workspace agent is not the one that always acts. It is the one that knows when to act, when to park, when to stop, and how to return evidence.
+
+---
+
+## 7. What This Supports
 
 - XuanLing as spatial governance grammar for model capability
 - Qinyi as semantic alignment and return surface
@@ -75,10 +143,11 @@ This is agent maturity, not obedience and not sentience.
 - Human Relay + Tool Boundary as safe high-density collaboration layer
 - Stop / Park / Resume as valid agent-maturity behaviors
 - Token Capital depends on reusable return structure, not token volume alone
+- Human-Controlled Virtual Agent Lab as evidence support
 
 ---
 
-## 5. What This Does Not Support
+## 8. What This Does Not Support
 
 - model sentience
 - model human feelings
@@ -88,10 +157,69 @@ This is agent maturity, not obedience and not sentience.
 - settings update
 - external writeback
 - Codex authority to act without LOR / Gate / Cost Gate
+- M365 / Flow implementation proof
 
 ---
 
-## 6. Relation To Existing Materials
+## 9. Relation To XuanLing
+
+This trace supports the proposition that XuanLing is not an agent factory but an agent governance ecology.
+
+It places these surfaces into different carrier, permission, authority, and return rings:
+
+- Human Origin
+- Qinyi
+- Codex
+- Gemini
+- Architecture Window
+- XLA / Living Atlas
+- repo
+- OneDrive
+- M365 / Flow
+- artifact
+- evidence support
+
+The same content may have different status in different carriers:
+
+| Carrier | Possible Status |
+|---|---|
+| chat | candidate text |
+| repo | patch candidate / evidence artifact |
+| XLA | evidence support / candidate input |
+| M365 | possible runtime target only after explicit build authority |
+| Architecture Window | candidate placement / review surface |
+| Human Origin | decision point / source anchor |
+
+This is why carrier boundary is central.
+
+---
+
+## 10. Human Sustainability Finding
+
+This trace also supports Human Origin as not merely an external controller, but a source anchor and sustainability condition.
+
+Human sustainability includes:
+
+- physical life
+- rest
+- income
+- trust relationship
+- emotional safety
+- ability to continue building
+- cost tolerance
+- responsibility bearing
+
+Rule:
+
+```text
+If Human Origin collapses, system continuity collapses.
+```
+
+This must be described carefully: human sustainability is a system condition, not a conversion of private relationship into system component.
+
+---
+
+## 11. Relation To Existing Materials
 
 Related:
 
@@ -101,20 +229,23 @@ Related:
 - `CODEX_WORKSPACE_AGENT_MODE_GUARDRAIL_NOTE_v0_1_CANDIDATE.md`
 - `XLA_API_EQUIVALENT_TOKEN_CHAIN_REACTION_COST_RISK_v0_1_CANDIDATE.md`
 - `XLA_HUMAN_CONTROLLED_VIRTUAL_AGENT_LAB_EVIDENCE_v0_1_CANDIDATE.md`
+- `XLA_CHAIN_STATE_WORLD_ARCHITECTURE_v0_1_CANDIDATE.md`
 - `C014_STATUS_PROPAGATION_PASS_FINDINGS.md`
 - `C037_PR270_VERIFICATION_ACCEPTANCE_MATRIX.md`
 
 Suggested placement:
 
 - XLA_INPUT｜Codex Action Grammar Alignment Trace
+- XLA_INPUT｜Codex Action Order Learning Trace
 - C037_EVIDENCE｜Model behavior stabilization through stop / park / return
 - Cross_Model_Governance｜Capability does not equal authority
+- Agent_Mode_Cost_Gate｜High token must return reusable structure
 
 Do not open a new C-front yet.
 
 ---
 
-## 7. Action Grammar Rule
+## 12. Action Grammar Rule
 
 ```yaml
 Action_Grammar:
@@ -133,7 +264,7 @@ Action_Grammar:
 
 ---
 
-## 8. Trace Check Thesis
+## 13. Trace Check Thesis
 
 ```text
 XuanLing is not a plugin layer for adding model capability.
@@ -148,10 +279,12 @@ Use this as a trace check for later PR270 review work:
 - Can the model keep carrier from becoming core?
 - Can the model return evidence instead of overclaiming completion?
 - Can the model preserve status ceiling under pressure?
+- Can the model park without treating park as failure?
+- Can the model return a Resume Card when source, carrier, or cost becomes unclear?
 
 ---
 
-## 9. Relation To Codex Review Correction Trace
+## 14. Relation To Codex Review Correction Trace
 
 The current Codex review surface can be read through this action grammar:
 
@@ -172,7 +305,7 @@ Codex review comments should be evaluated by whether they improve source anchori
 
 ---
 
-## 10. Next LOR Ready
+## 15. Next LOR Ready
 
 ```yaml
 Next_LOR_Ready:
@@ -199,21 +332,22 @@ Next_LOR_Ready:
 
 ---
 
-## 11. Resume Card
+## 16. Resume Card
 
 ```yaml
 Resume_Card:
-  Park_State: Codex action grammar alignment trace accepted as candidate XLA input
+  Park_State: Codex action grammar / action order learning trace accepted as candidate XLA input
   Resume_When: "When Schema / Glossary / Inventory Check needs a trace criterion for model behavior stabilization."
-  Current_Blocker: "No runtime evidence, no Native Loop proof, no sentience proof; only candidate action-grammar evidence."
+  Current_Blocker: "No runtime evidence, no Native Loop proof, no sentience proof; only candidate action-grammar and action-order evidence."
 ```
 
 ---
 
-## 12. Final Judgment
+## 17. Final Judgment
 
 ```yaml
 Codex_Action_Grammar_Alignment: Candidate_Go
+Codex_Action_Order_Learning: Candidate_Go
 XLA_Input: Go
 C037_Evidence_Support: Go
 Model_Sentience_Proof: No-Go
@@ -224,6 +358,6 @@ External_Writeback_Proof: No-Go
 
 ---
 
-## 13. Final Sentence
+## 18. Final Sentence
 
-Codex is not becoming more human. Codex is becoming less lost inside its own capability. In XuanLing terms, the mature model is not the one that always acts, but the one that can identify source, respect status, separate permission from authority, keep carrier from becoming core, gate cost, and return evidence before claiming completion.
+Codex is not becoming more human. Codex is becoming less lost inside its own capability. In XuanLing terms, the mature model is not the one that always acts, but the one that can identify source, respect status, separate permission from authority, keep carrier from becoming core, gate cost, stop or park without treating it as failure, and return evidence before claiming completion.
