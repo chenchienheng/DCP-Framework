@@ -68,15 +68,18 @@ function processPacket(packet) {
         "Required headers missing (Entity_Name, Evidence_Status, Updated_At)");
   }
 
+  const entityIndexMap = new Map();
+  for (let i = 1; i < data.length; i++) {
+    const entityName = data[i][entityNameIdx];
+    if (!entityIndexMap.has(entityName)) {
+      entityIndexMap.set(entityName, i);
+    }
+  }
+
   packet.payload.rows.forEach(newRow => {
     try {
-      let existingRowIdx = -1;
-      for (let i = 1; i < data.length; i++) {
-        if (data[i][entityNameIdx] === newRow["Entity_Name"]) {
-          existingRowIdx = i;
-          break;
-        }
-      }
+      let existingRowIdx = entityIndexMap.has(newRow["Entity_Name"]) ?
+          entityIndexMap.get(newRow["Entity_Name"]) : -1;
 
       if (existingRowIdx === -1) {
         const rowData = headers.map((h, colIdx) => {
@@ -85,6 +88,9 @@ function processPacket(packet) {
           return newRow[h] === undefined ? "" : newRow[h];
         });
         data.push(rowData);
+        if (!entityIndexMap.has(rowData[entityNameIdx])) {
+          entityIndexMap.set(rowData[entityNameIdx], data.length - 1);
+        }
         stats.added++;
       } else {
         const existingStatus = data[existingRowIdx][statusIdx];
@@ -124,10 +130,18 @@ function processPacket(packet) {
 
   if (AUTHORIZED_WRITE) {
     // Restore formulas before setValues to avoid formula-to-value conversion
-    for (let r = 0; r < formulas.length; r++) {
-      for (let c = 0; c < formulas[r].length; c++) {
-        if (formulas[r][c] !== "") {
-          data[r][c] = formulas[r][c];
+    const numRows = formulas.length;
+    for (let r = 0; r < numRows; r++) {
+      const formulaRow = formulas[r];
+      // Fast skip if the entire row has no formulas
+      if (!formulaRow.some(String)) continue;
+
+      const dataRow = data[r];
+      const numCols = formulaRow.length;
+      for (let c = 0; c < numCols; c++) {
+        const formula = formulaRow[c];
+        if (formula !== "") {
+          dataRow[c] = formula;
         }
       }
     }

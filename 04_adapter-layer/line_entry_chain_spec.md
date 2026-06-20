@@ -81,10 +81,11 @@ routing incoming messages through the established CoreTri axis framework.
   `return_failed` route directly to AXIS-05 for human or manual review.
 
 ## Required Credentials Checklist
-- [ ] LINE Channel ID
-- [ ] LINE Channel Secret
-- [ ] LINE Channel Access Token
-- [ ] Webhook URL (configured in LINE Developer Console)
+*(Note: Do not record actual credentials in this repository. The items below are secure placeholder references only.)*
+- [ ] `<LINE_CHANNEL_ID>`
+- [ ] `<LINE_CHANNEL_SECRET>`
+- [ ] `<LINE_CHANNEL_ACCESS_TOKEN>`
+- [ ] `<WEBHOOK_URL>` (configured in LINE Developer Console)
 
 ## Analysis
 
