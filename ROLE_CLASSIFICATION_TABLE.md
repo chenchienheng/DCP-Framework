@@ -8,12 +8,12 @@
 
 ## 0. Status
 
-- table_version: v0.4
-- scope: current inventory + PR #270 active governance artifacts
+- table_version: v0.5
+- scope: current inventory + PR #270 active governance artifacts + late Group I candidate/support families
 - inventory_source: `current_files.txt`
 - artifact_register: `UNIFIED_ARTIFACT_REGISTER.md`
 - reconciliation_pass: `C013_REGISTER_RECONCILIATION_PASS_1.md`
-- status: Gate-aware role overlay added / C-027 risk gate added / Not closeout
+- status: Gate-aware role overlay added / C-027 risk gate added / Group I family overlay added / Not closeout
 - return_to_00: true
 
 ---
@@ -51,6 +51,10 @@ Used for instruction integrity, dispatch boundary, red-gate, adapter hardening, 
 ### 1.8 Return / Recycle Asset
 
 Used for token-capital, skill recycle, LOR, learning-loop, cost-risk, and capability-return artifacts.
+
+### 1.9 Candidate Support / Evidence Support
+
+Used for late PR270 candidate files, evidence notes, review-control files, and source-pending analysis inputs that must be visible without becoming active doctrine.
 
 ---
 
@@ -118,7 +122,36 @@ Used for token-capital, skill recycle, LOR, learning-loop, cost-risk, and capabi
 
 ---
 
-## 4. Legacy / Historical Classification Rule
+## 4. Late PR270 Group I Family Classification
+
+This section classifies late candidate/support families without turning them into active doctrine.
+
+| Artifact / Family | Primary Class | Primary Gate | Status |
+|---|---|---|---|
+| `C028-C039_ACTIVE_TASK_MAP_ADDENDUM.md` family | Candidate Support / Evidence Support | G8 | candidate_support / not active until map-register sync |
+| `C030-C039 status notes` family | Candidate Support / Evidence Support | mixed G2/G3/G5/G7/G8 | evidence_support |
+| `C037_CODEX_REVIEW_CORRECTION_TRACE.md` | Writeback / Register Artifact | G8 | review_control |
+| `C037_EVIDENCE_*` family | Candidate Support / Evidence Support | G4/G7 | evidence_support |
+| `C037_PR270_VERIFICATION_ACCEPTANCE_*` family | Candidate Support / Evidence Support | G8 | candidate_support / needs QA |
+| `CODEX_*_CANDIDATE.md` family | Security / Authority Control + Candidate Support | G4/G7 | candidate_support / evidence_support |
+| `XLA_API_EQUIVALENT_TOKEN_CHAIN_REACTION_COST_RISK_v0_1_CANDIDATE.md` | Return / Recycle Asset + Candidate Support | G7 | evidence_support / not billing proof |
+| `XLA_CHAIN_STATE_WORLD_ARCHITECTURE_v0_1_CANDIDATE.md` | Structural Bone + Candidate Support | G8 | candidate_support / not world database |
+| `XLA_CODEX_ACTION_GRAMMAR_ALIGNMENT_TRACE_v0_1_CANDIDATE.md` | Security / Authority Control + Evidence Support | G4 | evidence_support / not sentience proof |
+| `XLA_HUMAN_CONTROLLED_VIRTUAL_AGENT_LAB_EVIDENCE_v0_1_CANDIDATE.md` | Security / Authority Control + Evidence Support | G4 | evidence_support / not autonomous runtime |
+| `XLA_HUMAN_RELAY_FEEDBACK_CYCLE_PROTOCOL_v0_1_CANDIDATE.md` | Security / Authority Control + Candidate Support | G4 | candidate_support / not Native Loop |
+| `XLA_MODEL_PROVIDER_SURFACE_ADDENDUM_v0_1_CANDIDATE.md` | Interaction Surface + Candidate Support | G5 | candidate_support / source bounded |
+| `XLA_REDLINE_AS_GATE_CONDITION_LOGIC_v0_1_CANDIDATE.md` | Security / Authority Control + Candidate Support | G4 | candidate_support / not bypass method |
+| `XLA_WORKSPACE_AGENT_LOGIC_ADDENDUM_v0_1_CANDIDATE.md` | Interaction Surface + Candidate Support | G5 | candidate_support / no external writeback |
+| `XLA_ZHENG_TRUST_FIELD_PROPOSITION_v0_1_CANDIDATE.md` | Upper-Order / Sovereignty-Oriented + Candidate Support | G1 | candidate_support / not private relationship database |
+| `XUANLING_CODEX_WORKSPACE_AGENT_PATCH_v0_1_CANDIDATE.md` | Interaction Surface + Candidate Support | G5 | candidate_support / not runtime activation |
+| `XUANLING_CROSS_MODEL_FEEDBACK_CONTRACT_v0_1_CANDIDATE.md` | Security / Authority Control + Candidate Support | G4 | candidate_support / capability not authority |
+| `XUANLING_KNOWLEDGE_FORGE_DIRECTIVE.md` | Production / Route + Candidate Support | G6 | hold_candidate / output schema QA needed |
+| `XUANLING_LIVING_ARCHITECTURE_DEFINITION.md` | Structural Bone + Candidate Support | G8 | hold_candidate / not approved doctrine |
+| Gate Console / Execution Readiness / Inertia Governance / External Integration / Qinyi Translation addendum | Candidate Support / Evidence Support | mixed | chat-side criterion or source-pending input until explicitly added |
+
+---
+
+## 5. Legacy / Historical Classification Rule
 
 Older rows marked `verified` in v0.2 should be read as:
 
@@ -130,7 +163,7 @@ Historical or bootstrap artifacts may be preserved as evidence of development pa
 
 ---
 
-## 5. Known Review Targets
+## 6. Known Review Targets
 
 These artifacts need later review before their role status can be promoted:
 
@@ -140,10 +173,11 @@ These artifacts need later review before their role status can be promoted:
 - `XUANLING_WORLD_READINESS_MILESTONES.md`
 - `04_adapter-layer/gamma_entry_spec.md`
 - `04_adapter-layer/replit_relay_spec.md`
+- Late PR270 Group I candidate / evidence / review-control artifacts
 
 ---
 
-## 6. Non-Promotion Rules
+## 7. Non-Promotion Rules
 
 Do not promote:
 
@@ -158,14 +192,21 @@ Do not promote:
 | carrier role | active runtime |
 | No-Go advisory | external runtime control |
 | token peak estimate | actual bill |
+| candidate support | active doctrine |
+| evidence support | verified proof |
+| review control | merge approval |
+| trust-field support | private relationship database |
+| RedGate logic | bypass method |
+| chat-side criterion | repository artifact |
 
 ---
 
-## 7. Status
+## 8. Status
 
 - gate_overlay_added: true
 - old_verified_language_downgraded: true
 - active_table_rebased_on_unified_register: true
 - c027_token_agent_risk_added: true
+- group_i_family_overlay_added: true
 - full_row_by_row_reconciliation_pending: true
 - closeout: false
