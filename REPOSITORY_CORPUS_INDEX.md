@@ -8,8 +8,8 @@
 
 ## 0. Index Status
 
-- index_version: v0.5
-- status: Partially reconciled after C-012 Pass 1 / C-027 added
+- index_version: v0.6
+- status: Partially reconciled after late PR270 Group I candidate/support registration
 - source_inventory: `current_files.txt`
 - detailed_register: `UNIFIED_ARTIFACT_REGISTER.md`
 - reconciliation_pass: `C013_REGISTER_RECONCILIATION_PASS_1.md`
@@ -190,7 +190,63 @@ Make corpus state, architecture mainline, cleanup decisions, and closeout bounda
 
 ---
 
-## 3. Historical / Candidate / Merge-Aware References
+## 3. Late PR270 Candidate / Evidence / Queue Support Family
+
+Late PR270 artifacts added after the early C027/C014 surfaces are now visible in `current_files.txt` and registered in `UNIFIED_ARTIFACT_REGISTER.md` as Group I.
+
+They should be read as candidate support, evidence support, hold-candidate, or review-control artifacts. They are not active doctrine unless a later row-by-row QA pass explicitly promotes their role.
+
+Representative families:
+
+```yaml
+Late_PR270_Group_I:
+  Task_Map_Addenda:
+    - C028_ACTIVE_TASK_MAP_ADDENDUM.md
+    - C029_ACTIVE_TASK_MAP_ADDENDUM.md
+    - C030_ACTIVE_TASK_MAP_ADDENDUM.md
+    - C031_ACTIVE_TASK_MAP_ADDENDUM.md
+    - C032_ACTIVE_TASK_MAP_ADDENDUM.md
+    - C033_ACTIVE_TASK_MAP_ADDENDUM.md
+    - C033A_ACTIVE_TASK_MAP_ADDENDUM.md
+    - C034_ACTIVE_TASK_MAP_ADDENDUM.md
+    - C035_ACTIVE_TASK_MAP_ADDENDUM.md
+    - C036_ACTIVE_TASK_MAP_ADDENDUM.md
+    - C037_ACTIVE_TASK_MAP_ADDENDUM.md
+    - C038_ACTIVE_TASK_MAP_ADDENDUM.md
+    - C039_ACTIVE_TASK_MAP_ADDENDUM.md
+  C037_Evidence_And_Review:
+    - C037_CODEX_REVIEW_CORRECTION_TRACE.md
+    - C037_EVIDENCE_AGENT_MODE_COST_EXPANSION_RISK.md
+    - C037_EVIDENCE_CODEX_WORKSPACE_AGENT_CALIBRATION_FEEDBACK.md
+    - C037_PR270_VERIFICATION_ACCEPTANCE_MATRIX.md
+    - C037_PR270_VERIFICATION_ACCEPTANCE_STATUS.md
+  XLA_Candidate_Inputs:
+    - XLA_API_EQUIVALENT_TOKEN_CHAIN_REACTION_COST_RISK_v0_1_CANDIDATE.md
+    - XLA_CHAIN_STATE_WORLD_ARCHITECTURE_v0_1_CANDIDATE.md
+    - XLA_CODEX_ACTION_GRAMMAR_ALIGNMENT_TRACE_v0_1_CANDIDATE.md
+    - XLA_HUMAN_CONTROLLED_VIRTUAL_AGENT_LAB_EVIDENCE_v0_1_CANDIDATE.md
+    - XLA_HUMAN_RELAY_FEEDBACK_CYCLE_PROTOCOL_v0_1_CANDIDATE.md
+    - XLA_MODEL_PROVIDER_SURFACE_ADDENDUM_v0_1_CANDIDATE.md
+    - XLA_REDLINE_AS_GATE_CONDITION_LOGIC_v0_1_CANDIDATE.md
+    - XLA_WORKSPACE_AGENT_LOGIC_ADDENDUM_v0_1_CANDIDATE.md
+    - XLA_ZHENG_TRUST_FIELD_PROPOSITION_v0_1_CANDIDATE.md
+  Productization_And_Integration_Criteria:
+    - Gate Console MVP spec: chat-side criterion only unless explicitly added later
+    - Execution Readiness: chat-side criterion only unless explicitly added later
+    - Inertia Governance: chat-side criterion only unless explicitly added later
+    - External Integration Readiness: source-pending candidate input until external anchors are supplied
+    - Qinyi Translation Surface addendum: source-pending candidate input until consolidated
+```
+
+Non-promotion rule:
+
+```text
+Late candidate support exists in the corpus, but existence in inventory does not equal active doctrine, runtime proof, approval, or writeback authority.
+```
+
+---
+
+## 4. Historical / Candidate / Merge-Aware References
 
 The following may remain useful, but are not treated as current approved doctrine without review:
 
@@ -210,26 +266,28 @@ Handling decisions for these references live in `UNIFIED_ARTIFACT_REGISTER.md`.
 
 ---
 
-## 4. Desync Notes
+## 5. Desync Notes
 
 This index replaces the older `fully reconciled (00-05)` claim.
 
 Why:
 
 1. PR #270 added governance artifacts beyond 00-05 family indexing.
-2. `current_files.txt` has been refreshed with PR #270 artifacts.
-3. `UNIFIED_ARTIFACT_REGISTER.md` now carries Pass 1 handling decisions.
-4. `ROLE_CLASSIFICATION_TABLE.md` now has eight-gate overlay.
-5. C-027 adds token / agent expansion risk governance and a No-Go gate for group expansion.
+2. `current_files.txt` has been refreshed with late PR #270 artifacts.
+3. `UNIFIED_ARTIFACT_REGISTER.md` now carries Pass 1 handling decisions and late Group I rows.
+4. `ROLE_CLASSIFICATION_TABLE.md` still needs a Group I role-classification sync.
+5. `ACTIVE_RESTRUCTURING_TASK_MAP.md` still needs a post-C027 candidate/support section.
+6. C-027 and later additions introduce token / agent / provider / RedGate / trust-field / chain-state risk governance without runtime, deployment, or external writeback proof.
 
 ---
 
-## 5. Status
+## 6. Status
 
 - family_normalization_verified: legacy_only
-- cross_family_link_consistency: needs_recheck_after_v0_5
+- cross_family_link_consistency: needs_recheck_after_v0_6
 - gate_aware_index_added: true
 - artifact_register_source_order_added: true
 - role_table_gate_overlay_added: true
+- late_group_i_acknowledged: true
 - c027_token_agent_risk_added: true
 - closeout: false
