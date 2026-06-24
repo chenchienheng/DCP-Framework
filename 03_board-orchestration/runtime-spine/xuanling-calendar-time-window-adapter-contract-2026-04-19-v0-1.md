@@ -286,22 +286,21 @@ actual_result:
   - effective_order is promoted to a required output rather than ad hoc judgement
   - conflict and stale classes are explicitly separated
   - cross-window sync with Gmail/Contacts/control plane is defined
+  - contacts identity adapter is created as a child contract
 ```
 
 ## 13. Mismatch or Gap
 ```yaml
 mismatch_or_gap:
-  - attendee trust/identity normalization is not yet fixed
   - future-bound watch queue template is not yet separated
   - stale execution packet template is not yet dedicated
-  - contacts identity adapter is still missing as a child contract
 ```
 
 ## 14. Next Single Action
 ```yaml
 next_single_action:
-  target: contacts_identity_adapter_contract
-  reason: Gmail mother-gate and Calendar adapter now exist; the next shared infrastructure layer is identity normalization so sender/attendee/contact drift stops leaking ambiguity into routing, time-window, and exception logic
+  target: future_bound_watch_queue_template
+  reason: Calendar time-window adapter and Contacts identity adapter are in place; next step is to define the watch queue template for future-bound events.
 ```
 
 ## 15. Return to 00

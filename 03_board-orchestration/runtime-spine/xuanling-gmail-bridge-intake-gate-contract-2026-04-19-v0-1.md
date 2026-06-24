@@ -262,22 +262,22 @@ actual_result:
   - contamination control is separated from ordinary low-priority handling
   - cross-window sync hooks are defined
   - Gmail is now treated as first reusable mother-gate instead of isolated inbox logic
+  - contacts identity adapter handles sender trust scoring and identity normalization
 ```
 
 ## 12. Mismatch or Gap
 ```yaml
 mismatch_or_gap:
-  - sender trust scoring is not yet normalized
   - label/archive rule templates are not yet separated by category
   - identity drift packet template is not yet dedicated
-  - calendar/contact adapters are implied, not yet written as child contracts
+  - calendar adapter is written but needs watch queue separation
 ```
 
 ## 13. Next Single Action
 ```yaml
 next_single_action:
-  target: calendar_time_window_adapter_contract
-  reason: mother-gate logic now exists; next step is to bind a second intake surface using the same rule so cross-window synchronization begins to form shared infrastructure rather than one-off handling
+  target: identity_drift_packet_template
+  reason: Identity normalization adapter exists; next step is to define the packet template for handling explicit identity drift scenarios.
 ```
 
 ## 14. Return to 00
