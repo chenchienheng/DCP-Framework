@@ -62,6 +62,8 @@ function processPacket(packet) {
   const entityNameIdx = headers.indexOf("Entity_Name");
   const statusIdx = headers.indexOf("Evidence_Status");
   const updatedAtIdx = headers.indexOf("Updated_At");
+  const payloadIdIdx = headers.indexOf("Payload_ID");
+  const sourceBatchIdx = headers.indexOf("Source_Batch");
 
   if (entityNameIdx === -1 || statusIdx === -1 || updatedAtIdx === -1) {
     throw new Error(
@@ -83,8 +85,8 @@ function processPacket(packet) {
 
       if (existingRowIdx === -1) {
         const rowData = headers.map((h, colIdx) => {
-          if (h === "Payload_ID") return packet.payload.payload_id;
-          if (h === "Source_Batch") return packet.payload.source_batch;
+          if (colIdx === payloadIdIdx) return packet.payload.payload_id;
+          if (colIdx === sourceBatchIdx) return packet.payload.source_batch;
           return newRow[h] === undefined ? "" : newRow[h];
         });
         data.push(rowData);
@@ -109,8 +111,8 @@ function processPacket(packet) {
             }
 
             let newVal = newRow[h];
-            if (h === "Payload_ID") newVal = packet.payload.payload_id;
-            if (h === "Source_Batch") newVal = packet.payload.source_batch;
+            if (colIdx === payloadIdIdx) newVal = packet.payload.payload_id;
+            if (colIdx === sourceBatchIdx) newVal = packet.payload.source_batch;
 
             if (newVal !== undefined && newVal !== "") {
               if (mode === "OVERWRITE" || data[existingRowIdx][colIdx] === "") {
