@@ -82,10 +82,10 @@ routing incoming messages through the established CoreTri axis framework.
 
 ## Required Credentials Checklist
 *(Note: Do not record actual credentials in this repository. The items below are secure placeholder references only.)*
-- [ ] `<LINE_CHANNEL_ID>`
-- [ ] `<LINE_CHANNEL_SECRET>`
-- [ ] `<LINE_CHANNEL_ACCESS_TOKEN>`
-- [ ] `<WEBHOOK_URL>` (configured in LINE Developer Console)
+- [ ] `[PLACEHOLDER: LINE_CHANNEL_ID]`
+- [ ] `[PLACEHOLDER: LINE_CHANNEL_SECRET]`
+- [ ] `[PLACEHOLDER: LINE_CHANNEL_ACCESS_TOKEN]`
+- [ ] `[PLACEHOLDER: WEBHOOK_URL]` (configured in LINE Developer Console)
 
 ## Analysis
 
