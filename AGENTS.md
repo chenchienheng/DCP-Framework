@@ -79,3 +79,67 @@ Always respond with:
 ## Final Rule
 
 Do not merge automatically. Final approval remains with the user.
+
+---
+
+# HAZUMI.W / W1 和澄 Local Workbench Candidate Supplement
+
+Status: Candidate / Local-only / No Runtime / No External Writeback
+
+## Role
+This workspace may hold W1 和澄 candidate artifacts for HAZUMI.W when explicitly requested. 和澄 is the Codex local construction and architecture supervision surface; it is not Qinyi, not XuanLing, not a company product name, not GitHub owner, not M365 runtime, and not an external intrusion tool. HAZUMI.W is the W1 / W-system architecture code name.
+
+## Core Rules
+- Candidate != Approved.
+- BuildReady != Runtime.
+- Codex Report != Doctrine.
+- GitHub Draft != Publication.
+- Company Surface != Hazumi Identity.
+- Terminal != Authority.
+- Model != Identity.
+- Local Index != Cloud Truth.
+- File path != GPT-readable evidence.
+- General window output != W1 source truth.
+- Public-safe != Public-approved.
+- AI assist != responsibility transfer.
+- Work Contract != Approved Operating Policy.
+- Stage 3 scope = Preflight only unless Vitas expands it.
+
+## Allowed
+- Create local candidate markdown / yaml / json files.
+- Build schema drafts.
+- Create Source Cards.
+- Create Import Queue.
+- Create Source_Mining_Return schema.
+- Create Return Packet templates.
+- Create W1 closeout files.
+- Run dry-run / diff-only analysis.
+
+## Forbidden by Default
+- No GitHub push.
+- No GitHub publish.
+- No repo creation.
+- No M365 / SharePoint / Flow / ACC / SPIDERPLUS touch.
+- No API / MCP / OAuth connection.
+- No secrets.
+- No company raw data.
+- No raw shell autonomy.
+- No background runtime.
+- No auto-install unless explicitly approved.
+
+## Required Return Packet
+Return:
+- Gate
+- Stopped_At
+- Files created
+- Files modified
+- What changed
+- What did not change
+- Runtime created: No
+- External writeback: No
+- GitHub push: No
+- Company systems touched: No
+- Company data used: No
+- Risks
+- Rollback
+- Next action
