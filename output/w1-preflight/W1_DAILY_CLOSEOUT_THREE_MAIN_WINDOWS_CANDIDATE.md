@@ -35,6 +35,9 @@ This closeout keeps the W1 local workspace bounded after the three-face integrat
 - No M365, SharePoint, Flow, ACC, API, MCP, or OAuth connection was made.
 - No company raw data was used.
 
+## Cloud Handoff Pointer
+Before cloud Codex / 和澄 takes over, read `W1_LOCAL_WORK_MANIFEST_AND_CLOUD_HANDOFF_v0_1_CANDIDATE.md` for the complete local work inventory, cloud receiving instructions, and GPT/Qinyi return chain.
+
 ## Stop Condition
 Stop and return to Vitas if any next action requires external writeback, company raw data, credentials, deployment, M365, GitHub execution, API/MCP/OAuth, or claims of approval/runtime.
 
