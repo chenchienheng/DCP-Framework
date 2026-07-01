@@ -6,10 +6,13 @@ Qinyi Role: settings-domain inventory, semantic cleanup, layering, handoff packe
 Hazumi / Codex Role: UI, repo, or document construction only after explicit approval
 Master Gate: #297
 Related PR: #298
+Active Bridge Contract: docs/settings/g-ecosystem-phase-stream-contract-v0_2.md
 
 ## Core
 
 This plan upgrades Gmail cleanup into ecosystem-level settings governance.
+
+Correction: this is not a set of separate windows. It is one integration window moving through different phases and streams. Gmail was the first crossed stream. The current active work is organizing the rest of the G ecosystem: Drive, Calendar, Contacts, Gemini, and GitHub/DCP handoff material.
 
 Gmail is the entry point, but the actual target is a portable governance syntax for personal Google-side surfaces, enterprise Microsoft-side surfaces, and Gemini as a second-model reasoning mirror.
 
@@ -26,6 +29,23 @@ Shared governance syntax:
 
 ```text
 Source -> Carrier -> Authority -> Gate -> Action -> Return -> Rebuild
+```
+
+## Phase Stream Model
+
+```yaml
+Phase_Stream_Model:
+  one_window: true
+  current_phase: "G ecosystem stream inventory after Gmail cleanup"
+  streams:
+    Gmail: "crossed first cleanup stream; still subject to review"
+    Drive: "active inventory candidate"
+    Calendar: "inventory candidate"
+    Contacts: "inventory candidate"
+    Gemini: "contract candidate / second-model mirror"
+    GitHub_DCP: "sanitized carrier for docs, issues, schemas, return packets"
+  later:
+    M_Ecosystem: "manual planning and enterprise red-door mapping only"
 ```
 
 ## Part A｜G Ecosystem
@@ -215,6 +235,6 @@ M_Ecosystem_Acceptance:
 
 ## Final Judgment
 
-The task is not Gmail cleanup anymore. The task is ecosystem settings governance.
+The task is not Gmail cleanup anymore. The task is ecosystem settings governance inside one integration window moving through phases and streams.
 
 G ecosystem organizes personal cloud and external signals. M ecosystem carries company permissions and formal workflows. Gemini provides second-model mirroring. They may share governance syntax, but must not share data, authority, or responsibility.
