@@ -1,0 +1,43 @@
+# Status: Candidate / G-to-M Bridge Return Template / No Runtime / No External Writeback
+
+G_to_M_Bridge_Return:
+  Source: null
+  Surface_Group: "G_Ecosystem | M_Ecosystem | Bridge"
+  Surface: null
+  Carrier: null
+  Authority: null
+  Current_State: "Draft | Candidate | Review_Support | Approved | BuildReady | Runtime | Park | Red_Gate | Needs_Human_Approval"
+  Proposed_Action: null
+  Allowed_Now: []
+  Forbidden_Now: []
+  Red_Doors: []
+  Candidate_Mapping:
+    from_surface: null
+    to_surface: null
+    shared_syntax: []
+    non_transferable: []
+  What_Can_Move:
+    - "governance syntax"
+    - "classification model"
+    - "manual guide language"
+    - "return packet format"
+  What_Cannot_Move:
+    - "raw company data"
+    - "private mail contents"
+    - "company permissions"
+    - "account secrets or tokens"
+    - "unreviewed private origin material"
+  Needs_Vitas_Decision: []
+  Return_To: null
+  Next_Action: null
+
+Red_Door_Checks:
+  - "G integration maturity is not M implementation approval"
+  - "personal authority is not company authority"
+  - "Google-side summary is not Microsoft-side evidence"
+  - "Gemini output is not final authority"
+  - "Gmail label is not Outlook rule"
+  - "Drive folder is not SharePoint permission model"
+  - "Calendar reminder is not company commitment"
+  - "manual guide is not workflow runtime"
+  - "company data must remain in company carrier"
