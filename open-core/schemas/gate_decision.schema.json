@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/open-xuanling/gate_decision.schema.json",
+  "title": "Open XuanLing Gate Decision",
+  "description": "Candidate schema. Not Approved. No Runtime.",
+  "type": "object",
+  "required": ["item_id", "decision", "reason", "return_packet_required"],
+  "properties": {
+    "item_id": {"type": "string"},
+    "source_card_id": {"type": "string"},
+    "decision": {
+      "type": "string",
+      "enum": ["Go", "Conditional_Go", "Park", "Stop", "Needs_Human_Approval"]
+    },
+    "reason": {"type": "array", "items": {"type": "string"}},
+    "required_conditions": {"type": "array", "items": {"type": "string"}},
+    "red_doors": {"type": "array", "items": {"type": "string"}},
+    "authority": {"type": "string"},
+    "reviewer": {"type": "string"},
+    "reviewed_at": {"type": "string"},
+    "return_packet_required": {"type": "boolean"}
+  },
+  "additionalProperties": false
+}
