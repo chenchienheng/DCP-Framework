@@ -1,0 +1,91 @@
+# Status: Candidate / MEP Bid Governance Example / Not Approved / No Runtime
+
+source_card:
+  id: "SRC-MEP-BID-GOV-001"
+  title: "MEP pricing maturity and 7/13 submission gate"
+  source_type: "domain_learning_packet"
+  source_location: "user-provided Qinyi learning review"
+  carrier: "domain_packs/mep_bid_governance"
+  owner: "Vitas"
+  evidence_level: "User-Provided Direct Material"
+  summary: "A bid-governance learning case about pricing maturity, authorization, vendor backing, and submission state."
+  supports:
+    - "Pricing should be classified by maturity before submission wording is chosen."
+    - "External sanitized advisory and internal evidence carrier must remain separate."
+  does_not_support:
+    - "Does not authorize company submission."
+    - "Does not provide pricing basis."
+    - "Does not replace management approval."
+  restrictions:
+    - "Use sanitized structure only."
+    - "No real vendor, RFQ, contract, mail, or price details."
+  next_gate: "Gate_Review"
+
+pricing_maturity:
+  current_label: "External-Sanitized-Candidate"
+  candidates:
+    - Vendor_Backed
+    - ROM_Budgetary
+    - Internal_Estimate
+    - Provisional_Sum
+    - TBC_Exclusion
+  required_decision: "choose maturity per scope item before owner-facing language"
+
+authority_required:
+  needs_pm_decision: true
+  needs_management_approval: true
+  needs_commercial_approval: true
+  needs_owner_acceptance: true
+  needs_vendor_backing: true
+  risk_acceptance_owner: "TBD"
+
+evidence_gap_register:
+  missing_vendor_quote: "TBD"
+  missing_no_bid_record: "TBD"
+  missing_internal_authorization: "TBD"
+  missing_owner_flexibility: "TBD"
+  missing_risk_acceptance: "TBD"
+  missing_submission_boundary: "TBD"
+
+gate_review:
+  item_id: "MEP-BID-GOV-001"
+  source_card: "SRC-MEP-BID-GOV-001"
+  proposal: "Use a conditional submission framework only if evidence, maturity, authorization, and risk acceptance are defined."
+  carrier: "domain pack example"
+  authority: "Vitas / authorized company decision-maker"
+  requested_action: "domain_learning_only"
+  risks:
+    - "Option C may be mistaken for an approved answer."
+    - "Internal estimate may be mistaken for vendor-backed price."
+    - "Owner-facing draft may be mistaken for submitted document."
+  red_doors:
+    - "Internal Estimate != Vendor-backed Price"
+    - "Management-Reviewed != Management-Approved"
+    - "Owner-Facing Draft != External Submission"
+    - "AI Draft != Submission Strategy"
+    - "Pricing Maturity != Execution Backing"
+  decision: "Conditional_Go"
+  conditions:
+    - "Keep as learning example."
+    - "Do not use as company submission."
+    - "Add evidence gaps and authority owner before any real use."
+  return_packet_required: true
+
+return_packet:
+  item_id: "MEP-BID-GOV-001"
+  gate_decision: "Conditional_Go"
+  action_taken: "domain example created"
+  carrier: "GitHub PR #298"
+  files_or_surfaces_changed:
+    - "domain_packs/mep_bid_governance/examples/pricing_maturity_submission_gate.yaml"
+  what_changed:
+    - "Added a candidate gate example for pricing maturity and submission state."
+  what_did_not_change:
+    - "No company submission."
+    - "No pricing basis."
+    - "No management approval."
+    - "No runtime."
+  needs_human_decision:
+    - "whether to expand this domain pack"
+  next_action: "Review Qinyi gate review"
+  returned_to: "#298"
