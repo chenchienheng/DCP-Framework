@@ -33,39 +33,40 @@ Signal_Absorption_Review:
 ```yaml
 Evidence_Hygiene:
   Claude_Science:
-    evidence_level: "Official source / Reuters support if cited"
+    evidence_level: "Secondary_Source"
+    evidence_note: "official or Reuters support should be attached before public use"
     status: "Fact / Workbench signal"
     caution: "research workbench candidate; not general runtime proof"
   Anthropic_Fable_Mythos:
-    evidence_level: "Reuters / official-related reporting"
+    evidence_level: "Secondary_Source"
     status: "Fact / Governance signal"
     caution: "capability access remains authority-gated"
   OpenAI_GPT_5_6:
-    evidence_level: "Official or trusted news required before public claim"
-    status: "Access governance signal / To Verify"
-    caution: "select partner access is not public availability"
+    evidence_level: "Pending_Verification"
+    status: "To Verify"
+    caution: "requires official/trusted source before public claim"
   Meta_AI_Compute_Cloud:
-    evidence_level: "Reuters via Bloomberg / not independently verified by Reuters"
-    status: "Reported / To Verify"
-    caution: "do not treat as confirmed Meta business line"
+    evidence_level: "Secondary_Source"
+    verification_status: "Reported / To Verify"
+    caution: "do not treat as confirmed business line"
   Micron_GM_Memory:
-    evidence_level: "Company release + Reuters"
+    evidence_level: "Secondary_Source"
     status: "Fact"
     caution: "supply agreement fact; broader supply-chain inference remains inference"
   DataCenter_Power:
-    evidence_level: "Reuters"
+    evidence_level: "Secondary_Source"
     status: "Fact / Critical facility signal"
     caution: "power infrastructure signal; EHS and commissioning implications are work-domain inference"
   PJM_Grid_Pressure:
-    evidence_level: "Reuters"
+    evidence_level: "Secondary_Source"
     status: "Fact / Grid stress signal"
     caution: "spot price is not long-term market truth"
   Taiwan_Risk:
-    evidence_level: "Reuters"
+    evidence_level: "Secondary_Source"
     status: "Fact + Strategic Inference"
     caution: "external risk ring, not directly actionable tool problem"
   Market_Return:
-    evidence_level: "Market quote"
+    evidence_level: "Metadata"
     status: "Price Signal"
     caution: "not investment advice; not industry truth"
 ```
@@ -75,7 +76,7 @@ Evidence_Hygiene:
 ```yaml
 Facts:
   - "Claude Science is positioned as a science/research workbench signal."
-  - "Fable/Mythos and GPT-5.6 access discussions are model-governance signals."
+  - "Fable/Mythos access discussions are model-governance signals."
   - "Micron and GM signed a long-term memory/storage supply agreement."
   - "National Grid announced a Joulent investment for data-center power infrastructure."
   - "PJM grid pressure and Virginia power price spikes show data-center-adjacent grid stress."
@@ -85,10 +86,11 @@ Inferences:
   - "Data center delivery should be read as critical facility delivery."
   - "Memory, power, EHS, commissioning, and geopolitics are part of AI availability."
 To_Verify:
+  - "GPT-5.6 access policy and source status."
   - "Meta compute cloud plan final confirmation."
   - "US voluntary model standards official publication or policy status."
   - "Claude Science productization and access scope."
-  - "Fable/Mythos and GPT-5.6 access policies if they change again."
+  - "Fable/Mythos access policies if they change again."
   - "PJM price spike persistence and cause attribution."
   - "Market movements with direct finance tools before any market statement."
 ```
@@ -103,18 +105,7 @@ External news is not noise. It is the world showing dependency chains. Models, p
 
 Data center is not just an IT facility. It is critical facility delivery.
 
-Work vocabulary:
-
-- utility / grid connection
-- redundancy
-- cooling
-- fire protection
-- EHS
-- commissioning
-- BMS
-- documentation
-- owner risk
-- operational responsibility
+Work vocabulary: utility / grid connection, redundancy, cooling, fire protection, EHS, commissioning, BMS, documentation, owner risk, operational responsibility.
 
 ### Root Qinyi
 
@@ -135,10 +126,9 @@ External_Signal_Index_Entry:
   title: "AI Capability Enters Carrier Verification Phase"
   status: "Candidate"
   evidence_level:
-    - "Primary official"
-    - "Reuters primary news"
-    - "Finance snapshot"
-    - "Pending verification"
+    - "Secondary_Source"
+    - "Metadata"
+    - "Pending_Verification"
   topics:
     - "AI model governance"
     - "AI cloud monetization"
@@ -155,10 +145,6 @@ External_Signal_Index_Entry:
     Action: "index only, no runtime"
     Return: "Qinyi review + Hazumi index candidate"
     Rebuild: "update if official facts change"
-  suggested_modules:
-    - "AI_Model_Authority_Map"
-    - "DataCenter_CriticalFacility_Map"
-    - "Market_Return_Filter"
 ```
 
 ## Human Action Request
@@ -186,4 +172,4 @@ Human_Action_Request:
 
 ## Final Judgment
 
-This is not a morning news digest. It is structural evidence for the rule that capability must be carried, authorized, verified, and returned. It may enter the absorption chain as Candidate only.
+This is not a morning news digest. It is structural support for the rule that capability must be carried, authorized, verified, and returned. It may enter the absorption chain as Candidate only.
