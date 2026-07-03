@@ -2,12 +2,18 @@
 
 G_Ecosystem_Stream_Return:
   Phase: null
-  Stream: "Gmail | Drive | Calendar | Contacts | Gemini | GitHub_DCP"
+  Stream: "Gmail | Drive | Calendar | Contacts | Mirror_Review | GitHub_DCP"
   Source: null
   Carrier: null
   Authority: null
-  Current_State: "Draft | Candidate | Review_Support | Approved | BuildReady | Runtime | Park | Red_Gate | Needs_Human_Approval"
+  Current_State: "Signal | Candidate | Review_Needed | Evidence_Pending | Human_Gate_Required | Return_Packet_Prepared | Park | Red_Gate | Needs_Vitas_Decision"
   Proposed_Action: null
+  Evidence_Boundary:
+    evidence_level: null
+    source_ref: null
+    user_reported: null
+    qinyi_verified: null
+    verification_status: null
   Allowed_Now: []
   Forbidden_Now: []
   Red_Doors: []
@@ -32,7 +38,7 @@ Red_Door_Checks:
   - "G ecosystem maturity is not M ecosystem implementation approval"
   - "personal authority is not company authority"
   - "Google-side summary is not Microsoft-side evidence"
-  - "Gemini output is not final authority"
+  - "Mirror review is not approval"
   - "Drive folder is not SharePoint permission model"
   - "Calendar reminder is not company commitment"
   - "manual guide is not workflow runtime"
