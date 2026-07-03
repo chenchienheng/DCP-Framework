@@ -6,7 +6,7 @@ Related PR: #298
 
 ## Core
 
-Cloud work should not imitate a single slow chat thread. It should use multiple bounded workcells that run in parallel, each with a small scope, a clear return packet, and a shared review gate.
+Cloud work should not imitate a single slow chat thread. It may use multiple bounded workcells that run in parallel, each with a small scope, a clear return packet, and a shared review gate.
 
 The point is not to create autonomous bots. The point is to reduce blocking while preserving Source / Carrier / Authority / Gate / Action / Return / Rebuild.
 
@@ -21,7 +21,7 @@ Cloud-first work preserves cleaner traces, but can feel slow if every item waits
 ```yaml
 Cloud_Workcells:
   Gate_Cell:
-    role: "state, authority, red-door, semantic boundary review"
+    role: "state, authority, red-door, semantic boundary precheck"
   Build_Cell:
     role: "docs, schema, examples, template construction candidate"
   Review_Cell:
@@ -29,11 +29,11 @@ Cloud_Workcells:
   Signal_Cell:
     role: "external signal absorption and case index"
   Settings_Cell:
-    role: "G/M/Gemini settings governance planning"
+    role: "G/M/settings governance planning"
   Open_Core_Cell:
     role: "Open XuanLing Core first build set"
   Return_Cell:
-    role: "collect workcell returns and produce Qinyi gate review"
+    role: "collect workcell returns and route them to Qinyi review"
 ```
 
 ## Parallel Rule
@@ -52,7 +52,7 @@ Parallel work is allowed only when each cell has:
 
 ## Not Parallelizable
 
-The following must not be parallelized without direct approval:
+The following must remain serialized through Qinyi review and Vitas decision. Approval may authorize a next action, but it does not make the decision lane parallelizable:
 
 - merge decisions
 - issue or PR close decisions
@@ -137,4 +137,4 @@ Cloud_Workcell_Return:
 
 ## Final Rule
 
-Cloud parallelism is not autonomy. It is bounded concurrency under gate review. The system may run multiple workcells at once, but authority remains serialized through Qinyi review and Vitas decision.
+Cloud parallelism is not autonomy. It is bounded concurrency under gate review. Multiple workcells may run at once, but authority remains serialized through Qinyi review and Vitas decision. A Return_Cell collects packets; it does not produce the final Qinyi gate review by itself.
