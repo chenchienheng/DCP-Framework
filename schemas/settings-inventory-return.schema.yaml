@@ -13,7 +13,7 @@ Settings_Inventory_Return:
   Candidate_Changes: []
   Red_Gates: []
   Codex_Needed: []
-  Gemini_Needed: []
+  Mirror_Review_Needed: []
   User_Decisions: []
   Risks: []
   What_Not_To_Claim: []
@@ -22,8 +22,10 @@ Settings_Inventory_Return:
 Surface_Groups:
   allowed_values:
     - G_Ecosystem
-    - M_Ecosystem
-    - Gemini
+    - Personal_M
+    - Company_M365
+    - Unknown_M
+    - Mirror_Review
     - GitHub_DCP
 
 G_Ecosystem_Surfaces:
@@ -32,7 +34,10 @@ G_Ecosystem_Surfaces:
     - Drive
     - Calendar
     - Contacts
-    - Gemini
+
+Mirror_Review:
+  type: "review_node"
+  role: "second opinion only"
 
 M_Ecosystem_Surfaces:
   allowed_values:
@@ -41,11 +46,13 @@ M_Ecosystem_Surfaces:
     - SharePoint_OneDrive
     - Outlook_Calendar
     - Lists_Planner_ToDo
+    - Power_Platform
 
 Hard_Rules:
   - "Inventory is not settings change"
   - "Candidate change is not approval"
   - "Dry-run is not deployment"
   - "Manual guide is not completed build"
-  - "Gemini output is not final authority"
+  - "Mirror review is not a G operational surface"
   - "G ecosystem and M ecosystem may share syntax, not data or authority"
+  - "Unknown_M is not an operational carrier"
