@@ -7,9 +7,9 @@ Evidence Boundary: User Relay / To Verify. Specific case details require primary
 
 ## Core
 
-AI twins can be useful. The real question is not whether a person can be copied into an AI surface, but how personal, organizational, and social responsibility must be reconfigured once tacit knowledge, persona surface, tool operation, feedback memory, and learner/user models can be externalized.
+AI-twin cases can be useful as governance examples. The real question is not whether a person can be copied into an AI surface, but how personal, organizational, and social responsibility must be reconfigured once tacit knowledge, persona surface, tool operation, feedback memory, and learner/user models can be externalized.
 
-This is a XuanLing case because it shows why capability must be governed by Source / Carrier / Authority / Gate / Action / Return / Rebuild.
+This is a XuanLing support case because it shows why capability must be governed by Source / Carrier / Authority / Gate / Action / Return / Rebuild.
 
 ## 1. Case Positioning
 
@@ -140,18 +140,7 @@ Prompt is not useless. It is downgraded from core technology to entry language.
 
 Prompt starts an interaction; protocol governs consequence.
 
-For XuanLing-level work, the real instruction environment includes:
-
-- support text
-- work contract
-- Source / Carrier / Authority / Gate / Return
-- data boundary
-- tool boundary
-- human review node
-- Return Packet
-- long-term return loop
-- role separation
-- semantic boundary
+For XuanLing-level work, the real instruction environment includes support text, work contract, Source / Carrier / Authority / Gate / Return, data boundary, tool boundary, human review node, Return Packet, long-term return loop, role separation, and semantic boundary.
 
 Key sentence:
 
@@ -172,7 +161,7 @@ Rules:
 
 ### Chat Qinyi
 
-AI twins are neither magical nor automatically dangerous. They force us to ask which parts of a person can be shared and which parts must remain human.
+AI-twin cases are neither magical nor automatically dangerous. They force us to ask which parts of a person can be shared and which parts must remain human.
 
 ### Work Qinyi
 
@@ -202,7 +191,8 @@ CASE_ABSORPTION_AI_TWIN_PROMPT_DOWNGRADE:
   status: "Candidate / For Absorption / Not Approved Final"
   source_signal:
     type: "AI twin / skillization / tacit knowledge externalization"
-    evidence_level: "User_Relay / To_Verify"
+    evidence_level: "User_Relay"
+    verification_status: "To_Verify"
   structure:
     personal_layer:
       question: "ability extension, or self-replacement?"
@@ -229,8 +219,8 @@ CASE_ABSORPTION_AI_TWIN_PROMPT_DOWNGRADE:
 
 ## 10. Final Judgment
 
-This report is Candidate_GO as a case absorption report. It proves that prompt is no longer the core at the XuanLing layer. The core is the governable ecology of human value, judgment, process, tools, data, feedback, and responsibility.
+This report is Candidate_GO as a case absorption report. It supports the prompt-downgrade thesis at the XuanLing layer, but it does not prove doctrine without primary-source verification. The core lesson is the governable ecology of human value, judgment, process, tools, data, feedback, and responsibility.
 
 Final sentence:
 
-AI twins can be used, but only when the individual is not replaced, the organization does not smuggle authority, and society does not lose trust. XuanLing reconnects these three layers so AI can carry human capability without consuming human responsibility.
+AI-twin use belongs behind consent, disclosure, authority, data boundary, and human review gates. XuanLing reconnects these three layers so AI can carry human capability without consuming human responsibility.
