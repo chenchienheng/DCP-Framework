@@ -1,5 +1,5 @@
 name: Gate Review
-about: Submit a candidate task, source, proposal, or change for Open XuanLing gate review.
+description: Submit a candidate task, source, proposal, or change for Open XuanLing gate review.
 title: "GATE-REVIEW｜<short title>"
 labels: ["gate-review", "candidate"]
 body:
@@ -28,7 +28,7 @@ body:
     attributes:
       label: Authority
       description: Who can decide the next state?
-      placeholder: Vitas / reviewer / owner / unknown
+      placeholder: owner / reviewer / unknown
     validations:
       required: true
   - type: dropdown
