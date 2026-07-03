@@ -64,13 +64,13 @@ A polished report does not turn an unbacked estimate into an executable solution
 ```yaml
 Internal_M365:
   can:
-    - "fill internal evidence"
-    - "organize internal visible material"
-    - "draft internal versions"
+    - "organize approved-surface evidence candidates"
+    - "organize internal visible material when authorized"
+    - "draft internal candidate versions"
   cannot_be_assumed:
     - "can see all records"
     - "generated file equals official archive"
-    - "evidence fill equals approval"
+    - "evidence candidate equals approval"
 
 External_Qinyi:
   can:
@@ -88,7 +88,7 @@ External_Qinyi:
 
 ```text
 External-Sanitized-Candidate
-→ Internal-Evidence-Filled
+→ Internal-Evidence-Candidate
 → Management-Reviewed
 → Approved Submission Strategy
 → Owner-Facing Draft
@@ -99,7 +99,7 @@ External-Sanitized-Candidate
 Red doors:
 
 - External-Sanitized-Candidate != Internal Evidence.
-- Internal-Evidence-Filled != Management Approval.
+- Internal-Evidence-Candidate != Management Approval.
 - Management-Reviewed != Authorized Submission.
 - Owner-Facing Draft != External Submission.
 - External Submission != Final Accepted.
@@ -110,7 +110,7 @@ Red doors:
 Submission_Maturity_Label:
   status:
     - "External-Sanitized-Candidate"
-    - "Internal-Evidence-Filled"
+    - "Internal-Evidence-Candidate"
     - "Management-Reviewed"
     - "Approved Submission Strategy"
     - "Owner-Facing Draft"
