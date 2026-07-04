@@ -8,11 +8,10 @@ source_card:
   carrier: "internal absorption draft / GitHub candidate"
   owner: "Vitas"
   received_at: "2026-07-01"
-  evidence_level: "Mixed"
+  evidence_level: "User_Relay"
   summary: "External signals across AI model governance, AI cloud monetization, memory supply, data-center power, grid stress, Taiwan risk, and market repricing."
   supports:
     - "Capability must be carried, authorized, verified, and returned before stable use."
-    - "External signals can be mapped through Source / Carrier / Authority / Gate / Action / Return / Rebuild."
   does_not_support:
     - "Does not authorize investment action."
     - "Does not authorize company strategy or runtime."
@@ -25,6 +24,7 @@ source_card:
     - "Meta compute cloud confirmation."
     - "US model standards official policy status."
     - "Market snapshot via finance tool before market claims."
+    - "Attach evidence artifact before claiming an evidence-check surface was read."
   next_gate: "Gate_Review"
 
 gate_review:
@@ -35,7 +35,7 @@ gate_review:
   authority: "Vitas"
   requested_action: "index_only"
   evidence:
-    - "Official / Reuters / market snapshot / pending verification mixed evidence"
+    - "user-provided review package"
   risks:
     - "reported plans may be misread as confirmed execution"
     - "market price signal may be misread as industry truth"
@@ -62,7 +62,6 @@ return_packet:
   carrier: "GitHub PR #298"
   files_or_surfaces_read:
     - "user-provided review package"
-    - "web evidence check summary"
   files_or_surfaces_changed:
     - "docs/signals/xuanling-signal-absorption-2026-07-01.md"
   what_changed:
@@ -73,7 +72,9 @@ return_packet:
     - "No runtime."
     - "No company strategy approval."
   evidence:
-    - "mixed evidence levels retained"
+    - "evidence boundary kept as candidate / pending verification"
+  needs_verification:
+    - "actual evidence-check artifact if future review wants to cite one"
   risks:
     - "requires future update if official facts change"
   rollback_or_rebuild_path: "revise or supersede the candidate signal note"
