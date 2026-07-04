@@ -47,7 +47,8 @@ XUANLING_SIGNAL_ABSORPTION_2026_06_30:
     AI_Model_Governance:
       structure: "Capability -> Access -> Authority -> Gate"
       build_value: "strengthen model-permission and tool-authorization judgment"
-      evidence_level: "Secondary_Source / Pending_Verification"
+      evidence_level: "Secondary_Source"
+      verification_status: "Pending_Verification"
     Semiconductor_HBM:
       structure: "Compute -> Memory -> Fab -> Supply Chain"
       build_value: "AI supply chain is not a single GPU story"
@@ -55,7 +56,8 @@ XUANLING_SIGNAL_ABSORPTION_2026_06_30:
     DataCenter_Energy:
       structure: "Carrier -> Power -> Cooling -> Runtime Stability"
       build_value: "critical facility and MEP/EHS authority rings"
-      evidence_level: "Primary_Record / Technical Paper"
+      evidence_level: "Secondary_Source"
+      evidence_note: "technical paper or official record should be attached before promotion"
     Taiwan_Geopolitics:
       structure: "External Risk Ring -> BCP -> Supply Chain Continuity"
       build_value: "external risk cannot be absorbed by tool logic"
@@ -63,7 +65,8 @@ XUANLING_SIGNAL_ABSORPTION_2026_06_30:
     Market_Repricing:
       structure: "Price Signal -> Inference -> To Verify"
       build_value: "market signal is not conclusion"
-      evidence_level: "Market_Data / Pending_Verification"
+      evidence_level: "Metadata"
+      verification_status: "Pending_Verification"
 ```
 
 ## What To Extract
