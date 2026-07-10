@@ -81,6 +81,8 @@ Active_Thread:
     - "no full GitHub / Drive / GPT three-domain reconciliation proof yet"
     - "no Drive canonical root reconciliation in this experiment"
     - "XAFD / CLQY canonical source mapping remains to verify"
+    - "five current QHA / sidecar automations remain enabled; pause writes were rejected"
+    - "no retirement observation period has completed"
 
   next_action:
     "Open the new GPT-5.6 Sol Work, read this Active Index and the v0.2 contract, reconstruct the active hyperchain map, then write one compact Thread_Read_Proof."
@@ -106,8 +108,11 @@ Supporting_Pointers:
     ref: "qinyi/xuanling-cloud-workbench-v0.8/docs/contracts/xuanling-qha-lor-circulation-work-contract-v0_2-candidate.md"
 
   schedule_mode:
-    state: "One-Hub / condition-driven"
-    note: "role workfaces should not create independent recurring threads by default"
+    state: "Freeze / Legacy Retirement Candidate"
+    actual_trigger_state: "five current ChatGPT automations remain active as of 2026-07-11; technical pause is not yet proven"
+    successor: "XL_TIME_GATE / manual-only candidate"
+    contract_ref: "docs/continuity/xuanling-v56-time-gate-and-legacy-schedule-retirement-v0_1-candidate.md"
+    note: "no new schedule may be created; role workfaces must not create independent recurring threads"
 
   three_domain_field:
     GitHub: "structural bone and versioned return"
