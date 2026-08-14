@@ -1,151 +1,64 @@
-# Cluster Coverage Matrix
+# Coverage / Executability Contract
 
-> Durable matrix for reading architectural maturity through cluster coverage rather than superficial complexity.
-> Purpose: make coverage visible, comparable, and governable.
+> Lifecycle: `PUBLIC_RESEARCH_REFERENCE`
+> Runtime: `false`
+> Native source root: `false`
+> Authority: `none`
 
----
+Purpose: measure whether a bounded existence, capability, carrier binding, or world slice is actually usable and reconstructable. Coverage is not file count, concept count, connected-tool count, or apparent complexity.
 
-## 0. Core Reading
+## 1. Core rule
+A subject is meaningfully covered only when the relevant parts of its life chain can be resolved without inventing missing state.
 
-Architecture quality should not be judged mainly by:
-- file count
-- concept density
-- number of tools
-- apparent complexity
+Recommended axes:
+- `identity_resolution` — Stable subject identity is known;
+- `source_resolution` — lawful Native Source / source pointer can be located;
+- `dependency_resolution` — affected prerequisites/receivers are known;
+- `authority_resolution` — read/derive/learn/mutate/write-back/etc. boundaries are separable;
+- `state_resolution` — Current/Pending/Hold/Historical/etc. can be distinguished;
+- `evidence_resolution` — material claims/effects have evidence or an explicit claim ceiling;
+- `effect_resolution` — expected/observed effect can be expressed;
+- `return_resolution` — result/receipt has a receiver and reconciliation state;
+- `rebuild_resolution` — last-valid state + accepted delta/evidence can reconstruct the subject;
+- `representation_resolution` — Human/Machine and any required Visual/Domain-native surfaces point to the same existence.
 
-It should be judged by cluster coverage quality.
-
-A cluster is meaningfully covered only when it is:
-- reachable
-- bindable
-- role-readable
-- writeback-capable
-- resumable
-
----
-
-## 1. Coverage Axes
-
-### 1.1 Reachability
-Can the cluster be entered, referenced, or routed into the runtime?
-
-### 1.2 Bindability
-Can the cluster be attached to the main continuity chain without losing role distinction?
-
-### 1.3 Role Readability
-Can the cluster be classified by family, window, chain face, and network role?
-
-### 1.4 Writeback Capacity
-Can outputs from this cluster return into durable artifacts, logs, or registers?
-
-### 1.5 Resumability
-Can operation continue after interruption, branch drift, or session reset?
-
----
-
-## 2. Coverage Levels
-
+## 2. Suggested maturity levels
 | Level | Meaning |
 |---|---|
-| `L0` | unknown / not yet mapped |
-| `L1` | visible but weakly bound |
-| `L2` | classified but weakly operational |
-| `L3` | role-bound and partially writeback-capable |
-| `L4` | operationally connected with visible return path |
-| `L5` | stable, replaceable, auditable, and resumable |
+| `L0 UNKNOWN` | subject is not reliably located or identified |
+| `L1 VISIBLE` | visible/reachable, but identity or authority is weak |
+| `L2 BOUNDED` | identity, source and scope are bounded; action/evidence incomplete |
+| `L3 RETURNABLE` | material operations can return with evidence/receipt; reconciliation may remain pending |
+| `L4 REBUILDABLE` | Current can be reconstructed from valid source/checkpoint + accepted deltas/evidence |
+| `L5 PROVEN_BOUNDED` | required representations align, negative/failure cases are known, reuse is demonstrated within stated scope |
 
----
+`L5` does not mean universal Runtime, Canon, or unrestricted authority.
 
-## 3. Current Coverage Matrix
+## 3. Anti-inflation rules
+Coverage does not increase because:
+- more documents were written;
+- another platform was connected;
+- a model produced a fluent answer;
+- a newer file exists;
+- a render or demo looks complete;
+- a repository contains more historical material.
 
-| Cluster / Family | Reachability | Bindability | Role Readability | Writeback Capacity | Resumability | Current Reading |
-|---|---|---|---|---|---|---|
-| GitHub writeback family | L5 | L4 | L4 | L5 | L4 | strongest durable bone/writeback cluster currently visible |
-| main artifact corpus in `main` | L4 | L4 | L4 | L4 | L4 | integrated enough to support unified register and runtime maps |
-| legacy seed branch reservoir | L3 | L2 | L3 | L2 | L3 | visible and mineable, but not yet fully rebound |
-| naming-drift residue families | L5 | L5 | L5 | L5 | L5 | resolved through rebind and hyphenated normalization |
-| scheduling layer | L3 | L2 | L3 | L2 | L2 | named and framed, but effectiveness still lagging |
-| model family layer | L3 | L3 | L4 | L3 | L2 | on-chain spec now exists, but invocation discipline still needs live use |
-| external ecosystem families | L2 | L1 | L2 | L1 | L1 | roadmap exists, but onboarding still early-stage |
-| public / external readable layer | L2 | L2 | L2 | L2 | L1 | readable shells exist but should not outrun runtime core |
-| dynamic corpus database direction | L2 | L2 | L3 | L2 | L2 | direction established, unified machine-readable layer not yet built |
+Coverage increases only when uncertainty, repeated failure, reader load, or reconstruction risk materially decreases, or when proven world/capability reach increases.
 
----
+## 4. Gap classification
+A low score should produce a named gap, not pressure to invent completion. Typical gaps:
+- `IDENTITY_GAP`
+- `SOURCE_POINTER_GAP`
+- `AUTHORITY_GAP`
+- `EVIDENCE_GAP`
+- `REPRESENTATION_DRIFT`
+- `RETURN_PENDING`
+- `RECONCILIATION_PENDING`
+- `REBUILD_GAP`
+- `FAILURE_NOT_CHARACTERIZED`
 
-## 4. Main Current Interpretation
+## 5. World executability implication
+A corpus becomes closer to an executable world when its relevant subjects can be instantiated and changed through Stable Identity + Dependency + State + Authority + Evidence + Effect + Return/Reconciliation + Rebuild, with purpose-fit representations. Prose may explain this, but prose order is not the execution model.
 
-### Strongest current cluster
-- GitHub writeback / main artifact register layer
-
-### Most strategically valuable under-covered cluster
-- legacy seed branch reservoir
-
-### Most urgent contamination-sensitive cluster
-- naming-drift residue families
-
-### Most operationally lagging cluster
-- scheduling effectiveness layer
-
-### Most important future expansion cluster
-- external ecosystem families
-
----
-
-## 5. Coverage Improvement Rule
-
-To raise a cluster by one level, at least one of the following must improve:
-- role clarity
-- chain binding
-- writeback surface
-- replacement readiness
-- interruption recovery
-
-This means improvement should be structural,
-not just additive.
-
----
-
-## 6. Anti-Inflation Rule
-
-A cluster should not be scored higher merely because:
-- more files were added
-- more tools were connected
-- more words were written
-
-Coverage rises only when usable continuity rises.
-
----
-
-## 7. Priority Upgrade Path
-
-### P0
-- scheduling effectiveness layer
-- naming-drift cleanup front
-
-### P1
-- legacy seed branch rebind coverage
-- model invocation discipline layer
-
-### P2
-- external ecosystem family onboarding
-- public-readable external reflection layer
-
----
-
-## 8. Related Artifacts
-
-Read together with:
-- `CLUSTER_COVERAGE_NOTE.md`
-- `UNIFIED_ARTIFACT_REGISTER.md`
-- `DYNAMIC_CORPUS_DATABASE_NOTE.md`
-- `ECOSYSTEM_FAMILY_ONBOARDING_ROADMAP.md`
-- `SCHEDULING_EFFECT_REGISTER.md`
-
----
-
-## 9. Status
-
-- cluster_coverage_matrix_created: true
-- current_cluster_levels_mapped: true
-- future_upgrade_paths_visible: true
-- return_to_00: true
+## 6. Historical compatibility
+Earlier versions used reachability/bindability/window/chain-face/writeback scores and named GitHub, legacy seed, scheduling and dynamic corpus database as Current clusters. Those were stage measurements. Current evaluation should use the axes above and machine-readable semantic-core evidence where available.
