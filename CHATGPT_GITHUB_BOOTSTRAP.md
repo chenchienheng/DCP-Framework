@@ -1,31 +1,39 @@
-# ChatGPT GitHub Bootstrap
+# Repository Re-entry Surface
 
-Purpose: provide a minimal persistent bridge note so future sessions can re-anchor this repository quickly.
+> Lifecycle: `PUBLIC_RESEARCH_REFERENCE`
+> Runtime: `false`
+> Native source root: `false`
+> Authority: `none`
 
-## Repository Anchor
-- repository_full_name: `chenchienheng/DCP-Framework`
+Purpose: provide a minimal, low-read re-entry surface for this repository without treating GitHub, a repository name, or a historical map as the system identity.
+
+## Current repository
+- repository_full_name: `chenchienheng/XuanLing-00-Foundation-DCP`
 - default_branch: `main`
-- owner_login: `chenchienheng`
-- repository_role: active GitHub bridge / writeback anchor
+- repository_role: `PUBLIC_FOUNDATION_RESEARCH_SURFACE`
 
-## Runtime Note
-- This file is a bridge note, not a sovereignty definition.
-- The broader system design may exceed this repository.
-- Suggested read order:
-  1. `README.md`
-  2. `CHATGPT_GITHUB_BOOTSTRAP.md`
-  3. `GITHUB_CHAIN_MASTER_MAP.md`
+## Reader entry
+Read in this order unless an affected pointer says otherwise:
+1. `README.md`
+2. `PUBLIC-SURFACE-POLICY.md`
+3. `STATUS.md`
+4. `CURRENT-SURFACE-MANIFEST.json`
+5. only the affected public reference artifact
 
-## Minimal Re-anchor Rules
-- verify GitHub connector access
-- verify repository visibility and write permission
-- treat this repository as an available writeback anchor
-- do not assume this repository is the whole system
+Do not use file recency, root location, repository naming, or historical cross-links to infer Current state or Native authority.
 
-## Status
-- connector_verified: true
-- write_interface_verified: true
-- created_via_connector: true
-- chain_master_map_linked: true
-- created_date: 2026-04-20
-- updated_date: 2026-04-20
+## Re-entry rules
+- verify actual connector/repository access when repository work is required;
+- resolve Current through `CURRENT-SURFACE-MANIFEST.json`, not through historical maps;
+- treat this repository as a replaceable public carrier/reference surface;
+- use stable identity, source authority, evidence, dependency, return/reconciliation, and rebuild/re-entry relations to continue work;
+- historical artifacts may be re-materialized only for provenance, audit, failure learning, regression, or rebuild.
+
+## Not to claim
+- repository access does not establish authority;
+- repository durability does not make GitHub a Native Source Root;
+- successful write does not prove Runtime capability;
+- public-safe content is not public-approved unless the release gate says so.
+
+## Historical compatibility
+Earlier versions referenced `chenchienheng/DCP-Framework`, a GitHub chain master map, and GitHub as a primary writeback/bone candidate. Those were stage implementations. Historical detail remains recoverable from Git history and the corresponding archive generation index.
