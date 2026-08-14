@@ -1,0 +1,34 @@
+{
+  "repository_role": "PUBLIC_FOUNDATION_RESEARCH_SURFACE",
+  "runtime": false,
+  "native_source_root": false,
+  "reader_priority": [
+    "README.md",
+    "PUBLIC-SURFACE-POLICY.md",
+    "STATUS.md",
+    "CURRENT-SURFACE-MANIFEST.json"
+  ],
+  "current_public_surfaces": {
+    "human": ["README.md", "STATUS.md"],
+    "external": ["README.md", "PUBLIC-SURFACE-POLICY.md"],
+    "machine": ["CURRENT-SURFACE-MANIFEST.json"]
+  },
+  "legacy_root_families": [
+    "00_meta",
+    "00_mother-law",
+    "01_native-board",
+    "01_runtime-spine",
+    "02_runtime-ops",
+    "02_translation-layer",
+    "03_board-orchestration",
+    "03_field-governance",
+    "04_adapter-layer",
+    "04_interface-layer",
+    "05_XLEN_Reserve_Unenabled",
+    "05_topology"
+  ],
+  "legacy_interpretation": "HISTORICAL_OR_COMPATIBILITY_UNLESS_EXPLICITLY_RE-ADMITTED",
+  "promotion_rule": "REPOSITORY_LOCATION_OR_RECENCY_DOES_NOT_ESTABLISH_CURRENT",
+  "release_rule": "PUBLIC_SAFE_AND_RELEASE_APPROVED_ONLY",
+  "claim_ceiling": "Public research/reference surface; not protected internal semantic core, runtime, or native authority"
+}
