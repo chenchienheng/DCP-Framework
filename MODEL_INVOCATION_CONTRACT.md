@@ -1,256 +1,74 @@
-# Model Invocation Contract
+# Model Operation Contract
 
-> Durable contract for chain-bound model invocation inside the XLEN / Xuanling runtime.
-> Purpose: prevent model usage from remaining informal, floating, or weakly auditable.
->
-> This contract should be read as the minimum invocation discipline required to keep model participation attached to the main continuity chain.
+> Lifecycle: `PUBLIC_RESEARCH_REFERENCE`
+> Runtime: `false`
+> Native source root: `false`
+> Authority: `none`
 
----
+This document preserves carrier-neutral primitives for bounded model participation. It does not define a fixed window topology, a required repository writeback target, or a model-owned authority domain.
 
-## 0. Core Reading
+## 1. Core rule
+A model operation is a bounded transformation over authorized sources. It may produce a candidate, analysis, projection, audit, translation, or proposed action, but it does not acquire authority merely by executing successfully.
 
-A model invocation should not be treated as:
-- a free-floating answer event
-- a black-box output with no return target
-- an unscoped reasoning burst
+`Model capability != authority`
+`Output != admission`
+`Readable source != mutable source`
+`Carrier availability != write-back authorization`
 
-A model invocation should be treated as:
-- a bounded runtime act
-- a role-owned chain event
-- a source-aware reasoning or generation packet
-- a writeback-obligated operation
+## 2. Minimum operation fields
+A high-value model operation should be representable with:
 
----
-
-## 1. Minimum Invocation Fields
-
-Every high-value model invocation should eventually be representable with at least the following fields:
-
-- `invocation_id`
+- `operation_id`
 - `timestamp`
-- `model_family`
-- `model_surface`
-- `owner_window`
+- `receiver_or_owner`
+- `model_or_capability`
 - `structural_role`
 - `source_refs`
+- `source_authority`
 - `allowed_scope`
-- `task_type`
+- `rights_privacy_boundary`
+- `evidence_refs`
 - `expected_output_type`
-- `writeback_surface`
-- `confidence_statement`
+- `claim_ceiling`
 - `mismatch_or_gap`
 - `contradiction_flag`
-- `next_single_action`
+- `proposed_action`
+- `action_authority`
 - `return_target`
+- `rebuild_or_reentry_refs`
 
----
+## 3. Source and scope gate
+Before operation:
+1. resolve the actual source/carrier;
+2. identify who owns meaning and mutation authority;
+3. bound what may be read, transformed, retained, or written back;
+4. separate facts, inferences, candidates, and unknowns;
+5. refuse silent scope expansion.
 
-## 2. Field Meanings
+## 4. Contradiction primitive
+Contradiction is signal, not automatic failure. Record it when:
+- output conflicts with source evidence;
+- output exceeds its assigned role or claim ceiling;
+- two bounded operations materially disagree under comparable evidence;
+- confidence exceeds evidence quality;
+- proposed action conflicts with authority, rights, privacy, or current state.
 
-### `model_family`
-Which differentiated model family is being used?
-Examples:
-- reasoning
-- drafting
-- audit
-- extraction
-- synthesis
-- multimodal
-- domain-specific
+Recommended handling:
+- `compare_sources`
+- `recheck_scope`
+- `downgrade_confidence`
+- `request_authority_decision`
+- `preserve_disagreement_as_signal`
+- `rebuild_from_last_valid_state`
 
-### `owner_window`
-Which runtime window owns the invocation?
-This prevents model use from drifting outside runtime responsibility.
+## 5. Action gate
+A model result may propose an action. Execution requires a separate action-authority check. Successful reasoning, generation, or tool availability does not imply permission to mutate a source, carrier, repository, runtime, or external system.
 
-### `structural_role`
-What role is the model serving now?
-Examples:
-- drafter
-- auditor
-- extractor
-- comparer
-- synthesizer
-- translator
-- public-view formatter
+## 6. Return and rebuild
+Every material operation should identify where its useful delta returns and what evidence permits later reconstruction. A return packet is not Closeout by itself; it remains subject to receiver reconciliation and any required admission or authority gate.
 
-### `source_refs`
-What sources, notes, registers, or artifacts is the model allowed to use for this operation?
+## 7. Historical compatibility
+Earlier versions used fixed `owner_window`, `00` escalation, model-family/window tables, and repository-centric writeback. Those are historical implementation framings, not universal invariants. Historical detail is retained in Git history and `archive/model-operation-generation/README.md`.
 
-### `allowed_scope`
-What is inside scope, and what is outside scope?
-This prevents silent inflation of task boundaries.
-
-### `expected_output_type`
-What is the expected output class?
-Examples:
-- draft
-- audit
-- classification
-- shortlist
-- synthesis
-- contradiction report
-- public note
-
-### `writeback_surface`
-Where must the output return?
-Examples:
-- repo artifact
-- issue
-- register
-- log
-- branch note
-- board
-
-### `mismatch_or_gap`
-What could not be verified, completed, or safely concluded?
-This is mandatory for anti-hallucination discipline.
-
-### `contradiction_flag`
-Did the invocation contradict existing chain state, source reading, or prior writeback?
-
-### `next_single_action`
-What is the smallest next valid action after this invocation?
-
----
-
-## 3. Invocation Types
-
-### Type A — Drafting Invocation
-Purpose:
-- generate candidate text
-- structure note drafts
-- produce first-pass written articulation
-
-Risk:
-- fluency may exceed grounding
-
-Required emphasis:
-- source refs
-- scope
-- writeback target
-
-### Type B — Audit Invocation
-Purpose:
-- compare existing artifacts
-- detect drift, contradiction, contamination, missing fields
-
-Risk:
-- false certainty if prior chain state is incomplete
-
-Required emphasis:
-- contradiction flag
-- mismatch_or_gap
-- audit surface return
-
-### Type C — Extraction Invocation
-Purpose:
-- extract families, fields, tags, candidate structures from larger corpus
-
-Risk:
-- over-grouping or flattening distinct artifacts
-
-Required emphasis:
-- source refs
-- role classification discipline
-- structured output type
-
-### Type D — Synthesis Invocation
-Purpose:
-- fold multiple sources into one coherent operational view
-
-Risk:
-- premature unification
-
-Required emphasis:
-- scope control
-- contradiction visibility
-- return path
-
-### Type E — Public View Invocation
-Purpose:
-- produce outward-readable, presentation-friendly, or simplified surface outputs
-
-Risk:
-- surface readability overriding structural truth
-
-Required emphasis:
-- owner window
-- relation to stronger source artifacts
-- no sovereignty inflation
-
----
-
-## 4. Contract Validity Rule
-
-A model invocation should be considered weak or off-chain if any of the following are missing:
-- no owner window
-- no source refs
-- no writeback surface
-- no mismatch/gap field
-- no next action
-
-This does not make the output useless.
-But it means the invocation has not yet met chain discipline.
-
----
-
-## 5. Anti-Hallucination Contract Rule
-
-To reduce hallucination drift, model outputs should explicitly show:
-- what they know from source
-- what they infer
-- what remains uncertain
-- what they could not verify
-- what should happen next
-
-Recommended minimal output packet:
-
-```yaml
-source_ref:
-current_role:
-claim_type:
-confidence_or_uncertainty:
-mismatch_or_gap:
-next_single_action:
-return_target:
-```
-
----
-
-## 6. Escalation Rule
-
-If contradiction is detected, the invocation should not silently continue as final truth.
-It should trigger:
-1. `contradiction_flag = true`
-2. source comparison
-3. window owner review
-4. escalation to `00` or audit surface if needed
-
----
-
-## 7. Immediate Repository Implication
-
-Future high-value model-assisted repository work should be able to cite or conform to this contract.
-This makes model contribution:
-- role-aware
-- source-aware
-- auditable
-- returnable
-- comparable across invocations
-
----
-
-## 8. Suggested Next Artifact
-
-- `MODEL_FAMILY_REGISTER.md`
-- `MODEL_CONTRADICTION_REGISTER.md`
-- `MODEL_TO_WINDOW_OWNERSHIP_MAP.md`
-
----
-
-## 9. Status
-
-- model_invocation_contract_created: true
-- anti_hallucination_minimum_fields_defined: true
-- contradiction_escalation_rule_defined: true
-- return_to_00: true
+## 8. Public-surface ceiling
+This file is a public research/reference surface only. Protected semantic-core state, runtime leases, private evidence, and Native Sphere authority remain outside this document.
