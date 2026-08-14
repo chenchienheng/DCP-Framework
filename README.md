@@ -1,59 +1,81 @@
 # DCP Framework / 翾靈 Foundation
 
-**狀態 / Status：** public structural research corpus／公開結構研究語料；no production runtime／無生產 Runtime；no automatic authority／無自動授權；no public product claim／不宣稱為已發布產品。
+**Repository class / 倉庫分類：** Public research and reference corpus  
+**Operational status / 運作狀態：** Non-production  
+**Authority model / 權限模型：** No implicit runtime or decision authority
 
-## 中文／Owner View
-DCP 是一套用來處理**依存、狀態、權限、證據、變更與回流**的結構化方法。這個公開倉只保留可公開理解、驗證與引用的部分；不包含足以重建翾靈內部 Core 的完整依存拓撲、Authority routing、Cognitive Memory compiler、私有 evidence lineage 或內部 machine contract。
+## Overview / 概述
 
-核心原則：資料仍屬其合法 Native Source／Owner；公開倉不是中央資料根，也不因內容公開而擴張資料權利。
+DCP is a structural framework for representing dependency, state, authority, evidence, change, and return across distributed systems and workflows.
 
-## English／External View
-DCP is a structural method for reasoning about **dependency, state, authority, evidence, change, and return** in distributed systems and workflows.
+DCP 是一套用於描述分散式系統與工作流中 Dependency、State、Authority、Evidence、Change 與 Return 的結構化框架。
 
-This public repository exposes only release-safe concepts, validation patterns, historical research artifacts, and public evidence. It does **not** expose the complete internal dependency topology, authority routing, cognitive-memory compiler, private evidence lineage, or internal machine contracts required to reconstruct the XuanLing core.
+This repository contains the public research and reference surface of that framework. It publishes concepts, validation patterns, bounded examples, historical research artifacts, and citation material suitable for external review. It does not serve as a native data root or expose protected internal implementation detail.
 
-Native data remains governed by its lawful source and owner. Public visibility does not create ownership, runtime authority, or unrestricted reuse rights.
+本倉庫承載該框架的公開研究與參考表面，包含適合外部審閱的概念、驗證模式、有限範例、歷史研究成果與引用資料；它不是 Native Data Root，也不承載受保護的內部實作細節。
 
-## Machine／Canonical Public Surface
-Public machine metadata is deliberately minimal. It may expose artifact identity, version, state, license, release state, and public evidence pointers, but not private routing or sensitive Native Source relationships.
+## Representation architecture / 表徵架構
+
+Public documentation follows three aligned representation profiles:
+
+公開文件採三個互相對準的表徵層級：
+
+- **Human Profile / 人類閱讀層** — Traditional Chinese for direct comprehension and review.
+- **External Profile / 外部交換層** — English for publication, interoperability, and external technical review.
+- **Canonical Machine Profile / 機器規範層** — minimal stable identifiers, typed states, versions, and public evidence references.
+
+The profiles share one governed meaning. Differences in presentation are allowed; differences in state, authority, claim ceiling, or release classification are not.
+
+三個表徵層共用同一受治理語義。呈現方式可以不同，但 State、Authority、Claim Ceiling 與 Release Classification 不得互相漂移。
+
+## Public scope / 公開範圍
+
+The repository may contain:
+
+本倉可承載：
+
+- public research primitives and terminology / 公開研究 primitive 與術語
+- validation and failure patterns / 驗證與失敗模式
+- bounded examples and reference artifacts / 有限範例與參考成果
+- release-appropriate historical lineage / 適合公開的歷史脈絡
+- published citations and evidence references / 已發布引用與證據指標
+
+Protected internal dependency topology, privileged authority routing, private evidence lineage, sensitive source relationships, and implementation-specific machine contracts remain outside the public corpus.
+
+受保護的內部 dependency topology、privileged authority routing、private evidence lineage、敏感來源關係與實作特定 machine contract 不屬於公開語料範圍。
+
+## Interpretation / 判讀原則
+
+Repository location, filename, issue state, or modification time does not establish architectural truth or operational maturity. Readers should resolve the declared artifact role, lifecycle state, evidence scope, and release classification before relying on a document.
+
+Repository 位置、檔名、Issue 狀態或修改時間都不能單獨建立 Architecture Truth 或 Operational Maturity。使用文件前，應先解析其 Artifact Role、Lifecycle State、Evidence Scope 與 Release Classification。
+
+## Machine metadata / 機器中繼資料
 
 ```yaml
-surface: public
-human_language: zh-TW
-external_language: en
-machine_form: canonical-minimal
-release_state: public-safe|public-approved
-native_body_embedded: false
-internal_core_reconstructable: false
+repository_class: public_research_corpus
+runtime: false
+native_source_root: false
+representation_profiles:
+  human: zh-TW
+  external: en
+  machine: canonical-minimal
+release_control: explicit
 ```
 
-## 公開判讀規則 / Public reader rules
-- Bilingual ≠ Full Disclosure／雙語不等於完整揭露。
-- Public-safe ≠ Public-approved／公開安全不等於已核准公開。
-- Machine-readable ≠ Public-readable／機器可讀不等於可公開。
-- Repository ≠ Native Source Root／倉庫不等於原生資料根。
-- Candidate／Research artifact ≠ Runtime／研究或候選成果不等於 Runtime。
-- Filename／folder／latest-modified ≠ Current Truth／檔名、位置、最近修改不等於 Current Truth。
+## License / 授權
 
-## 這裡可以看到什麼 / What is intentionally public
-- public-safe conceptual primitives／可公開的概念 primitive
-- validation and failure patterns／驗證與失敗模式
-- bounded examples and research artifacts／有限範例與研究成果
-- release-safe historical lineage／公開安全的歷史脈絡
-- published citation／公開引用資料
+**Creative Commons Attribution–NonCommercial–NoDerivatives 4.0 International (CC BY-NC-ND 4.0).**
 
-更完整的內部認知、私有 evidence、權限與重建 routing 留在受控內部／private carriers，且仍不取代原始 Native Source。
+可閱讀、分享及標示來源引用；商業或衍生使用需另取得作者許可。  
+You may read, share, and cite with attribution. Commercial or derivative use requires separate permission.
 
-More complete internal cognition, private evidence, authority, and rebuild routing remain on controlled private/internal carriers and still do not replace lawful native sources.
+## Citation / 引用
 
-## 授權 / License
-**Creative Commons Attribution–NonCommercial–NoDerivatives 4.0 International (CC BY-NC-ND 4.0)**。
-
-可閱讀、分享及標示來源引用；商業或衍生使用需另取得作者許可。 / You may read, share, and cite with attribution. Commercial or derivative use requires separate permission.
-
-## 引用 / Citation
 Chen, Chien-Heng. *DCP Framework: A Constraint-Based Model for Structured Judgment and Layered Interpretation*. Zenodo, 2026. DOI: https://doi.org/10.5281/zenodo.18111818
 
 陳建衡，《DCP 框架：一種結構化判定與分層詮釋的約束模型》，Zenodo，2026。
 
-更多揭露邊界見 / See also: `PUBLIC-SURFACE-POLICY.md`.
+For disclosure and representation controls, see `PUBLIC-SURFACE-POLICY.md`.
+
+揭露與表徵控制請參閱 `PUBLIC-SURFACE-POLICY.md`。
