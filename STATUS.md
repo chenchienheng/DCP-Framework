@@ -1,147 +1,90 @@
-# DCP Repository Status / DCP 倉庫狀態
+# Repository Status / 倉庫狀態
 
-**架構成熟度 / Architecture maturity：** evolving / bounded structural convergence／持續演化、有限結構收斂  
-**倉庫狀態 / Repository state：** active public structural corpus／現行公開結構語料倉  
-**Production Runtime：** not proven / not claimed／未證實、未宣稱  
-**Current / Canon Promotion：** not implied by repository contents／不因倉庫內容自動升格  
-**Autonomous Authority：** none／無
+**Repository class / 倉庫分類:** Public research and reference corpus  
+**Architecture maturity / 架構成熟度:** Evolving; bounded structural convergence  
+**Operational status / 運作狀態:** Non-production  
+**Runtime evidence / Runtime 證據:** Not established  
+**Authority elevation / 權限升格:** None implied by repository content  
+**Release control / 發布控制:** Explicit
 
-## 人話摘要 / Human summary
+## Status statement / 狀態說明
 
-這個倉庫已不只是早期概念文章集合；目前同時包含概念來源、bounded structural rules、dependency/state models、compatibility tests、return/rebuild patterns、repository hygiene 與歷史 execution evidence。
+This repository contains the externally reviewable research and reference surface of the DCP framework. The corpus includes conceptual work, bounded structural models, interface candidates, validation artifacts, historical research evidence, and repository-level documentation.
 
-This repository is no longer only a conceptual essay collection. It carries conceptual sources plus bounded structural rules, dependency/state models, compatibility tests, return/rebuild patterns, repository hygiene, and historical execution evidence.
+本倉庫承載 DCP Framework 可供外部審閱的研究與參考表面，包含概念研究、有限結構模型、介面 Candidate、驗證成果、歷史研究證據與倉庫層文件。
 
-**但這不等於 DCP 已成為 deployed autonomous system。** 檔名、Issue、Receipt、bounded PASS 或 implementation-like surface 都只能證明其自身範圍。
+Repository contents do not, by themselves, establish production deployment, autonomous decision authority, architectural promotion, regulatory compliance, or correctness beyond the evidence scope declared by each artifact.
 
-**This does not prove a deployed autonomous DCP system.** Filenames, issues, receipts, bounded PASS results, and implementation-like surfaces prove only their bounded scope.
+倉庫內容本身不構成 Production Deployment、Autonomous Decision Authority、Architecture Promotion、Regulatory Compliance，也不會使任何成果超出其聲明的 Evidence Scope。
 
-## 現行架構判位 / Current architectural interpretation
+## Current public architecture surface / 現行公開架構表面
 
-```text
-Source → Carrier → Authority → Gate → Action
-→ Return → Reconciliation → Re-entry / Rebuild
-```
+The current public surface is organized around two bounded candidates:
 
-DCP 是 wider federated architecture 中的 Dependency／State／Authority／Rebuild projection；不擁有所有 Native Source、Meaning Body、World Model 或外部 Carrier。
+- **DCP Life-Chain Dependency Model** — a working architecture candidate for dependency, lifecycle state, authority, evidence, return, reconciliation, and recovery reasoning.
+- **Cross-Carrier Projection Compatibility** — an interface candidate defining continuity requirements across heterogeneous documentation and workflow carriers.
 
-DCP is the dependency/state/authority/rebuild projection within a wider federated architecture. It does not own every native source, meaning body, world model, or carrier.
+現行公開表面以兩個有限 Candidate 為主要技術入口：DCP Life-Chain Dependency Model，以及 Cross-Carrier Projection Compatibility。兩者均屬研究／介面層成果，不代表已部署 Runtime。
 
-固定分離 / Fixed separations：
+## Evidence and maturity model / 證據與成熟度模型
 
-- Native Source Root ≠ XuanLing
-- Carrier ≠ Identity ≠ Authority
-- Folder / issue / task / render ≠ State
-- Latest / Modified / Open ≠ Current
-- Return / Receipt / ACK ≠ Reconciliation
-- Knowledge Exists ≠ Cognition Admitted ≠ Capability Proven
-- Candidate / Build / Technical PASS ≠ Runtime / Owner Acceptance / Current
+Maturity is evaluated per artifact and per claim. Evidence of a structural rule, interface property, validation result, or implementation artifact is not automatically evidence of deployment, owner acceptance, production readiness, or domain-wide applicability.
 
-## Placement／Drive Coordinate 狀態規則 / Placement state rule
+成熟度依 Artifact 與 Claim 分別判定。Structural Rule、Interface Property、Validation Result 或 Implementation Artifact 的證據，不自動證明 Deployment、Owner Acceptance、Production Readiness 或跨 Domain 適用性。
 
-Drive／Folder／Human Label／local path 是 Navigation／Placement／Carrier，不是 State 或 Authority。
+Historical material may remain in the repository for provenance, comparison, failure analysis, and reproducibility. Historical retention does not make an artifact current.
 
-Drive/folder/human-label/local-path changes are navigation/placement/carrier changes, not state or authority by themselves.
+歷史材料可因 Provenance、比較、Failure Analysis 與 Reproducibility 需求繼續保存；保存本身不會使其成為 Current Artifact。
 
-**同一 Semantic Coordinate 內 rename／move 且 Stable Identity、Native Home、Authority、State、Return ownership、Re-entry／Rebuild relation 不變 → `NO_MATERIAL_DELTA / NO_REBUILD`.**
+## Source and authority boundary / 來源與權限邊界
 
-**Rename/move inside the same semantic coordinate with those bindings preserved → `NO_MATERIAL_DELTA / NO_REBUILD`.**
+The repository is not a native data root. Native source ownership, access rights, retention, mutation, and publication remain governed by the lawful source and its applicable authority chain.
 
-只有 Stable Identity、Native Home／lawful source binding、Authority／usage ceiling、Current／Last-good state、Return owner／receiver、Successor／Re-entry、Rebuild relation、Public／Private authority boundary 等實質改變才觸發 DCP affected cone。
+本倉不是 Native Data Root。Native Source 的所有權、存取權、Retention、Mutation 與 Publication 仍由合法來源及其適用 Authority Chain 管理。
 
-Only material changes to those bindings trigger the DCP affected cone.
+Public documentation contains only release-appropriate representations. Protected implementation details, privileged routing, private evidence lineage, sensitive source relationships, and restricted native bodies remain outside the public corpus.
 
-## CoreTri 邊界 / CoreTri boundary
+公開文件只承載適合發布的表徵；受保護的 Implementation Detail、Privileged Routing、Private Evidence Lineage、敏感 Source Relationship 與 Restricted Native Body 不屬於公開語料。
 
-同一 Stable Object／World 可有：
+## Representation and release status / 表徵與發布狀態
 
-- **DCP**：Dependency / State / Authority / Reconciliation / Rebuild
-- **Ideas**：Meaning / Experience / Navigation / Burden
-- **GLModel**：World / Knowledge / Engineering / Correspondence
+Public documentation follows the repository representation architecture:
 
-These are receiver-specific projections of one stable object/world, not three databases, kernels, or truths.
+- **Human Profile / 人類閱讀層:** Traditional Chinese
+- **External Profile / 外部交換層:** English
+- **Canonical Machine Profile / 機器規範層:** stable identifiers, typed states, versions, and release-safe evidence references
 
-## Evidence／Maturity 判準 / Evidence and maturity
+The profiles must remain semantically equivalent for stable identity, lifecycle state, authority scope, claim/evidence ceiling, successor relation, and release classification.
 
-```text
-source exists
-≠ source admitted
-≠ rule recorded
-≠ behavior changed
-≠ capability proven
-≠ runtime proven
-```
+三個表徵層在 Stable Identity、Lifecycle State、Authority Scope、Claim／Evidence Ceiling、Successor Relation 與 Release Classification 上必須維持語義等價。
 
-以及 / Likewise：
+Disclosure and publication controls are specified in `PUBLIC-SURFACE-POLICY.md`.
 
-```text
-message sent
-≠ receipt
-≠ receiver ACK
-≠ reconciliation
-≠ world-state change
-```
+揭露與發布控制見 `PUBLIC-SURFACE-POLICY.md`。
 
-Bounded validation 可以證明 Method／Failure Detector，但仍可能留下 production、domain、authority、owner acceptance 未證。
+## Reading guidance / 閱讀指引
 
-A bounded validation can prove a method or failure detector while leaving production, domain, authority, or owner acceptance unresolved.
+Use `README.md` and this status document to establish repository role, maturity, and disclosure scope. Artifact-specific lifecycle state and evidence scope should then be read from the relevant issue, document, release, or provenance reference.
 
-## Fresh Reader 順序 / Reading order
+請先以 `README.md` 與本文件判定 Repository Role、Maturity 與 Disclosure Scope，再依具體 Issue、Document、Release 或 Provenance Reference 判讀各 Artifact 的 Lifecycle State 與 Evidence Scope。
 
-1. `README.md` — role + current reader rules／角色與判讀規則
-2. `STATUS.md` — maturity + claim ceiling／成熟度與 Claim Ceiling
-3. Corpus index／inventory — navigation only／只作導航
-4. Current bounded issue／return／successor pointer — affected topic only／只讀受影響主題
-5. Historical artifacts — only on dependency/failure/evidence re-entry／只有觸發才回讀
+Repository location, filename, branch presence, issue state, search ranking, and modification time are navigation metadata; none establishes architectural truth or operational maturity on its own.
 
-Modified time、search ranking、open issue、branch presence、directory position 都不能證明 Current。
+Repository 位置、檔名、Branch Presence、Issue State、Search Ranking 與 Modification Time 均屬 Navigation Metadata，不能單獨建立 Architecture Truth 或 Operational Maturity。
 
-Modification time, search rank, open issue state, branch presence, and directory position do not prove Current.
+## Current development focus / 現階段研究重點
 
-## Historical Metabolism / 歷史代謝
+Current work emphasizes:
 
-歷史文件保留 provenance、evidence、failure memory、reusable primitive；保存不等於 active。
+- reducing duplicated interpretation and reader load;
+- improving evidence reuse and provenance continuity;
+- preserving identity across carrier and placement changes;
+- strengthening return, reconciliation, and recovery semantics;
+- validating bounded change propagation and affected-scope reconstruction;
+- maintaining explicit source, authority, evidence, and release boundaries.
 
-Historical artifacts may preserve provenance, evidence, failure memory, and reusable primitives. Preservation does not make them active.
+現階段工作聚焦於降低重複判讀與 Reader Load、提升 Evidence Reuse 與 Provenance Continuity、維持跨 Carrier 的 Identity Continuity、改善 Return／Reconciliation／Recovery 語義，以及驗證有限變更傳播與受影響範圍重建。
 
-```text
-absorb useful primitive
-→ mark reader state / successor
-→ preserve evidence
-→ remove active-surface ambiguity
-→ retire when dependencies allow
-```
+This status page is descriptive. It is not a promotion decision, runtime receipt, release authorization, or authority grant.
 
-## 外部學習 / External learning
-
-Standards、research、open source、vendor methods、industry practice 可作 bounded learning input，但不自動成為 Canon，也不自動證明 local applicability。
-
-External standards, research, open source, vendor methods, and industry practices may inform bounded learning but do not automatically become Canon or prove local applicability.
-
-## 明確不宣稱 / Explicit non-claims
-
-本倉庫本身不宣稱 / This repository alone does not claim：
-
-- production readiness／生產就緒
-- autonomous decision authority／自主決策權
-- universal data ownership／全域資料所有權
-- deployed global registry or central truth store／已部署中央 Registry／Truth Store
-- professional certification or regulatory compliance／專業認證或法規合規
-- correctness of historical candidate architecture／歷史 Candidate 必然正確
-- runtime merely because implementation-like files exist／有類實作檔案就等於 Runtime
-
-## 現行方向 / Current direction
-
-目前優先 / Current priorities：
-
-- 降低 duplicate reasoning 與 Reader Load / reduce duplicate reasoning and reader load
-- 分離 Current 與 historical active-looking surfaces / separate Current from historical active-looking surfaces
-- 在 carrier／placement change 中保持 Stable Identity / preserve stable identity across placement changes
-- 改善 Return／Reconciliation／Re-entry continuity
-- 驗證 bounded affected-cone rebuild
-- 維持 Rights／Evidence／Authority boundary
-- 讓 GitHub／Linear／Drive 等保持同步 projection，而非競爭 Truth
-
-**本文件描述的是目前 Claim Ceiling，不是 Promotion、Runtime Receipt 或 Authority Grant。**
-
-**This document describes the current claim ceiling. It is not a promotion, runtime receipt, or authority grant.**
+本狀態頁僅描述目前可支持的 Claim Ceiling；不構成 Promotion Decision、Runtime Receipt、Release Authorization 或 Authority Grant。
