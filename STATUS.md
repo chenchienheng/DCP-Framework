@@ -1,37 +1,33 @@
-# DCP Repository Status
+# DCP Repository Status / DCP 倉庫狀態
 
-**Architecture maturity:** evolving / bounded structural convergence  
-**Repository state:** active public structural corpus  
-**Production runtime:** not proven / not claimed  
-**Current / Canon promotion:** not implied by repository contents  
-**Autonomous authority:** none  
+**架構成熟度 / Architecture maturity：** evolving / bounded structural convergence／持續演化、有限結構收斂  
+**倉庫狀態 / Repository state：** active public structural corpus／現行公開結構語料倉  
+**Production Runtime：** not proven / not claimed／未證實、未宣稱  
+**Current / Canon Promotion：** not implied by repository contents／不因倉庫內容自動升格  
+**Autonomous Authority：** none／無
 
----
+## 人話摘要 / Human summary
 
-## Human summary
+這個倉庫已不只是早期概念文章集合；目前同時包含概念來源、bounded structural rules、dependency/state models、compatibility tests、return/rebuild patterns、repository hygiene 與歷史 execution evidence。
 
-This repository is no longer accurately described as *only* a conceptual essay collection. It now contains conceptual source material **plus** bounded structural rules, dependency/state models, compatibility tests, return/rebuild patterns, repository-hygiene work, and historical execution evidence.
+This repository is no longer only a conceptual essay collection. It carries conceptual sources plus bounded structural rules, dependency/state models, compatibility tests, return/rebuild patterns, repository hygiene, and historical execution evidence.
 
-That does **not** mean DCP has become a deployed autonomous system. Repository structure, filenames such as `runtime-spine`, successful bounded tests, issues, receipts, or candidate implementations are evidence of specific work only. Each claim remains limited by its own state, authority, evidence, and reconciliation result.
+**但這不等於 DCP 已成為 deployed autonomous system。** 檔名、Issue、Receipt、bounded PASS 或 implementation-like surface 都只能證明其自身範圍。
 
----
+**This does not prove a deployed autonomous DCP system.** Filenames, issues, receipts, bounded PASS results, and implementation-like surfaces prove only their bounded scope.
 
-## Current architectural interpretation
+## 現行架構判位 / Current architectural interpretation
 
 ```text
-Source
-→ Carrier
-→ Authority
-→ Gate
-→ Action
-→ Return
-→ Reconciliation
-→ Re-entry / Rebuild
+Source → Carrier → Authority → Gate → Action
+→ Return → Reconciliation → Re-entry / Rebuild
 ```
 
-DCP's current role is the dependency/state/authority/rebuild projection within a wider federated architecture. It does not own every native source, meaning body, world model, or external carrier.
+DCP 是 wider federated architecture 中的 Dependency／State／Authority／Rebuild projection；不擁有所有 Native Source、Meaning Body、World Model 或外部 Carrier。
 
-Core distinctions:
+DCP is the dependency/state/authority/rebuild projection within a wider federated architecture. It does not own every native source, meaning body, world model, or carrier.
+
+固定分離 / Fixed separations：
 
 - Native Source Root ≠ XuanLing
 - Carrier ≠ Identity ≠ Authority
@@ -39,42 +35,33 @@ Core distinctions:
 - Latest / Modified / Open ≠ Current
 - Return / Receipt / ACK ≠ Reconciliation
 - Knowledge Exists ≠ Cognition Admitted ≠ Capability Proven
-- Candidate / Build / Technical PASS ≠ Runtime / Owner acceptance / Current
+- Candidate / Build / Technical PASS ≠ Runtime / Owner Acceptance / Current
 
----
+## Placement／Drive Coordinate 狀態規則 / Placement state rule
 
-## What is active in this repository
+Drive／Folder／Human Label／local path 是 Navigation／Placement／Carrier，不是 State 或 Authority。
 
-The repository may contain active or candidate work surfaces for:
+Drive/folder/human-label/local-path changes are navigation/placement/carrier changes, not state or authority by themselves.
 
-- DCP dependency/state/authority rules;
-- historical metabolism and reader shields;
-- compatibility and return/re-entry experiments;
-- adapter/topology/governance candidates;
-- repository normalization and evidence mapping;
-- bounded issue-driven work.
+**同一 Semantic Coordinate 內 rename／move 且 Stable Identity、Native Home、Authority、State、Return ownership、Re-entry／Rebuild relation 不變 → `NO_MATERIAL_DELTA / NO_REBUILD`.**
 
-These surfaces can be operational **as documentation, reconciliation logic, or bounded tests** without being production automation.
+**Rename/move inside the same semantic coordinate with those bindings preserved → `NO_MATERIAL_DELTA / NO_REBUILD`.**
 
-Directory names and historical labels are not maturity declarations. A file called `CURRENT`, `MASTER`, `REGISTRY`, `RUNTIME`, or `READY` must still be resolved through its current state, successor, evidence, and claim ceiling.
+只有 Stable Identity、Native Home／lawful source binding、Authority／usage ceiling、Current／Last-good state、Return owner／receiver、Successor／Re-entry、Rebuild relation、Public／Private authority boundary 等實質改變才觸發 DCP affected cone。
 
----
+Only material changes to those bindings trigger the DCP affected cone.
 
-## Current CoreTri boundary
+## CoreTri 邊界 / CoreTri boundary
 
-One stable object/world may have receiver-specific projections:
+同一 Stable Object／World 可有：
 
-- DCP: dependency / state / authority / reconciliation / rebuild
-- Ideas: meaning / experience / navigation / burden
-- GLModel: world / knowledge / engineering / correspondence
+- **DCP**：Dependency / State / Authority / Reconciliation / Rebuild
+- **Ideas**：Meaning / Experience / Navigation / Burden
+- **GLModel**：World / Knowledge / Engineering / Correspondence
 
-This is not a three-database architecture and does not create a second kernel or central truth store.
+These are receiver-specific projections of one stable object/world, not three databases, kernels, or truths.
 
----
-
-## Evidence and maturity rules
-
-Evidence should be interpreted at the narrowest supported level:
+## Evidence／Maturity 判準 / Evidence and maturity
 
 ```text
 source exists
@@ -85,7 +72,7 @@ source exists
 ≠ runtime proven
 ```
 
-Likewise:
+以及 / Likewise：
 
 ```text
 message sent
@@ -95,80 +82,66 @@ message sent
 ≠ world-state change
 ```
 
-A bounded validation may prove a method or failure detector while leaving production, domain, authority, or owner acceptance unresolved.
+Bounded validation 可以證明 Method／Failure Detector，但仍可能留下 production、domain、authority、owner acceptance 未證。
 
----
+A bounded validation can prove a method or failure detector while leaving production, domain, authority, or owner acceptance unresolved.
 
-## Repository reading order
+## Fresh Reader 順序 / Reading order
 
-Fresh readers should normally use:
+1. `README.md` — role + current reader rules／角色與判讀規則
+2. `STATUS.md` — maturity + claim ceiling／成熟度與 Claim Ceiling
+3. Corpus index／inventory — navigation only／只作導航
+4. Current bounded issue／return／successor pointer — affected topic only／只讀受影響主題
+5. Historical artifacts — only on dependency/failure/evidence re-entry／只有觸發才回讀
 
-1. `README.md` — repository role and current reader rules
-2. `STATUS.md` — maturity and claim ceiling
-3. `REPOSITORY_CORPUS_INDEX.md` / inventory maps — navigation only
-4. current bounded issue / return / successor pointers for the affected topic
-5. historical artifacts only when a current dependency requires them
+Modified time、search ranking、open issue、branch presence、directory position 都不能證明 Current。
 
-Do not use modification time, search ranking, open issue state, branch presence, or directory position as proof of Current.
+Modification time, search rank, open issue state, branch presence, and directory position do not prove Current.
 
----
+## Historical Metabolism / 歷史代謝
 
-## Historical material
+歷史文件保留 provenance、evidence、failure memory、reusable primitive；保存不等於 active。
 
-Historical artifacts are deliberately preserved when they retain provenance, evidence, failure memory, or reusable primitives. Preservation does not make them active.
-
-A superseded artifact can remain valid evidence. A closed or completed task can still contain useful proof. Conversely, an open/searchable item can be historical rather than active work.
-
-Historical cleanup therefore prefers:
+Historical artifacts may preserve provenance, evidence, failure memory, and reusable primitives. Preservation does not make them active.
 
 ```text
 absorb useful primitive
 → mark reader state / successor
 → preserve evidence
 → remove active-surface ambiguity
-→ retire only when dependencies allow
+→ retire when dependencies allow
 ```
 
-rather than destructive deletion first.
+## 外部學習 / External learning
 
----
+Standards、research、open source、vendor methods、industry practice 可作 bounded learning input，但不自動成為 Canon，也不自動證明 local applicability。
 
-## External learning
+External standards, research, open source, vendor methods, and industry practices may inform bounded learning but do not automatically become Canon or prove local applicability.
 
-Standards, research, open-source systems, vendor methods, and industry practices may inform DCP through bounded comparison and experiment. They do not automatically become DCP canon or prove local applicability.
+## 明確不宣稱 / Explicit non-claims
 
-Source lifecycle, provenance, rights, limitations, and evidence strength should travel with any derived claim.
+本倉庫本身不宣稱 / This repository alone does not claim：
 
----
+- production readiness／生產就緒
+- autonomous decision authority／自主決策權
+- universal data ownership／全域資料所有權
+- deployed global registry or central truth store／已部署中央 Registry／Truth Store
+- professional certification or regulatory compliance／專業認證或法規合規
+- correctness of historical candidate architecture／歷史 Candidate 必然正確
+- runtime merely because implementation-like files exist／有類實作檔案就等於 Runtime
 
-## Explicit non-claims
+## 現行方向 / Current direction
 
-This repository does not by itself claim:
+目前優先 / Current priorities：
 
-- production readiness;
-- autonomous decision authority;
-- universal data ownership;
-- a deployed global registry or central truth store;
-- professional certification or regulatory compliance;
-- correctness of historical candidate architecture;
-- runtime merely because implementation-like files exist.
+- 降低 duplicate reasoning 與 Reader Load / reduce duplicate reasoning and reader load
+- 分離 Current 與 historical active-looking surfaces / separate Current from historical active-looking surfaces
+- 在 carrier／placement change 中保持 Stable Identity / preserve stable identity across placement changes
+- 改善 Return／Reconciliation／Re-entry continuity
+- 驗證 bounded affected-cone rebuild
+- 維持 Rights／Evidence／Authority boundary
+- 讓 GitHub／Linear／Drive 等保持同步 projection，而非競爭 Truth
 
----
+**本文件描述的是目前 Claim Ceiling，不是 Promotion、Runtime Receipt 或 Authority Grant。**
 
-## Current direction
-
-Current work prioritizes:
-
-- reducing duplicate reasoning and reader load;
-- separating Current from historical active-looking surfaces;
-- preserving stable identity across carrier/placement changes;
-- improving return/reconciliation/re-entry continuity;
-- testing bounded affected-cone rebuilds;
-- maintaining rights, evidence, and authority boundaries;
-- keeping GitHub/other platforms synchronized as projections rather than competing truths.
-
-There is no implication of a fixed delivery timeline or automatic promotion path.
-
----
-
-*This status document describes the repository's current claim ceiling. It is not itself a promotion, runtime receipt, or authority grant.*
+**This document describes the current claim ceiling. It is not a promotion, runtime receipt, or authority grant.**
