@@ -1,93 +1,62 @@
-# External Node On-Chain Specification
+# External Node / Carrier Contract
 
-> Durable specification for onboarding external ecosystem nodes into the XLEN / Xuanling runtime.
-> Purpose: ensure external tools, platforms, and services become chain-bound nodes instead of uncontrolled dependencies.
+> Lifecycle: `PUBLIC_RESEARCH_REFERENCE`
+> Runtime: `false`
+> Native source root: `false`
+> Authority: `none`
 
----
+This document preserves provider-neutral primitives for binding an external tool, service, model surface, repository, database, calendar, workflow system, human review surface, or other carrier into a bounded dependency chain.
 
-## 0. Core Reading
+## 1. Core rule
+An external node is not trusted, authorized, or part of Runtime merely because it is connected.
 
-External nodes should not be treated as:
-- isolated tools
-- uncontrolled dependencies
-- opaque black-box integrations
+`Connected != Authorized`
+`Readable != Mutable`
+`Capability != Authority`
+`Available carrier != Native Source Root`
+`Successful output != Reconciled world state`
 
-They should be treated as:
-- role-bound nodes
-- replaceable ecosystem members
-- chain-aware execution surfaces
+## 2. Minimum binding fields
+A material node binding should be representable with:
+- `node_or_carrier_id`
+- `provider_or_implementation`
+- `capability_profile`
+- `source_or_subject_refs`
+- `receiver_or_owner`
+- `input_boundary`
+- `output_boundary`
+- `rights_privacy_boundary`
+- `action_authority`
+- `evidence_or_receipt`
+- `failure_modes`
+- `fallback_or_replacement`
+- `return_target`
+- `reconciliation_requirement`
+- `rebuild_or_exit_refs`
+- `last_verified_revision_or_time`
 
----
+## 3. Replaceability rule
+A node should not become a hidden architecture root. Replacement readiness requires enough stable identity, interface expectation, evidence, return semantics, and rebuild/exit information to substitute or disable the carrier without redefining the governed object.
 
-## 1. On-Chain Conditions for External Nodes
+## 4. Failure rule
+For material use, define:
+- detectable failure condition;
+- degraded/partial-result handling;
+- retry or alternate carrier behavior;
+- stale-state detection;
+- irreversible-action boundary;
+- evidence of what did or did not occur.
 
-An external node is considered on-chain only when:
+Failure that cannot be observed or reconstructed is more dangerous than ordinary unavailability.
 
-1. **role is defined**
-2. **owner_window is assigned**
-3. **input/output is bounded**
-4. **writeback path exists**
-5. **replacement is possible**
+## 5. Action and write-back gate
+Read, transform, derive, learn, retain, mutate, write-back, delete, export, and share are separate rights. A connector or API exposing an operation does not grant permission to use it.
 
----
+## 6. Return / reconciliation
+Material node output should return as a typed result or receipt to its receiver. Return alone does not change Current. Any required admission, authority, evidence, or reconciliation gate still applies.
 
-## 2. Node Record Schema
+## 7. Provider examples
+GitHub, Drive, Gmail, Calendar, Slack, Notion, workflow tools, databases, BIM/CDE systems, model APIs, sensors, and human review are implementation examples only. None defines the architecture primitive.
 
-Each node should include:
-
-- `node_name`
-- `family_type`
-- `owner_window`
-- `structural_role`
-- `input_type`
-- `output_type`
-- `writeback_surface`
-- `replacement_ready`
-- `failure_mode`
-- `last_verified_time`
-
----
-
-## 3. Failure Mode Rule
-
-Each node must define:
-- what happens when it fails
-- fallback path
-- alternative node
-
----
-
-## 4. Anti-Dependency Rule
-
-A node is unsafe if:
-- it becomes irreplaceable
-- it holds critical state without writeback
-- it controls routing without visibility
-
----
-
-## 5. Current Priority Nodes
-
-| Node | Family | Role | Status |
-|---|---|---|---|
-| GitHub | repository/writeback | bone + writeback anchor | stable |
-| Gmail | communication/intake | event intake | partial |
-| Google Drive | carrying mesh | storage + draft | early |
-| workflow tools | board/orchestration | routing support | early |
-
----
-
-## 6. Next Expansion
-
-- calendar/time nodes
-- public web nodes
-- multi-model nodes
-
----
-
-## 7. Status
-
-- external_node_onchain_spec_created: true
-- node_role_binding_defined: true
-- dependency_control_started: true
-- return_to_00: true
+## 8. Historical compatibility
+Earlier versions used `owner_window`, fixed writeback surfaces, GitHub as a bone/writeback anchor, and an “on-chain” framing. These remain historical implementation patterns, not universal invariants.
