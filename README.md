@@ -14,6 +14,12 @@ This repository contains the public research and reference surface of that frame
 
 本倉庫承載該框架的公開研究與參考表面，包含適合外部審閱的概念、驗證模式、有限範例、歷史研究成果與引用資料；它不是 Native Data Root，也不承載受保護的內部實作細節。
 
+## Current reader entry / 現行讀取入口
+
+Use `CURRENT-SURFACE-MANIFEST.json` to resolve the repository's current public surfaces before interpreting legacy directories or historical artifacts.
+
+讀取本倉時，應先由 `CURRENT-SURFACE-MANIFEST.json` 判定現行公開表面，再進入舊目錄或歷史成果。根目錄中保留的早期 layer/runtime/orchestration 族群目前視為 Historical／Compatibility material，除非有具名 re-admission；其存在、路徑或修改時間本身不建立 Current。
+
 ## Representation architecture / 表徵架構
 
 Public documentation follows three aligned representation profiles:
