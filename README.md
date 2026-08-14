@@ -1,151 +1,173 @@
-DCP Framework
+# DCP Framework / XuanLing Foundation
 
-A Constraint-Based Framework for Structured Judgment and Layered Interpretation
-判定約束框架：一種用於結構化判定與分層詮釋的方法
+**Status:** evolving conceptual + structural framework / no production runtime / no automatic authority / no public product claim
 
-⸻
+DCP is a constraint- and dependency-oriented framework for making **state, authority, evidence, return, and rebuild conditions explicit** when information is incomplete, distributed, heterogeneous, or changing.
 
-Overview / 概述
+It began as a structured-judgment model. This repository now also carries bounded structural rules, historical experiments, compatibility surfaces, and reconciliation evidence. Those materials do **not** by themselves prove a deployed runtime, autonomous agent, central truth store, or production system.
 
-EN
+---
 
-The DCP Framework is a conceptual framework for reasoning under constraints.
-It provides a structured way to describe how judgments, comparisons, and interpretations are formed when information is incomplete, heterogeneous, or condition-dependent.
+## One-line model
 
-Rather than producing answers or decisions, DCP makes explicit the conditions, references, assumptions, and uncertainties involved in any judgment process.
+```text
+Source → Carrier → Authority → Gate → Action → Return → Reconciliation → Re-entry / Rebuild
+```
 
-This repository presents DCP as a conceptual and interpretive framework, not as a software system or executable model.
+DCP asks:
 
-⸻
+- What is the native source and who lawfully controls it?
+- Which carrier or projection is being read?
+- What action is actually authorized?
+- What evidence supports the claim?
+- What state changed, and what did not?
+- Has a return merely been produced, or has it been reconciled?
+- Can the affected state be rebuilt from valid source, evidence, and accepted deltas?
 
-ZH
+---
 
-DCP（判定約束框架）是一套用於「在條件限制下進行結構化判定」的概念性框架。
-它用來描述在資訊不完整、異質或受情境影響時，人們如何形成判定、比較與詮釋。
+## Current reader rules
 
-DCP 並不產生答案，也不替代決策，而是將判定所依賴的條件、參考來源、假設與不確定性加以顯性化，使其可被檢視與重組。
+The following distinctions are intentional and should not be collapsed:
 
-本專案呈現的是一個概念與方法層級的框架，而非軟體、演算法或自動化系統。
+- **Native Source Root ≠ XuanLing**
+- **Carrier ≠ Identity ≠ Authority**
+- **Folder / issue / task / render ≠ State**
+- **Latest / Modified / Open ≠ Current**
+- **Return / Receipt / ACK ≠ Reconciliation**
+- **Knowledge Exists ≠ Cognition Admitted ≠ Capability Proven**
+- **Technical PASS ≠ Owner acceptance ≠ Runtime ≠ BuildReady**
+- **Read ≠ Copy ≠ Derive ≠ Learn ≠ Retain ≠ Write-back ≠ Delete ≠ Export**
 
-⸻
+A repository file, issue, task, model, or database is therefore a **bounded carrier or projection** unless its state, authority, and evidence say otherwise.
 
-Structure of This Repository / 專案結構說明
+---
 
-本倉庫依照概念層級劃分為三個部分，各自獨立但可相互對照閱讀：
+## Current operating split
 
-Part 0 — Core (Layer 0)
+The current CoreTri interpretation uses one stable object/world with receiver-specific projections:
 
-DCP 核心結構
+- **DCP — Dependency / State / Authority / Rebuild**  
+  Dependency, state transitions, claim ceiling, materiality, admission, return closure, reconciliation, re-entry, rebuild, and historical metabolism.
 
-描述判定的基本構成邏輯，包括：
-	•	條件（Conditions）
-	•	參考集合（Reference Sets）
-	•	約束（Constraints）
-	•	不確定性（Uncertainty）
-	•	判定狀態（成立／不成立／未定）
+- **Ideas — Meaning / Experience / Navigation**  
+  Human meaning, life requirement, experience, burden, navigation, placement grammar, and materiality discovery.
 
-此層為抽象層，定義「什麼是判定」以及「判定如何成立」。
+- **GLModel — World / Knowledge / Engineering**  
+  World/object identity binding, geometry, assemblies, engineering systems, lifecycle, correspondence, projection, adapter/exchange, capability and failure evidence.
 
-⸻
+These are complementary projections of the same object. They are **not three independent truths, registries, or kernels**.
 
-Part I — Interpretive Layer (Layer 1 / Xuanling System)
+---
 
-在 Layer 0 之上，整理可重複使用的詮釋結構與判定樣式，包括：
-	•	判定模板
-	•	條件組合模式
-	•	可重用的推理結構
-	•	詮釋流程與語義約束
+## Repository role
 
-此層將抽象邏輯轉化為可閱讀、可重組的結構形式，但仍不涉及具體實作或應用。
+This repository is the **Foundation / DCP public structural corpus**. It may contain:
 
-⸻
+- conceptual primitives and historical source material;
+- dependency/state/authority rules;
+- bounded compatibility and reconciliation surfaces;
+- return/rebuild patterns;
+- repository hygiene and historical-metabolism evidence;
+- experimental or candidate structural artifacts.
 
-Part II — Projection Layer (Layer 2)
+The presence of a file family such as `runtime-spine`, `registry`, `board`, `adapter`, or `topology` does **not** by its name prove production runtime, central registry authority, or deployed automation. Read the local state, claim ceiling, evidence, and successor/re-entry context.
 
-本層提供「投影式示例」，用來展示 DCP 如何映射到不同領域中。
+---
 
-這些內容：
-	•	是示意性的（illustrative）
-	•	不構成實作或產品
-	•	不限定特定產業或用途
-	•	可被視為條件投影或案例原型
+## How to read this repository
 
-其目的在於展示框架的可延展性，而非給出最終應用形式。
+For a fresh reader:
 
-⸻
+1. Read `README.md` and `STATUS.md` for the current claim ceiling.
+2. Use `REPOSITORY_CORPUS_INDEX.md` and inventory maps to locate material, not to infer Current by filename or directory.
+3. Prefer current bounded DCP reader surfaces and explicit successor/re-entry pointers over historical `CURRENT`, `MASTER`, `READY`, or old window labels.
+4. Treat historical returns and experiments as reusable evidence or failure memory unless a current dependency explicitly re-enters them.
+5. Re-read only the affected dependency cone when source revision or material state changes.
 
-How to Read This Repository / 閱讀建議
-	1.	從 Part 0 開始，理解判定的抽象結構
-	2.	閱讀 Part I，理解如何形成可重用的詮釋模式
-	3.	將 Part II 視為投影與示例，而非規範或實作
-	4.	各部分可獨立閱讀，也可交叉參照
+A search hit is not a Current declaration. A historical artifact may remain valid evidence without being active work.
 
-⸻
+---
 
-Design Principles / 設計原則
+## Material-delta discipline
 
-EN
-	•	Constraint-driven rather than rule-driven
-	•	Interpretable rather than opaque
-	•	Modular rather than monolithic
-	•	Open-ended rather than finalized
-	•	Conceptual rather than executable
+```text
+Source
+→ Understand
+→ Compare with existing capability
+→ Materiality test
+→ bounded native deepening / experiment
+→ Evidence
+→ Return
+→ Reconciliation
+→ affected rebuild
+```
 
-ZH
-	•	以條件為中心，而非規則至上
-	•	可解釋，而非黑盒
-	•	模組化，而非單體系統
-	•	開放演化，而非定稿封閉
-	•	概念導向，而非可執行程式
+Valid outcomes include `NO_DELTA`, `PARTIALLY_PROVEN`, `FAILURE_LEARNED`, `TO_VERIFY`, and `REJECTED`. New terminology alone is not a reason to create a new schema family or registry.
 
-⸻
+---
 
-Intended Use / 使用方式
+## External sources
 
-This framework may be used as:
-	•	a thinking scaffold
-	•	a reasoning template
-	•	a documentation structure
-	•	a comparative or analytical lens
-	•	a reference for AI-assisted or human reasoning workflows
+Standards, papers, open-source systems, vendors, and mature industry practices are learning inputs, not automatic DCP canon.
 
-It does not prescribe actions, decisions, or implementations.
+```text
+Vendor claim ≠ proven truth
+Paper claim ≠ runtime proof
+Standard exists ≠ project applicability
+Demo works ≠ native capability proven
+Open source ≠ unrestricted rights for every use
+```
 
-⸻
+Prefer extracting primitives, methods, failure patterns, validation methods, interface patterns, and evidence while preserving provenance, rights, and source lifecycle state.
 
-License / 授權說明
+---
 
-This work is licensed under:
+## What this repository is not
 
-Creative Commons Attribution–NonCommercial–NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
+It is not, by repository existence alone:
 
-You may:
-	•	read and share the work
-	•	cite it with attribution
+- a production autonomous agent;
+- a deployed decision engine;
+- a central data root or universal registry;
+- a replacement for native source ownership or professional authority;
+- a guarantee of legal, engineering, financial, safety, or regulatory correctness;
+- proof that candidate runtime, build, model, or governance artifacts are operational.
 
-You may not:
-	•	use it for commercial purposes
-	•	distribute modified or derivative versions
+Any implementation or domain use requires its own evidence, authority, and validation.
 
-For commercial or derivative use, separate permission from the author is required.
+---
 
-⸻
+## Design principles
 
-Citation / 引用方式
+- Dependency-aware rather than filename-driven
+- Explicit state rather than implicit status
+- Authority-separated rather than permission-by-assumption
+- Evidence-bounded rather than claim-driven
+- Federated rather than central-truth-seeking
+- Delta-first rather than repeated full reconstruction
+- Rebuildable rather than snapshot-dependent
+- Historical evidence preserved without allowing history to masquerade as Current
 
-EN
+---
 
-Chen, Chien-Heng. DCP Framework: A Constraint-Based Model for Structured Judgment and Layered Interpretation. Zenodo, 2026.
+## License
+
+This work is licensed under **Creative Commons Attribution–NonCommercial–NoDerivatives 4.0 International (CC BY-NC-ND 4.0)**.
+
+You may read, share, and cite the published work with attribution. Commercial or derivative use requires separate permission from the author. Repository history may contain additional material whose source/rights must be evaluated independently; public repository visibility does not expand those rights.
+
+---
+
+## Citation
+
+Chen, Chien-Heng. *DCP Framework: A Constraint-Based Model for Structured Judgment and Layered Interpretation*. Zenodo, 2026.  
 DOI: https://doi.org/10.5281/zenodo.18111818
 
-ZH
-
 陳建衡，《DCP 框架：一種結構化判定與分層詮釋的約束模型》，Zenodo，2026。
-DOI：https://doi.org/10.5281/zenodo.18111818
 
-⸻
+---
 
-Status
+## Final reader rule
 
-This repository represents an evolving conceptual framework.
-It is intentionally open-ended and designed to support future reinterpretation and extension.
+**Do not infer architectural truth from where an artifact is stored or what it is called. Resolve identity, source, state, authority, evidence, return, and successor/re-entry first.**
