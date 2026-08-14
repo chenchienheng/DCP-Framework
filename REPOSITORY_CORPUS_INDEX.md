@@ -20,7 +20,17 @@
 ## 1. Historical Inventory by Family
 
 ### 1.1 Meta & Mother-Law (00)
-Preserved as lineage/reference material pending family-level admission review. Repository location does not establish Current status.
+- `FULL_REPOSITORY_TOPOLOGY_ALIGNMENT.md`: historical topology-alignment report.
+- `QINYI_INTERFACE_SIGNATURE_REFERENCE.md`: historical Qinyi signature reference.
+- `SIGNATURE_ALIGNMENT_NOTE.md`: historical signature-scope note.
+- `00_meta/user_identity_anchor.md`: historical identity-alignment anchor.
+- `00_meta/FULL_LIFECYCLE_ASSET_MATRIX.md`: historical lifecycle/schema alignment reference.
+- `WORLD_CHAIN_MASTER_AXIS.md`: historical CoreTri axis/governance reference.
+- `00_mother-law/README.md`: historical governance entry.
+- `00_mother-law/existence-consistency-rule.md`: historical consistency-rule reference.
+- `00_mother-law/mother-architecture-registry-v0-1.md`: historical M1–M5 lineage reference.
+
+These entries are preserved for lineage and discovery. Repository location does not establish Current status.
 
 ### 1.2 Runtime & Boards (01)
 - `01_native-board/`: historical board/blocker/pulse/permissions artifacts.
@@ -32,12 +42,12 @@ These families are not Current runtime surfaces. Their reusable blocker/state/pe
 - `02_runtime-ops/`: historical follow-up tracking specimen; not an Active task authority.
 - `02_translation-layer/`: historical bridge/control-center framing; reusable carrier/interface methods require bounded re-admission.
 - `03_board-orchestration/`: historical routing/binding/delta-mapping artifacts; lineage may still be preserved for return/re-entry evidence.
-- `03_field-governance/`: mixed research family. Constraint/dependency/source-view/stable-ID/return primitives remain useful; commander/hierarchy and other obsolete framings have no automatic Current authority.
-- `04_adapter-layer/`: provider-specific adapter/bridge specimens plus reusable carrier/adapter/write-back primitives. Vendor names are implementation specimens, not canonical architecture primitives.
+- `03_field-governance/`: mixed historical research family; reusable primitives require bounded successor/admission interpretation.
+- `04_adapter-layer/`: provider-specific adapter/bridge specimens plus reusable carrier/adapter/write-back primitives; vendor names are implementation specimens, not canonical architecture primitives.
 - `04_interface-layer/`: bounded historical/public-value material; native semantic replacement requires the appropriate owner/release gate.
 
 ### 1.4 Topology / Reserve (05)
-- `05_topology/`: historical topology family. Triadic consistency, feasible-domain responsibility, time/order and closed-loop primitives may be preserved; fixed ten-ring organ framing is superseded unless explicitly re-admitted.
+- `05_topology/`: historical/compatibility topology family unless explicitly re-admitted. Any primitive-level retention or supersession decision must be established by an authoritative disposition/successor surface, not by this index.
 - `05_XLEN_Reserve_Unenabled/`: reserve/unenabled material; existence in repository does not prove capability or activation.
 
 ---
