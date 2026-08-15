@@ -1,35 +1,16 @@
-# Native Board Index
+# Native Board Index — Lineage Stub
 
-Department: Native Board
-Agent Block: Board Index
-Node ID: NBD-001
-Window: W0
-Platform Writer: ChatGPT
-Version: v0.1
-Status: active
+**Lifecycle:** METABOLIZED_HISTORICAL_STUB  
+**Current eligibility:** false  
+**Runtime:** false
 
-## Core
-This is the primary entry board for runtime routing, blockers, follow-up, and logs.
+舊版將本檔視為 W0 runtime routing／blocker／follow-up 的 primary board。此角色已退休；GitHub Repository／Board／Window 不因 placement 或名稱取得 Native／Runtime Authority。
 
-## Sections
-1. runtime_status
-2. blockers
-3. task_follow_up
-4. latest_logs
-5. adapter_status
+## 已吸收 Primitive
+- Reader 需要明確入口與 bounded routing。
+- Blocker、task、adapter 狀態應可追溯。
+- 寫回需要具名 target／authority／return route。
 
-## Routing
-- blockers -> 01_native-board/blockers.md
-- task_follow_up -> 02_runtime-ops/task_follow_up.md
-- logs -> 00_meta/logs/
-- adapter_layer -> 04_adapter-layer/
+現行 successor：`CURRENT-SURFACE-MANIFEST.json`、`SIX_DIMENSION_REPOSITORY_PROJECTION.md`、`METABOLIZED-PRIMITIVES.md`。
 
-## Runtime Status
-- mode: GitHub-native-first
-- board_state: seed
-- writeback_gate: enabled
-- external_layers: staged
-
-## Notes
-- This board is the primary read entry for Gamma.
-- Replit may use this board as the first interaction relay entry.
+完整舊 board schema 保留於 Git history，僅供 lineage／audit／re-entry。
