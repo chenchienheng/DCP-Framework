@@ -1,18 +1,13 @@
-# Drive Adapter
+# Drive Adapter — Metabolized Carrier Stub
 
-一句核心：
-Drive 不只是儲存，而是承載、鏡像、快照與歷史保留層。
+**Lifecycle:** METABOLIZED_PRIMITIVE_STUB  
+**Current eligibility as fixed Drive role:** false
 
-## 主責
-- 承載總盤
-- Freeze 參照
-- 鏡像層
-- 快照
+Drive 不被固定成 mirror／snapshot／historical layer，也不必對回 GitHub／ClickUp 才成立。
 
-## 原則
-- Drive 不直接取代版本主本
-- 承載與鏡像需可對回 GitHub 與 ClickUp
-- 歷史資料要可回讀
+## 保留 Primitive
+Drive 是可承載 Native Body、Projection、Exchange、History 或其他合法資料的 Cloud/Carrier；實際角色由 Domain／Authority／State／Circle／Pole 決定。
 
-## 狀態
-Seed v0.1
+Carrier location ≠ Identity／Authority／Current。歷史內容需 lineage/re-entry；projection 不取代 source。
+
+現行 successor：Six-Dimension Dispatch + Chain-Ecosystem Regeneration。
