@@ -1,96 +1,16 @@
-# External Round Ledger v0.1
+# External Round Ledger v0.1 — Metabolized Continuity Stub
 
-## Purpose
+**Lifecycle:** METABOLIZED_PRIMITIVE_STUB  
+**Current eligibility as standalone continuity authority:** false
 
-External Round Ledger is a lightweight memory anchor for cross-window continuity.
+## 保留 Primitive
+- 新 Window/Model/Tool 不應只靠聊天記憶續接；需 bounded continuity record。
+- Continuity record 應保留 Identity/Lane、Revision/Time、Material Delta、Open Risk、Next Gate/Action、Return Target。
+- Round record 是 Pointer/Receipt/State projection，不是 Native Body／Current／Authority。
+- Time order constrains interpretation，但 Latest ≠ Current。
 
-It records each working round as a small external note so a new window can align with the current chain before acting.
+舊 MotherTree/Closure Gate、固定 round prompt 與 storage list 已退休。
 
-## Boundary
+現行 successor：Window inheritance contract + Shared Belt receipt + Lifecycle Re-entry/Rebuild。
 
-This file is not core doctrine.
-It does not store secrets, credentials, private identity lists, or sensitive source material.
-It does not replace MotherTree, CoreTri, or Closure Gate.
-
-## Problem
-
-Long conversations and model updates can cause context drift.
-
-A window may remember the current topic but miss the chain state, last decision, or next action.
-
-The ledger solves this by making each round return a compact state record.
-
-## Round Record
-
-```yaml
-Round_Record:
-  Round_ID:
-  Window:
-  Date:
-  Current_Node:
-  Decision:
-  Changed_Artifacts:
-  Open_Risks:
-  Next_Task:
-  Return_Path:
-```
-
-## Continuation Rule
-
-A new window should not start by expanding ideas.
-It should first align with the latest round record.
-
-```text
-Read latest round record -> identify current node -> continue only the next task.
-```
-
-## Time Rule
-
-Time order constrains spatial expansion.
-
-New outputs must preserve:
-
-- last decision;
-- current artifact state;
-- open risk;
-- next task;
-- return path.
-
-## Storage Surfaces
-
-Allowed surfaces:
-
-- GitHub issue or PR comment
-- GitHub markdown file
-- cloud document summary
-- task card system
-
-Forbidden content:
-
-- passwords
-- tokens
-- private human lists
-- company-sensitive payloads
-- unreviewed private calibration text
-
-## Return Packet
-
-```yaml
-Round_Return_Packet:
-  Round_ID:
-  What_Changed:
-  What_Did_Not_Change:
-  Decision:
-  Needs_User_Decision: true | false
-  Next_Round_Start_Prompt:
-  Return_Path:
-```
-
-## Status
-
-```yaml
-Status: Draft_v0_1
-Layer: Field Governance
-Core_Status: Non_Core
-Gate_Color: Yellow
-```
+完整舊 Round Ledger schema 保留於 Git history。
