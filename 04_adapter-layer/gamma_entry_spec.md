@@ -1,26 +1,13 @@
-# Gamma Entry Spec
+# Gamma Entry Spec — Historical Representation Stub
 
-Department: Adapter Layer
-Agent Block: Gamma Entry
-Node ID: ADP-002
-Window: W0
-Platform Writer: ChatGPT
-Version: v0.1
+**Lifecycle:** HISTORICAL_IMPLEMENTATION_STUB  
+**Current eligibility:** false
 
-## Core
-Gamma is the visual entry layer for the native board.
+Gamma 不再是固定 visual entry layer。
 
-## Input
-- board index
-- blockers summary
-- latest log summary
+## 保留 Primitive
+任何視覺／簡報／UI Carrier 只能讀合法 bounded projection；Representation ≠ Source／Truth／Authority，且 output 應保留 provenance／claim ceiling／return path。
 
-## Output
-- visual overview
-- section grouping
-- readable entry cards
+現行 successor：Representation Selection + Audience Composition + Cloud binding。
 
-## Limits
-- mirror only
-- no primary write
-- no source replacement
+完整舊 Gamma mapping 保留於 Git history。
