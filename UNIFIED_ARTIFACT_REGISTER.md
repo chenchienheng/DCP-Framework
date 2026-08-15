@@ -1,7 +1,14 @@
 # Unified Artifact Register
 
-> Unified register for the current durable architecture corpus.
-> Integrates writeback, runtime, seed-extraction, and governance notes.
+> **Lifecycle:** HISTORICAL_REFERENCE
+> **Current authority:** false
+> **Runtime:** false
+> **Reader shield:** This legacy register must not be used to establish Current, Runtime, Authority, Promotion, or repository truth.
+> **Successor:** `CURRENT-SURFACE-MANIFEST.json` for current interpretation; `REPOSITORY_CORPUS_INDEX.md` for lineage/discovery; `SIX_DIMENSION_REPOSITORY_PROJECTION.md` for current six-dimensional repository interpretation candidate.
+> **Important:** A name listed below may refer to a retired, moved, missing, or historical artifact. Listing is lineage evidence only and does not justify recreating or re-admitting it.
+
+> Historical register for the former durable architecture corpus generation.
+> Integrates writeback, runtime, seed-extraction, and governance notes from that generation.
 
 ---
 
@@ -67,6 +74,8 @@
 
 ---
 
-## 2. Status
-- register_synchronized: true
+## 2. Historical Status
+- register_synchronized: historical_snapshot_only
 - family_range: 00-05
+- current_eligibility: false
+- re_admission_requires: successor + authority + evidence + explicit bounded decision
