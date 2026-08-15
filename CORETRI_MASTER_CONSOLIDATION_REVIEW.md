@@ -1,24 +1,31 @@
 # CoreTri Master Consolidation Review
 
-## Purpose
+> **Lifecycle:** HISTORICAL_REVIEW_SNAPSHOT
+> **Current authority:** false
+> **Runtime:** false
+> **Reader shield:** This review captures a previous repository-generation view. Its “Active Files”, “VALID_MASTER_CONTROL_FILES”, phase labels, issue classifications, and AXIS assumptions do not establish Current architecture today.
+> **Successor interpretation:** use `CURRENT-SURFACE-MANIFEST.json` for Current reader entry, `REPOSITORY_CORPUS_INDEX.md` for lineage/discovery, and `SIX_DIMENSION_REPOSITORY_PROJECTION.md` for the current repository projection candidate.
+> **Re-entry rule:** any historical master/axis/control claim below requires fresh evidence, successor alignment, and explicit bounded re-admission before it may affect Current reasoning.
+
+## Historical Purpose
 
 Consolidate Issues #1–#39 into a single master-stage review to establish
-structural certainty and clarify execution boundaries for the next phase.
+structural certainty and clarify execution boundaries for that earlier phase.
 
-## Phase Summary
+## Historical Phase Summary
 
-The repository has transitioned through Phase 1 (Repository Bone Stabilization)
-and is currently operating in Phase 2 (Legacy Seed Extraction and Rebind).
-The M2 Runtime Spine is partially implemented.
-The internal execution context and taskboards have been heavily desynced from
-the actual `main` branch commit history, necessitating this consolidation point
-to re-align the issue state with actual repository structures.
+The repository had transitioned through Phase 1 (Repository Bone Stabilization)
+and was described as operating in Phase 2 (Legacy Seed Extraction and Rebind).
+The M2 Runtime Spine was described as partially implemented.
+The internal execution context and taskboards had been heavily desynced from
+the actual `main` branch commit history, necessitating that consolidation point.
+
+The statements above are retained as historical evidence only and do not imply present Runtime or maturity.
 
 ## Issue State Table (Issues #1–#39)
 
-The following statuses are grounded in the latest known structural mapping
-(via `MAIN_BRANCH_TASKBOARD_RECONCILIATION.md`). All issues 1 through 39 have
-been classified to ensure complete state verification.
+The following statuses were grounded in the then-current structural mapping
+(via `MAIN_BRANCH_TASKBOARD_RECONCILIATION.md`). They remain historical classifications.
 
 | Issue | Title | Classification | Notes |
 |---|---|---|---|
@@ -62,12 +69,11 @@ been classified to ensure complete state verification.
 | #38 | Legacy Issue | SUPERSEDED | Unverified legacy state |
 | #39 | External Signal Entry Chain | STRUCTURE_ESTABLISHED | Master artifact |
 
-## File State Mapping
+## Historical File State Mapping
 
-To prevent semantic drift, the following explicit mapping clarifies the status
-of repository files:
+The following mapping describes that prior generation only:
 
-- **Active Files**:
+- **Then-Active Files**:
   - `00_mother-law/existence-chain-master-layer.md`
   - `TIME_CHAIN_MASTER_LAYER.md`
   - `SPACE_CHAIN_MASTER_LAYER.md`
@@ -86,10 +92,11 @@ of repository files:
   - Execution logs (`snapshots/*`)
   - Trace logs for past migrations
 
-## VALID_MASTER_CONTROL_FILES
+No item in the list above is Current merely because this historical review called it Active or Master.
 
-The following files represent the currently valid master control surfaces and
-axis definitions:
+## Historical VALID_MASTER_CONTROL_FILES
+
+The following files were treated as master control surfaces and axis definitions in that generation:
 
 - `AXIS_TO_EXTERNAL_ABSORPTION_HANDOFF.md` (#36)
 - `EXTERNAL_ECOSYSTEM_ABSORPTION_SCHEMA.md` (#37)
@@ -100,29 +107,25 @@ axis definitions:
 - `SPACE_CHAIN_MASTER_LAYER.md` (AXIS-04)
 - `REVIEW_CHAIN_MASTER_LAYER.md` (AXIS-05)
 
-## Mismatch or Gap
+Current correction: AXIS labels and master designations are historical representations. Reusable dependency, review, time, space, world, and handoff primitives require bounded re-interpretation; the old labels themselves carry no present authority.
+
+## Historical Mismatch or Gap
 
 - **Gap**: The historical legacy issues (#3-5, #7-8, #10-11, #14, #25, #28-35,
-  #38) are categorized as SUPERSEDED lacking extensive historical verification
-  logs due to GitHub availability, but they must remain formally resolved to
-  seal the timeline.
-- **Mismatch**: The artifact `QINYI_INTERFACE_SIGNATURE_REFERENCE.md` is
-  designated as a valid master control file, binding external visual interface
-  rules to the structural framework, but ensuring it is fully aligned within
-  legacy seed validation structures requires ongoing oversight.
+  #38) were categorized as SUPERSEDED lacking extensive historical verification
+  logs due to GitHub availability.
+- **Mismatch**: `QINYI_INTERFACE_SIGNATURE_REFERENCE.md` was designated as a valid master control file, while its alignment within legacy seed validation structures required ongoing oversight.
 
-## Unresolved Risks
+## Historical Risks
 
-- The assumption that unverified legacy issues (#3-5, etc.) are purely
-  SUPERSEDED might obscure any deep dependencies they originally established.
-- Leaving unidentified issues unclassified risks semantic contamination and
-  redundant execution loops.
-- `WORLD_CHAIN_MASTER_AXIS.md` requires stringent enforcement to ensure all
-  external ecosystem inputs correctly route through AXIS-01.
+- Unverified legacy issues could have obscured deeper dependencies.
+- Unidentified issues could have created semantic contamination and redundant execution loops.
+- `WORLD_CHAIN_MASTER_AXIS.md` required enforcement under the previous AXIS model.
 
-## Next Single Recommended Action
+Current rule: these risks are Failure Memory and lineage evidence. They must not silently recreate the old control architecture.
 
-1. Lock this master consolidation review into the standard snapshot framework,
-   verifying no execution artifacts drift beyond these established master
-   control files, and proceed with Phase 2 Legacy Seed Extraction tasks mapping
-   strictly against this list.
+## Historical Recommended Action
+
+The then-recommended action was to lock this consolidation review into the snapshot framework and proceed with Phase 2 Legacy Seed Extraction.
+
+**Current disposition:** preserved for provenance, audit, failure learning, and rebuild only. Current eligibility = false unless explicitly re-admitted.
