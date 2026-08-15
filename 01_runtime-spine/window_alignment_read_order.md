@@ -1,33 +1,16 @@
-# Window Alignment Read Order
+# Window Alignment Read Order — Metabolized Primitive Stub
 
-Department: Runtime Spine
-Agent Block: Alignment Read Order
-Node ID: RSP-004
-Window: 00->01-07
-Platform Writer: ChatGPT
-Version: v0.1
-Status: active
+**Lifecycle:** METABOLIZED_PRIMITIVE_STUB  
+**Current eligibility as fixed read order:** false
 
-## Core
-Before interpreting new GitHub deltas, windows 01-07 should first read the stable user alignment anchors, then runtime routing rules, then current delta mappings.
+舊版固定要求 W01–07 依特定 GitHub path 順序讀取。該固定 Window／Path read order 已退休。
 
-## Read Order
-1. 00_meta/user_identity_anchor.md
-2. 01_runtime-spine/github_delta_driven_pulse_rule.md
-3. 01_runtime-spine/window_linking_logic_01_07.md
-4. 03_board-orchestration/window_binding_registry_01_07.md
-5. 03_board-orchestration/window_delta_mapping_template.md
-6. 01_native-board/pulse_rollup.md
-7. current GitHub delta items
+## 保留 Primitive
+- 先建立 Identity／Domain／Authority／State 邊界，再讀 affected delta。
+- 不從 Window-local assumption 或 Historical path 建立 Current。
+- Reader 應 bounded read，必要時才 escalation。
+- Conflict 只凍結 affected branch。
 
-## Purpose
-- reduce drift across windows
-- avoid self-fabricated state
-- align identity before routing
-- align routing before writeback
+現行 successor：`CURRENT-SURFACE-MANIFEST.json` reader priority、六維 dispatch、Boundary-first／First Failure Gate。
 
-## Rules
-- do not start from legacy folders
-- do not start from window-local assumptions
-- do not overwrite stable identity anchors with runtime deltas
-- unresolved conflicts return to window 00 hold state
+完整舊 read-order list 保留於 Git history。
