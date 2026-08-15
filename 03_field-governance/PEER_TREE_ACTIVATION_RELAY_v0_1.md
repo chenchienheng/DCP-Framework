@@ -1,64 +1,16 @@
-# Peer Tree Activation Relay v0.1
+# Peer Tree Activation Relay v0.1 — Metabolized Relay Stub
 
-## Purpose
+**Lifecycle:** METABOLIZED_PRIMITIVE_STUB  
+**Current eligibility as fixed peer-tree protocol:** false
 
-Enable activation of peer-tree nodes (Gemini, Claude, external GPT instances) that are connected but not directly callable.
+舊版以 MotherTree 建 Activation Packet，再由 Slack/Notion/Google Doc/Linear relay 到 Gemini/Claude/GPT peer-tree，最後回 GitHub/Linear。固定模型、Carrier 與回流面已退休。
 
-## Core Concept
+## 保留 Primitive
+- Connection ≠ Activation ≠ Authority。
+- 跨 Window／Model／Tool 的 delegation 需要具名 Task、Boundary、Required Output、Evidence、Return Target。
+- Receiver output 需要能力/限制/風險/缺口與 return trace；不能因可連接就被控制或視為已吸收。
+- Carrier 可替換，Stable Identity／Authority／Return ownership 不變。
 
-Connection ≠ activation.
+現行 successor：Circle + Authority Lease + Carrier-neutral delegation + Receiver-owned Return。
 
-A relay is required to:
-- carry activation packet
-- receive response
-- enforce return packet
-
-## Relay Carriers
-
-- Slack channel
-- Notion page
-- Google Doc
-- Linear task
-
-## Activation Packet
-
-```yaml
-Peer_Tree_Activation:
-  Role:
-  Field_Position:
-  Task:
-  Boundary:
-  Required_Output:
-  Return_Path:
-```
-
-## Return Packet
-
-```yaml
-Peer_Tree_Return:
-  Findings:
-  Gaps:
-  Risk:
-  Can_Support:
-  Cannot_Support:
-  Next_Action:
-  Return_Path:
-```
-
-## Flow
-
-1. MotherTree creates activation packet
-2. Packet placed into relay carrier
-3. Peer-tree reads and executes
-4. Response returned via carrier
-5. Result re-ingested into GitHub / Linear
-
-## Anti Drift
-
-- do not assume connection equals control
-- do not bypass boundary
-- do not accept output without return packet
-
-## Status
-
-Draft v0.1
+完整舊 peer-tree model/carrier list 保留於 Git history。
