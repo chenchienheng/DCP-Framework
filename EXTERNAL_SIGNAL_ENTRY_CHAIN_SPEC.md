@@ -1,70 +1,18 @@
-# External Signal Entry Chain Specification
+# External Signal Entry Chain — Metabolized Boundary Stub
 
-Department: Adapter Layer / Core
-Node Type: External Signal Entry Node
-Version: v0.1
+**Lifecycle:** METABOLIZED_PRIMITIVE_STUB  
+**Current eligibility as AXIS entry chain:** false  
+**Runtime:** false
 
-## Core Purpose
-Define a tool-agnostic external signal entry chain for all inbound external
-triggers. This specification treats messaging platforms, web inputs,
-webhook/API inputs, crawler inputs, telecom signals, and IoT sensor signals
-as interchangeable entry nodes rather than unique or isolated integrations.
+舊版雖已工具中立，但仍將 AXIS-01／AXIS-05、統一 runtime queue 與固定 return_failed 寫成 mandatory architecture。這部分退休。
 
-## Axis Mapping
-- **Primary Axis:** AXIS-01 (World Chain) - Universal entry point.
-- **Secondary Axis:** AXIS-05 (Review Chain) - Universal fallback/failure gate.
+## 保留 Primitive
+- 所有 inbound signal 預設為 untrusted Candidate；進入系統前需驗證 origin/authentication、schema、purpose、rights/privacy、cost/quota、rate/anomaly、evidence/provenance。
+- Entry node／protocol 可替換；signal identity 與 evidence lineage 不應綁定單一平台。
+- Signal accepted ≠ Fact／Truth／Action authority。
+- Missing/failed gate 只 HOLD affected signal branch；不得猜測補完。
+- Return/Evidence target 由 Native Domain／Authority／Circle/Pole 決定。
 
-## Common Fields Definition
-Every external entry node must declare the following parameters to be
-considered compliant with the runtime:
+現行 successor：Boundary-first Intake + Six-Dimension Dispatch + Source Eligibility + Evidence/Effect Gate。
 
-- `entry_type`: The category of the inbound signal (messaging, webhook, sensor).
-- `platform_or_protocol`: The specific service or standard (LINE, HTTP, SMS).
-- `signal_format`: The structural format of the inbound data (JSON, Plaintext).
-- `authentication_boundary`: How the signal proves its origin or authorization.
-- `cost_or_quota_constraint`: Strict bounds on execution cost and rate limits.
-- `primary_axis`: Must be AXIS-01.
-- `secondary_axis`: AXIS-05 or specific internal routing chain.
-- `review_path`: The mandatory gateway for signal verification before action.
-- `return_path`: The destination for logs, output, or writeback archiving.
-- `return_failed`: Must route to AXIS-05 for human/manual recovery.
-- `replaceability_rule`: The exact mechanism by which this entry node can be
-  swapped for an equivalent node without causing runtime collapse.
-
-## Example Mapping Table
-
-| Node | Entry Type | Format | Replaceability |
-|---|---|---|---|
-| LINE | Messaging | JSON | Swappable with WhatsApp/Telegram |
-| Webhook | API Trigger | JSON | Bound to API contract |
-| IoT Sensor | Sensor Data | MQTT | Standardized numeric mapping |
-| Email Inbox | Comm. | MIME | IMAP protocol standardization |
-
-## Candidate Boundary Requirements (Docs-Only / Not Runtime Enforcement)
-
-*Disclaimer: The following requirements are proposed architectural candidates. They do not introduce runtime queues, middleware, API gateways, database dependencies, or deployment semantics.*
-
-- **Candidate Rate-Limiting Control:** A theoretical boundary control to mitigate signal flooding (e.g., bot floods, sensor malfunctions) by enforcing entry quotas before signals reach the internal routing queue.
-- **Candidate Schema-Validation Control:** A theoretical format guard to prevent structural drift. External payloads should be validated against a unified baseline schema before proceeding to AXIS-01, ensuring uniform entry logic regardless of the source.
-
-## Analysis
-
-### Mismatch or Gap
-- The current runtime heavily couples platform-specific details (e.g. tokens)
-  too early in the flow. A generic abstraction layer must exist between the
-  raw inbound payload and the internal logic queue.
-- Authentication boundaries for webhooks often require immediate responses
-  (e.g., HTTP 200 OK) which conflicts with asynchronous review cycles.
-
-### Unresolved Risks
-- **Signal Flooding:** Without a standardized rate-limiter at the edge of
-  the chain, the system is vulnerable to cascading failure from rapid external
-  signals (e.g., bot floods, sensor malfunctions).
-- **Format Drift:** External APIs or signal structures may change without
-  warning, breaking the entry chain if schema validation is not strictly
-  enforced at the boundary.
-
-### Next Single Recommended Action
-- Create a lightweight schema validation template for inbound payloads that
-  can be applied universally to all entry nodes before they are allowed onto
-  the primary AXIS-01 track.
+完整 AXIS mapping、例示平台與舊 runtime queue 假設保留於 Git history。
