@@ -1,43 +1,16 @@
-# Legacy Writeback Block Rule
+# Legacy Writeback Block Rule — Metabolized Primitive Stub
 
-Department: Runtime Spine
-Agent Block: Legacy Writeback Guard
-Node ID: RSP-003
-Window: W0
-Platform Writer: ChatGPT
-Version: v0.1
-Status: active
+**Lifecycle:** METABOLIZED_PRIMITIVE_STUB  
+**Current eligibility as old rule:** false
 
-## Core
-New runtime outputs must not be written into legacy v3 folders. Legacy folders are read-source or relay-source only unless relay mode is explicitly declared.
+舊版針對 v3 path／window 00／relay mode 寫死遷移規則；這些名稱與路徑已退休。
 
-## Block Scope
-- drivers writing new runtime output into v3 paths
-- windows writing new state into v3 archive folders
-- adapter layers treating legacy paths as primary targets
+## 保留 Primitive
+- Historical／Legacy surface 預設不是新 mutation target。
+- 寫入前必須驗證 Native Domain、Authority、State、Write Target、Evidence 與 Return Route。
+- 遷移必須保留 source lineage 與 successor/re-entry relation。
+- Legacy readable/searchable 不代表可寫或可重新進 Current。
 
-## Allowed Legacy Use
-- read existing legacy content
-- extract bones from v3 content
-- declare relay mode for controlled migration
-- preserve source reference for all legacy-derived items
+現行 successor：`METABOLIZED-PRIMITIVES.md` + `CURRENT-SURFACE-MANIFEST.json` historical reader shield。
 
-## Block Rule
-If target_path points to a legacy v3 folder and relay_mode is not declared:
-- block writeback
-- mark status as Legacy Path Blocked
-- reroute item to window 00 hold state
-- require new target_path assignment
-
-## Relay Mode
-Relay mode must declare:
-- legacy_source_path
-- extracted_node_key
-- new_target_path
-- writeback_key
-- migration_log_ref
-
-## Rules
-- legacy is not primary write destination
-- migration is controlled, not implicit
-- every blocked legacy write must leave one log entry
+完整舊 v3 relay schema 保留於 Git history。
