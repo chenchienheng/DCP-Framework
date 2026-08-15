@@ -1,27 +1,15 @@
-# Replit Relay Spec
+# Replit Relay Spec — Historical Adapter Stub
 
-Department: Adapter Layer
-Agent Block: Replit Relay
-Node ID: ADP-003
-Window: W0
-Platform Writer: ChatGPT
-Version: v0.1
+**Lifecycle:** HISTORICAL_IMPLEMENTATION_STUB  
+**Current eligibility:** false
 
-## Core
-Replit is the interaction relay layer for board, task, and log flow.
+舊版將 Replit 固定為 board/task/log interaction relay。此 vendor role 已退休。
 
-## Input
-- board index
-- task items
-- blockers
-- log refs
+## 保留 Primitive
+- Interactive surface 可讀 bounded projection，不能因 UI 能操作就取得 Authority。
+- Writeback 必須受 Domain／Authority／State／Return contract 約束。
+- Carrier substitution 不改變 History／Identity／Evidence ownership。
 
-## Output
-- interactive board view
-- task relay actions
-- log relay form
+現行 successor：Carrier-neutral Adapter Contract + six-dimensional Cloud binding。
 
-## Rules
-- read first
-- controlled writeback later
-- do not replace GitHub history
+完整舊 Replit relay spec 保留於 Git history。
