@@ -1,80 +1,24 @@
-# Full-Lifecycle Asset Matrix
+# Full-Lifecycle Asset Matrix — Retired Generation Stub
 
-> **Lifecycle:** HISTORICAL_SPECIMEN
-> **Current authority:** false
-> **Runtime:** false
-> **Reader shield:** The S1–S5 / W0-Wx / Jules-Codex / merge-to-main model below is a historical lifecycle specimen. It must not be used as the current DCP lifecycle or authority model.
-> **Successor interpretation:** use `CURRENT-SURFACE-MANIFEST.json`, `SIX_DIMENSION_REPOSITORY_PROJECTION.md`, and current receiver-owned return/reconciliation rules.
-> **Retained value:** asset lifecycle tracking, handoff hardening, stable IDs, return path, and archival lineage remain reusable primitives after bounded re-interpretation.
+**Lifecycle:** RETIRED_TO_LINEAGE  
+**Current eligibility:** false
 
-> Purpose: Preserve a historical lifecycle/schema specimen for
-> artifacts within the former DCP-Framework corpus generation.
+舊 S1–S5、W0/Wx、Jules/Codex、`merge-to-main = Active` 等模型已退場；不得再作現行生命週期或權限判定。
 
----
+## Retained primitives
+仍有效的部分只保留為：Lifecycle typing、Stable Identity、Hardening Gate、Return Route、Archival Lineage、Receiver-owned reconciliation。現行抽象見 `METABOLIZED-PRIMITIVES.md`。
 
-## 1. Asset Definition
+## Successors
+- Current reader entry → `CURRENT-SURFACE-MANIFEST.json`
+- Six-dimensional dispatch → `SIX_DIMENSION_REPOSITORY_PROJECTION.md`
+- Legacy disposition → `LEGACY-DESIGN-DISPOSITION.json`
 
-An **Asset** is any durable artifact registered within the repository,
-including markdown specifications, log entries, and bridge contracts. All assets
-must be tracked through their full lifecycle from scouting to archival.
+完整舊正文只留 Git history，用於 provenance／audit／failure learning／rebuild；不再維持一份會被日常 Reader 吸收的長舊模型。
 
----
-
-## 2. Historical Lifecycle Stages
-
-| Stage | Name | Description |
-| :--- | :--- | :--- |
-| **S1** | **Scout** | Raw discovery or external signal (unhardened). |
-| **S2** | **Draft** | Initial structural formulation (internal war-room). |
-| **S3** | **Review** | Formal evaluation against Mother-Law and Bone rules. |
-| **S4** | **Active** | Historical rule: merged into `main` and registered in the corpus index. **This is no longer a Current admission rule.** |
-| **S5** | **Archived** | Superseded or preserved as execution trace only. |
-
----
-
-## 3. Historical Schema Alignment Rules
-
-To ensure cross-window consistency, every asset declared:
-
-- **Asset_ID:** `[FAMILY]-[TYPE]-[SEQUENCE]` (e.g., META-SPEC-001).
-- **Location_Link:** Canonical path within the repository.
-- **Return_Path:** Target path for future updates or corrections.
-- **State_Layer:** `ACTIVE`, `STRUCTURE_ESTABLISHED`, or `SUPERSEDED`.
-
-These fields remain useful as lineage primitives, but repository location or merge status no longer establishes Current, Authority, or receiver absorption.
-
----
-
-## 4. Historical Cross-Window Handoff Contract
-
-When an asset moved between windows (e.g., from a scout window to the bone
-window), it passed through a **Hardening Gate**:
-
-- **Rule 1:** Verify semantic integrity (no unauthorized fact promotion).
-- **Rule 2:** Ensure all required fields for the destination window are present.
-- **Rule 3:** Update `Legion_Log` with the handoff trace.
-
-Current interpretation replaces fixed window/agent roles with bounded Domain → Authority → State → Circle → Pole → Cloud dispatch and receiver-owned return/reconciliation.
-
----
-
-## 5. Historical Matrix View
-
-| Asset Type | Primary Window | Review Node | Registry |
-| :--- | :--- | :--- | :--- |
-| **Bone (Core)** | W0 (Bone) | Mother-Law | REPOSITORY_CORPUS_INDEX |
-| **Event (Pulse)** | W0 (Pulse) | Jules | GITHUB_CHAIN_MASTER_MAP |
-| **Draft (War-room)** | Wx (Temporary) | ChatGPT | CLEANUP_QUEUE_REGISTER |
-| **Adapter (Bridge)** | Wx (Adapter) | Codex | UNIFIED_ARTIFACT_REGISTER |
-
-The table above is retained only as historical lineage and failure-learning material.
-
----
-
-## 6. Status
-
-- **ID:** META-SPEC-002
-- **Historical Status:** STRUCTURE_ESTABLISHED_IN_PREVIOUS_GENERATION
-- **Current Eligibility:** false
-- **Last_Reconciled:** 2026-04-21
-- **Re-entry:** explicit bounded successor/admission decision required
+```yaml
+artifact: FULL_LIFECYCLE_ASSET_MATRIX
+state: RETIRED_TO_LINEAGE
+retired_ontology: [S1_S5, W0_Wx, merge_to_main_equals_active, fixed_agent_roles]
+full_body: git_history_only
+successor: METABOLIZED-PRIMITIVES.md
+```
