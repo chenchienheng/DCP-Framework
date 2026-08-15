@@ -1,24 +1,13 @@
-# Adapter Activation Order
+# Adapter Activation Order — Historical Stub
 
-Department: Adapter Layer
-Agent Block: Runtime Routing
-Node ID: ADP-001
-Window: W0
-Platform Writer: ChatGPT
-Version: v0.1
+**Lifecycle:** HISTORICAL_IMPLEMENTATION_STUB  
+**Current eligibility:** false
 
-## Core
-Use one source of truth and connect external tools in order.
+舊 GitHub→Gamma→Replit→Lovable 固定 activation order 已退休。工具名稱與順序不得成為 architecture invariant。
 
-## Order
-1. GitHub as primary source of truth
-2. Gamma as visual layer
-3. Replit as interactive layer
-4. Lovable as packaging layer
+## 保留 Primitive
+Adapter 接入先確認 Domain／Authority／Purpose／State／Risk／Return，再依當下可用 Capability 選 Carrier；不穩定 Carrier 可被替換，不改 Stable Identity。
 
-## Rules
-- Read first
-- Write back later
-- Keep logs in GitHub
-- Keep versions in GitHub
-- If any external layer is unstable, return to GitHub-first mode
+現行 successor：Six-Dimension Dispatch + Carrier-neutral Adapter Contract。
+
+完整舊 activation order 保留於 Git history。
