@@ -1,64 +1,16 @@
-# XuanLing-LingLuo Master Map
+# XuanLing–LingLuo Map — Metabolized Relationship Stub
 
-## 1. Core Definition
-This document serves strictly as a mapping artifact to clarify the structural
-and conceptual relationships between DCP, CoreTri, XuanLing, Qinyi, and
-LingLuo. It defines boundaries and positioning but does not introduce new
-runtime execution, API behavior, or governing doctrine. It serves as a visual
-and conceptual coordinate map to prevent layer collapse.
+**Lifecycle:** METABOLIZED_PRIMITIVE_STUB  
+**Current eligibility as layer hierarchy:** false
 
-## 2. Layer Map
-*   **DCP:** The outermost conceptual / constraint-governance framework.
-*   **CoreTri:** The mother-architecture providing constraint chains, runtime
-tracking, and stability axes (e.g., AXIS-01 through AXIS-05).
-*   **XuanLing:** The operational model core that provides constraint adhesion,
-field-semantics mapping, feasible-domain expansion, and return calibration on
-top of CoreTri.
-*   **Qinyi:** The public-facing, stabilized external interface submap bound by
-the XuanLing architecture, managing interactions and signature boundaries.
-*   **LingLuo:** The specific implementation or externalized identity
-instantiation operating within the boundaries of the XuanLing operational model
-and CoreTri axes.
+舊版把 DCP→CoreTri→XuanLing→Qinyi/LingLuo 描述成固定上下層，並將 CoreTri 綁到 AXIS-01～05；這種階層式 layer stack 已退休。
 
-## 3. Relationship Map
-*   **DCP -> CoreTri:** DCP acts as the meta-layer vision, while CoreTri forms
-the fundamental structural implementation constraints.
-*   **CoreTri -> XuanLing:** XuanLing requires CoreTri's axes and constraint
-chains to maintain operational stability. XuanLing is an
-application/operational layer running inside CoreTri's rules.
-*   **XuanLing -> Qinyi:** XuanLing manages and binds Qinyi as its public
-external interface, ensuring Qinyi does not expose private core internals.
-*   **XuanLing -> LingLuo:** LingLuo acts as a specific realization or specific
-operational profile inside the XuanLing framework.
+## 保留 Primitive
+- 不同存在必須有 Stable Identity、Boundary、Relation、Projection，而不能因同一文件被壓成一個 layer。
+- Interface／Assistant／Implementation／Architecture 是不同作用角色，不因位置取得 Authority。
+- Public projection 不應暴露不必要的 private/native body。
+- 同一 Stable Meaning 可由多份 bounded representation 描述，不需要單一巨型白皮書承擔全部 Truth。
 
-## 4. Why One Whitepaper Is Insufficient
-Compressing all layers into a single whitepaper forces the merging of disparate
-abstraction levels—meta-conceptual (DCP), structural (CoreTri), operational
-(XuanLing), and interface (Qinyi/LingLuo). This compression results in:
-*   Loss of explicit boundary definition between core stability and external
-interfacing.
-*   Inability to independently version or stabilize the operational layer
-(XuanLing) without triggering mother-law rewrites (CoreTri).
-*   High risk of exposing private internals through public interfaces by
-blurring the lines between core architecture and external projection.
+現行 successor：六維座標、Pole/Circle/Domain relations、Representation Composition、Shared Belt pointers。
 
-## 5. Recommended Documentation Structure
-*   Maintain `XUANLING_OPERATIONAL_MODEL_CORE.md` as the definitive operational
-constraints layer.
-*   Maintain the current canonical Qinyi interface reference, and link to the
-future Qinyi external interface submap once it is merged and registered.
-*   Use this `XUANLING_LINGLUO_MASTER_MAP.md` purely as the cross-layer index
-or coordinate map to orient contributors without redefining the components.
-*   Avoid single monolithic documents; instead rely on distributed, highly
-cohesive structural artifacts.
-
-## 6. mismatch_or_gap
-*   Historically, there has been a tendency to blend LingLuo operational
-details with XuanLing core constraints.
-*   Current structure ensures they are conceptually distinguished but may
-require further operational boundary testing in practice.
-
-## 7. next_single_recommended_action
-*   Validate the relationships outlined in this map against existing specs,
-review notes, and registered artifacts to ensure alignment with the stated
-boundaries.
+完整舊 layer map 保留於 Git history，僅供 lineage／concept-history／explicit re-entry。
