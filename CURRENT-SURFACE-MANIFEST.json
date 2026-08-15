@@ -1,17 +1,31 @@
 {
-  "repository_role": "PUBLIC_FOUNDATION_RESEARCH_SURFACE",
+  "repository_role": "PUBLIC_DCP_POLE_PROJECTION_CARRIER",
+  "projection_focus": "DCP",
   "runtime": false,
   "native_source_root": false,
+  "repo_is_pole_authority": false,
+  "tri_pole_architecture": true,
   "reader_priority": [
     "README.md",
+    "CURRENT-SURFACE-MANIFEST.json",
     "PUBLIC-SURFACE-POLICY.md",
-    "STATUS.md",
-    "CURRENT-SURFACE-MANIFEST.json"
+    "STATUS.md"
   ],
   "current_public_surfaces": {
-    "human": ["README.md", "STATUS.md"],
-    "external": ["README.md", "PUBLIC-SURFACE-POLICY.md"],
-    "machine": ["CURRENT-SURFACE-MANIFEST.json"]
+    "human_zh_tw": ["README.md", "STATUS.md"],
+    "professional_en": ["README.md", "PUBLIC-SURFACE-POLICY.md"],
+    "canonical_machine": ["CURRENT-SURFACE-MANIFEST.json"]
+  },
+  "tri_repository_projection_map": {
+    "DCP-Pole-Projection": "dependency_state_authority_return_rebuild_weighted",
+    "Ideas-Pole-Projection": "meaning_placement_navigation_experience_weighted",
+    "GLModel-Pole-Projection": "world_object_engineering_evidence_adapter_weighted"
+  },
+  "shared_belt_semantics": {
+    "is_fourth_pole": false,
+    "is_authority_root": false,
+    "allowed": ["pointer", "receipt", "receiver_state", "return", "reconciliation_status", "reentry_pointer", "rebuild_pointer"],
+    "native_body_copy_default": false
   },
   "legacy_root_families": [
     "00_meta",
@@ -28,7 +42,7 @@
     "05_topology"
   ],
   "legacy_interpretation": "HISTORICAL_OR_COMPATIBILITY_UNLESS_EXPLICITLY_RE-ADMITTED",
-  "promotion_rule": "REPOSITORY_LOCATION_OR_RECENCY_DOES_NOT_ESTABLISH_CURRENT",
+  "promotion_rule": "REPOSITORY_LOCATION_NAME_OR_RECENCY_DOES_NOT_ESTABLISH_CURRENT_OR_AUTHORITY",
   "release_rule": "PUBLIC_SAFE_AND_RELEASE_APPROVED_ONLY",
-  "claim_ceiling": "Public research/reference surface; not protected internal semantic core, runtime, or native authority"
+  "claim_ceiling": "Public DCP-oriented CoreTri projection; not DCP Native Body, runtime, canon, or authority root"
 }
