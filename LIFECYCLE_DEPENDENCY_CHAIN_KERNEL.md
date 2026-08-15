@@ -68,12 +68,31 @@ Shared Belt 只承載 Pointer／Receipt／Receiver State／Conflict／Re-entry�
 
 搬到 Archive、改檔名、加 Historical 前綴都不算代謝完成。
 
+#### PR Lifecycle Metabolism
+Pull Request 是 bounded change carrier，不是永久治理層。
+
+- **OPEN**：必須有 Domain／Authority／Affected Scope／Evidence／Next Gate／Return Target；缺一則 HOLD。
+- **MERGED**：merge 只證明變更進入 carrier history；`Merged ≠ Current ≠ Absorbed ≠ Approved`。效力必須由 successor／receiver state 承接。
+- **CLOSED_UNMERGED**：預設不具 Current eligibility；若有獨有 Primitive，先抽取後才允許 re-entry。
+- **SUPERSEDED**：successor coverage 成立後，舊 PR 的 merge order、READY/HOLD、review verdict、tool/agent assumptions 立即失去 Current effect。
+- **PROVENANCE**：PR diff、review、comment、commit 留在 GitHub 原生 history；正常 Reader 不應再靠另建報告複製它們。
+
+因此：
+
+`PR exists ≠ active dependency`  
+`PR closed ≠ metabolism complete`  
+`PR merged ≠ admission`  
+`old review verdict ≠ current authority`  
+`old merge order ≠ current dependency order`
+
+Derived PR queue／merge-order／clearance report 若已無獨有證據價值，應在 successor coverage 後退出 active repository surface。
+
 ### 7. Error Containment
 錯誤依 WORLD／MODEL／REPRESENTATION／CARRIER／AUTHORITY／EVIDENCE／READER 類型定位，只 invalidate affected scope。錯誤可發現、可界定、可局部失效、可回流修正、可重建；不宣稱零錯誤或零幻覺。
 
 ## Professional English
 
-The kernel describes a carrier-neutral lifecycle dependency system using six orthogonal coordinates—Domain, Authority, State, Circle, Pole, and Cloud—plus governed relations for source binding, dependency, gating, action effects, evidence, return, reconciliation, metabolism, re-entry and rebuild. It replaces fixed axis/window/tool hierarchies with bounded, receiver-owned, affected-scope semantics. Repository presence, recency and platform capability do not establish identity, authority or current eligibility.
+The kernel describes a carrier-neutral lifecycle dependency system using six orthogonal coordinates—Domain, Authority, State, Circle, Pole, and Cloud—plus governed relations for source binding, dependency, gating, action effects, evidence, return, reconciliation, metabolism, re-entry and rebuild. Pull requests are bounded change carriers: their merge, close, review, or historical order cannot independently establish current eligibility or authority. Repository presence, recency and platform capability do not establish identity, authority or current eligibility.
 
 ## Canonical Machine State
 
@@ -108,6 +127,13 @@ receiver_states:
   - TO_VERIFY
   - REJECT
   - REBUILD_REQUIRED
+pr_lifecycle:
+  open_requires: [domain, authority, affected_scope, evidence, next_gate, return_target]
+  merged_does_not_imply: [current, admission, absorption, approval]
+  closed_unmerged_default: NO_CURRENT_ELIGIBILITY
+  superseded_effect: REMOVE_OLD_REVIEW_AND_MERGE_ORDER_EFFECT
+  provenance_home: GITHUB_NATIVE_HISTORY
+  derived_queue_report_retention: ONLY_IF_UNIQUE_EVIDENCE_VALUE
 invariants:
   projection_is_not_source: true
   representation_is_not_truth: true
@@ -118,6 +144,8 @@ invariants:
   local_pass_is_not_global_pass: true
   local_fail_is_not_whole_world_fail: true
   repo_is_not_native_authority: true
+  pr_merged_is_not_admission: true
+  old_review_verdict_is_not_current_authority: true
 ```
 
 ## Successor surface
