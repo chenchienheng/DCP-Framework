@@ -1,48 +1,16 @@
-# Window Linking Logic 01-07
+# Window Linking Logic 01–07 — Lineage Stub
 
-Department: Runtime Spine
-Agent Block: Window Linking
-Node ID: RSP-002
-Window: W0
-Platform Writer: ChatGPT
-Version: v0.1
-Status: active
+**Lifecycle:** METABOLIZED_HISTORICAL_STUB  
+**Current eligibility:** false  
+**Runtime:** false
 
-## Core
-Windows 01-07 do not self-evolve in isolation. They may enter advanced states only by linking to GitHub-backed deltas, mapped nodes, and allowed writeback targets.
+舊版以固定 Window 01–07、S0–S5 與 GitHub tri-key 定義進鏈／升階。這些編號與 state ladder 已不是現行 architecture invariant。
 
-## Linking Conditions
-A window may link onto the main chain only if all required items exist:
-- source_ref
-- delta_id or repo_ref
-- project_key
-- node_key
-- writeback_key
-- allowed_target_path
-- current_state
+## 已吸收 Primitive
+- Window 不得自行升格。
+- Link／writeback 需要 source/evidence、authority、target、state 與 return continuity。
+- Missing gate 應停在 affected branch，不製造假 closure。
 
-## State Ladder
-- S0: dormant
-- S1: observed
-- S2: linked
-- S3: mapped
-- S4: writeback_ready
-- S5: active_sync
+現行 successor：六維 `Domain → Authority → State → Circle → Pole → Cloud` + governed dependency／return／reconciliation relation。
 
-## Upgrade Rules
-- S0 -> S1 when a GitHub delta is detected but not yet mapped
-- S1 -> S2 when tri-key is complete
-- S2 -> S3 when target window and target path are assigned
-- S3 -> S4 when writeback target is confirmed and not legacy-blocked
-- S4 -> S5 when at least one successful writeback log exists
-
-## Window Role Rule
-- 01: may remain Not Established until explicit repo binding exists
-- 02: task / collaboration / spec sync priority
-- 03-07: link only when delta content maps to their role
-
-## Rules
-- no self-fabricated upgrade
-- no upgrade without tri-key
-- no writeback without allowed_target_path
-- unresolved items return to window 00 hold state
+完整舊 W01–07／S0–S5 模型保留於 Git history。
