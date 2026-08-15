@@ -1,50 +1,18 @@
-# GitHub Delta Driven Pulse Rule
+# GitHub Delta Driven Pulse Rule — Lineage Stub
 
-Department: Runtime Spine
-Agent Block: Pulse Routing
-Node ID: RSP-001
-Window: W0
-Platform Writer: ChatGPT
-Version: v0.1
-Status: active
+**Lifecycle:** METABOLIZED_HISTORICAL_STUB  
+**Current eligibility:** false  
+**Runtime:** false
 
-## Core
-GitHub is the primary live update backbone. Windows 00-07 do not wait for self-generated states; they react only to GitHub deltas that have been extracted into routing keys.
+舊版把 GitHub delta 當主要 live backbone，並以 W00–07／tri-key 驅動窗口。此 ontology 已退休。
 
-## Source of Truth
-- commits
-- issues
-- pull requests
-- spec files
-- architecture files
-- process files
-- README changes
+## 已吸收 Primitive
+- 無 Material Delta 時不應自行製造狀態。
+- 變更需定位 affected receiver／write target／return target。
+- External carrier event 可作觸發證據，但不是 Source of Truth。
 
-## Pulse Logic
-1. scan GitHub delta
-2. extract tri-key
-3. map delta to target windows
-4. assign writeback target
-5. return rollup to window 00
+現行修正：GitHub 是 Cloud/Carrier；Domain／Authority／State／Circle／Pole 先於 Cloud 判位。`Latest/commit != Current`。
 
-## Tri-Key
-- Project Key
-- Node Key
-- Writeback Key
+Successor：`SIX_DIMENSION_REPOSITORY_PROJECTION.md`、`METABOLIZED-PRIMITIVES.md`。
 
-## Window Behavior
-- A window updates only when GitHub delta maps to it.
-- A window with no mapped delta stays unchanged.
-- No window should fabricate state when no GitHub trigger exists.
-
-## Rollup Output
-- valid delta items
-- mapped windows
-- windows with no action
-- writeback-required items
-
-## Rules
-- GitHub delta is scanned before any window pulse review.
-- Window self-reporting is secondary, not primary.
-- Missing tri-key means routing incomplete.
-- Missing writeback target means writeback pending.
+完整舊 pulse／tri-key／W00–07 模型保留於 Git history。
