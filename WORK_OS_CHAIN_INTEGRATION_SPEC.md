@@ -1,67 +1,16 @@
-# [CoreTri] Work OS Chain Integration Spec
+# Work OS Chain Integration — Metabolized Execution-Node Stub
 
-> Defines how a single-domain Work OS (e.g., Hermes Agent) is integrated
-> as an execution chain node within the XuanLing multi-chain system.
+**Lifecycle:** METABOLIZED_PRIMITIVE_STUB  
+**Current eligibility as Work-OS-specific integration:** false
 
----
+舊版以 Hermes Agent／GitHub／Jules／AXIS-01/03/05 定義固定 execution node，並硬切 UI／DB／logic 職責。這種 vendor／product-specific architecture 已退休。
 
-## 1. Node Record Schema
+## 保留 Primitive
+- Execution node 必須聲明 capability、input/output、Domain、Authority Ceiling、Scope、Reversibility、Evidence、Return、Failure behavior。
+- Capability profile 可限制某次 action，但不能把產品名稱永久綁成系統器官。
+- Ambiguity/conflict 應停在 affected branch；不可猜測越權。
+- External executor 可替換；Stable Task/Artifact Identity 與 lineage 不應跟著改變。
 
-- **node_name:** Work OS (e.g., Hermes Agent)
-- **family_type:** execution / domain-specific orchestration
-- **owner_window:** Domain-specific window (e.g., Development/Task Routing)
-- **structural_role:** single-domain execution node
-- **input_type:** Task assignments, structured instructions, domain context
-- **output_type:** Task completion status, PRs, execution logs
-- **writeback_surface:** GitHub Issues, Pull Requests
-- **replacement_ready:** true
-- **failure_mode:** Halt execution, log trace, route to AXIS-05
-- **last_verified_time:** (To be updated on run)
+現行 successor：Capability Card + Effect Class + Six-Dimension Cloud binding + Project/Window execution contract。
 
----
-
-## 2. External Ecosystem Absorption Properties
-
-- **primary_axis:** AXIS-01 (World Chain)
-- **secondary_axis:** AXIS-03 (Time Chain) / AXIS-05 (Review Chain)
-- **input:** Bounded task constraints, isolated codebase context, API boundaries
-- **output:** Code modifications, status updates, resource allocations
-- **execution_boundary:** Acts strictly as an execution node. Cannot perform
-  system building, UI design, or DB design. Operates strictly on logic and
-  structured task execution within bounded files.
-- **review_path:** Output passes through PR review by Human or embedded
-  Jules reviews before merging into the core bone.
-- **return_path:** PR submission and GitHub issue updates.
-- **fallback:** If execution drifts or exceeds constraints, halt and escalate
-  to AXIS-05 (Review Chain).
-
----
-
-## 3. Integration Rules
-
-1. **No System Building:** The Work OS must not independently author new
-   architecture, redefine doctrine, or invent systemic mechanisms outside its
-   explicitly bounded task.
-2. **No UI / DB Design:** The node is restricted to logic, orchestration,
-   and structural updates, not visual presentation or data persistence modeling.
-3. **Traceable Actions:** Every meaningful state change initiated by the
-   Work OS must have a corresponding pull request or verifiable issue comment.
-4. **Immediate Fallback on Ambiguity:** If instructions are unclear or conflict
-   with established master laws, the Work OS must query the user or route the
-   flag to AXIS-05 rather than guessing.
-
----
-
-## 4. mismatch_or_gap
-No existing framework formally restricted single-domain execution nodes from
-attempting UI or DB tasks previously; this spec introduces those hard boundaries
-to prevent scope creep.
-
-## 5. unresolved_risks
-If the Work OS receives instructions that mix logic updates with UI tweaks,
-the task parsing mechanism must successfully reject the out-of-bounds UI portion
-without failing the entire valid logic payload.
-
-## 6. next_single_recommended_action
-Ensure task prompt templates passed to the Work OS explicitly state the
-constraints: "NO SYSTEM BUILDING. NO UI/DB DESIGN. LOGIC/EXECUTION ONLY."
+完整 Hermes/Jules/GitHub/AXIS mapping 保留於 Git history。
