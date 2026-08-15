@@ -21,6 +21,17 @@
     "Ideas-Pole-Projection": "meaning_placement_navigation_experience_weighted",
     "GLModel-Pole-Projection": "world_object_engineering_evidence_adapter_weighted"
   },
+  "six_dimension_dispatch": {
+    "status": "ARCHITECTURE_CANDIDATE",
+    "dimensions": ["domain", "authority", "state", "circle", "pole", "cloud"],
+    "default_order": ["domain", "authority", "state", "circle", "pole", "cloud"],
+    "cloud_binding": "GitHub:DCP-Pole-Projection",
+    "pole_weight": "DCP",
+    "repository_is_domain": false,
+    "repository_is_authority": false,
+    "repository_is_state": false,
+    "relation_rule": "dependency_evidence_return_reconciliation_reentry_rebuild_are_governed_relations_not_extra_dimensions"
+  },
   "shared_belt_semantics": {
     "is_fourth_pole": false,
     "is_authority_root": false,
@@ -42,6 +53,11 @@
     "05_topology"
   ],
   "legacy_interpretation": "HISTORICAL_OR_COMPATIBILITY_UNLESS_EXPLICITLY_RE-ADMITTED",
+  "historical_reader_shield": {
+    "root_legacy_visibility_does_not_establish_current": true,
+    "stale_register_reference_does_not_reactivate_missing_or_retired_artifact": true,
+    "successor_or_explicit_readmission_required": true
+  },
   "promotion_rule": "REPOSITORY_LOCATION_NAME_OR_RECENCY_DOES_NOT_ESTABLISH_CURRENT_OR_AUTHORITY",
   "release_rule": "PUBLIC_SAFE_AND_RELEASE_APPROVED_ONLY",
   "claim_ceiling": "Public DCP-oriented CoreTri projection; not DCP Native Body, runtime, canon, or authority root"
