@@ -1,45 +1,16 @@
-# Time Chain Master Layer
+# Time Chain Master Layer — Lineage Stub
 
-> Core triad axis for time chain governance.
-> Establishes the full-time chain governing scheduling, pulse, snapshot,
-> and replay.
+**Lifecycle:** METABOLIZED_HISTORICAL_STUB  
+**Current eligibility:** false
 
-## 1. Rule
+舊版把 Time Chain 設為 master axis，並把 scheduler、3-day pulse、snapshot、replay、Jules 綁成固定時間治理。這些具名節奏與 Axis 層級已退休。
 
-All runtime activation must bind to the time chain.
+## 已吸收 Primitive
+- Time／revision context 影響 State validity 與 ordering。
+- Snapshot/return 應支援 provenance、replay、rebuild。
+- Cadence 是 Circle/State/Carrier projection，不是永恆 ontology。
+- Scheduler/tool substitution 不得改變 Identity／Authority。
 
-## 2. Scope Integration
+現行 successor：Lifecycle State + Event/Revision relation + Re-entry/Rebuild + six-dimensional dispatch。
 
-### 2.1 Scheduler Topology
-
-Defines the current mapping between external semantic nodes and internal runtime
-windows, resolving legacy daily reporting into stable cadences.
-*Ref: PLATFORM_SCHEDULER_AND_TOOL_NAMING_MAP.md*
-
-### 2.2 `02_CVG_3D` Pulse
-
-The primary convergence rhythm for the ecosystem, absorbing daily and hybrid
-reviews into a stable 3-day window.
-*Ref: SCHEDULING_EFFECT_REGISTER.md, WINDOW_12_MASTER_TABLE.md*
-
-### 2.3 Snapshot Mechanism
-
-Provides a minimal verifiable snapshot structure binding active state, changed
-fields, risks, and next pulse.
-*Ref: SNAPSHOT_MECHANISM_PROPOSAL.md*
-
-### 2.4 Replay Readiness
-
-Audits the reconstructability of the ecosystem state across PR history, tracking
-registers, and historical directory states.
-*Ref: REPLAY_READINESS_REPORT.md*
-
-## 3. Linked Execution
-
-- [Jules] Scheduler Topology Reconciliation to Platform Map #6
-- [Jules] First standardized task packet run #9
-
-## 4. Status
-
-- master_axis_created: true
-- return_to_00: true
+完整舊 scheduler/pulse 模型保留於 Git history。
