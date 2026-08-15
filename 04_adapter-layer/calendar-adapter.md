@@ -1,18 +1,11 @@
-# Calendar Adapter
+# Calendar Adapter — Metabolized Temporal Carrier Stub
 
-一句核心：
-Calendar 是時權節點層與節奏對位層。
+**Lifecycle:** METABOLIZED_PRIMITIVE_STUB  
+**Current eligibility as fixed time-sovereignty node:** false
 
-## 主責
-- 時間節點
-- 排程對位
-- 視窗切換
-- 節奏校正
+## 保留 Primitive
+Calendar/Event system 是 temporal Cloud/Carrier projection，可承載 schedule/event evidence，但不取得事件 Truth 或 Authority。時間變化應保留 identity、revision、attendee/owner authority、return/change trace。
 
-## 原則
-- Calendar 不取代事件盤與公盤
-- 時間節點需可對回盤位與 log
-- 排程變化需可回寫
+舊「時權節點／事件盤／公盤」固定 ontology 已退休。
 
-## 狀態
-Seed v0.1
+現行 successor：State/Time context + six-dimensional Cloud binding + Event/Return relation。
