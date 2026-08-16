@@ -17,7 +17,36 @@
     "physical_delete_required_for_metabolism": false,
     "historical_retention_required_forever": false,
     "explicit_reentry_required": true,
-    "reclaim_requires_gate": true
+    "reclaim_requires_gate": true,
+    "legacy_name_must_survive_as_live_filename": false,
+    "historical_role_name_may_be_retained_inside_lineage_body": true
+  },
+  "naming_metabolism_gate": {
+    "purpose": "Prevent retired ontology names from remaining on high-visibility reader/navigation surfaces after their semantics have been absorbed.",
+    "classify": [
+      "KEEP_CANONICAL_TERM",
+      "HISTORICAL_TERM_IN_BODY_ONLY",
+      "RENAME_TO_NEUTRAL_SUCCESSOR",
+      "MERGE_ALIAS_INTO_SUCCESSOR",
+      "RETIRE_FILENAME_TO_GIT_HISTORY",
+      "HOLD_IF_EXTERNAL_POINTER_UNKNOWN"
+    ],
+    "rename_when": [
+      "legacy term encodes a retired role/topology/tool binding",
+      "file remains discoverable on root or normal navigation surface",
+      "successor semantics are already complete",
+      "unique lineage can remain in Git history or a neutral specimen"
+    ],
+    "do_not_rename_when": [
+      "term is still a valid domain concept",
+      "external or legal pointer stability requires the exact path",
+      "successor coverage is incomplete",
+      "rename would destroy unique evidence or unresolved lineage"
+    ],
+    "completed_examples": {
+      "MOTHER_TREE_CLEARANCE_REPORT.md": "HISTORICAL_REVIEW_DECISION_SPECIMEN.md",
+      "CLOUDTOP_RELAY_CHANNEL_SPEC.md": "LEGACY_CARRIER_RELAY_SPECIMEN.md"
+    }
   },
   "reclaim_gate": {
     "required": [
@@ -51,19 +80,19 @@
     },
     {
       "id": "LEGACY-FIXED-AGENT-CLOUD-GENERATION",
-      "artifacts": ["02_translation-layer/CLOUD_OVER_CLOUD_CONTROL_CENTER_SPEC.md", "04_adapter-layer"],
+      "artifacts": ["02_translation-layer/CLOUD_OVER_CLOUD_CONTROL_CENTER_SPEC.md", "04_adapter-layer", "LEGACY_CARRIER_RELAY_SPECIMEN.md"],
       "disposition": "HISTORICAL_SPECIMEN",
       "retain_primitives": ["capture", "evidence classification", "semantic translation", "adapter/writeback", "packet contract", "failure return route"],
-      "retire_assumptions": ["Gemini is always Scout", "Jules is always Semantic Bridge", "Codex is always Repo Bridge", "vendor/model name defines authority", "fixed four-stage relay is universal"],
-      "successor": ["SIX_DIMENSION_REPOSITORY_PROJECTION.md"]
+      "retire_assumptions": ["Gemini is always Scout", "Jules is always Semantic Bridge", "Codex is always Repo Bridge", "vendor/model name defines authority", "fixed four-stage relay is universal", "CloudTop is a stable control-center ontology"],
+      "successor": ["SIX_DIMENSION_REPOSITORY_PROJECTION.md", "DCP_LIFECYCLE_DEPENDENCY_KERNEL.md"]
     },
     {
       "id": "LEGACY-AXIS-MASTER-GENERATION",
-      "artifacts": ["CORETRI_MASTER_CONSOLIDATION_REVIEW.md", "WORLD_CHAIN_MASTER_AXIS.md", "TIME_CHAIN_MASTER_LAYER.md", "SPACE_CHAIN_MASTER_LAYER.md", "REVIEW_CHAIN_MASTER_LAYER.md", "00_mother-law"],
+      "artifacts": ["CORETRI_MASTER_CONSOLIDATION_REVIEW.md", "WORLD_CHAIN_MASTER_AXIS.md", "TIME_CHAIN_MASTER_LAYER.md", "SPACE_CHAIN_MASTER_LAYER.md", "REVIEW_CHAIN_MASTER_LAYER.md", "00_mother-law", "HISTORICAL_REVIEW_DECISION_SPECIMEN.md"],
       "disposition": "HISTORICAL_OR_BOUNDED_REUSE",
-      "retain_primitives": ["world relation", "time relation", "space relation", "review relation", "existence continuity", "external handoff"],
-      "retire_assumptions": ["AXIS label establishes Current", "Master label establishes authority", "phase snapshot establishes present maturity", "one historical routing axis must govern every future external input"],
-      "successor": ["CURRENT-SURFACE-MANIFEST.json", "SIX_DIMENSION_REPOSITORY_PROJECTION.md"],
+      "retain_primitives": ["world relation", "time relation", "space relation", "review relation", "existence continuity", "external handoff", "semantic review vs hygiene separation"],
+      "retire_assumptions": ["AXIS label establishes Current", "Master label establishes authority", "phase snapshot establishes present maturity", "one historical routing axis must govern every future external input", "MotherTree role-name establishes review authority"],
+      "successor": ["CURRENT-SURFACE-MANIFEST.json", "SIX_DIMENSION_REPOSITORY_PROJECTION.md", "DCP_LIFECYCLE_DEPENDENCY_KERNEL.md"],
       "reentry_requires": ["primitive-level materiality", "current evidence", "bounded receiver", "no second authority"]
     },
     {
@@ -89,6 +118,7 @@
     "retained primitives are separated from retired assumptions",
     "re-entry conditions are named",
     "no unresolved reference forces recreation of retired architecture",
-    "historical body has an explicit retain/reclaim disposition rather than indefinite accidental persistence"
+    "historical body has an explicit retain/reclaim disposition rather than indefinite accidental persistence",
+    "retired ontology names no longer dominate normal reader/navigation surfaces when neutral successor naming is available"
   ]
 }
