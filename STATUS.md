@@ -1,6 +1,6 @@
 # Repository Status / 倉庫狀態
 
-**Repository class / 倉庫分類:** Public research and reference corpus  
+**Repository class / 倉庫分類:** Public DCP-weighted CoreTri projection carrier  
 **Architecture maturity / 架構成熟度:** Evolving; bounded structural convergence  
 **Operational status / 運作狀態:** Non-production  
 **Runtime evidence / Runtime 證據:** Not established  
@@ -9,82 +9,83 @@
 
 ## Status statement / 狀態說明
 
-This repository contains the externally reviewable research and reference surface of the DCP framework. The corpus includes conceptual work, bounded structural models, interface candidates, validation artifacts, historical research evidence, and repository-level documentation.
+This repository is a public projection carrier for DCP-oriented CoreTri architecture. It is not the DCP pole itself, not a Native Source Root, and not a runtime or authority root.
 
-本倉庫承載 DCP Framework 可供外部審閱的研究與參考表面，包含概念研究、有限結構模型、介面 Candidate、驗證成果、歷史研究證據與倉庫層文件。
+本倉是 CoreTri 架構中偏重 DCP 的公開投影載體；它不是 DCP 極本體、不是 Native Source Root，也不是 Runtime 或 Authority Root。
 
 Repository contents do not, by themselves, establish production deployment, autonomous decision authority, architectural promotion, regulatory compliance, or correctness beyond the evidence scope declared by each artifact.
 
 倉庫內容本身不構成 Production Deployment、Autonomous Decision Authority、Architecture Promotion、Regulatory Compliance，也不會使任何成果超出其聲明的 Evidence Scope。
 
-## Current public architecture surface / 現行公開架構表面
+## Current reader surface / 現行 Reader Surface
 
-The current public surface is organized around two bounded candidates:
+Normal readers should use the bounded successor chain:
 
-- **DCP Life-Chain Dependency Model** — a working architecture candidate for dependency, lifecycle state, authority, evidence, return, reconciliation, and recovery reasoning.
-- **Cross-Carrier Projection Compatibility** — an interface candidate defining continuity requirements across heterogeneous documentation and workflow carriers.
+`README.md → CURRENT-SURFACE-MANIFEST.json → LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md → SIX_DIMENSION_REPOSITORY_PROJECTION.md → PUBLIC-SURFACE-POLICY.md → STATUS.md`
 
-現行公開表面以兩個有限 Candidate 為主要技術入口：DCP Life-Chain Dependency Model，以及 Cross-Carrier Projection Compatibility。兩者均屬研究／介面層成果，不代表已部署 Runtime。
+現行工作面不是舊 Master／Mother-Law／W0／AXIS／XADF／固定 Agent／固定 Scheduler topology。這些歷史語義只有在 conflict、audit、missing lineage、failure learning 或 explicit re-entry 時才可被 bounded 讀回。
+
+The current public architecture surface contains **reader-visible architecture candidates**, not approved canon or runtime:
+
+- **Lifecycle Dependency Chain Kernel** — carrier-neutral dependency/state/authority/evidence/return/reconciliation/metabolism/rebuild reasoning.
+- **Six-Dimension Repository Projection** — Domain → Authority → State → Circle → Pole → Cloud as bounded dispatch coordinates.
+- **Public Representation and Disclosure Policy** — release-safe representation, rights, evidence and disclosure controls.
+
+`Reader-visible Candidate ≠ Approved ≠ Canon ≠ Runtime.`
+
+Earlier labels such as **DCP Life-Chain Dependency Model** and **Cross-Carrier Projection Compatibility** are predecessor descriptions whose useful primitives are absorbed into the current successor surface; they are not parallel Current architectures.
 
 ## Evidence and maturity model / 證據與成熟度模型
 
-Maturity is evaluated per artifact and per claim. Evidence of a structural rule, interface property, validation result, or implementation artifact is not automatically evidence of deployment, owner acceptance, production readiness, or domain-wide applicability.
+Maturity is evaluated per artifact and per claim. Structural evidence, interface properties, validation results, implementation artifacts, issue state, branch presence, mergeability, or repository placement do not automatically establish deployment, owner acceptance, production readiness, or domain-wide applicability.
 
-成熟度依 Artifact 與 Claim 分別判定。Structural Rule、Interface Property、Validation Result 或 Implementation Artifact 的證據，不自動證明 Deployment、Owner Acceptance、Production Readiness 或跨 Domain 適用性。
+成熟度依 Artifact 與 Claim 分別判定。Structural Evidence、Interface Property、Validation Result、Implementation Artifact、Issue State、Branch Presence、Mergeability 或 Repository Placement 都不自動證明 Deployment、Owner Acceptance、Production Readiness 或跨 Domain 適用性。
 
-Historical material may remain in the repository for provenance, comparison, failure analysis, and reproducibility. Historical retention does not make an artifact current.
-
-歷史材料可因 Provenance、比較、Failure Analysis 與 Reproducibility 需求繼續保存；保存本身不會使其成為 Current Artifact。
+Historical material may remain for provenance, comparison, failure analysis, reproducibility, and explicit re-entry. Historical retention and searchability do not make an artifact Current.
 
 ## Source and authority boundary / 來源與權限邊界
 
-The repository is not a native data root. Native source ownership, access rights, retention, mutation, and publication remain governed by the lawful source and its applicable authority chain.
+The repository is not a native data root. Native source ownership, access rights, retention, mutation, publication, and receiver acknowledgement remain governed by the lawful source and applicable authority chain.
 
-本倉不是 Native Data Root。Native Source 的所有權、存取權、Retention、Mutation 與 Publication 仍由合法來源及其適用 Authority Chain 管理。
+本倉不是 Native Data Root。Native Source 的所有權、存取權、Retention、Mutation、Publication 與 Receiver ACK 仍由合法來源及其 Authority Chain 管理。
 
-Public documentation contains only release-appropriate representations. Protected implementation details, privileged routing, private evidence lineage, sensitive source relationships, and restricted native bodies remain outside the public corpus.
-
-公開文件只承載適合發布的表徵；受保護的 Implementation Detail、Privileged Routing、Private Evidence Lineage、敏感 Source Relationship 與 Restricted Native Body 不屬於公開語料。
+Public documentation contains only release-appropriate representations. Protected implementation details, privileged routing, private evidence lineage, sensitive source relationships, credentials, and restricted Native Bodies remain outside the public corpus.
 
 ## Representation and release status / 表徵與發布狀態
 
-Public documentation follows the repository representation architecture:
+Public documentation uses aligned representation profiles:
 
 - **Human Profile / 人類閱讀層:** Traditional Chinese
 - **External Profile / 外部交換層:** English
-- **Canonical Machine Profile / 機器規範層:** stable identifiers, typed states, versions, and release-safe evidence references
+- **Canonical Machine Profile / 機器規範層:** stable identifiers, typed states, authority/evidence ceilings, versions, successor and return/rebuild relations
 
-The profiles must remain semantically equivalent for stable identity, lifecycle state, authority scope, claim/evidence ceiling, successor relation, and release classification.
-
-三個表徵層在 Stable Identity、Lifecycle State、Authority Scope、Claim／Evidence Ceiling、Successor Relation 與 Release Classification 上必須維持語義等價。
+Profiles may differ in presentation but must not silently diverge in Stable Identity, State, Authority, Claim Ceiling, Successor Relation, Return/Rebuild Relation, or Release Classification.
 
 Disclosure and publication controls are specified in `PUBLIC-SURFACE-POLICY.md`.
 
-揭露與發布控制見 `PUBLIC-SURFACE-POLICY.md`。
+## Metabolism state / 代謝狀態
+
+The repository is actively reducing legacy reader exposure through:
+
+`Primitive Extraction → Successor Coverage → Current Eligibility Removal → Reader Exposure Reduction → Lineage Retention → Explicit Re-entry only`
+
+Archive, rename, issue closure, or Historical labeling alone is not treated as completed metabolism. Physical exclusion is allowed only when successor coverage is sufficient and unique evidence, failure memory, lineage, active callers, rebuild dependencies, and retention constraints have been checked.
+
+目前代謝工作重點是降低重複判讀與 Zombie Reconstruction，而不是追求刪檔數量。
 
 ## Reading guidance / 閱讀指引
 
-Use `README.md` and this status document to establish repository role, maturity, and disclosure scope. Artifact-specific lifecycle state and evidence scope should then be read from the relevant issue, document, release, or provenance reference.
-
-請先以 `README.md` 與本文件判定 Repository Role、Maturity 與 Disclosure Scope，再依具體 Issue、Document、Release 或 Provenance Reference 判讀各 Artifact 的 Lifecycle State 與 Evidence Scope。
-
-Repository location, filename, branch presence, issue state, search ranking, and modification time are navigation metadata; none establishes architectural truth or operational maturity on its own.
-
-Repository 位置、檔名、Branch Presence、Issue State、Search Ranking 與 Modification Time 均屬 Navigation Metadata，不能單獨建立 Architecture Truth 或 Operational Maturity。
+Use `CURRENT-SURFACE-MANIFEST.json` to establish the current reader chain. Read legacy bodies only through an explicit affected-scope trigger. Repository location, filename, branch presence, issue state, search ranking, modification time, PR merge/close state, and tool capability are navigation or carrier metadata; none establishes architectural truth or operational maturity on its own.
 
 ## Current development focus / 現階段研究重點
 
 Current work emphasizes:
 
-- reducing duplicated interpretation and reader load;
-- improving evidence reuse and provenance continuity;
-- preserving identity across carrier and placement changes;
-- strengthening return, reconciliation, and recovery semantics;
-- validating bounded change propagation and affected-scope reconstruction;
-- maintaining explicit source, authority, evidence, and release boundaries.
+- reducing duplicate interpretation, stale caller/wake paths, and reader load;
+- compiling useful primitives into smaller successor surfaces;
+- preserving Stable Identity and evidence lineage across carrier changes;
+- strengthening Return／Reconciliation／Re-entry／Rebuild／Metabolism semantics;
+- validating affected-scope propagation and failure containment;
+- maintaining explicit source, authority, evidence, retention, and release boundaries.
 
-現階段工作聚焦於降低重複判讀與 Reader Load、提升 Evidence Reuse 與 Provenance Continuity、維持跨 Carrier 的 Identity Continuity、改善 Return／Reconciliation／Recovery 語義，以及驗證有限變更傳播與受影響範圍重建。
-
-This status page is descriptive. It is not a promotion decision, runtime receipt, release authorization, or authority grant.
-
-本狀態頁僅描述目前可支持的 Claim Ceiling；不構成 Promotion Decision、Runtime Receipt、Release Authorization 或 Authority Grant。
+This status page is descriptive. It is not a promotion decision, runtime receipt, release authorization, Canon admission, receiver ACK, or authority grant.
