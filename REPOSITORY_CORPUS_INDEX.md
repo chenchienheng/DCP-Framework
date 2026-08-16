@@ -4,7 +4,7 @@
 > Current interpretation starts from `CURRENT-SURFACE-MANIFEST.json` and `LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md`.
 
 ## 0. Index Status
-- index_version: v1.2
+- index_version: v1.3
 - lifecycle_state: HISTORICAL_REFERENCE
 - current_authority: false
 - runtime: false
@@ -16,6 +16,7 @@
 - naming_surface_compaction: MATERIAL_IN_PROGRESS
 - reclaim_mode: POOLED_FINAL_REVIEW
 - closure_debt_mode: ACTIVE
+- branch_ref_retirement_mode: OBSERVE_AND_POOL
 - physical_delete_authority: none
 
 ## 1. Reader Shield
@@ -33,6 +34,7 @@ Rules:
 - Representation != Truth.
 - Import/sync/parse success != absorption.
 - Proposed ID != Stable Identity.
+- Branch existence != current work; branch absence != loss of provenance when merged/closed PR and commit history remain.
 - A stale historical pointer must be corrected or retired; do not recreate a missing legacy artifact because an old register names it.
 - Re-entry requires exact material need, authority, evidence, successor compatibility and receiver disposition.
 
@@ -45,10 +47,12 @@ World Relation, Temporal Context, Placement Context, Review Evidence, Relationsh
 ### 2.2 Field / role / XADF predecessor material
 Capability boundary, source/dependency view, bounded initiative, local effect, delegation/return, feasible-domain expansion and event-effect-return primitives. `Field` remains valid only as actual domain vocabulary; fixed BASE/QIN/Third-Field/Commander/Orbit/Peer-Tree/XADF ontologies are retired unless explicitly re-admitted.
 
+High-visibility predecessor filenames such as `*_v0_1`, `*_MODEL`, `*_SCHEMA`, `*_LEDGER`, `*_GATE`, `*_PROTOCOL` are not permanent semantic classes. Their body may remain bounded lineage while the filename itself enters pooled rename/reclaim review.
+
 ### 2.3 Intake / evidence / recomposition predecessor material
 Historical Hugging Face intake, Import Staging, Knowledge Molecule, Router/QIN View and Recomposition Engine families are no longer permanent schemas.
 
-Retained primitives are now compiled into the current Kernel:
+Retained primitives are compiled into the current Kernel:
 - source eligibility;
 - stable identity match/create;
 - rights/license/privacy boundary;
@@ -69,6 +73,8 @@ Vendor-, platform-, format- and media-specific artifacts are compatibility speci
 Adapter/intake specimens reduce to:
 `Material/Signal → Stable Identity/Context → Rights/Risk/Evidence → Required Function/Effect → Carrier/Adapter → Transform/Result → Receiver Return/Reconciliation/Rebuild`.
 
+Vendor filenames (Gamma/Gemini/Google/LINE/Replit/etc.) retain live files only where unique implementation, compatibility, failure or rights evidence still exists. Otherwise the body is successor-covered and the filename joins pooled naming compaction; do not create a new vendor family merely because a tool exists.
+
 ### 2.5 Topology predecessor material with retained primitives
 `05_topology` is not a Current topology layer. Retained DCP primitives include asymmetric mutual verification, feasible domain + responsibility, temporal context + lineage and return-closed relation topology. They generalize to N-node/cross-window/cross-carrier/cross-organization relations.
 
@@ -87,16 +93,31 @@ Open work-item surface is no longer treated as one undifferentiated Active queue
 - #2 = `HOLD_UNIQUE_EVIDENCE / MATERIAL_REENTRY_ONLY`; legacy seed branch reservoir, not Current source.
 - #173 = `ACTIVE_BOUNDED`; GitHub label metadata compaction only, supporting #325 and not a second taxonomy registry.
 
+Observed branch-ref lifecycle examples:
+- `agent/bilingual-entry-surface` is no longer present on branch surface; merged PR #307/commit history retain provenance. Disposition: `BRANCH_REF_RETIRED / PROVENANCE_RETAINED`.
+- `dcp/legacy-corpus-index-demotion-r1` is no longer present; merged PR #312 retains the corpus-index-demotion evidence. Disposition: `BRANCH_REF_RETIRED / PROVENANCE_RETAINED`.
+- `xuanling/repo-role-alignment-20260714` still exists. Old topology is superseded, but PR #303 contains stable Drive object IDs and mapping lineage; disposition remains `PROVENANCE_ONLY / RECLAIM_HOLD_UNTIL_POINTER_EXTRACTION`.
+
 Closure debt types remain:
 `ROUTING | READ | MATERIALITY | NATIVE_DISPOSITION | RECONCILIATION | REBUILD | HISTORICAL_ABSORPTION`.
 
-## 5. Pooled reclaim candidates
-Do not delete piecemeal during construction.
+## 5. Pooled naming / reclaim candidates
+Do not delete or rename piecemeal during construction.
 
-Observed candidate:
+Observed body/path candidate:
 - `05_XLEN_Reserve_Unenabled/02_Gmail_Bridge/` — only `.gitkeep`; Gmail intake primitive extracted to carrier-neutral successor. `RECLAIM_ELIGIBLE_CANDIDATE / DELETE_CANDIDATE_PENDING_FINAL_REVIEW`.
 
-High-visibility predecessor filenames under `03_field-governance` and `04_adapter-layer` may also become naming/body reclaim candidates only after pointer, unique-evidence, caller, rebuild and retention checks. No immediate delete.
+Observed naming candidate classes:
+- successor-covered `03_field-governance/*_v0_1` names where the filename still exposes retired MODEL/SCHEMA/LEDGER/GATE/PROTOCOL ontology;
+- successor-covered `04_adapter-layer` vendor/tool filenames where unique implementation evidence is absent;
+- legacy path aliases after caller/rebuild/pointer checks;
+- branch refs after provenance is retained and no active caller/rebuild dependency remains.
+
+HOLD classes:
+- vendor adapter with unique implementation/API/schema/failure evidence;
+- cross-owner Qinyi/LOR/QHA material;
+- stable external object IDs or pointers not yet rebound;
+- legal/retention-sensitive evidence.
 
 ## 6. Reclaim Gate
 Historical body, alias, label or branch is only `RECLAIM_ELIGIBLE_CANDIDATE` when all are true:
@@ -109,7 +130,7 @@ Historical body, alias, label or branch is only `RECLAIM_ELIGIBLE_CANDIDATE` whe
 7. no legal/retention hold;
 8. no unresolved cross-owner pointer.
 
-Candidate status does not authorize destructive deletion. Deletion candidates remain pooled for final unified review.
+Candidate status does not authorize destructive deletion. Deletion/rename candidates remain pooled for final unified review.
 
 ## 7. Current successor surfaces
 Normal interpretation is bounded to:
