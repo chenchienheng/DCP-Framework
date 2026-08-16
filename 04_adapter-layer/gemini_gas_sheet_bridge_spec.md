@@ -1,17 +1,20 @@
-# Gemini → Google Sheet Bridge Spec — Historical Implementation Stub
+# External Table Mutation Adapter Lineage Specimen
 
 **Lifecycle:** HISTORICAL_IMPLEMENTATION_STUB  
 **Current eligibility:** false  
-**Executable authority:** none
+**Executable authority:** none  
+**Reclaim disposition:** HOLD_UNTIL_UNIQUE_IMPLEMENTATION_EVIDENCE_EXTRACTED
 
-舊版包含 Gemini→Google Sheets／Apps Script 的具體工程草稿與寫入邏輯。該 vendor-specific code 不再作 CoreTri/DCP architecture，也不得因 repo 公開而被視為可執行部署指令。
+舊版 Gemini→Google Sheets／Apps Script 工程草稿不再作 CoreTri/DCP architecture，也不因 repo 公開而成為可執行部署指令。Vendor code 只保留 lineage/evidence value。
 
-## 保留 Primitive
-- External import 預設 report/read-only；mutation 需要 explicit authority。
-- Non-destructive update、stable identity matching、evidence strength、provenance、error return 是可重用 adapter 方法。
-- Private/company-sensitive data 需先過 Rights／Privacy／Purpose Gate。
+## Retained primitives
+- External import 預設 read/report；mutation 需要 explicit authority。
+- Non-destructive update、stable identity matching、evidence strength、provenance、rollback/error return 可泛化。
+- Private/company data 需 Rights／Privacy／Purpose Gate。
 - Adapter success ≠ Native absorption／Current／Release。
+- API/schema/version 必須在實際接入時重新驗證。
 
-現行 successor：Carrier-neutral adapter contract + 六維 Cloud binding + receiver-owned Return/Reconciliation。
+## Successor binding
+`Stable Existence → Mutation Intent → Source/Authority/Rights → Capability Binding → Schema/Fidelity Check → Bounded Mutation → Evidence/Return/Reconciliation`
 
-完整 GAS code 與 Gemini/Sheet 欄位 schema 保留於 Git history；若未來重建 Google adapter，必須重新驗證 API、權限、資料 schema 與安全條件。
+舊 GAS code 與欄位 schema 留 Git history；若未來重建任一 table adapter，重新驗證當下 API、權限、資料 schema、安全與 rollback 條件。
