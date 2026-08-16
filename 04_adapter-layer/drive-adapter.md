@@ -1,13 +1,18 @@
-# Drive Adapter — Metabolized Carrier Stub
+# Drive Carrier Role Compatibility Specimen
 
 **Lifecycle:** METABOLIZED_PRIMITIVE_STUB  
-**Current eligibility as fixed Drive role:** false
+**Current eligibility as fixed Drive role:** false  
+**Reclaim disposition:** CANDIDATE_AFTER_POINTER_AND_UNIQUE_EVIDENCE_CHECK
 
-Drive 不被固定成 mirror／snapshot／historical layer，也不必對回 GitHub／ClickUp 才成立。
+Drive 不被固定成 mirror、snapshot、history layer、truth layer 或 GitHub 對偶器官。它只是可承載不同合法 body/projection/exchange/history 的 Carrier。
 
-## 保留 Primitive
-Drive 是可承載 Native Body、Projection、Exchange、History 或其他合法資料的 Cloud/Carrier；實際角色由 Domain／Authority／State／Circle／Pole 決定。
+## Retained primitives
+- Carrier location ≠ Stable Identity／Authority／Current。
+- Native Body 是否可存在於 Drive，由 Source Domain／Rights／State／Purpose 決定，不由平台名稱決定。
+- Projection 不取代 Source；history searchable 不等於 wake/current eligible。
+- Drive、GitHub、DB、SaaS、Local、Object Storage、CDE 可互換承載同一存在的不同 projection，但需 fidelity/provenance/return constraints。
 
-Carrier location ≠ Identity／Authority／Current。歷史內容需 lineage/re-entry；projection 不取代 source。
+## Successor binding
+`Stable Existence → Source/Authority → Required Representation/Function → Carrier Selection → Evidence/Transform → Return/Reconciliation/Rebuild`
 
-現行 successor：Six-Dimension Dispatch + Chain-Ecosystem Regeneration。
+平台名稱與檔案格式不建立永久 taxonomy。完整 predecessor 留 Git history；正常 Reader 不需讀本 specimen。
