@@ -1,15 +1,18 @@
-# Replit Relay Spec — Historical Adapter Stub
+# Interactive Execution Carrier Lineage Specimen
 
 **Lifecycle:** HISTORICAL_IMPLEMENTATION_STUB  
-**Current eligibility:** false
+**Current eligibility:** false  
+**Reclaim disposition:** CANDIDATE_AFTER_POINTER_AND_UNIQUE_EVIDENCE_CHECK
 
-舊版將 Replit 固定為 board/task/log interaction relay。此 vendor role 已退休。
+舊版將 Replit 固定為 board/task/log interaction relay；該 vendor role 已退休。
 
-## 保留 Primitive
-- Interactive surface 可讀 bounded projection，不能因 UI 能操作就取得 Authority。
-- Writeback 必須受 Domain／Authority／State／Return contract 約束。
-- Carrier substitution 不改變 History／Identity／Evidence ownership。
+## Retained primitives
+- Interactive surface 只能讀合法 bounded projection，UI 可操作 ≠ Authority。
+- Write/mutation 必須受 Stable Identity、Domain、Authority、State、Risk、Evidence、Return contract 約束。
+- Carrier substitution 不改 History／Identity／Evidence ownership。
+- Replit、local IDE、cloud sandbox、notebook、agent workspace、terminal、web console 可承載相似 execution interaction，但不形成永久器官。
 
-現行 successor：Carrier-neutral Adapter Contract + six-dimensional Cloud binding。
+## Successor binding
+`Stable Existence → Required Effect → Authority/Gate → Execution Capability/Carrier → Evidence/Result → Return/Reconciliation`
 
-完整舊 Replit relay spec 保留於 Git history。
+完整 predecessor 留 Git history；正常 Reader 不需讀本 specimen。
