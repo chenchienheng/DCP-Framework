@@ -7,7 +7,7 @@
 ---
 
 ## 0. Index Status
-- index_version: v0.4
+- index_version: v0.5
 - lifecycle_state: HISTORICAL_REFERENCE
 - current_authority: false
 - runtime: false
@@ -19,18 +19,22 @@
 
 ## 1. Historical Inventory by Family
 
-### 1.1 Meta & Mother-Law (00)
+### 1.1 Meta & historical relation specimens
 - `FULL_REPOSITORY_TOPOLOGY_ALIGNMENT.md`: historical topology-alignment report.
 - `QINYI_INTERFACE_SIGNATURE_REFERENCE.md`: historical Qinyi signature reference.
 - `SIGNATURE_ALIGNMENT_NOTE.md`: historical signature-scope note.
 - `00_meta/user_identity_anchor.md`: historical identity-alignment anchor.
 - `00_meta/FULL_LIFECYCLE_ASSET_MATRIX.md`: historical lifecycle/schema alignment reference.
-- `WORLD_CHAIN_MASTER_AXIS.md`: historical CoreTri axis/governance reference.
+- `WORLD_RELATION_LINEAGE_SPECIMEN.md`: neutral successor specimen for retired World Chain / Master Axis lineage.
+- `TEMPORAL_STATE_LINEAGE_SPECIMEN.md`: neutral successor specimen for retired Time Chain / Master Layer lineage.
+- `PLACEMENT_CONTEXT_LINEAGE_SPECIMEN.md`: neutral successor specimen for retired Space Chain / Master Layer lineage.
+- `HISTORICAL_REVIEW_DECISION_SPECIMEN.md`: neutral historical review-decision specimen.
+- `LEGACY_CARRIER_RELAY_SPECIMEN.md`: neutral historical carrier-relay specimen.
 - `00_mother-law/README.md`: historical governance entry.
 - `00_mother-law/existence-consistency-rule.md`: historical consistency-rule reference.
 - `00_mother-law/mother-architecture-registry-v0-1.md`: historical M1–M5 lineage reference.
 
-These entries are preserved for lineage and discovery. Repository location does not establish Current status.
+The retired filenames `WORLD_CHAIN_MASTER_AXIS.md`, `TIME_CHAIN_MASTER_LAYER.md`, `SPACE_CHAIN_MASTER_LAYER.md`, `MOTHER_TREE_CLEARANCE_REPORT.md`, and `CLOUDTOP_RELAY_CHANNEL_SPEC.md` are Git-history-only lineage and are not live navigation pointers.
 
 ### 1.2 Runtime & Boards (01)
 - `01_native-board/`: historical board/blocker/pulse/permissions artifacts.
@@ -57,10 +61,12 @@ These families are not Current runtime surfaces. Their reusable blocker/state/pe
 - `Repository path != Native Home`.
 - `Inventory entry != Admission`.
 - `Historical reference != executable capability`.
+- Retired ontology terms may remain inside historical bodies, but should not dominate live filenames or normal navigation after successor coverage exists.
 - Use `CURRENT-SURFACE-MANIFEST.json` before this corpus index for any Current interpretation.
 - Use successor/redirect/disposition evidence before reclaiming a historical path.
 
 ## 3. Status
 - family_normalization_verified: historical only
+- naming_surface_compaction: in_progress
 - cross_family_link_consistency: requires current successor/redirect interpretation
 - physical_delete_authority: none
