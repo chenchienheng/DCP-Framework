@@ -4,7 +4,7 @@
 > Current interpretation starts from `CURRENT-SURFACE-MANIFEST.json`.
 
 ## 0. Index Status
-- index_version: v0.8
+- index_version: v0.9
 - lifecycle_state: HISTORICAL_REFERENCE
 - current_authority: false
 - runtime: false
@@ -76,6 +76,21 @@ Retired live filenames now Git-history-only:
 - `TASK_ORCHESTRATION_BRIDGE_SPEC.md`
 
 These retired names do not establish a central Registry, Operational Core, or fixed tool-orchestration authority.
+
+### 2.4 Boundary / metadata / parallel-chain / execution-node surfaces
+Live neutral specimens:
+- `BOUNDARY_GATE_LINEAGE_SPECIMEN.md`
+- `WORK_METADATA_LINEAGE_SPECIMEN.md`
+- `PARALLEL_DEPENDENCY_LINEAGE_SPECIMEN.md`
+- `EXECUTION_NODE_LINEAGE_SPECIMEN.md`
+
+Retired live filenames now Git-history-only:
+- `CLOUDTOP_PROTOCOL_HARDENING_NOTE.md`
+- `LABEL_TOPOLOGY_MAP.md`
+- `MULTI_CHAIN_DISPATCH_GOVERNANCE.md`
+- `WORK_OS_CHAIN_INTEGRATION_SPEC.md`
+
+Retained primitives are bounded gate/evidence semantics, platform-native metadata, parallel dependency safety, and carrier-neutral execution-node contracts. CloudTop, topology-label governance, central dispatch, and Work-OS-specific organ naming are not Current ontology.
 
 ## 3. Historical Root Families
 The following remain historical/compatibility families unless explicitly re-admitted:
