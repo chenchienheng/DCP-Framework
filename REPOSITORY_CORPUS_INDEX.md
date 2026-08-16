@@ -7,7 +7,7 @@
 ---
 
 ## 0. Index Status
-- index_version: v0.5
+- index_version: v0.6
 - lifecycle_state: HISTORICAL_REFERENCE
 - current_authority: false
 - runtime: false
@@ -28,13 +28,14 @@
 - `WORLD_RELATION_LINEAGE_SPECIMEN.md`: neutral successor specimen for retired World Chain / Master Axis lineage.
 - `TEMPORAL_STATE_LINEAGE_SPECIMEN.md`: neutral successor specimen for retired Time Chain / Master Layer lineage.
 - `PLACEMENT_CONTEXT_LINEAGE_SPECIMEN.md`: neutral successor specimen for retired Space Chain / Master Layer lineage.
+- `REVIEW_EVIDENCE_LINEAGE_SPECIMEN.md`: neutral successor specimen for retired Review Chain / Master Layer lineage.
 - `HISTORICAL_REVIEW_DECISION_SPECIMEN.md`: neutral historical review-decision specimen.
 - `LEGACY_CARRIER_RELAY_SPECIMEN.md`: neutral historical carrier-relay specimen.
 - `00_mother-law/README.md`: historical governance entry.
 - `00_mother-law/existence-consistency-rule.md`: historical consistency-rule reference.
 - `00_mother-law/mother-architecture-registry-v0-1.md`: historical M1–M5 lineage reference.
 
-The retired filenames `WORLD_CHAIN_MASTER_AXIS.md`, `TIME_CHAIN_MASTER_LAYER.md`, `SPACE_CHAIN_MASTER_LAYER.md`, `MOTHER_TREE_CLEARANCE_REPORT.md`, and `CLOUDTOP_RELAY_CHANNEL_SPEC.md` are Git-history-only lineage and are not live navigation pointers.
+The retired filenames `WORLD_CHAIN_MASTER_AXIS.md`, `TIME_CHAIN_MASTER_LAYER.md`, `SPACE_CHAIN_MASTER_LAYER.md`, `REVIEW_CHAIN_MASTER_LAYER.md`, `MOTHER_TREE_CLEARANCE_REPORT.md`, and `CLOUDTOP_RELAY_CHANNEL_SPEC.md` are Git-history-only lineage and are not live navigation pointers.
 
 ### 1.2 Runtime & Boards (01)
 - `01_native-board/`: historical board/blocker/pulse/permissions artifacts.
@@ -46,9 +47,12 @@ These families are not Current runtime surfaces. Their reusable blocker/state/pe
 - `02_runtime-ops/`: historical follow-up tracking specimen; not an Active task authority.
 - `02_translation-layer/`: historical bridge/control-center framing; reusable carrier/interface methods require bounded re-admission.
 - `03_board-orchestration/`: historical routing/binding/delta-mapping artifacts; lineage may still be preserved for return/re-entry evidence.
-- `03_field-governance/`: mixed historical research family; reusable primitives require bounded successor/admission interpretation.
+- `03_field-governance/`: mixed historical research family. Neutralized specimens now include `CAPABILITY_BOUNDARY_CARD_SPECIMEN.md` and `SOURCE_DEPENDENCY_VIEW_PRIMITIVE_SPECIMEN.md`; reusable primitives require bounded successor/admission interpretation.
+- `docs/xuanling/HISTORICAL_RECEIVER_REVIEW_MODEL_SPECIMEN.md`: neutral successor specimen for retired XADF/MotherTree centralized review naming.
 - `04_adapter-layer/`: provider-specific adapter/bridge specimens plus reusable carrier/adapter/write-back primitives; vendor names are implementation specimens, not canonical architecture primitives.
 - `04_interface-layer/`: bounded historical/public-value material; native semantic replacement requires the appropriate owner/release gate.
+
+Retired live filenames in this family include `03_field-governance/COMMANDER_CARD_v0_1.md`, `03_field-governance/BASE_FIELD_CORE_v0_1.md`, and `docs/xuanling/XADF_MOTHER_TREE_REVIEW_GATE_v0.1.md`; their full historical bodies remain in Git history.
 
 ### 1.4 Topology / Reserve (05)
 - `05_topology/`: historical/compatibility topology family unless explicitly re-admitted. Any primitive-level retention or supersession decision must be established by an authoritative disposition/successor surface, not by this index.
