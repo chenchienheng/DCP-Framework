@@ -1,16 +1,20 @@
-# Window Linking Logic 01–07 — Lineage Stub
+# Window / Lane Continuity Lineage Specimen
 
-**Lifecycle:** METABOLIZED_HISTORICAL_STUB  
+**Lifecycle:** SUCCESSOR_COVERED / LINEAGE_ONLY  
 **Current eligibility:** false  
-**Runtime:** false
+**Runtime:** false  
+**Reclaim disposition:** CANDIDATE_AFTER_UNIQUE_LINEAGE_CHECK
 
-舊版以固定 Window 01–07、S0–S5 與 GitHub tri-key 定義進鏈／升階。這些編號與 state ladder 已不是現行 architecture invariant。
+舊版以固定 Window 01–07、S0–S5 與 GitHub tri-key 定義進鏈／升階；這些編號與 state ladder 已不是 architecture invariant。
 
-## 已吸收 Primitive
-- Window 不得自行升格。
-- Link／writeback 需要 source/evidence、authority、target、state 與 return continuity。
-- Missing gate 應停在 affected branch，不製造假 closure。
+## Retained primitives
+- Window／Lane 不得自行升格或取得 Native Authority。
+- Link／writeback 需要 Stable Identity、source/evidence、authority、affected scope、target state、return continuity。
+- Missing gate 只 HOLD affected branch，不製造假 closure。
+- Continuity 可以跨不同 Window/Carrier 重建，不依賴固定編號 topology。
 
-現行 successor：六維 `Domain → Authority → State → Circle → Pole → Cloud` + governed dependency／return／reconciliation relation。
+## Current successor
+`Delta → Affected Cone → Receiver Wake → Local Rebuild → Return → Reconciliation`
+under `LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md` and the seven-window/eight-act Continuity rules.
 
-完整舊 W01–07／S0–S5 模型保留於 Git history。
+完整 W01–07／S0–S5 predecessor 留 Git history；正常 Reader 不需讀本 specimen。
