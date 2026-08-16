@@ -45,7 +45,10 @@
     ],
     "completed_examples": {
       "MOTHER_TREE_CLEARANCE_REPORT.md": "HISTORICAL_REVIEW_DECISION_SPECIMEN.md",
-      "CLOUDTOP_RELAY_CHANNEL_SPEC.md": "LEGACY_CARRIER_RELAY_SPECIMEN.md"
+      "CLOUDTOP_RELAY_CHANNEL_SPEC.md": "LEGACY_CARRIER_RELAY_SPECIMEN.md",
+      "WORLD_CHAIN_MASTER_AXIS.md": "WORLD_RELATION_LINEAGE_SPECIMEN.md",
+      "TIME_CHAIN_MASTER_LAYER.md": "TEMPORAL_STATE_LINEAGE_SPECIMEN.md",
+      "SPACE_CHAIN_MASTER_LAYER.md": "PLACEMENT_CONTEXT_LINEAGE_SPECIMEN.md"
     }
   },
   "reclaim_gate": {
@@ -88,7 +91,8 @@
     },
     {
       "id": "LEGACY-AXIS-MASTER-GENERATION",
-      "artifacts": ["CORETRI_MASTER_CONSOLIDATION_REVIEW.md", "WORLD_CHAIN_MASTER_AXIS.md", "TIME_CHAIN_MASTER_LAYER.md", "SPACE_CHAIN_MASTER_LAYER.md", "REVIEW_CHAIN_MASTER_LAYER.md", "00_mother-law", "HISTORICAL_REVIEW_DECISION_SPECIMEN.md"],
+      "artifacts": ["CORETRI_MASTER_CONSOLIDATION_REVIEW.md", "WORLD_RELATION_LINEAGE_SPECIMEN.md", "TEMPORAL_STATE_LINEAGE_SPECIMEN.md", "PLACEMENT_CONTEXT_LINEAGE_SPECIMEN.md", "REVIEW_CHAIN_MASTER_LAYER.md", "00_mother-law", "HISTORICAL_REVIEW_DECISION_SPECIMEN.md"],
+      "retired_live_filenames": ["WORLD_CHAIN_MASTER_AXIS.md", "TIME_CHAIN_MASTER_LAYER.md", "SPACE_CHAIN_MASTER_LAYER.md", "MOTHER_TREE_CLEARANCE_REPORT.md", "CLOUDTOP_RELAY_CHANNEL_SPEC.md"],
       "disposition": "HISTORICAL_OR_BOUNDED_REUSE",
       "retain_primitives": ["world relation", "time relation", "space relation", "review relation", "existence continuity", "external handoff", "semantic review vs hygiene separation"],
       "retire_assumptions": ["AXIS label establishes Current", "Master label establishes authority", "phase snapshot establishes present maturity", "one historical routing axis must govern every future external input", "MotherTree role-name establishes review authority"],
