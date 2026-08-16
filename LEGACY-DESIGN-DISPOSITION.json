@@ -3,7 +3,7 @@
   "status": "ARCHITECTURE_CANDIDATE",
   "runtime": false,
   "promotion": false,
-  "purpose": "Prevent retired repository generations from regaining Current eligibility while preserving lineage, reusable primitives, failure memory, and rebuild paths.",
+  "purpose": "Prevent retired repository generations from regaining Current eligibility while preserving lineage, reusable primitives, failure memory, and rebuild paths, and allow gated reclaim when historical bodies no longer carry unique value or live dependency.",
   "current_entry": "CURRENT-SURFACE-MANIFEST.json",
   "current_projection_candidate": "SIX_DIMENSION_REPOSITORY_PROJECTION.md",
   "lineage_index": "REPOSITORY_CORPUS_INDEX.md",
@@ -15,7 +15,22 @@
     "tool_name_is_architecture_invariant": false,
     "old_register_reference_recreates_artifact": false,
     "physical_delete_required_for_metabolism": false,
-    "explicit_reentry_required": true
+    "historical_retention_required_forever": false,
+    "explicit_reentry_required": true,
+    "reclaim_requires_gate": true
+  },
+  "reclaim_gate": {
+    "required": [
+      "successor coverage complete",
+      "unique evidence retained or proven absent",
+      "failure specimen retained when material",
+      "lineage/provenance retained at minimal sufficient level",
+      "no active reader/routing/wake caller",
+      "no rebuild dependency",
+      "no legal/retention hold"
+    ],
+    "result_before_delete": "RECLAIM_ELIGIBLE_CANDIDATE",
+    "destructive_delete_requires_separate_authorized_action": true
   },
   "families": [
     {
@@ -56,7 +71,8 @@
       "artifacts": ["00_meta", "00_mother-law", "01_native-board", "01_runtime-spine", "02_runtime-ops", "02_translation-layer", "03_board-orchestration", "03_field-governance", "04_adapter-layer", "04_interface-layer", "05_XLEN_Reserve_Unenabled", "05_topology"],
       "disposition": "HISTORICAL_OR_COMPATIBILITY_UNLESS_EXPLICITLY_RE_ADMITTED",
       "reader_rule": "Do not traverse by default. Read only through an exact historical, audit, conflict, missing-lineage, or re-entry need.",
-      "physical_delete": false
+      "physical_reclaim": "GATED_CANDIDATE_ALLOWED",
+      "reclaim_rule": "Apply reclaim_gate per affected body; historical placement or family membership alone neither requires permanent retention nor authorizes deletion."
     }
   ],
   "six_dimension_interpretation": {
@@ -72,6 +88,7 @@
     "reader shield prevents silent Current reuse",
     "retained primitives are separated from retired assumptions",
     "re-entry conditions are named",
-    "no unresolved reference forces recreation of retired architecture"
+    "no unresolved reference forces recreation of retired architecture",
+    "historical body has an explicit retain/reclaim disposition rather than indefinite accidental persistence"
   ]
 }
