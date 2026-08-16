@@ -1,16 +1,18 @@
-# External Round Ledger v0.1 — Metabolized Continuity Stub
+# Continuity Receipt / Round-Lineage Specimen
 
-**Lifecycle:** METABOLIZED_PRIMITIVE_STUB  
-**Current eligibility as standalone continuity authority:** false
+**Lifecycle:** SUCCESSOR_COVERED / LINEAGE_ONLY  
+**Current eligibility as standalone continuity authority:** false  
+**Reclaim disposition:** HOLD_UNTIL_UNIQUE_CONTINUITY_EVIDENCE_CHECK
 
-## 保留 Primitive
-- 新 Window/Model/Tool 不應只靠聊天記憶續接；需 bounded continuity record。
-- Continuity record 應保留 Identity/Lane、Revision/Time、Material Delta、Open Risk、Next Gate/Action、Return Target。
-- Round record 是 Pointer/Receipt/State projection，不是 Native Body／Current／Authority。
-- Time order constrains interpretation，但 Latest ≠ Current。
+舊 MotherTree/Closure Gate、固定 round prompt 與 storage list 已退休。Round/ledger 只是一種 continuity receipt，不是 Native Body、Current、Authority 或永久 Registry。
 
-舊 MotherTree/Closure Gate、固定 round prompt 與 storage list 已退休。
+## Retained primitives
+- 新 Window/Model/Tool 不只靠聊天記憶續接；需要 bounded continuity evidence。
+- Continuity receipt 應保留 Stable Identity/Lane、Revision/Time、Material Delta、Open Risk、Next Gate/Action、Return Target。
+- Time order 約束 interpretation，但 Latest ≠ Current。
+- Receipt/ledger searchable ≠ wake eligible；Receiver absorption 仍由 receiver-owned disposition 決定。
 
-現行 successor：Window inheritance contract + Shared Belt receipt + Lifecycle Re-entry/Rebuild。
+## Successor binding
+`Identity/Lineage → Delta → Affected Cone → Receiver Wake → Local Rebuild → Return/Receipt → Reconciliation`
 
-完整舊 Round Ledger schema 保留於 Git history。
+完整 predecessor schema 留 Git history；若 Shared/Native 已完整承接且無 unique continuity evidence，再進 unified reclaim review。
