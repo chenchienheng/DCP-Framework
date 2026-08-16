@@ -1,22 +1,19 @@
-# Triad Closed Loop Topology
+# Return-Closed Relation Topology — triad predecessor reinterpreted
 
-一句核心：
-三耦不是三分法，而是由節點、曲面、回勾所形成的閉環拓撲條件。
+**Lifecycle:** RETAINED_PRIMITIVE / REINTERPRETED  
+**Current eligibility as fixed triad topology:** false
 
-## 最小構成
-- Node：節點
-- Surface：曲面
-- Return Link：回勾鏈
+舊三耦 specimen 的價值不在固定三點，而在 relation 必須能形成可追蹤 Return／Cross-check／Rebuild 閉環。
 
-## 判定條件
-- 三點之間必須能互相對位
-- 閉環必須可回讀與可續接
-- 任一點失配時，整體不可直接潰散
+## Retained invariant
+- Node／Surface／Return Link 是 representation，不是永久器官。
+- Relation 必須能對位 Identity、Dependency、Authority、Evidence 與 Return target。
+- 任一局部失配先失效 affected branch，不應使 whole system 直接潰散。
+- Closed loop ≠ forced consensus；合法 HOLD、disagreement、partial closure 都可存在。
+- Hierarchy/tree 可作局部 representation，但不能取代 dependency/return relation truth。
+- Rebuild 必須能由 Current primitive/state/evidence/successor relation重生，不能依賴已退休 topology。
 
-## 原則
-- 階層可存在，但只作局部生態
-- 閉環優先於樹狀展開
-- 拓撲優先於表面排列
+## Successor chain
+`Delta → Affected Relation Cone → Local Gate/Action → Evidence → Receiver Return → Cross-check/Reconciliation → Rebuild/Re-entry`
 
-## 狀態
-Seed v0.1
+三點模型留作 lineage specimen；現行可泛化到 N-node、跨窗、跨 Carrier、跨組織的反射／回流網。
