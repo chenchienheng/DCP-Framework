@@ -1,17 +1,19 @@
-# All-Cloud Boundary Review v0.1 — Metabolized Primitive Stub
+# Platform Capability / Boundary Lineage Specimen
 
-**Lifecycle:** METABOLIZED_PRIMITIVE_STUB  
-**Current eligibility as old review:** false
+**Lifecycle:** SUCCESSOR_COVERED / LINEAGE_ONLY  
+**Current eligibility:** false  
+**Reclaim disposition:** CANDIDATE_AFTER_UNIQUE_EVIDENCE_CHECK
 
-舊版將 No-Billing、MotherTree、GitHub primary spine、Red/Yellow/Green 與特定平台限制綁成一份 cloud review。具體平台、價格、billing 推論與 GitHub 主骨假設均不得當 Current。
+舊版把 No-Billing、MotherTree、GitHub primary spine、Red/Yellow/Green 與特定平台限制綁成單一 cloud review；平台、價格、billing 與 GitHub 主骨假設都不具 Current effect。
 
-## 保留 Primitive
+## Retained primitives
 - Capability／subscription／connector access ≠ Authority／runtime permission。
 - Read／draft／proposal ≠ deploy／write／execute／billing authorization。
-- Cost、rights、privacy、mutation、release 必須各有 Gate；不能互相替代。
-- External cloud/platform 是 Carrier／Domain endpoint，不因可連接而成 Core。
-- 高風險 action 需要 explicit authority；未知成本或權限停在 boundary。
+- Cost、rights、privacy、mutation、release 各自有 Gate，不互相替代。
+- External platform 是 Carrier/endpoint，不因可連接而成 Core。
+- 高風險 action 需要 explicit authority；未知成本或權限停在 affected boundary。
 
-現行 successor：六維 dispatch + Rights/Privacy/Purpose/Authority boundary + platform-native IAM/security。
+## Successor binding
+`Stable Existence → Required Effect → Rights/Authority/Risk → Capability/Carrier Binding → Evidence → Return/Reconciliation`
 
-完整舊 review、平台清單與成本假設保留於 Git history。
+完整平台清單與舊成本假設留 Git history；正常 Reader 不需讀本 specimen。
