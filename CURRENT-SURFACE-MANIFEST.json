@@ -9,13 +9,50 @@
     "README.md",
     "CURRENT-SURFACE-MANIFEST.json",
     "LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md",
-    "SIX_DIMENSION_REPOSITORY_PROJECTION.md",
     "PUBLIC-SURFACE-POLICY.md",
     "STATUS.md"
   ],
+  "classification_model": {
+    "primary": "STABLE_EXISTENCE_AND_LIFECYCLE_RELATIONS",
+    "do_not_classify_by_extension": true,
+    "do_not_treat_folder_as_ontology": true,
+    "do_not_treat_carrier_as_identity": true,
+    "core_questions": [
+      "what_is_the_stable_existence",
+      "what_function_or_capability_does_it_carry",
+      "what_dependencies_and_constraints_apply",
+      "what_state_is_it_in",
+      "who_has_which_authority",
+      "what_evidence_supports_it",
+      "what_return_or_rebuild_relation_exists"
+    ]
+  },
+  "carrier_model": {
+    "carrier_is_secondary_metadata": true,
+    "examples": [
+      "markdown", "yaml", "json", "pdf", "spreadsheet", "database", "sql",
+      "cad_dxf_dwg", "bim_ifc", "3d_glb_gltf", "image", "audio", "video",
+      "notebook", "source_code", "binary", "script", "archive", "api_resource",
+      "issue_pr_branch", "drive_object", "saas_record", "local_runtime", "model_output"
+    ],
+    "same_existence_may_have_multiple_carriers": true,
+    "carrier_change_does_not_change_identity": true,
+    "extension_is_not_taxonomy": true
+  },
+  "dispatch_views": {
+    "status": "OPTIONAL_PROJECTION_AXES_NOT_ONTOLOGY",
+    "axes": ["domain", "authority", "state", "circle", "pole", "cloud"],
+    "use_only_when_material": true,
+    "order_is_not_mandatory": true,
+    "cloud_is_carrier_view": true,
+    "repository_is_domain": false,
+    "repository_is_authority": false,
+    "repository_is_state": false,
+    "relation_rule": "dependency_evidence_return_reconciliation_reentry_rebuild_are_primary_relations_not_extra_folder_classes"
+  },
   "current_public_surfaces": {
     "human_zh_tw": ["README.md", "LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md", "STATUS.md"],
-    "professional_en": ["LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md", "SIX_DIMENSION_REPOSITORY_PROJECTION.md", "PUBLIC-SURFACE-POLICY.md"],
+    "professional_en": ["LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md", "PUBLIC-SURFACE-POLICY.md"],
     "canonical_machine": ["CURRENT-SURFACE-MANIFEST.json", "LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md"]
   },
   "current_successor_kernel": "LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md",
@@ -24,45 +61,20 @@
     "Ideas-Pole-Projection": "meaning_placement_navigation_experience_weighted",
     "GLModel-Pole-Projection": "world_object_engineering_evidence_adapter_weighted"
   },
-  "six_dimension_dispatch": {
-    "status": "ARCHITECTURE_CANDIDATE",
-    "dimensions": ["domain", "authority", "state", "circle", "pole", "cloud"],
-    "default_order": ["domain", "authority", "state", "circle", "pole", "cloud"],
-    "cloud_binding": "GitHub:DCP-Pole-Projection",
-    "pole_weight": "DCP",
-    "repository_is_domain": false,
-    "repository_is_authority": false,
-    "repository_is_state": false,
-    "relation_rule": "dependency_evidence_return_reconciliation_reentry_rebuild_are_governed_relations_not_extra_dimensions"
-  },
   "shared_belt_semantics": {
     "is_fourth_pole": false,
     "is_authority_root": false,
     "allowed": ["pointer", "receipt", "receiver_state", "return", "reconciliation_status", "reentry_pointer", "rebuild_pointer"],
     "native_body_copy_default": false
   },
-  "legacy_root_families": [
-    "00_meta",
-    "00_mother-law",
-    "01_native-board",
-    "01_runtime-spine",
-    "02_runtime-ops",
-    "02_translation-layer",
-    "03_board-orchestration",
-    "03_field-governance",
-    "04_adapter-layer",
-    "04_interface-layer",
-    "05_XLEN_Reserve_Unenabled",
-    "05_topology"
-  ],
-  "legacy_interpretation": "HISTORICAL_OR_COMPATIBILITY_UNLESS_EXPLICITLY_RE-ADMITTED",
+  "legacy_interpretation": "HISTORICAL_OR_COMPATIBILITY_UNLESS_EXPLICITLY_RE_ADMITTED",
   "historical_reader_shield": {
     "root_legacy_visibility_does_not_establish_current": true,
     "stale_register_reference_does_not_reactivate_missing_or_retired_artifact": true,
     "successor_or_explicit_readmission_required": true,
     "legacy_stub_is_not_required_normal_read": true
   },
-  "promotion_rule": "REPOSITORY_LOCATION_NAME_OR_RECENCY_DOES_NOT_ESTABLISH_CURRENT_OR_AUTHORITY",
+  "promotion_rule": "LOCATION_NAME_EXTENSION_FORMAT_OR_RECENCY_DOES_NOT_ESTABLISH_IDENTITY_CURRENT_OR_AUTHORITY",
   "release_rule": "PUBLIC_SAFE_AND_RELEASE_APPROVED_ONLY",
   "claim_ceiling": "Public DCP-oriented CoreTri projection; not DCP Native Body, runtime, canon, or authority root"
 }
