@@ -64,10 +64,10 @@
   "families": [
     {
       "id": "LEGACY-REGISTER-GENERATION",
-      "artifacts": ["UNIFIED_ARTIFACT_REGISTER.md", "CLEANUP_QUEUE_REGISTER.md", "GITHUB_CHAIN_MASTER_MAP.md", "NAMING_DRIFT_RESOLUTION_REGISTER.md"],
+      "artifacts": ["UNIFIED_ARTIFACT_REGISTER.md", "CLEANUP_QUEUE_REGISTER.md", "GITHUB_CHAIN_MASTER_MAP.md"],
       "disposition": "HISTORICAL_REFERENCE",
       "retain_primitives": ["inventory", "lineage", "cleanup classification", "naming-drift detection", "continuity mapping"],
-      "successor": ["CURRENT-SURFACE-MANIFEST.json", "REPOSITORY_CORPUS_INDEX.md"],
+      "successor": ["CURRENT-SURFACE-MANIFEST.json", "REPOSITORY_CORPUS_INDEX.md", "LEGACY-DESIGN-DISPOSITION.json"],
       "reentry_requires": ["exact source", "material need", "authority", "evidence", "successor compatibility"]
     },
     {
