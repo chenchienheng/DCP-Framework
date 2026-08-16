@@ -1,20 +1,18 @@
-# Feasible Domain and Responsibility
+# Feasible Domain and Responsibility — retained DCP primitive
 
-一句核心：
-可行域決定邊界，責代決定承接；兩者缺一，靈絡只能推演，不能正式進入運作。
+**Lifecycle:** RETAINED_PRIMITIVE / CURRENT_RELEVANT  
+**Runtime:** false
 
-## 可行域
-- 定義：當前條件下可被承接、執行、回寫的範圍
-- 作用：限制擴張、避免漂移、界定目前能做與不能做
+可行域不是單純限制，而是由現行條件、Dependency、Evidence、Authority、Risk、Carrier capability 與 Return capacity 共同界定的合法作用範圍。
 
-## 責代
-- 定義：對事件、節點、版本與後續處理的承接責任
-- 作用：確保不只是生成內容，而是有人或有盤位負責續接
+## Invariants
+- 超出可行域者只能 Candidate/HOLD/TO_VERIFY，不得冒充已成立。
+- Responsibility 不是固定角色名，而是對 action、evidence、return、rebuild consequence 的可追溯承接。
+- Capability 不自動擴大 Authority；Authority 也不能消除 evidence requirement。
+- Feasible Domain 可因 material delta 擴張、縮小或換 representation，但 Stable Identity 不必改變。
+- 無合法 receiver/return path 的 mutation 不形成閉環。
 
-## 原則
-- 超出可行域者，只能列為候選，不得視為已成立
-- 無責代承接者，只能列為暫態，不得視為穩定節點
-- 可行域與責代需同時存在，才可正式回寫
+## Successor chain
+`Stable Existence → Dependency/Constraint → Evidence/Authority → Feasible Domain → Action → Consequence → Receiver Return → Reconciliation/Rebuild`
 
-## 狀態
-Seed v0.1
+此 primitive 保留為 DCP 核心養分；不建立新的固定 layer 或 role topology。
