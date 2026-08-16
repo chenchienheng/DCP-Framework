@@ -1,99 +1,59 @@
 # Repository Corpus Index
 
-> Historical/reference corpus index for continuity only. It does **not** establish Current, Runtime, Authority, Promotion, Admission, or Receiver absorption.
-> Current interpretation starts from `CURRENT-SURFACE-MANIFEST.json`.
+> Historical/reference discovery surface for continuity only. It does **not** establish Current, Runtime, Authority, Promotion, Admission, Receiver absorption, or ontology.
+> Current interpretation starts from `CURRENT-SURFACE-MANIFEST.json` and `LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md`.
 
 ## 0. Index Status
-- index_version: v0.9
+- index_version: v1.0
 - lifecycle_state: HISTORICAL_REFERENCE
 - current_authority: false
 - runtime: false
 - native_source_root: false
 - successor_entry: CURRENT-SURFACE-MANIFEST.json
+- taxonomy_mode: EXISTENCE_FIRST_CARRIER_NEUTRAL
+- extension_is_taxonomy: false
+- folder_is_ontology: false
 - naming_surface_compaction: MATERIAL_IN_PROGRESS
-- zombie_master_axis_scan: MATERIAL_FINDINGS_REMOVED
 - physical_delete_authority: none
 
-## 1. Current Reader Shield
+## 1. Reader Shield
 Normal readers do not reconstruct Current from historical corpus.
 
 Rules:
+- Stable Existence precedes folder, filename, extension, tool, repo and cloud location.
 - Latest != Current.
 - Repository path != Native Home.
 - Inventory entry != Admission.
 - Historical searchable != Current eligible.
-- Retired ontology terms may remain in Git history or bounded lineage bodies, but should not dominate live filenames after successor coverage exists.
+- Extension != Taxonomy.
+- Folder != Ontology.
+- Carrier != Identity.
+- Representation != Truth.
 - A stale historical pointer must be corrected or retired; do not recreate a missing legacy artifact because an old register names it.
 - Re-entry requires exact material need, authority, evidence, successor compatibility and receiver disposition.
 
-## 2. Neutralized Lineage Surfaces
+## 2. Historical Discovery Groups — not permanent taxonomy
+The groups below are convenience indexes for finding predecessor material. They are **not architecture layers or permanent categories**.
 
-### 2.1 Relation / Master-Axis generation
-Live neutral specimens:
-- `WORLD_RELATION_LINEAGE_SPECIMEN.md`
-- `TEMPORAL_STATE_LINEAGE_SPECIMEN.md`
-- `PLACEMENT_CONTEXT_LINEAGE_SPECIMEN.md`
-- `REVIEW_EVIDENCE_LINEAGE_SPECIMEN.md`
-- `XUANLING_RELATIONSHIP_LINEAGE_SPECIMEN.md`
-- `CORETRI_RECONCILIATION_LINEAGE_SPECIMEN.md`
-- `EXTERNAL_ABSORPTION_LINEAGE_SPECIMEN.md`
-- `00_mother-law/EXISTENCE_IDENTITY_BOUNDARY_SPECIMEN.md`
-- `HISTORICAL_REVIEW_DECISION_SPECIMEN.md`
-- `LEGACY_CARRIER_RELAY_SPECIMEN.md`
+### 2.1 Relation / master-axis predecessor material
+Neutral lineage specimens include World Relation, Temporal State, Placement Context, Review Evidence, Relationship, Reconciliation, External Absorption and Identity Boundary specimens. Retired names such as WORLD_CHAIN_MASTER_AXIS, TIME_CHAIN_MASTER_LAYER, SPACE_CHAIN_MASTER_LAYER, REVIEW_CHAIN_MASTER_LAYER, MotherTree and CloudTop remain Git-history lineage only.
 
-Retired live filenames now Git-history-only include:
-`WORLD_CHAIN_MASTER_AXIS.md`, `TIME_CHAIN_MASTER_LAYER.md`, `SPACE_CHAIN_MASTER_LAYER.md`, `REVIEW_CHAIN_MASTER_LAYER.md`, `XUANLING_LINGLUO_MASTER_MAP.md`, `CORETRI_MASTER_CONSOLIDATION_REVIEW.md`, `AXIS_TO_EXTERNAL_ABSORPTION_HANDOFF.md`, `00_mother-law/existence-chain-master-layer.md`, `MOTHER_TREE_CLEARANCE_REPORT.md`, `CLOUDTOP_RELAY_CHANNEL_SPEC.md`.
+### 2.2 Field / role / XADF predecessor material
+Neutral lineage specimens retain capability boundary, source/dependency view, tool-role, local effect, delegation/return and signal-capacity primitives. `Field` remains valid only when it is actual domain vocabulary; fixed BASE/QIN/Third-Field/Commander/Orbit/Peer-Tree/XADF ontologies are retired unless explicitly re-admitted.
 
-The legacy `master_axis_created=true` and `return_to_00=true` semantics are explicitly non-current.
+### 2.3 Register / operational / task predecessor material
+Artifact discovery, operational dependency and task effect/return primitives remain useful. Unified Registry, Operational Core and fixed Task Orchestration names do not establish central organs.
 
-### 2.2 Field / role / XADF generation
-Live neutral specimens include:
-- `03_field-governance/CAPABILITY_BOUNDARY_CARD_SPECIMEN.md`
-- `03_field-governance/SOURCE_DEPENDENCY_VIEW_PRIMITIVE_SPECIMEN.md`
-- `03_field-governance/TOOL_CAPABILITY_ROLE_LINEAGE_SPECIMEN.md`
-- `03_field-governance/LOCAL_SCOPE_EFFECT_LINEAGE_SPECIMEN.md`
-- `03_field-governance/DELEGATION_RETURN_LINEAGE_SPECIMEN.md`
-- `03_field-governance/SIGNAL_CAPACITY_BOUNDARY_SPECIMEN.md`
-- `docs/xuanling/HISTORICAL_RECEIVER_REVIEW_MODEL_SPECIMEN.md`
-- `docs/xuanling/CAPABILITY_ROLE_BOUNDARY_LINEAGE_SPECIMEN.md`
-- `docs/xuanling/BOUNDED_OPERATION_FAILURE_LINEAGE_SPECIMEN.md`
-- `docs/xuanling/DEPENDENCY_CONTINUITY_LINEAGE_SPECIMEN.md`
+### 2.4 Carrier / adapter predecessor material
+Vendor-, platform-, format- and media-specific artifacts are compatibility specimens only. Calendar, Drive, video, image, CAD/BIM, spreadsheet, database, API, code, binary, archive, model-output, SaaS and local-runtime carriers may all represent the same Stable Existence under different constraints.
 
-Retired live filenames now Git-history-only include:
-`COMMANDER_CARD_v0_1`, `COMMANDER_HIERARCHY_MODEL_v0_1`, `BASE_FIELD_CORE_v0_1`, `ORBIT_AXIS_LAW_v0_1`, `PEER_TREE_ACTIVATION_RELAY_v0_1`, `THIRD_FIELD_CARRYING_LAYER_v0_2`, XADF MotherTree/Legion/first-round files, and the fixed all-time dependency-field manual.
+`md/json/yml/pdf/xlsx/dxf/dwg/ifc/glb/gltf/png/jpg/mp4/wav/sql/db/ipynb/py/js/ts/sh/cmd/exe/zip/...` are examples of carrier encodings, not architecture categories.
 
-`Field` itself is not globally retired: it may remain a valid domain/relation term. Only fixed BASE/QIN/Third-Field/Commander/Orbit/Peer-Tree ontologies are retired unless explicitly re-admitted.
+Adapter specimens should reduce to:
+`Stable Existence → Function/Representation Need → Source/Authority → Carrier Selection → Transform/Evidence → Return/Reconciliation/Rebuild`.
 
-### 2.3 Register / operational / task-generation surfaces
-Live neutral specimens:
-- `ARTIFACT_LINEAGE_DISCOVERY_SPECIMEN.md`
-- `OPERATIONAL_DEPENDENCY_LINEAGE_SPECIMEN.md`
-- `TASK_EFFECT_RETURN_LINEAGE_SPECIMEN.md`
-
-Retired live filenames now Git-history-only:
-- `UNIFIED_ARTIFACT_REGISTER.md`
-- `XUANLING_OPERATIONAL_MODEL_CORE.md`
-- `TASK_ORCHESTRATION_BRIDGE_SPEC.md`
-
-These retired names do not establish a central Registry, Operational Core, or fixed tool-orchestration authority.
-
-### 2.4 Boundary / metadata / parallel-chain / execution-node surfaces
-Live neutral specimens:
-- `BOUNDARY_GATE_LINEAGE_SPECIMEN.md`
-- `WORK_METADATA_LINEAGE_SPECIMEN.md`
-- `PARALLEL_DEPENDENCY_LINEAGE_SPECIMEN.md`
-- `EXECUTION_NODE_LINEAGE_SPECIMEN.md`
-
-Retired live filenames now Git-history-only:
-- `CLOUDTOP_PROTOCOL_HARDENING_NOTE.md`
-- `LABEL_TOPOLOGY_MAP.md`
-- `MULTI_CHAIN_DISPATCH_GOVERNANCE.md`
-- `WORK_OS_CHAIN_INTEGRATION_SPEC.md`
-
-Retained primitives are bounded gate/evidence semantics, platform-native metadata, parallel dependency safety, and carrier-neutral execution-node contracts. CloudTop, topology-label governance, central dispatch, and Work-OS-specific organ naming are not Current ontology.
-
-## 3. Historical Root Families
-The following remain historical/compatibility families unless explicitly re-admitted:
+## 3. Legacy path aliases
+The following path names remain in the repository only because historical bodies still need bounded discovery or final reclaim review:
 - `00_meta`
 - `00_mother-law`
 - `01_native-board`
@@ -107,22 +67,25 @@ The following remain historical/compatibility families unless explicitly re-admi
 - `05_XLEN_Reserve_Unenabled`
 - `05_topology`
 
-Do not traverse them by default. Read them only for exact audit, conflict, failure, lineage, unique evidence or explicit re-entry need.
+These are **legacy path aliases, not ontology, not layer order, not runtime topology**. Do not create new permanent families merely to mirror these names. New successor material should be bound by Stable Identity/Function/Dependency/Authority/Lifecycle and placed only where a carrier requires a human navigation surface.
 
 ## 4. Reclaim Gate
-Historical body or branch is only `RECLAIM_ELIGIBLE_CANDIDATE` when all are true:
+Historical body, alias or branch is only `RECLAIM_ELIGIBLE_CANDIDATE` when all are true:
 1. successor coverage complete;
 2. unique evidence retained or proven absent;
 3. material failure specimen retained;
 4. minimal provenance/lineage retained;
-5. no active Reader/Routing/Wake caller;
+5. no active Reader/Routing/Navigation/Wake caller;
 6. no rebuild dependency;
-7. no legal/retention hold.
+7. no legal/retention hold;
+8. no unresolved cross-owner pointer.
 
-Candidate status does not itself authorize destructive deletion.
+Candidate status does not authorize destructive deletion. Deletion candidates remain pooled for final unified review.
 
-## 5. Successor Surfaces
-Current bounded interpretation remains:
-`README.md → CURRENT-SURFACE-MANIFEST.json → LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md → SIX_DIMENSION_REPOSITORY_PROJECTION.md → PUBLIC-SURFACE-POLICY.md → STATUS.md`.
+## 5. Current successor surfaces
+Normal interpretation is bounded to:
+`README.md → CURRENT-SURFACE-MANIFEST.json → LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md → PUBLIC-SURFACE-POLICY.md → STATUS.md`.
 
-The corpus index is a historical discovery surface only.
+`SIX_DIMENSION_REPOSITORY_PROJECTION.md` is an optional compatibility/dispatch view only, not required Reader order.
+
+The corpus index itself is a historical discovery aid; it is not a second registry or taxonomy root.
