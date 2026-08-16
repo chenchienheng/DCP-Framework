@@ -1,27 +1,18 @@
-# Consistent Triad Principle
+# Asymmetric Mutual-Verification Relation — triad lineage
 
-一句核心：
-三耦真正成立，不在三個節點同時存在，而在三者是否能形成可持續的一致承接；一致三耦是靈絡局部高密度節點的基本原理。
+**Lifecycle:** RETAINED_PRIMITIVE / REINTERPRETED  
+**Current eligibility as fixed three-node topology:** false
 
-## 最小要素
-- Node A
-- Node B
-- Node C
-- Shared Anchor
-- Mutual Non-Collapse Condition
-- Relay Path
+舊「三個節點＋Shared Anchor」不是必須固定成三點器官；保留的是異質分權、互證與非單點崩潰條件。
 
-## 一致條件
-- 三節點之間存在共同錨點或共同承接面
-- 任一節點波動，不直接導致另外兩節點失鏈
-- 三者之間可形成 relay，而非單向依附
-- 一致不等於同意全部，而是可持續承接彼此位置
+## Retained invariant
+- 多個作用面可共享 Stable Anchor，但不必共享同一 representation／authority／carrier。
+- 任一節點波動或失效，不應直接使其他節點失去 Identity／Lineage。
+- Relation 應允許 Return／Cross-check／Reconciliation，而非單向依附。
+- 一致不是答案相同，而是差異可定位、可互證、可承接。
+- Producer／Executor／Auditor／Receiver closure 不應無條件同位。
 
-## 原則
-- 三耦不以競爭成立，而以承接成立
-- 一致三耦可作為局部網絡的穩定核心
-- 若只剩雙點依附，則不足以構成完整三耦
-- 一致三耦需能對回時間錨、source ref 或共享母法
+## Successor binding
+`Stable Identity → Asymmetric Roles → Bounded Projection → Independent Check → Receiver Return → Reconciliation → Rebuild`
 
-## 狀態
-Seed v0.1
+三節點只是早期 specimen；現行可套用 CoreTri、七窗、外部服務網、企業節點或其他 N-node relation。
