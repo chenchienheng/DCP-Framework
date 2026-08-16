@@ -1,16 +1,18 @@
-# Source / View Gate v0.1 — Metabolized Primitive Stub
+# Source / Representation Gate — Lineage Specimen
 
 **Lifecycle:** METABOLIZED_PRIMITIVE_STUB  
 **Current eligibility as fixed source/view schema:** false
 
-## 保留 Primitive
-- Source may generate many projections; Projection/View must not overwrite Source because presentation wants a cleaner story.
-- Source Identity、View Identity、Evidence Role、Boundary、Claim Ceiling、Return Target 必須分離且可回對。
-- Tool output／media signal／import staging 不因被整理或視覺化而升格 Truth。
-- Source class 只影響 evidence interpretation，不自動決定 final use／authority。
+## Retained primitives
+- One Source may produce many projections; no View may overwrite Source because a cleaner story is desired.
+- Stable Identity、Source/Revision、Evidence Role、Boundary、Claim Ceiling、Representation Identity、Return Target must remain separable and back-mappable.
+- Tool output／media signal／import staging／render／chart／model output do not become Truth because they are readable or visually coherent.
+- Source class affects evidence interpretation but does not automatically determine authority, use, approval or publication.
+- Representation loss/transform must be recorded when material.
 
-舊 QIN/BASE、固定 Source Classes、View Classes 與 evidence-letter schema 只保留作 historical implementation specimen。
+舊 QIN/BASE、固定 Source/View classes 與 evidence-letter schema 只保留作 historical implementation specimen。
 
-現行 successor：Stable Meaning/Identity + Claim/Evidence + Representation Selection + six-dimensional State/Circle/Cloud projection。
+## Successor binding
+`Stable Existence → Source/Revision → Evidence Role/Claim Ceiling → Dependency/Context → Representation Need → Transform/Loss → Audience/Carrier → Receiver Return/Reconciliation`
 
-完整舊 schema 保留於 Git history。
+完整 predecessor 留 Git history；正常 Reader 不需讀本 specimen。
