@@ -6,6 +6,7 @@
   "purpose": "Prevent retired repository generations from regaining Current eligibility while preserving lineage, reusable primitives, failure memory, and rebuild paths, and allow gated reclaim when historical bodies no longer carry unique value or live dependency.",
   "current_entry": "CURRENT-SURFACE-MANIFEST.json",
   "current_projection_candidate": "SIX_DIMENSION_REPOSITORY_PROJECTION.md",
+  "current_successor_kernel": "LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md",
   "lineage_index": "REPOSITORY_CORPUS_INDEX.md",
   "rules": {
     "historical_searchable_is_current": false,
@@ -48,7 +49,11 @@
       "CLOUDTOP_RELAY_CHANNEL_SPEC.md": "LEGACY_CARRIER_RELAY_SPECIMEN.md",
       "WORLD_CHAIN_MASTER_AXIS.md": "WORLD_RELATION_LINEAGE_SPECIMEN.md",
       "TIME_CHAIN_MASTER_LAYER.md": "TEMPORAL_STATE_LINEAGE_SPECIMEN.md",
-      "SPACE_CHAIN_MASTER_LAYER.md": "PLACEMENT_CONTEXT_LINEAGE_SPECIMEN.md"
+      "SPACE_CHAIN_MASTER_LAYER.md": "PLACEMENT_CONTEXT_LINEAGE_SPECIMEN.md",
+      "REVIEW_CHAIN_MASTER_LAYER.md": "REVIEW_EVIDENCE_LINEAGE_SPECIMEN.md",
+      "03_field-governance/COMMANDER_CARD_v0_1.md": "03_field-governance/CAPABILITY_BOUNDARY_CARD_SPECIMEN.md",
+      "03_field-governance/BASE_FIELD_CORE_v0_1.md": "03_field-governance/SOURCE_DEPENDENCY_VIEW_PRIMITIVE_SPECIMEN.md",
+      "docs/xuanling/XADF_MOTHER_TREE_REVIEW_GATE_v0.1.md": "docs/xuanling/HISTORICAL_RECEIVER_REVIEW_MODEL_SPECIMEN.md"
     }
   },
   "reclaim_gate": {
@@ -79,25 +84,34 @@
       "disposition": "HISTORICAL_SPECIMEN",
       "retain_primitives": ["stable artifact ID", "lifecycle tracking", "hardening gate", "return path", "archive lineage", "blocker/state/permission concepts"],
       "retire_assumptions": ["S1-S5 is universal lifecycle", "W0/Wx are stable ontology", "merge to main means Active", "repository registry means receiver absorption"],
-      "successor": ["SIX_DIMENSION_REPOSITORY_PROJECTION.md", "CURRENT-SURFACE-MANIFEST.json"]
+      "successor": ["SIX_DIMENSION_REPOSITORY_PROJECTION.md", "CURRENT-SURFACE-MANIFEST.json", "LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md"]
     },
     {
       "id": "LEGACY-FIXED-AGENT-CLOUD-GENERATION",
-      "artifacts": ["02_translation-layer/CLOUD_OVER_CLOUD_CONTROL_CENTER_SPEC.md", "04_adapter-layer", "LEGACY_CARRIER_RELAY_SPECIMEN.md"],
+      "artifacts": ["02_translation-layer/CLOUD_OVER_CLOUD_CONTROL_CENTER_SPEC.md", "04_adapter-layer", "LEGACY_CARRIER_RELAY_SPECIMEN.md", "03_field-governance/CAPABILITY_BOUNDARY_CARD_SPECIMEN.md", "docs/xuanling/HISTORICAL_RECEIVER_REVIEW_MODEL_SPECIMEN.md"],
       "disposition": "HISTORICAL_SPECIMEN",
-      "retain_primitives": ["capture", "evidence classification", "semantic translation", "adapter/writeback", "packet contract", "failure return route"],
-      "retire_assumptions": ["Gemini is always Scout", "Jules is always Semantic Bridge", "Codex is always Repo Bridge", "vendor/model name defines authority", "fixed four-stage relay is universal", "CloudTop is a stable control-center ontology"],
-      "successor": ["SIX_DIMENSION_REPOSITORY_PROJECTION.md", "DCP_LIFECYCLE_DEPENDENCY_KERNEL.md"]
+      "retain_primitives": ["capture", "evidence classification", "semantic translation", "adapter/writeback", "packet contract", "failure return route", "capability boundary", "receiver-owned review"],
+      "retire_assumptions": ["Gemini is always Scout", "Jules is always Semantic Bridge", "Codex is always Repo Bridge", "vendor/model name defines authority", "fixed four-stage relay is universal", "CloudTop is a stable control-center ontology", "Commander rank establishes authority", "MotherTree is a mandatory review hub"],
+      "successor": ["SIX_DIMENSION_REPOSITORY_PROJECTION.md", "LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md"]
     },
     {
       "id": "LEGACY-AXIS-MASTER-GENERATION",
-      "artifacts": ["CORETRI_MASTER_CONSOLIDATION_REVIEW.md", "WORLD_RELATION_LINEAGE_SPECIMEN.md", "TEMPORAL_STATE_LINEAGE_SPECIMEN.md", "PLACEMENT_CONTEXT_LINEAGE_SPECIMEN.md", "REVIEW_CHAIN_MASTER_LAYER.md", "00_mother-law", "HISTORICAL_REVIEW_DECISION_SPECIMEN.md"],
-      "retired_live_filenames": ["WORLD_CHAIN_MASTER_AXIS.md", "TIME_CHAIN_MASTER_LAYER.md", "SPACE_CHAIN_MASTER_LAYER.md", "MOTHER_TREE_CLEARANCE_REPORT.md", "CLOUDTOP_RELAY_CHANNEL_SPEC.md"],
+      "artifacts": ["CORETRI_MASTER_CONSOLIDATION_REVIEW.md", "WORLD_RELATION_LINEAGE_SPECIMEN.md", "TEMPORAL_STATE_LINEAGE_SPECIMEN.md", "PLACEMENT_CONTEXT_LINEAGE_SPECIMEN.md", "REVIEW_EVIDENCE_LINEAGE_SPECIMEN.md", "00_mother-law", "HISTORICAL_REVIEW_DECISION_SPECIMEN.md"],
+      "retired_live_filenames": ["WORLD_CHAIN_MASTER_AXIS.md", "TIME_CHAIN_MASTER_LAYER.md", "SPACE_CHAIN_MASTER_LAYER.md", "REVIEW_CHAIN_MASTER_LAYER.md", "MOTHER_TREE_CLEARANCE_REPORT.md", "CLOUDTOP_RELAY_CHANNEL_SPEC.md"],
       "disposition": "HISTORICAL_OR_BOUNDED_REUSE",
       "retain_primitives": ["world relation", "time relation", "space relation", "review relation", "existence continuity", "external handoff", "semantic review vs hygiene separation"],
       "retire_assumptions": ["AXIS label establishes Current", "Master label establishes authority", "phase snapshot establishes present maturity", "one historical routing axis must govern every future external input", "MotherTree role-name establishes review authority"],
-      "successor": ["CURRENT-SURFACE-MANIFEST.json", "SIX_DIMENSION_REPOSITORY_PROJECTION.md", "DCP_LIFECYCLE_DEPENDENCY_KERNEL.md"],
+      "successor": ["CURRENT-SURFACE-MANIFEST.json", "SIX_DIMENSION_REPOSITORY_PROJECTION.md", "LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md"],
       "reentry_requires": ["primitive-level materiality", "current evidence", "bounded receiver", "no second authority"]
+    },
+    {
+      "id": "LEGACY-FIELD-FOUNDATION-GENERATION",
+      "artifacts": ["03_field-governance/SOURCE_DEPENDENCY_VIEW_PRIMITIVE_SPECIMEN.md", "03_field-governance"],
+      "disposition": "HISTORICAL_OR_BOUNDED_REUSE",
+      "retain_primitives": ["source", "stable identity", "dependency", "evidence", "view", "gate", "return", "lineage continuity"],
+      "retire_assumptions": ["BASE/QIN fixed layers are universal ontology", "Field naming establishes current architecture"],
+      "successor": ["LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md", "SIX_DIMENSION_REPOSITORY_PROJECTION.md"],
+      "note": "Field remains a potentially valid domain/relation term; do not globally rename without materiality review."
     },
     {
       "id": "LEGACY-ROOT-FAMILIES",
