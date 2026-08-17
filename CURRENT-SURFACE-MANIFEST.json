@@ -22,6 +22,7 @@
       "what_function_or_capability_does_it_carry",
       "what_dependencies_and_constraints_apply",
       "what_state_is_it_in",
+      "what_event_changed_the_state_and_can_it_be_back_mapped",
       "who_has_which_authority",
       "what_evidence_supports_it",
       "is_the_content_instruction_authority_or_only_evidence_candidate",
@@ -51,7 +52,7 @@
     "repository_is_domain": false,
     "repository_is_authority": false,
     "repository_is_state": false,
-    "relation_rule": "dependency_evidence_return_reconciliation_reentry_rebuild_are_primary_relations_not_extra_folder_classes"
+    "relation_rule": "dependency_event_state_transition_evidence_return_reconciliation_reentry_rebuild_are_primary_relations_not_extra_folder_classes"
   },
   "security_boundary": {
     "readable_content_is_instruction_authority": false,
@@ -70,6 +71,24 @@
       "first_activation_human_review"
     ],
     "successful_test_authorizes_unattended_runtime": false
+  },
+  "temporal_lineage": {
+    "record_is_event": false,
+    "replay_copy_fork_revision_return_is_original_event": false,
+    "modified_time_or_recency_establishes_current": false,
+    "identical_text_or_sha_establishes_same_event": false,
+    "required_for_material_state_transition": [
+      "event_identity",
+      "source_origin",
+      "time",
+      "surface_carrier",
+      "state_before",
+      "action_effect",
+      "state_after",
+      "evidence_impact",
+      "return_review"
+    ],
+    "missing_lineage_action": "HOLD_AFFECTED_ADMISSION_OR_REBUILD"
   },
   "current_public_surfaces": {
     "human_zh_tw": ["README.md", "LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md", "STATUS.md"],
@@ -94,9 +113,10 @@
     "stale_register_reference_does_not_reactivate_missing_or_retired_artifact": true,
     "successor_or_explicit_readmission_required": true,
     "legacy_stub_is_not_required_normal_read": true,
-    "legacy_security_body_is_not_required_normal_read_after_minimum_primitive_compilation": true
+    "legacy_security_body_is_not_required_normal_read_after_minimum_primitive_compilation": true,
+    "legacy_temporal_body_is_not_required_normal_read_after_minimum_primitive_compilation": true
   },
-  "promotion_rule": "LOCATION_NAME_EXTENSION_FORMAT_RECENCY_READABILITY_OR_TEST_SUCCESS_DOES_NOT_ESTABLISH_IDENTITY_CURRENT_AUTHORITY_OR_RUNTIME",
+  "promotion_rule": "LOCATION_NAME_EXTENSION_FORMAT_RECENCY_TIMESTAMP_READABILITY_OR_TEST_SUCCESS_DOES_NOT_ESTABLISH_IDENTITY_CURRENT_AUTHORITY_RUNTIME_OR_EVENT_EQUIVALENCE",
   "release_rule": "PUBLIC_SAFE_AND_RELEASE_APPROVED_ONLY",
   "claim_ceiling": "Public DCP-oriented CoreTri projection; not DCP Native Body, runtime, canon, or authority root"
 }
