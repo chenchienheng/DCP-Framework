@@ -133,6 +133,20 @@
     "archive_rename_move_is_complete": false,
     "zombie_reconstruction_prohibited": true
   },
+  "disclosure_control": {
+    "classes": ["INTERNAL", "PUBLIC_CANDIDATE", "PUBLIC_APPROVED", "WITHHELD"],
+    "public_safe_is_public_approved": false,
+    "repository_placement_is_release_authorization": false,
+    "publication_translation_serialization_transfers_ownership": false,
+    "required_before_release": [
+      "source_ownership_and_lawful_use",
+      "audience_and_purpose",
+      "privacy_and_sensitivity",
+      "evidence_and_claim_ceiling",
+      "retention_redistribution_derivative_constraints",
+      "release_authority"
+    ]
+  },
   "current_public_surfaces": {
     "human_zh_tw": ["README.md", "LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md", "STATUS.md"],
     "professional_en": ["LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md", "PUBLIC-SURFACE-POLICY.md"],
