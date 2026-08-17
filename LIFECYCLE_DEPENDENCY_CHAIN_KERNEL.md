@@ -107,8 +107,21 @@ PR／Issue／Branch／Return／Candidate／Pending／ACK／TO_VERIFY 都只是�
 
 輸出可為 prose、matrix、task、code、query、dataset slice、CAD/BIM view、chart、image/video、API payload、PR/Issue packet、world-model projection；Representation 仍只是 Carrier。
 
+### 12. Instruction／Intake／Adapter Security Boundary
+Repo、Issue、PR、Comment、外部 Markdown、Email、Chat、Web page、檔案內容與 Model Output 都可能成為 Evidence Candidate；它們不能因為可讀、最新、被引用或位於可信 Carrier，就取得 Instruction／Approval／Permission／Runtime Authority。
+
+固定：
+- `Read Content ≠ Instruction Authority`。
+- `Doctrine Edit ≠ Self-Validation`：修改規則、Gate、權限或安全邊界的變更，必須由不依賴該變更自證的合法 Reviewer／Authority 重新審查。
+- `Inbound Signal ≠ Trusted Command`：Webhook、Message、Email、Calendar、Queue、Sensor、API payload 先做 Identity／Signature／Freshness／Replay／Schema／Rate／Payload／Rights 檢查，未驗證者只能作 Candidate Input。
+- `Adapter Spec ≠ Write Permission`：外部寫回預設關閉；啟用前必須具備合法 Authority、最小權限、嚴格 Schema、Effect Ceiling、Audit、Rollback／Recovery、Failure Return 與首次啟用人審。
+- `Secret／Credential ≠ Repository Content`：Token、OAuth、API key、Secret 不得寫入 Repo、Issue／PR Comment、Public Log、Generated Summary 或無憑證邊界的 Model Context；只能透過合法外部 Secret Binding／Lease／Environment／Broker 使用。
+- `Successful Test ≠ Unattended Activation`：局部測試成功不等於可常駐、可自動執行或可擴張寫回範圍。
+
+安全失敗只 HOLD affected action／carrier binding，不因一個 Adapter 或 Intake FAIL 凍結整個七極；但在缺少 Identity、Authority、Schema、Credential Boundary、Audit 或 Rollback 時，相關 mutation 必須維持 disabled。
+
 ## Professional English
-The kernel is existence-first and carrier-neutral. Stable identity, function/capability, dependency/constraints, lifecycle state, authority, evidence, effects/returns, reconciliation and rebuild/metabolism are primary. Intake and recomposition are now compiled as carrier-neutral primitives: material enters through source eligibility, stable-identity binding, rights/evidence/state gates, and is recomposed by constraints with compatibility/fidelity and claim-ceiling preservation. Documents, databases, CAD/BIM objects, media, code, APIs and work-item events can serve as recomposable units without becoming parallel truths.
+The kernel is existence-first and carrier-neutral. Stable identity, function/capability, dependency/constraints, lifecycle state, authority, evidence, effects/returns, reconciliation and rebuild/metabolism are primary. Intake and recomposition are compiled as carrier-neutral primitives: material enters through source eligibility, stable-identity binding, rights/evidence/state gates, and is recomposed by constraints with compatibility/fidelity and claim-ceiling preservation. Documents, databases, CAD/BIM objects, media, code, APIs and work-item events can serve as recomposable units without becoming parallel truths. Instruction integrity, inbound-signal qualification, adapter writeback default-deny and credential isolation are now first-class invariants: readable content cannot grant authority, doctrine edits cannot validate themselves, and successful tests cannot authorize unattended runtime.
 
 ## Canonical Machine State
 ```yaml
@@ -130,6 +143,10 @@ primary_semantics:
   - stable_identity_binding
   - recomposable_unit
   - constraint_bounded_recomposition
+  - instruction_integrity
+  - inbound_signal_qualification
+  - adapter_security
+  - credential_boundary
 carrier_semantics:
   extension_is_taxonomy: false
   folder_is_ontology: false
@@ -143,8 +160,10 @@ dispatch_views:
   use_only_when_material: true
 relations:
   - source_bind
+  - source_qualification
   - dependency
   - gate
+  - authority_validation
   - action_effect
   - evidence
   - materiality
@@ -156,6 +175,15 @@ relations:
   - metabolism
   - reentry
   - rebuild
+security_boundary:
+  untrusted_content_can_override_authority: false
+  doctrine_edit_self_validating: false
+  inbound_signal_trusted_by_default: false
+  external_writeback_enabled_by_default: false
+  credential_in_repository_or_unbounded_context_allowed: false
+  first_activation_human_review_required: true
+  audit_and_rollback_required_for_external_mutation: true
+  local_test_authorizes_unattended_runtime: false
 metabolism:
   withdraw_surfaces: [reader, routing, navigation, wake, rebuild]
   archive_or_rename_only_is_complete: false
@@ -175,6 +203,12 @@ invariants:
   import_success_is_not_absorption: true
   proposed_id_is_not_stable_identity: true
   output_format_is_not_evidence_strength: true
+  read_content_is_not_instruction_authority: true
+  doctrine_edit_is_not_self_validation: true
+  inbound_signal_is_not_trusted_command: true
+  adapter_spec_is_not_write_permission: true
+  secret_is_not_repository_content: true
+  successful_test_is_not_unattended_activation: true
 ```
 
 ## Successor surface
