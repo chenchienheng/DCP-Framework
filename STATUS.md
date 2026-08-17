@@ -126,9 +126,15 @@ Producer／Shared 不得替 Receiver ACK；Summary、Report、Review Pack、Buil
 
 Physical exclusion 只有在 successor coverage、unique evidence／failure、lineage、active caller、rebuild dependency、rights／retention 與 receiver ownership 全部檢查後才可進 final reclaim。
 
-## 10｜Source／Release Boundary
+## 10｜Source／Privacy／Release Boundary
 
 Native source ownership、access、retention、mutation、publication 與 Receiver ACK 留在合法 Domain／Authority chain。公開倉只承載 release-appropriate representations；credentials、privileged routing、private evidence lineage、sensitive source relationships 與 restricted Native Bodies 留在原權域。
+
+公開狀態固定分離：`INTERNAL | PUBLIC_CANDIDATE | PUBLIC_APPROVED | WITHHELD`。技術上已去敏或 public-safe，只代表可能具備發布資格，不代表已取得 Release Authority。
+
+`Public-safe ≠ Public-approved`  
+`Repository placement ≠ Release authorization`  
+`Publication／Translation／Serialization ≠ Ownership transfer`
 
 Human／Professional／Machine profiles可以不同表達，但 Stable Identity、State、Authority、Claim Ceiling、Successor／Return／Rebuild Relation 與 Release Classification 不得暗中漂移。
 
