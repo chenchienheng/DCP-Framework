@@ -55,7 +55,21 @@ Identity
 → Metabolism
 ```
 
-Kernel 同時包含：Source Eligibility、Compatibility／Fidelity、Instruction／Intake／Adapter Security、Temporal Event Lineage、Return Closure、Execution Resource／Stop Gate、雙段 Metabolism 與 Zombie Reconstruction 防止。
+Kernel 同時包含：Source Eligibility、Completeness／Compatibility／Fidelity、Instruction／Intake／Adapter Security、Temporal Event Lineage、Return Closure、Execution Resource／Stop Gate、雙段 Metabolism 與 Zombie Reconstruction 防止。
+
+## Registry／Schema／Review Surface
+
+Index、Registry、Inventory、Label、Acceptance Matrix 與 Review Queue 是 navigation／representation／rebuild projections，不是 Source Truth 或 Authority。
+
+固定：
+
+`Registry Entry ≠ Current／Authority`  
+`Inventory Absence ≠ Nonexistence`  
+`Acceptance Matrix ≠ Completed Verification`  
+`Resolved Review Thread ≠ Global Closeout`  
+`Syntax Parse Success ≠ Semantic Compatibility`
+
+State／Review vocabulary、machine schema、version／revision、required fields 與 pointers 必須相容且可 back-map；不一致只 HOLD affected representation／Admission／Rebuild。
 
 ## Agent-like／Long-running boundary
 
@@ -97,6 +111,8 @@ runtime: false
 promotion: false
 shared_belt_role: pointer_wake_receipt_receiver_state_return_conflict_reentry_rebuild
 classification: stable_existence_and_lifecycle_relations
+registry_index_is_authority: false
+review_plan_is_verification: false
 external_writeback_default: disabled
 agent_like_execution_requires_resource_envelope: true
 release_control: explicit
