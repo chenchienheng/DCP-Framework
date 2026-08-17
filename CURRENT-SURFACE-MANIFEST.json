@@ -24,6 +24,9 @@
       "what_state_is_it_in",
       "who_has_which_authority",
       "what_evidence_supports_it",
+      "is_the_content_instruction_authority_or_only_evidence_candidate",
+      "is_the_inbound_signal_identity_freshness_schema_and_rights_qualified",
+      "is_the_external_effect_authorized_bounded_auditable_and_reversible",
       "what_return_or_rebuild_relation_exists"
     ]
   },
@@ -50,6 +53,24 @@
     "repository_is_state": false,
     "relation_rule": "dependency_evidence_return_reconciliation_reentry_rebuild_are_primary_relations_not_extra_folder_classes"
   },
+  "security_boundary": {
+    "readable_content_is_instruction_authority": false,
+    "doctrine_edit_is_self_validating": false,
+    "inbound_signal_is_trusted_command_by_default": false,
+    "external_writeback_enabled_by_default": false,
+    "credential_or_secret_allowed_in_repository_or_unbounded_model_context": false,
+    "required_before_external_mutation": [
+      "lawful_authority",
+      "qualified_input_identity_and_freshness",
+      "strict_schema_and_effect_ceiling",
+      "least_privilege_credential_binding",
+      "audit_log",
+      "rollback_or_recovery",
+      "failure_return",
+      "first_activation_human_review"
+    ],
+    "successful_test_authorizes_unattended_runtime": false
+  },
   "current_public_surfaces": {
     "human_zh_tw": ["README.md", "LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md", "STATUS.md"],
     "professional_en": ["LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md", "PUBLIC-SURFACE-POLICY.md"],
@@ -72,9 +93,10 @@
     "root_legacy_visibility_does_not_establish_current": true,
     "stale_register_reference_does_not_reactivate_missing_or_retired_artifact": true,
     "successor_or_explicit_readmission_required": true,
-    "legacy_stub_is_not_required_normal_read": true
+    "legacy_stub_is_not_required_normal_read": true,
+    "legacy_security_body_is_not_required_normal_read_after_minimum_primitive_compilation": true
   },
-  "promotion_rule": "LOCATION_NAME_EXTENSION_FORMAT_OR_RECENCY_DOES_NOT_ESTABLISH_IDENTITY_CURRENT_OR_AUTHORITY",
+  "promotion_rule": "LOCATION_NAME_EXTENSION_FORMAT_RECENCY_READABILITY_OR_TEST_SUCCESS_DOES_NOT_ESTABLISH_IDENTITY_CURRENT_AUTHORITY_OR_RUNTIME",
   "release_rule": "PUBLIC_SAFE_AND_RELEASE_APPROVED_ONLY",
   "claim_ceiling": "Public DCP-oriented CoreTri projection; not DCP Native Body, runtime, canon, or authority root"
 }
