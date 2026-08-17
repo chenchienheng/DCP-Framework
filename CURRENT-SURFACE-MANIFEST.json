@@ -54,9 +54,23 @@
     "order_is_not_mandatory": true
   },
   "ccf_gates": {
-    "completeness": "dependency_and_input_sufficiency",
-    "compatibility": "lawful_source_state_authority_representation_composition",
-    "fidelity": "projection_backmap_and_rebuild_faithfulness"
+    "completeness": "dependency_input_and_required_field_sufficiency",
+    "compatibility": "lawful_source_state_authority_vocabulary_schema_and_representation_composition",
+    "fidelity": "projection_backmap_transform_loss_and_rebuild_faithfulness"
+  },
+  "representation_integrity": {
+    "registry_index_inventory_is_native_authority": false,
+    "registry_or_inventory_presence_establishes_current": false,
+    "registry_or_inventory_absence_erases_existence": false,
+    "review_plan_or_acceptance_matrix_is_completed_verification": false,
+    "resolved_thread_is_global_closeout": false,
+    "declared_state_and_review_vocabulary_required": true,
+    "duplicate_machine_keys_allowed": false,
+    "file_name_embedded_version_revision_alignment_required": true,
+    "required_contract_field_must_be_representable": true,
+    "pointer_resolution_required_for_rebuild": true,
+    "syntax_parse_success_is_semantic_compatibility": false,
+    "failure_action": "HOLD_AFFECTED_REPRESENTATION_ADMISSION_OR_REBUILD"
   },
   "security_boundary": {
     "readable_content_is_instruction_authority": false,
@@ -170,9 +184,9 @@
     "stale_register_reference_does_not_reactivate_retired_artifact": true,
     "successor_or_explicit_readmission_required": true,
     "whole_body_reread_as_current": false,
-    "security_temporal_resource_predecessors_required_for_normal_read": false
+    "security_temporal_resource_registry_review_predecessors_required_for_normal_read": false
   },
-  "promotion_rule": "LOCATION_NAME_EXTENSION_FORMAT_RECENCY_TIMESTAMP_READABILITY_ACTIVITY_RESOURCE_AVAILABILITY_OR_TEST_SUCCESS_DOES_NOT_ESTABLISH_IDENTITY_CURRENT_AUTHORITY_RUNTIME_EVENT_EQUIVALENCE_OR_COMPLETION",
+  "promotion_rule": "LOCATION_NAME_EXTENSION_FORMAT_RECENCY_TIMESTAMP_READABILITY_ACTIVITY_RESOURCE_AVAILABILITY_REGISTRY_PRESENCE_REVIEW_STATUS_OR_TEST_SUCCESS_DOES_NOT_ESTABLISH_IDENTITY_CURRENT_AUTHORITY_RUNTIME_EVENT_EQUIVALENCE_VERIFICATION_OR_COMPLETION",
   "release_rule": "PUBLIC_SAFE_AND_RELEASE_APPROVED_ONLY",
-  "claim_ceiling": "Public DCP-oriented CoreTri projection; not DCP Native Body, runtime, canon, authority root, measured billing system, or autonomous agent control plane"
+  "claim_ceiling": "Public DCP-oriented CoreTri projection; not DCP Native Body, runtime, canon, authority root, measured billing system, autonomous agent control plane, or central registry truth"
 }
