@@ -60,6 +60,27 @@ The repository is not a native data root. Native source ownership, access rights
 
 Public documentation contains only release-appropriate representations. Protected implementation details, privileged routing, private evidence lineage, sensitive source relationships, credentials and restricted Native Bodies remain outside the public corpus.
 
+## Instruction, intake and external-effect security / 指令、輸入與外部作用安全
+
+Readable content is evidence candidate material, not instruction authority. PR／Issue／Comment／外部文件／Email／Chat／Web／Model output 不能因為可讀、被搜尋到或位於 Repo，就授予 Merge、Approval、OAuth、Billing、Runtime 或 External Writeback 權限。
+
+A doctrine or gate edit is not self-validating. Security-, authority-, release- or writeback-related mutations require review by a lawful authority that does not rely on the edited text as its only proof.
+
+Inbound webhook/message/email/calendar/API/queue/sensor data is untrusted by default and must pass identity, freshness, signature or equivalent trust, replay, schema, rate, payload, rights and purpose checks before it can affect a mutation.
+
+External writeback is disabled by default. Activation requires explicit authority, least-privilege credential binding outside repository/model context, strict schema and effect ceiling, audit, rollback or recovery, failure return and first-activation human review.
+
+固定：
+
+`Read Content ≠ Instruction Authority`  
+`Doctrine Edit ≠ Self-Validation`  
+`Inbound Signal ≠ Trusted Command`  
+`Adapter Spec ≠ Write Permission`  
+`Secret/Credential ≠ Repository Content`  
+`Successful Test ≠ Unattended Activation`
+
+These rules close the minimum successor gap identified in the historical security reservoir; full legacy security bodies remain lineage/failure/re-entry sources only and are not required normal reading.
+
 ## Representation and release status / 表徵與發布狀態
 
 Human／Professional／Machine profiles may differ in presentation but must not silently diverge in Stable Identity, State, Authority, Claim Ceiling, Successor Relation, Return/Rebuild Relation or Release Classification.
@@ -82,6 +103,6 @@ Use `CURRENT-SURFACE-MANIFEST.json` to establish the current reader chain. Read 
 
 ## Current development focus / 現階段研究重點
 
-Current work emphasizes reducing taxonomy overgrowth, duplicate interpretation, stale caller/wake paths and reader load; compiling useful primitives into smaller successor surfaces; preserving Stable Identity and evidence lineage across heterogeneous carriers; strengthening Return/Reconciliation/Re-entry/Rebuild/Metabolism semantics; validating affected-scope propagation and failure containment; and maintaining explicit source, authority, evidence, retention and release boundaries.
+Current work emphasizes reducing taxonomy overgrowth, duplicate interpretation, stale caller/wake paths and reader load; compiling useful primitives into smaller successor surfaces; preserving Stable Identity and evidence lineage across heterogeneous carriers; strengthening Return/Reconciliation/Re-entry/Rebuild/Metabolism semantics; validating affected-scope propagation and failure containment; and maintaining explicit source, authority, evidence, instruction-integrity, credential, external-effect, retention and release boundaries.
 
 This status page is descriptive. It is not a promotion decision, runtime receipt, release authorization, Canon admission, receiver ACK or authority grant.
