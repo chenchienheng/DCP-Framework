@@ -120,8 +120,24 @@ Repo、Issue、PR、Comment、外部 Markdown、Email、Chat、Web page、檔案
 
 安全失敗只 HOLD affected action／carrier binding，不因一個 Adapter 或 Intake FAIL 凍結整個七極；但在缺少 Identity、Authority、Schema、Credential Boundary、Audit 或 Rollback 時，相關 mutation 必須維持 disabled。
 
+### 13. Temporal Event／State Transition Lineage
+State 不是脫離時間的標籤。任何會改變 dependency、authority、evidence、effect、return、rebuild 或 Current eligibility 的事件，都必須能回溯到具名的 temporal state transition。
+
+最小事件鏈：
+`Event Identity → Source/Origin → Time → Surface/Carrier → State Before → Action/Effect → State After → Evidence/Impact → Return/Review`。
+
+固定：
+- `Record ≠ Event`：Log、Issue、PR、檔案、Screenshot 或摘要只是事件紀錄／表徵，不是事件本身。
+- `Replay／Copy／Fork／Revision／Return ≠ Original Event`：後續複製或重播不能佔用原事件的 Identity；必須保留 predecessor／derived-from relation。
+- `Timestamp／Modified Time ≠ Current`：時間新舊不自動建立 Current／Authority／Truth。
+- `Log ≠ Approval`、`Setting Name ≠ Active Permission`、`Function Availability ≠ Authorized Execution`。
+- State change 若缺 Event Identity、State Before/After、Source、Authority 或 Effect lineage，相關 admission／rebuild 必須 HOLD。
+- 同一 Stable Existence 可有多個時間序列事件與多種 Carrier 記錄，但不得因文字相同、SHA 相同或內容相似而壓成同一原事件。
+
+Temporal lineage 用來區分「同一存在的續演」與「平行副本／回聲／污染重複」；它不建立新的時間中央權威，也不讓 Calendar／Timestamp 取得 Authority。
+
 ## Professional English
-The kernel is existence-first and carrier-neutral. Stable identity, function/capability, dependency/constraints, lifecycle state, authority, evidence, effects/returns, reconciliation and rebuild/metabolism are primary. Intake and recomposition are compiled as carrier-neutral primitives: material enters through source eligibility, stable-identity binding, rights/evidence/state gates, and is recomposed by constraints with compatibility/fidelity and claim-ceiling preservation. Documents, databases, CAD/BIM objects, media, code, APIs and work-item events can serve as recomposable units without becoming parallel truths. Instruction integrity, inbound-signal qualification, adapter writeback default-deny and credential isolation are now first-class invariants: readable content cannot grant authority, doctrine edits cannot validate themselves, and successful tests cannot authorize unattended runtime.
+The kernel is existence-first and carrier-neutral. Stable identity, function/capability, dependency/constraints, lifecycle state, authority, evidence, effects/returns, reconciliation and rebuild/metabolism are primary. Intake and recomposition are compiled as carrier-neutral primitives: material enters through source eligibility, stable-identity binding, rights/evidence/state gates, and is recomposed by constraints with compatibility/fidelity and claim-ceiling preservation. Documents, databases, CAD/BIM objects, media, code, APIs and work-item events can serve as recomposable units without becoming parallel truths. Instruction integrity, inbound-signal qualification, adapter writeback default-deny and credential isolation are first-class invariants. Temporal event lineage now distinguishes the original state-changing event from logs, copies, replays, revisions, forks and returns; recency or identical content cannot establish Current or collapse distinct events.
 
 ## Canonical Machine State
 ```yaml
@@ -147,6 +163,8 @@ primary_semantics:
   - inbound_signal_qualification
   - adapter_security
   - credential_boundary
+  - temporal_event_lineage
+  - state_transition_lineage
 carrier_semantics:
   extension_is_taxonomy: false
   folder_is_ontology: false
@@ -164,6 +182,9 @@ relations:
   - dependency
   - gate
   - authority_validation
+  - event
+  - state_transition
+  - temporal_lineage
   - action_effect
   - evidence
   - materiality
@@ -184,6 +205,13 @@ security_boundary:
   first_activation_human_review_required: true
   audit_and_rollback_required_for_external_mutation: true
   local_test_authorizes_unattended_runtime: false
+temporal_lineage:
+  event_record_required_fields: [event_identity, source_origin, time, surface_carrier, state_before, action_effect, state_after, evidence_impact, return_review]
+  record_is_event: false
+  replay_copy_fork_revision_return_is_original_event: false
+  recency_establishes_current: false
+  identical_content_establishes_same_event: false
+  missing_state_transition_lineage_action: HOLD_AFFECTED_ADMISSION_OR_REBUILD
 metabolism:
   withdraw_surfaces: [reader, routing, navigation, wake, rebuild]
   archive_or_rename_only_is_complete: false
@@ -209,6 +237,10 @@ invariants:
   adapter_spec_is_not_write_permission: true
   secret_is_not_repository_content: true
   successful_test_is_not_unattended_activation: true
+  record_is_not_event: true
+  replay_is_not_original_event: true
+  modified_time_is_not_current: true
+  identical_content_is_not_same_event: true
 ```
 
 ## Successor surface
