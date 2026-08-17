@@ -78,7 +78,30 @@ Material state transition 需能回溯：
 
 Copy、Replay、Fork、Revision、Return 與同 SHA mirror 必須保留 predecessor／derived-from relation；不能因相同內容或較新時間壓成同一 Current。
 
-## 7｜Execution Resource／Stop Gate
+## 7｜Registry／Schema／Review-surface Integrity
+
+Index、Registry、Inventory、Role Table、Label、Acceptance Matrix 與 Review Queue 都只是 Navigation／Representation／Rebuild projection，不是 Native Authority 或 Central Truth。
+
+固定：
+
+`Registry Entry ≠ Current／Authority`  
+`Inventory Absence ≠ Nonexistence`  
+`Acceptance Matrix ≠ Completed Verification`  
+`Resolved Review Thread ≠ Global Closeout`  
+`Syntax Parse Success ≠ Semantic Compatibility`
+
+Machine／Human surface 在 Admission 或 Rebuild 前必須：
+
+- 使用已宣告且相容的 State／Review vocabulary；
+- 無 duplicate machine keys 或會被 parser 靜默覆寫的結構；
+- filename、embedded version、revision／successor relation 對齊；
+- Contract 宣稱 required 的欄位，在實際 schema／table／packet 中可表示；
+- Pointer 可解析，且其 Source／Owner／State／Revision 明確；
+- Register／Index 的 inclusion／omission 不改變 Source truth 或 Authority。
+
+不一致時判 `REPRESENTATION_MISMATCH／COMPATIBILITY_FAIL`，只 HOLD affected representation、Admission 或 Rebuild；不凍結整個 repo／七極。
+
+## 8｜Execution Resource／Stop Gate
 
 Agent-like、長鏈、批量、多工具、多分支或多 Agent 工作，在執行前必須定義：
 
@@ -108,7 +131,7 @@ Agent-like、長鏈、批量、多工具、多分支或多 Agent 工作，在執
 
 缺 Budget／Retry Limit／Stop Condition 時，HOLD affected execution；合法 read-only／report-only 可留在原 scope。
 
-## 8｜Return Closure
+## 9｜Return Closure
 
 Return closure：
 
@@ -116,7 +139,7 @@ Return closure：
 
 Producer／Shared 不得替 Receiver ACK；Summary、Report、Review Pack、Build-ready draft 或 Artifact output 都不等於 Closeout。
 
-## 9｜Metabolism State
+## 10｜Metabolism State
 
 現行代謝：
 
@@ -126,7 +149,7 @@ Producer／Shared 不得替 Receiver ACK；Summary、Report、Review Pack、Buil
 
 Physical exclusion 只有在 successor coverage、unique evidence／failure、lineage、active caller、rebuild dependency、rights／retention 與 receiver ownership 全部檢查後才可進 final reclaim。
 
-## 10｜Source／Privacy／Release Boundary
+## 11｜Source／Privacy／Release Boundary
 
 Native source ownership、access、retention、mutation、publication 與 Receiver ACK 留在合法 Domain／Authority chain。公開倉只承載 release-appropriate representations；credentials、privileged routing、private evidence lineage、sensitive source relationships 與 restricted Native Bodies 留在原權域。
 
@@ -138,7 +161,7 @@ Native source ownership、access、retention、mutation、publication 與 Receiv
 
 Human／Professional／Machine profiles可以不同表達，但 Stable Identity、State、Authority、Claim Ceiling、Successor／Return／Rebuild Relation 與 Release Classification 不得暗中漂移。
 
-## 11｜現階段工作
+## 12｜現階段工作
 
 目前重點是：
 
