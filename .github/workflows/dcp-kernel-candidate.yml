@@ -45,17 +45,36 @@ jobs:
         run: python -m unittest discover -s tests -p 'test*.py' -v
       - name: Produce bounded legacy caller census
         run: python tools/census_legacy_references.py --output artifacts/reference-census.json
-      - name: Validate census JSON
+      - name: Validate withdrawal census evidence
         run: |
           python - <<'PY'
           import json
           from pathlib import Path
+
           payload = json.loads(Path('artifacts/reference-census.json').read_text(encoding='utf-8'))
           assert payload['runtime'] is False
           assert payload['promotion'] is False
           assert payload['destructive_action_authorized'] is False
+          assert payload.get('reclaim_ready', False) is False
+
+          required = {
+              'live_caller_count',
+              'unknown_hold_count',
+              'rebuild_relevant_count',
+              'wake_routing_relevant_count',
+              'caller_absence_proven_on_scanned_text_surface',
+              'rebuild_absence_proven_on_scanned_text_surface',
+              'wake_routing_absence_proven_on_scanned_text_surface',
+              'withdrawal_candidate_on_scanned_text_surface',
+          }
           for family, summary in payload['summary'].items():
+              missing = required - set(summary)
+              assert not missing, (family, sorted(missing))
+              assert 'reclaim_ready' not in summary or summary['reclaim_ready'] is False
               print(family, summary)
+
+          assert 'CALLER_ABSENCE_ONLY_COVERS_SCANNED_TEXT_SURFACE' in payload['claim_boundary']
+          assert 'SCANNED_TEXT_WITHDRAWAL_CANDIDATE_IS_NOT_RECLAIM_AUTHORIZATION' in payload['claim_boundary']
           PY
       - name: Upload bounded census evidence
         uses: actions/upload-artifact@v4
@@ -65,5 +84,5 @@ jobs:
 
 # Passing this workflow proves only the declared bounded checks.
 # It does not establish Native absorption, Platform Runtime, Promotion,
-# autonomy, receiver-owned behavior change, rebuild-dependency absence,
+# autonomy, receiver-owned behavior change, non-text/runtime dependency absence,
 # pooled reclaim authorization, or release approval.
