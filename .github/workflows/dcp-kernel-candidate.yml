@@ -1,0 +1,48 @@
+name: DCP Kernel Candidate Verification
+
+on:
+  push:
+    branches:
+      - ideas/6d-dispatch-projection-20260816
+  pull_request:
+    paths:
+      - 'dcp_kernel/**'
+      - 'contracts/**'
+      - 'fixtures/**'
+      - 'tests/**'
+      - 'pyproject.toml'
+      - '.github/workflows/dcp-kernel-candidate.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  candidate-kernel:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile Python
+        run: python -m compileall -q dcp_kernel tests
+      - name: Parse machine contracts and fixtures
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          for root in (Path('contracts'), Path('fixtures')):
+              if not root.exists():
+                  continue
+              for path in root.rglob('*.json'):
+                  json.loads(path.read_text(encoding='utf-8'))
+                  print(path)
+          PY
+      - name: Run candidate tests
+        run: python -m unittest discover -s tests -p 'test*.py' -v
+
+# Passing this workflow proves only the declared bounded checks.
+# It does not establish Native absorption, Platform Runtime, Promotion,
+# autonomy, receiver-owned behavior change, or release approval.
