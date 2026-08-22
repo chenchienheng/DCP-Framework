@@ -10,6 +10,7 @@ on:
       - 'contracts/**'
       - 'fixtures/**'
       - 'tests/**'
+      - 'tools/**'
       - 'pyproject.toml'
       - '.github/workflows/dcp-kernel-candidate.yml'
 
@@ -27,7 +28,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Compile Python
-        run: python -m compileall -q dcp_kernel tests
+        run: python -m compileall -q dcp_kernel tests tools
       - name: Parse machine contracts and fixtures
         run: |
           python - <<'PY'
@@ -42,7 +43,27 @@ jobs:
           PY
       - name: Run candidate tests
         run: python -m unittest discover -s tests -p 'test*.py' -v
+      - name: Produce bounded legacy caller census
+        run: python tools/census_legacy_references.py --output artifacts/reference-census.json
+      - name: Validate census JSON
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          payload = json.loads(Path('artifacts/reference-census.json').read_text(encoding='utf-8'))
+          assert payload['runtime'] is False
+          assert payload['promotion'] is False
+          assert payload['destructive_action_authorized'] is False
+          for family, summary in payload['summary'].items():
+              print(family, summary)
+          PY
+      - name: Upload bounded census evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: dcp-reference-census
+          path: artifacts/reference-census.json
 
 # Passing this workflow proves only the declared bounded checks.
 # It does not establish Native absorption, Platform Runtime, Promotion,
-# autonomy, receiver-owned behavior change, or release approval.
+# autonomy, receiver-owned behavior change, rebuild-dependency absence,
+# pooled reclaim authorization, or release approval.
