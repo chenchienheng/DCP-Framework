@@ -9,6 +9,7 @@ from .models import Decision
 class CoverageState(str, Enum):
     COVERED = "COVERED"
     COVERED_EVIDENCE_ONLY = "COVERED_EVIDENCE_ONLY"
+    EVIDENCE_ONLY_NO_SUCCESSOR = "EVIDENCE_ONLY_NO_SUCCESSOR"
     PARTIAL_READER_WITHDRAWAL = "PARTIAL_READER_WITHDRAWAL"
     GAP = "GAP"
     ZOMBIE_DEPENDENCY = "ZOMBIE_DEPENDENCY"
@@ -63,10 +64,13 @@ def assess_successor_coverage(item: SuccessorCoverageInput) -> SuccessorCoverage
         if item.unique_evidence:
             return SuccessorCoverageAssessment(
                 decision=Decision.HOLD,
-                state=CoverageState.COVERED_EVIDENCE_ONLY,
+                state=CoverageState.EVIDENCE_ONLY_NO_SUCCESSOR,
                 normal_reader_eligible=False,
                 destructive_action_authorized=False,
-                reasons=("UNIQUE_EVIDENCE_RETAIN_WITHOUT_NORMAL_WAKE",),
+                reasons=(
+                    "UNIQUE_EVIDENCE_RETAIN_WITHOUT_NORMAL_WAKE",
+                    "SUCCESSOR_COVERAGE_NOT_ESTABLISHED",
+                ),
             )
         return SuccessorCoverageAssessment(
             decision=Decision.HOLD,
