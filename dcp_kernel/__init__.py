@@ -23,6 +23,14 @@ from .models import (
     TransitionEvaluation,
     TriRootState,
 )
+from .carrier_binding import (
+    CarrierCandidate,
+    CarrierClass,
+    CarrierNeed,
+    CarrierResolution,
+    resolve_carrier_binding,
+    validate_carrier_substitution,
+)
 from .consequence import (
     ActionResponsibilityContract,
     ConsequenceAssessment,
@@ -44,6 +52,12 @@ from .platform import (
     build_reentry_state,
     compile_work_contract,
     complete_fixture_loop,
+)
+from .reader_policy import (
+    ReaderAssessment,
+    ReaderDisposition,
+    ReaderRequest,
+    assess_reader_request,
 )
 from .resolution import (
     compute_affected_cone,
@@ -78,6 +92,10 @@ __all__ = [
     "AffectedCone",
     "CapabilityBinding",
     "CapabilityResolution",
+    "CarrierCandidate",
+    "CarrierClass",
+    "CarrierNeed",
+    "CarrierResolution",
     "ClaimCeiling",
     "ClaimEvidence",
     "ConsequenceAssessment",
@@ -101,6 +119,9 @@ __all__ = [
     "OwnerExitEvidence",
     "PlatformLoopResult",
     "PlatformPlan",
+    "ReaderAssessment",
+    "ReaderDisposition",
+    "ReaderRequest",
     "ReentryState",
     "RetirementAssessment",
     "RetirementInput",
@@ -120,6 +141,7 @@ __all__ = [
     "WorkContract",
     "assess_learning_input",
     "assess_owner_exit_evidence",
+    "assess_reader_request",
     "assess_retirement",
     "assess_schedule_effect",
     "assess_successor_coverage",
@@ -132,5 +154,7 @@ __all__ = [
     "evaluate_claim_ceiling",
     "evaluate_transition",
     "resolve_capability_binding",
+    "resolve_carrier_binding",
     "resolve_current",
+    "validate_carrier_substitution",
 ]
