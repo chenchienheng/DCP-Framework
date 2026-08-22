@@ -1,6 +1,6 @@
 {
-  "fixture_id": "DCP-FAMILY-CALLER-REBUILD-CENSUS-001",
-  "claim_ceiling": "BOUNDED_SUCCESSOR_BRANCH_OBSERVATION_ONLY",
+  "fixture_id": "DCP-FAMILY-CALLER-REBUILD-CENSUS-002",
+  "claim_ceiling": "BOUNDED_SUCCESSOR_REVIEW_STATE_ONLY",
   "runtime": false,
   "promotion": false,
   "destructive_action_authorized": false,
@@ -11,63 +11,64 @@
       "artifact_listing_complete": true,
       "current_surface_reference": false,
       "normal_reader_role": false,
-      "successor_direction": ["dcp_kernel/reader_policy.py", "dcp_kernel/learning.py", "dcp_kernel/resolution.py", "dcp_kernel/action_gate.py", "dcp_kernel/return_state.py", "dcp_kernel/retirement.py"],
+      "successor_review_complete": true,
       "unique_evidence_review_complete": true,
-      "unique_evidence_unreviewed_count": 0,
+      "unique_evidence_debt_count": 0,
       "caller_audit_complete": false,
       "rebuild_audit_complete": false,
-      "family_state": "AUDIT_INCOMPLETE",
-      "sampled_artifacts": [
-        {"path":"01_runtime-spine/README.md","current_eligibility":false,"role":"LEGACY_PATH_ALIAS","successor":"CURRENT-SURFACE-MANIFEST.json+dcp_kernel/reader_policy.py+dcp_kernel/retirement.py","unique_evidence_required_in_live_body":false,"state":"LINEAGE_ONLY"},
-        {"path":"01_runtime-spine/BOUNDED_READER_PRIORITY_SPECIMEN.md","current_eligibility":false,"successor":"dcp_kernel/reader_policy.py+dcp_kernel/learning.py","unique_evidence_required_in_live_body":false,"state":"SUCCESSOR_COVERED_LINEAGE"},
-        {"path":"01_runtime-spine/DELTA_TRIGGER_LINEAGE_SPECIMEN.md","current_eligibility":false,"successor":"dcp_kernel/learning.py+dcp_kernel/resolution.py","unique_evidence_required_in_live_body":false,"state":"SUCCESSOR_COVERED_LINEAGE"},
-        {"path":"01_runtime-spine/HISTORICAL_WRITE_BOUNDARY_SPECIMEN.md","current_eligibility":false,"successor":"dcp_kernel/action_gate.py+dcp_kernel/return_state.py+dcp_kernel/retirement.py","unique_evidence_required_in_live_body":false,"state":"SUCCESSOR_COVERED_LINEAGE"},
-        {"path":"01_runtime-spine/window_linking_logic_01_07.md","current_eligibility":false,"successor":"dcp_kernel/reader_policy.py+dcp_kernel/resolution.py+dcp_kernel/return_state.py","unique_evidence_required_in_live_body":false,"state":"SUCCESSOR_COVERED_LINEAGE"}
-      ]
+      "reader_routing_wake_withdrawal_proven": false,
+      "family_state": "SUCCESSOR_REVIEW_COMPLETE_CALLER_REBUILD_PENDING",
+      "detail_fixture": "01_runtime-spine non-truncated five-artifact branch tree"
     },
     {
       "family": "03_field-governance",
+      "artifact_count_observed": 22,
+      "artifact_listing_complete": true,
       "current_surface_reference": false,
       "normal_reader_role": false,
-      "successor_direction": ["dcp_kernel/action_gate.py", "dcp_kernel/resolution.py", "dcp_kernel/transition.py", "dcp_kernel/consequence.py", "dcp_kernel/return_state.py", "dcp_kernel/schedule_effect.py", "dcp_kernel/carrier_binding.py", "dcp_kernel/evidence.py", "dcp_kernel/platform.py"],
-      "unique_evidence_review_complete": false,
+      "successor_review_complete": true,
+      "unique_evidence_review_complete": true,
+      "unique_evidence_debt_count": 1,
+      "unique_evidence_debt": "TW_STRATEGY_MOTHERTREE_FEEDBACK historical branch-return provenance retention review",
       "caller_audit_complete": false,
       "rebuild_audit_complete": false,
-      "family_state": "AUDIT_INCOMPLETE",
-      "sampled_artifacts": [
-        {"path":"03_field-governance/ABUNDANCE_UNDER_CONSTRAINT_v0_1.md","current_eligibility":false,"successor":"dcp_kernel/action_gate.py+dcp_kernel/consequence.py","state":"SUCCESSOR_COVERED_LINEAGE"},
-        {"path":"03_field-governance/CLUSTER_INITIATIVE_RHYTHM_PROTOCOL_v0_1.md","current_eligibility":false,"successor":"dcp_kernel/action_gate.py+dcp_kernel/consequence.py+dcp_kernel/return_state.py","state":"SUCCESSOR_COVERED_LINEAGE"},
-        {"path":"03_field-governance/CO_FIELD_DEPENDENCY_MODEL_v0_1.md","current_eligibility":false,"successor":"dcp_kernel/resolution.py+dcp_kernel/action_gate.py+dcp_kernel/return_state.py","state":"SUCCESSOR_COVERED_LINEAGE"},
-        {"path":"03_field-governance/EXPORT_RETURN_PACKET_SCHEMA_v0_1.md","current_eligibility":false,"successor":"contracts/return.schema.json+dcp_kernel/return_state.py+dcp_kernel/consequence.py","state":"SUCCESSOR_COVERED_LINEAGE"},
-        {"path":"03_field-governance/DELEGATION_RETURN_LINEAGE_SPECIMEN.md","current_eligibility":false,"successor":"dcp_kernel/carrier_binding.py+dcp_kernel/action_gate.py+dcp_kernel/return_state.py","state":"SUCCESSOR_COVERED_LINEAGE"},
-        {"path":"03_field-governance/ALL_CLOUD_BOUNDARY_REVIEW_v0_1.md","current_eligibility":false,"successor":"dcp_kernel/action_gate.py+dcp_kernel/carrier_binding.py+dcp_kernel/evidence.py","state":"SUCCESSOR_COVERED_LINEAGE"},
-        {"path":"03_field-governance/ANALYSIS_VIEW_MAP_v0_1.md","current_eligibility":false,"successor":"dcp_kernel/evidence.py+dcp_kernel/carrier_binding.py+dcp_kernel/return_state.py","state":"SUCCESSOR_COVERED_LINEAGE"},
-        {"path":"03_field-governance/EXTERNAL_ROUND_LEDGER_v0_1.md","current_eligibility":false,"successor":"dcp_kernel/reader_policy.py+dcp_kernel/learning.py+dcp_kernel/return_state.py+dcp_kernel/platform.py","state":"SUCCESSOR_COVERED_LINEAGE"}
-      ]
+      "reader_routing_wake_withdrawal_proven": false,
+      "family_state": "SUCCESSOR_REVIEW_COMPLETE_CALLER_REBUILD_PENDING",
+      "detail_fixture": "fixtures/repository/03-field-governance-review.json"
     },
     {
       "family": "04_adapter-layer",
+      "artifact_count_observed": 13,
+      "artifact_listing_complete": true,
       "current_surface_reference": false,
       "normal_reader_role": false,
-      "successor_direction": ["dcp_kernel/carrier_binding.py", "dcp_kernel/reader_policy.py", "dcp_kernel/learning.py", "dcp_kernel/evidence.py", "dcp_kernel/return_state.py"],
-      "unique_evidence_review_complete": false,
+      "successor_review_complete": true,
+      "unique_evidence_review_complete": true,
+      "unique_evidence_debt_count": 1,
+      "unique_evidence_debt": "gemini_gas_sheet_bridge historical GAS/schema provenance review",
       "caller_audit_complete": false,
       "rebuild_audit_complete": false,
-      "family_state": "AUDIT_INCOMPLETE",
-      "sampled_artifacts": [
-        {"path":"04_adapter-layer/activation_order.md","current_eligibility":false,"successor":"dcp_kernel/carrier_binding.py+dcp_kernel/action_gate.py","state":"AUDIT_INCOMPLETE"},
-        {"path":"04_adapter-layer/drive-adapter.md","current_eligibility":false,"successor":"dcp_kernel/carrier_binding.py+dcp_kernel/reader_policy.py","state":"AUDIT_INCOMPLETE"},
-        {"path":"04_adapter-layer/calendar-adapter.md","current_eligibility":false,"successor":"dcp_kernel/carrier_binding.py+dcp_kernel/schedule_effect.py","state":"AUDIT_INCOMPLETE"},
-        {"path":"04_adapter-layer/gamma_entry_spec.md","current_eligibility":false,"successor":"dcp_kernel/carrier_binding.py+dcp_kernel/evidence.py","state":"AUDIT_INCOMPLETE"},
-        {"path":"04_adapter-layer/replit_relay_spec.md","current_eligibility":false,"successor":"dcp_kernel/carrier_binding.py+dcp_kernel/action_gate.py+dcp_kernel/evidence.py","state":"AUDIT_INCOMPLETE"}
-      ]
+      "reader_routing_wake_withdrawal_proven": false,
+      "family_state": "SUCCESSOR_REVIEW_COMPLETE_CALLER_REBUILD_PENDING",
+      "detail_fixture": "fixtures/repository/04-adapter-layer-review.json"
     }
   ],
+  "shared_gates_before_reclaim": [
+    "execute reproducible successor-branch live caller census",
+    "execute rebuild dependency census",
+    "prove normal reader/routing/wake withdrawal",
+    "resolve family-specific provenance retention debts",
+    "perform pooled reclaim review"
+  ],
+  "invariants": [
+    "CURRENT_SURFACE_ABSENCE_DOES_NOT_PROVE_CALLER_ABSENCE",
+    "SUCCESSOR_COVERAGE_DOES_NOT_PROVE_REBUILD_INDEPENDENCE",
+    "UNKNOWN_DEPENDENCY_IS_HOLD_NOT_DELETE_AUTHORITY",
+    "RECLAIM_REQUIRES_CALLER_REBUILD_AND_RETENTION_EVIDENCE"
+  ],
   "notes": [
-    "01_runtime-spine has a complete five-artifact successor-branch listing and bounded unique-evidence review; all five live bodies are successor-covered lineage or alias surfaces.",
-    "03_field-governance bounded review now includes restraint, initiative, shared-field dependency, export/return, delegation, cloud-boundary, analysis-view and continuity-ledger specimens; all reviewed items are Current-ineligible and successor-covered, but the family listing and unique-evidence review are not yet complete.",
-    "Current-surface absence does not prove the absence of every internal caller; branch-local scanner execution remains required.",
-    "Unknown dependencies are HOLD, not fabricated ZOMBIE failures.",
-    "No rename, move, deletion, merge, promotion or Runtime claim is authorized by this fixture."
+    "This fixture corrects stale sampled-review state. 01, 03 and 04 successor body reviews are complete at their declared artifact counts.",
+    "No family is reclaim-ready because live caller, rebuild dependency and reader/routing/wake withdrawal remain unproven.",
+    "No rename, move, delete, merge, promotion, Receiver ACK or Runtime claim is authorized by this fixture."
   ]
 }
