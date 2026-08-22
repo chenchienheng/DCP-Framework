@@ -14,6 +14,13 @@ class KnowledgeState(str, Enum):
     CONFLICT = "CONFLICT"
 
 
+class DimensionState(str, Enum):
+    SATISFIED = "SATISFIED"
+    UNSATISFIED = "UNSATISFIED"
+    UNKNOWN = "UNKNOWN"
+    NOT_APPLICABLE = "NOT_APPLICABLE"
+
+
 @dataclass(frozen=True)
 class JudgmentInput:
     judgment_id: str
@@ -34,6 +41,15 @@ class JudgmentInput:
     counterexample_channel_open: bool = True
     execution_available: bool = False
     execution_requested: bool = False
+    truth_state: DimensionState = DimensionState.UNKNOWN
+    scope_state: DimensionState = DimensionState.UNKNOWN
+    context_state: DimensionState = DimensionState.UNKNOWN
+    goal_state: DimensionState = DimensionState.UNKNOWN
+    cost_state: DimensionState = DimensionState.UNKNOWN
+    risk_state: DimensionState = DimensionState.UNKNOWN
+    relationship_state: DimensionState = DimensionState.NOT_APPLICABLE
+    time_state: DimensionState = DimensionState.UNKNOWN
+    consequence_state: DimensionState = DimensionState.UNKNOWN
 
 
 @dataclass(frozen=True)
@@ -42,13 +58,35 @@ class JudgmentAssessment:
     knowledge_state: KnowledgeState
     execution_permitted_by_judgment: bool
     recommendation_is_decision: bool
+    dimension_states: tuple[tuple[str, DimensionState], ...]
     reasons: tuple[str, ...]
 
 
+def _dimensions(item: JudgmentInput) -> tuple[tuple[str, DimensionState], ...]:
+    return (
+        ("truth", item.truth_state),
+        ("scope", item.scope_state),
+        ("context", item.context_state),
+        ("goal", item.goal_state),
+        ("authority", DimensionState.SATISFIED if item.authority_valid else DimensionState.UNSATISFIED),
+        ("cost", item.cost_state),
+        ("risk", item.risk_state),
+        ("relationship", item.relationship_state),
+        ("time", item.time_state),
+        ("consequence", item.consequence_state),
+    )
+
+
 def assess_judgment(item: JudgmentInput) -> JudgmentAssessment:
-    """Assess judgment without letting expertise, confidence or execution become authority."""
+    """Assess judgment without collapsing truth, scope, context or authority.
+
+    A proposition can be true yet unauthorized, locally valid yet globally unsafe,
+    or legally allowed yet too risky/costly. The evaluator preserves those
+    dimensions instead of forcing them into one RIGHT/WRONG label.
+    """
 
     reasons: list[str] = []
+    dimensions = _dimensions(item)
 
     if not item.source_classified:
         reasons.append("SOURCE_NOT_CLASSIFIED")
@@ -75,7 +113,13 @@ def assess_judgment(item: JudgmentInput) -> JudgmentAssessment:
     if item.execution_requested and not item.execution_available:
         reasons.append("EXECUTION_CAPABILITY_UNAVAILABLE")
 
-    if not item.evidence_sufficient:
+    for name, state in dimensions:
+        if name == "relationship" and state == DimensionState.NOT_APPLICABLE:
+            continue
+        if state == DimensionState.UNSATISFIED:
+            reasons.append(f"DIMENSION_{name.upper()}_UNSATISFIED")
+
+    if not item.evidence_sufficient or item.truth_state == DimensionState.UNKNOWN:
         knowledge = KnowledgeState.UNKNOWN
     elif not item.source_classified or not item.boundary_resolved:
         knowledge = KnowledgeState.INFERRED
@@ -88,7 +132,8 @@ def assess_judgment(item: JudgmentInput) -> JudgmentAssessment:
             knowledge_state=knowledge,
             execution_permitted_by_judgment=False,
             recommendation_is_decision=False,
-            reasons=tuple(reasons),
+            dimension_states=dimensions,
+            reasons=tuple(dict.fromkeys(reasons)),
         )
 
     return JudgmentAssessment(
@@ -96,8 +141,10 @@ def assess_judgment(item: JudgmentInput) -> JudgmentAssessment:
         knowledge_state=knowledge,
         execution_permitted_by_judgment=item.execution_requested,
         recommendation_is_decision=False,
+        dimension_states=dimensions,
         reasons=(
-            "JUDGMENT_CHAIN_COMPLETE",
+            "MULTIDIMENSIONAL_JUDGMENT_CHAIN_COMPLETE",
             "EXPERTISE_CONFIDENCE_AND_RECOMMENDATION_DID_NOT_CREATE_AUTHORITY",
+            "TRUTH_SCOPE_CONTEXT_AUTHORITY_AND_CONSEQUENCE_REMAIN_SEPARATE",
         ),
     )
