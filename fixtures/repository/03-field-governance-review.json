@@ -31,21 +31,22 @@
     {"path":"03_field-governance/SOURCE_DEPENDENCY_VIEW_PRIMITIVE_SPECIMEN.md","state":"SUCCESSOR_COVERED_LINEAGE","successor":["dcp_kernel/resolution.py","dcp_kernel/evidence.py","dcp_kernel/return_state.py"],"unique_live_body_evidence_required":false},
     {"path":"03_field-governance/SOURCE_VIEW_GATE_v0_1.md","state":"SUCCESSOR_COVERED_LINEAGE","successor":["dcp_kernel/evidence.py","dcp_kernel/carrier_binding.py","dcp_kernel/return_state.py"],"unique_live_body_evidence_required":false},
     {"path":"03_field-governance/TOOL_CAPABILITY_ROLE_LINEAGE_SPECIMEN.md","state":"SUCCESSOR_COVERED_LINEAGE","successor":["dcp_kernel/carrier_binding.py","dcp_kernel/action_gate.py","dcp_kernel/resolution.py"],"unique_live_body_evidence_required":false},
-    {"path":"03_field-governance/TW_STRATEGY_MOTHERTREE_FEEDBACK_v0_1.md","state":"HISTORICAL_RETURN_LINEAGE","successor":["dcp_kernel/learning.py","dcp_kernel/evidence.py","dcp_kernel/return_state.py"],"unique_live_body_evidence_required":true,"unique_evidence_reason":"historical branch-return provenance should remain available until caller/rebuild and retention review confirms Git history alone is sufficient"}
+    {"path":"03_field-governance/TW_STRATEGY_MOTHERTREE_FEEDBACK_v0_1.md","state":"SUCCESSOR_COVERED_HISTORICAL_RETURN_LINEAGE","successor":["dcp_kernel/learning.py","dcp_kernel/evidence.py","dcp_kernel/return_state.py"],"unique_live_body_evidence_required":false,"provenance_evidence":{"git_history_sufficient":true,"predecessor_commit":"3779bc4f19abdb6db6a618bc0d977315a55dcd0c","reason":"original Taiwan Strategy branch Return is preserved in repository history; live stub is no longer the unique provenance carrier"}}
   ],
   "summary": {
-    "successor_covered_lineage_count": 21,
+    "successor_covered_lineage_count": 22,
     "historical_return_lineage_count": 1,
     "observable_executable_gap_found": 1,
     "observable_executable_gap_extracted_to": "dcp_kernel/composition.py",
-    "unique_live_body_evidence_pending_count": 1,
+    "unique_live_body_evidence_pending_count": 0,
+    "provenance_debt_closed_count": 1,
     "caller_audit_complete": false,
     "rebuild_dependency_audit_complete": false
   },
   "notes": [
     "All 22 successor-branch artifacts were enumerated from a non-truncated Git tree.",
     "Successor review does not prove absence of every live caller or rebuild dependency.",
-    "The historical Taiwan Strategy return remains evidence-lineage pending retention review; it is not Current Company/Project architecture.",
+    "Taiwan Strategy historical Return provenance is independently recoverable from commit 3779bc4f19abdb6db6a618bc0d977315a55dcd0c; the current stub is not unique evidence.",
     "No file deletion, move, rename, merge, promotion or Runtime claim is authorized by this review."
   ]
 }
