@@ -37,6 +37,7 @@
     "dcp_kernel/successor.py": "semantic successor coverage assessment",
     "dcp_kernel/retirement.py": "physical retirement, stale reference and provenance separation",
     "dcp_kernel/metabolism.py": "repository artifact role and naming-risk classification",
+    "dcp_kernel/family_metabolism.py": "legacy-family completion gate across classification, successor coverage, reader withdrawal and unique evidence review",
     "dcp_kernel/platform.py": "bounded work-contract compiler, rebuild/re-entry and deterministic fixture loop",
     "dcp_kernel/fixtures.py": "data-driven fixture runner; no external execution"
   },
@@ -53,7 +54,8 @@
     "contracts/carrier-binding.schema.json",
     "contracts/owner-exit-evidence.schema.json",
     "contracts/schedule-effect.schema.json",
-    "contracts/successor-coverage.schema.json"
+    "contracts/successor-coverage.schema.json",
+    "contracts/family-metabolism.schema.json"
   ],
   "fixtures": [
     "fixtures/gui-lu/mobility-envelope-intrusion.json",
@@ -71,7 +73,9 @@
     "tests/test_retirement.py",
     "tests/test_metabolism.py",
     "tests/test_reader_policy.py",
-    "tests/test_carrier_binding.py"
+    "tests/test_carrier_binding.py",
+    "tests/test_current_surface_alignment.py",
+    "tests/test_family_metabolism.py"
   ],
   "legacy_family_successor_direction": {
     "01_runtime-spine": [
@@ -120,6 +124,7 @@
   ],
   "latest_batch_verification": {
     "branch_file_writeback": true,
+    "current_surface_reader_withdrawal_test_added": true,
     "local_clone_test": "BLOCKED_BY_EXECUTION_ENVIRONMENT_DNS",
     "github_actions_run_observed": false,
     "test_pass_claim_for_latest_batch": false
@@ -127,6 +132,7 @@
   "claim_ceiling": "BOUNDED_EXECUTABLE_AND_DETERMINISTIC_PLATFORM_FIXTURE_CANDIDATE",
   "required_before_higher_claim": [
     "latest branch test execution or CI evidence",
+    "complete per-family caller/rebuild census before pooled reclaim",
     "branch review and acceptance",
     "receiver-owned Native disposition",
     "real behavior delta",
