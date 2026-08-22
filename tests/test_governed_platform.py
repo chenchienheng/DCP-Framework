@@ -10,7 +10,13 @@ from dcp_kernel import (
 
 
 class GovernedPlatformTests(unittest.TestCase):
-    def setup_chain(self, evidence_sufficient=True, effect=EffectClass.BOUNDED_MUTATION):
+    def setup_chain(
+        self,
+        evidence_sufficient=True,
+        required_effect=EffectClass.BOUNDED_MUTATION,
+        proposed_effect=None,
+    ):
+        proposed_effect = proposed_effect or required_effect
         meaning = compile_meaning(MeaningCompileInput(
             source_id="R1-00-03",
             meaning_statement="判斷不可外包且抽象需凝實",
@@ -49,8 +55,8 @@ class GovernedPlatformTests(unittest.TestCase):
         ))
         action_gate = assess_action_gate(ActionGateInput(
             transition_id="T-GOV",
-            required_effect=effect,
-            proposed_effect=effect,
+            required_effect=required_effect,
+            proposed_effect=proposed_effect,
             risk_level=RiskLevel.MEDIUM,
             authority_valid=True,
             affected_scope_resolved=True,
@@ -144,7 +150,18 @@ class GovernedPlatformTests(unittest.TestCase):
         self.assertEqual(result.work_contract.state, "CANDIDATE")
 
     def test_observe_chain_does_not_require_mutation_intent(self):
-        result = self.compile(chain=self.setup_chain(effect=EffectClass.OBSERVE))
+        result = self.compile(chain=self.setup_chain(
+            required_effect=EffectClass.OBSERVE,
+            proposed_effect=EffectClass.OBSERVE,
+        ))
+        self.assertEqual(result.decision, Decision.PASS)
+        self.assertIsNotNone(result.work_contract)
+
+    def test_observe_choice_under_mutation_ceiling_does_not_require_write_intent(self):
+        result = self.compile(chain=self.setup_chain(
+            required_effect=EffectClass.BOUNDED_MUTATION,
+            proposed_effect=EffectClass.OBSERVE,
+        ))
         self.assertEqual(result.decision, Decision.PASS)
         self.assertIsNotNone(result.work_contract)
 
