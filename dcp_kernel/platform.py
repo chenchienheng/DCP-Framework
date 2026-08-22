@@ -172,6 +172,37 @@ def _blocked_pre_action_plan(
     )
 
 
+def _no_action_plan(*, stable_life: StableLife) -> PlatformPlan:
+    """Represent a deliberate no-action judgment without creating work.
+
+    Choosing not to act is a valid governed outcome. It does not require a
+    capability lease, carrier binding, mutation intent, or WorkContract.
+    """
+
+    current = CurrentResolution(
+        status=CurrentResolutionStatus.CURRENT,
+        selected_revision=stable_life.current_revision,
+        reasons=("NO_ACTION_SELECTED_CURRENT_PRESERVED",),
+    )
+    capability = CapabilityResolution(
+        decision=Decision.PASS,
+        binding=None,
+        reasons=("NO_CAPABILITY_LEASE_REQUIRED_FOR_NO_ACTION",),
+    )
+    return PlatformPlan(
+        decision=Decision.PASS,
+        current=current,
+        capability=capability,
+        affected_cone=AffectedCone(affected=(), excluded={}),
+        transition=None,
+        work_contract=None,
+        reasons=(
+            "NO_ACTION_SELECTED",
+            "RESTRAINT_PRESERVED_WITHOUT_CREATING_WORK",
+        ),
+    )
+
+
 def compile_governed_work_contract(
     *,
     decision_chain: DecisionChainAssessment,
@@ -190,8 +221,8 @@ def compile_governed_work_contract(
 
     Meaning, judgment, coexistence/translation and restraint must pass first.
     A carrier-neutral WriteIntent is required only when the *proposed* effect is
-    an actual mutation.  If mutation is allowed by the ceiling but the chosen
-    action is merely observe/prepare, no mutation contract is forced.
+    an actual mutation. If the chosen action is NO_ACTION, the valid result is a
+    PASS with no capability lease and no WorkContract.
 
     Neither DecisionChain PASS nor WriteIntent PASS grants execution authority.
     """
@@ -202,6 +233,9 @@ def compile_governed_work_contract(
             reason_prefix=f"PRE_ACTION_{decision_chain.first_break or 'CHAIN'}_NOT_PASS",
             reasons=decision_chain.reasons,
         )
+
+    if decision_chain.action_gate.proposed_effect == EffectClass.NO_ACTION:
+        return _no_action_plan(stable_life=stable_life)
 
     mutation_requested = (
         decision_chain.action_gate.proposed_effect >= EffectClass.BOUNDED_MUTATION
