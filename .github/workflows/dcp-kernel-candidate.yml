@@ -58,6 +58,7 @@ jobs:
 
           required = {
               'live_caller_count',
+              'audit_reference_count',
               'unknown_hold_count',
               'rebuild_relevant_reference_count',
               'wake_routing_relevant_reference_count',
@@ -73,6 +74,7 @@ jobs:
               print(family, summary)
 
           boundaries = set(payload['claim_boundary'])
+          assert 'AUDIT_REFERENCE_IS_NOT_LIVE_CALLER' in boundaries
           assert 'CALLER_ABSENCE_ONLY_COVERS_SCANNED_TEXT_SURFACE' in boundaries
           assert 'REBUILD_OR_WAKE_KEYWORD_ABSENCE_DOES_NOT_PROVE_RUNTIME_DEPENDENCY_ABSENCE' in boundaries
           assert 'RECLAIM_READY_IS_NEVER_INFERRED_BY_THIS_CENSUS' in boundaries
