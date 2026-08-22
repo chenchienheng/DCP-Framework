@@ -13,11 +13,13 @@
     "inner_motions": ["IDENTITY", "MEANING", "DEPENDENCY", "STATE", "REALITY", "CAPABILITY", "RETURN", "CONTINUITY"],
     "inner_motion_interpretation": "eight observations of one transition; not eight independent controllers",
     "causal_rebirth": "action -> consequence -> responsibility -> return -> rebuild -> behavior delta -> retest -> next condition",
-    "restraint": "minimum necessary effect over maximum available action; gate pass never grants execution authority"
+    "restraint": "minimum necessary effect over maximum available action; gate pass never grants execution authority",
+    "meaning_compilation": "abstract meaning is a Source only; capability claim requires an observable behavior-difference path through evidence, return and rebuild"
   },
   "modules": {
     "dcp_kernel/models.py": "typed stable-life, capability, transition, return, re-entry and learning contracts",
     "dcp_kernel/learning.py": "receiver-specific bounded learning and contamination gate",
+    "dcp_kernel/meaning_compile.py": "compile abstract meaning into primitive/relation/constraint/gate/action/evidence/return/rebuild candidates without treating philosophy as Runtime instruction",
     "dcp_kernel/reader_policy.py": "bounded reader eligibility and historical re-entry without fixed window order",
     "dcp_kernel/resolution.py": "Current, capability, affected-cone and claim-ceiling resolvers",
     "dcp_kernel/carrier_binding.py": "carrier-neutral capability binding and substitution continuity checks",
@@ -35,9 +37,7 @@
     "dcp_kernel/platform.py": "bounded work-contract compiler, rebuild/re-entry and deterministic fixture loop",
     "dcp_kernel/fixtures.py": "data-driven fixture runner; no external execution"
   },
-  "tools": [
-    "tools/census_legacy_references.py"
-  ],
+  "tools": ["tools/census_legacy_references.py"],
   "machine_contracts": [
     "contracts/stable-life.schema.json",
     "contracts/transition.schema.json",
@@ -53,14 +53,16 @@
     "contracts/owner-exit-evidence.schema.json",
     "contracts/schedule-effect.schema.json",
     "contracts/successor-coverage.schema.json",
-    "contracts/family-metabolism.schema.json"
+    "contracts/family-metabolism.schema.json",
+    "contracts/meaning-compilation.schema.json"
   ],
   "fixtures": [
     "fixtures/gui-lu/mobility-envelope-intrusion.json",
     "fixtures/gui-lu/mobility-envelope-owner-exit-observation.json",
     "fixtures/repository/legacy-successor-coverage-seed.json",
     "fixtures/repository/physical-retirement-observations.json",
-    "fixtures/repository/family-caller-rebuild-census-observations.json"
+    "fixtures/repository/family-caller-rebuild-census-observations.json",
+    "fixtures/meaning/meaning-to-observable-delta.json"
   ],
   "tests": [
     "tests/test_kernel.py",
@@ -76,7 +78,8 @@
     "tests/test_carrier_binding.py",
     "tests/test_current_surface_alignment.py",
     "tests/test_family_metabolism.py",
-    "tests/test_reference_census.py"
+    "tests/test_reference_census.py",
+    "tests/test_meaning_compile.py"
   ],
   "legacy_family_successor_direction": {
     "01_runtime-spine": ["dcp_kernel/reader_policy.py", "dcp_kernel/learning.py", "dcp_kernel/resolution.py", "dcp_kernel/return_state.py", "dcp_kernel/retirement.py"],
@@ -87,18 +90,20 @@
     "01_runtime-spine": "AUDIT_INCOMPLETE",
     "03_field-governance": "AUDIT_INCOMPLETE",
     "04_adapter-layer": "AUDIT_INCOMPLETE",
-    "reason": "current reader wake is withdrawn; reproducible successor-branch census scanner now exists, but its latest full-run evidence is not yet observed"
+    "reason": "current reader wake is withdrawn; reproducible successor-branch census scanner exists, but latest full-run evidence is not observed"
   },
   "bounded_learning_sources": {
     "Ideas-Pole-Projection": ["CURRENT-SURFACE-MANIFEST.json", "README.md"],
     "GLModel-Pole-Projection": ["semantic-core/dcp/current/reader-manifest.json", "semantic-core/dcp/current/reasoning-contamination-gates.json", "semantic-core/dcp/current/receiver-projection-map.json", "semantic-core/dcp/current/return-closure-model.json", "semantic-core/dcp/current/context-assembly-policy.json"]
   },
-  "non_absorbed_boundaries": ["Ideas Native Body", "GLModel World/Object/Geometry Authority", "private evidence bodies", "external tool authority", "repository placement authority", "Runtime or deployment claim"],
+  "non_absorbed_boundaries": ["Ideas Native Body", "GLModel World/Object/Geometry Authority", "private evidence bodies", "external tool authority", "repository placement authority", "Runtime or deployment claim", "abstract meaning as executable authority"],
   "latest_batch_verification": {
     "branch_file_writeback": true,
     "current_surface_reader_withdrawal_test_added": true,
     "family_caller_rebuild_census_seeded": true,
     "reproducible_reference_census_scanner_added": true,
+    "meaning_compiler_added": true,
+    "meaning_observable_fixture_added": true,
     "github_default_branch_search_treated_as_non_current_evidence": true,
     "local_clone_test": "BLOCKED_BY_EXECUTION_ENVIRONMENT_DNS",
     "github_actions_run_observed": false,
