@@ -51,6 +51,30 @@
       "physical_state_on_successor_branch": "ABSENT",
       "retired_semantics": ["DCP over CoreTri over XuanLing hierarchy", "XuanLing as definitive operational layer", "Qinyi or LingLuo as fixed subordinate identity layers"],
       "successor": ["dcp_kernel/coexistence.py", "dcp_kernel/carrier_binding.py", "fixtures/repository/tri-repository-life-operation-compatibility.json"]
+    },
+    {
+      "path": "00_mother-law/existence-chain-master-layer.md",
+      "physical_state_on_successor_branch": "ABSENT",
+      "retired_semantics": ["existence as permanent master axis", "return_to_00 as global completion route"],
+      "successor": ["dcp_kernel/models.py", "dcp_kernel/resolution.py", "contracts/stable-life.schema.json"]
+    },
+    {
+      "path": "UNIFIED_ARTIFACT_REGISTER.md",
+      "physical_state_on_successor_branch": "ABSENT",
+      "retired_semantics": ["single unified durable corpus register", "register as current architecture truth", "fixed family range as ontology"],
+      "successor": ["CURRENT-SURFACE-MANIFEST.json", "dcp_kernel/reader_policy.py", "dcp_kernel/resolution.py", "dcp_kernel/composition.py"]
+    },
+    {
+      "path": "TASK_ORCHESTRATION_BRIDGE_SPEC.md",
+      "physical_state_on_successor_branch": "ABSENT",
+      "retired_semantics": ["ChatGPT as permanent coordinator", "Jules as permanent execution node", "GitHub as mandatory completion and return surface", "AXIS-05 failure route"],
+      "successor": ["dcp_kernel/judgment.py", "dcp_kernel/carrier_binding.py", "dcp_kernel/platform.py", "dcp_kernel/write_intent.py", "dcp_kernel/return_state.py"]
+    },
+    {
+      "path": "WORK_OS_CHAIN_INTEGRATION_SPEC.md",
+      "physical_state_on_successor_branch": "ABSENT",
+      "retired_semantics": ["Work OS as fixed execution-chain organ", "AXIS-01/03/05 permanent binding", "GitHub PR as universal writeback", "fixed tool role by product name"],
+      "successor": ["dcp_kernel/carrier_binding.py", "dcp_kernel/action_gate.py", "dcp_kernel/judgment.py", "dcp_kernel/platform.py", "dcp_kernel/return_state.py"]
     }
   ],
   "invariants": [
@@ -59,7 +83,9 @@
     "PERSISTENT_STATE_REPLACES_PERSISTENT_MASTER_OR_AGENT_ASSUMPTIONS",
     "RETURN_RECONCILES_TO_NATIVE_RECEIVER_NOT_CENTRAL_REGISTRY",
     "HISTORICAL_MASTER_OR_MOTHERTREE_LANGUAGE_DOES_NOT_REGAIN_AUTHORITY_BY_REENTRY",
-    "CROSS_LAYER_RELATION_DOES_NOT_CREATE_PERMANENT_HIERARCHY"
+    "CROSS_LAYER_RELATION_DOES_NOT_CREATE_PERMANENT_HIERARCHY",
+    "PRODUCT_OR_AGENT_NAME_DOES_NOT_CREATE_PERMANENT_EXECUTION_ROLE",
+    "REGISTER_OR_GITHUB_PLACEMENT_DOES_NOT_CREATE_CURRENT_OR_COMPLETION"
   ],
   "claim_boundary": [
     "PHYSICAL_ABSENCE_DOES_NOT_BY_ITSELF_PROVE_NO_HISTORICAL_CALLER",
