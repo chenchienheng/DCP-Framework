@@ -166,7 +166,7 @@ class GovernedPlatformTests(unittest.TestCase):
         self.assertEqual(result.decision, Decision.PASS)
         self.assertIsNotNone(result.work_contract)
 
-    def test_no_action_choice_is_preserved(self):
+    def test_no_action_choice_is_preserved_without_work_contract(self):
         chain = self.setup_chain(
             required_effect=EffectClass.BOUNDED_MUTATION,
             proposed_effect=EffectClass.NO_ACTION,
@@ -174,7 +174,9 @@ class GovernedPlatformTests(unittest.TestCase):
         self.assertEqual(chain.action_gate.proposed_effect, EffectClass.NO_ACTION)
         result = self.compile(chain=chain)
         self.assertEqual(result.decision, Decision.PASS)
-        self.assertIsNotNone(result.work_contract)
+        self.assertIsNone(result.work_contract)
+        self.assertIsNone(result.capability.binding)
+        self.assertIn("NO_ACTION_SELECTED", result.reasons)
 
 
 if __name__ == "__main__":
