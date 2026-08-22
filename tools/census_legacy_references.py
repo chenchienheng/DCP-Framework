@@ -5,14 +5,14 @@ import json
 from collections import Counter, defaultdict
 from pathlib import Path
 
-from dcp_kernel.reference_census import scan_text_map
+from dcp_kernel.reference_census import DependencySignal, scan_text_map
 
 
 TEXT_SUFFIXES = {
     ".md", ".txt", ".json", ".yaml", ".yml", ".py", ".toml", ".ini", ".cfg", ".sh",
 }
 FAMILIES = ("01_runtime-spine", "03_field-governance", "04_adapter-layer")
-SKIP_DIRS = {".git", ".venv", "venv", "node_modules", "__pycache__"}
+SKIP_DIRS = {".git", ".venv", "venv", "node_modules", "__pycache__", "artifacts"}
 
 
 def collect_text_files(root: Path) -> dict[str, str]:
@@ -33,15 +33,19 @@ def collect_text_files(root: Path) -> dict[str, str]:
 def build_payload(root: Path) -> dict[str, object]:
     observations = scan_text_map(collect_text_files(root), FAMILIES)
     by_family: dict[str, Counter[str]] = defaultdict(Counter)
+    dependency_by_family: dict[str, Counter[str]] = defaultdict(Counter)
     rows = []
     for item in observations:
         classification = item.classification.value
+        dependency_signal = item.dependency_signal.value
         by_family[item.target_family][classification] += 1
+        dependency_by_family[item.target_family][dependency_signal] += 1
         rows.append(
             {
                 "caller_path": item.caller_path,
                 "target_family": item.target_family,
                 "classification": classification,
+                "dependency_signal": dependency_signal,
                 "excerpt": item.excerpt,
             }
         )
@@ -49,16 +53,34 @@ def build_payload(root: Path) -> dict[str, object]:
     summary = {}
     for family in FAMILIES:
         counts = by_family[family]
+        dependency_counts = dependency_by_family[family]
+        live = counts.get("LIVE_CALLER", 0)
+        unknown = counts.get("UNKNOWN_HOLD", 0)
+        rebuild_relevant = (
+            dependency_counts.get(DependencySignal.REBUILD_RELEVANT.value, 0)
+            + dependency_counts.get(DependencySignal.REBUILD_AND_WAKE_RELEVANT.value, 0)
+            + dependency_counts.get(DependencySignal.UNKNOWN.value, 0)
+        )
+        wake_relevant = (
+            dependency_counts.get(DependencySignal.WAKE_ROUTING_RELEVANT.value, 0)
+            + dependency_counts.get(DependencySignal.REBUILD_AND_WAKE_RELEVANT.value, 0)
+            + dependency_counts.get(DependencySignal.UNKNOWN.value, 0)
+        )
         summary[family] = {
-            "live_caller_count": counts.get("LIVE_CALLER", 0),
+            "live_caller_count": live,
             "lineage_pointer_count": counts.get("LINEAGE_POINTER", 0),
             "self_reference_count": counts.get("SELF_REFERENCE", 0),
-            "unknown_hold_count": counts.get("UNKNOWN_HOLD", 0),
-            "caller_absence_proven": counts.get("LIVE_CALLER", 0) == 0 and counts.get("UNKNOWN_HOLD", 0) == 0,
+            "unknown_hold_count": unknown,
+            "rebuild_relevant_reference_count": rebuild_relevant,
+            "wake_routing_relevant_reference_count": wake_relevant,
+            "caller_absence_on_scanned_text_surface": live == 0 and unknown == 0,
+            "rebuild_withdrawal_candidate_on_scanned_text_surface": rebuild_relevant == 0,
+            "wake_routing_withdrawal_candidate_on_scanned_text_surface": wake_relevant == 0,
+            "reclaim_ready": False,
         }
 
     return {
-        "artifact_role": "BOUNDED_REFERENCE_CENSUS_EVIDENCE",
+        "artifact_role": "BOUNDED_REFERENCE_AND_WITHDRAWAL_CENSUS_EVIDENCE",
         "runtime": False,
         "promotion": False,
         "destructive_action_authorized": False,
@@ -68,8 +90,17 @@ def build_payload(root: Path) -> dict[str, object]:
         "claim_boundary": [
             "SEARCH_HIT_IS_NOT_CURRENT",
             "UNKNOWN_REFERENCE_IS_HOLD",
+            "KEYWORD_RELEVANCE_IS_REVIEW_SIGNAL_NOT_PROVEN_OPERATIONAL_DEPENDENCY",
             "CALLER_ABSENCE_ONLY_COVERS_SCANNED_TEXT_SURFACE",
-            "CALLER_ABSENCE_DOES_NOT_PROVE_REBUILD_DEPENDENCY_ABSENCE",
+            "REBUILD_OR_WAKE_KEYWORD_ABSENCE_DOES_NOT_PROVE_RUNTIME_DEPENDENCY_ABSENCE",
+            "RECLAIM_READY_IS_NEVER_INFERRED_BY_THIS_CENSUS",
+        ],
+        "required_followup": [
+            "review live and unknown observations",
+            "review rebuild/wake relevant observations",
+            "confirm non-text/runtime/generated dependencies where applicable",
+            "resolve family-specific provenance retention debt",
+            "only then consider pooled reclaim review",
         ],
     }
 
