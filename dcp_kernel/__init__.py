@@ -28,6 +28,7 @@ from .return_state import IllegalReturnTransition, ReturnClosure
 from .schedule_effect import ScheduleEffectAssessment, ScheduleEffectInput, ScheduleEffectState, TriggerClass, assess_schedule_effect
 from .successor import CoverageState, SuccessorCoverageAssessment, SuccessorCoverageInput, assess_successor_coverage
 from .transition import evaluate_transition
+from .write_intent import MutationKind, WriteIntentAssessment, WriteIntentInput, assess_write_intent
 
 __all__ = [
     "ActionGateAssessment", "ActionGateInput", "ActionResponsibilityContract", "AffectedCone",
@@ -38,18 +39,19 @@ __all__ = [
     "DecisionChainAssessment", "EffectClass", "EvidenceMode", "FamilyMetabolismAssessment", "FamilyMetabolismInput",
     "FamilyMetabolismState", "IllegalReturnTransition", "InvariantCore", "JudgmentAssessment", "JudgmentInput",
     "KnowledgeState", "LifecycleState", "LearningAssessment", "LearningDisposition", "LearningInput",
-    "MeaningCompileAssessment", "MeaningCompileInput", "MeaningLevel", "Motion", "MotionObservation", "NativeModel",
-    "Need", "OwnerExitAssessment", "OwnerExitEvidence", "PlatformLoopResult", "PlatformPlan", "ReaderAssessment",
-    "ReaderDisposition", "ReaderRequest", "ReferenceClass", "ReferenceObservation", "ReentryState",
+    "MeaningCompileAssessment", "MeaningCompileInput", "MeaningLevel", "Motion", "MotionObservation", "MutationKind",
+    "NativeModel", "Need", "OwnerExitAssessment", "OwnerExitEvidence", "PlatformLoopResult", "PlatformPlan",
+    "ReaderAssessment", "ReaderDisposition", "ReaderRequest", "ReferenceClass", "ReferenceObservation", "ReentryState",
     "RetirementAssessment", "RetirementInput", "RetirementState", "ReturnClosure", "ReturnState", "RiskLevel",
     "ScheduleEffectAssessment", "ScheduleEffectInput", "ScheduleEffectState", "StableLife", "SuccessorCoverageAssessment",
     "SuccessorCoverageInput", "Transition", "TransitionEvaluation", "TriRootState", "TriggerClass", "UnitDisposition",
-    "UnitState", "WorkContract", "assess_action_gate", "assess_coexistence", "assess_composition",
-    "assess_decision_chain", "assess_family_metabolism", "assess_judgment", "assess_learning_input",
-    "assess_owner_exit_evidence", "assess_reader_request", "assess_retirement", "assess_schedule_effect",
-    "assess_successor_coverage", "build_reentry_state", "classify_reference", "compile_action_responsibility",
-    "compile_governed_work_contract", "compile_meaning", "compile_work_contract", "complete_fixture_loop",
-    "compute_affected_cone", "derive_next_condition", "evaluate_claim_ceiling", "evaluate_transition",
-    "has_proven_live_caller", "has_unknown_hold", "resolve_capability_binding", "resolve_carrier_binding",
-    "resolve_current", "scan_text_map", "validate_carrier_substitution",
+    "UnitState", "WorkContract", "WriteIntentAssessment", "WriteIntentInput", "assess_action_gate",
+    "assess_coexistence", "assess_composition", "assess_decision_chain", "assess_family_metabolism",
+    "assess_judgment", "assess_learning_input", "assess_owner_exit_evidence", "assess_reader_request",
+    "assess_retirement", "assess_schedule_effect", "assess_successor_coverage", "assess_write_intent",
+    "build_reentry_state", "classify_reference", "compile_action_responsibility", "compile_governed_work_contract",
+    "compile_meaning", "compile_work_contract", "complete_fixture_loop", "compute_affected_cone",
+    "derive_next_condition", "evaluate_claim_ceiling", "evaluate_transition", "has_proven_live_caller",
+    "has_unknown_hold", "resolve_capability_binding", "resolve_carrier_binding", "resolve_current",
+    "scan_text_map", "validate_carrier_substitution",
 ]
