@@ -1,51 +1,38 @@
-# Gate 64 Binding Note
+# Transition Gate Lineage — 64-gate predecessor specimen
 
-> Durable note for mapping the 64-gate transition logic to the XLEN / Xuanling runtime.
-> This does not instantiate all 64 gates immediately, but reserves the structural binding space.
+**Lifecycle:** METABOLIZED_HISTORICAL_SPECIMEN  
+**Current eligibility as 64-gate runtime structure:** false  
+**Runtime / Authority:** false
 
----
+舊版以 64 Gate × 12 Window × 三耦面預留「runtime structural binding space」，並設定 `return_to_00=true`。這是早期 transition representation，不是現行固定拓撲；不得因歷史數量、Window 對位或檔案存在而重建 64-gate organ。
 
-## 0. Note Status
+## Retained primitive
 
-- note_version: v0.1
-- purpose: persist transition and gating logic
-- scope: upper-order logic integration
-- return_to_00: true
+Gate 只需要描述一個有界 transition 是否可以合法發生。最小判斷可包含：
+- Stable Identity / state before
+- Need / trigger / material delta
+- dependency / affected scope
+- authority / rights / evidence
+- entry condition
+- permitted effect ceiling
+- action / transform
+- consequence / responsibility
+- exit state / evidence
+- return target / reconciliation / rebuild requirement
 
----
+## Current interpretation
 
-## 1. Core Concept
+- Gate count 不固定；一個 Need 可以沒有 mutation gate，也可以需要多個 domain-specific gate。
+- 12 Window、Bone/Event/Writeback 三面、Gate 01–64 range 都只是 historical representation。
+- Gate PASS ≠ execution authority。
+- Gate presence ≠ Runtime。
+- Gate failure 只 HOLD affected action/relation，不自動導向 00／AXIS／中央 review hub。
+- 新 Gate 只有在既有 primitive 無法表達 material constraint 時才可形成 Candidate，不因編號空位而補齊。
 
-The 64-gate framework provides a bounded matrix for transitions between the 12 windows and 3 coupling faces.
+## Successor binding
 
-A Gate defines:
-1. **Entry condition** (what state must exist before transition)
-2. **Transform rule** (what happens during transition)
-3. **Exit condition** (where the output lands)
+`Need / Event → Identity/State → Dependency/Affected Cone → Judgment/Authority/Evidence → Action Gate → Consequence → Receiver Return → Reconciliation/Rebuild`
 
----
+Machine successors：`dcp_kernel/action_gate.py`、`dcp_kernel/transition.py`、`dcp_kernel/judgment.py`、`dcp_kernel/consequence.py`、`dcp_kernel/return_state.py`。
 
-## 2. Provisional Mapping
-
-| Gate Range | Primary Coupling Focus | Related Windows |
-|---|---|---|
-| 01 - 16 | Bone Coupling | `01`, `05`, `11` |
-| 17 - 48 | Event Coupling | `02`, `03`, `04`, `06`, `09`, `10` |
-| 49 - 64 | Writeback Coupling | `07`, `08`, `12` |
-
-*(This is an illustrative mapping; full 64-gate enumeration will follow in a subsequent phase).*
-
----
-
-## 3. Current Discontinuity Resolution
-
-The creation of this artifact addresses discontinuity **D-008**.
-The transition/gating logic is now bound to a persistent artifact rather than remaining purely concept-heavy.
-
----
-
-## 4. Status
-
-- gate_64_binding_note_created: true
-- full_gate_enumeration: pending
-- return_to_00: true
+完整 64-gate / 12-window predecessor mapping 留 Git history；正常 Reader 不需讀本 specimen。
