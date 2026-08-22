@@ -68,6 +68,7 @@ def build_payload(root: Path) -> dict[str, object]:
         )
         summary[family] = {
             "live_caller_count": live,
+            "audit_reference_count": counts.get("AUDIT_REFERENCE", 0),
             "lineage_pointer_count": counts.get("LINEAGE_POINTER", 0),
             "self_reference_count": counts.get("SELF_REFERENCE", 0),
             "unknown_hold_count": unknown,
@@ -89,6 +90,7 @@ def build_payload(root: Path) -> dict[str, object]:
         "observations": rows,
         "claim_boundary": [
             "SEARCH_HIT_IS_NOT_CURRENT",
+            "AUDIT_REFERENCE_IS_NOT_LIVE_CALLER",
             "UNKNOWN_REFERENCE_IS_HOLD",
             "KEYWORD_RELEVANCE_IS_REVIEW_SIGNAL_NOT_PROVEN_OPERATIONAL_DEPENDENCY",
             "CALLER_ABSENCE_ONLY_COVERS_SCANNED_TEXT_SURFACE",
