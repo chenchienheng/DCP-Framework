@@ -12,6 +12,14 @@ class ReferenceClass(str, Enum):
     UNKNOWN_HOLD = "UNKNOWN_HOLD"
 
 
+class DependencySignal(str, Enum):
+    NONE = "NONE"
+    REBUILD_RELEVANT = "REBUILD_RELEVANT"
+    WAKE_ROUTING_RELEVANT = "WAKE_ROUTING_RELEVANT"
+    REBUILD_AND_WAKE_RELEVANT = "REBUILD_AND_WAKE_RELEVANT"
+    UNKNOWN = "UNKNOWN"
+
+
 CURRENT_SURFACES = {
     "README.md",
     "CURRENT-SURFACE-MANIFEST.json",
@@ -51,6 +59,16 @@ LEGACY_PREFIXES = (
     "archive/",
 )
 
+REBUILD_TOKENS = (
+    "rebuild", "re-entry", "reentry", "reconcile", "reconciliation",
+    "successor", "restore", "loader", "current_revision", "last_good",
+)
+
+WAKE_ROUTING_TOKENS = (
+    "wake", "routing", "route", "reader", "dispatch", "launcher",
+    "entry", "activation", "priority", "current-surface",
+)
+
 
 @dataclass(frozen=True)
 class ReferenceObservation:
@@ -58,6 +76,7 @@ class ReferenceObservation:
     target_family: str
     classification: ReferenceClass
     excerpt: str
+    dependency_signal: DependencySignal = DependencySignal.NONE
 
 
 def classify_reference(caller_path: str, target_family: str) -> ReferenceClass:
@@ -76,6 +95,37 @@ def classify_reference(caller_path: str, target_family: str) -> ReferenceClass:
     return ReferenceClass.UNKNOWN_HOLD
 
 
+def classify_dependency_signal(
+    *,
+    caller_path: str,
+    classification: ReferenceClass,
+    excerpt: str,
+) -> DependencySignal:
+    """Mark whether a reference may participate in rebuild or wake/routing behavior.
+
+    This is evidence triage only. Keyword presence does not prove an operational
+    dependency; it identifies references that require bounded review before family
+    withdrawal or reclaim can be claimed.
+    """
+
+    if classification in {ReferenceClass.SELF_REFERENCE, ReferenceClass.LINEAGE_POINTER}:
+        return DependencySignal.NONE
+    if classification is ReferenceClass.UNKNOWN_HOLD:
+        return DependencySignal.UNKNOWN
+
+    haystack = f"{caller_path} {excerpt}".lower()
+    rebuild = any(token in haystack for token in REBUILD_TOKENS)
+    wake = any(token in haystack for token in WAKE_ROUTING_TOKENS)
+
+    if rebuild and wake:
+        return DependencySignal.REBUILD_AND_WAKE_RELEVANT
+    if rebuild:
+        return DependencySignal.REBUILD_RELEVANT
+    if wake:
+        return DependencySignal.WAKE_ROUTING_RELEVANT
+    return DependencySignal.NONE
+
+
 def scan_text_map(files: dict[str, str], families: tuple[str, ...]) -> tuple[ReferenceObservation, ...]:
     observations: list[ReferenceObservation] = []
     for caller_path, text in files.items():
@@ -84,12 +134,18 @@ def scan_text_map(files: dict[str, str], families: tuple[str, ...]) -> tuple[Ref
             if needle not in text:
                 continue
             excerpt = next((line.strip() for line in text.splitlines() if needle in line), needle)
+            classification = classify_reference(caller_path, family)
             observations.append(
                 ReferenceObservation(
                     caller_path=caller_path,
                     target_family=family,
-                    classification=classify_reference(caller_path, family),
+                    classification=classification,
                     excerpt=excerpt[:240],
+                    dependency_signal=classify_dependency_signal(
+                        caller_path=caller_path,
+                        classification=classification,
+                        excerpt=excerpt,
+                    ),
                 )
             )
     return tuple(observations)
@@ -105,5 +161,29 @@ def has_proven_live_caller(observations: tuple[ReferenceObservation, ...], famil
 def has_unknown_hold(observations: tuple[ReferenceObservation, ...], family: str) -> bool:
     return any(
         item.target_family == family and item.classification is ReferenceClass.UNKNOWN_HOLD
+        for item in observations
+    )
+
+
+def has_rebuild_relevant_reference(observations: tuple[ReferenceObservation, ...], family: str) -> bool:
+    return any(
+        item.target_family == family
+        and item.dependency_signal in {
+            DependencySignal.REBUILD_RELEVANT,
+            DependencySignal.REBUILD_AND_WAKE_RELEVANT,
+            DependencySignal.UNKNOWN,
+        }
+        for item in observations
+    )
+
+
+def has_wake_routing_relevant_reference(observations: tuple[ReferenceObservation, ...], family: str) -> bool:
+    return any(
+        item.target_family == family
+        and item.dependency_signal in {
+            DependencySignal.WAKE_ROUTING_RELEVANT,
+            DependencySignal.REBUILD_AND_WAKE_RELEVANT,
+            DependencySignal.UNKNOWN,
+        }
         for item in observations
     )
