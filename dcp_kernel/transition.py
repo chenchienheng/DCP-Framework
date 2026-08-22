@@ -137,22 +137,31 @@ def evaluate_transition(
         observations.append(_observation(transition, Motion.REALITY, Decision.PASS))
 
     capability_reasons: list[str] = []
-    capability_decision = Decision.PASS
+    capability_fail = False
+    capability_hold = False
     if binding.capability_id != transition.capability_id:
         capability_reasons.append("CAPABILITY_BINDING_MISMATCH")
-        capability_decision = Decision.FAIL
+        capability_fail = True
     if not binding.authority_granted:
         capability_reasons.append("AUTHORITY_NOT_GRANTED")
-        capability_decision = Decision.HOLD
+        capability_hold = True
     if not binding.rights_allowed:
         capability_reasons.append("RIGHTS_NOT_ALLOWED")
-        capability_decision = Decision.FAIL
+        capability_fail = True
     if not binding.evidence_available:
         capability_reasons.append("CAPABILITY_EVIDENCE_MISSING")
-        capability_decision = Decision.HOLD
+        capability_hold = True
     if transition.claims_native_capability and not binding.native_internalized:
         capability_reasons.append("EXTERNAL_CAPABILITY_NOT_NATIVE_INTERNALIZED")
-        capability_decision = Decision.FAIL
+        capability_fail = True
+
+    capability_decision = (
+        Decision.FAIL
+        if capability_fail
+        else Decision.HOLD
+        if capability_hold
+        else Decision.PASS
+    )
 
     observations.append(
         _observation(
