@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xuanling.local/contracts/successor-coverage.schema.json",
+  "title": "DCP Successor Coverage Assessment Input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_path",
+    "successor_id",
+    "successor_executable_or_machine",
+    "active_callers",
+    "rebuild_dependency",
+    "unique_evidence",
+    "normal_reader_wake",
+    "current_routing_reference"
+  ],
+  "properties": {
+    "artifact_path": {"type": "string", "minLength": 1},
+    "successor_id": {"type": ["string", "null"]},
+    "successor_executable_or_machine": {"type": "boolean"},
+    "active_callers": {
+      "type": "array",
+      "items": {"type": "string"},
+      "uniqueItems": true
+    },
+    "rebuild_dependency": {"type": "boolean"},
+    "unique_evidence": {"type": "boolean"},
+    "normal_reader_wake": {"type": "boolean"},
+    "current_routing_reference": {"type": "boolean"}
+  },
+  "x-invariant": "RENAME_MOVE_ARCHIVE_IS_NOT_METABOLISM",
+  "x-destructive-action-authorized": false,
+  "x-runtime": false,
+  "x-promotion": false
+}
