@@ -24,6 +24,7 @@ from .models import (
     TriRootState,
 )
 from .learning import assess_learning_input
+from .platform import PlatformPlan, WorkContract, build_reentry_state, compile_work_contract
 from .resolution import (
     compute_affected_cone,
     evaluate_claim_ceiling,
@@ -52,6 +53,7 @@ __all__ = [
     "Motion",
     "MotionObservation",
     "Need",
+    "PlatformPlan",
     "ReentryState",
     "ReturnClosure",
     "ReturnState",
@@ -59,7 +61,10 @@ __all__ = [
     "Transition",
     "TransitionEvaluation",
     "TriRootState",
+    "WorkContract",
     "assess_learning_input",
+    "build_reentry_state",
+    "compile_work_contract",
     "compute_affected_cone",
     "evaluate_claim_ceiling",
     "evaluate_transition",
