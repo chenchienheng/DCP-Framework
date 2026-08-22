@@ -55,7 +55,8 @@
     "fixtures/gui-lu/mobility-envelope-intrusion.json",
     "fixtures/gui-lu/mobility-envelope-owner-exit-observation.json",
     "fixtures/repository/legacy-successor-coverage-seed.json",
-    "fixtures/repository/physical-retirement-observations.json"
+    "fixtures/repository/physical-retirement-observations.json",
+    "fixtures/repository/family-caller-rebuild-census-observations.json"
   ],
   "tests": [
     "tests/test_kernel.py",
@@ -77,6 +78,12 @@
     "03_field-governance": ["dcp_kernel/action_gate.py", "dcp_kernel/resolution.py", "dcp_kernel/transition.py", "dcp_kernel/consequence.py", "dcp_kernel/return_state.py", "dcp_kernel/schedule_effect.py", "dcp_kernel/platform.py"],
     "04_adapter-layer": ["dcp_kernel/carrier_binding.py", "dcp_kernel/reader_policy.py", "dcp_kernel/learning.py", "dcp_kernel/evidence.py", "dcp_kernel/return_state.py"]
   },
+  "family_census_state": {
+    "01_runtime-spine": "AUDIT_INCOMPLETE",
+    "03_field-governance": "AUDIT_INCOMPLETE",
+    "04_adapter-layer": "AUDIT_INCOMPLETE",
+    "reason": "current reader wake is withdrawn, but complete successor-branch caller and rebuild census is not yet proven"
+  },
   "bounded_learning_sources": {
     "Ideas-Pole-Projection": ["CURRENT-SURFACE-MANIFEST.json", "README.md"],
     "GLModel-Pole-Projection": ["semantic-core/dcp/current/reader-manifest.json", "semantic-core/dcp/current/reasoning-contamination-gates.json", "semantic-core/dcp/current/receiver-projection-map.json", "semantic-core/dcp/current/return-closure-model.json", "semantic-core/dcp/current/context-assembly-policy.json"]
@@ -85,6 +92,7 @@
   "latest_batch_verification": {
     "branch_file_writeback": true,
     "current_surface_reader_withdrawal_test_added": true,
+    "family_caller_rebuild_census_seeded": true,
     "local_clone_test": "BLOCKED_BY_EXECUTION_ENVIRONMENT_DNS",
     "github_actions_run_observed": false,
     "test_pass_claim_for_latest_batch": false
