@@ -23,6 +23,12 @@ from .models import (
     TransitionEvaluation,
     TriRootState,
 )
+from .evidence import (
+    EvidenceMode,
+    OwnerExitAssessment,
+    OwnerExitEvidence,
+    assess_owner_exit_evidence,
+)
 from .learning import assess_learning_input
 from .platform import (
     PlatformLoopResult,
@@ -51,6 +57,7 @@ __all__ = [
     "CurrentResolution",
     "CurrentResolutionStatus",
     "Decision",
+    "EvidenceMode",
     "IllegalReturnTransition",
     "InvariantCore",
     "LifecycleState",
@@ -60,6 +67,8 @@ __all__ = [
     "Motion",
     "MotionObservation",
     "Need",
+    "OwnerExitAssessment",
+    "OwnerExitEvidence",
     "PlatformLoopResult",
     "PlatformPlan",
     "ReentryState",
@@ -71,6 +80,7 @@ __all__ = [
     "TriRootState",
     "WorkContract",
     "assess_learning_input",
+    "assess_owner_exit_evidence",
     "build_reentry_state",
     "compile_work_contract",
     "complete_fixture_loop",
