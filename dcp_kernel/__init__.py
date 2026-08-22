@@ -23,6 +23,13 @@ from .models import (
     TransitionEvaluation,
     TriRootState,
 )
+from .action_gate import (
+    ActionGateAssessment,
+    ActionGateInput,
+    EffectClass,
+    RiskLevel,
+    assess_action_gate,
+)
 from .carrier_binding import (
     CarrierCandidate,
     CarrierClass,
@@ -94,6 +101,8 @@ from .successor import (
 from .transition import evaluate_transition
 
 __all__ = [
+    "ActionGateAssessment",
+    "ActionGateInput",
     "ActionResponsibilityContract",
     "AffectedCone",
     "CapabilityBinding",
@@ -111,6 +120,7 @@ __all__ = [
     "CurrentResolution",
     "CurrentResolutionStatus",
     "Decision",
+    "EffectClass",
     "EvidenceMode",
     "FamilyMetabolismAssessment",
     "FamilyMetabolismInput",
@@ -137,6 +147,7 @@ __all__ = [
     "RetirementState",
     "ReturnClosure",
     "ReturnState",
+    "RiskLevel",
     "ScheduleEffectAssessment",
     "ScheduleEffectInput",
     "ScheduleEffectState",
@@ -148,6 +159,7 @@ __all__ = [
     "TriRootState",
     "TriggerClass",
     "WorkContract",
+    "assess_action_gate",
     "assess_family_metabolism",
     "assess_learning_input",
     "assess_owner_exit_evidence",
