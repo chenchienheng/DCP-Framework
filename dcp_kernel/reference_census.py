@@ -7,6 +7,7 @@ from pathlib import PurePosixPath
 
 class ReferenceClass(str, Enum):
     LIVE_CALLER = "LIVE_CALLER"
+    AUDIT_REFERENCE = "AUDIT_REFERENCE"
     LINEAGE_POINTER = "LINEAGE_POINTER"
     SELF_REFERENCE = "SELF_REFERENCE"
     UNKNOWN_HOLD = "UNKNOWN_HOLD"
@@ -31,9 +32,21 @@ CURRENT_SURFACES = {
 EXECUTABLE_PREFIXES = (
     "dcp_kernel/",
     "contracts/",
-    "tests/",
-    "tools/",
     ".github/",
+)
+
+AUDIT_EXACT_PATHS = {
+    "contracts/implementation-manifest.json",
+    "tools/census_legacy_references.py",
+    "tests/test_reference_census.py",
+    "tests/test_family_metabolism.py",
+    "tests/test_successor_coverage.py",
+    "tests/test_retirement.py",
+    "tests/test_metabolism.py",
+}
+
+AUDIT_PREFIXES = (
+    "fixtures/repository/",
 )
 
 LINEAGE_BASENAMES = {
@@ -80,12 +93,14 @@ class ReferenceObservation:
 
 
 def classify_reference(caller_path: str, target_family: str) -> ReferenceClass:
-    """Classify a reference without equating search visibility with live dependency."""
+    """Classify a reference without equating audit visibility with live dependency."""
     normalized = PurePosixPath(caller_path).as_posix().lstrip("./")
     target = target_family.rstrip("/") + "/"
 
     if normalized.startswith(target):
         return ReferenceClass.SELF_REFERENCE
+    if normalized in AUDIT_EXACT_PATHS or normalized.startswith(AUDIT_PREFIXES):
+        return ReferenceClass.AUDIT_REFERENCE
     if normalized in CURRENT_SURFACES or normalized.startswith(EXECUTABLE_PREFIXES):
         return ReferenceClass.LIVE_CALLER
     if PurePosixPath(normalized).name in LINEAGE_BASENAMES:
@@ -103,12 +118,16 @@ def classify_dependency_signal(
 ) -> DependencySignal:
     """Mark whether a reference may participate in rebuild or wake/routing behavior.
 
-    This is evidence triage only. Keyword presence does not prove an operational
-    dependency; it identifies references that require bounded review before family
-    withdrawal or reclaim can be claimed.
+    Audit/self/lineage references are non-operational by definition for this
+    census. Keyword presence on a live/unknown surface is only a review signal,
+    not proof of an operational dependency.
     """
 
-    if classification in {ReferenceClass.SELF_REFERENCE, ReferenceClass.LINEAGE_POINTER}:
+    if classification in {
+        ReferenceClass.AUDIT_REFERENCE,
+        ReferenceClass.SELF_REFERENCE,
+        ReferenceClass.LINEAGE_POINTER,
+    }:
         return DependencySignal.NONE
     if classification is ReferenceClass.UNKNOWN_HOLD:
         return DependencySignal.UNKNOWN
