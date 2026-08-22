@@ -45,6 +45,12 @@ from .resolution import (
     resolve_current,
 )
 from .return_state import IllegalReturnTransition, ReturnClosure
+from .successor import (
+    CoverageState,
+    SuccessorCoverageAssessment,
+    SuccessorCoverageInput,
+    assess_successor_coverage,
+)
 from .transition import evaluate_transition
 
 __all__ = [
@@ -53,6 +59,7 @@ __all__ = [
     "CapabilityResolution",
     "ClaimCeiling",
     "ClaimEvidence",
+    "CoverageState",
     "CurrentCandidate",
     "CurrentResolution",
     "CurrentResolutionStatus",
@@ -75,12 +82,15 @@ __all__ = [
     "ReturnClosure",
     "ReturnState",
     "StableLife",
+    "SuccessorCoverageAssessment",
+    "SuccessorCoverageInput",
     "Transition",
     "TransitionEvaluation",
     "TriRootState",
     "WorkContract",
     "assess_learning_input",
     "assess_owner_exit_evidence",
+    "assess_successor_coverage",
     "build_reentry_state",
     "compile_work_contract",
     "complete_fixture_loop",
