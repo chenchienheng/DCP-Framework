@@ -10,11 +10,16 @@ from .carrier_binding import CarrierCandidate, CarrierClass, CarrierNeed, Carrie
 from .coexistence import CompatibilityState, CoexistenceAssessment, CoexistenceInput, NativeModel, assess_coexistence
 from .composition import CompositionAssessment, CompositionInput, CompositionUnit, UnitDisposition, UnitState, assess_composition
 from .consequence import ActionResponsibilityContract, ConsequenceAssessment, ConsequenceInput, compile_action_responsibility, derive_next_condition
+from .decision_chain import DecisionChainAssessment, assess_decision_chain
 from .evidence import EvidenceMode, OwnerExitAssessment, OwnerExitEvidence, assess_owner_exit_evidence
 from .family_metabolism import FamilyMetabolismAssessment, FamilyMetabolismInput, FamilyMetabolismState, assess_family_metabolism
+from .judgment import JudgmentAssessment, JudgmentInput, KnowledgeState, assess_judgment
 from .learning import assess_learning_input
 from .meaning_compile import MeaningCompileAssessment, MeaningCompileInput, MeaningLevel, compile_meaning
-from .platform import PlatformLoopResult, PlatformPlan, WorkContract, build_reentry_state, compile_work_contract, complete_fixture_loop
+from .platform import (
+    PlatformLoopResult, PlatformPlan, WorkContract, build_reentry_state,
+    compile_governed_work_contract, compile_work_contract, complete_fixture_loop,
+)
 from .reader_policy import ReaderAssessment, ReaderDisposition, ReaderRequest, assess_reader_request
 from .reference_census import ReferenceClass, ReferenceObservation, classify_reference, has_proven_live_caller, has_unknown_hold, scan_text_map
 from .resolution import compute_affected_cone, evaluate_claim_ceiling, resolve_capability_binding, resolve_current
@@ -29,20 +34,22 @@ __all__ = [
     "CapabilityBinding", "CapabilityResolution", "CarrierCandidate", "CarrierClass", "CarrierNeed", "CarrierResolution",
     "ClaimCeiling", "ClaimEvidence", "CompatibilityState", "CoexistenceAssessment", "CoexistenceInput",
     "CompositionAssessment", "CompositionInput", "CompositionUnit", "ConsequenceAssessment", "ConsequenceInput",
-    "CoverageState", "CurrentCandidate", "CurrentResolution", "CurrentResolutionStatus", "Decision", "EffectClass",
-    "EvidenceMode", "FamilyMetabolismAssessment", "FamilyMetabolismInput", "FamilyMetabolismState",
-    "IllegalReturnTransition", "InvariantCore", "LifecycleState", "LearningAssessment", "LearningDisposition",
-    "LearningInput", "MeaningCompileAssessment", "MeaningCompileInput", "MeaningLevel", "Motion", "MotionObservation",
-    "NativeModel", "Need", "OwnerExitAssessment", "OwnerExitEvidence", "PlatformLoopResult", "PlatformPlan",
-    "ReaderAssessment", "ReaderDisposition", "ReaderRequest", "ReferenceClass", "ReferenceObservation", "ReentryState",
+    "CoverageState", "CurrentCandidate", "CurrentResolution", "CurrentResolutionStatus", "Decision",
+    "DecisionChainAssessment", "EffectClass", "EvidenceMode", "FamilyMetabolismAssessment", "FamilyMetabolismInput",
+    "FamilyMetabolismState", "IllegalReturnTransition", "InvariantCore", "JudgmentAssessment", "JudgmentInput",
+    "KnowledgeState", "LifecycleState", "LearningAssessment", "LearningDisposition", "LearningInput",
+    "MeaningCompileAssessment", "MeaningCompileInput", "MeaningLevel", "Motion", "MotionObservation", "NativeModel",
+    "Need", "OwnerExitAssessment", "OwnerExitEvidence", "PlatformLoopResult", "PlatformPlan", "ReaderAssessment",
+    "ReaderDisposition", "ReaderRequest", "ReferenceClass", "ReferenceObservation", "ReentryState",
     "RetirementAssessment", "RetirementInput", "RetirementState", "ReturnClosure", "ReturnState", "RiskLevel",
     "ScheduleEffectAssessment", "ScheduleEffectInput", "ScheduleEffectState", "StableLife", "SuccessorCoverageAssessment",
     "SuccessorCoverageInput", "Transition", "TransitionEvaluation", "TriRootState", "TriggerClass", "UnitDisposition",
     "UnitState", "WorkContract", "assess_action_gate", "assess_coexistence", "assess_composition",
-    "assess_family_metabolism", "assess_learning_input", "assess_owner_exit_evidence", "assess_reader_request",
-    "assess_retirement", "assess_schedule_effect", "assess_successor_coverage", "build_reentry_state",
-    "classify_reference", "compile_action_responsibility", "compile_meaning", "compile_work_contract",
-    "complete_fixture_loop", "compute_affected_cone", "derive_next_condition", "evaluate_claim_ceiling",
-    "evaluate_transition", "has_proven_live_caller", "has_unknown_hold", "resolve_capability_binding",
-    "resolve_carrier_binding", "resolve_current", "scan_text_map", "validate_carrier_substitution",
+    "assess_decision_chain", "assess_family_metabolism", "assess_judgment", "assess_learning_input",
+    "assess_owner_exit_evidence", "assess_reader_request", "assess_retirement", "assess_schedule_effect",
+    "assess_successor_coverage", "build_reentry_state", "classify_reference", "compile_action_responsibility",
+    "compile_governed_work_contract", "compile_meaning", "compile_work_contract", "complete_fixture_loop",
+    "compute_affected_cone", "derive_next_condition", "evaluate_claim_ceiling", "evaluate_transition",
+    "has_proven_live_caller", "has_unknown_hold", "resolve_capability_binding", "resolve_carrier_binding",
+    "resolve_current", "scan_text_map", "validate_carrier_substitution",
 ]
