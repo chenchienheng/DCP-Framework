@@ -14,12 +14,16 @@
     "inner_motion_interpretation": "eight observations of one transition; not eight independent controllers",
     "causal_rebirth": "action -> consequence -> responsibility -> return -> rebuild -> behavior delta -> retest -> next condition",
     "restraint": "minimum necessary effect over maximum available action; gate pass never grants execution authority",
-    "meaning_compilation": "abstract meaning is a Source only; capability claim requires an observable behavior-difference path through evidence, return and rebuild"
+    "meaning_compilation": "abstract meaning is a Source only; capability claim requires observable behavior difference through evidence, return and rebuild",
+    "coexistence": "same source does not imply same identity; heterogeneous Native logics may coexist through explicit translation, compatibility and shared evidence interfaces without authority merge",
+    "composition": "eligible evidence/capability units may be composed only after rights, authority, lifecycle, compatibility, fidelity and evidence checks; local composition does not imply global closure"
   },
   "modules": {
     "dcp_kernel/models.py": "typed stable-life, capability, transition, return, re-entry and learning contracts",
     "dcp_kernel/learning.py": "receiver-specific bounded learning and contamination gate",
-    "dcp_kernel/meaning_compile.py": "compile abstract meaning into primitive/relation/constraint/gate/action/evidence/return/rebuild candidates without treating philosophy as Runtime instruction",
+    "dcp_kernel/meaning_compile.py": "compile abstract meaning into primitive/relation/constraint/gate/action/evidence/return/rebuild candidates",
+    "dcp_kernel/coexistence.py": "preserve heterogeneous Native logics while requiring explicit translation/compatibility/evidence for cross-model claims",
+    "dcp_kernel/composition.py": "bounded composition of eligible units without authority or claim-ceiling inflation",
     "dcp_kernel/reader_policy.py": "bounded reader eligibility and historical re-entry without fixed window order",
     "dcp_kernel/resolution.py": "Current, capability, affected-cone and claim-ceiling resolvers",
     "dcp_kernel/carrier_binding.py": "carrier-neutral capability binding and substitution continuity checks",
@@ -54,7 +58,9 @@
     "contracts/schedule-effect.schema.json",
     "contracts/successor-coverage.schema.json",
     "contracts/family-metabolism.schema.json",
-    "contracts/meaning-compilation.schema.json"
+    "contracts/meaning-compilation.schema.json",
+    "contracts/coexistence-translation.schema.json",
+    "contracts/composition.schema.json"
   ],
   "fixtures": [
     "fixtures/gui-lu/mobility-envelope-intrusion.json",
@@ -62,6 +68,7 @@
     "fixtures/repository/legacy-successor-coverage-seed.json",
     "fixtures/repository/physical-retirement-observations.json",
     "fixtures/repository/family-caller-rebuild-census-observations.json",
+    "fixtures/repository/03-field-governance-review.json",
     "fixtures/meaning/meaning-to-observable-delta.json"
   ],
   "tests": [
@@ -79,33 +86,37 @@
     "tests/test_current_surface_alignment.py",
     "tests/test_family_metabolism.py",
     "tests/test_reference_census.py",
-    "tests/test_meaning_compile.py"
+    "tests/test_meaning_compile.py",
+    "tests/test_coexistence.py",
+    "tests/test_composition.py"
   ],
   "legacy_family_successor_direction": {
     "01_runtime-spine": ["dcp_kernel/reader_policy.py", "dcp_kernel/learning.py", "dcp_kernel/resolution.py", "dcp_kernel/return_state.py", "dcp_kernel/retirement.py"],
-    "03_field-governance": ["dcp_kernel/action_gate.py", "dcp_kernel/resolution.py", "dcp_kernel/transition.py", "dcp_kernel/consequence.py", "dcp_kernel/return_state.py", "dcp_kernel/schedule_effect.py", "dcp_kernel/platform.py"],
+    "03_field-governance": ["dcp_kernel/action_gate.py", "dcp_kernel/resolution.py", "dcp_kernel/coexistence.py", "dcp_kernel/composition.py", "dcp_kernel/transition.py", "dcp_kernel/consequence.py", "dcp_kernel/return_state.py", "dcp_kernel/schedule_effect.py", "dcp_kernel/platform.py"],
     "04_adapter-layer": ["dcp_kernel/carrier_binding.py", "dcp_kernel/reader_policy.py", "dcp_kernel/learning.py", "dcp_kernel/evidence.py", "dcp_kernel/return_state.py"]
   },
   "family_census_state": {
     "01_runtime-spine": "AUDIT_INCOMPLETE",
-    "03_field-governance": "AUDIT_INCOMPLETE",
+    "03_field-governance": "SUCCESSOR_REVIEW_COMPLETE_CALLER_REBUILD_PENDING",
     "04_adapter-layer": "AUDIT_INCOMPLETE",
-    "reason": "current reader wake is withdrawn; reproducible successor-branch census scanner exists, but latest full-run evidence is not observed"
+    "reason": "01 and 04 still require complete caller/rebuild evidence; 03 has a complete 22-artifact successor review but caller/rebuild census is not yet proven"
   },
   "bounded_learning_sources": {
     "Ideas-Pole-Projection": ["CURRENT-SURFACE-MANIFEST.json", "README.md"],
     "GLModel-Pole-Projection": ["semantic-core/dcp/current/reader-manifest.json", "semantic-core/dcp/current/reasoning-contamination-gates.json", "semantic-core/dcp/current/receiver-projection-map.json", "semantic-core/dcp/current/return-closure-model.json", "semantic-core/dcp/current/context-assembly-policy.json"]
   },
-  "non_absorbed_boundaries": ["Ideas Native Body", "GLModel World/Object/Geometry Authority", "private evidence bodies", "external tool authority", "repository placement authority", "Runtime or deployment claim", "abstract meaning as executable authority"],
+  "non_absorbed_boundaries": ["Ideas Native Body", "GLModel World/Object/Geometry Authority", "private evidence bodies", "external tool authority", "repository placement authority", "Runtime or deployment claim", "abstract meaning as executable authority", "cross-model coexistence as identity or authority merge"],
   "latest_batch_verification": {
     "branch_file_writeback": true,
     "current_surface_reader_withdrawal_test_added": true,
     "family_caller_rebuild_census_seeded": true,
     "reproducible_reference_census_scanner_added": true,
     "meaning_compiler_added": true,
-    "meaning_observable_fixture_added": true,
+    "coexistence_translation_added": true,
+    "bounded_composition_added": true,
+    "03_field_governance_complete_listing": 22,
+    "03_field_governance_successor_review_complete": true,
     "github_default_branch_search_treated_as_non_current_evidence": true,
-    "local_clone_test": "BLOCKED_BY_EXECUTION_ENVIRONMENT_DNS",
     "github_actions_run_observed": false,
     "test_pass_claim_for_latest_batch": false
   },
