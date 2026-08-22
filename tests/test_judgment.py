@@ -1,6 +1,6 @@
 import unittest
 
-from dcp_kernel.judgment import JudgmentInput, KnowledgeState, assess_judgment
+from dcp_kernel.judgment import DimensionState, JudgmentInput, KnowledgeState, assess_judgment
 from dcp_kernel.models import Decision
 
 
@@ -25,6 +25,15 @@ class JudgmentTests(unittest.TestCase):
             counterexample_channel_open=True,
             execution_available=True,
             execution_requested=False,
+            truth_state=DimensionState.SATISFIED,
+            scope_state=DimensionState.SATISFIED,
+            context_state=DimensionState.SATISFIED,
+            goal_state=DimensionState.SATISFIED,
+            cost_state=DimensionState.SATISFIED,
+            risk_state=DimensionState.SATISFIED,
+            relationship_state=DimensionState.NOT_APPLICABLE,
+            time_state=DimensionState.SATISFIED,
+            consequence_state=DimensionState.SATISFIED,
         )
         data.update(changes)
         return JudgmentInput(**data)
@@ -53,6 +62,21 @@ class JudgmentTests(unittest.TestCase):
         self.assertEqual(result.decision, Decision.PASS)
         self.assertTrue(result.execution_permitted_by_judgment)
         self.assertFalse(result.recommendation_is_decision)
+
+    def test_true_but_unauthorized_is_preserved_as_hold(self):
+        result = assess_judgment(self.base(authority_valid=False))
+        states = dict(result.dimension_states)
+        self.assertEqual(states["truth"], DimensionState.SATISFIED)
+        self.assertEqual(states["authority"], DimensionState.UNSATISFIED)
+        self.assertEqual(result.decision, Decision.HOLD)
+
+    def test_locally_valid_but_globally_unsafe_does_not_collapse_to_wrong(self):
+        result = assess_judgment(self.base(risk_state=DimensionState.UNSATISFIED))
+        states = dict(result.dimension_states)
+        self.assertEqual(states["truth"], DimensionState.SATISFIED)
+        self.assertEqual(states["scope"], DimensionState.SATISFIED)
+        self.assertEqual(states["risk"], DimensionState.UNSATISFIED)
+        self.assertEqual(result.decision, Decision.HOLD)
 
 
 if __name__ == "__main__":
