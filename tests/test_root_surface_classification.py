@@ -14,8 +14,8 @@ class RootSurfaceClassificationTests(unittest.TestCase):
         payload = self.payload()
         retired = set(payload["retired_absent"])
         retained = {item["path"] for item in payload["retained_deentitled"]}
-        self.assertEqual(len(retired), 17)
-        self.assertEqual(len(retained), 3)
+        self.assertEqual(len(retired), 19)
+        self.assertEqual(len(retained), 4)
         self.assertTrue(retired.isdisjoint(retained))
 
     def test_retained_surfaces_are_explicitly_deentitled(self):
