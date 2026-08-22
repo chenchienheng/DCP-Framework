@@ -61,6 +61,14 @@ class ClaimCeiling(str, Enum):
     RUNTIME = "RUNTIME"
 
 
+class LearningDisposition(str, Enum):
+    READ_AFFECTED_SLICE = "READ_AFFECTED_SLICE"
+    REUSE_NO_REPROPAGATION = "REUSE_NO_REPROPAGATION"
+    NO_MATERIAL_DELTA = "NO_MATERIAL_DELTA"
+    RECEIVER_NOT_AFFECTED = "RECEIVER_NOT_AFFECTED"
+    HOLD_CONTAMINATION = "HOLD_CONTAMINATION"
+
+
 @dataclass(frozen=True)
 class InvariantCore:
     identity_anchor: str
@@ -199,3 +207,24 @@ class ReentryState:
     pending_returns: tuple[str, ...]
     cursor: str | None
     ack_owner: str | None
+
+
+@dataclass(frozen=True)
+class LearningInput:
+    source_id: str
+    source_revision: str
+    receiver: str
+    affected_receivers: tuple[str, ...]
+    material_delta: bool
+    equivalent_receipt_exists: bool = False
+    historical: bool = False
+    reentry_purpose: str | None = None
+    native_body_copy_requested: bool = False
+    authority_in_scope: bool = True
+
+
+@dataclass(frozen=True)
+class LearningAssessment:
+    decision: Decision
+    disposition: LearningDisposition
+    reasons: tuple[str, ...] = ()
