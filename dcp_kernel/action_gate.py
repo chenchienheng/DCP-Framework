@@ -41,6 +41,7 @@ class ActionGateInput:
 class ActionGateAssessment:
     decision: Decision
     transition_id: str
+    proposed_effect: EffectClass
     permitted_effect_ceiling: EffectClass
     execution_authorized: bool
     reasons: tuple[str, ...]
@@ -83,6 +84,7 @@ def assess_action_gate(item: ActionGateInput) -> ActionGateAssessment:
         return ActionGateAssessment(
             decision=Decision.HOLD,
             transition_id=item.transition_id,
+            proposed_effect=item.proposed_effect,
             permitted_effect_ceiling=item.required_effect,
             execution_authorized=False,
             reasons=tuple(reasons),
@@ -91,6 +93,7 @@ def assess_action_gate(item: ActionGateInput) -> ActionGateAssessment:
     return ActionGateAssessment(
         decision=Decision.PASS,
         transition_id=item.transition_id,
+        proposed_effect=item.proposed_effect,
         permitted_effect_ceiling=item.required_effect,
         execution_authorized=False,
         reasons=(
