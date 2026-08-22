@@ -1,59 +1,31 @@
-# Writeback Packet Contract
+# External Mutation Packet — Historical Lineage Specimen
 
-Department: Adapter Layer
-Agent Block: Packet Contract
-Node ID: ADP-006
-Window: W0
-Platform Writer: ChatGPT
-Version: v0.1
-Status: active
+**Lifecycle:** METABOLIZED_PRIMITIVE_STUB  
+**Current eligibility as active W0 packet contract:** false  
+**Executable authority:** none  
+**Reclaim disposition:** CANDIDATE_AFTER_POINTER_AND_CALLER_CHECK
 
-## Core
-Every external writeback must use one packet shape.
+舊版固定 `Department / Agent Block / Node ID / Window / Platform Writer / GitHub target` 為 universal writeback packet，並標為 active。此 actor/window/repository topology 已退休。
 
-## Required Fields
-- department
-- agent_block
-- node_id
-- window
-- platform_writer
-- source_object
-- source_path
-- target_path
-- version
-- log_ref
-- timestamp
-- action
-- payload
+## Retained primitives
+一個 mutation intent 必須保留可重建的最小資訊：
+- Stable Life / Source Identity
+- Target Carrier / Mutation Kind
+- Authority / Rights / Purpose
+- Affected Scope
+- Expected Revision when mutation is revision-sensitive
+- Fidelity / Evidence plan
+- Responsibility Owner
+- Rollback / Recovery
+- Return Target
 
-## Action Types
-- create
-- update
-- append_log
-- sync_status
+這些欄位描述 effect 與責任，不建立固定 Department／Agent／Window／Platform Writer ontology。
 
-## Minimal Packet Example
-```yaml
-department: Adapter Layer
-agent_block: Replit Relay
-node_id: ADP-006
-window: W0
-platform_writer: ChatGPT
-source_object: task_follow_up
-source_path: 02_runtime-ops/task_follow_up.md
-target_path: 02_runtime-ops/task_follow_up.md
-version: v0.1
-log_ref: LOG-0001
-timestamp: 2026-04-09T00:00:00+08:00
-action: update
-payload:
-  title: follow-up item
-  status: open
-  owner: runtime
-```
+## Executable successor
+- `dcp_kernel/write_intent.py`
+- `contracts/write-intent.schema.json`
+- `tests/test_write_intent.py`
 
-## Validation Rule
-Reject packet if any required field is missing.
+成功 mutation 後仍須產生 Evidence／Return／Receiver reconciliation；Write success ≠ Absorption。
 
-## Return Rule
-Successful writeback must append one log entry after write completes.
+完整 predecessor packet example 留 Git history；正常 Reader 不需讀本 specimen。
