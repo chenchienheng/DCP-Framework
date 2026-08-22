@@ -1,0 +1,49 @@
+{
+  "artifact_role": "ROOT_CONTROL_SURFACE_RETIREMENT_EVIDENCE",
+  "runtime": false,
+  "promotion": false,
+  "destructive_reclaim_authorized": false,
+  "retired_surfaces": [
+    {
+      "path": "MULTI_CHAIN_DISPATCH_GOVERNANCE.md",
+      "physical_state_on_successor_branch": "ABSENT",
+      "retired_semantics": ["single unified dispatch controller", "AXIS-bound routing", "central registry return", "human-chain absolute override"],
+      "successor": ["dcp_kernel/decision_chain.py", "dcp_kernel/action_gate.py", "dcp_kernel/platform.py", "dcp_kernel/return_state.py"]
+    },
+    {
+      "path": "REVIEW_CHAIN_MASTER_LAYER.md",
+      "physical_state_on_successor_branch": "ABSENT",
+      "retired_semantics": ["review as master axis", "global review controller"],
+      "successor": ["dcp_kernel/evidence.py", "dcp_kernel/judgment.py", "dcp_kernel/return_state.py"]
+    },
+    {
+      "path": "TIME_CHAIN_MASTER_LAYER.md",
+      "physical_state_on_successor_branch": "ABSENT",
+      "retired_semantics": ["all runtime bound to time master", "scheduler topology as authority"],
+      "successor": ["dcp_kernel/activation.py", "dcp_kernel/schedule_effect.py", "dcp_kernel/return_state.py"]
+    },
+    {
+      "path": "SPACE_CHAIN_MASTER_LAYER.md",
+      "physical_state_on_successor_branch": "ABSENT",
+      "retired_semantics": ["spatial master axis", "folder or placement as required ontology"],
+      "successor": ["dcp_kernel/models.py", "dcp_kernel/resolution.py", "dcp_kernel/reader_policy.py"]
+    },
+    {
+      "path": "XUANLING_OPERATIONAL_MODEL_CORE.md",
+      "physical_state_on_successor_branch": "ABSENT",
+      "retired_semantics": ["XuanLing as one operational controller", "Master Axis alignment as semantic authority", "AXIS-05 fallback"],
+      "successor": ["dcp_kernel/judgment.py", "dcp_kernel/coexistence.py", "dcp_kernel/activation.py", "dcp_kernel/platform.py", "dcp_kernel/consequence.py"]
+    }
+  ],
+  "invariants": [
+    "REMOVED_ROOT_CONTROL_SURFACE_MUST_NOT_BE_RECONSTRUCTED_FROM_FILENAME_OR_HISTORY",
+    "SUCCESSOR_CAPABILITIES_DO_NOT_RECREATE_A_CENTRAL_CONTROLLER",
+    "PERSISTENT_STATE_REPLACES_PERSISTENT_MASTER_OR_AGENT_ASSUMPTIONS",
+    "RETURN_RECONCILES_TO_NATIVE_RECEIVER_NOT_CENTRAL_REGISTRY"
+  ],
+  "claim_boundary": [
+    "PHYSICAL_ABSENCE_DOES_NOT_BY_ITSELF_PROVE_NO_HISTORICAL_CALLER",
+    "SUCCESSOR_BINDING_DOES_NOT_AUTHORIZE_DESTRUCTIVE_RECLAIM_OF_OTHER_ARTIFACTS",
+    "THIS_FIXTURE_IS_RETIREMENT_EVIDENCE_NOT_RUNTIME_OR_PROMOTION"
+  ]
+}
