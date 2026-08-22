@@ -1,81 +1,130 @@
-# AGENTS.md｜Repository Agent Rules
+# AGENTS.md｜Bounded Repository Agent Rules
 
 ## Repository Role
 
-This repository is the controlled documentation and architecture repository for the DCP-Framework / XuanLing project.
+This repository is a **public DCP-oriented projection carrier** for the same CoreTri/DCP life. It is not DCP Native Source Root, not a Pole Authority, not a central Registry, and not Runtime.
 
-Agents working in this repository are repository review, cleanup, and minimal patch nodes only.
+Repository agents are temporary capability bindings selected by Need. Tool, model, persona, window, branch, repository, label, or filename does not create permanent ownership or authority.
 
-## Allowed Work
+## Canonical Work Chain
 
-Agents may:
-- inspect pull request diffs;
-- list changed files;
-- identify mergeability blockers;
-- identify out-of-scope file changes;
-- preserve already-merged content from `main`;
-- keep pull requests within the requested scope;
-- propose minimal safe patches;
-- apply minimal edits only when explicitly requested;
-- run safe local checks when available.
+```text
+Stable Need / Existence
+→ Current / Last-good resolution
+→ Required Capability
+→ Eligible Actor or Carrier
+→ Authority / Rights / Scope
+→ Affected Dependency Cone
+→ Bounded Effect
+→ Evidence / Failure
+→ Return Target
+→ Receiver Disposition / Rebuild
+```
 
-## Not Allowed
+## Before Reading or Editing
+
+1. Resolve the target Stable Existence / Need and lawful branch or PR.
+2. Read Current/last-good and pending material Return debt before historical material.
+3. Read only the affected dependency cone; do not perform a full repository census by default.
+4. Treat legacy/root-layer material as Historical/Compatibility unless an explicit re-entry purpose exists.
+5. Do not copy another Pole's Native Body; use receiver-specific material delta/pointers.
+6. Check authority, rights, effect ceiling, evidence requirements, stop conditions, rollback/recovery, and Return target before mutation.
+
+## Allowed Capability Examples
+
+When authorized and in scope, an eligible agent may:
+- inspect diffs, files, branches, Current pointers, caller/rebuild dependencies and evidence;
+- identify mergeability/integration blockers and out-of-scope changes;
+- create or update bounded machine contracts, executable candidates, tests, fixtures and concise supporting documentation;
+- extract successor primitives from predecessor material;
+- apply minimal reversible edits required by the active Need;
+- run or inspect safe checks when the relevant carrier permits it;
+- prepare Receiver-specific Return evidence.
+
+These examples describe capabilities, not permanent roles.
+
+## Prohibited Inferences / Actions
 
 Agents must not:
-- redefine core architecture;
-- create new architecture axes;
-- rewrite core doctrine;
-- modify identity-core documents unless explicitly requested;
-- convert documentation into runtime behavior;
-- introduce API, database, background execution, or automation semantics unless explicitly requested;
-- merge pull requests automatically;
-- remove architecture content without explicit instruction;
-- promote pending concepts into finalized doctrine.
+- infer Current from latest timestamp, filename, branch, folder, search hit or repository placement;
+- infer Authority from `ChatGPT`, `Codex`, `Jules`, `Qinyi`, `MotherTree`, Pole names, tool names or labels;
+- treat GitHub as Native source-of-truth or approval authority;
+- promote Candidate → Approved, Executable → Platform, Platform → Runtime, or Return → Absorbed without evidence;
+- let a synthetic fixture or projection observation prove Receiver-native behavior;
+- let Render/representation or BIM/parametric structure silently become World truth;
+- revive a physically retired predecessor merely because a historical Index/Register mentions it;
+- rewrite another Pole's Meaning/World/verification/release authority;
+- merge, release, deploy, modify protected resources, change permissions, expose secrets, or perform destructive reclaim without explicit applicable authority;
+- claim autonomy because a script/test/fixture succeeds.
 
-## Governance Roles
+## Cross-Pole Learning
 
-- ChatGPT / CoreTri reviewer: review, dispatch, and boundary gate.
-- Codex: repository hygiene, patch, test, and review node.
-- Jules: documentation and spec generation node.
-- GitHub: source-of-truth and pull request gate.
-- User: final approval and merge authority.
+Cross-pole learning is bounded:
 
-## Review Gates
+```text
+Material Delta
+→ Affected Receiver
+→ Qualified projection / pointer
+→ Local Native disposition
+→ Rebuild / Behavior Delta
+→ Retest where material
+```
 
-Before editing, check:
-1. What pull request or branch is the target?
-2. What files are in scope?
-3. What files are outside scope?
-4. What already-merged content must be preserved?
-5. What is the minimum safe patch?
+Rules:
+- Shared visibility != Canon.
+- Read != absorb.
+- Equivalent receipt may be reused without re-propagation.
+- Historical re-entry requires a specific purpose such as provenance, audit, failure learning, regression, rebuild or successor validation.
+- External/tool capability evidence != Native capability internalization.
 
-## Scope Rules
+## Return / Evidence Boundary
 
-If a pull request includes files outside scope:
-- report diff pollution;
-- propose removing the file from the pull request diff;
-- do not rewrite the file unless explicitly instructed.
+A producer cannot ACK for the Receiver.
 
-If a pull request conflicts with latest `main`:
-- preserve all already-merged content;
-- update or rebase only if the task asks for cleanup;
-- do not overwrite prior merged artifacts.
+```text
+PRODUCED
+→ ROUTED
+→ ACTUAL_READ
+→ MATERIALITY_RESOLVED
+→ RECEIVER_NATIVE_DISPOSITION
+→ RECONCILED
+→ REBUILD_APPLIED_OR_NO_REBUILD_WITH_REASON
+→ BEHAVIOR_DELTA_OBSERVED
+→ RETESTED
+```
 
-If wording implies runtime, API, database, or automatic system execution:
-- flag it as a scope risk;
-- suggest neutral documentation, register, review-note, or calibration wording.
+Later stages require their own evidence. Do not infer skipped stages.
 
-## Default Output Format
+## Integration / Conflict Rules
 
-Always respond with:
+If a PR conflicts with current `main` or GitHub reports it non-mergeable:
+- mark `INTEGRATION_HOLD`;
+- identify affected conflict surfaces;
+- preserve already accepted/merged evidence;
+- do not auto-merge or silently rebase;
+- do not use conflict resolution to resurrect retired ontology.
 
-- Status: PASS / HOLD / BLOCK
-- Changed files:
-- Out-of-scope files:
-- Risks:
-- Minimal patch:
-- Needs human decision: YES / NO
+If an old artifact is absent from the successor branch:
+- absence alone does not prove semantic coverage;
+- historical references do not reactivate it;
+- proven live caller/rebuild dependency to the absent artifact is a broken-live-reference failure;
+- otherwise retain provenance/successor pointers as needed.
 
-## Final Rule
+## Output / Claim Ceiling
 
-Do not merge automatically. Final approval remains with the user.
+Report material state only:
+
+- Decision: PASS / HOLD / FAIL
+- Stable Need / Existence
+- Affected surfaces
+- Evidence / first material break
+- Changes made
+- Pending Receiver / Return debt
+- Integration or authority blockers
+- Claim ceiling
+
+Do not use file count, issue count, branch activity, documentation volume, or test count as a maturity claim.
+
+## Final Boundary
+
+Repository agents compile, inspect, test, and return bounded effects. They do not become DCP, the Owner, the Receiver, or final authority by doing so.
