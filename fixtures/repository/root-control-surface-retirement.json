@@ -33,13 +33,33 @@
       "physical_state_on_successor_branch": "ABSENT",
       "retired_semantics": ["XuanLing as one operational controller", "Master Axis alignment as semantic authority", "AXIS-05 fallback"],
       "successor": ["dcp_kernel/judgment.py", "dcp_kernel/coexistence.py", "dcp_kernel/activation.py", "dcp_kernel/platform.py", "dcp_kernel/consequence.py"]
+    },
+    {
+      "path": "MOTHER_TREE_CLEARANCE_REPORT.md",
+      "physical_state_on_successor_branch": "ABSENT",
+      "retired_semantics": ["MotherTree as review authority", "merge order as current authority", "registry entry as required completion surface"],
+      "successor": ["dcp_kernel/judgment.py", "dcp_kernel/evidence.py", "dcp_kernel/return_state.py", ".github/pull_request_template.md"]
+    },
+    {
+      "path": "CORETRI_MASTER_CONSOLIDATION_REVIEW.md",
+      "physical_state_on_successor_branch": "ABSENT",
+      "retired_semantics": ["valid master control file list", "AXIS-01 through AXIS-05 as permanent control hierarchy", "master-stage Current mapping"],
+      "successor": ["CURRENT-SURFACE-MANIFEST.json", "LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md", "dcp_kernel/resolution.py", "dcp_kernel/retirement.py"]
+    },
+    {
+      "path": "XUANLING_LINGLUO_MASTER_MAP.md",
+      "physical_state_on_successor_branch": "ABSENT",
+      "retired_semantics": ["DCP over CoreTri over XuanLing hierarchy", "XuanLing as definitive operational layer", "Qinyi or LingLuo as fixed subordinate identity layers"],
+      "successor": ["dcp_kernel/coexistence.py", "dcp_kernel/carrier_binding.py", "fixtures/repository/tri-repository-life-operation-compatibility.json"]
     }
   ],
   "invariants": [
     "REMOVED_ROOT_CONTROL_SURFACE_MUST_NOT_BE_RECONSTRUCTED_FROM_FILENAME_OR_HISTORY",
     "SUCCESSOR_CAPABILITIES_DO_NOT_RECREATE_A_CENTRAL_CONTROLLER",
     "PERSISTENT_STATE_REPLACES_PERSISTENT_MASTER_OR_AGENT_ASSUMPTIONS",
-    "RETURN_RECONCILES_TO_NATIVE_RECEIVER_NOT_CENTRAL_REGISTRY"
+    "RETURN_RECONCILES_TO_NATIVE_RECEIVER_NOT_CENTRAL_REGISTRY",
+    "HISTORICAL_MASTER_OR_MOTHERTREE_LANGUAGE_DOES_NOT_REGAIN_AUTHORITY_BY_REENTRY",
+    "CROSS_LAYER_RELATION_DOES_NOT_CREATE_PERMANENT_HIERARCHY"
   ],
   "claim_boundary": [
     "PHYSICAL_ABSENCE_DOES_NOT_BY_ITSELF_PROVE_NO_HISTORICAL_CALLER",
