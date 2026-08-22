@@ -12,6 +12,8 @@ from dcp_kernel import (
     IllegalReturnTransition,
     InvariantCore,
     LifecycleState,
+    LearningDisposition,
+    LearningInput,
     Motion,
     Need,
     ReturnClosure,
@@ -19,6 +21,7 @@ from dcp_kernel import (
     StableLife,
     Transition,
     TriRootState,
+    assess_learning_input,
     compute_affected_cone,
     evaluate_claim_ceiling,
     evaluate_transition,
@@ -92,6 +95,97 @@ class DCPKernelTests(unittest.TestCase):
         self.assertEqual(result.decision, Decision.PASS)
         self.assertEqual(result.binding, lawful_generic)
         self.assertIn("AUTHORITY_NOT_GRANTED", result.excluded["DCP-window@chat"])
+
+    def test_capability_fail_severity_is_not_downgraded_by_hold_reason(self) -> None:
+        binding = CapabilityBinding(
+            capability_id="wrong_capability",
+            actor_id="named-dcp-window",
+            carrier_id="chat",
+            authority_granted=False,
+            rights_allowed=True,
+            evidence_available=True,
+            return_target="GLMODEL",
+        )
+        transition = Transition(
+            transition_id="T-CAPABILITY-SEVERITY",
+            stable_life_id="GUI-LU",
+            need="render concept",
+            state_before=LifecycleState.CURRENT,
+            proposed_effect="wrong binding",
+            capability_id="render_world_projection",
+            source_revision="WORLD-R1",
+            world_id_before="WORLD-GUI-LU-001",
+            world_id_after="WORLD-GUI-LU-001",
+        )
+
+        result = evaluate_transition(self.life, self.tri_root, binding, transition)
+        capability = next(
+            item for item in result.observations if item.motion is Motion.CAPABILITY
+        )
+        self.assertEqual(capability.decision, Decision.FAIL)
+        self.assertIn("CAPABILITY_BINDING_MISMATCH", capability.reasons)
+        self.assertIn("AUTHORITY_NOT_GRANTED", capability.reasons)
+
+    def test_equivalent_learning_receipt_is_reused_without_repropagation(self) -> None:
+        result = assess_learning_input(
+            LearningInput(
+                source_id="IDEAS-RETURN-1",
+                source_revision="R1",
+                receiver="DCP",
+                affected_receivers=("DCP",),
+                material_delta=True,
+                equivalent_receipt_exists=True,
+            )
+        )
+        self.assertEqual(result.decision, Decision.PASS)
+        self.assertEqual(
+            result.disposition,
+            LearningDisposition.REUSE_NO_REPROPAGATION,
+        )
+
+    def test_historical_learning_requires_explicit_reentry_purpose(self) -> None:
+        result = assess_learning_input(
+            LearningInput(
+                source_id="LEGACY-AXIS",
+                source_revision="R0",
+                receiver="DCP",
+                affected_receivers=("DCP",),
+                material_delta=True,
+                historical=True,
+            )
+        )
+        self.assertEqual(result.decision, Decision.HOLD)
+        self.assertEqual(result.disposition, LearningDisposition.HOLD_CONTAMINATION)
+
+    def test_receiver_not_affected_does_not_broadcast_learning(self) -> None:
+        result = assess_learning_input(
+            LearningInput(
+                source_id="GLMODEL-WORLD-RETURN",
+                source_revision="R2",
+                receiver="DCP",
+                affected_receivers=("GLMODEL",),
+                material_delta=True,
+            )
+        )
+        self.assertEqual(result.decision, Decision.PASS)
+        self.assertEqual(
+            result.disposition,
+            LearningDisposition.RECEIVER_NOT_AFFECTED,
+        )
+
+    def test_native_body_copy_request_is_rejected(self) -> None:
+        result = assess_learning_input(
+            LearningInput(
+                source_id="IDEAS-NATIVE-BODY",
+                source_revision="R5",
+                receiver="DCP",
+                affected_receivers=("DCP",),
+                material_delta=True,
+                native_body_copy_requested=True,
+            )
+        )
+        self.assertEqual(result.decision, Decision.FAIL)
+        self.assertEqual(result.disposition, LearningDisposition.HOLD_CONTAMINATION)
 
     def test_latest_timestamp_does_not_override_valid_successor(self) -> None:
         valid_successor = CurrentCandidate(
