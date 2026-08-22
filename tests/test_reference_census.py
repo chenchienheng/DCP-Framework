@@ -22,11 +22,37 @@ class ReferenceCensusTests(unittest.TestCase):
             ReferenceClass.LIVE_CALLER,
         )
 
-    def test_executable_reference_is_live(self) -> None:
+    def test_operational_kernel_reference_is_live(self) -> None:
         self.assertEqual(
             classify_reference("dcp_kernel/platform.py", "03_field-governance"),
             ReferenceClass.LIVE_CALLER,
         )
+
+    def test_audit_tool_reference_is_not_live_caller(self) -> None:
+        self.assertEqual(
+            classify_reference("tools/census_legacy_references.py", "03_field-governance"),
+            ReferenceClass.AUDIT_REFERENCE,
+        )
+
+    def test_audit_fixture_reference_is_not_live_caller(self) -> None:
+        self.assertEqual(
+            classify_reference("fixtures/repository/03-field-governance-review.json", "03_field-governance"),
+            ReferenceClass.AUDIT_REFERENCE,
+        )
+
+    def test_implementation_manifest_is_audit_reference(self) -> None:
+        self.assertEqual(
+            classify_reference("contracts/implementation-manifest.json", "04_adapter-layer"),
+            ReferenceClass.AUDIT_REFERENCE,
+        )
+
+    def test_audit_reference_cannot_create_rebuild_or_wake_dependency(self) -> None:
+        signal = classify_dependency_signal(
+            caller_path="tools/census_legacy_references.py",
+            classification=ReferenceClass.AUDIT_REFERENCE,
+            excerpt="rebuild wake 01_runtime-spine/",
+        )
+        self.assertEqual(signal, DependencySignal.NONE)
 
     def test_legacy_family_self_reference_is_not_live_caller(self) -> None:
         self.assertEqual(
@@ -50,6 +76,18 @@ class ReferenceCensusTests(unittest.TestCase):
         files = {
             "REPOSITORY_CORPUS_INDEX.md": "legacy path: 01_runtime-spine/",
             "CURRENT-SURFACE-MANIFEST.json": "no legacy reference here",
+        }
+        observations = scan_text_map(files, ("01_runtime-spine",))
+        self.assertFalse(has_proven_live_caller(observations, "01_runtime-spine"))
+        self.assertFalse(has_unknown_hold(observations, "01_runtime-spine"))
+        self.assertFalse(has_rebuild_relevant_reference(observations, "01_runtime-spine"))
+        self.assertFalse(has_wake_routing_relevant_reference(observations, "01_runtime-spine"))
+
+    def test_audit_only_mentions_do_not_block_scanned_text_withdrawal(self) -> None:
+        files = {
+            "tools/census_legacy_references.py": "FAMILIES = ('01_runtime-spine/',)",
+            "contracts/implementation-manifest.json": '"01_runtime-spine/": ["successor"]',
+            "fixtures/repository/family-caller-rebuild-census-observations.json": '"01_runtime-spine/"',
         }
         observations = scan_text_map(files, ("01_runtime-spine",))
         self.assertFalse(has_proven_live_caller(observations, "01_runtime-spine"))
