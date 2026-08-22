@@ -3,14 +3,14 @@ import unittest
 from dcp_kernel import (
     ActionGateInput, CapabilityBinding, CoexistenceInput, CurrentCandidate, Decision,
     EffectClass, InvariantCore, JudgmentInput, LifecycleState, MeaningCompileInput,
-    NativeModel, Need, RiskLevel, StableLife, Transition, TriRootState,
-    assess_action_gate, assess_coexistence, assess_decision_chain, assess_judgment,
-    compile_governed_work_contract, compile_meaning,
+    MutationKind, NativeModel, Need, RiskLevel, StableLife, Transition, TriRootState,
+    WriteIntentInput, assess_action_gate, assess_coexistence, assess_decision_chain,
+    assess_judgment, assess_write_intent, compile_governed_work_contract, compile_meaning,
 )
 
 
 class GovernedPlatformTests(unittest.TestCase):
-    def setup_chain(self, evidence_sufficient=True):
+    def setup_chain(self, evidence_sufficient=True, effect=EffectClass.BOUNDED_MUTATION):
         meaning = compile_meaning(MeaningCompileInput(
             source_id="R1-00-03",
             meaning_statement="判斷不可外包且抽象需凝實",
@@ -49,8 +49,8 @@ class GovernedPlatformTests(unittest.TestCase):
         ))
         action_gate = assess_action_gate(ActionGateInput(
             transition_id="T-GOV",
-            required_effect=EffectClass.BOUNDED_MUTATION,
-            proposed_effect=EffectClass.BOUNDED_MUTATION,
+            required_effect=effect,
+            proposed_effect=effect,
             risk_level=RiskLevel.MEDIUM,
             authority_valid=True,
             affected_scope_resolved=True,
@@ -90,10 +90,31 @@ class GovernedPlatformTests(unittest.TestCase):
         )
         return life, tri, need, capability, current, transition
 
-    def test_incomplete_judgment_blocks_work_contract(self):
+    def valid_write_intent(self):
+        return assess_write_intent(WriteIntentInput(
+            intent_id="WRITE-T-GOV",
+            stable_life_id="LIFE-1",
+            source_identity="R1",
+            target_carrier_id="Carrier",
+            mutation_kind=MutationKind.UPDATE,
+            authority_valid=True,
+            rights_valid=True,
+            purpose_valid=True,
+            affected_scope_resolved=True,
+            expected_revision="R1",
+            fidelity_check_present=True,
+            evidence_plan_present=True,
+            responsibility_owner="DCP",
+            rollback_or_recovery_present=True,
+            return_target="Receiver",
+            target_exists=True,
+        ))
+
+    def compile(self, *, chain, write_intent=None):
         life, tri, need, capability, current, transition = self.base_inputs()
-        result = compile_governed_work_contract(
-            decision_chain=self.setup_chain(evidence_sufficient=False),
+        return compile_governed_work_contract(
+            decision_chain=chain,
+            write_intent=write_intent,
             stable_life=life,
             tri_root=tri,
             need=need,
@@ -104,26 +125,28 @@ class GovernedPlatformTests(unittest.TestCase):
             eligible_receivers={"Receiver"},
             transition=transition,
         )
+
+    def test_incomplete_judgment_blocks_work_contract(self):
+        result = self.compile(chain=self.setup_chain(evidence_sufficient=False))
         self.assertEqual(result.decision, Decision.HOLD)
         self.assertIsNone(result.work_contract)
 
-    def test_complete_decision_chain_allows_candidate_contract(self):
-        life, tri, need, capability, current, transition = self.base_inputs()
-        result = compile_governed_work_contract(
-            decision_chain=self.setup_chain(),
-            stable_life=life,
-            tri_root=tri,
-            need=need,
-            capability_candidates=[capability],
-            current_candidates=[current],
-            changed_nodes=["Source"],
-            dependency_graph={"Source": ["Receiver"]},
-            eligible_receivers={"Receiver"},
-            transition=transition,
-        )
+    def test_mutation_without_write_intent_blocks_work_contract(self):
+        result = self.compile(chain=self.setup_chain())
+        self.assertEqual(result.decision, Decision.HOLD)
+        self.assertIsNone(result.work_contract)
+        self.assertIn("PRE_ACTION_WRITE_INTENT_MISSING", result.reasons)
+
+    def test_complete_mutation_chain_with_write_intent_allows_candidate_contract(self):
+        result = self.compile(chain=self.setup_chain(), write_intent=self.valid_write_intent())
         self.assertEqual(result.decision, Decision.PASS)
         self.assertIsNotNone(result.work_contract)
         self.assertEqual(result.work_contract.state, "CANDIDATE")
+
+    def test_observe_chain_does_not_require_mutation_intent(self):
+        result = self.compile(chain=self.setup_chain(effect=EffectClass.OBSERVE))
+        self.assertEqual(result.decision, Decision.PASS)
+        self.assertIsNotNone(result.work_contract)
 
 
 if __name__ == "__main__":
