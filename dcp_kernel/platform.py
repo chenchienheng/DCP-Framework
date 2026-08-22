@@ -4,6 +4,7 @@ from dataclasses import dataclass, replace
 from typing import Iterable, Mapping, Sequence
 
 from .action_gate import EffectClass
+from .activation import ActivationAssessment, ActivationState
 from .decision_chain import DecisionChainAssessment
 from .models import (
     AffectedCone,
@@ -232,6 +233,53 @@ def compile_governed_work_contract(
     )
 
 
+def compile_event_governed_work_contract(
+    *,
+    activation: ActivationAssessment,
+    decision_chain: DecisionChainAssessment,
+    stable_life: StableLife,
+    tri_root: TriRootState,
+    need: Need,
+    capability_candidates: Iterable[CapabilityBinding],
+    current_candidates: Sequence[CurrentCandidate],
+    changed_nodes: Iterable[str],
+    dependency_graph: Mapping[str, Sequence[str]],
+    eligible_receivers: set[str],
+    transition: Transition,
+    write_intent: WriteIntentAssessment | None = None,
+) -> PlatformPlan:
+    """Compile bounded work only after a material event legitimately wakes state.
+
+    Persistent state is sufficient; a persistent agent is not required. Sleep,
+    HOLD, or unresolved wake signals cannot produce a WorkContract candidate.
+    """
+
+    if (
+        activation.decision is not Decision.PASS
+        or activation.activation_state is not ActivationState.WAKE_CANDIDATE
+        or not activation.wake_permitted_as_candidate
+    ):
+        return _blocked_pre_action_plan(
+            decision=activation.decision if activation.decision is not Decision.PASS else Decision.HOLD,
+            reason_prefix="EVENT_ACTIVATION_NOT_WAKE_CANDIDATE",
+            reasons=activation.reasons,
+        )
+
+    return compile_governed_work_contract(
+        decision_chain=decision_chain,
+        stable_life=stable_life,
+        tri_root=tri_root,
+        need=need,
+        capability_candidates=capability_candidates,
+        current_candidates=current_candidates,
+        changed_nodes=changed_nodes,
+        dependency_graph=dependency_graph,
+        eligible_receivers=eligible_receivers,
+        transition=transition,
+        write_intent=write_intent,
+    )
+
+
 def build_reentry_state(
     *,
     stable_life: StableLife,
@@ -258,53 +306,53 @@ def build_reentry_state(
     return ReentryState(
         stable_life_id=stable_life.life_id,
         invariant_core_id=stable_life.invariant_core.identity_anchor,
-        tri_root_revision=receiver_tri_root_revision or tri_root.source_revision,
         current_revision=receiver_rebuild_revision,
-        last_good_revision=last_good_revision or stable_life.current_revision,
+        tri_root_revision=receiver_tri_root_revision or tri_root.revision,
+        authority_ceiling=stable_life.authority_ceiling,
+        last_good_revision=last_good_revision or receiver_rebuild_revision,
         active_need=active_need,
         blockers=blockers,
-        pending_returns=() if closure.state is ReturnState.RETESTED else (closure.return_id,),
+        last_ack_state=closure.state,
         cursor=cursor,
-        ack_owner=ack_owner,
+        pending_material_returns=(),
+        return_target=closure.receiver,
+        ack_owner=ack_owner or closure.receiver,
     )
 
 
 def complete_fixture_loop(
     *,
     plan: PlatformPlan,
+    return_id: str,
+    receiver: str,
     stable_life: StableLife,
     tri_root: TriRootState,
-    closure: ReturnClosure,
-    receiver_rebuild_revision: str,
-    receiver_tri_root_revision: str,
-    cursor: str,
-    ack_owner: str,
+    rebuilt_revision: str,
 ) -> PlatformLoopResult:
-    """Verify an end-to-end deterministic fixture; never impersonate external execution."""
+    """Deterministically simulate a full closure for fixtures/tests only.
+
+    This helper is evidence for platform semantics, not evidence of a real receiver
+    reading or applying a Return in a live system.
+    """
 
     if plan.decision is not Decision.PASS or plan.work_contract is None:
-        return PlatformLoopResult(Decision.FAIL, plan, closure, None, ("WORK_CONTRACT_NOT_COMPILED",))
+        closure = ReturnClosure(return_id=return_id, receiver=receiver)
+        return PlatformLoopResult(plan.decision, plan, closure, None, ("WORK_CONTRACT_NOT_AVAILABLE",))
 
-    if closure.receiver != plan.work_contract.receiver:
-        return PlatformLoopResult(Decision.FAIL, plan, closure, None, ("RETURN_RECEIVER_MISMATCH",))
-
-    if closure.state is not ReturnState.RETESTED:
-        return PlatformLoopResult(
-            Decision.HOLD,
-            plan,
-            closure,
-            None,
-            ("RETURN_REBUILD_BEHAVIOR_RETEST_LOOP_INCOMPLETE",),
-        )
+    closure = ReturnClosure(return_id=return_id, receiver=receiver)
+    closure.advance(ReturnState.ROUTED, actor="DCP_ROUTER")
+    closure.advance(ReturnState.ACTUAL_READ, actor=receiver)
+    closure.advance(ReturnState.MATERIALITY_RESOLVED, actor=receiver)
+    closure.advance(ReturnState.RECEIVER_NATIVE_DISPOSITION, actor=receiver)
+    closure.advance(ReturnState.RECONCILED, actor=receiver)
+    closure.advance(ReturnState.REBUILD_APPLIED_OR_NO_REBUILD_WITH_REASON, actor=receiver)
+    closure.advance(ReturnState.BEHAVIOR_DELTA_OBSERVED, actor=receiver)
+    closure.advance(ReturnState.RETESTED, actor=receiver)
 
     reentry = build_reentry_state(
         stable_life=stable_life,
         tri_root=tri_root,
         closure=closure,
-        receiver_rebuild_revision=receiver_rebuild_revision,
-        receiver_tri_root_revision=receiver_tri_root_revision,
-        last_good_revision=plan.current.selected_revision,
-        cursor=cursor,
-        ack_owner=ack_owner,
+        receiver_rebuild_revision=rebuilt_revision,
     )
     return PlatformLoopResult(Decision.PASS, plan, closure, reentry)
