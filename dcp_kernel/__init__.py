@@ -23,6 +23,13 @@ from .models import (
     TransitionEvaluation,
     TriRootState,
 )
+from .consequence import (
+    ActionResponsibilityContract,
+    ConsequenceAssessment,
+    ConsequenceInput,
+    compile_action_responsibility,
+    derive_next_condition,
+)
 from .evidence import (
     EvidenceMode,
     OwnerExitAssessment,
@@ -67,11 +74,14 @@ from .successor import (
 from .transition import evaluate_transition
 
 __all__ = [
+    "ActionResponsibilityContract",
     "AffectedCone",
     "CapabilityBinding",
     "CapabilityResolution",
     "ClaimCeiling",
     "ClaimEvidence",
+    "ConsequenceAssessment",
+    "ConsequenceInput",
     "CoverageState",
     "CurrentCandidate",
     "CurrentResolution",
@@ -114,9 +124,11 @@ __all__ = [
     "assess_schedule_effect",
     "assess_successor_coverage",
     "build_reentry_state",
+    "compile_action_responsibility",
     "compile_work_contract",
     "complete_fixture_loop",
     "compute_affected_cone",
+    "derive_next_condition",
     "evaluate_claim_ceiling",
     "evaluate_transition",
     "resolve_capability_binding",
