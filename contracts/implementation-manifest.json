@@ -20,32 +20,83 @@
       "RETURN",
       "CONTINUITY"
     ],
-    "inner_motion_interpretation": "eight observations of one transition; not eight independent controllers"
+    "inner_motion_interpretation": "eight observations of one transition; not eight independent controllers",
+    "causal_rebirth": "action -> consequence -> responsibility -> return -> rebuild -> behavior delta -> retest -> next condition"
   },
   "modules": {
     "dcp_kernel/models.py": "typed stable-life, capability, transition, return, re-entry and learning contracts",
     "dcp_kernel/learning.py": "receiver-specific bounded learning and contamination gate",
+    "dcp_kernel/reader_policy.py": "bounded reader eligibility and historical re-entry without fixed window order",
     "dcp_kernel/resolution.py": "Current, capability, affected-cone and claim-ceiling resolvers",
+    "dcp_kernel/carrier_binding.py": "carrier-neutral capability binding and substitution continuity checks",
     "dcp_kernel/transition.py": "one-transition inner-motion evaluator and first-material-break localization",
+    "dcp_kernel/consequence.py": "action-responsibility binding and result-to-next-condition compilation",
     "dcp_kernel/return_state.py": "receiver-owned Return closure state machine and debt exposure",
+    "dcp_kernel/evidence.py": "synthetic/projection/native evidence separation for Owner-Exit claims",
+    "dcp_kernel/schedule_effect.py": "schedule trigger/effect validity without scheduler authority inflation",
+    "dcp_kernel/successor.py": "semantic successor coverage assessment",
+    "dcp_kernel/retirement.py": "physical retirement, stale reference and provenance separation",
+    "dcp_kernel/metabolism.py": "repository artifact role and naming-risk classification",
     "dcp_kernel/platform.py": "bounded work-contract compiler, rebuild/re-entry and deterministic fixture loop",
     "dcp_kernel/fixtures.py": "data-driven fixture runner; no external execution"
   },
   "machine_contracts": [
     "contracts/stable-life.schema.json",
     "contracts/transition.schema.json",
-    "contracts/return.schema.json",
     "contracts/work-contract.schema.json",
+    "contracts/action-responsibility.schema.json",
+    "contracts/consequence.schema.json",
+    "contracts/return.schema.json",
     "contracts/reentry.schema.json",
-    "contracts/cross-pole-learning.schema.json"
+    "contracts/cross-pole-learning.schema.json",
+    "contracts/reader-request.schema.json",
+    "contracts/carrier-binding.schema.json",
+    "contracts/owner-exit-evidence.schema.json",
+    "contracts/schedule-effect.schema.json",
+    "contracts/successor-coverage.schema.json"
   ],
   "fixtures": [
-    "fixtures/gui-lu/mobility-envelope-intrusion.json"
+    "fixtures/gui-lu/mobility-envelope-intrusion.json",
+    "fixtures/gui-lu/mobility-envelope-owner-exit-observation.json",
+    "fixtures/repository/legacy-successor-coverage-seed.json",
+    "fixtures/repository/physical-retirement-observations.json"
   ],
   "tests": [
     "tests/test_kernel.py",
-    "tests/test_gui_lu_fixture.py"
+    "tests/test_gui_lu_fixture.py",
+    "tests/test_consequence.py",
+    "tests/test_owner_exit_evidence.py",
+    "tests/test_schedule_effect.py",
+    "tests/test_successor_coverage.py",
+    "tests/test_retirement.py",
+    "tests/test_metabolism.py",
+    "tests/test_reader_policy.py",
+    "tests/test_carrier_binding.py"
   ],
+  "legacy_family_successor_direction": {
+    "01_runtime-spine": [
+      "dcp_kernel/reader_policy.py",
+      "dcp_kernel/learning.py",
+      "dcp_kernel/resolution.py",
+      "dcp_kernel/return_state.py",
+      "dcp_kernel/retirement.py"
+    ],
+    "03_field-governance": [
+      "dcp_kernel/resolution.py",
+      "dcp_kernel/transition.py",
+      "dcp_kernel/consequence.py",
+      "dcp_kernel/return_state.py",
+      "dcp_kernel/schedule_effect.py",
+      "dcp_kernel/platform.py"
+    ],
+    "04_adapter-layer": [
+      "dcp_kernel/carrier_binding.py",
+      "dcp_kernel/reader_policy.py",
+      "dcp_kernel/learning.py",
+      "dcp_kernel/evidence.py",
+      "dcp_kernel/return_state.py"
+    ]
+  },
   "bounded_learning_sources": {
     "Ideas-Pole-Projection": [
       "CURRENT-SURFACE-MANIFEST.json",
@@ -67,8 +118,15 @@
     "repository placement authority",
     "Runtime or deployment claim"
   ],
+  "latest_batch_verification": {
+    "branch_file_writeback": true,
+    "local_clone_test": "BLOCKED_BY_EXECUTION_ENVIRONMENT_DNS",
+    "github_actions_run_observed": false,
+    "test_pass_claim_for_latest_batch": false
+  },
   "claim_ceiling": "BOUNDED_EXECUTABLE_AND_DETERMINISTIC_PLATFORM_FIXTURE_CANDIDATE",
   "required_before_higher_claim": [
+    "latest branch test execution or CI evidence",
     "branch review and acceptance",
     "receiver-owned Native disposition",
     "real behavior delta",
