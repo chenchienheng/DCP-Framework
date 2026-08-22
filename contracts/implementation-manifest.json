@@ -1,0 +1,80 @@
+{
+  "artifact_id": "DCP-EXECUTABLE-KERNEL-CANDIDATE-R1",
+  "artifact_role": "EXECUTABLE_CANDIDATE_MANIFEST",
+  "lifecycle_state": "CANDIDATE",
+  "runtime": false,
+  "promotion": false,
+  "native_source_root": false,
+  "repo_is_authority_root": false,
+  "canonical_model": {
+    "invariant_core": "determines same-life identity and meaning continuity",
+    "three_pole_generation": ["MEANING", "DEPENDENCY", "WORLD"],
+    "outer_poles": "need-driven outward capability expressions",
+    "inner_motions": [
+      "IDENTITY",
+      "MEANING",
+      "DEPENDENCY",
+      "STATE",
+      "REALITY",
+      "CAPABILITY",
+      "RETURN",
+      "CONTINUITY"
+    ],
+    "inner_motion_interpretation": "eight observations of one transition; not eight independent controllers"
+  },
+  "modules": {
+    "dcp_kernel/models.py": "typed stable-life, capability, transition, return, re-entry and learning contracts",
+    "dcp_kernel/learning.py": "receiver-specific bounded learning and contamination gate",
+    "dcp_kernel/resolution.py": "Current, capability, affected-cone and claim-ceiling resolvers",
+    "dcp_kernel/transition.py": "one-transition inner-motion evaluator and first-material-break localization",
+    "dcp_kernel/return_state.py": "receiver-owned Return closure state machine and debt exposure",
+    "dcp_kernel/platform.py": "bounded work-contract compiler, rebuild/re-entry and deterministic fixture loop",
+    "dcp_kernel/fixtures.py": "data-driven fixture runner; no external execution"
+  },
+  "machine_contracts": [
+    "contracts/stable-life.schema.json",
+    "contracts/transition.schema.json",
+    "contracts/return.schema.json",
+    "contracts/work-contract.schema.json",
+    "contracts/reentry.schema.json",
+    "contracts/cross-pole-learning.schema.json"
+  ],
+  "fixtures": [
+    "fixtures/gui-lu/mobility-envelope-intrusion.json"
+  ],
+  "tests": [
+    "tests/test_kernel.py",
+    "tests/test_gui_lu_fixture.py"
+  ],
+  "bounded_learning_sources": {
+    "Ideas-Pole-Projection": [
+      "CURRENT-SURFACE-MANIFEST.json",
+      "README.md"
+    ],
+    "GLModel-Pole-Projection": [
+      "semantic-core/dcp/current/reader-manifest.json",
+      "semantic-core/dcp/current/reasoning-contamination-gates.json",
+      "semantic-core/dcp/current/receiver-projection-map.json",
+      "semantic-core/dcp/current/return-closure-model.json",
+      "semantic-core/dcp/current/context-assembly-policy.json"
+    ]
+  },
+  "non_absorbed_boundaries": [
+    "Ideas Native Body",
+    "GLModel World/Object/Geometry Authority",
+    "private evidence bodies",
+    "external tool authority",
+    "repository placement authority",
+    "Runtime or deployment claim"
+  ],
+  "claim_ceiling": "BOUNDED_EXECUTABLE_AND_DETERMINISTIC_PLATFORM_FIXTURE_CANDIDATE",
+  "required_before_higher_claim": [
+    "branch review and acceptance",
+    "receiver-owned Native disposition",
+    "real behavior delta",
+    "independent retest in the GUI-LU chain",
+    "runtime environment evidence if Runtime is ever claimed",
+    "applicable authority for promotion or release"
+  ],
+  "successor_work_items": [326, 327, 328, 330, 331, 335, 338, 339, 340, 341, 342, 343, 344]
+}
