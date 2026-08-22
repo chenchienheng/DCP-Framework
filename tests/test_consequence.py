@@ -15,6 +15,7 @@ from dcp_kernel.models import (
     CurrentResolutionStatus,
     Decision,
     ReturnState,
+    TransitionEvaluation,
 )
 from dcp_kernel.platform import PlatformPlan, WorkContract
 
@@ -86,7 +87,11 @@ class ConsequenceTests(unittest.TestCase):
                 affected=("GLMODEL", "PARAMETRIC"),
                 excluded={},
             ),
-            transition=None,
+            transition=TransitionEvaluation(
+                transition_id="T-3",
+                decision=Decision.PASS,
+                observations=(),
+            ),
             work_contract=WorkContract(
                 contract_id="WORK-T-3",
                 stable_life_id="GUI-LU",
@@ -99,11 +104,12 @@ class ConsequenceTests(unittest.TestCase):
             ),
         )
 
-        with self.assertRaisesRegex(
-            ValueError,
-            "RESPONSIBILITY_CONTRACT_REQUIRES_TRANSITION",
-        ):
-            compile_action_responsibility(plan)
+        contract = compile_action_responsibility(plan)
+        self.assertEqual(contract.transition_id, "T-3")
+        self.assertEqual(contract.responsibility_owner, "PARAMETRIC-ACTOR")
+        self.assertEqual(contract.return_target, "GLMODEL")
+        self.assertEqual(contract.rebuild_target, "GLMODEL")
+        self.assertEqual(contract.blast_radius, ("GLMODEL", "PARAMETRIC"))
 
 
 if __name__ == "__main__":
