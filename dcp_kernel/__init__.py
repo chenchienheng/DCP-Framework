@@ -10,6 +10,9 @@ from .models import (
     Decision,
     InvariantCore,
     LifecycleState,
+    LearningAssessment,
+    LearningDisposition,
+    LearningInput,
     Motion,
     MotionObservation,
     Need,
@@ -20,6 +23,7 @@ from .models import (
     TransitionEvaluation,
     TriRootState,
 )
+from .learning import assess_learning_input
 from .resolution import (
     compute_affected_cone,
     evaluate_claim_ceiling,
@@ -42,6 +46,9 @@ __all__ = [
     "IllegalReturnTransition",
     "InvariantCore",
     "LifecycleState",
+    "LearningAssessment",
+    "LearningDisposition",
+    "LearningInput",
     "Motion",
     "MotionObservation",
     "Need",
@@ -52,6 +59,7 @@ __all__ = [
     "Transition",
     "TransitionEvaluation",
     "TriRootState",
+    "assess_learning_input",
     "compute_affected_cone",
     "evaluate_claim_ceiling",
     "evaluate_transition",
