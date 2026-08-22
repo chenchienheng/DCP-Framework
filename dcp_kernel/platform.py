@@ -3,6 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass, replace
 from typing import Iterable, Mapping, Sequence
 
+from .decision_chain import DecisionChainAssessment
 from .models import (
     AffectedCone,
     CapabilityBinding,
@@ -19,11 +20,7 @@ from .models import (
     TransitionEvaluation,
     TriRootState,
 )
-from .resolution import (
-    compute_affected_cone,
-    resolve_capability_binding,
-    resolve_current,
-)
+from .resolution import compute_affected_cone, resolve_capability_binding, resolve_current
 from .return_state import ReturnClosure
 from .transition import evaluate_transition
 
@@ -88,27 +85,11 @@ def compile_work_contract(
     empty_cone = AffectedCone(affected=(), excluded={})
 
     if current.status is not CurrentResolutionStatus.CURRENT:
-        return PlatformPlan(
-            decision=Decision.HOLD,
-            current=current,
-            capability=empty_capability,
-            affected_cone=empty_cone,
-            transition=None,
-            work_contract=None,
-            reasons=("CURRENT_NOT_RESOLVED",),
-        )
+        return PlatformPlan(Decision.HOLD, current, empty_capability, empty_cone, None, None, ("CURRENT_NOT_RESOLVED",))
 
     capability = resolve_capability_binding(need, capability_candidates)
     if capability.decision is not Decision.PASS or capability.binding is None:
-        return PlatformPlan(
-            decision=capability.decision,
-            current=current,
-            capability=capability,
-            affected_cone=empty_cone,
-            transition=None,
-            work_contract=None,
-            reasons=capability.reasons,
-        )
+        return PlatformPlan(capability.decision, current, capability, empty_cone, None, None, capability.reasons)
 
     affected_cone = compute_affected_cone(
         changed_nodes=changed_nodes,
@@ -117,34 +98,26 @@ def compile_work_contract(
     )
     if need.receiver not in affected_cone.affected:
         return PlatformPlan(
-            decision=Decision.HOLD,
-            current=current,
-            capability=capability,
-            affected_cone=affected_cone,
-            transition=None,
-            work_contract=None,
-            reasons=("RETURN_RECEIVER_NOT_IN_AFFECTED_CONE",),
+            Decision.HOLD,
+            current,
+            capability,
+            affected_cone,
+            None,
+            None,
+            ("RETURN_RECEIVER_NOT_IN_AFFECTED_CONE",),
         )
 
-    effective_life = replace(
-        stable_life,
-        current_revision=current.selected_revision or stable_life.current_revision,
-    )
-    transition_evaluation = evaluate_transition(
-        effective_life,
-        tri_root,
-        capability.binding,
-        transition,
-    )
+    effective_life = replace(stable_life, current_revision=current.selected_revision or stable_life.current_revision)
+    transition_evaluation = evaluate_transition(effective_life, tri_root, capability.binding, transition)
     if transition_evaluation.decision is not Decision.PASS:
         return PlatformPlan(
-            decision=transition_evaluation.decision,
-            current=current,
-            capability=capability,
-            affected_cone=affected_cone,
-            transition=transition_evaluation,
-            work_contract=None,
-            reasons=(
+            transition_evaluation.decision,
+            current,
+            capability,
+            affected_cone,
+            transition_evaluation,
+            None,
+            (
                 transition_evaluation.first_material_break.motion.value
                 if transition_evaluation.first_material_break
                 else "TRANSITION_NOT_PASS",
@@ -161,13 +134,59 @@ def compile_work_contract(
         receiver=need.receiver,
         affected_receivers=affected_cone.affected,
     )
-    return PlatformPlan(
-        decision=Decision.PASS,
-        current=current,
-        capability=capability,
-        affected_cone=affected_cone,
-        transition=transition_evaluation,
-        work_contract=contract,
+    return PlatformPlan(Decision.PASS, current, capability, affected_cone, transition_evaluation, contract)
+
+
+def compile_governed_work_contract(
+    *,
+    decision_chain: DecisionChainAssessment,
+    stable_life: StableLife,
+    tri_root: TriRootState,
+    need: Need,
+    capability_candidates: Iterable[CapabilityBinding],
+    current_candidates: Sequence[CurrentCandidate],
+    changed_nodes: Iterable[str],
+    dependency_graph: Mapping[str, Sequence[str]],
+    eligible_receivers: set[str],
+    transition: Transition,
+) -> PlatformPlan:
+    """Compile only after meaning, judgment, coexistence and restraint align.
+
+    This is the preferred successor entry. The older compile_work_contract remains
+    for compatibility fixtures but does not itself prove that judgment was preserved.
+    """
+
+    if decision_chain.decision is not Decision.PASS:
+        empty_current = CurrentResolution(
+            status=CurrentResolutionStatus.HOLD,
+            selected_revision=None,
+            reasons=(f"PRE_ACTION_{decision_chain.first_break or 'CHAIN'}_NOT_PASS",),
+        )
+        empty_capability = CapabilityResolution(
+            decision=Decision.HOLD,
+            binding=None,
+            reasons=decision_chain.reasons,
+        )
+        return PlatformPlan(
+            decision=decision_chain.decision,
+            current=empty_current,
+            capability=empty_capability,
+            affected_cone=AffectedCone(affected=(), excluded={}),
+            transition=None,
+            work_contract=None,
+            reasons=(f"PRE_ACTION_{decision_chain.first_break or 'CHAIN'}_NOT_PASS",) + decision_chain.reasons,
+        )
+
+    return compile_work_contract(
+        stable_life=stable_life,
+        tri_root=tri_root,
+        need=need,
+        capability_candidates=capability_candidates,
+        current_candidates=current_candidates,
+        changed_nodes=changed_nodes,
+        dependency_graph=dependency_graph,
+        eligible_receivers=eligible_receivers,
+        transition=transition,
     )
 
 
@@ -222,30 +241,18 @@ def complete_fixture_loop(
     """Verify an end-to-end deterministic fixture; never impersonate external execution."""
 
     if plan.decision is not Decision.PASS or plan.work_contract is None:
-        return PlatformLoopResult(
-            decision=Decision.FAIL,
-            plan=plan,
-            closure=closure,
-            reentry=None,
-            reasons=("WORK_CONTRACT_NOT_COMPILED",),
-        )
+        return PlatformLoopResult(Decision.FAIL, plan, closure, None, ("WORK_CONTRACT_NOT_COMPILED",))
 
     if closure.receiver != plan.work_contract.receiver:
-        return PlatformLoopResult(
-            decision=Decision.FAIL,
-            plan=plan,
-            closure=closure,
-            reentry=None,
-            reasons=("RETURN_RECEIVER_MISMATCH",),
-        )
+        return PlatformLoopResult(Decision.FAIL, plan, closure, None, ("RETURN_RECEIVER_MISMATCH",))
 
     if closure.state is not ReturnState.RETESTED:
         return PlatformLoopResult(
-            decision=Decision.HOLD,
-            plan=plan,
-            closure=closure,
-            reentry=None,
-            reasons=("RETURN_REBUILD_BEHAVIOR_RETEST_LOOP_INCOMPLETE",),
+            Decision.HOLD,
+            plan,
+            closure,
+            None,
+            ("RETURN_REBUILD_BEHAVIOR_RETEST_LOOP_INCOMPLETE",),
         )
 
     reentry = build_reentry_state(
@@ -258,9 +265,4 @@ def complete_fixture_loop(
         cursor=cursor,
         ack_owner=ack_owner,
     )
-    return PlatformLoopResult(
-        decision=Decision.PASS,
-        plan=plan,
-        closure=closure,
-        reentry=reentry,
-    )
+    return PlatformLoopResult(Decision.PASS, plan, closure, reentry)
