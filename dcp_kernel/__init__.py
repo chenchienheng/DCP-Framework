@@ -58,6 +58,12 @@ from .family_metabolism import (
     assess_family_metabolism,
 )
 from .learning import assess_learning_input
+from .meaning_compile import (
+    MeaningCompileAssessment,
+    MeaningCompileInput,
+    MeaningLevel,
+    compile_meaning,
+)
 from .platform import (
     PlatformLoopResult,
     PlatformPlan,
@@ -139,6 +145,9 @@ __all__ = [
     "LearningAssessment",
     "LearningDisposition",
     "LearningInput",
+    "MeaningCompileAssessment",
+    "MeaningCompileInput",
+    "MeaningLevel",
     "Motion",
     "MotionObservation",
     "Need",
@@ -180,6 +189,7 @@ __all__ = [
     "build_reentry_state",
     "classify_reference",
     "compile_action_responsibility",
+    "compile_meaning",
     "compile_work_contract",
     "complete_fixture_loop",
     "compute_affected_cone",
