@@ -52,6 +52,15 @@ class PlatformPlan:
     reasons: tuple[str, ...] = ()
 
 
+@dataclass(frozen=True)
+class PlatformLoopResult:
+    decision: Decision
+    plan: PlatformPlan
+    closure: ReturnClosure
+    reentry: ReentryState | None
+    reasons: tuple[str, ...] = ()
+
+
 def compile_work_contract(
     *,
     stable_life: StableLife,
@@ -168,6 +177,8 @@ def build_reentry_state(
     tri_root: TriRootState,
     closure: ReturnClosure,
     receiver_rebuild_revision: str,
+    receiver_tri_root_revision: str | None = None,
+    last_good_revision: str | None = None,
     active_need: str | None = None,
     blockers: tuple[str, ...] = (),
     cursor: str | None = None,
@@ -186,12 +197,70 @@ def build_reentry_state(
     return ReentryState(
         stable_life_id=stable_life.life_id,
         invariant_core_id=stable_life.invariant_core.identity_anchor,
-        tri_root_revision=tri_root.source_revision,
+        tri_root_revision=receiver_tri_root_revision or tri_root.source_revision,
         current_revision=receiver_rebuild_revision,
-        last_good_revision=stable_life.current_revision,
+        last_good_revision=last_good_revision or stable_life.current_revision,
         active_need=active_need,
         blockers=blockers,
         pending_returns=() if closure.state is ReturnState.RETESTED else (closure.return_id,),
         cursor=cursor,
         ack_owner=ack_owner,
+    )
+
+
+def complete_fixture_loop(
+    *,
+    plan: PlatformPlan,
+    stable_life: StableLife,
+    tri_root: TriRootState,
+    closure: ReturnClosure,
+    receiver_rebuild_revision: str,
+    receiver_tri_root_revision: str,
+    cursor: str,
+    ack_owner: str,
+) -> PlatformLoopResult:
+    """Verify an end-to-end deterministic fixture; never impersonate external execution."""
+
+    if plan.decision is not Decision.PASS or plan.work_contract is None:
+        return PlatformLoopResult(
+            decision=Decision.FAIL,
+            plan=plan,
+            closure=closure,
+            reentry=None,
+            reasons=("WORK_CONTRACT_NOT_COMPILED",),
+        )
+
+    if closure.receiver != plan.work_contract.receiver:
+        return PlatformLoopResult(
+            decision=Decision.FAIL,
+            plan=plan,
+            closure=closure,
+            reentry=None,
+            reasons=("RETURN_RECEIVER_MISMATCH",),
+        )
+
+    if closure.state is not ReturnState.RETESTED:
+        return PlatformLoopResult(
+            decision=Decision.HOLD,
+            plan=plan,
+            closure=closure,
+            reentry=None,
+            reasons=("RETURN_REBUILD_BEHAVIOR_RETEST_LOOP_INCOMPLETE",),
+        )
+
+    reentry = build_reentry_state(
+        stable_life=stable_life,
+        tri_root=tri_root,
+        closure=closure,
+        receiver_rebuild_revision=receiver_rebuild_revision,
+        receiver_tri_root_revision=receiver_tri_root_revision,
+        last_good_revision=plan.current.selected_revision,
+        cursor=cursor,
+        ack_owner=ack_owner,
+    )
+    return PlatformLoopResult(
+        decision=Decision.PASS,
+        plan=plan,
+        closure=closure,
+        reentry=reentry,
     )
