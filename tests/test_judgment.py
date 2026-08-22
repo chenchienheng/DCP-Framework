@@ -78,6 +78,13 @@ class JudgmentTests(unittest.TestCase):
         self.assertEqual(states["risk"], DimensionState.UNSATISFIED)
         self.assertEqual(result.decision, Decision.HOLD)
 
+    def test_unknown_truth_is_preserved_even_when_other_dimensions_satisfy(self):
+        result = assess_judgment(self.base(truth_state=DimensionState.UNKNOWN))
+        states = dict(result.dimension_states)
+        self.assertEqual(states["truth"], DimensionState.UNKNOWN)
+        self.assertEqual(result.knowledge_state, KnowledgeState.UNKNOWN)
+        self.assertEqual(result.decision, Decision.PASS)
+
 
 if __name__ == "__main__":
     unittest.main()
