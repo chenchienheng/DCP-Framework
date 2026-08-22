@@ -11,6 +11,7 @@ class CoverageState(str, Enum):
     COVERED_EVIDENCE_ONLY = "COVERED_EVIDENCE_ONLY"
     EVIDENCE_ONLY_NO_SUCCESSOR = "EVIDENCE_ONLY_NO_SUCCESSOR"
     PARTIAL_READER_WITHDRAWAL = "PARTIAL_READER_WITHDRAWAL"
+    AUDIT_INCOMPLETE = "AUDIT_INCOMPLETE"
     GAP = "GAP"
     ZOMBIE_DEPENDENCY = "ZOMBIE_DEPENDENCY"
     HOLD = "HOLD"
@@ -23,6 +24,8 @@ class SuccessorCoverageInput:
     successor_executable_or_machine: bool
     active_callers: tuple[str, ...] = ()
     rebuild_dependency: bool = False
+    caller_audit_complete: bool = False
+    rebuild_audit_complete: bool = False
     unique_evidence: bool = False
     normal_reader_wake: bool = False
     current_routing_reference: bool = False
@@ -40,24 +43,33 @@ class SuccessorCoverageAssessment:
 def assess_successor_coverage(item: SuccessorCoverageInput) -> SuccessorCoverageAssessment:
     """Evaluate semantic metabolism without equating rename/archive with completion."""
 
-    has_live_dependency = bool(item.active_callers) or item.rebuild_dependency
+    proven_live_dependency = bool(item.active_callers) or item.rebuild_dependency
 
-    if has_live_dependency and not item.successor_id:
+    if proven_live_dependency and not item.successor_id:
         return SuccessorCoverageAssessment(
             decision=Decision.FAIL,
             state=CoverageState.ZOMBIE_DEPENDENCY,
             normal_reader_eligible=True,
             destructive_action_authorized=False,
-            reasons=("LIVE_DEPENDENCY_WITHOUT_SUCCESSOR",),
+            reasons=("PROVEN_LIVE_DEPENDENCY_WITHOUT_SUCCESSOR",),
         )
 
-    if has_live_dependency and not item.successor_executable_or_machine:
+    if proven_live_dependency and not item.successor_executable_or_machine:
         return SuccessorCoverageAssessment(
             decision=Decision.HOLD,
             state=CoverageState.GAP,
             normal_reader_eligible=True,
             destructive_action_authorized=False,
             reasons=("SUCCESSOR_DOES_NOT_COVER_LIVE_BEHAVIOR",),
+        )
+
+    if not item.caller_audit_complete or not item.rebuild_audit_complete:
+        return SuccessorCoverageAssessment(
+            decision=Decision.HOLD,
+            state=CoverageState.AUDIT_INCOMPLETE,
+            normal_reader_eligible=(item.normal_reader_wake or item.current_routing_reference),
+            destructive_action_authorized=False,
+            reasons=("CALLER_OR_REBUILD_DEPENDENCY_AUDIT_INCOMPLETE",),
         )
 
     if not item.successor_id:
