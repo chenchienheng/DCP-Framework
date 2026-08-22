@@ -16,7 +16,8 @@ class GovernedPlatformTests(unittest.TestCase):
         required_effect=EffectClass.BOUNDED_MUTATION,
         proposed_effect=None,
     ):
-        proposed_effect = proposed_effect or required_effect
+        if proposed_effect is None:
+            proposed_effect = required_effect
         meaning = compile_meaning(MeaningCompileInput(
             source_id="R1-00-03",
             meaning_statement="判斷不可外包且抽象需凝實",
@@ -162,6 +163,16 @@ class GovernedPlatformTests(unittest.TestCase):
             required_effect=EffectClass.BOUNDED_MUTATION,
             proposed_effect=EffectClass.OBSERVE,
         ))
+        self.assertEqual(result.decision, Decision.PASS)
+        self.assertIsNotNone(result.work_contract)
+
+    def test_no_action_choice_is_preserved(self):
+        chain = self.setup_chain(
+            required_effect=EffectClass.BOUNDED_MUTATION,
+            proposed_effect=EffectClass.NO_ACTION,
+        )
+        self.assertEqual(chain.action_gate.proposed_effect, EffectClass.NO_ACTION)
+        result = self.compile(chain=chain)
         self.assertEqual(result.decision, Decision.PASS)
         self.assertIsNotNone(result.work_contract)
 
