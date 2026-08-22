@@ -10,6 +10,8 @@
       "successor_executable_or_machine": true,
       "active_callers": [],
       "rebuild_dependency": false,
+      "caller_audit_complete": true,
+      "rebuild_audit_complete": true,
       "unique_evidence": true,
       "normal_reader_wake": true,
       "current_routing_reference": true,
@@ -21,6 +23,8 @@
       "successor_executable_or_machine": true,
       "active_callers": [],
       "rebuild_dependency": false,
+      "caller_audit_complete": true,
+      "rebuild_audit_complete": true,
       "unique_evidence": true,
       "normal_reader_wake": false,
       "current_routing_reference": false,
@@ -32,32 +36,38 @@
       "successor_executable_or_machine": false,
       "active_callers": [],
       "rebuild_dependency": false,
+      "caller_audit_complete": true,
+      "rebuild_audit_complete": true,
       "unique_evidence": true,
       "normal_reader_wake": false,
       "current_routing_reference": false,
-      "expected_state": "COVERED_EVIDENCE_ONLY"
+      "expected_state": "EVIDENCE_ONLY_NO_SUCCESSOR"
     },
     {
       "artifact_path": "SCHEDULING_EFFECT_REGISTER.md",
       "successor_id": null,
       "successor_executable_or_machine": false,
-      "active_callers": ["UNKNOWN_PENDING_CALLER_AUDIT"],
+      "active_callers": [],
       "rebuild_dependency": false,
+      "caller_audit_complete": false,
+      "rebuild_audit_complete": false,
       "unique_evidence": true,
       "normal_reader_wake": false,
       "current_routing_reference": false,
-      "expected_state": "ZOMBIE_DEPENDENCY"
+      "expected_state": "AUDIT_INCOMPLETE"
     },
     {
       "artifact_path": "WORLD_CHAIN_MASTER_AXIS.md",
       "successor_id": null,
       "successor_executable_or_machine": false,
       "active_callers": [],
-      "rebuild_dependency": true,
+      "rebuild_dependency": false,
+      "caller_audit_complete": false,
+      "rebuild_audit_complete": false,
       "unique_evidence": true,
       "normal_reader_wake": false,
       "current_routing_reference": false,
-      "expected_state": "ZOMBIE_DEPENDENCY"
+      "expected_state": "AUDIT_INCOMPLETE"
     },
     {
       "artifact_path": "REPOSITORY_CORPUS_INDEX.md",
@@ -65,15 +75,18 @@
       "successor_executable_or_machine": false,
       "active_callers": [],
       "rebuild_dependency": false,
+      "caller_audit_complete": false,
+      "rebuild_audit_complete": false,
       "unique_evidence": false,
       "normal_reader_wake": false,
       "current_routing_reference": true,
-      "expected_state": "GAP"
+      "expected_state": "AUDIT_INCOMPLETE"
     }
   ],
   "notes": [
     "Seed values are bounded audit hypotheses, not Native disposition or deletion authorization.",
-    "UNKNOWN_PENDING_CALLER_AUDIT marks an unresolved caller hypothesis and must not be treated as a proven live caller.",
-    "Items with unresolved successor coverage remain HOLD/FAIL until repository evidence is inspected."
+    "Incomplete caller/rebuild audits produce HOLD/AUDIT_INCOMPLETE, not a fabricated Zombie failure.",
+    "Only proven active callers or rebuild dependency without a successor may establish ZOMBIE_DEPENDENCY.",
+    "Items with unresolved successor coverage remain non-destructive until repository evidence is inspected."
   ]
 }
