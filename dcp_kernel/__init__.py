@@ -44,7 +44,20 @@ from .resolution import (
     resolve_capability_binding,
     resolve_current,
 )
+from .retirement import (
+    RetirementAssessment,
+    RetirementInput,
+    RetirementState,
+    assess_retirement,
+)
 from .return_state import IllegalReturnTransition, ReturnClosure
+from .schedule_effect import (
+    ScheduleEffectAssessment,
+    ScheduleEffectInput,
+    ScheduleEffectState,
+    TriggerClass,
+    assess_schedule_effect,
+)
 from .successor import (
     CoverageState,
     SuccessorCoverageAssessment,
@@ -79,17 +92,26 @@ __all__ = [
     "PlatformLoopResult",
     "PlatformPlan",
     "ReentryState",
+    "RetirementAssessment",
+    "RetirementInput",
+    "RetirementState",
     "ReturnClosure",
     "ReturnState",
+    "ScheduleEffectAssessment",
+    "ScheduleEffectInput",
+    "ScheduleEffectState",
     "StableLife",
     "SuccessorCoverageAssessment",
     "SuccessorCoverageInput",
     "Transition",
     "TransitionEvaluation",
     "TriRootState",
+    "TriggerClass",
     "WorkContract",
     "assess_learning_input",
     "assess_owner_exit_evidence",
+    "assess_retirement",
+    "assess_schedule_effect",
     "assess_successor_coverage",
     "build_reentry_state",
     "compile_work_contract",
