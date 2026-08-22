@@ -55,26 +55,27 @@ jobs:
           assert payload['runtime'] is False
           assert payload['promotion'] is False
           assert payload['destructive_action_authorized'] is False
-          assert payload.get('reclaim_ready', False) is False
 
           required = {
               'live_caller_count',
               'unknown_hold_count',
-              'rebuild_relevant_count',
-              'wake_routing_relevant_count',
-              'caller_absence_proven_on_scanned_text_surface',
-              'rebuild_absence_proven_on_scanned_text_surface',
-              'wake_routing_absence_proven_on_scanned_text_surface',
-              'withdrawal_candidate_on_scanned_text_surface',
+              'rebuild_relevant_reference_count',
+              'wake_routing_relevant_reference_count',
+              'caller_absence_on_scanned_text_surface',
+              'rebuild_withdrawal_candidate_on_scanned_text_surface',
+              'wake_routing_withdrawal_candidate_on_scanned_text_surface',
+              'reclaim_ready',
           }
           for family, summary in payload['summary'].items():
               missing = required - set(summary)
               assert not missing, (family, sorted(missing))
-              assert 'reclaim_ready' not in summary or summary['reclaim_ready'] is False
+              assert summary['reclaim_ready'] is False
               print(family, summary)
 
-          assert 'CALLER_ABSENCE_ONLY_COVERS_SCANNED_TEXT_SURFACE' in payload['claim_boundary']
-          assert 'SCANNED_TEXT_WITHDRAWAL_CANDIDATE_IS_NOT_RECLAIM_AUTHORIZATION' in payload['claim_boundary']
+          boundaries = set(payload['claim_boundary'])
+          assert 'CALLER_ABSENCE_ONLY_COVERS_SCANNED_TEXT_SURFACE' in boundaries
+          assert 'REBUILD_OR_WAKE_KEYWORD_ABSENCE_DOES_NOT_PROVE_RUNTIME_DEPENDENCY_ABSENCE' in boundaries
+          assert 'RECLAIM_READY_IS_NEVER_INFERRED_BY_THIS_CENSUS' in boundaries
           PY
       - name: Upload bounded census evidence
         uses: actions/upload-artifact@v4
