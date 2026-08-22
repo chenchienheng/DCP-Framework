@@ -31,9 +31,13 @@
     "dcp_kernel/retirement.py": "physical retirement, stale reference and provenance separation",
     "dcp_kernel/metabolism.py": "repository artifact role and naming-risk classification",
     "dcp_kernel/family_metabolism.py": "legacy-family completion gate across classification, successor coverage, reader withdrawal and unique evidence review",
+    "dcp_kernel/reference_census.py": "reproducible separation of live callers, lineage pointers, self references and unknown holds",
     "dcp_kernel/platform.py": "bounded work-contract compiler, rebuild/re-entry and deterministic fixture loop",
     "dcp_kernel/fixtures.py": "data-driven fixture runner; no external execution"
   },
+  "tools": [
+    "tools/census_legacy_references.py"
+  ],
   "machine_contracts": [
     "contracts/stable-life.schema.json",
     "contracts/transition.schema.json",
@@ -71,7 +75,8 @@
     "tests/test_reader_policy.py",
     "tests/test_carrier_binding.py",
     "tests/test_current_surface_alignment.py",
-    "tests/test_family_metabolism.py"
+    "tests/test_family_metabolism.py",
+    "tests/test_reference_census.py"
   ],
   "legacy_family_successor_direction": {
     "01_runtime-spine": ["dcp_kernel/reader_policy.py", "dcp_kernel/learning.py", "dcp_kernel/resolution.py", "dcp_kernel/return_state.py", "dcp_kernel/retirement.py"],
@@ -82,7 +87,7 @@
     "01_runtime-spine": "AUDIT_INCOMPLETE",
     "03_field-governance": "AUDIT_INCOMPLETE",
     "04_adapter-layer": "AUDIT_INCOMPLETE",
-    "reason": "current reader wake is withdrawn, but complete successor-branch caller and rebuild census is not yet proven"
+    "reason": "current reader wake is withdrawn; reproducible successor-branch census scanner now exists, but its latest full-run evidence is not yet observed"
   },
   "bounded_learning_sources": {
     "Ideas-Pole-Projection": ["CURRENT-SURFACE-MANIFEST.json", "README.md"],
@@ -93,11 +98,13 @@
     "branch_file_writeback": true,
     "current_surface_reader_withdrawal_test_added": true,
     "family_caller_rebuild_census_seeded": true,
+    "reproducible_reference_census_scanner_added": true,
+    "github_default_branch_search_treated_as_non_current_evidence": true,
     "local_clone_test": "BLOCKED_BY_EXECUTION_ENVIRONMENT_DNS",
     "github_actions_run_observed": false,
     "test_pass_claim_for_latest_batch": false
   },
   "claim_ceiling": "BOUNDED_EXECUTABLE_AND_DETERMINISTIC_PLATFORM_FIXTURE_CANDIDATE",
-  "required_before_higher_claim": ["latest branch test execution or CI evidence", "complete per-family caller/rebuild census before pooled reclaim", "branch review and acceptance", "receiver-owned Native disposition", "real behavior delta", "independent retest in the GUI-LU chain", "runtime environment evidence if Runtime is ever claimed", "applicable authority for promotion or release"],
+  "required_before_higher_claim": ["latest branch test execution or CI evidence", "execute reproducible full-reference census on successor branch", "complete per-family caller/rebuild census before pooled reclaim", "branch review and acceptance", "receiver-owned Native disposition", "real behavior delta", "independent retest in the GUI-LU chain", "runtime environment evidence if Runtime is ever claimed", "applicable authority for promotion or release"],
   "successor_work_items": [326, 327, 328, 330, 331, 335, 338, 339, 340, 341, 342, 343, 344]
 }
