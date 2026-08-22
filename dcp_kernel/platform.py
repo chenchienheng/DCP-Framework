@@ -188,9 +188,9 @@ def compile_governed_work_contract(
     """Preferred successor compiler with judgment and mutation boundaries.
 
     Meaning, judgment, coexistence/translation and restraint must pass first.
-    If the proposed effect is a mutation, a separate carrier-neutral WriteIntent
-    assessment must also PASS before a candidate WorkContract can be compiled.
-    Read/observe/prepare effects are not forced through a mutation contract.
+    A carrier-neutral WriteIntent is required only when the *proposed* effect is
+    an actual mutation.  If mutation is allowed by the ceiling but the chosen
+    action is merely observe/prepare, no mutation contract is forced.
 
     Neither DecisionChain PASS nor WriteIntent PASS grants execution authority.
     """
@@ -203,7 +203,7 @@ def compile_governed_work_contract(
         )
 
     mutation_requested = (
-        decision_chain.action_gate.permitted_effect_ceiling >= EffectClass.BOUNDED_MUTATION
+        decision_chain.action_gate.proposed_effect >= EffectClass.BOUNDED_MUTATION
     )
     if mutation_requested:
         if write_intent is None:
