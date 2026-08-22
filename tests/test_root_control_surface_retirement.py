@@ -12,7 +12,7 @@ class RootControlSurfaceRetirementTests(unittest.TestCase):
 
     def test_retired_root_surfaces_are_absent_and_successor_bound(self):
         payload = self.payload()
-        self.assertEqual(len(payload["retired_surfaces"]), 12)
+        self.assertEqual(len(payload["retired_surfaces"]), 15)
         for item in payload["retired_surfaces"]:
             self.assertEqual(item["physical_state_on_successor_branch"], "ABSENT")
             self.assertTrue(item["retired_semantics"])
@@ -27,6 +27,8 @@ class RootControlSurfaceRetirementTests(unittest.TestCase):
         self.assertIn("CROSS_LAYER_RELATION_DOES_NOT_CREATE_PERMANENT_HIERARCHY", invariants)
         self.assertIn("PRODUCT_OR_AGENT_NAME_DOES_NOT_CREATE_PERMANENT_EXECUTION_ROLE", invariants)
         self.assertIn("REGISTER_OR_GITHUB_PLACEMENT_DOES_NOT_CREATE_CURRENT_OR_COMPLETION", invariants)
+        self.assertIn("EXTERNAL_INPUT_DOES_NOT_REQUIRE_A_PERMANENT_WORLD_AXIS", invariants)
+        self.assertIn("HISTORICAL_TOPOLOGY_MAP_DOES_NOT_DEFINE_CURRENT_OPERATING_RELATION", invariants)
         self.assertFalse(payload["runtime"])
         self.assertFalse(payload["promotion"])
         self.assertFalse(payload["destructive_reclaim_authorized"])
