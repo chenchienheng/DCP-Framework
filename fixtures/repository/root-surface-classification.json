@@ -20,7 +20,9 @@
     "AXIS_TO_EXTERNAL_ABSORPTION_HANDOFF.md",
     "FULL_REPOSITORY_TOPOLOGY_ALIGNMENT.md",
     "GOVERNANCE_PROPOSAL_CONSOLIDATION_REPORT.md",
-    "LABEL_TOPOLOGY_MAP.md"
+    "LABEL_TOPOLOGY_MAP.md",
+    "MERGE_LAW_PROPOSAL.md",
+    "SNAPSHOT_MECHANISM_PROPOSAL.md"
   ],
   "retained_deentitled": [
     {
@@ -43,6 +45,13 @@
       "current_authority": false,
       "normal_reader_required": false,
       "reason": "prevents retired generations from silently regaining Current while preserving gated lineage/reentry"
+    },
+    {
+      "path": "REDUNDANT_LOAD_REDUCTION_SPEC.md",
+      "role": "METABOLIZED_READER_ECONOMY_STUB",
+      "current_authority": false,
+      "normal_reader_required": false,
+      "reason": "retains bounded delta/revision/evidence/escalation primitives while retiring GitHub-register-AXIS and single-review assumptions"
     }
   ],
   "invariants": [
@@ -50,6 +59,7 @@
     "DISCOVERY_SURFACE_DOES_NOT_CREATE_CURRENT",
     "COMPATIBILITY_VIEW_DOES_NOT_CREATE_ONTOLOGY",
     "RETIREMENT_EVIDENCE_DOES_NOT_CREATE_RETIREMENT_AUTHORITY",
+    "METABOLIZED_STUB_MAY_RETAIN_PRIMITIVE_WITHOUT_RETAINING_OLD_CONTROL_TOPOLOGY",
     "ABSENT_CONTROL_SURFACE_MUST_NOT_BE_RECREATED_FROM_HISTORICAL_POINTER"
   ],
   "remaining_debt": [
