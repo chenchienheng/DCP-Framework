@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+import json
 import unittest
+from pathlib import Path
 
 from dcp_kernel.models import Decision
 from dcp_kernel.retirement import (
@@ -67,6 +69,19 @@ class RetirementTests(unittest.TestCase):
         )
         self.assertEqual(result.decision, Decision.PASS)
         self.assertEqual(result.state, RetirementState.ACTIVE_ARTIFACT)
+
+    def test_branch_observation_fixture_matches_retirement_states(self) -> None:
+        payload = json.loads(
+            Path("fixtures/repository/physical-retirement-observations.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        for raw in payload["items"]:
+            item = dict(raw)
+            expected = item.pop("expected_state")
+            result = assess_retirement(RetirementInput(**item))
+            self.assertEqual(result.state.value, expected, raw["artifact_path"])
+            self.assertFalse(result.destructive_action_authorized)
 
 
 if __name__ == "__main__":
