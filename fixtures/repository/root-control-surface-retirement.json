@@ -75,6 +75,24 @@
       "physical_state_on_successor_branch": "ABSENT",
       "retired_semantics": ["Work OS as fixed execution-chain organ", "AXIS-01/03/05 permanent binding", "GitHub PR as universal writeback", "fixed tool role by product name"],
       "successor": ["dcp_kernel/carrier_binding.py", "dcp_kernel/action_gate.py", "dcp_kernel/judgment.py", "dcp_kernel/platform.py", "dcp_kernel/return_state.py"]
+    },
+    {
+      "path": "WORLD_CHAIN_MASTER_AXIS.md",
+      "physical_state_on_successor_branch": "ABSENT",
+      "retired_semantics": ["World Chain as permanent master axis", "all external absorption forced through AXIS-01", "AXIS-05 as global fallback", "unified register as return surface"],
+      "successor": ["dcp_kernel/carrier_binding.py", "dcp_kernel/coexistence.py", "dcp_kernel/judgment.py", "dcp_kernel/platform.py"]
+    },
+    {
+      "path": "AXIS_TO_EXTERNAL_ABSORPTION_HANDOFF.md",
+      "physical_state_on_successor_branch": "ABSENT",
+      "retired_semantics": ["five Master Axes as prerequisite topology", "external input must enter through AXIS-01", "AXIS handoff as mandatory execution prerequisite"],
+      "successor": ["dcp_kernel/learning.py", "dcp_kernel/carrier_binding.py", "dcp_kernel/judgment.py", "dcp_kernel/coexistence.py"]
+    },
+    {
+      "path": "FULL_REPOSITORY_TOPOLOGY_ALIGNMENT.md",
+      "physical_state_on_successor_branch": "ABSENT",
+      "retired_semantics": ["fixed User-ChatGPT-Jules-Repository operating topology", "active master control file list", "five-axis topology as current framework", "register set as structural control surface"],
+      "successor": ["CURRENT-SURFACE-MANIFEST.json", "LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md", "dcp_kernel/reader_policy.py", "dcp_kernel/activation.py", "dcp_kernel/retirement.py"]
     }
   ],
   "invariants": [
@@ -85,7 +103,9 @@
     "HISTORICAL_MASTER_OR_MOTHERTREE_LANGUAGE_DOES_NOT_REGAIN_AUTHORITY_BY_REENTRY",
     "CROSS_LAYER_RELATION_DOES_NOT_CREATE_PERMANENT_HIERARCHY",
     "PRODUCT_OR_AGENT_NAME_DOES_NOT_CREATE_PERMANENT_EXECUTION_ROLE",
-    "REGISTER_OR_GITHUB_PLACEMENT_DOES_NOT_CREATE_CURRENT_OR_COMPLETION"
+    "REGISTER_OR_GITHUB_PLACEMENT_DOES_NOT_CREATE_CURRENT_OR_COMPLETION",
+    "EXTERNAL_INPUT_DOES_NOT_REQUIRE_A_PERMANENT_WORLD_AXIS",
+    "HISTORICAL_TOPOLOGY_MAP_DOES_NOT_DEFINE_CURRENT_OPERATING_RELATION"
   ],
   "claim_boundary": [
     "PHYSICAL_ABSENCE_DOES_NOT_BY_ITSELF_PROVE_NO_HISTORICAL_CALLER",
