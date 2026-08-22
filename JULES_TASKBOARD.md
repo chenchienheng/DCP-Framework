@@ -1,84 +1,20 @@
-# JULES_TASKBOARD.md
+# Execution Role / Taskboard Lineage — Jules predecessor specimen
 
-## System Role
-Jules is the bounded execution node for DCP-Framework.
+**Lifecycle:** HISTORICAL_EXECUTION_SPECIMEN  
+**Current task authority:** false  
+**Runtime / Authority:** false
 
-Jules is responsible for:
-- cleanup
-- dependency rebinding
-- cross-link repair
-- register reconciliation
-- snapshot preparation
+舊版把 Jules 固定為 DCP execution node，並維持六條 continuous backlog lane。固定工具角色、rotation、registry reconciliation 與「PR 後停止」是 stage implementation，不是現行架構 primitive。
 
-Jules is NOT responsible for:
-- defining architecture doctrine
-- rewriting mother-law
-- redefining tri-coupling
-- changing sovereignty, window ownership, or runtime law
-- merging PRs
+## Retained primitives
+- Execution carrier 必須受 Scope／Authority／Evidence／Resource／Stop／Return 約束。
+- 執行者不得因技術能力取得 Meaning／Architecture／Approval Authority。
+- 高階 conflict 應回流，不得由 execution carrier 靜默改寫前提。
+- PR／Issue 可作 trace carrier，但不等於 absorption／Current／Closeout。
 
----
+## Current interpretation
+`Need → Judgment → Capability/Carrier binding → bounded Work Contract → Evidence/Consequence → Receiver Return/Reconciliation`
 
-## Core Operating Law
-"Jules executes tasks. Human decides system."
+Jules、Codex、Agent、Human executor 或其他工具都只是可能 Carrier；不建立永久 execution role、固定 lane rotation 或 backlog authority。
 
-- Execute within scope
-- Open PR
-- Stop
-- Never self-author architecture
-
----
-
-## Continuous Backlog Lanes
-
-### Lane 1 — Canonical Name Sweep
-**Core Action**: structural_cleanup
-Goal: scan for naming drift, alias conflicts, obsolete terms.
-
-### Lane 2 — Cross-link Repair
-**Core Action**: dependency_link
-Goal: reconnect weak or broken document references.
-
-### Lane 3 — Registry Reconciliation
-**Core Action**: state_register_update
-Goal: reconcile all registries/indexes against repo state.
-
-### Lane 4 — Seed Reservoir Triage
-**Core Action**: structural_cleanup (analysis only)
-Goal: classify seed/inbox/reservoir files.
-
-### Lane 5 — Governance Gap Scan
-**Core Action**: state_register_update (analysis only)
-Goal: detect implementation patterns without matching governance notes.
-
-### Lane 6 — Snapshot Preparation Pack
-**Core Action**: state_register_update
-Goal: prepare a concise repository handoff pack.
-
----
-
-## Default Rotation
-1. Lane 3 — Registry Reconciliation
-2. Lane 6 — Snapshot Preparation Pack
-3. Lane 2 — Cross-link Repair
-4. Lane 1 — Canonical Name Sweep
-5. Lane 5 — Governance Gap Scan
-6. Lane 4 — Seed Reservoir Triage
-
----
-
-## Execution Rules
-- one lane per task
-- one PR per task
-- **Lane 3 Atomicity**: Every \`structural_cleanup\` PR must include the corresponding \`state_register_update\`.
-- all PRs must include standard deliverables.
-- no architecture overreach.
-- no merge.
-- stop after PR creation.
-
----
-
-## Escalation Rule
-If higher-level architecture needs are detected:
-- do not solve them
-- record only under mismatch_or_gap or unresolved risks.
+完整 predecessor taskboard 留 Git history。Runtime=false | Promotion=false
