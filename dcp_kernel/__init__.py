@@ -44,6 +44,12 @@ from .evidence import (
     OwnerExitEvidence,
     assess_owner_exit_evidence,
 )
+from .family_metabolism import (
+    FamilyMetabolismAssessment,
+    FamilyMetabolismInput,
+    FamilyMetabolismState,
+    assess_family_metabolism,
+)
 from .learning import assess_learning_input
 from .platform import (
     PlatformLoopResult,
@@ -106,6 +112,9 @@ __all__ = [
     "CurrentResolutionStatus",
     "Decision",
     "EvidenceMode",
+    "FamilyMetabolismAssessment",
+    "FamilyMetabolismInput",
+    "FamilyMetabolismState",
     "IllegalReturnTransition",
     "InvariantCore",
     "LifecycleState",
@@ -139,6 +148,7 @@ __all__ = [
     "TriRootState",
     "TriggerClass",
     "WorkContract",
+    "assess_family_metabolism",
     "assess_learning_input",
     "assess_owner_exit_evidence",
     "assess_reader_request",
