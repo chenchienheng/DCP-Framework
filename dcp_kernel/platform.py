@@ -3,6 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass, replace
 from typing import Iterable, Mapping, Sequence
 
+from .action_gate import EffectClass
 from .decision_chain import DecisionChainAssessment
 from .models import (
     AffectedCone,
@@ -23,6 +24,7 @@ from .models import (
 from .resolution import compute_affected_cone, resolve_capability_binding, resolve_current
 from .return_state import ReturnClosure
 from .transition import evaluate_transition
+from .write_intent import WriteIntentAssessment
 
 
 @dataclass(frozen=True)
@@ -70,7 +72,12 @@ def compile_work_contract(
     eligible_receivers: set[str],
     transition: Transition,
 ) -> PlatformPlan:
-    """Compile a bounded candidate contract; never execute or approve the work."""
+    """Compatibility compiler for bounded candidate work.
+
+    This path never executes or approves work. New mutation-oriented callers should
+    prefer compile_governed_work_contract(), which also enforces pre-action judgment
+    and write-intent boundaries.
+    """
 
     current = resolve_current(
         stable_life_id=stable_life.life_id,
@@ -137,6 +144,33 @@ def compile_work_contract(
     return PlatformPlan(Decision.PASS, current, capability, affected_cone, transition_evaluation, contract)
 
 
+def _blocked_pre_action_plan(
+    *,
+    decision: Decision,
+    reason_prefix: str,
+    reasons: tuple[str, ...],
+) -> PlatformPlan:
+    current = CurrentResolution(
+        status=CurrentResolutionStatus.HOLD,
+        selected_revision=None,
+        reasons=(reason_prefix,),
+    )
+    capability = CapabilityResolution(
+        decision=Decision.HOLD,
+        binding=None,
+        reasons=reasons,
+    )
+    return PlatformPlan(
+        decision=decision,
+        current=current,
+        capability=capability,
+        affected_cone=AffectedCone(affected=(), excluded={}),
+        transition=None,
+        work_contract=None,
+        reasons=(reason_prefix,) + reasons,
+    )
+
+
 def compile_governed_work_contract(
     *,
     decision_chain: DecisionChainAssessment,
@@ -149,33 +183,41 @@ def compile_governed_work_contract(
     dependency_graph: Mapping[str, Sequence[str]],
     eligible_receivers: set[str],
     transition: Transition,
+    write_intent: WriteIntentAssessment | None = None,
 ) -> PlatformPlan:
-    """Compile only after meaning, judgment, coexistence and restraint align.
+    """Preferred successor compiler with judgment and mutation boundaries.
 
-    This is the preferred successor entry. The older compile_work_contract remains
-    for compatibility fixtures but does not itself prove that judgment was preserved.
+    Meaning, judgment, coexistence/translation and restraint must pass first.
+    If the proposed effect is a mutation, a separate carrier-neutral WriteIntent
+    assessment must also PASS before a candidate WorkContract can be compiled.
+    Read/observe/prepare effects are not forced through a mutation contract.
+
+    Neither DecisionChain PASS nor WriteIntent PASS grants execution authority.
     """
 
     if decision_chain.decision is not Decision.PASS:
-        empty_current = CurrentResolution(
-            status=CurrentResolutionStatus.HOLD,
-            selected_revision=None,
-            reasons=(f"PRE_ACTION_{decision_chain.first_break or 'CHAIN'}_NOT_PASS",),
-        )
-        empty_capability = CapabilityResolution(
-            decision=Decision.HOLD,
-            binding=None,
+        return _blocked_pre_action_plan(
+            decision=decision_chain.decision,
+            reason_prefix=f"PRE_ACTION_{decision_chain.first_break or 'CHAIN'}_NOT_PASS",
             reasons=decision_chain.reasons,
         )
-        return PlatformPlan(
-            decision=decision_chain.decision,
-            current=empty_current,
-            capability=empty_capability,
-            affected_cone=AffectedCone(affected=(), excluded={}),
-            transition=None,
-            work_contract=None,
-            reasons=(f"PRE_ACTION_{decision_chain.first_break or 'CHAIN'}_NOT_PASS",) + decision_chain.reasons,
-        )
+
+    mutation_requested = (
+        decision_chain.action_gate.permitted_effect_ceiling >= EffectClass.BOUNDED_MUTATION
+    )
+    if mutation_requested:
+        if write_intent is None:
+            return _blocked_pre_action_plan(
+                decision=Decision.HOLD,
+                reason_prefix="PRE_ACTION_WRITE_INTENT_MISSING",
+                reasons=("MUTATION_REQUIRES_CARRIER_NEUTRAL_WRITE_INTENT",),
+            )
+        if write_intent.decision is not Decision.PASS or not write_intent.mutation_allowed_as_candidate:
+            return _blocked_pre_action_plan(
+                decision=write_intent.decision,
+                reason_prefix="PRE_ACTION_WRITE_INTENT_NOT_PASS",
+                reasons=write_intent.reasons,
+            )
 
     return compile_work_contract(
         stable_life=stable_life,
