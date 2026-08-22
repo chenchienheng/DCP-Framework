@@ -10,6 +10,8 @@
     "successor_executable_or_machine",
     "active_callers",
     "rebuild_dependency",
+    "caller_audit_complete",
+    "rebuild_audit_complete",
     "unique_evidence",
     "normal_reader_wake",
     "current_routing_reference"
@@ -24,11 +26,17 @@
       "uniqueItems": true
     },
     "rebuild_dependency": {"type": "boolean"},
+    "caller_audit_complete": {"type": "boolean"},
+    "rebuild_audit_complete": {"type": "boolean"},
     "unique_evidence": {"type": "boolean"},
     "normal_reader_wake": {"type": "boolean"},
     "current_routing_reference": {"type": "boolean"}
   },
-  "x-invariant": "RENAME_MOVE_ARCHIVE_IS_NOT_METABOLISM",
+  "x-invariants": [
+    "RENAME_MOVE_ARCHIVE_IS_NOT_METABOLISM",
+    "UNKNOWN_DEPENDENCY_IS_HOLD_NOT_PROVEN_FAILURE",
+    "DESTRUCTIVE_ACTION_REQUIRES_SEPARATE_AUTHORITY"
+  ],
   "x-destructive-action-authorized": false,
   "x-runtime": false,
   "x-promotion": false
