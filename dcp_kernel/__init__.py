@@ -72,6 +72,14 @@ from .reader_policy import (
     ReaderRequest,
     assess_reader_request,
 )
+from .reference_census import (
+    ReferenceClass,
+    ReferenceObservation,
+    classify_reference,
+    has_proven_live_caller,
+    has_unknown_hold,
+    scan_text_map,
+)
 from .resolution import (
     compute_affected_cone,
     evaluate_claim_ceiling,
@@ -141,6 +149,8 @@ __all__ = [
     "ReaderAssessment",
     "ReaderDisposition",
     "ReaderRequest",
+    "ReferenceClass",
+    "ReferenceObservation",
     "ReentryState",
     "RetirementAssessment",
     "RetirementInput",
@@ -168,6 +178,7 @@ __all__ = [
     "assess_schedule_effect",
     "assess_successor_coverage",
     "build_reentry_state",
+    "classify_reference",
     "compile_action_responsibility",
     "compile_work_contract",
     "complete_fixture_loop",
@@ -175,8 +186,11 @@ __all__ = [
     "derive_next_condition",
     "evaluate_claim_ceiling",
     "evaluate_transition",
+    "has_proven_live_caller",
+    "has_unknown_hold",
     "resolve_capability_binding",
     "resolve_carrier_binding",
     "resolve_current",
+    "scan_text_map",
     "validate_carrier_substitution",
 ]
