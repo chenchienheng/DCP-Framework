@@ -1,0 +1,163 @@
+{
+  "fixture_id": "DCP-FAMILY-CALLER-REBUILD-CENSUS-001",
+  "claim_ceiling": "BOUNDED_SUCCESSOR_BRANCH_OBSERVATION_ONLY",
+  "runtime": false,
+  "promotion": false,
+  "destructive_action_authorized": false,
+  "families": [
+    {
+      "family": "01_runtime-spine",
+      "current_surface_reference": false,
+      "normal_reader_role": false,
+      "successor_direction": [
+        "dcp_kernel/reader_policy.py",
+        "dcp_kernel/learning.py",
+        "dcp_kernel/resolution.py",
+        "dcp_kernel/return_state.py",
+        "dcp_kernel/retirement.py"
+      ],
+      "sampled_artifacts": [
+        {
+          "path": "01_runtime-spine/BOUNDED_READER_PRIORITY_SPECIMEN.md",
+          "current_eligibility": false,
+          "successor": "dcp_kernel/reader_policy.py",
+          "caller_audit_complete": false,
+          "rebuild_audit_complete": false,
+          "state": "AUDIT_INCOMPLETE"
+        },
+        {
+          "path": "01_runtime-spine/window_linking_logic_01_07.md",
+          "current_eligibility": false,
+          "successor": "dcp_kernel/reader_policy.py+dcp_kernel/resolution.py+dcp_kernel/return_state.py",
+          "caller_audit_complete": false,
+          "rebuild_audit_complete": false,
+          "state": "AUDIT_INCOMPLETE"
+        },
+        {
+          "path": "01_runtime-spine/HISTORICAL_WRITE_BOUNDARY_SPECIMEN.md",
+          "current_eligibility": false,
+          "successor": "dcp_kernel/action_gate.py+dcp_kernel/return_state.py+dcp_kernel/retirement.py",
+          "caller_audit_complete": false,
+          "rebuild_audit_complete": false,
+          "state": "AUDIT_INCOMPLETE"
+        }
+      ]
+    },
+    {
+      "family": "03_field-governance",
+      "current_surface_reference": false,
+      "normal_reader_role": false,
+      "successor_direction": [
+        "dcp_kernel/action_gate.py",
+        "dcp_kernel/resolution.py",
+        "dcp_kernel/transition.py",
+        "dcp_kernel/consequence.py",
+        "dcp_kernel/return_state.py",
+        "dcp_kernel/schedule_effect.py",
+        "dcp_kernel/platform.py"
+      ],
+      "sampled_artifacts": [
+        {
+          "path": "03_field-governance/ABUNDANCE_UNDER_CONSTRAINT_v0_1.md",
+          "current_eligibility": false,
+          "successor": "dcp_kernel/action_gate.py+dcp_kernel/consequence.py",
+          "caller_audit_complete": false,
+          "rebuild_audit_complete": false,
+          "state": "AUDIT_INCOMPLETE"
+        },
+        {
+          "path": "03_field-governance/CLUSTER_INITIATIVE_RHYTHM_PROTOCOL_v0_1.md",
+          "current_eligibility": false,
+          "successor": "dcp_kernel/action_gate.py+dcp_kernel/consequence.py+dcp_kernel/return_state.py",
+          "caller_audit_complete": false,
+          "rebuild_audit_complete": false,
+          "state": "AUDIT_INCOMPLETE"
+        },
+        {
+          "path": "03_field-governance/CO_FIELD_DEPENDENCY_MODEL_v0_1.md",
+          "current_eligibility": false,
+          "successor": "dcp_kernel/resolution.py+dcp_kernel/action_gate.py+dcp_kernel/return_state.py",
+          "caller_audit_complete": false,
+          "rebuild_audit_complete": false,
+          "state": "AUDIT_INCOMPLETE"
+        },
+        {
+          "path": "03_field-governance/EXPORT_RETURN_PACKET_SCHEMA_v0_1.md",
+          "current_eligibility": false,
+          "successor": "contracts/return.schema.json+dcp_kernel/return_state.py+dcp_kernel/consequence.py",
+          "caller_audit_complete": false,
+          "rebuild_audit_complete": false,
+          "state": "AUDIT_INCOMPLETE"
+        },
+        {
+          "path": "03_field-governance/DELEGATION_RETURN_LINEAGE_SPECIMEN.md",
+          "current_eligibility": false,
+          "successor": "dcp_kernel/carrier_binding.py+dcp_kernel/action_gate.py+dcp_kernel/return_state.py",
+          "caller_audit_complete": false,
+          "rebuild_audit_complete": false,
+          "state": "AUDIT_INCOMPLETE"
+        }
+      ]
+    },
+    {
+      "family": "04_adapter-layer",
+      "current_surface_reference": false,
+      "normal_reader_role": false,
+      "successor_direction": [
+        "dcp_kernel/carrier_binding.py",
+        "dcp_kernel/reader_policy.py",
+        "dcp_kernel/learning.py",
+        "dcp_kernel/evidence.py",
+        "dcp_kernel/return_state.py"
+      ],
+      "sampled_artifacts": [
+        {
+          "path": "04_adapter-layer/activation_order.md",
+          "current_eligibility": false,
+          "successor": "dcp_kernel/carrier_binding.py+dcp_kernel/action_gate.py",
+          "caller_audit_complete": false,
+          "rebuild_audit_complete": false,
+          "state": "AUDIT_INCOMPLETE"
+        },
+        {
+          "path": "04_adapter-layer/drive-adapter.md",
+          "current_eligibility": false,
+          "successor": "dcp_kernel/carrier_binding.py+dcp_kernel/reader_policy.py",
+          "caller_audit_complete": false,
+          "rebuild_audit_complete": false,
+          "state": "AUDIT_INCOMPLETE"
+        },
+        {
+          "path": "04_adapter-layer/calendar-adapter.md",
+          "current_eligibility": false,
+          "successor": "dcp_kernel/carrier_binding.py+dcp_kernel/schedule_effect.py",
+          "caller_audit_complete": false,
+          "rebuild_audit_complete": false,
+          "state": "AUDIT_INCOMPLETE"
+        },
+        {
+          "path": "04_adapter-layer/gamma_entry_spec.md",
+          "current_eligibility": false,
+          "successor": "dcp_kernel/carrier_binding.py+dcp_kernel/evidence.py",
+          "caller_audit_complete": false,
+          "rebuild_audit_complete": false,
+          "state": "AUDIT_INCOMPLETE"
+        },
+        {
+          "path": "04_adapter-layer/replit_relay_spec.md",
+          "current_eligibility": false,
+          "successor": "dcp_kernel/carrier_binding.py+dcp_kernel/action_gate.py+dcp_kernel/evidence.py",
+          "caller_audit_complete": false,
+          "rebuild_audit_complete": false,
+          "state": "AUDIT_INCOMPLETE"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Current-surface absence is established from the successor-branch Current Surface Manifest; it does not prove the absence of every internal caller.",
+    "GitHub code search is indexed against main rather than this successor branch, so full caller/rebuild census remains incomplete.",
+    "AUDIT_INCOMPLETE is intentional. Unknown dependencies are HOLD, not fabricated ZOMBIE failures.",
+    "No rename, move, deletion, merge, promotion or Runtime claim is authorized by this fixture."
+  ]
+}
