@@ -1,1 +1,14 @@
-DCP母本放置
+# Freeze — Historical Holding Area
+
+Lifecycle: HISTORICAL_REFERENCE
+Current eligibility: false
+Runtime: false
+Authority: none
+
+此路徑只保留早期凍結／母本放置的歷史語意，不代表現行 DCP Native Source、Mother-Law、Current、Canon 或不可替代 Authority。
+
+`Frozen artifact != Current`
+`Historical mother-copy != Native Source`
+`Folder placement != Authority`
+
+正常 Reader 不應從 Freeze 路徑推導現行架構；只有 provenance／audit／failure reconstruction／explicit re-entry 才 bounded read。
