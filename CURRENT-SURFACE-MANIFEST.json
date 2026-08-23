@@ -6,57 +6,52 @@
   "native_source_root": false,
   "repo_is_pole_authority": false,
   "tri_pole_architecture": true,
-  "reader_priority": [
-    "README.md",
-    "CURRENT-SURFACE-MANIFEST.json",
-    "LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md",
-    "PUBLIC-SURFACE-POLICY.md",
-    "STATUS.md"
-  ],
+  "reader_priority": ["README.md", "CURRENT-SURFACE-MANIFEST.json", "LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md", "PUBLIC-SURFACE-POLICY.md", "STATUS.md"],
   "classification_model": {
     "primary": "STABLE_EXISTENCE_AND_LIFECYCLE_RELATIONS",
-    "core_chain": [
-      "identity",
-      "dependency",
-      "source_carrier",
-      "state",
-      "authority",
-      "evidence_claim_ceiling",
-      "materiality",
-      "gate_dispatch",
-      "action_effect",
-      "return",
-      "reconciliation",
-      "reentry_rebuild",
-      "metabolism"
-    ],
+    "core_chain": ["identity", "dependency", "source_carrier", "state", "authority", "evidence_claim_ceiling", "materiality", "judgment", "gate_dispatch", "action_effect", "consequence_responsibility", "return", "reconciliation", "reentry_rebuild", "metabolism"],
     "do_not_classify_by_extension": true,
     "do_not_treat_folder_as_ontology": true,
     "do_not_treat_carrier_as_identity": true
   },
   "carrier_model": {
     "carrier_is_secondary_metadata": true,
-    "examples": [
-      "markdown", "yaml", "json", "pdf", "spreadsheet", "database", "sql",
-      "cad_dxf_dwg", "bim_ifc", "3d_glb_gltf", "image", "audio", "video",
-      "notebook", "source_code", "binary", "script", "archive", "api_resource",
-      "issue_pr_branch", "drive_object", "saas_record", "local_runtime", "model_output"
-    ],
     "same_existence_may_have_multiple_carriers": true,
     "carrier_change_does_not_change_identity": true,
     "extension_is_not_taxonomy": true,
     "identical_text_or_sha_establishes_same_event": false
   },
-  "dispatch_views": {
-    "status": "OPTIONAL_PROJECTION_AXES_NOT_ONTOLOGY",
-    "axes": ["domain", "authority", "state", "circle", "pole", "cloud"],
-    "use_only_when_material": true,
-    "order_is_not_mandatory": true
+  "judgment_boundary": {
+    "capability_is_judgment": false,
+    "expertise_is_authority": false,
+    "execution_is_ownership": false,
+    "recommendation_is_decision": false,
+    "unknown_must_remain_representable": true,
+    "dimensions": ["truth", "scope", "context", "goal", "authority", "cost", "risk", "relationship", "time", "consequence", "responsibility"],
+    "high_confidence_can_replace_evidence": false,
+    "majority_can_close_counterexample_channel": false
   },
-  "ccf_gates": {
-    "completeness": "dependency_input_and_required_field_sufficiency",
-    "compatibility": "lawful_source_state_authority_vocabulary_schema_and_representation_composition",
-    "fidelity": "projection_backmap_transform_loss_and_rebuild_faithfulness"
+  "activation_model": {
+    "persistent_state_required": true,
+    "persistent_agent_required": false,
+    "event_is_authority": false,
+    "wake_is_execution": false,
+    "non_material_event_state": "SLEEP",
+    "material_event_requires": ["identity_scope", "authority_gate", "return_path", "judgment_before_action"]
+  },
+  "action_boundary": {
+    "effect_classes": ["NO_ACTION", "READ_OBSERVE", "DERIVE_DRAFT", "BOUNDED_MUTATION", "HIGH_RISK_MUTATION", "RELEASE_PUBLISH"],
+    "no_action_may_be_valid": true,
+    "no_action_creates_execution_work_contract": false,
+    "mutation_requires_write_intent": true,
+    "gate_pass_grants_execution_authority": false
+  },
+  "coexistence_boundary": {
+    "same_source_implies_same_identity": false,
+    "different_native_logic_implies_conflict": false,
+    "coexistence_requires_merge": false,
+    "integration_creates_central_authority": false,
+    "cross_model_claims_require_translation_compatibility_and_evidence": true
   },
   "representation_integrity": {
     "registry_index_inventory_is_native_authority": false,
@@ -64,12 +59,8 @@
     "registry_or_inventory_absence_erases_existence": false,
     "review_plan_or_acceptance_matrix_is_completed_verification": false,
     "resolved_thread_is_global_closeout": false,
-    "declared_state_and_review_vocabulary_required": true,
-    "duplicate_machine_keys_allowed": false,
-    "file_name_embedded_version_revision_alignment_required": true,
-    "required_contract_field_must_be_representable": true,
-    "pointer_resolution_required_for_rebuild": true,
     "syntax_parse_success_is_semantic_compatibility": false,
+    "pointer_resolution_required_for_rebuild": true,
     "failure_action": "HOLD_AFFECTED_REPRESENTATION_ADMISSION_OR_REBUILD"
   },
   "security_boundary": {
@@ -78,95 +69,52 @@
     "inbound_signal_is_trusted_command_by_default": false,
     "external_writeback_enabled_by_default": false,
     "credential_or_secret_allowed_in_repository_or_unbounded_model_context": false,
-    "successful_test_authorizes_unattended_runtime": false,
-    "required_before_external_mutation": [
-      "lawful_authority",
-      "qualified_input_identity_freshness_rights_purpose",
-      "strict_schema_and_effect_ceiling",
-      "least_privilege_credential_binding",
-      "audit_log",
-      "rollback_or_recovery",
-      "failure_return",
-      "first_activation_human_review"
-    ]
+    "successful_test_authorizes_unattended_runtime": false
   },
   "execution_resource_boundary": {
     "applies_to": ["agent_like", "long_running", "batch", "multi_tool", "multi_branch", "multi_agent"],
-    "required": [
-      "task_identity_and_affected_scope",
-      "source_carrier_habitat",
-      "authorized_tool_allowlist",
-      "token_cost_time_session_budget",
-      "retry_concurrency_branch_limit",
-      "context_replay_snapshot_policy",
-      "stop_condition_checkpoint",
-      "artifact_verification",
-      "rollback_or_recovery",
-      "human_escalation",
-      "return_resume"
-    ],
+    "required": ["task_identity_and_affected_scope", "source_carrier_habitat", "authorized_tool_allowlist", "token_cost_time_session_budget", "retry_concurrency_branch_limit", "context_replay_snapshot_policy", "stop_condition_checkpoint", "artifact_verification", "rollback_or_recovery", "human_escalation", "return_resume"],
     "web_enabled_by_default": false,
     "writeback_enabled_by_default": false,
     "background_long_run_enabled_by_default": false,
     "multi_agent_escalation_enabled_by_default": false,
-    "missing_budget_retry_or_stop_action": "HOLD_AFFECTED_EXECUTION",
-    "estimate_is_actual_cost_or_bill": false
+    "missing_budget_retry_or_stop_action": "HOLD_AFFECTED_EXECUTION"
   },
   "temporal_lineage": {
     "record_is_event": false,
     "replay_copy_fork_revision_return_is_original_event": false,
     "modified_time_or_recency_establishes_current": false,
-    "required_for_material_state_transition": [
-      "event_identity",
-      "source_origin",
-      "time",
-      "surface_carrier",
-      "state_before",
-      "action_effect",
-      "state_after",
-      "evidence_impact",
-      "return_review"
-    ],
-    "missing_lineage_action": "HOLD_AFFECTED_ADMISSION_OR_REBUILD"
+    "required_for_material_state_transition": ["event_identity", "source_origin", "time", "surface_carrier", "state_before", "action_effect", "state_after", "evidence_impact", "return_review"]
   },
   "return_closure": {
-    "ladder": [
-      "produced",
-      "routed",
-      "actual_read",
-      "materiality_resolved",
-      "receiver_native_disposition",
-      "reconciled",
-      "rebuild_applied_or_no_rebuild_with_reason"
-    ],
-    "producer_can_ack_for_receiver": false
+    "ladder": ["produced", "routed", "actual_read", "materiality_resolved", "receiver_native_disposition", "reconciled", "rebuild_applied_or_no_rebuild_with_reason", "behavior_delta_observed", "retested"],
+    "producer_can_ack_for_receiver": false,
+    "output_merge_ledger_summary_can_skip_receiver_stages": false
+  },
+  "eight_pole_eight_motion": {
+    "three_poles_are_generation_root": true,
+    "eight_poles_are_permanent_owners": false,
+    "eight_poles_are_repository_taxonomy": false,
+    "eight_motions_are_second_control_plane": false,
+    "outer_pole_inner_motion": true,
+    "motions": ["observe", "distinguish", "reflect", "balance_restrain", "act", "bear", "return", "rebuild_reinitiate"],
+    "behavior_change_required_for_learning_proof": true,
+    "retest_required_for_closed_learning_claim": true
   },
   "metabolism": {
     "dual_stage": ["predecessor_metabolism", "consequence_metabolism"],
     "withdraw_surfaces": ["reader", "routing", "navigation", "wake", "rebuild"],
     "archive_rename_move_is_complete": false,
-    "zombie_reconstruction_prohibited": true
+    "zombie_reconstruction_prohibited": true,
+    "stale_validator_can_generate_remediation": false,
+    "reclaim_requires_pooled_review": true
   },
   "disclosure_control": {
     "classes": ["INTERNAL", "PUBLIC_CANDIDATE", "PUBLIC_APPROVED", "WITHHELD"],
     "public_safe_is_public_approved": false,
     "repository_placement_is_release_authorization": false,
-    "publication_translation_serialization_transfers_ownership": false,
-    "required_before_release": [
-      "source_ownership_and_lawful_use",
-      "audience_and_purpose",
-      "privacy_and_sensitivity",
-      "evidence_and_claim_ceiling",
-      "retention_redistribution_derivative_constraints",
-      "release_authority"
-    ]
+    "publication_translation_serialization_transfers_ownership": false
   },
-  "current_public_surfaces": {
-    "human_zh_tw": ["README.md", "LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md", "STATUS.md"],
-    "professional_en": ["LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md", "PUBLIC-SURFACE-POLICY.md"],
-    "canonical_machine": ["CURRENT-SURFACE-MANIFEST.json", "LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md"]
-  },
-  "current_successor_kernel": "LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md",
   "tri_repository_projection_map": {
     "DCP-Pole-Projection": "dependency_state_authority_return_rebuild_weighted",
     "Ideas-Pole-Projection": "meaning_placement_navigation_experience_weighted",
@@ -184,9 +132,10 @@
     "stale_register_reference_does_not_reactivate_retired_artifact": true,
     "successor_or_explicit_readmission_required": true,
     "whole_body_reread_as_current": false,
-    "security_temporal_resource_registry_review_predecessors_required_for_normal_read": false
+    "historical_seed_is_fallback_current": false
   },
-  "promotion_rule": "LOCATION_NAME_EXTENSION_FORMAT_RECENCY_TIMESTAMP_READABILITY_ACTIVITY_RESOURCE_AVAILABILITY_REGISTRY_PRESENCE_REVIEW_STATUS_OR_TEST_SUCCESS_DOES_NOT_ESTABLISH_IDENTITY_CURRENT_AUTHORITY_RUNTIME_EVENT_EQUIVALENCE_VERIFICATION_OR_COMPLETION",
+  "current_successor_kernel": "LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md",
+  "promotion_rule": "LOCATION_NAME_EXTENSION_FORMAT_RECENCY_TIMESTAMP_READABILITY_ACTIVITY_RESOURCE_AVAILABILITY_REGISTRY_PRESENCE_REVIEW_STATUS_TEST_SUCCESS_OR_TOOL_CONNECTION_DOES_NOT_ESTABLISH_IDENTITY_CURRENT_AUTHORITY_RUNTIME_EVENT_EQUIVALENCE_VERIFICATION_COMPLETION_OR_AUTONOMY",
   "release_rule": "PUBLIC_SAFE_AND_RELEASE_APPROVED_ONLY",
-  "claim_ceiling": "Public DCP-oriented CoreTri projection; not DCP Native Body, runtime, canon, authority root, measured billing system, autonomous agent control plane, or central registry truth"
+  "claim_ceiling": "Public DCP-oriented CoreTri projection; not DCP Native Body, runtime, canon, authority root, autonomous agent control plane, central registry truth, receiver absorption proof, behavior-change proof, or retest proof"
 }
