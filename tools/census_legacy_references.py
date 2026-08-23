@@ -11,7 +11,20 @@ from dcp_kernel.reference_census import DependencySignal, scan_text_map
 TEXT_SUFFIXES = {
     ".md", ".txt", ".json", ".yaml", ".yml", ".py", ".toml", ".ini", ".cfg", ".sh",
 }
-FAMILIES = ("01_runtime-spine", "03_field-governance", "04_adapter-layer")
+FAMILIES = (
+    "00_meta",
+    "00_mother-law",
+    "01_native-board",
+    "01_runtime-spine",
+    "02_runtime-ops",
+    "02_translation-layer",
+    "03_board-orchestration",
+    "03_field-governance",
+    "04_adapter-layer",
+    "04_interface-layer",
+    "05_XLEN_Reserve_Unenabled",
+    "05_topology",
+)
 SKIP_DIRS = {".git", ".venv", "venv", "node_modules", "__pycache__", "artifacts"}
 
 
@@ -95,13 +108,16 @@ def build_payload(root: Path) -> dict[str, object]:
             "KEYWORD_RELEVANCE_IS_REVIEW_SIGNAL_NOT_PROVEN_OPERATIONAL_DEPENDENCY",
             "CALLER_ABSENCE_ONLY_COVERS_SCANNED_TEXT_SURFACE",
             "REBUILD_OR_WAKE_KEYWORD_ABSENCE_DOES_NOT_PROVE_RUNTIME_DEPENDENCY_ABSENCE",
+            "NON_TEXT_PLACEMENT_OR_RUNTIME_WAKE_REQUIRES_SEPARATE_PHYSICAL_REVIEW",
             "RECLAIM_READY_IS_NEVER_INFERRED_BY_THIS_CENSUS",
         ],
         "required_followup": [
             "review live and unknown observations",
             "review rebuild/wake relevant observations",
             "confirm non-text/runtime/generated dependencies where applicable",
+            "confirm workflow/template/physical placement wake where applicable",
             "resolve family-specific provenance retention debt",
+            "pair each withdrawn legitimate capability with successor operability evidence or OPERABILITY_GAP",
             "only then consider pooled reclaim review",
         ],
     }
