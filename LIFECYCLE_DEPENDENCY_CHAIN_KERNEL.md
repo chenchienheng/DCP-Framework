@@ -40,6 +40,7 @@ Identity
 → Materiality
 → Gate／Dispatch
 → Action／Effect
+→ Consequence／Responsibility
 → Return
 → Reconciliation
 → Re-entry／Rebuild
@@ -71,6 +72,9 @@ CCF 三 Gate 固定分離：
 以下不得互相冒充：
 
 - `Capability ≠ Authority`
+- `Expertise ≠ Authority`
+- `Execution ≠ Ownership`
+- `Recommendation ≠ Decision`
 - `Latest／Recent ≠ Current`
 - `Candidate ≠ Approved`
 - `Public-safe ≠ Public-approved`
@@ -84,6 +88,8 @@ CCF 三 Gate 固定分離：
 - `Provenance ≠ Ownership`
 
 State change 必須有合法 Event、Authority、Effect 與 evidence lineage；文件名稱、位置、修改時間、Issue／PR 狀態或工具能力都不能自行升格。
+
+Unknown 必須保持可表示：`KNOWN | INFERRED | SUSPECTED | UNKNOWN | CONFLICT`。高模型信心、專家意見、多數共識或漂亮敘事都不能補足缺失 Evidence／Authority。
 
 ## 4｜Source Eligibility／Recomposable Unit
 
@@ -119,17 +125,38 @@ Intent／Task + Stable Context + Boundary／Authority
 
 Output format 不得提高 Evidence strength 或 Claim Ceiling。
 
-## 5｜Action Effect／Execution Resource Envelope
+異質 Native Logic 可並立。跨模型／跨表示整合必須有 translation、compatibility conditions、shared evidence interface 與 contradiction boundary；同源不授權 identity／authority merge。
+
+## 5｜Judgment／Action Effect／Execution Resource Envelope
+
+判斷不得被 Capability／Expertise／Execution 取代。Material judgment 至少檢查：
+
+```text
+Source
+→ Meaning relevance
+→ Boundary
+→ Evidence / Unknown
+→ Alternatives
+→ Context / Scope / Goal
+→ Authority
+→ Cost / Risk / Time
+→ Consequence
+→ Responsibility
+→ Return / Rebuild
+```
+
+一件事可以 `TRUE but NOT_AUTHORIZED`、`LOCALLY_VALID but GLOBALLY_UNSAFE`、`LEGAL but HARMFUL`；多維判斷不得被壓成單一 RIGHT／WRONG。
 
 每次作用至少判：
 
+- `NO_ACTION`
 - `READ／OBSERVE`
 - `DERIVE／DRAFT`
 - `BOUNDED_MUTATION`
 - `HIGH_RISK_MUTATION`
 - `RELEASE／PUBLISH`
 
-Effect Ceiling 受 Domain、Authority、State、Risk、Reversibility、Evidence、Resource Envelope 與 Return Target 約束。
+Effect Ceiling 受 Domain、Authority、State、Risk、Reversibility、Evidence、Resource Envelope 與 Return Target 約束。`NO_ACTION` 可以是合法 Judgment 結果，且不得因此租用 Capability 或產生執行 Work Contract。
 
 近似 Agent、長鏈、批量、多分支、多工具或持續執行的工作，必須先有：
 
@@ -160,7 +187,23 @@ Task Identity／Affected Scope
 
 預設：No Web、No Writeback、No Background Long Run、No Multi-branch／Multi-agent escalation，除非 affected scope 有明確 Authority、Budget、Stop、Audit 與 Return。缺 Budget／Retry Limit／Stop Condition 時，HOLD affected execution；合法 read-only／report-only 可留在原 scope。
 
-## 6｜Instruction／Intake／Adapter／Credential Security
+## 6｜Persistent State／Event Wake／Instruction Security
+
+翾靈式持續性依賴 Persistent State，不依賴 Persistent Agent。事件到來時：
+
+```text
+Persistent State
+→ Event
+→ Materiality
+→ Identity / Scope
+→ Authority / Gate
+→ Return Path
+→ WAKE_CANDIDATE or HOLD / SLEEP
+→ Judgment
+→ bounded Action if needed
+```
+
+`Event ≠ Authority`、`Wake ≠ Execution`、`Persistent State ≠ Persistent Agent`。無 material event 時可保持 `SLEEP`；wake 只允許進入後續判斷，不授權作用。
 
 Repo、Issue、PR、Comment、外部 Markdown、Email、Chat、Web page、檔案內容與 Model Output 都可能是 Evidence Candidate；不得因可讀、最新、被引用或位於可信 Carrier，就取得 Instruction／Approval／Permission／Runtime Authority。
 
@@ -204,7 +247,7 @@ Event Identity
 
 缺 Event Identity、State Before／After、Source、Authority 或 Effect lineage，HOLD affected Admission／Rebuild。Temporal lineage 用來區分同一存在的續演與平行副本、回聲、重播或污染重複，不建立時間中央權威。
 
-## 8｜Return Closure／Debt
+## 8｜Return Closure／Responsibility／Debt
 
 Return closure ladder：
 
@@ -216,9 +259,13 @@ PRODUCED
 → RECEIVER_NATIVE_DISPOSITION
 → RECONCILED
 → REBUILD_APPLIED／NO_REBUILD_WITH_REASON
+→ BEHAVIOR_DELTA_OBSERVED
+→ RETESTED
 ```
 
-Producer／Shared 不得替 Receiver ACK；`ACK_ONLY ≠ Absorbed`。
+Producer／Shared 不得替 Receiver ACK；`ACK_ONLY ≠ Absorbed`。PR merge、Output、Ledger、Report、Summary 都不能跳過 Receiver-owned closure。
+
+每個 material Action 還必須留下：Impact／Cost／Side Effect／Affected Receiver／Consequence Owner。`Choice → Action → Consequence → Responsibility → Return → Rebuild → New Condition`；Result 不是終點。
 
 Debt 類型：
 
@@ -228,6 +275,8 @@ Debt 類型：
 - `NATIVE_DISPOSITION_DEBT`
 - `RECONCILIATION_DEBT`
 - `REBUILD_DEBT`
+- `BEHAVIOR_DELTA_DEBT`
+- `RETEST_DEBT`
 - `HISTORICAL_ABSORPTION_DEBT`
 
 Receiver 合法 disposition：
@@ -257,6 +306,8 @@ Legacy Body
 Archive、Rename、Move、Historical prefix 只是 containment。Current Rebuild 必須來自 Current Primitive、State、Policy、Evidence、Successor Relation、Rebuild Manifest；不得全文重讀歷史後拼回 retired topology。
 
 若 Current 依靠 retired topology 才能成立：`ZOMBIE_ARCHITECTURE_DEPENDENCY → HOLD affected branch`。
+
+若 validator／audit schema 本身已失去 Current eligibility，舊 validator 指出的 missing field 不得生成 remediation action：`STALE_VALIDATOR → FALSE_GAP → ZOMBIE_RECONSTRUCTION`。
 
 ## 10｜Work-item／Mirror／Duplicate Lifecycle
 
@@ -293,12 +344,14 @@ Failure 可判為：
 - `SCALE_MISMATCH`
 - `CARRIER_ARTIFACT`
 - `WRONG_ENTRY`
+- `STALE_VALIDATOR`
+- `ZOMBIE_RECONSTRUCTION`
 
 同一路徑重試但 material variable 未變：`PROCESS_THRASH`。
 
-錯誤依 WORLD／MODEL／REPRESENTATION／CARRIER／AUTHORITY／EVIDENCE／READER 定位，只 invalidate affected cone。退一步、換 representation、換 Carrier、合法 HOLD 都是正式 Action。
+錯誤依 WORLD／MODEL／REPRESENTATION／CARRIER／AUTHORITY／EVIDENCE／READER 定位，只 invalidate affected cone。退一步、換 representation、換 Carrier、合法 HOLD、NO_ACTION 都是正式 Action／Judgment result。
 
-## 12｜CoreTri／七窗／Shared Boundary
+## 12｜CoreTri／八極作用面／八演代謝
 
 CoreTri Native Authority 只屬 Ideas／DCP／GLModel：
 
@@ -306,14 +359,36 @@ CoreTri Native Authority 只屬 Ideas／DCP／GLModel：
 - DCP：Dependency／Contract／State／Authority／Admission／Return／Rebuild／Metabolism。
 - GLModel：World／Object／Relation／Projection／Engineering／Reconstruction。
 
-外參、實驗、實證、造返是橫向與回饋作用面，不形成第四 Native Pole。
+八極是依 Need 分化出的作用面，不是八個 permanent owner、repository family 或行政部門。除三極生成根外，外參、實驗、實證、造・渲染、返・參數等能力面依 material Need 作用；它們不得形成第四 Native Pole、第二 Authority 或第二 World Truth。
+
+八演是每一作用面內部與跨作用面的生命代謝，不是第二套控制面：
+
+```text
+觀 Observe
+→ 辨 Distinguish
+→ 返 Reflect
+→ 衡 Restrain / Balance
+→ 作 Act
+→ 承 Bear
+→ 回 Return
+→ 啟 Rebuild / Re-initiate
+→ 觀…
+```
+
+外極內演：能力可分化，Identity／Meaning／Authority／Reality／Evidence／Return／Continuity 必須能回到同一生命脈絡。
 
 Shared Belt 只承載 Pointer、Wake、Receipt、Receiver State、Return、Conflict、Re-entry／Rebuild pointer；不保存 Native Body、不形成 Common Current 或 Central Truth。
 
-跨窗固定：
+跨極固定：
 
 ```text
-Delta → Affected Cone → Receiver Wake → Local Rebuild／Execute → Material Return
+Material Delta
+→ Affected Cone
+→ Qualified Receiver Wake
+→ Local Judgment / Rebuild / Execute
+→ Consequence / Evidence
+→ Material Return
+→ Receiver-owned Re-entry
 ```
 
 沒有 Material Delta：`NO_DELTA → Stay Local`。
@@ -334,128 +409,3 @@ Material Trigger
 
 Whole-body reread、startup-text dependence、固定 Carrier topology 與 stale registry pointer 都不得自行重建 Current。
 
-## 14｜Current Reader Surface
-
-正常 Reader 只需：
-
-1. `README.md`
-2. `CURRENT-SURFACE-MANIFEST.json`
-3. `LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md`
-4. `PUBLIC-SURFACE-POLICY.md`
-5. `STATUS.md`
-
-Legacy files 只作 lineage／failure／explicit re-entry。新格式、新工具或新 Carrier 可加入，不因其副檔名或平台另建 ontology family。
-
-## Professional English
-
-The kernel is existence-first and carrier-neutral. Stable identity, dependency, lifecycle state, authority, evidence and claim ceilings, action effects, receiver-owned return closure, reconciliation, rebuild and metabolism are primary. Source intake and recomposition require qualification, rights, compatibility and fidelity. Security is default-deny for instruction authority, inbound commands, credentials and external writeback. Temporal lineage separates state-changing events from records, copies and replays. Agent-like or long-running work requires an explicit execution-resource envelope covering tool scope, budget, retry and concurrency limits, stop conditions, verification, rollback, human escalation and return. Historical bodies may re-enter only through exact affected-scope triggers; they cannot reconstruct Current by searchability alone.
-
-## Canonical Machine State
-
-```yaml
-kernel: LIFECYCLE_DEPENDENCY_CHAIN
-status: ARCHITECTURE_CANDIDATE
-runtime: false
-promotion: false
-repository_is_native_authority: false
-primary_semantics:
-  - stable_existence
-  - dependency_constraint
-  - lifecycle_state
-  - authority
-  - evidence_claim_ceiling
-  - materiality
-  - action_effect
-  - return_closure
-  - reconciliation
-  - rebuild_metabolism
-  - source_eligibility
-  - compatibility_fidelity
-  - instruction_integrity
-  - inbound_signal_qualification
-  - adapter_credential_security
-  - temporal_event_lineage
-  - execution_resource_envelope
-  - stop_condition
-  - artifact_verification
-relations:
-  - source_bind
-  - dependency
-  - gate
-  - event_state_transition
-  - action_effect
-  - evidence
-  - materiality
-  - compatibility
-  - fidelity
-  - return
-  - reconciliation
-  - predecessor_successor
-  - reentry
-  - rebuild
-  - metabolism
-carrier_semantics:
-  extension_is_taxonomy: false
-  folder_is_ontology: false
-  repository_is_authority: false
-  carrier_change_changes_identity: false
-  same_existence_multi_carrier: true
-security_boundary:
-  untrusted_content_can_override_authority: false
-  doctrine_edit_self_validating: false
-  inbound_signal_trusted_by_default: false
-  external_writeback_enabled_by_default: false
-  credential_in_repository_or_unbounded_context_allowed: false
-  local_test_authorizes_unattended_runtime: false
-execution_resource_boundary:
-  required_for_agent_like_or_long_running_work:
-    - task_identity_scope
-    - source_carrier_habitat
-    - authorized_tool_allowlist
-    - token_cost_time_session_budget
-    - retry_concurrency_branch_limit
-    - context_replay_snapshot_policy
-    - stop_condition_checkpoint
-    - artifact_verification
-    - rollback_recovery
-    - human_escalation
-    - return_resume
-  web_enabled_by_default: false
-  writeback_enabled_by_default: false
-  background_long_run_enabled_by_default: false
-  multi_agent_escalation_enabled_by_default: false
-  missing_budget_retry_or_stop_action: HOLD_AFFECTED_EXECUTION
-temporal_lineage:
-  event_required_fields: [event_identity, source_origin, time, surface_carrier, state_before, action_effect, state_after, evidence_impact, return_review]
-  record_is_event: false
-  replay_copy_fork_revision_return_is_original_event: false
-  recency_establishes_current: false
-  identical_content_establishes_same_event: false
-return_closure:
-  ladder: [produced, routed, actual_read, materiality_resolved, receiver_native_disposition, reconciled, rebuild_applied_or_no_rebuild_with_reason]
-  producer_can_ack_for_receiver: false
-metabolism:
-  dual_stage: [predecessor_metabolism, consequence_metabolism]
-  withdraw_surfaces: [reader, routing, navigation, wake, rebuild]
-  archive_or_rename_only_is_complete: false
-  zombie_reconstruction_prohibited: true
-invariants:
-  projection_is_not_source: true
-  representation_is_not_truth: true
-  capability_is_not_authority: true
-  latest_is_not_current: true
-  return_written_is_not_reconciled: true
-  local_pass_is_not_global_pass: true
-  historical_searchable_is_not_current: true
-  read_content_is_not_instruction_authority: true
-  adapter_spec_is_not_write_permission: true
-  secret_is_not_repository_content: true
-  successful_test_is_not_unattended_activation: true
-  record_is_not_event: true
-  available_resource_is_not_authority: true
-  high_activity_is_not_learning: true
-  artifact_output_is_not_verified_deliverable: true
-  retry_is_not_recovery: true
-  background_continuation_is_not_authorized_execution: true
-  cost_estimate_is_not_actual_bill: true
-```
