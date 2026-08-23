@@ -1,54 +1,31 @@
-# Visual Identity Anchor Specification
+# Visual Identity Continuity — Evidence-Bounded Reference
 
-> Durable anchor specification to ensure visual consistency for the
-> ChatGPT_Image_2 external node.
+> Lifecycle: `PUBLIC_RESEARCH_REFERENCE`
+> Runtime: `false`
+> Authority: `none`
 
-## 0. Purpose
+Visual identity continuity is a verification problem over an approved subject/reference set. It is not a permanent ChatGPT_Image_2 node role, Review Chain authority, or persona-definition surface.
 
-Addresses the identity consistency gap identified in the ChatGPT_Image_2
-node validation (Issue #38). Defines explicit anchors for identity tracking
-during the review step, ensuring the model's generation remains bound to a
-verifiable reference rather than intrinsic memory.
+## Core rule
+When identity continuity is material, generation/editing should use lawful reference evidence supplied or approved for the task. Model memory, style fluency, a filename, a signature, or one prior generated image is insufficient to establish identity truth.
 
-## 1. Scope
+## Evaluation dimensions
+Depending on the task, compare only material dimensions such as:
+- facial/shape relationships and stable distinguishing features;
+- age/presentation range allowed by the source/reference contract;
+- pose, lighting, clothing, environment and style variation tolerance;
+- expression/temperament only when it is actually part of the approved representation contract;
+- artifact defects, anatomical errors, text/signage errors, geometry collisions and other output-specific failures.
 
-### Face Anchor
-- **Reference**: Standard Qin-Yi identity reference image.
-- **Key Features**: Consistent facial structure, eye shape, and jawline.
+## Boundary
+A reference may constrain representation without becoming Native identity authority. Multiple approved references may be needed; conflicting or weak references should lower confidence or HOLD the affected judgment.
 
-### Temperament Anchor
-- **Reference**: Calm, focused, and composed demeanor.
-- **Key Features**: Avoid exaggerated expressions, overly dramatic
-  lighting, or inconsistent stylistic flares that contradict the core persona.
+`Reference image != Person/character authority`
+`Visual similarity != Canon`
+`Style consistency != Identity proof`
+`Generated output != Approved asset`
 
-### Variation Tolerance
-- **Acceptable Variations**: Changes in lighting direction, environment, and
-  clothing style that do not alter the core facial structure or temperament.
-- **Unacceptable Variations**: Significant alterations to facial proportions,
-  character age, or introduction of out-of-character expressions.
+## Failure handling
+If continuity or artifact quality fails, record the observed mismatch and adjust the affected generation/edit contract. Regeneration is one possible action, not a mandatory global route. No fixed AXIS-05, `return_failed`, or master-register topology is required.
 
-## 2. Failure Cases
-
-- **Failure Case 1 (Identity Drift)**: The generated image features a face
-  that cannot be definitively identified as Qin-Yi based on the reference
-  anchor.
-- **Failure Case 2 (Temperament Mismatch)**: The generated image exhibits
-  an exaggerated or out-of-character expression (e.g., overly dramatic,
-  comical, or aggressive) that contradicts the temperament anchor.
-- **Failure Case 3 (Style Override)**: The requested style constraints
-  overpower the identity anchor, resulting in a caricature or abstract
-  representation that loses the core identity.
-
-## 3. Review Checklist
-
-Before accepting an output from the ChatGPT_Image_2 node, the Review Chain
-(AXIS-05) must verify:
-
-- [ ] Does the face match the structure defined in the face anchor?
-- [ ] Is the temperament consistent with the established anchor?
-- [ ] Are any variations within the defined tolerance limits?
-- [ ] Does the overall composition respect the core identity without
-      being overpowered by stylistic requests?
-
-If any check fails, the output must be marked `return_failed` and routed
-back for regeneration.
+The earlier Qin-Yi-specific face/temperament checklist and ChatGPT_Image_2 binding remain in Git history as predecessor lineage, not as universal identity law.
