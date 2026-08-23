@@ -170,6 +170,30 @@ Human／Professional／Machine profiles可以不同表達，但 Stable Identity�
 - 解除同 SHA mirror、固定工具／角色／拓撲造成的 Zombie Wake；
 - 對三倉 duplicate／projection／native owner 做 receiver-specific disposition；
 - 累積統一 reclaim／delete pool，最後一次審查，不零碎刪除；
-- 人工搬移包留到 successor placement 穩定後才產生。
+- 人工搬移包留到 successor placement 穩定後才產生；
+- 每退掉一個 legacy capability，同步驗證 successor 是否真的能承接原 Need／Event；接不起來時明記 Operability Gap，不把清污完成冒充出生證據。
+
+## 13｜Operable Birth Proof／可操作出生驗收
+
+本階段共同目標不是文件完成，而是讓真實事件開始能在 Living Worldspace 走完一輪。
+
+最小出生鏈：
+
+`Existence → Relation → Event → Judgment → Capability Binding → Action → Evidence → Return → Rebuild → New State`
+
+DCP 在這條鏈只負責 dependency／state／authority／gate／return／rebuild 邊界，不取得 Ideas／GLModel 或其他 Native Receiver 的 Authority。
+
+每個候選出生證據至少回答：
+
+1. **Existence 可辨認**：同一存在換成圖、文、表、程式、3D、API 或其他 Representation 後，仍能 back-map 到同一 Stable Existence；`Representation ≠ Identity`。
+2. **Relation 可追蹤**：能指出它與人、物、資料、材料、供應、權限、歷史與其他世界物件的 material relation／dependency，而不是只有文件交叉連結。
+3. **Event 可定位**：真實變化能形成有 Source、Time、State Before／After、Affected Scope 的 Material Event；`Record ≠ Event`。
+4. **Judgment 先於能力**：先決定是否該動、誰有權、證據夠不夠，再綁模型／Agent／人／工具；`Capability ≠ Authority`、`Wake ≠ Execution`。
+5. **Action 有 Effect Ceiling**：作用只在合法 Scope／Authority／Risk／Reversibility／Evidence 範圍內發生，並留下 consequence／responsibility。
+6. **Return 不是終點**：Return 必須由 Receiver 實際讀取、判 materiality、做 Native Disposition、Reconcile／Rebuild，不能由 Producer synthetic close。
+7. **New State 可觀察**：Rebuild 後能觀察 Behavior Delta 或 World State Delta，並可 Retest；沒有 observable difference 時不得宣稱已完成吸收或學習。
+8. **Legacy withdrawal 與 successor operability 成對**：舊控制面退出後，若新鏈無法承接原本 legitimate Need，標記 `OPERABILITY_GAP`；不能以「舊東西已清掉」代替「新世界已能操作」。
+
+目前出生狀態：`NOT_PROVEN`。GUI-LU 等真實 Receiver 若尚未完成 Actual Read → Native Disposition → Rebuild → Behavior Delta → Retest，保持 debt，不由 DCP synthetic fixture 補足。
 
 本 Status 是描述性 Current projection，不是 Promotion、Runtime Receipt、Release Authorization、Canon Admission、Receiver ACK 或 Authority Grant。
