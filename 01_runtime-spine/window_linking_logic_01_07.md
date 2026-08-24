@@ -1,48 +1,20 @@
-# Window Linking Logic 01-07
+# Window / Lane Continuity Lineage Specimen
 
-Department: Runtime Spine
-Agent Block: Window Linking
-Node ID: RSP-002
-Window: W0
-Platform Writer: ChatGPT
-Version: v0.1
-Status: active
+**Lifecycle:** SUCCESSOR_COVERED / LINEAGE_ONLY  
+**Current eligibility:** false  
+**Runtime:** false  
+**Reclaim disposition:** CANDIDATE_AFTER_UNIQUE_LINEAGE_CHECK
 
-## Core
-Windows 01-07 do not self-evolve in isolation. They may enter advanced states only by linking to GitHub-backed deltas, mapped nodes, and allowed writeback targets.
+舊版以固定 Window 01–07、S0–S5 與 GitHub tri-key 定義進鏈／升階；這些編號與 state ladder 已不是 architecture invariant。
 
-## Linking Conditions
-A window may link onto the main chain only if all required items exist:
-- source_ref
-- delta_id or repo_ref
-- project_key
-- node_key
-- writeback_key
-- allowed_target_path
-- current_state
+## Retained primitives
+- Window／Lane 不得自行升格或取得 Native Authority。
+- Link／writeback 需要 Stable Identity、source/evidence、authority、affected scope、target state、return continuity。
+- Missing gate 只 HOLD affected branch，不製造假 closure。
+- Continuity 可以跨不同 Window/Carrier 重建，不依賴固定編號 topology。
 
-## State Ladder
-- S0: dormant
-- S1: observed
-- S2: linked
-- S3: mapped
-- S4: writeback_ready
-- S5: active_sync
+## Current successor
+`Delta → Affected Cone → Receiver Wake → Local Rebuild → Return → Reconciliation`
+under `LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md` and the seven-window/eight-act Continuity rules.
 
-## Upgrade Rules
-- S0 -> S1 when a GitHub delta is detected but not yet mapped
-- S1 -> S2 when tri-key is complete
-- S2 -> S3 when target window and target path are assigned
-- S3 -> S4 when writeback target is confirmed and not legacy-blocked
-- S4 -> S5 when at least one successful writeback log exists
-
-## Window Role Rule
-- 01: may remain Not Established until explicit repo binding exists
-- 02: task / collaboration / spec sync priority
-- 03-07: link only when delta content maps to their role
-
-## Rules
-- no self-fabricated upgrade
-- no upgrade without tri-key
-- no writeback without allowed_target_path
-- unresolved items return to window 00 hold state
+完整 W01–07／S0–S5 predecessor 留 Git history；正常 Reader 不需讀本 specimen。

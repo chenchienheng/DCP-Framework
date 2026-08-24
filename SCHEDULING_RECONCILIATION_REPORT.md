@@ -1,38 +1,30 @@
-# Scheduling Topology Reconciliation Report
+# Scheduling Reconciliation — Historical Topology Lineage
 
-## 1. Summary of Changes/Reconciliation
-The newly established scheduler topology (`PLATFORM_SCHEDULER_AND_TOOL_NAMING_MAP.md`) restricts scheduling to a master hub and four child windows:
-- `00_ScheduleHub` (master)
-- `01_RT_Critical` (event-driven critical changes)
-- `02_CVG_3D` (3-day convergence)
-- `03_STAGE_W1` (weekly stage)
-- `04_MANUAL_Doctrine` (manual governance)
+> Lifecycle: `HISTORICAL_REFERENCE`
+> Current eligibility as scheduler topology: `false`
+> Runtime: `false`
+> Authority: `none`
 
-However, the current `SCHEDULING_EFFECT_REGISTER.md` relies on an older 12-window structure, leading to significant mismatches in owner window assignments, cadences, and expected outputs.
+This report records an earlier attempt to reconcile a 12-window schedule model with a later `00_ScheduleHub + 4 child windows` model. Neither topology is Current merely because this report compared them.
 
-## 2. Mismatch or Gap Report
+## Retained primitives
+- a named cadence does not prove execution;
+- changing scheduler topology can orphan expected effects unless receiver/effect/return dependencies are preserved;
+- schedule migration must distinguish trigger/cadence from action authority;
+- missed/stale effects need observable evidence and bounded recovery;
+- carrier/topology migration should preserve stable schedule identity only where a real schedule still exists.
 
-### Mismatched Schedules (Existing but mapped outside new topology):
-- `timeline_schedule_review`: Mapped to `06`. The legacy `06` owner window mapping remains visible pending cleanup. Under the proposed / pending topology mapping (pending approval), routine timeline convergence would shift to `02_CVG_3D` and critical changes would remain event-driven via `01_RT_Critical` or `00_ScheduleHub`.
-- `board_orchestration_review`: Mapped to `03`. The new `03_STAGE_W1` is strictly for weekly stage reporting, whereas this item uses a "recurring review + event-driven" hybrid cadence.
-- `log_writeback_append`: Mapped to `08`.
-- `toolchain_status_refresh`: Mapped to `10`.
-- `public_surface_refresh`: Mapped to `07`.
-- `synthesis_batch`: Mapped to `11`.
-- `world_field_alignment`: Mapped to `12`.
+## Retired assumptions
+- `00_ScheduleHub` is a master scheduler;
+- `01_RT_Critical / 02_CVG_3D / 03_STAGE_W1 / 04_MANUAL_Doctrine` are required child windows;
+- legacy 06–12 schedules must be remapped into 00–04;
+- an empty named window is a topology gap requiring activation;
+- `02_CVG_3D` should be activated as the next action.
 
-### Topology Gaps (Windows with no active schedule binding):
-- `01_RT_Critical`: No explicit schedules currently bound to real-time critical changes. (`central_reanchor_review` in `00` acts as event-driven escalation, but `01` is empty).
-- `02_CVG_3D`: No schedule bound to the 3-day convergence cadence.
-- `04_MANUAL_Doctrine`: No explicit schedules bound to manual architecture/governance work.
+## Current rule
+`Named schedule != Effective schedule`
+`Scheduler topology != Authority`
+`Cadence mapping != Execution proof`
+`Reconciliation report != Current state`
 
-### Cadence Drifts:
-- The obsolete daily cadence for `timeline_schedule_review` has been removed.
-- The 3-day and weekly cadences are named in the topology but are not actively producing outputs in the register.
-
-## 3. Unresolved Risks
-- Strictly re-mapping or deprecating windows 06-12 could leave operational gaps if their intended outputs (e.g., synthesis, log writeback, public surface refresh) do not neatly fold into `02_CVG_3D` or `03_STAGE_W1`.
-- `board_orchestration_review` requires frequent queuing/routing updates. If mapped to `03_STAGE_W1`, its agility may be constrained by the weekly cadence.
-
-## 4. Next Single Recommended Action
-Approve the "Proposed Topology Mapping" in `SCHEDULING_EFFECT_REGISTER.md` and initiate a phase to merge or deprecate legacy schedules (06-12) into the 00-04 topology, prioritizing the activation of `02_CVG_3D` to absorb rolling reviews.
+Use `SCHEDULING_EFFECT_REGISTER.md` and current evidence for any actual schedule/effect judgment. Full predecessor comparison remains in Git history.

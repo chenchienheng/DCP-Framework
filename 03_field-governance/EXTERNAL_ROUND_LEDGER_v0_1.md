@@ -1,96 +1,18 @@
-# External Round Ledger v0.1
+# Continuity Receipt / Round-Lineage Specimen
 
-## Purpose
+**Lifecycle:** SUCCESSOR_COVERED / LINEAGE_ONLY  
+**Current eligibility as standalone continuity authority:** false  
+**Reclaim disposition:** HOLD_UNTIL_UNIQUE_CONTINUITY_EVIDENCE_CHECK
 
-External Round Ledger is a lightweight memory anchor for cross-window continuity.
+舊 MotherTree/Closure Gate、固定 round prompt 與 storage list 已退休。Round/ledger 只是一種 continuity receipt，不是 Native Body、Current、Authority 或永久 Registry。
 
-It records each working round as a small external note so a new window can align with the current chain before acting.
+## Retained primitives
+- 新 Window/Model/Tool 不只靠聊天記憶續接；需要 bounded continuity evidence。
+- Continuity receipt 應保留 Stable Identity/Lane、Revision/Time、Material Delta、Open Risk、Next Gate/Action、Return Target。
+- Time order 約束 interpretation，但 Latest ≠ Current。
+- Receipt/ledger searchable ≠ wake eligible；Receiver absorption 仍由 receiver-owned disposition 決定。
 
-## Boundary
+## Successor binding
+`Identity/Lineage → Delta → Affected Cone → Receiver Wake → Local Rebuild → Return/Receipt → Reconciliation`
 
-This file is not core doctrine.
-It does not store secrets, credentials, private identity lists, or sensitive source material.
-It does not replace MotherTree, CoreTri, or Closure Gate.
-
-## Problem
-
-Long conversations and model updates can cause context drift.
-
-A window may remember the current topic but miss the chain state, last decision, or next action.
-
-The ledger solves this by making each round return a compact state record.
-
-## Round Record
-
-```yaml
-Round_Record:
-  Round_ID:
-  Window:
-  Date:
-  Current_Node:
-  Decision:
-  Changed_Artifacts:
-  Open_Risks:
-  Next_Task:
-  Return_Path:
-```
-
-## Continuation Rule
-
-A new window should not start by expanding ideas.
-It should first align with the latest round record.
-
-```text
-Read latest round record -> identify current node -> continue only the next task.
-```
-
-## Time Rule
-
-Time order constrains spatial expansion.
-
-New outputs must preserve:
-
-- last decision;
-- current artifact state;
-- open risk;
-- next task;
-- return path.
-
-## Storage Surfaces
-
-Allowed surfaces:
-
-- GitHub issue or PR comment
-- GitHub markdown file
-- cloud document summary
-- task card system
-
-Forbidden content:
-
-- passwords
-- tokens
-- private human lists
-- company-sensitive payloads
-- unreviewed private calibration text
-
-## Return Packet
-
-```yaml
-Round_Return_Packet:
-  Round_ID:
-  What_Changed:
-  What_Did_Not_Change:
-  Decision:
-  Needs_User_Decision: true | false
-  Next_Round_Start_Prompt:
-  Return_Path:
-```
-
-## Status
-
-```yaml
-Status: Draft_v0_1
-Layer: Field Governance
-Core_Status: Non_Core
-Gate_Color: Yellow
-```
+完整 predecessor schema 留 Git history；若 Shared/Native 已完整承接且無 unique continuity evidence，再進 unified reclaim review。

@@ -1,104 +1,48 @@
-# Agent Readiness Checklist
+# Agent Readiness — Bounded Execution Prerequisites
 
-> Checklist for determining whether the system is ready to introduce controlled agent behavior.
-> Purpose: prevent premature agentization that amplifies instability.
+> Lifecycle: `PUBLIC_RESEARCH_REFERENCE`
+> Runtime: `false`
+> Authority: `none`
 
----
+Agent-like execution is an amplifier. Readiness is therefore not proven by a repository, register, window map, connector, scheduler, model family, or named agent existing.
 
-## 0. Core Reading
+## Minimum prerequisites
+Before any material agent-like or long-chain execution, resolve:
+- stable target identity and affected scope;
+- accountable receiver/owner;
+- source authority and allowed reads;
+- mutation/write/share authority separately from read/derive authority;
+- tool/capability allowlist and current availability verification;
+- cost/token/time/concurrency/retry limits;
+- evidence and artifact verification requirements;
+- stop/hold/escalation conditions;
+- irreversible-action boundary and rollback/recovery path;
+- return target, receiver reconciliation and resume/rebuild evidence.
 
-Agent is not a feature.
-Agent is an amplifier.
+## Readiness tests
+Readiness is stronger when the operation can demonstrate:
+- bounded success criteria;
+- observable failure and stale-state detection;
+- no silent scope expansion;
+- carrier replacement or graceful degradation where required;
+- output verification before downstream use;
+- receiver-owned closure rather than producer self-approval.
 
-If the system is:
-- clean
-- structured
-- auditable
+## Retired prerequisites
+The following are historical implementation choices, not universal readiness conditions:
+- Unified Artifact Register;
+- cleanup queue activity;
+- fixed 12-window ownership;
+- GitHub as stable writeback anchor;
+- Gmail as required intake node;
+- fixed model-family/contradiction registers;
+- `return_to_00`.
 
-Agent amplifies capability.
+## Invariants
+`Agent available != Agent authorized`
+`Tool connected != Action permitted`
+`Output produced != Deliverable verified`
+`Writeback complete != Receiver absorbed`
+`High activity != Learning`
 
-If the system is:
-- noisy
-- unclassified
-- drifting
-
-Agent amplifies pollution.
-
----
-
-## 1. Readiness Criteria
-
-### 1.1 Repository Bone Stability
-
-- [ ] unified artifact register is usable
-- [ ] naming drift is under control
-- [ ] cleanup queue is active and progressing
-- [ ] branch topology is readable
-
-### 1.2 Runtime Binding
-
-- [ ] 12-window ownership is active
-- [ ] scheduling effect register has at least P0 windows functioning
-- [ ] writeback surfaces are consistent
-
-### 1.3 Model On-Chain Discipline
-
-- [ ] invocation contract is used in real operations
-- [ ] model family roles are distinguishable
-- [ ] contradiction register is usable
-
-### 1.4 External Node Discipline
-
-- [ ] GitHub is stable writeback anchor
-- [ ] at least one intake node is stable (e.g., Gmail)
-- [ ] node replacement is conceptually possible
-
-### 1.5 Coverage Awareness
-
-- [ ] cluster coverage matrix is readable
-- [ ] weak clusters are known
-
----
-
-## 2. Minimum Agent Entry Condition
-
-Agent behavior may be introduced only when:
-
-- repository bone stability = mostly true
-- runtime binding = partially active
-- model invocation discipline = at least partially enforced
-
----
-
-## 3. Agent Scope Constraint
-
-Initial agent should be limited to:
-- classification tasks
-- register updates
-- cleanup assistance
-- scheduling support
-
-Agent should NOT initially:
-- rewrite large architecture segments
-- merge branches autonomously
-- define sovereignty-level rules
-
----
-
-## 4. Anti-Pollution Rule
-
-Every agent action must:
-- produce writeback
-- declare role
-- declare scope
-- allow audit
-
-Otherwise it is off-chain and unsafe.
-
----
-
-## 5. Status
-
-- agent_readiness_checklist_created: true
-- anti_premature_agent_rule_defined: true
-- return_to_00: true
+This document does not activate, authorize or schedule an agent. Runtime remains false unless the applicable Native authority and execution envelope explicitly establish otherwise.

@@ -1,129 +1,22 @@
-# CORE_ACTIONS.md
+# Action Classification Lineage — predecessor three-action taxonomy
 
-## Purpose
-This file defines the minimal operational action system for DCP-Framework.
-All repository execution tasks should map to one of the following core actions.
+**Lifecycle:** HISTORICAL_ACTION_SPECIMEN  
+**Current action taxonomy:** false  
+**Runtime / Authority:** false
 
----
+舊版要求所有 repository execution 都映射到 `structural_cleanup / dependency_link / state_register_update` 三類。這是早期 repo-centric work taxonomy，不足以表達現行 Need／Judgment／Capability／Action Effect／Responsibility／Return。
 
-## Core Actions
+## Retained primitives
+- Action 必須有 bounded scope、Authority、Evidence／verification、Expected Effect、Stop/Failure condition 與 Return。
+- 執行工作不得因 convenience 靜默改寫 Meaning／Identity／Authority。
+- 高階 conflict 應保持 Conflict/HOLD 並回到合法 Receiver，而不是由 executor 自行裁定。
+- Structural cleanup、dependency repair、state reconciliation 仍可作 descriptive action labels，但不具有 exhaustive taxonomy 地位。
 
-### 1. structural_cleanup
-Purpose:
-- restore structural consistency without changing doctrine
+## Current action model
+`Need → Judgment → permitted effect ceiling → Minimum Necessary Action → Work Contract when action is needed → Consequence/Responsibility → Evidence → Return/Rebuild`
 
-Includes:
-- naming normalization
-- seed rebinding
-- duplicate consolidation
-- safe file inventory correction
-- path consistency repair
+`NO_ACTION`、`OBSERVE`、`PREPARE`、bounded mutation 等可依實際 Need 成立；不存在「每個任務一定要塞進三種 repo action」的規則。
 
-Excludes:
-- architecture rewrite
-- doctrine creation
-- mother-law modification
+Machine successors：`dcp_kernel/action_gate.py`、`dcp_kernel/decision_chain.py`、`dcp_kernel/platform.py`、`dcp_kernel/consequence.py`。
 
-Expected output:
-- summary
-- affected files
-- reasoning
-- mismatch_or_gap
-- unresolved risks
-- next single recommended action
-
----
-
-### 2. dependency_link
-Purpose:
-- restore or strengthen traceable dependency relationships across files
-
-Includes:
-- cross-reference repair
-- file-to-file linking
-- dependency mapping
-- inbound/outbound reference completion
-- reciprocal link repair
-
-Excludes:
-- new theory creation
-- broad semantic reinterpretation
-- global architecture redesign
-
-Expected output:
-- summary
-- affected files
-- dependency observations
-- mismatch_or_gap
-- unresolved risks
-- next single recommended action
-
----
-
-### 3. state_register_update
-Purpose:
-- keep state-tracking artifacts aligned with actual repository condition
-
-Includes:
-- queue updates
-- resolution updates
-- diff tracking updates
-- status reconciliation
-- registry/index correction
-
-Excludes:
-- speculative status assignment
-- doctrine expansion
-- architectural decisions
-
-Expected output:
-- summary
-- affected files
-- register changes
-- mismatch_or_gap
-- unresolved risks
-- next single recommended action
-
----
-
-## Boundary Rules
-
-The following are forbidden for execution nodes unless explicitly authorized by human adjudication:
-
-- architecture_rewrite
-- doctrine_definition
-- tri_coupling_redefinition
-- mother_law_modification
-- sovereignty_change
-- window_ownership_change
-- automatic_merge
-
----
-
-## Execution Law
-
-All execution work in this repository must satisfy:
-
-1. Every task must map to one core action
-2. Every PR must stay within one bounded scope
-3. Every PR must be reviewable as one convergence packet
-4. If higher-level conflict is detected, record it only under:
-   - mismatch_or_gap
-   - unresolved risks
-
----
-
-## Review Standard
-
-A PR passes only if:
-- scope is respected
-- no forbidden zone is crossed
-- changed files are traceable
-- terminology remains consistent
-- repository state becomes more reviewable, not less
-
----
-
-## System Law
-
-"Execution may distribute. Final adjudication remains human."
+完整 predecessor taxonomy 留 Git history。

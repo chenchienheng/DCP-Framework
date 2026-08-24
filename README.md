@@ -1,74 +1,87 @@
 # DCP Pole Projection / DCP 極向投影
 
-**Repository class / 倉庫分類：** Public pole-oriented projection carrier  
-**Operational status / 運作狀態：** Non-production  
-**Authority model / 權限模型：** Repository ≠ Pole Authority; no implicit runtime, promotion, or decision authority
+**Repository class:** Public DCP-weighted CoreTri projection carrier  
+**Operational status:** Non-production  
+**Authority:** Repository ≠ Pole Authority
 
-## Overview / 概述
+## 一句核心
 
-This repository is a GitHub projection surface shaped by the CoreTri architecture. It is **not** the DCP pole itself and does not replace the lawful DCP Native Source Root.
+本倉把 DCP 對 Dependency、State、Authority、Evidence、Action、Return、Rebuild 與 Metabolism 的判斷投影成可讀、可測的公開 Carrier；它不是 DCP Native Body、Runtime、Canon 或 Authority Root。
 
-本倉是 CoreTri 三極架構在 GitHub 生態中的 **DCP 極向投影面**；它不是 DCP 極本體，也不取代合法的 DCP Native Source Root。
+## Current Reader Entry
 
-Its emphasis is Dependency / State / Authority / Admission / Evidence / Return / Reconciliation / Re-entry / Rebuild / Metabolism. The same stable existence may be represented differently in Ideas- and GLModel-oriented projections while preserving identity, lineage, authority boundaries, claim ceilings, and return relations.
+正常讀取：
 
-本倉偏重 Dependency／State／Authority／Admission／Evidence／Return／Reconciliation／Re-entry／Rebuild／Metabolism。同一 Stable Existence 可在 Ideas 與 GLModel 極向投影中呈現不同形態，但 Identity、Lineage、Authority Boundary、Claim Ceiling 與 Return Relation 不得漂移。
+`CURRENT-SURFACE-MANIFEST.json → LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md → PUBLIC-SURFACE-POLICY.md → STATUS.md`
 
-## Tri-pole architecture / 三極架構
+舊 Master／MotherTree／W0／AXIS／固定 Agent／Scheduler／Folder topology 只在 conflict、audit、unique evidence/failure 或 explicit re-entry 時 bounded read。
 
-The three GitHub repositories are **not a one-repository-per-pole authority split**. All three use the same tri-pole architecture and may carry bounded representations from DCP, Ideas, and GLModel when lawful and useful. Each repository only gives different projection weight and reader entry.
+## One Living Chain
 
-三個 GitHub 倉庫不是「一倉＝一極 Authority」的切割。三倉都使用同一套三極架構，並可在合法、必要且有界的前提下承載 DCP／Ideas／GLModel 的不同表徵；差異在於投影重心與 Reader Entry，而不是建立三份 Truth。
-
-- **DCP-Pole-Projection** — dependency/state/authority/rebuild oriented projection.
-- **Ideas-Pole-Projection** — meaning/placement/navigation/experience oriented projection.
-- **GLModel-Pole-Projection** — world/object/engineering/evidence/adapter oriented projection.
-
-Cross-repository continuity should travel through bounded pointer / receipt / receiver-state / return / reconciliation / rebuild relations rather than copied native bodies. A shared belt is an interlock mechanism, not a fourth pole and not a shared authority root.
-
-跨倉連續性應透過 bounded pointer／receipt／receiver-state／return／reconciliation／rebuild relation 互鎖，而不是複製 Native Body。Shared Belt 是三倉互鎖機制，不是第四極，也不是共同 Authority Root。
-
-## Current reader entry / 現行讀取入口
-
-Start with `CURRENT-SURFACE-MANIFEST.json`. Legacy root-layer families remain Historical／Compatibility unless explicitly re-admitted; repository location, filename, recency, or searchability does not establish Current.
-
-## Representation architecture / 三極語
-
-- **Human zh-TW** — 人類理解、判斷、風險與下一步。
-- **Professional / External English** — 專業互通與經核准的外部技術表達。
-- **Canonical Machine State** — Stable IDs、typed relations/states、authority、evidence pointer、revision/hash、return/rebuild relation。
-
-Presentation may differ; Identity, State, Authority, Claim Ceiling, Release Classification, Successor/Re-entry and Rebuild relation may not silently diverge.
-
-## Public boundary / 公開邊界
-
-Public placement does not create unrestricted rights or authority. Protected Personal / Company / Project source bodies, credentials, privileged routing, confidential evidence lineage, or material exceeding its rights/retention/release basis must stay in their lawful domains.
-
-公開不等於無邊界。Personal／Company／Project 受保護 Source Body、憑證、特權路由、機密 Evidence Lineage，以及超出 Rights／Retention／Release Basis 的內容仍應留在合法權域。
-
-## Machine metadata / 機器中繼資料
-
-```yaml
-repository_class: public_pole_projection_carrier
-projection_focus: DCP
-repo_is_pole_authority: false
-runtime: false
-native_source_root: false
-tri_pole_architecture: true
-shared_belt_role: pointer_receipt_receiver_state_return_reconcile_rebuild
-representation_profiles:
-  human: zh-TW
-  professional: en
-  machine: canonical
-release_control: explicit
+```text
+Existence
+→ Relation
+→ Event
+→ Judgment
+→ Capability Binding
+→ Action
+→ Evidence
+→ Return
+→ Receiver Rebuild
+→ New State
+→ Retest
 ```
 
-## License / 授權
+固定：
+
+`Representation ≠ Identity`  
+`Carrier ≠ Core`  
+`Capability ≠ Authority`  
+`Wake ≠ Execution`  
+`Return Written ≠ Receiver Absorbed`  
+`Public-safe ≠ Public-approved`
+
+`dcp_kernel/living_loop.py` 只組合既有 Gateway／Relation／Public Encounter／Operable Birth gates，不建立第二 control plane。
+
+## CoreTri
+
+三個 GitHub 倉是不同 weighting 的 Projection，不是三個 Authority：
+
+- **DCP-Pole-Projection** — dependency／state／authority／return／rebuild。
+- **Ideas-Pole-Projection** — meaning／placement／identity／navigation。
+- **GLModel-Pole-Projection** — world／object／relation／reconstruction。
+
+Shared Belt 只承載 bounded pointer／wake／receipt／return／reentry／rebuild relation，不是第四極或中央真實。
+
+## Carrier-neutral
+
+同一 Stable Existence 可出現在文件、表格、Database、CAD／BIM／3D、Image、Code、API、Issue／PR、Drive、SaaS 或其他 Carrier；Carrier 改變不能自動改變 Identity、Authority 或 World Truth。
+
+## Public Encounter
+
+第一個外部入口只允許 lawful、bounded、revocable projection：
+
+`Native Capability → Lawful Projection → External Encounter → Evidence → Receiver Return → Native Rebuild`
+
+Capability demo 不驗證整個架構，也不轉移 Authority；實際公開仍需合法 Release Authority。
+
+## Current Claim Ceiling
+
+目前只能宣告 Candidate-level executable kernel／tests／projection surfaces 已存在。
+
+`Runtime = false`  
+`Autonomy = NOT_PROVEN`  
+`Operable Birth = NOT_PROVEN`  
+`CI latest PASS = NOT_CLAIMED`
+
+詳細 Current state：`STATUS.md`  
+Machine-facing boundaries：`CURRENT-SURFACE-MANIFEST.json`  
+公開邊界：`PUBLIC-SURFACE-POLICY.md`
+
+## License
 
 **Creative Commons Attribution–NonCommercial–NoDerivatives 4.0 International (CC BY-NC-ND 4.0).**
 
-## Citation / 引用
+## Citation
 
 Chen, Chien-Heng. *DCP Framework: A Constraint-Based Model for Structured Judgment and Layered Interpretation*. Zenodo, 2026. DOI: https://doi.org/10.5281/zenodo.18111818
-
-For disclosure and representation controls, see `PUBLIC-SURFACE-POLICY.md`.

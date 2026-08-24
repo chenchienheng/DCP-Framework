@@ -1,26 +1,17 @@
-# Gamma Entry Spec
+# Visual Presentation Carrier Compatibility Specimen
 
-Department: Adapter Layer
-Agent Block: Gamma Entry
-Node ID: ADP-002
-Window: W0
-Platform Writer: ChatGPT
-Version: v0.1
+**Lifecycle:** HISTORICAL_IMPLEMENTATION_STUB  
+**Current eligibility:** false  
+**Reclaim disposition:** CANDIDATE_AFTER_POINTER_AND_UNIQUE_EVIDENCE_CHECK
 
-## Core
-Gamma is the visual entry layer for the native board.
+Gamma 不再是固定 visual entry layer；任何簡報／UI／視覺生成工具都只是 Representation Carrier。
 
-## Input
-- board index
-- blockers summary
-- latest log summary
+## Retained primitives
+- 只讀合法 bounded projection；Representation ≠ Source／Truth／Authority。
+- Output 必須保留 Stable Identity binding、provenance、claim ceiling、rights、review/release state、return path。
+- 工具可替換；工具名稱、模板格式、媒體輸出不建立架構分類。
 
-## Output
-- visual overview
-- section grouping
-- readable entry cards
+## Successor binding
+`Stable Existence → Audience/Representation Need → Rights/Evidence Boundary → Carrier Selection → Transform/Review → Return/Reconciliation`
 
-## Limits
-- mirror only
-- no primary write
-- no source replacement
+完整舊 Gamma mapping 留 Git history；正常 Reader 不需讀本 specimen。

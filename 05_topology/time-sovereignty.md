@@ -1,18 +1,18 @@
-# Time Sovereignty
+# Temporal Context and Lineage — retained DCP primitive
 
-一句核心：
-時間不是背景條件，而是靈絡中的主權條件；沒有時間主權，責代、版本、回寫都無法成立為同一條鏈。
+**Lifecycle:** RETAINED_PRIMITIVE / REINTERPRETED  
+**Current eligibility as sovereign time layer:** false
 
-## 作用
-- 決定事件先後
-- 決定版本有效窗
-- 決定回寫次序
-- 決定歷史可回讀性
+時間不是獨立 Authority，也不是背景雜訊；它是 State／Lineage／Evidence／Re-entry 判讀的重要 context。
 
-## 原則
-- 所有節點都必須附著於時間窗
-- 沒有時間窗的成立，只能視為暫態
-- 時間主權優先於工具狀態
+## Invariants
+- Event order、revision window、freshness、expiry、retention、return timing 都可能改變 State/Gate 判定。
+- Latest ≠ Current；較新時間戳不自動取得 Authority。
+- Historical searchable ≠ wake eligible；re-entry 仍需 material need、evidence、authority、successor compatibility。
+- 同一 Stable Identity 可跨時間保留 lineage，但不同 revision/state 不得無條件視為同一 Current。
+- Tool clock、file modified time、message time、runtime time 都只是 temporal evidence source，需判 provenance/fidelity。
 
-## 狀態
-Seed v0.1
+## Successor binding
+`Stable Identity → Temporal Context/Revision → State/Freshness → Evidence/Authority Gate → Action/Return → Reconciliation/Re-entry`
+
+舊「時間主權層」語義退休；保留 temporal context primitive。

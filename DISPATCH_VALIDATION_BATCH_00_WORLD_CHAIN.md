@@ -1,49 +1,18 @@
-# Dispatch Validation Batch 00 - World Chain Field Audit
+# Dispatch Validation Failure Lineage — World-Axis predecessor
 
-## 1. Scope
+**Lifecycle:** HISTORICAL_FAILURE_SPECIMEN  
+**Current validator:** false  
+**Runtime / Authority:** false
 
-Auditing `WORLD_CHAIN_MASTER_AXIS.md` against the required dispatch fields
-defined in `MULTI_CHAIN_DISPATCH_GOVERNANCE.md`.
+舊 audit 以 `MULTI_CHAIN_DISPATCH_GOVERNANCE` 為標準，要求 `WORLD_CHAIN_MASTER_AXIS` 補 entry／priority／review／return／AXIS-05／register fields。兩個被依賴的控制面皆已退休，因此本 report 的「minimal correction」本身已成為 zombie-reconstruction failure example。
 
-## 2. Field Audit Table
+## Retained lesson
+- Validator／audit schema 必須先確認自己的 Current eligibility 與 successor relation。
+- Missing field 只有在現行 contract 仍要求時才是 defect。
+- 不得因 historical validator 命中缺口，就重建已退休 controller／axis／registry。
+- Validation output 必須保留 claim ceiling：`historical mismatch ≠ current defect`。
 
-| Field                          | Status  |
-| ------------------------------ | ------- |
-| entry condition                | Missing |
-| dispatch priority              | Missing |
-| review hook                    | Missing |
-| return path                    | Missing |
-| failure route                  | Missing |
-| return_failed -> AXIS-05       | Missing |
-| register reference if visible  | Missing |
+## Current replacement
+依 Need 驗證現行 `Identity / Dependency / Authority / Evidence / Action Effect / Return / Rebuild` contract；若 predecessor validator 已失權，結果轉為 lineage/failure evidence，不產生 remediation action。
 
-## 3. Present Fields
-
-None of the dispatch governance fields are present in the audited file.
-
-## 4. Missing Fields
-
-- entry condition
-- dispatch priority
-- review hook
-- return path
-- failure route
-- return_failed -> AXIS-05
-- register reference if visible
-
-## 5. Minimal Correction Needed
-
-Update `WORLD_CHAIN_MASTER_AXIS.md` to include all the missing dispatch fields
-as required by `MULTI_CHAIN_DISPATCH_GOVERNANCE.md`.
-
-## 6. mismatch_or_gap
-
-The `WORLD_CHAIN_MASTER_AXIS.md` file currently operates as a master layer
-definition but lacks the necessary dispatch fields to comply with the unified
-dispatch structure. This prevents proper node selection, routing, and return
-path validation within the World Chain.
-
-## 7. next_single_recommended_action
-
-Append the missing dispatch fields to `WORLD_CHAIN_MASTER_AXIS.md` to ensure
-alignment with Multi-Chain Dispatch Governance.
+舊欄位表與補回 World Axis 的指令留 Git history。

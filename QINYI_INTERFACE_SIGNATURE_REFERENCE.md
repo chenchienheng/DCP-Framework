@@ -1,79 +1,24 @@
-# Qinyi Interface Signature Reference
+# Qinyi Interface Signature — Historical Presentation Reference
 
-> Stable system-wide identity anchor for the Qinyi signature reference.
+> Lifecycle: `HISTORICAL_REFERENCE`
+> Current eligibility as identity authority: `false`
+> Runtime: `false`
+> Authority: `none`
 
----
+The earlier signature string is preserved only as a historical presentation artifact. It is not a system-wide identity anchor, canonical persona definition, mandatory signature, Native Source, or authority surface.
 
-## 1. Canonical Signature
+## Retained rule
+A signature, logo, slogan, footer, title block or visual mark may help presentation continuity, but must remain a projection of an already-resolved identity/meaning source.
 
-Use exactly:
+`Signature != Identity source`
+`Repeated wording != Canon`
+`Visual mark != Authority`
+`Repository reference != Owner approval`
 
-```text
-XuanLing.R || Y.C·Qinyi
-CoreTri || Cluster × Cover × Chain
+## Use boundary
+Any future use of the historical signature requires the applicable owner/public-release decision. It may be adapted, replaced or retired without changing the underlying subject identity.
 
-翾靈規則 × 羽創芹衣
-依存叢集網 × 覆蓋多鏈式生態
-擬神經網絡 × 三耦通域化邏輯
-```
+## Retired topology
+The former bindings to AXIS-02, AXIS-05, windows, boards, Jules task packets and mandatory cross-ecosystem use are retired. `signature_anchor_verified=true` and `return_to_00=true` are withdrawn as historical self-claims.
 
-## 2. Scope of Use
-
-This signature applies to:
-- Jules task packets
-- GitHub documents
-- visual identity outputs
-- manuals
-- slides
-- brochures
-- short videos
-- external node references
-- windows
-- boards
-- families
-- ecosystem references
-
-## 3. Usage Rule
-
-- Use this signature by reference.
-- Do not rewrite it in variant forms.
-- Do not split it into partial slogans.
-- Do not replace × with x.
-- Do not add new titles above it unless explicitly required.
-
-## 4. Relationship to Existing Chain
-
-Map this reference to:
-- AXIS-02 Existence Chain
-- AXIS-05 Review Chain
-- Qinyi visual identity chain
-- external-facing interface node references
-
-## 5. Mismatch Handling
-
-If existing documents use older forms, mark them as:
-- legacy wording
-- not canonical
-- should be corrected only when the file is next touched
-
-## 6. Mismatch or Gap
-
-- mismatch_or_gap: Currently some older documents might omit or use different
-  variations of identity signatures. No automated script exists to forcefully
-  update all references at once.
-
-## 7. Unresolved Risks
-
-- unresolved_risks: The system relies on human or agent discipline to apply this
-  signature without automated validation tooling for signature syntax.
-
-## 8. Next Single Recommended Action
-
-- next_single_recommended_action: Manually update
-  `00_meta/user_identity_anchor.md` or visual identity specs to point to this
-  stable anchor when they are next touched in the schedule.
-
-## 9. Status
-
-- signature_anchor_verified: true
-- return_to_00: true
+The exact former signature body remains recoverable through Git history for provenance or design archaeology.

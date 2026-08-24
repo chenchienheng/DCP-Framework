@@ -1,35 +1,19 @@
-# Native Board Index
+# Board / Task Routing Lineage Specimen
 
-Department: Native Board
-Agent Block: Board Index
-Node ID: NBD-001
-Window: W0
-Platform Writer: ChatGPT
-Version: v0.1
-Status: active
+**Lifecycle:** METABOLIZED_HISTORICAL_STUB  
+**Current eligibility:** false  
+**Runtime:** false  
+**Reclaim disposition:** CANDIDATE_AFTER_POINTER_AND_UNIQUE_EVIDENCE_CHECK
 
-## Core
-This is the primary entry board for runtime routing, blockers, follow-up, and logs.
+舊版把本檔當作 W0 runtime routing／blocker／follow-up primary board；該角色已退休。Board、Issue、Window、Task list 只是在某次工作中的 coordination carrier，不因 placement 或名稱取得 Native／Runtime Authority。
 
-## Sections
-1. runtime_status
-2. blockers
-3. task_follow_up
-4. latest_logs
-5. adapter_status
+## Retained primitives
+- Reader 入口與 bounded routing 必須可辨識。
+- Blocker／task／adapter 狀態需要可追溯。
+- mutation 必須綁定 target、authority、evidence、return route。
+- work-item state 與 Stable Existence 分離。
 
-## Routing
-- blockers -> 01_native-board/blockers.md
-- task_follow_up -> 02_runtime-ops/task_follow_up.md
-- logs -> 00_meta/logs/
-- adapter_layer -> 04_adapter-layer/
+## Successor binding
+`Stable Existence / Work Intent → Dependency/Affected Scope → Authority/Gate → Action/Evidence → Return/Reconciliation`
 
-## Runtime Status
-- mode: GitHub-native-first
-- board_state: seed
-- writeback_gate: enabled
-- external_layers: staged
-
-## Notes
-- This board is the primary read entry for Gamma.
-- Replit may use this board as the first interaction relay entry.
+現行入口：`CURRENT-SURFACE-MANIFEST.json` 與 `LIFECYCLE_DEPENDENCY_CHAIN_KERNEL.md`。完整舊 board schema 留 Git history；正常 Reader 不需讀本 specimen。

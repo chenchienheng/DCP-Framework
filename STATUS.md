@@ -1,90 +1,121 @@
 # Repository Status / 倉庫狀態
 
-**Repository class / 倉庫分類:** Public research and reference corpus  
-**Architecture maturity / 架構成熟度:** Evolving; bounded structural convergence  
-**Operational status / 運作狀態:** Non-production  
-**Runtime evidence / Runtime 證據:** Not established  
-**Authority elevation / 權限升格:** None implied by repository content  
-**Release control / 發布控制:** Explicit
+**Repository class:** Public DCP-weighted CoreTri projection carrier  
+**Operational status:** Non-production  
+**Runtime evidence:** Not established  
+**Promotion / Canon / Authority elevation:** None
 
-## Status statement / 狀態說明
+## 1｜定位
 
-This repository contains the externally reviewable research and reference surface of the DCP framework. The corpus includes conceptual work, bounded structural models, interface candidates, validation artifacts, historical research evidence, and repository-level documentation.
+本倉是 DCP 的公開投影載體，不是 DCP Native Body、Native Source Root、Runtime、Canon 或 Authority Root。
 
-本倉庫承載 DCP Framework 可供外部審閱的研究與參考表面，包含概念研究、有限結構模型、介面 Candidate、驗證成果、歷史研究證據與倉庫層文件。
+固定：
 
-Repository contents do not, by themselves, establish production deployment, autonomous decision authority, architectural promotion, regulatory compliance, or correctness beyond the evidence scope declared by each artifact.
+`Carrier ≠ Identity`  
+`Capability ≠ Authority`  
+`Recent ≠ Current`  
+`Public-safe ≠ Public-approved`  
+`BuildReady ≠ Runtime`
 
-倉庫內容本身不構成 Production Deployment、Autonomous Decision Authority、Architecture Promotion、Regulatory Compliance，也不會使任何成果超出其聲明的 Evidence Scope。
+正常 Reader：
 
-## Current public architecture surface / 現行公開架構表面
+`README → CURRENT-SURFACE-MANIFEST → LIFECYCLE_DEPENDENCY_CHAIN_KERNEL → PUBLIC-SURFACE-POLICY → STATUS`
 
-The current public surface is organized around two bounded candidates:
+舊 Master／MotherTree／W0／AXIS／固定 Agent／Scheduler／Folder topology 只在 conflict、audit、unique evidence/failure 或 explicit re-entry 時 bounded read。
 
-- **DCP Life-Chain Dependency Model** — a working architecture candidate for dependency, lifecycle state, authority, evidence, return, reconciliation, and recovery reasoning.
-- **Cross-Carrier Projection Compatibility** — an interface candidate defining continuity requirements across heterogeneous documentation and workflow carriers.
+## 2｜單一生命鏈
 
-現行公開表面以兩個有限 Candidate 為主要技術入口：DCP Life-Chain Dependency Model，以及 Cross-Carrier Projection Compatibility。兩者均屬研究／介面層成果，不代表已部署 Runtime。
+DCP 現行工作不再按舊資料夾或固定角色組織，而按同一條生命鏈：
 
-## Evidence and maturity model / 證據與成熟度模型
+`Existence → Relation → Event → Judgment → Capability Binding → Action → Evidence → Return → Receiver Rebuild → New State → Retest`
 
-Maturity is evaluated per artifact and per claim. Evidence of a structural rule, interface property, validation result, or implementation artifact is not automatically evidence of deployment, owner acceptance, production readiness, or domain-wide applicability.
+其中：
 
-成熟度依 Artifact 與 Claim 分別判定。Structural Rule、Interface Property、Validation Result 或 Implementation Artifact 的證據，不自動證明 Deployment、Owner Acceptance、Production Readiness 或跨 Domain 適用性。
+- 同一存在跨圖、文、表、程式、3D、API 或其他 Representation 必須能 back-map；否則 `IDENTITY_RESOLUTION_GAP`。
+- Relation 不能只剩 A→B；缺 direction/state/time/evidence/effect 或必要的 authority/cost/risk/reversibility/return path 時，標 `STATIC_RELATION_ONLY`。
+- Event 先判 materiality；Non-material 不喚醒全體。
+- Judgment 先於工具；模型、Agent、人、平台只依 Need 綁定能力。
+- Action 只在合法 Scope／Authority／Risk／Reversibility／Evidence 內形成 Candidate effect；Gate PASS 不授權執行。
+- Return 只有在 Receiver Actual Read → Native Disposition → Reconcile → Rebuild → Behavior/World Delta → Retest 後，才有成熟度證據。
 
-Historical material may remain in the repository for provenance, comparison, failure analysis, and reproducibility. Historical retention does not make an artifact current.
+## 3｜主要 Gate
 
-歷史材料可因 Provenance、比較、Failure Analysis 與 Reproducibility 需求繼續保存；保存本身不會使其成為 Current Artifact。
+### Reception Gateway
 
-## Source and authority boundary / 來源與權限邊界
+外部 Request 先做 Source／Scope／Rights／Materiality／Affected Receiver 判斷。一般 bounded request 可直接 route；只有 irreversible、sensitive、authority change 或真正 Owner Decision 才 escalation。
 
-The repository is not a native data root. Native source ownership, access rights, retention, mutation, and publication remain governed by the lawful source and its applicable authority chain.
+`Owner ≠ Default API Gateway`
 
-本倉不是 Native Data Root。Native Source 的所有權、存取權、Retention、Mutation 與 Publication 仍由合法來源及其適用 Authority Chain 管理。
+### Cross-pole Feedback
 
-Public documentation contains only release-appropriate representations. Protected implementation details, privileged routing, private evidence lineage, sensitive source relationships, and restricted native bodies remain outside the public corpus.
+其他極只讀 affected slice。真反例必須修 affected assumption；Representation drift 必須 HOLD；理解不搬走 Authority；單次 PASS 不算成熟。
 
-公開文件只承載適合發布的表徵；受保護的 Implementation Detail、Privileged Routing、Private Evidence Lineage、敏感 Source Relationship 與 Restricted Native Body 不屬於公開語料。
+### Public Encounter
 
-## Representation and release status / 表徵與發布狀態
+第一次外部相遇只允許 lawful、bounded、revocable projection：
 
-Public documentation follows the repository representation architecture:
+`Native Capability → Lawful Projection → External Encounter → External Evidence → Receiver Return → Native Rebuild`
 
-- **Human Profile / 人類閱讀層:** Traditional Chinese
-- **External Profile / 外部交換層:** English
-- **Canonical Machine Profile / 機器規範層:** stable identifiers, typed states, versions, and release-safe evidence references
+`Capability Demo ≠ Architecture Validation`  
+`External Adoption ≠ Authority Transfer`  
+`PUBLIC_PROJECTION_CANDIDATE ≠ PUBLIC_APPROVED`
 
-The profiles must remain semantically equivalent for stable identity, lifecycle state, authority scope, claim/evidence ceiling, successor relation, and release classification.
+### Living Loop
 
-三個表徵層在 Stable Identity、Lifecycle State、Authority Scope、Claim／Evidence Ceiling、Successor Relation 與 Release Classification 上必須維持語義等價。
+`dcp_kernel/living_loop.py` 只組合既有 Gateway／Relation／Public Encounter／Operable Birth gates，不建立第二 control plane。第一個 material break 必須被暴露，不能靠後段成功遮掉前段缺口。
 
-Disclosure and publication controls are specified in `PUBLIC-SURFACE-POLICY.md`.
+## 4｜代謝與 Withdrawal
 
-揭露與發布控制見 `PUBLIC-SURFACE-POLICY.md`。
+Legacy metabolism：
 
-## Reading guidance / 閱讀指引
+`Primitive/Evidence/Failure Extraction → Successor Binding → Current Eligibility Removal → Reader/Routing/Wake/Rebuild Withdrawal → Minimal Lineage → Pooled Reclaim Review`
 
-Use `README.md` and this status document to establish repository role, maturity, and disclosure scope. Artifact-specific lifecycle state and evidence scope should then be read from the relevant issue, document, release, or provenance reference.
+Archive、Rename、Move、Historical label、Issue closure 或 search=0 都不等於 withdrawal complete。
 
-請先以 `README.md` 與本文件判定 Repository Role、Maturity 與 Disclosure Scope，再依具體 Issue、Document、Release 或 Provenance Reference 判讀各 Artifact 的 Lifecycle State 與 Evidence Scope。
+每退掉一個 legacy capability，同時問 successor 是否真的接得住原 Need／Event；接不住就標 `OPERABILITY_GAP`，不能把「清乾淨」冒充「已出生」。
 
-Repository location, filename, branch presence, issue state, search ranking, and modification time are navigation metadata; none establishes architectural truth or operational maturity on its own.
+目前 01_runtime-spine／03_field-governance／04_adapter-layer 的 successor body review 已完成，但 caller/rebuild/wake withdrawal 仍有 debt；pooled reclaim 尚未授權。
 
-Repository 位置、檔名、Branch Presence、Issue State、Search Ranking 與 Modification Time 均屬 Navigation Metadata，不能單獨建立 Architecture Truth 或 Operational Maturity。
+## 5｜Operable Birth
 
-## Current development focus / 現階段研究重點
+最低出生證據不是文件、Render、PR 或測試存在，而是完整觀察到：
 
-Current work emphasizes:
+`Existence → Relation → Material Event → Judgment → Capability → Gated Action → Evidence → Receiver Rebuild → New State → Retest`
 
-- reducing duplicated interpretation and reader load;
-- improving evidence reuse and provenance continuity;
-- preserving identity across carrier and placement changes;
-- strengthening return, reconciliation, and recovery semantics;
-- validating bounded change propagation and affected-scope reconstruction;
-- maintaining explicit source, authority, evidence, and release boundaries.
+若 Return 已寫但 Receiver 未重建：`RETURN_NOT_REBUILT`。
 
-現階段工作聚焦於降低重複判讀與 Reader Load、提升 Evidence Reuse 與 Provenance Continuity、維持跨 Carrier 的 Identity Continuity、改善 Return／Reconciliation／Recovery 語義，以及驗證有限變更傳播與受影響範圍重建。
+若工作反而增加中央化、Carrier 依賴、第二真實或 Owner 人工轉送負荷：`BIRTH_REGRESSION`。
 
-This status page is descriptive. It is not a promotion decision, runtime receipt, release authorization, or authority grant.
+只有完整生命鏈真的讓下一輪狀態不同，才記 `OPERABLE_BIRTH_DELTA`。
 
-本狀態頁僅描述目前可支持的 Claim Ceiling；不構成 Promotion Decision、Runtime Receipt、Release Authorization 或 Authority Grant。
+目前 GUI-LU Owner-exit pilot 仍缺 Receiver Actual Read／Native Disposition／Behavior Delta／Retest，因此：
+
+`Operable Birth = NOT_PROVEN`  
+`Autonomy = NOT_PROVEN`
+
+## 6｜Current Evidence / Open Debt
+
+已存在 Candidate-level executable pieces：
+
+- meaning / judgment / coexistence / composition
+- Current / affected cone / capability / carrier resolution
+- action gate / write intent / transition / consequence
+- Return state machine / re-entry / rebuild
+- relation semantics / reception gateway / public encounter / living loop
+- feedback synthesis / legacy caller census / withdrawal guards
+
+但最新 branch 尚未觀察到 PR-triggered GitHub Actions run，因此：
+
+`CI = TO_VERIFY`  
+`latest test PASS = NOT_CLAIMED`
+
+仍需證明：
+
+- full caller/rebuild/wake withdrawal；
+- non-text / physical wake absence；
+- Receiver-owned Native rebuild；
+- observable Behavior／World State Delta；
+- independent Retest；
+- Runtime environment evidence（若未來要宣稱 Runtime）。
+
+本 Status 是 Current projection，不是 Promotion、Runtime Receipt、Release Authorization、Canon Admission、Receiver ACK 或 Authority Grant。

@@ -1,65 +1,24 @@
-# Full-Lifecycle Asset Matrix
+# Full-Lifecycle Asset Matrix — Retired Generation Stub
 
-> Purpose: Define the lifecycle stages, schema alignment, and tracking rules for
-> all artifacts (assets) within the DCP-Framework corpus.
+**Lifecycle:** RETIRED_TO_LINEAGE  
+**Current eligibility:** false
 
----
+舊 S1–S5、W0/Wx、Jules/Codex、`merge-to-main = Active` 等模型已退場；不得再作現行生命週期或權限判定。
 
-## 1. Asset Definition
+## Retained primitives
+仍有效的部分只保留為：Lifecycle typing、Stable Identity、Hardening Gate、Return Route、Archival Lineage、Receiver-owned reconciliation。現行抽象見 `METABOLIZED-PRIMITIVES.md`。
 
-An **Asset** is any durable artifact registered within the repository,
-including markdown specifications, log entries, and bridge contracts. All assets
-must be tracked through their full lifecycle from scouting to archival.
+## Successors
+- Current reader entry → `CURRENT-SURFACE-MANIFEST.json`
+- Six-dimensional dispatch → `SIX_DIMENSION_REPOSITORY_PROJECTION.md`
+- Legacy disposition → `LEGACY-DESIGN-DISPOSITION.json`
 
----
+完整舊正文只留 Git history，用於 provenance／audit／failure learning／rebuild；不再維持一份會被日常 Reader 吸收的長舊模型。
 
-## 2. Lifecycle Stages
-
-| Stage | Name | Description |
-| :--- | :--- | :--- |
-| **S1** | **Scout** | Raw discovery or external signal (unhardened). |
-| **S2** | **Draft** | Initial structural formulation (internal war-room). |
-| **S3** | **Review** | Formal evaluation against Mother-Law and Bone rules. |
-| **S4** | **Active** | Merged into `main` and registered in the corpus index. |
-| **S5** | **Archived** | Superseded or preserved as execution trace only. |
-
----
-
-## 3. Schema Alignment Rules
-
-To ensure cross-window consistency, every asset must declare:
-
-- **Asset_ID:** `[FAMILY]-[TYPE]-[SEQUENCE]` (e.g., META-SPEC-001).
-- **Location_Link:** Canonical path within the repository.
-- **Return_Path:** Target path for future updates or corrections.
-- **State_Layer:** `ACTIVE`, `STRUCTURE_ESTABLISHED`, or `SUPERSEDED`.
-
----
-
-## 4. Cross-Window Handoff Contract
-
-When an asset moves between windows (e.g., from a scout window to the bone
-window), it must pass through a **Hardening Gate**:
-
-- **Rule 1:** Verify semantic integrity (no unauthorized fact promotion).
-- **Rule 2:** Ensure all required fields for the destination window are present.
-- **Rule 3:** Update `Legion_Log` with the handoff trace.
-
----
-
-## 5. Matrix View
-
-| Asset Type | Primary Window | Review Node | Registry |
-| :--- | :--- | :--- | :--- |
-| **Bone (Core)** | W0 (Bone) | Mother-Law | REPOSITORY_CORPUS_INDEX |
-| **Event (Pulse)** | W0 (Pulse) | Jules | GITHUB_CHAIN_MASTER_MAP |
-| **Draft (War-room)** | Wx (Temporary) | ChatGPT | CLEANUP_QUEUE_REGISTER |
-| **Adapter (Bridge)** | Wx (Adapter) | Codex | UNIFIED_ARTIFACT_REGISTER |
-
----
-
-## 6. Status
-
-- **ID:** META-SPEC-002
-- **Status:** STRUCTURE_ESTABLISHED
-- **Last_Reconciled:** 2026-04-21
+```yaml
+artifact: FULL_LIFECYCLE_ASSET_MATRIX
+state: RETIRED_TO_LINEAGE
+retired_ontology: [S1_S5, W0_Wx, merge_to_main_equals_active, fixed_agent_roles]
+full_body: git_history_only
+successor: METABOLIZED-PRIMITIVES.md
+```

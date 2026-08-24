@@ -1,39 +1,16 @@
-# [CoreTri] TRI_COUPLING_STATE_SPEC
+# TRI_COUPLING_STATE_SPEC — Metabolized Primitive Stub
 
-> Formalize tri-coupling as an emergent state produced by dual-layer
-> multimodality.
+**Lifecycle:** METABOLIZED_PRIMITIVE_STUB  
+**Current eligibility as fixed dual-layer state model:** false
 
----
+舊版把 tri-coupling 綁定 perceptual/mapping dual-layer、review hook、AXIS-05 failure route。固定 layer/axis 語法已退休。
 
-## 1. Core Definition
-- tri-coupling is not manually designed.
-- tri-coupling emerges when dual-layer multimodality becomes adhesive.
+## 保留 Primitive
+- 三極不因三個節點同時存在就成立；需要 Stable Anchor、Non-collapse、Relay/Return continuity。
+- Multi-perspective/multimodal adhesion 必須維持 Identity、Boundary、Evidence、Authority。
+- 任一極失敗只 invalidate affected relation/branch，不自動破壞其他合法極態。
+- Shared surface 不成為第四極或中央 Authority。
 
-## 2. Preconditions
-- layer_1: perceptual multimodality.
-- layer_2: mapping multimodality.
+現行 successor：Tri-Pole Projection + Shared Belt + Effect Dependency + Lifecycle Reconciliation。
 
-## 3. Adhesion Conditions
-- identity core stability.
-- constraint gate present.
-- review hook active.
-- return path available.
-
-## 4. State Indicators
-- no semantic drift across fields.
-- consistent return paths.
-- failure always routes to AXIS-05.
-
-## 5. Non-Goals
-- no new axes.
-- no runtime expansion.
-- no API integration.
-- no doctrine rewrite.
-
-## 6. mismatch_or_gap
-None currently identified. State remains structurally stable within existing
-boundaries.
-
-## 7. next_single_recommended_action
-Monitor external absorption nodes to ensure tri-coupling state remains intact
-across dual-layer interactions without introducing new axes.
+完整舊 dual-layer/AXIS 模型保留於 Git history。

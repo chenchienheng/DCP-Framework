@@ -1,20 +1,24 @@
-# Seed Shadow Pointer
+# Seed Shadow Pointer — Historical Branch Reference
 
-一句核心：
-main 保持穩定參照；若需接入 seed 中已成形、但尚未併幹的主骨，請先讀 seed 的 shadow board，而不是直接假設 seed 不存在。
+> Lifecycle: `HISTORICAL_POINTER`
+> Current eligibility: `false`
+> Runtime: `false`
+> Authority: `none`
 
-## Read Path
-- Branch: `xuanling-seed-v0-1`
-- Suggested entry: `01_native-board/main-shadow-sync-board-v0-1.md`
+This file preserves provenance for the historical branch `xuanling-seed-v0-1` and its former shadow-board entry. It is not a required reader route, fallback Current, second source-of-truth, or automatic re-entry instruction.
 
-## Why
-- main 承接穩定可讀骨
-- seed 承接高頻鍛造與候選結構
-- shadow board 提供其他窗口與閱讀者的最小接入面
+## Historical pointer
+- branch: `xuanling-seed-v0-1`
+- former entry: `01_native-board/main-shadow-sync-board-v0-1.md`
 
-## Rule
-- 不以 main 缺少某內容，判定 seed 不存在
-- 需先讀 shadow board，再決定是否下探 seed source path
+## Current rule
+Absence from current/main does not prove a historical artifact never existed. But historical existence also does not justify waking the seed branch by default.
 
-## Status
-Pointer only
+Re-enter this branch only for a bounded purpose such as provenance, audit, failure learning, missing-lineage reconstruction, successor coverage validation, or an explicitly authorized recovery need.
+
+`Main absence != Seed authority`
+`Historical branch != Pending Current`
+`Shadow board != Reader entry`
+`Pointer existence != Rebuild dependency`
+
+Normal work resolves Current through the current manifest/kernel and affected evidence first. Any seed re-entry must remain scoped and must not copy predecessor ontology back into Current merely because it is available.

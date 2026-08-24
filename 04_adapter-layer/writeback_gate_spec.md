@@ -1,23 +1,23 @@
-# Writeback Gate Spec
+# External Mutation Gate — Historical Lineage Specimen
 
-Department: Adapter Layer
-Agent Block: Writeback Gate
-Node ID: ADP-004
-Window: W0
-Platform Writer: ChatGPT
-Version: v0.1
+**Lifecycle:** METABOLIZED_PRIMITIVE_STUB  
+**Current eligibility as W0/ChatGPT/GitHub write gate:** false  
+**Executable authority:** none  
+**Reclaim disposition:** CANDIDATE_AFTER_POINTER_AND_CALLER_CHECK
 
-## Core
-All external writes must pass a gate before returning to GitHub.
+舊版將 W0、ChatGPT 與 GitHub 固定成 external writeback control path；該 actor/carrier topology 已退休。
 
-## Gate Checks
-- source ref exists
-- target path exists
-- version field exists
-- log entry required
+## Retained primitives
+- External mutation requires Stable Identity、Source、Target、Authority、Rights、Purpose、Affected Scope、Revision/Fidelity、Evidence、Responsibility、Recovery 與 Return。
+- Carrier／Agent／platform name 不產生 write authority。
+- Revision-sensitive mutation 必須綁 expected revision；target existence 不得猜測。
+- Gate PASS 只表示 bounded mutation candidate，可否實際執行仍由合法 execution surface 與 authority 決定。
+- Successful write ≠ Native absorption／Current／Approval／Release。
+- Gate failure 應保持 read-only/HOLD，不得 silent reroute。
 
-## Return Path
-external layer -> gate check -> GitHub write -> log update
+## Executable successor
+- `dcp_kernel/write_intent.py`
+- `contracts/write-intent.schema.json`
+- `tests/test_write_intent.py`
 
-## Fail Rule
-if any check fails, stop external write and return to read-only mode
+完整 W0／ChatGPT／GitHub predecessor 保留於 Git history；正常 Reader 不需讀本 specimen。

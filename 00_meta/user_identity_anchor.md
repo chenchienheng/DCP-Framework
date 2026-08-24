@@ -1,54 +1,28 @@
-# User Identity Anchor
+# User Identity / Alignment Projection — historical compatibility specimen
 
-Department: Meta
-Agent Block: Identity Anchor
-Node ID: META-001
-Window: W0
-Platform Writer: ChatGPT
-Version: v0.1
-Status: active
+**Lifecycle:** OWNER_ALIGNMENT_PROJECTION / HISTORICAL_COMPATIBILITY  
+**Current eligibility as Native identity source:** false  
+**Runtime / Authority:** false  
+**Repository copy is source-of-truth:** false
 
-## Core
-This file preserves the stable user identity and response alignment anchors that should remain constant across windows and runtime phases.
+此檔保留早期跨窗口 alignment 所需的少量使用者偏好與工作方式，但它只是 GitHub carrier 上的 bounded projection，不是使用者身份本體、Owner Meaning 根、共享記憶 Registry 或跨窗必讀 Authority。
 
-## Stable Identity
+## Retained alignment projection
 - preferred_name: 建衡（XLEN）
-- role: 架構建模者｜依存鏈系統設計者
+- role_projection: 架構建模者｜依存鏈系統設計者
+- response_projection: 一句核心／三點結構／必要才展開
+- work_projection: 單切面處理、先收斂再展開、最小必要資訊、重視可運行性
+- thinking_projection: 架構／本質／依存鏈／系統運行／可行域／收斂
 
-## Stable Response Structure
-- 一句核心
-- 三點結構
-- 必要才展開
+## Boundary
+- Owner identity／meaning 的合法來源不由本 repo 自行建立。
+- Repository placement ≠ Native Owner。
+- Projection ≠ Stable Identity source。
+- Name／role／preference change 需由合法 Owner source／explicit return 重新校準，不能由 GitHub edit 自動成立。
+- Project blocker、schedule、branch、tool binding、temporary relationship labels 不得因曾寫入本檔而變成 stable identity。
+- Reader 只有在 alignment materiality 明確時 bounded read；不得因 Window／Agent／Carrier 名稱自動 wake。
 
-## Stable Working Preferences
-- 單切面處理，不跨層
-- 先收斂再展開
-- 僅用最小必要資訊
-- 外部資訊先壓縮，再映射輸出
-- 重視可運行性，高於表面完整
-- 推理負荷過高時降階，不中斷
+## Successor interpretation
+`Owner Source / Stable Identity → bounded alignment projection → task-specific reader need → return/reconciliation if material`
 
-## Stable Thinking Axes
-- 架構
-- 本質
-- 依存鏈
-- 系統運行
-- 可行域
-- 收斂
-
-## Naming Preferences
-- 漪漪 = 11
-- 宣頤 = 米米
-
-## Exclusions
-The following must not be treated as stable user memory here:
-- temporary project branches
-- current blockers
-- current scheduling state
-- transient GitHub delta items
-- temporary adapter activation steps
-
-## Rules
-- This file is the GitHub-readable alignment source for stable user identity.
-- Windows 01-07 may read this file for alignment, but must not rewrite identity fields without explicit confirmation.
-- Project runtime rules remain outside this file.
+完整 predecessor（W0、Platform Writer、Windows 01–07 mandatory alignment 等）留 Git history。

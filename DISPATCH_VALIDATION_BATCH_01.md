@@ -1,42 +1,18 @@
-# Dispatch Validation Batch 01
+# Dispatch Validation Failure Lineage — unified-dispatch predecessor
 
-## 1. Scope
-This report validates the first three active chains against the unified
-dispatch rules defined in `MULTI_CHAIN_DISPATCH_GOVERNANCE.md`.
+**Lifecycle:** HISTORICAL_FAILURE_SPECIMEN  
+**Current validator:** false  
+**Runtime / Authority:** false
 
-Validated files:
-1. `WORLD_CHAIN_MASTER_AXIS.md`
-2. `INTERNAL_RELATIONAL_MESH_SPEC.md`
-3. `PHYSICAL_SIGNAL_BOUNDARY_SPEC.md`
+舊 Batch 01 用已退休的 `MULTI_CHAIN_DISPATCH_GOVERNANCE` 驗證 World／Mesh／Physical Signal，並要求補 priority、review hook、return path、AXIS-05。該 schema 不再是 Current，因此舊「Missing」結果不得喚醒已退休拓撲。
 
-## 2. Validation Table
+## Retained primitives
+- Validation 必須針對現行 contract，不針對歷史欄位表。
+- Boundary object 若缺現行 Authority／Evidence／Return，才形成 material debt。
+- Failure route 應 receiver/need-specific，不預設中央 Review Axis。
+- Audit result 本身也需要 Source Revision／Current eligibility／Claim Ceiling。
 
-| File | Entry Condition | Dispatch Priority | Review Hook | Return Path | Failure Route | return_failed -> AXIS-05 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| WORLD_CHAIN_MASTER_AXIS | Missing | Missing | Missing | Missing | Missing | Missing |
-| INTERNAL_RELATIONAL_MESH_SPEC | Present | Missing | Present | Present | Present | Present |
-| PHYSICAL_SIGNAL_BOUNDARY_SPEC | Present | Missing | Present | Missing | Present | Present |
+## Failure memory
+本 specimen 保存一個重要失敗模式：`STALE_VALIDATOR → FALSE_GAP → ZOMBIE_RECONSTRUCTION`。
 
-## 3. Missing Hooks
-- `WORLD_CHAIN_MASTER_AXIS.md` lacks an explicit Review Hook declaration.
-- Dispatch Priority is absent across all three validated files.
-
-## 4. Missing Return Paths
-- `WORLD_CHAIN_MASTER_AXIS.md` does not specify a clear Return Path.
-- `PHYSICAL_SIGNAL_BOUNDARY_SPEC.md` lacks a defined Return Path for successful
-  signals (only failure routing is specified).
-
-## 5. mismatch_or_gap
-- The primary master axis (`WORLD_CHAIN_MASTER_AXIS.md`) and boundary files
-  do not yet fully comply with the standard schema requirements defined in
-  `MULTI_CHAIN_DISPATCH_GOVERNANCE.md`.
-
-## 6. unresolved_risks
-- **Bypass and Silent Failure Risks:** The absence of explicit review hooks and
-  failure routes in the World Chain creates risks of bypassing the dispatch
-  mechanism or hanging silently.
-
-## 7. next_single_recommended_action
-Update the validated master and boundary files to explicitly define their
-missing dispatch elements (priority, review hooks, return paths) to align
-with `MULTI_CHAIN_DISPATCH_GOVERNANCE.md`.
+Current successor：`reader/current resolution → judgment → dependency/evidence gate → action/return/rebuild validation`。
