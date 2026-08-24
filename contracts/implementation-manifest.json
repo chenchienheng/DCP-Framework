@@ -9,141 +9,115 @@
   "canonical_model": {
     "invariant_core": "determines same-life identity and meaning continuity",
     "three_pole_generation": ["MEANING", "DEPENDENCY", "WORLD"],
-    "outer_poles": "need-driven outward capability expressions",
-    "inner_motions": ["IDENTITY", "MEANING", "DEPENDENCY", "STATE", "REALITY", "CAPABILITY", "RETURN", "CONTINUITY"],
+    "outer_poles": "need-driven capability expressions",
     "inner_motion_interpretation": "eight observations of one transition; not eight independent controllers",
     "causal_rebirth": "action -> consequence -> responsibility -> return -> rebuild -> behavior delta -> retest -> next condition",
-    "restraint": "minimum necessary effect over maximum available action; gate pass never grants execution authority",
-    "meaning_compilation": "abstract meaning is Source only; capability claim requires observable behavior difference through evidence, return and rebuild",
-    "coexistence": "same source does not imply same identity; heterogeneous Native logics may coexist through explicit translation, compatibility and evidence without authority merge",
-    "judgment_sovereignty": "capability, expertise, execution, judgment and authority are independent dimensions; recommendation and confidence never create decision authority",
-    "governed_pre_action_chain": "meaning -> judgment -> coexistence/translation -> restraint -> actual chosen effect -> optional write intent for mutation -> Current/dependency/capability -> transition -> work-contract candidate",
-    "composition": "eligible evidence/capability units compose only after rights, authority, lifecycle, compatibility, fidelity and evidence checks; local composition does not imply global closure",
-    "write_intent": "mutation is carrier-neutral and requires stable identity, authority, rights, purpose, scope, revision/fidelity, evidence, responsibility, recovery and return; platform or agent identity never grants write authority"
+    "judgment_sovereignty": "capability, expertise, execution, judgment and authority are independent dimensions",
+    "representation_integrity": "different carriers must back-map to the same resolved existence; representation never creates a second truth",
+    "living_loop": "external request -> bounded gateway -> resolved relation -> judgment/capability/action -> evidence -> return -> receiver rebuild -> new state -> retest"
   },
   "modules": {
-    "dcp_kernel/models.py": "typed stable-life, capability, transition, return, re-entry and learning contracts",
-    "dcp_kernel/learning.py": "receiver-specific bounded learning and contamination gate",
-    "dcp_kernel/meaning_compile.py": "compile abstract meaning to observable capability candidate without treating philosophy as Runtime instruction",
-    "dcp_kernel/judgment.py": "preserve unknown and separate expertise/execution/recommendation from judgment/authority",
-    "dcp_kernel/coexistence.py": "preserve heterogeneous Native logics while requiring translation/compatibility/evidence for cross-model claims",
-    "dcp_kernel/decision_chain.py": "compose meaning, judgment, coexistence and restraint into one pre-action gate",
-    "dcp_kernel/composition.py": "bounded composition of eligible units without authority or claim-ceiling inflation",
-    "dcp_kernel/reader_policy.py": "bounded reader eligibility and historical re-entry without fixed window order",
-    "dcp_kernel/resolution.py": "Current, capability, affected-cone and claim-ceiling resolvers",
-    "dcp_kernel/carrier_binding.py": "carrier-neutral capability binding and substitution continuity checks",
-    "dcp_kernel/write_intent.py": "carrier-neutral mutation-intent assessment without platform/agent write authority inflation",
-    "dcp_kernel/action_gate.py": "minimum necessary action, risk, reversibility, authority, responsibility and return gate",
-    "dcp_kernel/transition.py": "one-transition inner-motion evaluator and first-material-break localization",
-    "dcp_kernel/consequence.py": "action-responsibility binding and result-to-next-condition compilation",
-    "dcp_kernel/return_state.py": "receiver-owned Return closure state machine and debt exposure",
-    "dcp_kernel/evidence.py": "synthetic/projection/native evidence separation for Owner-Exit claims",
-    "dcp_kernel/schedule_effect.py": "schedule trigger/effect validity without scheduler authority inflation",
-    "dcp_kernel/successor.py": "semantic successor coverage assessment",
-    "dcp_kernel/retirement.py": "physical retirement, stale reference and provenance separation",
-    "dcp_kernel/metabolism.py": "repository artifact role and naming-risk classification",
-    "dcp_kernel/family_metabolism.py": "legacy-family completion gate across classification, successor coverage, reader withdrawal and unique evidence review",
-    "dcp_kernel/reference_census.py": "reproducible separation of live callers, lineage pointers, self references and unknown holds",
-    "dcp_kernel/platform.py": "governed work-contract compiler plus compatibility compiler, rebuild/re-entry and deterministic fixture loop",
-    "dcp_kernel/fixtures.py": "data-driven fixture runner; no external execution"
+    "core": [
+      "dcp_kernel/models.py",
+      "dcp_kernel/meaning_compile.py",
+      "dcp_kernel/judgment.py",
+      "dcp_kernel/decision_chain.py",
+      "dcp_kernel/resolution.py",
+      "dcp_kernel/action_gate.py",
+      "dcp_kernel/transition.py",
+      "dcp_kernel/consequence.py",
+      "dcp_kernel/return_state.py"
+    ],
+    "carrier_and_execution": [
+      "dcp_kernel/carrier_binding.py",
+      "dcp_kernel/write_intent.py",
+      "dcp_kernel/platform.py",
+      "dcp_kernel/schedule_effect.py"
+    ],
+    "learning_and_coexistence": [
+      "dcp_kernel/learning.py",
+      "dcp_kernel/coexistence.py",
+      "dcp_kernel/composition.py",
+      "dcp_kernel/feedback_synthesis.py"
+    ],
+    "world_relation_and_birth": [
+      "dcp_kernel/relation_semantics.py",
+      "dcp_kernel/reception_gateway.py",
+      "dcp_kernel/public_encounter.py",
+      "dcp_kernel/operable_birth.py",
+      "dcp_kernel/living_loop.py"
+    ],
+    "metabolism_and_withdrawal": [
+      "dcp_kernel/reader_policy.py",
+      "dcp_kernel/successor.py",
+      "dcp_kernel/retirement.py",
+      "dcp_kernel/metabolism.py",
+      "dcp_kernel/family_metabolism.py",
+      "dcp_kernel/reference_census.py"
+    ],
+    "evidence": ["dcp_kernel/evidence.py"]
   },
-  "tools": ["tools/census_legacy_references.py"],
   "machine_contracts": [
-    "contracts/stable-life.schema.json", "contracts/transition.schema.json", "contracts/work-contract.schema.json",
-    "contracts/action-gate.schema.json", "contracts/action-responsibility.schema.json", "contracts/consequence.schema.json",
-    "contracts/return.schema.json", "contracts/reentry.schema.json", "contracts/cross-pole-learning.schema.json",
-    "contracts/reader-request.schema.json", "contracts/carrier-binding.schema.json", "contracts/write-intent.schema.json",
-    "contracts/owner-exit-evidence.schema.json", "contracts/schedule-effect.schema.json", "contracts/successor-coverage.schema.json",
-    "contracts/family-metabolism.schema.json", "contracts/meaning-compilation.schema.json",
-    "contracts/coexistence-translation.schema.json", "contracts/composition.schema.json", "contracts/judgment.schema.json"
+    "contracts/stable-life.schema.json",
+    "contracts/transition.schema.json",
+    "contracts/work-contract.schema.json",
+    "contracts/action-gate.schema.json",
+    "contracts/action-responsibility.schema.json",
+    "contracts/consequence.schema.json",
+    "contracts/return.schema.json",
+    "contracts/reentry.schema.json",
+    "contracts/cross-pole-learning.schema.json",
+    "contracts/reader-request.schema.json",
+    "contracts/carrier-binding.schema.json",
+    "contracts/write-intent.schema.json",
+    "contracts/owner-exit-evidence.schema.json",
+    "contracts/schedule-effect.schema.json",
+    "contracts/successor-coverage.schema.json",
+    "contracts/family-metabolism.schema.json",
+    "contracts/meaning-compilation.schema.json",
+    "contracts/coexistence-translation.schema.json",
+    "contracts/composition.schema.json",
+    "contracts/judgment.schema.json"
   ],
-  "fixtures": [
-    "fixtures/gui-lu/mobility-envelope-intrusion.json",
-    "fixtures/gui-lu/mobility-envelope-owner-exit-observation.json",
-    "fixtures/gui-lu/mobility-envelope-producer-return.json",
-    "fixtures/repository/legacy-successor-coverage-seed.json",
-    "fixtures/repository/physical-retirement-observations.json",
-    "fixtures/repository/family-caller-rebuild-census-observations.json",
-    "fixtures/repository/03-field-governance-review.json",
-    "fixtures/repository/04-adapter-layer-review.json",
-    "fixtures/meaning/meaning-to-observable-delta.json"
-  ],
-  "tests": [
-    "tests/test_kernel.py", "tests/test_gui_lu_fixture.py", "tests/test_gui_lu_owner_exit_seed.py",
-    "tests/test_gui_lu_producer_return.py", "tests/test_action_gate.py", "tests/test_consequence.py",
-    "tests/test_owner_exit_evidence.py", "tests/test_schedule_effect.py", "tests/test_successor_coverage.py",
-    "tests/test_retirement.py", "tests/test_metabolism.py", "tests/test_reader_policy.py",
-    "tests/test_carrier_binding.py", "tests/test_write_intent.py", "tests/test_current_surface_alignment.py",
-    "tests/test_family_metabolism.py", "tests/test_reference_census.py", "tests/test_meaning_compile.py",
-    "tests/test_coexistence.py", "tests/test_composition.py", "tests/test_judgment.py",
-    "tests/test_decision_chain.py", "tests/test_governed_platform.py"
-  ],
-  "legacy_family_successor_direction": {
-    "01_runtime-spine": ["dcp_kernel/reader_policy.py", "dcp_kernel/learning.py", "dcp_kernel/resolution.py", "dcp_kernel/return_state.py", "dcp_kernel/retirement.py"],
-    "03_field-governance": ["dcp_kernel/judgment.py", "dcp_kernel/decision_chain.py", "dcp_kernel/action_gate.py", "dcp_kernel/resolution.py", "dcp_kernel/coexistence.py", "dcp_kernel/composition.py", "dcp_kernel/transition.py", "dcp_kernel/consequence.py", "dcp_kernel/return_state.py", "dcp_kernel/platform.py"],
-    "04_adapter-layer": ["dcp_kernel/carrier_binding.py", "dcp_kernel/write_intent.py", "dcp_kernel/reader_policy.py", "dcp_kernel/learning.py", "dcp_kernel/evidence.py", "dcp_kernel/return_state.py", "dcp_kernel/action_gate.py"]
+  "current_behavioral_gates": {
+    "identity_gap": "IDENTITY_RESOLUTION_GAP",
+    "thin_relation": "STATIC_RELATION_ONLY",
+    "return_without_rebuild": "RETURN_NOT_REBUILT",
+    "birth_regression": "BIRTH_REGRESSION",
+    "public_candidate_is_release": false,
+    "understanding_transfers_authority": false,
+    "single_success_is_maturity": false,
+    "non_material_event_wakes_everyone": false
   },
-  "family_census_state": {
+  "legacy_family_state": {
     "01_runtime-spine": "SUCCESSOR_REVIEW_COMPLETE_CALLER_REBUILD_PENDING",
     "03_field-governance": "SUCCESSOR_REVIEW_COMPLETE_CALLER_REBUILD_PENDING",
     "04_adapter-layer": "SUCCESSOR_REVIEW_COMPLETE_PROVENANCE_CALLER_REBUILD_PENDING",
-    "reason": "01/03/04 body listings and successor reviews are complete at 5/22/13 artifacts; none is reclaim-ready until live caller, rebuild dependency, reader/routing/wake withdrawal and family-specific retention debts are resolved"
-  },
-  "four_return_integration": {
-    "status": "EXECUTABLE_CANDIDATE",
-    "absorbed_deltas": [
-      "freedom-boundary-responsibility and result-to-next-condition",
-      "abstract meaning must compile to observable behavior difference",
-      "same-source heterogeneous Native logics may coexist without forced merge",
-      "judgment sovereignty with unknown preservation and bounded execution delegation"
-    ],
-    "work_contract_precondition": "compile_governed_work_contract requires DecisionChainAssessment PASS and mutation WriteIntent PASS only when actual chosen effect is mutation",
-    "authority_effect": "none; decision-chain/write-intent PASS does not authorize execution"
+    "reclaim_rule": "NO_FAMILY_RECLAIM_BEFORE_CALLER_REBUILD_WAKE_WITHDRAWAL_AND_RETENTION_REVIEW"
   },
   "owner_exit_pilot": {
-    "fixture_protocol": "fixtures/gui-lu/mobility-envelope-intrusion.json",
-    "producer_return": "fixtures/gui-lu/mobility-envelope-producer-return.json",
-    "real_observation_seed": "fixtures/gui-lu/mobility-envelope-owner-exit-observation.json",
     "producer_state": "ROUTED_PENDING_RECEIVER_NATIVE_EVIDENCE",
-    "current_observed_mode": "OBSERVED_PROJECTION",
     "receiver_actual_read": false,
     "native_disposition": false,
     "behavior_delta": false,
     "retest": false,
-    "claim": "DCP proves only producer routing/dependency delta; GLModel Native closure remains receiver-owned"
+    "claim": "producer routing/dependency delta only; receiver Native closure remains receiver-owned"
   },
-  "non_absorbed_boundaries": [
-    "Ideas Native Body", "GLModel World/Object/Geometry Authority", "private evidence bodies", "external tool authority",
-    "repository placement authority", "Runtime or deployment claim", "abstract meaning as executable authority",
-    "cross-model coexistence as identity or authority merge", "expert/model confidence as decision authority",
-    "platform/agent identity as mutation authority", "projection observation as receiver Native absorption"
-  ],
-  "latest_batch_verification": {
+  "verification": {
     "branch_file_writeback": true,
-    "four_return_decision_chain_integrated": true,
-    "governed_work_contract_entry_added": true,
-    "01_03_04_successor_review_state_aligned": true,
-    "03_field_governance_artifact_count": 22,
-    "04_adapter_layer_artifact_count": 13,
-    "legacy_w0_chatgpt_github_writeback_semantics_demoted": true,
-    "write_intent_added": true,
-    "gui_lu_producer_return_debt_split_from_receiver_native_closure": true,
-    "github_actions_run_observed": false,
-    "test_pass_claim_for_latest_batch": false
+    "current_surface_manifest_aligned": true,
+    "living_loop_composed": true,
+    "latest_github_actions_run_observed": false,
+    "latest_test_pass_claim": false
   },
-  "claim_ceiling": "BOUNDED_EXECUTABLE_AND_DETERMINISTIC_PLATFORM_FIXTURE_CANDIDATE",
+  "claim_ceiling": "BOUNDED_EXECUTABLE_CANDIDATE_WITHOUT_RUNTIME_OR_AUTONOMY_PROOF",
   "required_before_higher_claim": [
     "latest branch test execution or CI evidence",
-    "execute reproducible full-reference census on successor branch",
-    "complete per-family caller/rebuild census before pooled reclaim",
-    "review 03 historical branch-return and 04 historical GAS/schema provenance debts",
-    "prove normal reader/routing/wake withdrawal",
-    "branch review and acceptance",
+    "full caller/rebuild/wake withdrawal evidence",
     "receiver-owned Native disposition",
-    "real behavior delta",
-    "independent retest in the GUI-LU chain",
-    "runtime environment evidence if Runtime is ever claimed",
+    "observable behavior delta",
+    "retest",
+    "runtime environment evidence if Runtime is claimed",
     "applicable authority for promotion or release"
-  ],
-  "successor_work_items": [326, 327, 328, 330, 331, 335, 338, 339, 340, 341, 342, 343, 344]
+  ]
 }
