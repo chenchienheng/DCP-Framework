@@ -63,3 +63,27 @@ __all__ = [
     "resolve_capability_binding", "resolve_carrier_binding", "resolve_current", "scan_text_map",
     "validate_carrier_substitution",
 ]
+
+# Successor-facing composed surfaces. These imports expose bounded capabilities;
+# they do not create a second control plane or change Native authority.
+from .feedback_synthesis import (
+    CrossPoleFeedbackAssessment, CrossPoleFeedbackInput, FeedbackDisposition,
+    assess_cross_pole_feedback,
+)
+from .living_loop import LivingLoopAssessment, LivingLoopBreak, LivingLoopInput, assess_living_loop
+from .operable_birth import BirthDisposition, OperableBirthAssessment, OperableBirthInput, assess_operable_birth
+from .public_encounter import (
+    PublicEncounterAssessment, PublicEncounterDisposition, PublicEncounterInput,
+    assess_public_encounter,
+)
+from .reception_gateway import GatewayAssessment, GatewayDisposition, GatewayInput, assess_gateway_request
+from .relation_semantics import RelationAssessment, RelationInput, RelationState, assess_relation
+
+__all__ += [
+    "BirthDisposition", "CrossPoleFeedbackAssessment", "CrossPoleFeedbackInput", "FeedbackDisposition",
+    "GatewayAssessment", "GatewayDisposition", "GatewayInput", "LivingLoopAssessment", "LivingLoopBreak",
+    "LivingLoopInput", "OperableBirthAssessment", "OperableBirthInput", "PublicEncounterAssessment",
+    "PublicEncounterDisposition", "PublicEncounterInput", "RelationAssessment", "RelationInput", "RelationState",
+    "assess_cross_pole_feedback", "assess_gateway_request", "assess_living_loop", "assess_operable_birth",
+    "assess_public_encounter", "assess_relation",
+]
