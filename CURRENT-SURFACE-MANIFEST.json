@@ -63,6 +63,45 @@
     "pointer_resolution_required_for_rebuild": true,
     "failure_action": "HOLD_AFFECTED_REPRESENTATION_ADMISSION_OR_REBUILD"
   },
+  "relation_semantics": {
+    "a_to_b_link_is_material_relation": false,
+    "endpoint_identity_must_resolve_first": true,
+    "base_required": ["direction", "state", "time", "evidence", "effect"],
+    "conditional_dimensions": ["reciprocity", "authority", "cost", "risk", "reversibility", "return_path"],
+    "identity_gap_state": "IDENTITY_RESOLUTION_GAP",
+    "thin_relation_state": "STATIC_RELATION_ONLY"
+  },
+  "reception_gateway": {
+    "owner_is_default_api_gateway": false,
+    "required_before_route": ["source_identity", "bounded_scope", "rights", "materiality", "affected_receiver"],
+    "non_material_action": "OBSERVE_ONLY",
+    "owner_escalation_only_for": ["irreversible", "sensitive", "authority_change", "owner_decision"],
+    "gateway_is_authority_root": false
+  },
+  "cross_pole_feedback": {
+    "read_mode": "AFFECTED_SLICE_ONLY",
+    "native_body_copy": false,
+    "understanding_transfers_authority": false,
+    "counterexample_requires_affected_rebuild": true,
+    "representation_drift_requires_hold": true,
+    "maturity_requires": ["receiver_native_disposition", "behavior_delta", "repeat_failure_suppression", "retest"]
+  },
+  "public_encounter": {
+    "public_surface_required_for_every_pole": false,
+    "projection_is_native_exposure": false,
+    "capability_demo_transfers_authority": false,
+    "external_adoption_validates_architecture": false,
+    "first_projection_requires_revocability": true,
+    "external_evidence_requires_receiver_return": true,
+    "candidate_is_public_approved": false
+  },
+  "living_loop": {
+    "purpose": "compose_existing_gates_not_create_second_policy_layer",
+    "minimum_external_slice": ["gateway", "relation", "optional_public_encounter", "return_rebuild", "new_state_retest"],
+    "first_material_break_exposed": true,
+    "non_material_request_wakes_native_receiver": false,
+    "operable_birth_requires_full_chain": true
+  },
   "security_boundary": {
     "readable_content_is_instruction_authority": false,
     "doctrine_edit_is_self_validating": false,
@@ -90,6 +129,12 @@
     "ladder": ["produced", "routed", "actual_read", "materiality_resolved", "receiver_native_disposition", "reconciled", "rebuild_applied_or_no_rebuild_with_reason", "behavior_delta_observed", "retested"],
     "producer_can_ack_for_receiver": false,
     "output_merge_ledger_summary_can_skip_receiver_stages": false
+  },
+  "operable_birth": {
+    "minimum_chain": ["existence", "relation", "event", "judgment", "capability_binding", "action_gate", "evidence", "receiver_disposition", "rebuild", "new_state", "retest"],
+    "return_without_rebuild_state": "RETURN_NOT_REBUILT",
+    "regression_if_increased": ["centralization", "carrier_dependency", "second_truth", "human_gateway_load"],
+    "runtime_implied_by_birth_delta": false
   },
   "eight_pole_eight_motion": {
     "three_poles_are_generation_root": true,
