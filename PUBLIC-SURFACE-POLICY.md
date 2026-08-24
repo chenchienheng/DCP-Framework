@@ -117,7 +117,27 @@ successor_pointer: <public-pointer-or-null>
 
 Archive、Rename、Move 或 Historical prefix 不等於 withdrawal complete。已撤回或 superseded artifact 可保留 minimal provenance，但不得繼續製造 Current／Approved／Wake effect。
 
-## 11｜Machine State
+## 11｜Public Encounter／第一次外部相遇
+
+Public Encounter 不等於 Publication Project，也不要求每一極建立 Public Surface。它只問：已存在且有 Native evidence 的能力，是否有一個合法、bounded、可撤回的 Projection，讓外部使用者在不理解完整內部架構的情況下，實際遇見一個有用能力。
+
+候選鏈：
+
+`Native Capability → Lawful Projection → External Encounter → External Evidence → Receiver Return → Native Rebuild`
+
+至少守住：
+
+- Native capability 必須先有相稱 evidence；不能為了 demo 反向發明能力。
+- Projection 不暴露 Native Body、private dependency topology、privileged routing 或 protected evidence。
+- Scope／Claim Ceiling 只到該 bounded capability；`Capability Demo ≠ Whole-architecture Validation`。
+- Projection 不移轉 Pole／Receiver／Owner Authority；`Understanding／Adoption ≠ Authority Transfer`。
+- 第一入口應可撤回；rights、privacy、evidence、safety 或 fidelity 漂移時可以停止外部 encounter，而不破壞 Native capability。
+- External reaction、failure、usage signal 或 bounded outcome 只先形成 Evidence Candidate；必須 Return 給合法 Receiver 才可能改變 Native State。
+- `PUBLIC_PROJECTION_CANDIDATE ≠ PUBLIC_APPROVED`；實際發布仍須通過本 Policy 的 Release Gate。
+
+若某 Native Capability 沒有實質對外增量，合法結果是 `NO_PUBLIC_ENCOUNTER_DELTA`，不為了共同目標製造多餘 Public Surface。
+
+## 12｜Machine State
 
 ```yaml
 policy: PUBLIC_REPRESENTATION_DISCLOSURE
@@ -128,6 +148,12 @@ disclosure_classes: [INTERNAL, PUBLIC_CANDIDATE, PUBLIC_APPROVED, WITHHELD]
 public_safe_is_public_approved: false
 repository_is_native_source_or_authority: false
 publication_transfers_ownership: false
+public_encounter:
+  public_encounter_is_native_exposure: false
+  capability_demo_transfers_authority: false
+  external_adoption_validates_architecture: false
+  first_projection_requires_revocability: true
+  external_evidence_requires_receiver_return: true
 release_requires:
   - lawful_source_rights
   - audience_purpose
