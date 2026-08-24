@@ -196,4 +196,24 @@ DCP 在這條鏈只負責 dependency／state／authority／gate／return／rebui
 
 目前出生狀態：`NOT_PROVEN`。GUI-LU 等真實 Receiver 若尚未完成 Actual Read → Native Disposition → Rebuild → Behavior Delta → Retest，保持 debt，不由 DCP synthetic fixture 補足。
 
+## 14｜Cross-pole Feedback Learning／跨極反饋推理學習
+
+推理極必須主動收集其他極真正有材料性的 Failure、Counterexample、Behavior Delta、Repeat-failure Suppression 與 Receiver disposition；但只讀 affected slice，不複製另一極 Native Body，也不因理解而取得對方 Authority。
+
+跨極回饋先判：
+
+`Materiality → Receiver Affected? → Representation back-map → Counterexample? → Local Rebuild → Behavior Delta → Repeat-failure Suppression → Retest`
+
+固定：
+
+- `No material delta → NO_MATERIAL_CONFLICT / Stay Local`
+- `Counterexample → affected assumption must rebuild; consensus cannot erase it`
+- `Representation drift → HOLD affected learning/rebuild; do not call it the same existence`
+- `Understanding ≠ Authority Transfer`
+- `Native Body Read ≠ Native Body Copy`
+- `Single PASS／Return／ACK wording ≠ Maturity`
+- Maturity credit 至少需要 Receiver-native disposition、observable behavior delta、repeat-failure suppression 與 retest 同時成立。
+
+Candidate machine gate：`dcp_kernel/feedback_synthesis.py`；regression：`tests/test_feedback_synthesis.py`。這只是 DCP reasoning candidate，不代表其他極已吸收、也不代表 Runtime 或 Autonomy 已證明。
+
 本 Status 是描述性 Current projection，不是 Promotion、Runtime Receipt、Release Authorization、Canon Admission、Receiver ACK 或 Authority Grant。
