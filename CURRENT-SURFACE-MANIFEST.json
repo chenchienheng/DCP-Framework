@@ -1,4 +1,11 @@
 {
+  "repository_id": 1125976757,
+  "repository_full_name": "chenchienheng/DCP-Pole-Projection",
+  "repository_lineage_aliases": [
+    "chenchienheng/DCP-Framework",
+    "chenchienheng/XuanLing-00-Foundation-DCP"
+  ],
+  "reader_order_owner": "CURRENT-SURFACE-MANIFEST.json",
   "repository_role": "PUBLIC_DCP_POLE_PROJECTION_CARRIER",
   "projection_focus": "DCP",
   "runtime": false,
@@ -12,9 +19,17 @@
     "STATUS.md"
   ],
   "current_public_surfaces": {
-    "human_zh_tw": ["README.md", "STATUS.md"],
-    "professional_en": ["README.md", "PUBLIC-SURFACE-POLICY.md"],
-    "canonical_machine": ["CURRENT-SURFACE-MANIFEST.json"]
+    "human_zh_tw": [
+      "README.md",
+      "STATUS.md"
+    ],
+    "professional_en": [
+      "README.md",
+      "PUBLIC-SURFACE-POLICY.md"
+    ],
+    "canonical_machine": [
+      "CURRENT-SURFACE-MANIFEST.json"
+    ]
   },
   "tri_repository_projection_map": {
     "DCP-Pole-Projection": "dependency_state_authority_return_rebuild_weighted",
@@ -24,7 +39,15 @@
   "shared_belt_semantics": {
     "is_fourth_pole": false,
     "is_authority_root": false,
-    "allowed": ["pointer", "receipt", "receiver_state", "return", "reconciliation_status", "reentry_pointer", "rebuild_pointer"],
+    "allowed": [
+      "pointer",
+      "receipt",
+      "receiver_state",
+      "return",
+      "reconciliation_status",
+      "reentry_pointer",
+      "rebuild_pointer"
+    ],
     "native_body_copy_default": false
   },
   "legacy_root_families": [

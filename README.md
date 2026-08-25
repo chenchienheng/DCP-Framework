@@ -30,7 +30,9 @@ Cross-repository continuity should travel through bounded pointer / receipt / re
 
 ## Current reader entry / 現行讀取入口
 
-Start with `CURRENT-SURFACE-MANIFEST.json`. Legacy root-layer families remain Historical／Compatibility unless explicitly re-admitted; repository location, filename, recency, or searchability does not establish Current.
+This README is the repository landing page. Obtain the exact repository-local read order from `CURRENT-SURFACE-MANIFEST.json`; this page does not maintain a second reader-order list. The manifest routes this public projection only and does not establish Native Current, Canon, or Authority. Legacy root-layer families remain Historical／Compatibility unless explicitly re-admitted; repository location, filename, recency, or searchability does not establish Current.
+
+本頁是 Repository Landing Page；精確的倉庫內讀取順序只由 `CURRENT-SURFACE-MANIFEST.json` 維護，本頁不建立第二份 Reader Order。該 Manifest 只路由公開投影，不建立 Native Current、Canon 或 Authority。
 
 ## Representation architecture / 三極語
 
