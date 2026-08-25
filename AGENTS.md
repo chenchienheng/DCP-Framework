@@ -2,9 +2,11 @@
 
 ## Repository Role
 
-This repository is the controlled documentation and architecture repository for the DCP-Framework / XuanLing project.
+This repository is a public DCP-oriented CoreTri projection carrier. It preserves repository revisions and bounded public evidence; it is not the DCP Native Source Root, Native Current, Canon, or Architecture Authority.
 
-Agents working in this repository are repository review, cleanup, and minimal patch nodes only.
+For repository work, use `CURRENT-SURFACE-MANIFEST.json` for repository-local reader routing and open only the affected surface. This file governs repository operations only; it does not grant semantic, Native, release, or promotion authority.
+
+Agents working in this repository are bounded review, cleanup, test, and minimal-patch carriers only.
 
 ## Allowed Work
 
@@ -34,11 +36,10 @@ Agents must not:
 
 ## Governance Roles
 
-- ChatGPT / CoreTri reviewer: review, dispatch, and boundary gate.
-- Codex: repository hygiene, patch, test, and review node.
-- Jules: documentation and spec generation node.
-- GitHub: source-of-truth and pull request gate.
-- User: final approval and merge authority.
+- Task-selected models and agents are replaceable, scope-bounded carriers; their names do not establish fixed roles or Authority.
+- Repository maintenance executors may inspect, patch, test, and return evidence only within the granted task scope.
+- GitHub is the repository revision/evidence carrier and pull-request gate; it is not the Native Source Root or Architecture Authority.
+- Final approval and merge authority remain with the user or another explicitly named human authority.
 
 ## Review Gates
 
