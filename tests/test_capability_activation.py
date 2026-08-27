@@ -188,6 +188,170 @@ class CapabilityActivationTests(unittest.TestCase):
         self.assertEqual(result.bindings, ())
         self.assertIn("NO_CAPABILITY_ACTIVATION_REQUIRED", result.reasons)
 
+    def test_unknown_lineage_holds_before_provider_selection(self) -> None:
+        need = CapabilityActivationNeed(
+            "unknown-capability",
+            "XUANLING",
+            ("significance-decision",),
+            "DCP_BOUNDED_WORK",
+            "DCP",
+        )
+        result = resolve_capability_activation(need, LINEAGES, FIVE_SKILLS)
+        self.assertEqual(result.decision, Decision.HOLD)
+        self.assertEqual(result.unresolved_lineage_ids, ("significance-decision",))
+        self.assertIn("CAPABILITY_LINEAGE_UNKNOWN", result.reasons)
+
+    def test_historical_provider_cannot_self_reactivate(self) -> None:
+        historical = CapabilityProvider(
+            provider_id="historical-current-skill",
+            provider_kind=ProviderKind.SKILL,
+            provider_label="retired current resolver",
+            capability_lineage_ids=("current-resolution",),
+            authority_scopes=("DCP_BOUNDED_WORK",),
+            available=True,
+            current_effect_eligible=False,
+            evidence_available=True,
+            return_supported=True,
+            privacy_allowed=True,
+            reliability=0.99,
+        )
+        need = CapabilityActivationNeed(
+            "current-only",
+            "XUANLING",
+            ("current-resolution",),
+            "DCP_BOUNDED_WORK",
+            "DCP",
+        )
+        result = resolve_capability_activation(need, LINEAGES, (historical,))
+        self.assertEqual(result.decision, Decision.HOLD)
+        self.assertIn(
+            "PROVIDER_NOT_CURRENT_EFFECT_ELIGIBLE",
+            result.excluded["historical-current-skill"],
+        )
+
+    def test_replacement_and_exit_conditions_are_admission_gates(self) -> None:
+        unbounded = CapabilityProvider(
+            provider_id="unbounded-provider",
+            provider_kind=ProviderKind.SKILL,
+            provider_label="skill without lifecycle contract",
+            capability_lineage_ids=("current-resolution",),
+            authority_scopes=("DCP_BOUNDED_WORK",),
+            available=True,
+            current_effect_eligible=True,
+            evidence_available=True,
+            return_supported=True,
+            privacy_allowed=True,
+            reliability=0.99,
+            replacement_path_known=False,
+            exit_condition_known=False,
+        )
+        fallback = skill(
+            "bounded-provider",
+            "bounded current resolver",
+            ("current-resolution",),
+        )
+        need = CapabilityActivationNeed(
+            "current-only",
+            "XUANLING",
+            ("current-resolution",),
+            "DCP_BOUNDED_WORK",
+            "DCP",
+        )
+        result = resolve_capability_activation(need, LINEAGES, (unbounded, fallback))
+        self.assertEqual(result.decision, Decision.PASS)
+        self.assertEqual(result.bindings[0].provider_id, "bounded-provider")
+        self.assertIn("REPLACEMENT_PATH_UNKNOWN", result.excluded["unbounded-provider"])
+        self.assertIn("EXIT_CONDITION_UNKNOWN", result.excluded["unbounded-provider"])
+
+    def test_privacy_and_reliability_filter_provider(self) -> None:
+        privacy_fail = CapabilityProvider(
+            provider_id="privacy-fail",
+            provider_kind=ProviderKind.CLOUD,
+            provider_label="external cloud model",
+            capability_lineage_ids=("current-resolution",),
+            authority_scopes=("DCP_BOUNDED_WORK",),
+            available=True,
+            current_effect_eligible=True,
+            evidence_available=True,
+            return_supported=True,
+            privacy_allowed=False,
+            reliability=0.99,
+            estimated_cost=0.1,
+        )
+        reliability_fail = CapabilityProvider(
+            provider_id="reliability-fail",
+            provider_kind=ProviderKind.AI_MODEL,
+            provider_label="unstable model",
+            capability_lineage_ids=("current-resolution",),
+            authority_scopes=("DCP_BOUNDED_WORK",),
+            available=True,
+            current_effect_eligible=True,
+            evidence_available=True,
+            return_supported=True,
+            privacy_allowed=True,
+            reliability=0.5,
+            estimated_cost=0.1,
+        )
+        eligible = CapabilityProvider(
+            provider_id="eligible-local",
+            provider_kind=ProviderKind.LOCAL_COMPUTE,
+            provider_label="local bounded resolver",
+            capability_lineage_ids=("current-resolution",),
+            authority_scopes=("DCP_BOUNDED_WORK",),
+            available=True,
+            current_effect_eligible=True,
+            evidence_available=True,
+            return_supported=True,
+            privacy_allowed=True,
+            reliability=0.95,
+            estimated_cost=1.0,
+        )
+        need = CapabilityActivationNeed(
+            "private-current",
+            "XUANLING",
+            ("current-resolution",),
+            "DCP_BOUNDED_WORK",
+            "DCP",
+            privacy_required=True,
+            minimum_reliability=0.9,
+        )
+        result = resolve_capability_activation(
+            need,
+            LINEAGES,
+            (privacy_fail, reliability_fail, eligible),
+        )
+        self.assertEqual(result.decision, Decision.PASS)
+        self.assertEqual(result.bindings[0].provider_id, "eligible-local")
+        self.assertIn("PRIVACY_REQUIREMENT_NOT_MET", result.excluded["privacy-fail"])
+        self.assertIn("RELIABILITY_BELOW_THRESHOLD", result.excluded["reliability-fail"])
+
+    def test_cost_limit_can_hold_complete_coverage(self) -> None:
+        expensive = CapabilityProvider(
+            provider_id="expensive-provider",
+            provider_kind=ProviderKind.HUMAN,
+            provider_label="consultant",
+            capability_lineage_ids=("current-resolution",),
+            authority_scopes=("DCP_BOUNDED_WORK",),
+            available=True,
+            current_effect_eligible=True,
+            evidence_available=True,
+            return_supported=True,
+            privacy_allowed=True,
+            reliability=0.99,
+            estimated_cost=10.0,
+        )
+        need = CapabilityActivationNeed(
+            "cost-bounded-current",
+            "XUANLING",
+            ("current-resolution",),
+            "DCP_BOUNDED_WORK",
+            "DCP",
+            max_total_cost=1.0,
+        )
+        result = resolve_capability_activation(need, LINEAGES, (expensive,))
+        self.assertEqual(result.decision, Decision.HOLD)
+        self.assertIn("NO_CONFIGURATION_WITHIN_COST_LIMIT", result.reasons)
+
 
 if __name__ == "__main__":
     unittest.main()
