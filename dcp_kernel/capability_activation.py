@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from collections import Counter
 from dataclasses import dataclass, field
 from enum import Enum
 from itertools import combinations
@@ -47,6 +48,7 @@ class CapabilityProvider:
     provider_label: str
     capability_lineage_ids: tuple[str, ...]
     authority_scopes: tuple[str, ...]
+    rights_allowed: bool
     available: bool
     current_effect_eligible: bool
     evidence_available: bool
@@ -54,6 +56,7 @@ class CapabilityProvider:
     privacy_allowed: bool
     reliability: float
     estimated_cost: float = 0.0
+    return_targets: tuple[str, ...] = ()
     replacement_path_known: bool = True
     exit_condition_known: bool = True
 
@@ -111,7 +114,52 @@ def resolve_capability_activation(
             reasons=("NO_CAPABILITY_ACTIVATION_REQUIRED",),
         )
 
-    known_lineages = {item.lineage_id for item in lineages}
+    lineage_definitions: dict[str, tuple[str, str]] = {}
+    lineage_conflicts: set[str] = set()
+    for lineage in lineages:
+        definition = (lineage.meaning, lineage.native_home)
+        previous = lineage_definitions.get(lineage.lineage_id)
+        if previous is not None and previous != definition:
+            lineage_conflicts.add(lineage.lineage_id)
+        else:
+            lineage_definitions[lineage.lineage_id] = definition
+
+    if lineage_conflicts:
+        conflicts = tuple(sorted(lineage_conflicts))
+        return CapabilityActivationAssessment(
+            decision=Decision.HOLD,
+            need_id=need.need_id,
+            stable_life_id=need.stable_life_id,
+            return_target=need.return_target,
+            bindings=(),
+            activated_lineage_ids=(),
+            unresolved_lineage_ids=conflicts,
+            over_activation=False,
+            reasons=("CAPABILITY_LINEAGE_CONFLICT",),
+        )
+
+    provider_id_counts = Counter(item.provider_id for item in providers)
+    duplicate_provider_ids = tuple(
+        sorted(provider_id for provider_id, count in provider_id_counts.items() if count > 1)
+    )
+    if duplicate_provider_ids:
+        return CapabilityActivationAssessment(
+            decision=Decision.HOLD,
+            need_id=need.need_id,
+            stable_life_id=need.stable_life_id,
+            return_target=need.return_target,
+            bindings=(),
+            activated_lineage_ids=(),
+            unresolved_lineage_ids=(),
+            over_activation=False,
+            excluded={
+                provider_id: ("PROVIDER_ID_CONFLICT",)
+                for provider_id in duplicate_provider_ids
+            },
+            reasons=("PROVIDER_ID_CONFLICT",),
+        )
+
+    known_lineages = set(lineage_definitions)
     unknown = tuple(item for item in required if item not in known_lineages)
     if unknown:
         return CapabilityActivationAssessment(
@@ -141,14 +189,22 @@ def resolve_capability_activation(
             reasons.append("PROVIDER_NOT_CURRENT_EFFECT_ELIGIBLE")
         if need.required_authority_scope not in provider.authority_scopes:
             reasons.append("AUTHORITY_SCOPE_NOT_ALLOWED")
+        if not provider.rights_allowed:
+            reasons.append("RIGHTS_NOT_ALLOWED")
         if not provider.evidence_available:
             reasons.append("CAPABILITY_EVIDENCE_MISSING")
         if not provider.return_supported:
             reasons.append("RETURN_PATH_UNSUPPORTED")
+        elif provider.return_targets and need.return_target not in provider.return_targets:
+            reasons.append("RETURN_TARGET_UNSUPPORTED")
         if need.privacy_required and not provider.privacy_allowed:
             reasons.append("PRIVACY_REQUIREMENT_NOT_MET")
-        if provider.reliability < need.minimum_reliability:
+        if not 0.0 <= provider.reliability <= 1.0:
+            reasons.append("RELIABILITY_VALUE_INVALID")
+        elif provider.reliability < need.minimum_reliability:
             reasons.append("RELIABILITY_BELOW_THRESHOLD")
+        if provider.estimated_cost < 0:
+            reasons.append("ESTIMATED_COST_INVALID")
         if not provider.replacement_path_known:
             reasons.append("REPLACEMENT_PATH_UNKNOWN")
         if not provider.exit_condition_known:
@@ -187,7 +243,7 @@ def resolve_capability_activation(
             return_target=need.return_target,
             bindings=(),
             activated_lineage_ids=(),
-            unresolved_lineage_ids=unresolved or required,
+            unresolved_lineage_ids=unresolved,
             over_activation=False,
             excluded=dict(sorted(excluded.items())),
             reasons=tuple(reasons),
